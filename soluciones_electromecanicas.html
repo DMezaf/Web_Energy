@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -54,19 +54,19 @@
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 
-    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
     .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
     .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
 
     .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/services/plano_electromecanicos.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding:86px 0 72px}
+    .hero__content{max-width:760px;padding:80px 0 64px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
 
-    section{padding:56px 0}
+    section{padding:52px 0}
     .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
     .section-lead{margin:0 0 22px;color:var(--muted);font-size:1.08rem}
     .section-title::after{content:"";display:block;width:74px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,var(--cobalt),rgba(142,215,255,.35))}
@@ -81,11 +81,11 @@
     .kpi__body{min-width:0}
     .kpi strong{display:block;font-size:1.46rem;color:#0f355c}
 
-    .svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .svc-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
     .svc-card__media{height:150px;overflow:hidden;background:#0d2448}
     .svc-card__media img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
-    .svc-card__body{padding:16px}
+    .svc-card__body{padding:14px}
     .svc-card__tag{display:inline-flex;padding:.18rem .56rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-size:.78rem;font-weight:700}
     .svc-card h3{margin:8px 0 8px;font-size:1.16rem;color:#103961}
     .svc-card p{margin:0;color:var(--muted)}
@@ -184,7 +184,7 @@
 
 
     .catalogx{background:linear-gradient(180deg,#f7fbff,#fff)}
-    .catalogx__controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+    .catalogx__controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
     .catalogx__tabs{display:flex;flex-wrap:wrap;gap:8px}
     .catalogx__tab{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#123a62;font-weight:700;cursor:pointer}
     .catalogx__tab.is-active{background:#0f4c81;color:#fff;border-color:#0f4c81}
@@ -192,7 +192,7 @@
     .catalogx__search input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line);padding:0 12px;font:inherit}
     .catalogx__meta{margin:0 0 12px;color:var(--muted);font-size:.95rem}
     .catalogx__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .catalogx__card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(9,32,58,.06)}
+    .catalogx__card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 8px 20px rgba(9,32,58,.06)}
     .catalogx__card h3{margin:0 0 8px;color:#103961;font-size:1.1rem}
     .catalogx__card p{margin:0 0 10px;color:var(--muted)}
     .catalogx__tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
@@ -203,7 +203,7 @@
     @media (max-width:980px){.catalogx__grid{grid-template-columns:1fr 1fr}}
     @media (max-width:680px){.catalogx__grid{grid-template-columns:1fr}.catalogx__search{min-width:0;max-width:none;flex:1 1 100%}}
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
-    .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
+    .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:24px;background:rgba(255,255,255,.03)}
     .cta-final h2{margin:0 0 10px;font-size:clamp(28px,4vw,44px)}
     .cta-final p{margin:0 0 18px;color:#dbe9fa}
 
@@ -231,17 +231,21 @@
       .process-carousel{max-width:100%}
       .process-nav{max-width:100%}
       .process-slide{min-height:390px}
+      .hero__content{padding:72px 0 58px}
       .svc-grid{grid-template-columns:1fr}
     }
     @media (max-width:680px){
-      nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}
+      nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
       nav ul.is-open{display:grid;gap:10px}
       .menu-toggle{display:inline-flex}
-      .submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
-      .hero{min-height:460px}
-      .hero__content{padding:76px 0 66px}
+      .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}
+      .hero{min-height:420px}
+      .hero__content{padding:62px 0 52px}
+      .hero__actions .btn{width:100%;justify-content:center}
       .kpis,.case-grid{grid-template-columns:1fr}
-      .process-slide{min-height:340px}
+      .process-slide{min-height:300px}
+      .process-slide__body{padding:14px}
+      .process-nav{justify-content:center}
       .process-slide h3{font-size:clamp(22px,6.4vw,30px)}
       .process-slide p{font-size:1rem}
       .foot .container{grid-template-columns:1fr;gap:18px;padding:28px 20px}
@@ -310,10 +314,11 @@
     <section id="inicio" class="hero" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">Servicios EPC</span>
-        <h1 id="heroTitle">Soluciones Electromecánicas para operación crítica</h1>
-        <p>Diseño, montaje y comisionamiento electromecánico para plantas industriales, infraestructura energética y proyectos de expansión con cumplimiento técnico y seguridad.</p>
+        <h1 id="heroTitle">Soluciones Electromec&aacute;nicas para Operaci&oacute;n Cr&iacute;tica</h1>
+        <p>Dise&ntilde;o, montaje y comisionamiento electromec&aacute;nico para plantas industriales y proyectos de expansi&oacute;n con seguridad, trazabilidad y cumplimiento t&eacute;cnico.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="contacto.html#inicio" data-cta="hero-cotizar">Solicitar cotización</a>
+          <a class="btn btn--primary" href="contacto.html#inicio" data-cta="hero-cotizar">Solicitar diagn�stico t�cnico</a>
+          <a class="btn btn--secondary" href="tel:+523333119607" data-cta="hero-llamar">Llamar ahora</a>
         </div>
       </div>
     </section>
@@ -379,7 +384,7 @@
     <section class="process" aria-labelledby="procesoTitle">
       <div class="container">
         <h2 id="procesoTitle" class="section-title">Cómo lo ejecutamos</h2>
-        <p class="section-lead">Metodología EPC orientada a resultados de campo y continuidad operativa.</p>
+        <p class="section-lead">Ejecuci&oacute;n EPC con control de calidad en campo, ventanas operativas y entrega documental para continuidad de planta.</p>
         <div class="process-nav" aria-label="Navegación de etapas">
           <button class="process-arrow" id="processPrev" aria-label="Etapa anterior">‹</button>
           <button class="process-arrow" id="processNext" aria-label="Siguiente etapa">›</button>
@@ -417,7 +422,7 @@
           </div>
           <div class="process-dots" id="processDots" aria-label="Indicadores de etapa"></div>
           <div class="process-cta">
-            <a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta</a>
+            <a class="btn btn--primary" href="contacto.html#inicio">Quiero una propuesta t�cnica</a>
           </div>
         </div>
       </div>
@@ -426,7 +431,7 @@
     <section class="cases" id="casos" aria-labelledby="casosTitle">
       <div class="container">
         <h2 id="casosTitle" class="section-title">Casos relacionados</h2>
-        <p class="section-lead">Proyectos con alcance electromecánico e infraestructura eléctrica.</p>
+        <p class="section-lead">Referencias de montaje, integraci&oacute;n y puesta en servicio en infraestructura el&eacute;ctrica de alta exigencia.</p>
         <div class="case-grid">
           <article class="case">
             <img src="assets/img/Projects/infraestructura_electrica/Grupo_Dragon_Planta_Geotermica_Sistema_de_Generacion_y_Sincronia.png" alt="Planta geotérmica con alcance electromecánico" loading="lazy" decoding="async">
@@ -435,7 +440,7 @@
               <h3>Planta Geotérmica</h3>
               <p>Integración electromecánica para sistema de generación y sincronía.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Solicitar proyecto</a>
+                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Quiero un proyecto similar</a>
               </div>
             </div>
           </article>
@@ -446,7 +451,7 @@
               <h3>CH Angostura 400 kV</h3>
               <p>Sistemas de cable de potencia con ejecución en entorno crítico.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Solicitar proyecto</a>
+                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Quiero un proyecto similar</a>
               </div>
             </div>
           </article>
@@ -457,7 +462,7 @@
               <h3>Subestaciones MT</h3>
               <p>Incremento de capacidad con continuidad operativa en planta.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Solicitar proyecto</a>
+                <a class="btn btn--primary btn--tiny" href="contacto.html#inicio">Quiero un proyecto similar</a>
               </div>
             </div>
           </article>
@@ -489,24 +494,24 @@
 
     <section class="catalogx" id="catalogo-interactivo" aria-labelledby="catalogoInteractivoTitle">
       <div class="container">
-        <h2 id="catalogoInteractivoTitle" class="section-title">Catalogo interactivo</h2>
-        <p class="section-lead">Filtra por categoria y encuentra rapidamente el servicio adecuado para tu proyecto.</p>
+        <h2 id="catalogoInteractivoTitle" class="section-title">Cat�logo interactivo</h2>
+        <p class="section-lead">Filtra por categor&iacute;a y encuentra r&aacute;pidamente el servicio adecuado para tu proyecto.</p>
         <div class="catalogx__controls">
-          <div class="catalogx__tabs" id="catalogTabs" role="tablist" aria-label="Categorias de catalogo"></div>
+          <div class="catalogx__tabs" id="catalogTabs" role="tablist" aria-label="Categor�as del cat�logo"></div>
           <label class="catalogx__search" for="catalogSearch">
-            <input id="catalogSearch" type="search" placeholder="Buscar por servicio o palabra clave">
+            <input id="catalogSearch" type="search" placeholder="Buscar servicio o palabra clave">
           </label>
         </div>
         <p class="catalogx__meta" id="catalogMeta">Mostrando 0 servicios</p>
         <div class="catalogx__grid" id="catalogGrid"></div>
-        <p class="catalogx__empty" id="catalogEmpty">No hay resultados para los filtros seleccionados.</p>
+        <p class="catalogx__empty" id="catalogEmpty">No encontramos servicios con esos filtros. Intenta otra categor�a o palabra clave.</p>
       </div>
     </section>
     <section class="cta-final" aria-labelledby="ctaFinalTitle">
       <div class="container">
         <div class="box">
-          <h2 id="ctaFinalTitle">¿Listo para cotizar tu proyecto electromecánico?</h2>
-          <p>Conecta con ingeniería para definir alcance técnico y ruta de ejecución.</p>
+          <h2 id="ctaFinalTitle">&iquest;Listo para activar tu proyecto electromec&aacute;nico?</h2>
+          <p>Hablemos de alcance, tiempos y criticidades para enviarte una ruta t&eacute;cnica en menos de 24 horas h&aacute;biles.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="contacto.html#inicio" data-cta="final-cotizar">Solicitar propuesta técnica</a>
             <a class="btn btn--secondary" href="soluciones.html#inicio" data-cta="final-volver-soluciones">Volver a soluciones</a>
@@ -726,7 +731,7 @@
         + '<ul class="catalogx__tags">' + item.tags.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>'
         + '<div class="catalogx__actions">'
         + '<a class="btn btn--secondary" href="#inicio">Ver detalle</a>'
-        + '<a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta</a>'
+        + '<a class="btn btn--primary" href="contacto.html#inicio">Quiero una propuesta t�cnica</a>'
         + '</div>'
         + '</article>';
     }).join('');
@@ -737,8 +742,77 @@
   render();
 })();
 </script>
+<script id="ux-nav-enhancer">
+(function(){
+  var nav = document.querySelector('header nav');
+  if(!nav) return;
+
+  var currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href]'));
+
+  links.forEach(function(link){
+    var href = (link.getAttribute('href') || '').trim();
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+    var path = href.split('#')[0].toLowerCase();
+    if(!path) return;
+    if(path === currentPath){
+      link.classList.add('is-active');
+      link.setAttribute('aria-current','page');
+      var inSubmenu = link.closest('.submenu');
+      if(inSubmenu){
+        var trigger = inSubmenu.parentElement && inSubmenu.parentElement.querySelector(':scope > a');
+        if(trigger){ trigger.classList.add('is-active'); }
+      }
+    }
+  });
+
+  var media = window.matchMedia('(max-width: 680px)');
+  var submenuParents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+
+  function applyMobileSubmenuMode(){
+    var mobile = media.matches;
+    submenuParents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+
+      if(mobile){
+        submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none';
+        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+      }else{
+        submenu.style.display = '';
+        parent.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  submenuParents.forEach(function(parent){
+    var trigger = parent.querySelector(':scope > a');
+    var submenu = parent.querySelector(':scope > .submenu');
+    if(!trigger || !submenu) return;
+
+    trigger.addEventListener('click', function(e){
+      if(!media.matches) return;
+      e.preventDefault();
+      var open = parent.classList.toggle('is-open');
+      submenu.style.display = open ? 'block' : 'none';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  applyMobileSubmenuMode();
+  if(media.addEventListener){ media.addEventListener('change', applyMobileSubmenuMode); }
+  else if(media.addListener){ media.addListener(applyMobileSubmenuMode); }
+})();
+</script>
 </body>
 </html>
+
+
+
+
+
 
 
 

@@ -13813,6 +13813,70 @@ document.addEventListener('error', function(e){
   render();
 })();
 </script>
+<script id="ux-nav-enhancer">
+(function(){
+  var nav = document.querySelector('header nav');
+  if(!nav) return;
+
+  var currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href]'));
+
+  links.forEach(function(link){
+    var href = (link.getAttribute('href') || '').trim();
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+    var path = href.split('#')[0].toLowerCase();
+    if(!path) return;
+    if(path === currentPath){
+      link.classList.add('is-active');
+      link.setAttribute('aria-current','page');
+      var inSubmenu = link.closest('.submenu');
+      if(inSubmenu){
+        var trigger = inSubmenu.parentElement && inSubmenu.parentElement.querySelector(':scope > a');
+        if(trigger){ trigger.classList.add('is-active'); }
+      }
+    }
+  });
+
+  var media = window.matchMedia('(max-width: 680px)');
+  var submenuParents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+
+  function applyMobileSubmenuMode(){
+    var mobile = media.matches;
+    submenuParents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+
+      if(mobile){
+        submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none';
+        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+      }else{
+        submenu.style.display = '';
+        parent.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  submenuParents.forEach(function(parent){
+    var trigger = parent.querySelector(':scope > a');
+    var submenu = parent.querySelector(':scope > .submenu');
+    if(!trigger || !submenu) return;
+
+    trigger.addEventListener('click', function(e){
+      if(!media.matches) return;
+      e.preventDefault();
+      var open = parent.classList.toggle('is-open');
+      submenu.style.display = open ? 'block' : 'none';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  applyMobileSubmenuMode();
+  if(media.addEventListener){ media.addEventListener('change', applyMobileSubmenuMode); }
+  else if(media.addListener){ media.addListener(applyMobileSubmenuMode); }
+})();
+</script>
 </body>
 </html>
 

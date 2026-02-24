@@ -81,7 +81,7 @@
     .foot .container{padding:44px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .foot a{color:#cbd5e1;text-decoration:none}
     @media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.procura__form{grid-template-columns:1fr 1fr}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.cards{grid-template-columns:1fr}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.cards{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -149,15 +149,15 @@
       <p class="section-lead">Suministro especializado alineado a ingeniería, construcción y continuidad operativa.</p>
       <div class="cards">
         <article class="card">
-          <img src="assets/img/services/infraestructura_electrica.webp" alt="Equipamiento eléctrico para infraestructura">
+          <img src="assets/img/services/infraestructura_electrica.webp" alt="Equipamiento eléctrico para infraestructura" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Eléctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentación y accesorios críticos de planta.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/services/oil_gas.webp" alt="Procura para operación industrial">
+          <img src="assets/img/services/oil_gas.webp" alt="Procura para operación industrial" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Multimarca</span><h3>Integración de marcas líderes</h3><p>Selección técnica y equivalencias con validación para cumplimiento normativo.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/services/automatizacion_control.webp" alt="Logística y soporte en suministro">
+          <img src="assets/img/services/automatizacion_control.webp" alt="Logística y soporte en suministro" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Logística</span><h3>Abastecimiento y trazabilidad</h3><p>Seguimiento de embarques, entregas parciales y soporte de arranque en sitio.</p></div>
         </article>
       </div>
@@ -415,6 +415,70 @@
     feedback.textContent='Se abrio tu cliente de correo para finalizar el envio.';
   });
   updateSummary();
+})();
+</script>
+<script id="ux-nav-enhancer">
+(function(){
+  var nav = document.querySelector('header nav');
+  if(!nav) return;
+
+  var currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a[href]'));
+
+  links.forEach(function(link){
+    var href = (link.getAttribute('href') || '').trim();
+    if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
+    var path = href.split('#')[0].toLowerCase();
+    if(!path) return;
+    if(path === currentPath){
+      link.classList.add('is-active');
+      link.setAttribute('aria-current','page');
+      var inSubmenu = link.closest('.submenu');
+      if(inSubmenu){
+        var trigger = inSubmenu.parentElement && inSubmenu.parentElement.querySelector(':scope > a');
+        if(trigger){ trigger.classList.add('is-active'); }
+      }
+    }
+  });
+
+  var media = window.matchMedia('(max-width: 680px)');
+  var submenuParents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+
+  function applyMobileSubmenuMode(){
+    var mobile = media.matches;
+    submenuParents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+
+      if(mobile){
+        submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none';
+        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+      }else{
+        submenu.style.display = '';
+        parent.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  submenuParents.forEach(function(parent){
+    var trigger = parent.querySelector(':scope > a');
+    var submenu = parent.querySelector(':scope > .submenu');
+    if(!trigger || !submenu) return;
+
+    trigger.addEventListener('click', function(e){
+      if(!media.matches) return;
+      e.preventDefault();
+      var open = parent.classList.toggle('is-open');
+      submenu.style.display = open ? 'block' : 'none';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  applyMobileSubmenuMode();
+  if(media.addEventListener){ media.addEventListener('change', applyMobileSubmenuMode); }
+  else if(media.addListener){ media.addListener(applyMobileSubmenuMode); }
 })();
 </script>
 </body>
