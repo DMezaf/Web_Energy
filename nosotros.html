@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -40,20 +40,21 @@
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
-    .brand__logo{width:72px;height:72px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
-    .brand__logo img{max-width:96%;max-height:96%;object-fit:contain;display:block}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
     .brand__name{font-weight:700;font-size:18px;color:var(--navy)}
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
     .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;}
     .submenu{
       list-style:none;
       margin:0;
       padding:10px 12px;
       position:absolute;
-      top:calc(100% + 10px);
+      top:100%;
       left:0;
       min-width:320px;
       background:#fff;
@@ -12316,7 +12317,7 @@ document.addEventListener('click', function(e){
     <!-- Identidad -->
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="44" height="44" style="display:block;border-radius:8px;object-fit:contain">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
       </div>
       <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con las soluciones más versátiles y sustentables para nuestros clientes.</p>
       <div style="display:flex;gap:14px;margin-top:14px">
@@ -12697,6 +12698,11 @@ document.addEventListener('error', function(e){
 </script>
 </body>
 </html>
+
+
+
+
+
 
 
 

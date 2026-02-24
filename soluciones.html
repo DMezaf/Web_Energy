@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -40,20 +40,21 @@
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
-    .brand__logo{width:72px;height:72px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
-    .brand__logo img{max-width:96%;max-height:96%;object-fit:contain;display:block}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
     .brand__name{font-weight:700;font-size:18px;color:var(--navy)}
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
     .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;}
     .submenu{
       list-style:none;
       margin:0;
       padding:10px 12px;
       position:absolute;
-      top:calc(100% + 10px);
+      top:100%;
       left:0;
       min-width:320px;
       background:#fff;
@@ -256,12 +257,30 @@
       flex:0 0 calc((100% - (var(--svc-gap) * 2)) / 3);
       min-width:0;
     }
-    .svc__nav{display:flex;justify-content:flex-end;gap:10px;margin:0 0 12px}
+    .svc__nav{
+      position:absolute;
+      left:12px;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin:0;
+      z-index:3;
+      pointer-events:none;
+    }
     .svc__navBtn{
-      width:38px;height:38px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.22);
-      background:rgba(255,255,255,.08);color:#eaf2ff;
+      width:42px;height:42px;border-radius:999px;
+      border:1px solid rgba(215,242,255,.45);
+      background:rgba(8,22,44,.58);color:#eaf2ff;
       cursor:pointer;font-size:18px;line-height:1;
+      pointer-events:auto;
+      box-shadow:0 8px 22px rgba(4,12,24,.45);
+    }
+    .svc__navBtn:hover{
+      background:rgba(12,36,68,.84);
+      border-color:rgba(215,242,255,.82);
     }
     .svc__navBtn:disabled{opacity:.45;cursor:not-allowed}
     .svc__dots{
@@ -271,17 +290,20 @@
       margin:12px 0 0;
     }
     .svc__dot{
-      width:9px;
-      height:9px;
+      width:10px;
+      height:10px;
       border-radius:999px;
-      border:1px solid rgba(234,242,255,.62);
-      background:transparent;
+      border:1px solid rgba(234,242,255,.82);
+      background:rgba(255,255,255,.18);
       padding:0;
       cursor:pointer;
+      transition:all .22s ease;
     }
     .svc__dot.is-active{
-      background:#8fd7ff;
-      border-color:#8fd7ff;
+      width:26px;
+      background:linear-gradient(90deg,#78d3ff,#b9edff);
+      border-color:#b9edff;
+      box-shadow:0 0 0 3px rgba(143,215,255,.18),0 0 12px rgba(120,211,255,.45);
     }
     .svc__card{
       border-radius:18px;overflow:hidden;
@@ -351,6 +373,8 @@
         justify-content:flex-end;
       }
       .svc__head{align-items:flex-start;flex-direction:column}
+      .svc__nav{left:8px;right:8px}
+      .svc__navBtn{width:38px;height:38px}
     }
 
     /* ===== Suministro (marcas/procura) ===== */
@@ -2526,8 +2550,8 @@ label{font-size:14px}
     </div>
     <div class="svc__carousel" id="svcEspecialidadesCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de servicios y especialidades">
       <div class="svc__nav" aria-label="Navegación del carrusel">
-        <button type="button" class="svc__navBtn" id="svcPrev" aria-label="Servicio anterior">‹</button>
-        <button type="button" class="svc__navBtn" id="svcNext" aria-label="Siguiente servicio">›</button>
+        <button type="button" class="svc__navBtn" id="svcPrev" aria-label="Servicio anterior">&#8249;</button>
+        <button type="button" class="svc__navBtn" id="svcNext" aria-label="Siguiente servicio">&#8250;</button>
       </div>
       <div class="svc__viewport">
         <div class="svc__grid" id="svcEspecialidadesGrid" role="list"></div>
@@ -13060,8 +13084,8 @@ document.addEventListener('click', function(e){
     const cardWidth = firstCard.getBoundingClientRect().width;
     const offset = index * (cardWidth + getGapPx());
     root.style.transform = 'translateX(-' + offset + 'px)';
-    prevBtn.disabled = index <= 0;
-    nextBtn.disabled = index >= maxIndex;
+    prevBtn.disabled = maxIndex <= 0;
+    nextBtn.disabled = maxIndex <= 0;
     dotButtons.forEach(function(dot, i){
       dot.classList.toggle('is-active', i === index);
       dot.setAttribute('aria-current', i === index ? 'true' : 'false');
@@ -13069,12 +13093,14 @@ document.addEventListener('click', function(e){
   }
 
   prevBtn.addEventListener('click', function(){
-    index = Math.max(0, index - 1);
+    if(maxIndex <= 0) return;
+    index = index <= 0 ? maxIndex : index - 1;
     updateCarousel();
   });
 
   nextBtn.addEventListener('click', function(){
-    index = Math.min(maxIndex, index + 1);
+    if(maxIndex <= 0) return;
+    index = index >= maxIndex ? 0 : index + 1;
     updateCarousel();
   });
 
@@ -13129,9 +13155,9 @@ document.addEventListener('click', function(e){
     const delta = endX - startX;
     if(Math.abs(delta) > 36){
       if(delta < 0){
-        index = Math.min(maxIndex, index + 1);
+        index = index >= maxIndex ? 0 : index + 1;
       } else {
-        index = Math.max(0, index - 1);
+        index = index <= 0 ? maxIndex : index - 1;
       }
       updateCarousel();
     }
@@ -13141,13 +13167,13 @@ document.addEventListener('click', function(e){
     if(ev.key === 'ArrowLeft'){
       ev.preventDefault();
       setPaused(true);
-      index = Math.max(0, index - 1);
+      index = index <= 0 ? maxIndex : index - 1;
       updateCarousel();
       resumeAutoplaySoon();
     } else if(ev.key === 'ArrowRight'){
       ev.preventDefault();
       setPaused(true);
-      index = Math.min(maxIndex, index + 1);
+      index = index >= maxIndex ? 0 : index + 1;
       updateCarousel();
       resumeAutoplaySoon();
     }
@@ -13171,7 +13197,7 @@ document.addEventListener('click', function(e){
     <!-- Identidad -->
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="44" height="44" style="display:block;border-radius:8px;object-fit:contain">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
       </div>
       <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con las soluciones más versátiles y sustentables para nuestros clientes.</p>
       <div style="display:flex;gap:14px;margin-top:14px">
@@ -13879,6 +13905,13 @@ document.addEventListener('error', function(e){
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
