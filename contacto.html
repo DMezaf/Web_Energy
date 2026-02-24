@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -55,6 +55,12 @@
     .info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 8px 24px rgba(9,32,58,.06)}
     .info h3{margin:0 0 8px;color:#113960}.info p,.info a{margin:0;color:var(--muted)}
+    .map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .map-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
+    .map-card__head{padding:12px 14px;border-bottom:1px solid var(--line)}
+    .map-card__head h3{margin:0;color:#113960}
+    .map-card__head p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+    .map-frame{display:block;width:100%;height:300px;border:0}
     .contact-wrap{background:linear-gradient(180deg,#f7fbff,#fff)}
     .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(9,32,58,.06)}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -64,8 +70,8 @@
     .foot{background:#0b1a32;color:#fff}
     .foot .container{padding:44px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .foot a{color:#cbd5e1;text-decoration:none}
-    @media (max-width:980px){.info-grid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.info-grid{grid-template-columns:1fr}}
+    @media (max-width:980px){.info-grid{grid-template-columns:1fr 1fr}.map-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.info-grid{grid-template-columns:1fr}.map-frame{height:260px}}
   </style>
 </head>
 <body>
@@ -73,16 +79,41 @@
   <a class="brand__logo" href="index.html#inicio" aria-label="Ir al inicio"><img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" width="72" height="72"></a>
   <nav aria-label="Principal"><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
     <ul id="menuList">
-      <li><a href="index.html#inicio">Inicio</a></li><li><a href="nosotros.html#inicio">Nosotros</a></li>
-      <li class="nav-item--has-submenu"><a href="soluciones.html#inicio">Soluciones</a>
-        <ul class="submenu" aria-label="Submenú Soluciones">
-          <li class="submenu__group"><span class="submenu__title">Servicios EPC</span><ul class="submenu__list"><li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li><li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li><li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li><li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li><li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li><li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación industrial</a></li></ul></li>
-          <li class="submenu__group"><span class="submenu__title">Especialidades</span><ul class="submenu__list"><li><a href="especialidad_ingenieria.html#inicio">Ingeniería</a></li><li><a href="especialidad_servicios.html#inicio">Servicios</a></li><li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li><li><a href="especialidad_capacitacion.html#inicio">Capacitación</a></li></ul></li>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li class="nav-item--has-submenu">
+    <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Servicios EPC</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de servicios EPC">
+      <li class="submenu__group">
+        <span class="submenu__title">Servicios EPC</span>
+        <ul class="submenu__list">
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
         </ul>
       </li>
-      <li><a href="procura.html#inicio">Procura</a></li>
-      <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
     </ul>
+  </li>
+  <li class="nav-item--has-submenu">
+    <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de especialidades">
+      <li class="submenu__group">
+        <span class="submenu__title">Especialidades</span>
+        <ul class="submenu__list">
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_servicio.html">Servicio</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="procura.html">Procura</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+</ul>
   </nav>
 </div></header>
 
@@ -99,7 +130,38 @@
     <div class="info-grid">
       <article class="info"><h3>Teléfonos</h3><p>33 3311 9607 Guadalajara</p><p>33 3813 0739 Guadalajara</p><p>938 381 4824 Ciudad del Carmen</p></article>
       <article class="info"><h3>Correo</h3><p><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p><p>Respuesta en horario laboral.</p></article>
-      <article class="info"><h3>WhatsApp</h3><p><a href="https://wa.me/523333119607" target="_blank" rel="noopener noreferrer">+52 33 3311 9607</a></p><p>Contacto directo para seguimiento rápido.</p></article>
+      <article class="info"><h3>WhatsApp</h3><p><a href="https://wa.me/523332582234" target="_blank" rel="noopener noreferrer">+52 33 3258 2234</a></p><p>Contacto directo para seguimiento rápido.</p></article>
+    </div>
+  </div></section>
+
+  <section aria-labelledby="ubicacionesTitle"><div class="container">
+    <h2 id="ubicacionesTitle" class="section-title">Ubicaciones VMS Energy</h2>
+    <p class="section-lead">Cobertura operativa en Guadalajara y Ciudad del Carmen.</p>
+    <div class="map-grid">
+      <article class="map-card" aria-label="Mapa de oficina en Guadalajara">
+        <div class="map-card__head">
+          <h3>Guadalajara</h3>
+          <p>Jalisco, México</p>
+        </div>
+        <iframe
+          class="map-frame"
+          title="Mapa de VMS Energy en Guadalajara"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Guadalajara%20Jalisco%20VMS%20Energy&output=embed"></iframe>
+      </article>
+      <article class="map-card" aria-label="Mapa de oficina en Ciudad del Carmen">
+        <div class="map-card__head">
+          <h3>Ciudad del Carmen</h3>
+          <p>Campeche, México</p>
+        </div>
+        <iframe
+          class="map-frame"
+          title="Mapa de VMS Energy en Ciudad del Carmen"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Ciudad%20del%20Carmen%20Campeche%20VMS%20Energy&output=embed"></iframe>
+      </article>
     </div>
   </div></section>
 
@@ -134,7 +196,7 @@
 <footer id="footer" class="foot" aria-label="Pie de página corporativo"><div class="container">
   <div><h4 style="margin:0 0 8px">VMS Energy</h4><p style="margin:0;color:#cbd5e1">Soluciones EPC para operación crítica en energía e industria.</p></div>
   <div><h4 style="margin:0 0 8px">Navegación</h4><ul style="list-style:none;margin:0;padding:0;line-height:1.9"><li><a href="index.html#inicio">Inicio</a></li><li><a href="nosotros.html#inicio">Nosotros</a></li><li><a href="soluciones.html#inicio">Soluciones</a></li><li><a href="procura.html#inicio">Procura</a></li><li><a href="contacto.html#inicio">Contactar</a></li></ul></div>
-  <div><h4 style="margin:0 0 8px">Contacto</h4><ul style="list-style:none;margin:0;padding:0;line-height:1.9"><li>33 3311 9607</li><li>33 3813 0739</li><li>938 381 4824</li><li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li></ul></div>
+  <div><h4 style="margin:0 0 8px">Contacto</h4><ul style="list-style:none;margin:0;padding:0;line-height:1.9"><li>33 3813 0739</li><li>33 3813 0739</li><li>938 381 4824</li><li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li></ul></div>
 </div></footer>
 <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">Desarrollado por el equipo digital de VMS Energy · v10.1</div>
 
@@ -160,4 +222,5 @@
 </script>
 </body>
 </html>
+
 

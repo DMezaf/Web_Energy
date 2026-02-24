@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Especialidades | VMS Energy</title>
+  <meta name="description" content="Especialidades VMS Energy: Ingeniería, Servicios, Mantenimiento y Capacitación para continuidad operativa en proyectos EPC." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.vms-energy.mx/especialidades.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Especialidades | VMS Energy" />
+  <meta property="og:description" content="Ingeniería, Servicios, Mantenimiento y Capacitación con ejecución técnica orientada a resultados." />
+  <meta property="og:url" content="https://www.vms-energy.mx/especialidades.html" />
+  <meta property="og:image" content="https://www.vms-energy.mx/assets/img/services/automatizacion_control.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Especialidades | VMS Energy" />
+  <meta name="twitter:description" content="Capacidades técnicas especializadas para operación crítica." />
+  <meta name="twitter:image" content="https://www.vms-energy.mx/assets/img/services/automatizacion_control.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#172C51;
+      --cobalt:#0F4C81;
+      --ink:#10233D;
+      --muted:#4B647F;
+      --line:rgba(23,44,81,.14);
+      --soft:#F3F8FF;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand__logo{width:72px;height:72px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{width:96%;height:96%;object-fit:contain;display:block}
+    nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700}
+    nav a.is-active{color:var(--cobalt)}
+    .cta-header{padding:.62rem 1rem;border-radius:999px;background:linear-gradient(180deg,var(--cobalt),#0b3c67);color:#fff;border:1px solid rgba(8,53,92,.55)}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:calc(100% + 10px);left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+    .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .submenu__list a.is-active{color:var(--cobalt);font-weight:800}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer}
+    .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
+    .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
+
+    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/services/automatizacion_control.webp') center/cover no-repeat;z-index:-1}
+    .hero__content{max-width:760px;padding:86px 0 72px}
+    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
+    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+
+    section{padding:56px 0}
+    .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
+    .section-title::after{content:"";display:block;width:74px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,var(--cobalt),rgba(142,215,255,.35))}
+    .section-lead{margin:0 0 22px;color:var(--muted);font-size:1.08rem;max-width:800px}
+
+    .svc-cap{padding:26px 0}
+    .svc-cap__shell{
+      background:linear-gradient(180deg,#0b2344 0%,#0a1c35 100%);
+      border:1px solid rgba(127,183,255,.22);
+      border-radius:18px;
+      box-shadow:0 18px 48px rgba(0,0,0,.14);
+      padding:16px;
+      color:#fff;
+    }
+    .svc-cap__top{
+      border:1px solid rgba(127,183,255,.22);
+      border-radius:14px;
+      padding:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .svc-cap__title{
+      margin:0 0 10px;
+      color:#eaf2ff;
+      font-size:1.05rem;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .svc-cap__title::before{
+      content:"";
+      width:4px;
+      height:18px;
+      border-radius:999px;
+      background:#8fd7ff;
+      display:inline-block;
+    }
+    .svc-cap__brand{
+      border:1px solid rgba(127,183,255,.22);
+      border-radius:14px;
+      min-height:78px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.03);
+    }
+    .svc-cap__brand img{max-width:170px;max-height:44px;object-fit:contain;display:block}
+    .svc-cap__lead{margin:12px 0 0;color:#dbeafe}
+    .svc-cap__metrics{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+    }
+    .svc-cap__metric{
+      border:1px solid rgba(127,183,255,.22);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      min-height:96px;
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      gap:8px;
+    }
+    .svc-cap__pill{
+      min-width:66px;
+      height:34px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(143,215,255,.55);
+      background:rgba(42,96,149,.72);
+      color:#eaf2ff;
+      font-weight:800;
+      font-size:1.25rem;
+    }
+    .svc-cap__label{margin:0;color:#dbeafe;font-size:1.02rem;font-weight:700}
+
+    .spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .spec-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
+    .spec-card__media{height:170px;overflow:hidden;background:#0d2448}
+    .spec-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+    .spec-card__body{padding:16px}
+    .spec-card__tag{display:inline-flex;padding:.18rem .56rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-size:.78rem;font-weight:700}
+    .spec-card h3{margin:8px 0 8px;font-size:1.28rem;color:#103961}
+    .spec-card p{margin:0 0 12px;color:var(--muted)}
+    .spec-card ul{margin:0 0 14px;padding-left:18px;color:#23486f}
+
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(240px,1fr));gap:12px;margin-top:18px}
+    .kpi{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px}
+    .kpi__badge{width:52px;height:52px;object-fit:contain;flex:0 0 52px}
+    .kpi strong{display:block;font-size:1.32rem;color:#0f355c}
+
+    .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
+    .cta-final__card{background:rgba(255,255,255,.06);border:1px solid rgba(163,201,255,.25);border-radius:18px;padding:24px}
+    .cta-final h2{margin:0 0 10px;font-size:clamp(26px,3vw,34px)}
+    .cta-final p{margin:0 0 16px;color:#dbeafe;max-width:780px}
+
+    footer{background:#0b1428;color:#cbd5e1}
+    .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;padding:40px 0}
+    .foot h4{margin:0 0 10px;font-size:1rem;line-height:1.2}
+    .foot ul{margin:0;padding:0;list-style:none;font-size:14px;line-height:1.7}
+    .foot a{color:#cbd5e1;text-decoration:none}
+    .foot a:hover{color:#fff}
+    .copy{border-top:1px solid rgba(148,163,184,.22);padding:12px 0;color:#9fb0c7;font-size:.92rem}
+
+    @media (max-width:980px){
+      .svc-cap__metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .spec-grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+      .foot{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:700px){
+      nav ul{display:none}
+      .menu-toggle{display:inline-flex}
+      .svc-cap__metrics{grid-template-columns:1fr}
+      .kpis,.foot{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="brand__logo" href="index.html#inicio" aria-label="Ir a inicio VMS Energy">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy" decoding="async">
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav>
+        <ul id="menu">
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li class="nav-item--has-submenu">
+    <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Servicios EPC</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de servicios EPC">
+      <li class="submenu__group">
+        <span class="submenu__title">Servicios EPC</span>
+        <ul class="submenu__list">
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item--has-submenu">
+    <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de especialidades">
+      <li class="submenu__group">
+        <span class="submenu__title">Especialidades</span>
+        <ul class="submenu__list">
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_servicio.html">Servicio</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="procura.html">Procura</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+</ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__content">
+        <span class="eyebrow">Ecosistema de especialidades</span>
+        <h1 id="heroTitle">Especialidades para ejecución técnica integral</h1>
+        <p>Un frente único para ingeniería, servicios, mantenimiento y capacitación con foco en continuidad operativa y seguridad industrial.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta</a>
+          <a class="btn btn--secondary" href="#especialidades-grid">Ver especialidades</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-cap" aria-labelledby="svcCapTitle">
+      <div class="container">
+        <div class="svc-cap__shell">
+          <div class="svc-cap__top">
+            <h2 class="svc-cap__title" id="svcCapTitle">Capacidad</h2>
+            <div class="svc-cap__brand">
+              <img src="assets/brand/vms_logo_white.png" alt="VMS Energy" loading="lazy" decoding="async">
+            </div>
+            <p class="svc-cap__lead">Ejecución <strong>Ingeniería, Servicio y mantenimiento.</strong></p>
+          </div>
+          <div class="svc-cap__metrics" aria-label="Métricas de capacidad técnica">
+            <article class="svc-cap__metric"><span class="svc-cap__pill">110</span><p class="svc-cap__label">Servicio</p></article>
+            <article class="svc-cap__metric"><span class="svc-cap__pill">34</span><p class="svc-cap__label">Mantenimiento</p></article>
+            <article class="svc-cap__metric"><span class="svc-cap__pill">36</span><p class="svc-cap__label">Ingeniería</p></article>
+            <article class="svc-cap__metric"><span class="svc-cap__pill">50</span><p class="svc-cap__label">EPC</p></article>
+            <article class="svc-cap__metric"><span class="svc-cap__pill">11</span><p class="svc-cap__label">Suministro</p></article>
+            <article class="svc-cap__metric"><span class="svc-cap__pill">5</span><p class="svc-cap__label">Capacitación</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidades-grid" aria-labelledby="espTitle">
+      <div class="container">
+        <h2 id="espTitle" class="section-title">Nuestras especialidades</h2>
+        <p class="section-lead">Cada especialidad puede operar de forma independiente o integrada como parte del modelo EPC de VMS Energy.</p>
+        <div class="spec-grid">
+          <article class="spec-card">
+            <div class="spec-card__media"><img src="assets/img/services/infraestructura_electrica.webp" alt="Especialidad de ingeniería" loading="lazy" decoding="async"></div>
+            <div class="spec-card__body">
+              <span class="spec-card__tag">Especialidad</span>
+              <h3>Ingeniería</h3>
+              <p>Diseño técnico y documentación para ejecución segura y trazable.</p>
+              <ul>
+                <li>Ingeniería conceptual y de detalle</li>
+                <li>Memorias y especificaciones</li>
+                <li>Planos IFC y soporte técnico</li>
+              </ul>
+              <a class="btn btn--secondary" href="especialidad_ingenieria.html#inicio">Ver ingeniería</a>
+            </div>
+          </article>
+          <article class="spec-card">
+            <div class="spec-card__media"><img src="assets/img/services/oil_gas.webp" alt="Especialidad de servicios" loading="lazy" decoding="async"></div>
+            <div class="spec-card__body">
+              <span class="spec-card__tag">Especialidad</span>
+              <h3>Servicios</h3>
+              <p>Ejecución y supervisión en campo para cumplimiento de alcance y tiempos.</p>
+              <ul>
+                <li>Supervisión técnica</li>
+                <li>Pruebas y puesta en marcha</li>
+                <li>Soporte operativo</li>
+              </ul>
+              <a class="btn btn--secondary" href="especialidad_servicios.html#inicio">Ver servicios</a>
+            </div>
+          </article>
+          <article class="spec-card">
+            <div class="spec-card__media"><img src="assets/img/services/plano_electromecanicos.webp" alt="Especialidad de mantenimiento" loading="lazy" decoding="async"></div>
+            <div class="spec-card__body">
+              <span class="spec-card__tag">Especialidad</span>
+              <h3>Mantenimiento</h3>
+              <p>Planes preventivos y correctivos para continuidad de activos críticos.</p>
+              <ul>
+                <li>Rutinas preventivas</li>
+                <li>Atención correctiva y contingencias</li>
+                <li>Optimización de disponibilidad</li>
+              </ul>
+              <a class="btn btn--secondary" href="especialidad_mantenimiento.html#inicio">Ver mantenimiento</a>
+            </div>
+          </article>
+          <article class="spec-card">
+            <div class="spec-card__media"><img src="assets/img/services/automatizacion_control.webp" alt="Especialidad de capacitación" loading="lazy" decoding="async"></div>
+            <div class="spec-card__body">
+              <span class="spec-card__tag">Especialidad</span>
+              <h3>Capacitación</h3>
+              <p>Transferencia de conocimiento operativo para equipos de planta.</p>
+              <ul>
+                <li>Formación técnica por disciplina</li>
+                <li>Entrenamiento práctico en sitio</li>
+                <li>Evaluación y cierre de brechas</li>
+              </ul>
+              <a class="btn btn--secondary" href="especialidad_capacitacion.html#inicio">Ver capacitación</a>
+            </div>
+          </article>
+        </div>
+        <div class="kpis" aria-label="Indicadores clave">
+          <article class="kpi">
+            <img class="kpi__badge" src="assets/img/20_anos_VMS_Energy_badge_EPC.png" alt="20 años VMS Energy" loading="lazy" decoding="async">
+            <div><strong>20 años</strong> ejecutando proyectos EPC</div>
+          </article>
+          <article class="kpi">
+            <img class="kpi__badge" src="assets/img/Sistema_gestion_integral.png" alt="Sistema de gestión integral" loading="lazy" decoding="async">
+            <div><strong>Sistema de Gestión Integral</strong> ISO 9001, 14001, 45001, 37001 y 50001</div>
+          </article>
+          <article class="kpi">
+            <img class="kpi__badge" src="assets/img/24_7_Soporte_VMS_Energy.png" alt="Soporte 24/7" loading="lazy" decoding="async">
+            <div><strong>24/7</strong> soporte en fases críticas de ejecución</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="ctaTitle">
+      <div class="container">
+        <div class="cta-final__card">
+          <h2 id="ctaTitle">Activa la especialidad que tu proyecto necesita</h2>
+          <p>Definimos alcance técnico, recursos y plan de ejecución para integrar especialidades con control de costo, tiempo y calidad.</p>
+          <a class="btn btn--primary" href="contacto.html#inicio">Hablar con un especialista</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="container foot">
+      <div>
+        <h4>VMS Energy</h4>
+        <ul>
+          <li>EPC y especialidades para operación crítica.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="nosotros.html#inicio">Nosotros</a></li>
+          <li><a href="soluciones.html#inicio">Soluciones</a></li>
+          <li><a href="procura.html#inicio">Procura</a></li>
+          <li><a href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="especialidad_ingenieria.html#inicio">Ingeniería</a></li>
+          <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+          <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html#inicio">Capacitación</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copy">© 2026 VMS Energy. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('menuToggle');
+      const menu = document.getElementById('menu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', function(){
+        const open = menu.style.display === 'flex';
+        menu.style.display = open ? 'none' : 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '92px';
+        menu.style.right = '20px';
+        menu.style.background = '#fff';
+        menu.style.padding = '14px';
+        menu.style.border = '1px solid rgba(23,44,81,.14)';
+        menu.style.borderRadius = '12px';
+        menu.style.boxShadow = '0 16px 32px rgba(8,28,54,.15)';
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+      window.addEventListener('resize', function(){
+        if(window.innerWidth > 700){
+          menu.removeAttribute('style');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -1027,24 +1027,42 @@
 
 <style>
 /* ===== CV por industria (dinamico) ===== */
-.cvx{padding:20px 0 44px}
-.cvx__head{margin-bottom:14px}
+.cvx{padding:10px 0 28px}
+.cvx__head{margin-bottom:10px}
 .cvx__kicker{margin:0;color:rgba(23,44,81,.68);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
 .cvx__title{margin:.28rem 0 .4rem;color:#0b2545;font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.1}
 .cvx__lead{margin:0;color:#475569}
 .cvx__industry{color:#0f4c81;font-weight:700}
-.cvx__grid{margin-top:16px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
-.cvx__card{grid-column:span 4;background:linear-gradient(180deg,#0b2344 0%,#0a1c35 100%);border:1px solid rgba(127,183,255,.22);border-radius:18px;box-shadow:0 18px 48px rgba(0,0,0,.14);padding:18px;color:#fff}
-.cvx__card--wide{grid-column:span 8}
-.cvx__cardTitle{margin:0 0 12px;font-size:1.06rem;color:rgba(255,255,255,.95)}
-.cvx__solutions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.cvx__solution{background:rgba(7,22,44,.58);border:1px solid rgba(140,190,255,.22);border-radius:14px;min-height:110px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px}
+.cvx__grid{margin-top:12px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.cvx__card{grid-column:span 4;background:linear-gradient(180deg,#0b2344 0%,#0a1c35 100%);border:1px solid rgba(127,183,255,.22);border-radius:18px;box-shadow:0 18px 48px rgba(0,0,0,.14);padding:14px;color:#fff}
+.cvx__card--wide{grid-column:span 12}
+.cvx__top{border:1px solid rgba(127,183,255,.24);border-radius:14px;padding:12px;margin:0 0 12px;background:rgba(255,255,255,.02)}
+.cvx__topTitle{margin:0 0 10px;font-size:1.05rem;color:#eaf2ff;display:flex;align-items:center;gap:8px}
+.cvx__topTitle::before{content:"";width:4px;height:18px;border-radius:999px;background:#8fd7ff;display:inline-block}
+.cvx__brand{border:1px solid rgba(127,183,255,.24);border-radius:12px;min-height:58px;display:grid;place-items:center;background:rgba(255,255,255,.03)}
+.cvx__brand img{max-width:160px;max-height:40px;object-fit:contain;display:block}
+.cvx__topLead{margin:10px 0 0;color:#dbeafe}
+.cvx__cardTitle{margin:0 0 10px;font-size:1.06rem;color:rgba(255,255,255,.95)}
+.cvx__solutions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cvx__solution{background:rgba(7,22,44,.58);border:1px solid rgba(140,190,255,.22);border-radius:14px;min-height:98px;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
 .cvx__pill{min-width:76px;height:38px;border-radius:999px;display:grid;place-items:center;font-weight:800;font-size:1.1rem;color:#dbeafe;background:rgba(42,96,149,.72);border:1px solid rgba(140,190,255,.36)}
 .cvx__solutionName{margin:0;color:rgba(255,255,255,.9);line-height:1.2;font-size:.98rem}
-.cvx__list{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-.cvx__list li{border:1px solid rgba(140,190,255,.24);background:rgba(7,22,44,.45);border-radius:999px;padding:8px 12px;color:rgba(255,255,255,.9);font-size:.95rem}
 @media (max-width:1080px){.cvx__card--wide{grid-column:span 12}.cvx__card{grid-column:span 6}.cvx__solutions{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:700px){.cvx__card{grid-column:span 12}.cvx__solutions{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .cvx{padding:6px 0 20px}
+  .cvx__head{margin-bottom:8px}
+  .cvx__grid{margin-top:8px;gap:8px}
+  .cvx__card{grid-column:span 12;padding:10px}
+  .cvx__top{padding:10px}
+  .cvx__brand{min-height:52px}
+  .cvx__brand img{max-width:146px}
+  .cvx__topLead{font-size:.94rem}
+  .cvx__cardTitle{margin:0 0 8px;font-size:1rem}
+  .cvx__solutions{grid-template-columns:1fr;gap:8px}
+  .cvx__solution{min-height:82px;padding:8px;gap:4px}
+  .cvx__pill{min-width:64px;height:32px;font-size:1rem}
+  .cvx__solutionName{font-size:.92rem}
+}
 
 </style>
 
@@ -2230,36 +2248,41 @@ label{font-size:14px}
       <nav aria-label="Principal">
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
         <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="nosotros.html#inicio">Nosotros</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#inicio">Soluciones</a>
-            <ul class="submenu" aria-label="Submenú Soluciones">
-              <li class="submenu__group">
-                <span class="submenu__title">Servicios EPC</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación industrial</a></li>
-                </ul>
-              </li>
-              <li class="submenu__group">
-                <span class="submenu__title">Especialidades</span>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingeniería</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitación</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="procura.html#inicio">Procura</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li class="nav-item--has-submenu">
+    <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Servicios EPC</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de servicios EPC">
+      <li class="submenu__group">
+        <span class="submenu__title">Servicios EPC</span>
+        <ul class="submenu__list">
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
         </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item--has-submenu">
+    <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de especialidades">
+      <li class="submenu__group">
+        <span class="submenu__title">Especialidades</span>
+        <ul class="submenu__list">
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_servicio.html">Servicio</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="procura.html">Procura</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+</ul>
       </nav>
     </div>
   </header>
@@ -2495,6 +2518,34 @@ label{font-size:14px}
     <p class="svc__note">Responsabilidad total desde ingeniería conceptual hasta puesta en marcha y capacitación.</p>
   </div>
 </section><!-- Clientes por sector (unbranded import v15) -->
+<span id="capacidad-tecnica" class="anchor-target" aria-hidden="true"></span>
+<section class="cvx" id="cv" aria-labelledby="cvxTitle">
+  <div class="container">
+    <div class="cvx__head">
+      <p class="cvx__kicker">Curriculum Vitae</p>
+      <h2 class="cvx__title" id="cvxTitle">Capacidad EPC</h2>
+      <p class="cvx__lead">Experiencia comprobada en <span class="cvx__industry" id="cvxIndustry">todas las industrias</span> para proyectos EPC de operación crítica.</p>
+    </div>
+    <div class="cvx__grid">
+      <article class="cvx__card cvx__card--wide">
+        <div class="cvx__top" aria-label="Encabezado de capacidad">
+          <h3 class="cvx__topTitle">Capacidad Proyectos EPC</h3>
+          <div class="cvx__brand">
+            <img src="assets/brand/vms_logo_white.png" alt="VMS Energy" loading="lazy" decoding="async">
+          </div>
+          <p class="cvx__topLead">Ejecuci&oacute;n <strong>Ingeniería, Procura y Construcción</strong>.</p>
+        </div>
+        <h3 class="cvx__cardTitle">Experiencia en Proyectos EPC</h3>
+        <div class="cvx__solutions" id="cvxSolutions" aria-live="polite"></div>
+      </article>
+    </div>
+    <div class="hero__actions" style="margin-top:16px">
+      <a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta técnica</a>
+      <a class="btn btn--secondary" href="especialidad_ingenieria.html#inicio">Ver especialidades</a>
+    </div>
+  </div>
+</section>
+<!-- Clientes por sector (unbranded import v15) -->
 <section class="clients" id="clientesPorSector" aria-label="Clientes por sector">
   <div class="container">
     <div class="clients__head">
@@ -12690,9 +12741,7 @@ document.addEventListener('click', function(e){
   const industryChecks = document.getElementById('catIndustryChecks');
   const industryLabel = document.getElementById('cvxIndustry');
   const solutionsRoot = document.getElementById('cvxSolutions');
-  const servicesRoot = document.getElementById('cvxServices');
-  const EspecialidadesRoot = document.getElementById('cvxEspecialidades');
-  if(!industryLabel || !solutionsRoot || !servicesRoot || !EspecialidadesRoot) return;
+  if(!industryLabel || !solutionsRoot) return;
 
   const DATA = {
     default: {
@@ -12702,9 +12751,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 61 },
         { name: 'Electromecanica', count: 25 },
         { name: 'Solar', count: 2 }
-      ],
-      services: ['EPC', 'Suministro', 'Mantenimiento', 'Ingeniería de detalle'],
-      Especialidades: ['Integracion BT/MT', 'Puesta en marcha', 'Retrofit', 'Normatividad y seguridad']
+      ]
     },
     oilgas: {
       label: 'Oil & Gas',
@@ -12713,9 +12760,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 48 },
         { name: 'Electromecanica', count: 19 },
         { name: 'Solar', count: 1 }
-      ],
-      services: ['EPC', 'Modernizacion', 'Mantenimiento', 'Integracion de control'],
-      Especialidades: ['Areas clasificadas', 'Paros programados', 'Comisionamiento offshore', 'Confiabilidad operativa']
+      ]
     },
     energia: {
       label: 'Generacion e Infraestructura Electrica',
@@ -12724,9 +12769,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 29 },
         { name: 'Electromecanica', count: 17 },
         { name: 'Solar', count: 2 }
-      ],
-      services: ['EPC', 'Ingeniería', 'Suministro', 'Mantenimiento'],
-      Especialidades: ['Subestaciones BT/MT', 'Pruebas y energizacion', 'Proteccion y control', 'Calidad de energia']
+      ]
     },
     mineria: {
       label: 'Mineria y Metales',
@@ -12735,9 +12778,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 31 },
         { name: 'Electromecanica', count: 23 },
         { name: 'Solar', count: 1 }
-      ],
-      services: ['EPC', 'Suministro', 'Mantenimiento', 'Rehabilitacion'],
-      Especialidades: ['Variadores de velocidad', 'Motores y tableros', 'Bombeo profundo', 'Operacion continua']
+      ]
     },
     procesos: {
       label: 'Alimentos, Bebidas y Papel',
@@ -12746,9 +12787,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 34 },
         { name: 'Electromecanica', count: 18 },
         { name: 'Solar', count: 1 }
-      ],
-      services: ['EPC', 'Automatizacion', 'Mantenimiento', 'Suministro especializado'],
-      Especialidades: ['Eficiencia energetica', 'Control de proceso', 'Instrumentacion', 'Integracion multimarcas']
+      ]
     },
     industrial: {
       label: 'Industrial y Manufactura',
@@ -12757,9 +12796,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 40 },
         { name: 'Electromecanica', count: 21 },
         { name: 'Solar', count: 2 }
-      ],
-      services: ['EPC', 'Suministro', 'Mantenimiento', 'Ingeniería conceptual y detalle'],
-      Especialidades: ['HVAC industrial', 'Centros de datos', 'Tableros de potencia', 'Migracion de sistemas legacy']
+      ]
     },
     agua: {
       label: 'Agua y Saneamiento',
@@ -12768,9 +12805,7 @@ document.addEventListener('click', function(e){
         { name: 'Automatización y Control', count: 27 },
         { name: 'Electromecanica', count: 15 },
         { name: 'Solar', count: 1 }
-      ],
-      services: ['EPC', 'Mantenimiento', 'Suministro', 'Supervision tecnica'],
-      Especialidades: ['Sistemas de bombeo', 'Control de motores', 'Telemetria y SCADA', 'Continuidad de operacion']
+      ]
     }
   };
 
@@ -12790,10 +12825,6 @@ document.addEventListener('click', function(e){
     return 'default';
   }
 
-  function fillList(root, items){
-    root.innerHTML = (items || []).map((item) => '<li>' + item + '</li>').join('');
-  }
-
   function fillSolutions(root, items){
     root.innerHTML = (items || []).map((item) => (
       '<article class="cvx__solution">' +
@@ -12809,8 +12840,6 @@ document.addEventListener('click', function(e){
     const shown = String(industryText || '').trim();
     industryLabel.textContent = shown && norm(shown) !== 'selecciona' ? shown : cfg.label;
     fillSolutions(solutionsRoot, cfg.solutions);
-    fillList(servicesRoot, cfg.services);
-    fillList(EspecialidadesRoot, cfg.Especialidades);
   }
 
   if(industrySelect){
@@ -13678,6 +13707,8 @@ document.addEventListener('error', function(e){
 </script>
 </body>
 </html>
+
+
 
 
 

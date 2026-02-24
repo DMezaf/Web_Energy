@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -76,7 +76,6 @@
     .svc-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
     .svc-intro h2{margin:0;color:#113960;font-size:clamp(26px,3.1vw,36px)}
     .svc-intro p{margin:8px 0 0;color:var(--muted);max-width:740px}
-
     .kpis{display:grid;grid-template-columns:repeat(3,minmax(240px,1fr));justify-content:center;gap:12px;margin-top:16px}
     .kpi{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px}
     .kpi__badge{width:52px;height:52px;object-fit:contain;flex:0 0 52px}
@@ -249,36 +248,41 @@
       <nav aria-label="Principal">
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
         <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="nosotros.html#inicio">Nosotros</a></li>
-          <li class="nav-item--has-submenu">
-            <a class="is-active" href="soluciones.html#inicio">Soluciones</a>
-            <ul class="submenu" aria-label="Submenú Soluciones">
-              <li class="submenu__group">
-                <span class="submenu__title">Servicios EPC</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación industrial</a></li>
-                </ul>
-              </li>
-              <li class="submenu__group">
-                <span class="submenu__title">Especialidades</span>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingeniería</a></li>
-                  <li><a class="is-active" href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitación</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="procura.html#inicio">Procura</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li class="nav-item--has-submenu">
+    <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Servicios EPC</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de servicios EPC">
+      <li class="submenu__group">
+        <span class="submenu__title">Servicios EPC</span>
+        <ul class="submenu__list">
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
         </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item--has-submenu">
+    <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Especialidades</a>
+    <ul class="submenu" role="menu" aria-label="Submenu de especialidades">
+      <li class="submenu__group">
+        <span class="submenu__title">Especialidades</span>
+        <ul class="submenu__list">
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_servicio.html">Servicio</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="procura.html">Procura</a></li>
+  <li><a href="contacto.html">Contacto</a></li>
+</ul>
       </nav>
     </div>
   </header>
@@ -630,6 +634,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
