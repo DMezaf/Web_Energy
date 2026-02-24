@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Procura | VMS Energy</title>
+  <meta name="description" content="Procura especializada multimarcas para proyectos EPC: suministro técnico, compatibilidad, tiempos de entrega y soporte en campo." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.vms-energy.mx/procura.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Procura | VMS Energy" />
+  <meta property="og:description" content="Suministro especializado para ejecución continua de proyectos industriales." />
+  <meta property="og:url" content="https://www.vms-energy.mx/procura.html" />
+  <meta property="og:image" content="https://www.vms-energy.mx/assets/img/services/oil_gas.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Procura | VMS Energy" />
+  <meta name="twitter:description" content="Procura técnica multimarcas para operación crítica." />
+  <meta name="twitter:image" content="https://www.vms-energy.mx/assets/img/services/oil_gas.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#10233D;--muted:#4B647F;--line:rgba(23,44,81,.14);--soft:#F3F8FF}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand__logo{width:72px;height:72px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{width:96%;height:96%;object-fit:contain;display:block}
+    nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700}
+    nav a.is-active{color:var(--cobalt)}
+    .cta-header{padding:.62rem 1rem;border-radius:999px;background:linear-gradient(180deg,var(--cobalt),#0b3c67);color:#fff;border:1px solid rgba(8,53,92,.55)}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:calc(100% + 10px);left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+    .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer}
+    .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
+    .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
+    .hero{position:relative;isolation:isolate;min-height:500px;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/services/oil_gas.webp') center/cover no-repeat;z-index:-1}
+    .hero__content{max-width:760px;padding:86px 0 72px}
+    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
+    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    section{padding:56px 0}
+    .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
+    .section-lead{margin:0 0 22px;color:var(--muted);font-size:1.08rem}
+    .section-title::after{content:"";display:block;width:74px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,var(--cobalt),rgba(142,215,255,.35))}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
+    .card img{width:100%;height:170px;object-fit:cover;display:block}
+    .card__body{padding:14px}
+    .tag{display:inline-flex;padding:.2rem .6rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-size:.8rem;font-weight:700}
+    .card h3{margin:8px 0 6px;color:#103961}
+    .card p{margin:0;color:var(--muted)}
+    .form-wrap{background:linear-gradient(180deg,#f7fbff,#fff)}
+    .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(9,32,58,.06)}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .input,select,textarea{width:100%;padding:12px;border:1px solid rgba(23,44,81,.2);border-radius:10px;font:inherit}
+    .full{grid-column:1/-1}
+    .hint{margin:8px 0 0;color:#475569;font-size:.9rem;min-height:20px}
+    .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
+    .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
+    .foot{background:#0b1a32;color:#fff}
+    .foot .container{padding:44px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .foot a{color:#cbd5e1;text-decoration:none}
+    @media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header aria-label="Barra de navegación">
+  <div class="container topbar">
+    <a class="brand__logo" href="index.html#inicio" aria-label="Ir al inicio"><img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" width="72" height="72"></a>
+    <nav aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
+      <ul id="menuList">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="nosotros.html#inicio">Nosotros</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#inicio">Soluciones</a>
+          <ul class="submenu" aria-label="Submenú Soluciones">
+            <li class="submenu__group"><span class="submenu__title">Servicios EPC</span><ul class="submenu__list">
+              <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
+              <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
+              <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
+              <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+              <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
+              <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación industrial</a></li>
+            </ul></li>
+            <li class="submenu__group"><span class="submenu__title">Especialidades</span><ul class="submenu__list">
+              <li><a href="especialidad_ingenieria.html#inicio">Ingeniería</a></li>
+              <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+              <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+              <li><a href="especialidad_capacitacion.html#inicio">Capacitación</a></li>
+            </ul></li>
+          </ul>
+        </li>
+        <li><a class="is-active" href="procura.html#inicio">Procura</a></li>
+        <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero" aria-labelledby="heroTitle">
+    <div class="container hero__content">
+      <span class="eyebrow">Procura especializada</span>
+      <h1 id="heroTitle">Suministro técnico para operación continua</h1>
+      <p>Gestionamos procura multimarcas para proyectos EPC y mantenimiento industrial, con trazabilidad, compatibilidad técnica y tiempos de entrega controlados.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#solicitud">Solicitar suministro</a>
+        <a class="btn btn--secondary" href="contacto.html#inicio">Hablar con un especialista</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="alcanceTitle">
+    <div class="container">
+      <h2 id="alcanceTitle" class="section-title">Qué cubrimos en procura</h2>
+      <p class="section-lead">Suministro especializado alineado a ingeniería, construcción y continuidad operativa.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/img/services/infraestructura_electrica.webp" alt="Equipamiento eléctrico para infraestructura">
+          <div class="card__body"><span class="tag">Eléctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentación y accesorios críticos de planta.</p></div>
+        </article>
+        <article class="card">
+          <img src="assets/img/services/oil_gas.webp" alt="Procura para operación industrial">
+          <div class="card__body"><span class="tag">Multimarca</span><h3>Integración de marcas líderes</h3><p>Selección técnica y equivalencias con validación para cumplimiento normativo.</p></div>
+        </article>
+        <article class="card">
+          <img src="assets/img/services/automatizacion_control.webp" alt="Logística y soporte en suministro">
+          <div class="card__body"><span class="tag">Logística</span><h3>Abastecimiento y trazabilidad</h3><p>Seguimiento de embarques, entregas parciales y soporte de arranque en sitio.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="solicitud" class="form-wrap" aria-labelledby="solicitudTitle">
+    <div class="container">
+      <h2 id="solicitudTitle" class="section-title">Solicita procura</h2>
+      <p class="section-lead">Comparte tu requerimiento y te devolvemos una propuesta técnica de suministro.</p>
+      <form id="procuraLeadForm" class="form-card" novalidate>
+        <div class="form-grid">
+          <input class="input" name="nombre" placeholder="Nombre*" required>
+          <input class="input" name="empresa" placeholder="Empresa*" required>
+          <input class="input" type="email" name="correo" placeholder="Correo*" required>
+          <input class="input" name="telefono" placeholder="Teléfono">
+          <select name="servicio" required>
+            <option value="">Servicio requerido*</option>
+            <option>EPC eléctrico</option>
+            <option>Automatización y Control</option>
+            <option>Infraestructura Energética</option>
+            <option>Iluminación Industrial</option>
+          </select>
+          <select name="marca" required>
+            <option value="">Marca de interés*</option>
+            <option>ABB</option><option>Schneider</option><option>Siemens</option><option>Rockwell</option><option>WEG</option>
+          </select>
+          <textarea class="input full" name="detalle" rows="4" placeholder="Detalle técnico / modelo / cantidades*" required></textarea>
+        </div>
+        <div class="hero__actions" style="margin-top:12px">
+          <button class="btn btn--primary" type="submit">Enviar solicitud</button>
+          <a class="btn btn--secondary" href="contacto.html#inicio">Ir a contacto</a>
+        </div>
+        <p id="procuraFeedback" class="hint" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta-final" aria-labelledby="ctaFinalTitle">
+    <div class="container"><div class="box">
+      <h2 id="ctaFinalTitle">¿Necesitas una propuesta integral EPC + procura?</h2>
+      <p>Coordinamos ingeniería, suministro y ejecución para reducir riesgos de integración.</p>
+      <div class="hero__actions"><a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta técnica</a></div>
+    </div></div>
+  </section>
+</main>
+
+<footer id="footer" class="foot" aria-label="Pie de página corporativo">
+  <div class="container">
+    <div><h4 style="margin:0 0 8px">VMS Energy</h4><p style="margin:0;color:#cbd5e1">Venta y servicios de calidad en generación y distribución de energía eléctrica.</p></div>
+    <div><h4 style="margin:0 0 8px">Navegación</h4><ul style="list-style:none;margin:0;padding:0;line-height:1.9"><li><a href="index.html#inicio">Inicio</a></li><li><a href="nosotros.html#inicio">Nosotros</a></li><li><a href="soluciones.html#inicio">Soluciones</a></li><li><a href="procura.html#inicio">Procura</a></li><li><a href="contacto.html#inicio">Contactar</a></li></ul></div>
+    <div><h4 style="margin:0 0 8px">Contacto</h4><ul style="list-style:none;margin:0;padding:0;line-height:1.9"><li>33 3311 9607 Guadalajara</li><li>33 3813 0739 Guadalajara</li><li>938 381 4824 Ciudad del Carmen</li><li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li></ul></div>
+  </div>
+</footer>
+<div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">Desarrollado por el equipo digital de VMS Energy · v10.1</div>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var list = document.getElementById('menuList');
+  if(toggle && list){ toggle.addEventListener('click', function(){ var open=list.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', open ? 'true':'false'); }); }
+  document.addEventListener('click', function(e){ if(!toggle || !list || window.innerWidth>680) return; if(!list.contains(e.target) && !toggle.contains(e.target)){ list.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); } });
+})();
+(function(){
+  var form = document.getElementById('procuraLeadForm');
+  var feedback = document.getElementById('procuraFeedback');
+  if(!form || !feedback) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var required = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+    var ok = true;
+    required.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
+    if(!ok){ feedback.textContent='Completa los campos requeridos.'; return; }
+    feedback.textContent='Gracias. Recibimos tu solicitud de procura.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
+
