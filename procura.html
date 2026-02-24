@@ -67,15 +67,20 @@
     .form-wrap{background:linear-gradient(180deg,#f7fbff,#fff)}
     .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(9,32,58,.06)}
     .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .procura__form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
     .input,select,textarea{width:100%;padding:12px;border:1px solid rgba(23,44,81,.2);border-radius:10px;font:inherit}
     .full{grid-column:1/-1}
     .hint{margin:8px 0 0;color:#475569;font-size:.9rem;min-height:20px}
+    .req-summary{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;padding:10px;background:#f7fbff}
+    .req-summary h4{margin:0 0 8px;color:#113960}
+    .totals{display:flex;flex-wrap:wrap;gap:8px}
+    .tot-chip{display:inline-flex;align-items:center;padding:.2rem .6rem;border-radius:999px;border:1px solid rgba(15,76,129,.22);background:#eef5ff;color:#0f4c81;font-size:.82rem;font-weight:700}
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
     .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
     .foot{background:#0b1a32;color:#fff}
     .foot .container{padding:44px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .foot a{color:#cbd5e1;text-decoration:none}
-    @media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}}
+    @media (max-width:980px){.cards{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.procura__form{grid-template-columns:1fr 1fr}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:84px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:250px;box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.cards{grid-template-columns:1fr}}
   </style>
 </head>
@@ -161,32 +166,59 @@
 
   <section id="solicitud" class="form-wrap" aria-labelledby="solicitudTitle">
     <div class="container">
-      <h2 id="solicitudTitle" class="section-title">Solicita procura</h2>
-      <p class="section-lead">Comparte tu requerimiento y te devolvemos una propuesta técnica de suministro.</p>
-      <form id="procuraLeadForm" class="form-card" novalidate>
-        <div class="form-grid">
-          <input class="input" name="nombre" placeholder="Nombre*" required>
-          <input class="input" name="empresa" placeholder="Empresa*" required>
-          <input class="input" type="email" name="correo" placeholder="Correo*" required>
-          <input class="input" name="telefono" placeholder="Teléfono">
-          <select name="servicio" required>
-            <option value="">Servicio requerido*</option>
-            <option>EPC eléctrico</option>
-            <option>Automatización y Control</option>
-            <option>Infraestructura Energética</option>
-            <option>Iluminación Industrial</option>
+      <h2 id="solicitudTitle" class="section-title">Suministro de productos</h2>
+      <p class="section-lead">Flujo rápido de cotización: selecciona tu necesidad, marca y producto.</p>
+      <form id="supplyFormV9_20" class="form-card procura__form" novalidate>
+        <div>
+          <label for="supplyType">Suministro</label>
+          <select id="supplyType" required>
+            <option value="">Selecciona...</option>
+            <option value="Cable electrico">Cable eléctrico</option>
+            <option value="Equipo electrico">Equipo eléctrico</option>
+            <option value="Iluminacion">Iluminación</option>
           </select>
-          <select name="marca" required>
-            <option value="">Marca de interés*</option>
-            <option>ABB</option><option>Schneider</option><option>Siemens</option><option>Rockwell</option><option>WEG</option>
-          </select>
-          <textarea class="input full" name="detalle" rows="4" placeholder="Detalle técnico / modelo / cantidades*" required></textarea>
+          <div class="hint">Selecciona el tipo de suministro.</div>
         </div>
-        <div class="hero__actions" style="margin-top:12px">
+        <div>
+          <label for="category">Categoría</label>
+          <select id="category" disabled required><option value="">Selecciona...</option></select>
+        </div>
+        <div>
+          <label for="brand">Marca</label>
+          <select id="brand" disabled required><option value="">Selecciona...</option></select>
+        </div>
+        <div>
+          <label for="family">Familia</label>
+          <select id="family" disabled required><option value="">Selecciona...</option></select>
+        </div>
+        <div>
+          <label for="description">Descripción</label>
+          <select id="description" disabled required><option value="">Selecciona...</option></select>
+        </div>
+        <div>
+          <label for="model">Modelo</label>
+          <select id="model" disabled required><option value="">Selecciona...</option></select>
+        </div>
+        <div class="full">
+          <label for="email">Correo</label>
+          <input class="input" id="email" type="email" placeholder="tu@empresa.com" required>
+        </div>
+        <div class="req-summary">
+          <h4>Resumen de solicitud</h4>
+          <div id="reqTotals" class="totals">
+            <span class="tot-chip" id="sumSuministro">Suministro: —</span>
+            <span class="tot-chip" id="sumCategoria">Categoría: —</span>
+            <span class="tot-chip" id="sumMarca">Marca: —</span>
+            <span class="tot-chip" id="sumFamilia">Familia: —</span>
+            <span class="tot-chip" id="sumDescripcion">Descripción: —</span>
+            <span class="tot-chip" id="sumModelo">Modelo: —</span>
+          </div>
+        </div>
+        <div class="hero__actions full" style="margin-top:4px">
           <button class="btn btn--primary" type="submit">Enviar solicitud</button>
           <a class="btn btn--secondary" href="contacto.html#inicio">Ir a contacto</a>
         </div>
-        <p id="procuraFeedback" class="hint" aria-live="polite"></p>
+        <p id="procuraFeedback" class="hint full" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -217,18 +249,160 @@
   document.addEventListener('click', function(e){ if(!toggle || !list || window.innerWidth>680) return; if(!list.contains(e.target) && !toggle.contains(e.target)){ list.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); } });
 })();
 (function(){
-  var form = document.getElementById('procuraLeadForm');
+  var form = document.getElementById('supplyFormV9_20');
   var feedback = document.getElementById('procuraFeedback');
   if(!form || !feedback) return;
+
+  var DB = {
+    'Cable electrico': {
+      'Cables de potencia': {
+        'KEI': {
+          'BT': {'PVC': ['KEI-BT-PVC-4X70', 'KEI-BT-PVC-3X120']},
+          'MT': {'XLPE': ['KEI-MT-XLPE-1X240', 'KEI-MT-XLPE-1X400']}
+        },
+        'Prysmian': {
+          'BT': {'THHN': ['PRY-BT-THHN-2/0', 'PRY-BT-THHN-4/0']}
+        }
+      }
+    },
+    'Equipo electrico': {
+      'Tableros': {
+        'ABB': {
+          'Distribucion': {'BT': ['ABB-MNS-4000A', 'ABB-TS8-2500A']}
+        },
+        'Schneider': {
+          'Potencia': {'Prisma': ['SCH-PRISMA-3200A', 'SCH-PRISMA-4000A']}
+        }
+      },
+      'Variadores': {
+        'ABB': {
+          'ACS': {'Industrial': ['ACS580-250kW', 'ACS880-355kW']}
+        },
+        'WEG': {
+          'CFW': {'Linea CFW': ['CFW11-110kW', 'CFW900-200kW']}
+        }
+      }
+    },
+    'Iluminacion': {
+      'Luminarias industriales': {
+        'Signify (Philips)': {
+          'High-bay': {'LED': ['PHI-HB-150W-40K', 'PHI-HB-200W-50K']}
+        },
+        'OSRAM': {
+          'Area': {'LED': ['OSR-AREA-120W-40K', 'OSR-AREA-180W-50K']}
+        }
+      }
+    }
+  };
+
+  var mapSummary = {
+    supplyType: 'sumSuministro',
+    category: 'sumCategoria',
+    brand: 'sumMarca',
+    family: 'sumFamilia',
+    description: 'sumDescripcion',
+    model: 'sumModelo'
+  };
+
+  var supplyType = document.getElementById('supplyType');
+  var category = document.getElementById('category');
+  var brand = document.getElementById('brand');
+  var family = document.getElementById('family');
+  var description = document.getElementById('description');
+  var model = document.getElementById('model');
+
+  function fillSelect(el, list){
+    el.innerHTML = '<option value=\"\">Selecciona...</option>' + (list || []).map(function(v){ return '<option>' + v + '</option>'; }).join('');
+    el.disabled = !(list && list.length);
+  }
+
+  function resetChain(fromEl){
+    if(fromEl === supplyType){
+      fillSelect(category, []);
+      fillSelect(brand, []);
+      fillSelect(family, []);
+      fillSelect(description, []);
+      fillSelect(model, []);
+    } else if(fromEl === category){
+      fillSelect(brand, []);
+      fillSelect(family, []);
+      fillSelect(description, []);
+      fillSelect(model, []);
+    } else if(fromEl === brand){
+      fillSelect(family, []);
+      fillSelect(description, []);
+      fillSelect(model, []);
+    } else if(fromEl === family){
+      fillSelect(description, []);
+      fillSelect(model, []);
+    } else if(fromEl === description){
+      fillSelect(model, []);
+    }
+  }
+
+  function updateSummary(){
+    Object.keys(mapSummary).forEach(function(id){
+      var src = document.getElementById(id);
+      var chip = document.getElementById(mapSummary[id]);
+      if(!src || !chip) return;
+      var label = chip.textContent.split(':')[0];
+      chip.textContent = label + ': ' + (src.value || '—');
+    });
+  }
+
+  supplyType.addEventListener('change', function(){
+    resetChain(supplyType);
+    var cats = Object.keys(DB[supplyType.value] || {});
+    fillSelect(category, cats);
+    updateSummary();
+  });
+
+  category.addEventListener('change', function(){
+    resetChain(category);
+    var brands = Object.keys((((DB[supplyType.value] || {})[category.value]) || {}));
+    fillSelect(brand, brands);
+    updateSummary();
+  });
+
+  brand.addEventListener('change', function(){
+    resetChain(brand);
+    var fams = Object.keys(((((DB[supplyType.value] || {})[category.value] || {})[brand.value]) || {}));
+    fillSelect(family, fams);
+    updateSummary();
+  });
+
+  family.addEventListener('change', function(){
+    resetChain(family);
+    var descs = Object.keys((((((DB[supplyType.value] || {})[category.value] || {})[brand.value] || {})[family.value]) || {}));
+    fillSelect(description, descs);
+    updateSummary();
+  });
+
+  description.addEventListener('change', function(){
+    resetChain(description);
+    var models = ((((((DB[supplyType.value] || {})[category.value] || {})[brand.value] || {})[family.value] || {})[description.value]) || []);
+    fillSelect(model, models);
+    updateSummary();
+  });
+
+  model.addEventListener('change', updateSummary);
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var required = Array.prototype.slice.call(form.querySelectorAll('[required]'));
     var ok = true;
     required.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
     if(!ok){ feedback.textContent='Completa los campos requeridos.'; return; }
-    feedback.textContent='Gracias. Recibimos tu solicitud de procura.';
+    feedback.textContent='Gracias. Recibimos tu solicitud de suministro.';
     form.reset();
+    fillSelect(category, []);
+    fillSelect(brand, []);
+    fillSelect(family, []);
+    fillSelect(description, []);
+    fillSelect(model, []);
+    updateSummary();
   });
+  updateSummary();
 })();
 </script>
 </body>

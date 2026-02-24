@@ -183,6 +183,26 @@
     .faq summary{cursor:pointer;font-weight:700;color:#113960}
     .faq p{margin:8px 0 0;color:var(--muted)}
 
+
+    .catalogx{background:linear-gradient(180deg,#f7fbff,#fff)}
+    .catalogx__controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+    .catalogx__tabs{display:flex;flex-wrap:wrap;gap:8px}
+    .catalogx__tab{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#123a62;font-weight:700;cursor:pointer}
+    .catalogx__tab.is-active{background:#0f4c81;color:#fff;border-color:#0f4c81}
+    .catalogx__search{min-width:240px;max-width:360px;flex:1}
+    .catalogx__search input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line);padding:0 12px;font:inherit}
+    .catalogx__meta{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+    .catalogx__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .catalogx__card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(9,32,58,.06)}
+    .catalogx__card h3{margin:0 0 8px;color:#103961;font-size:1.1rem}
+    .catalogx__card p{margin:0 0 10px;color:var(--muted)}
+    .catalogx__tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+    .catalogx__tags li{padding:3px 8px;border-radius:999px;border:1px solid rgba(15,76,129,.25);background:#eef5ff;color:#0f4c81;font-size:.8rem;font-weight:700}
+    .catalogx__actions{display:flex;gap:8px;flex-wrap:wrap}
+    .catalogx__empty{display:none;margin:0;padding:14px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+    .catalogx__empty.is-visible{display:block}
+    @media (max-width:980px){.catalogx__grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:680px){.catalogx__grid{grid-template-columns:1fr}.catalogx__search{min-width:0;max-width:none;flex:1 1 100%}}
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
     .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
     .cta-final h2{margin:0 0 10px;font-size:clamp(28px,4vw,44px)}
@@ -467,6 +487,22 @@
       </div>
     </section>
 
+
+    <section class="catalogx" id="catalogo-interactivo" aria-labelledby="catalogoInteractivoTitle">
+      <div class="container">
+        <h2 id="catalogoInteractivoTitle" class="section-title">Catalogo interactivo</h2>
+        <p class="section-lead">Filtra por categoria y encuentra rapidamente el servicio adecuado para tu proyecto.</p>
+        <div class="catalogx__controls">
+          <div class="catalogx__tabs" id="catalogTabs" role="tablist" aria-label="Categorias de catalogo"></div>
+          <label class="catalogx__search" for="catalogSearch">
+            <input id="catalogSearch" type="search" placeholder="Buscar por servicio o palabra clave">
+          </label>
+        </div>
+        <p class="catalogx__meta" id="catalogMeta">Mostrando 0 servicios</p>
+        <div class="catalogx__grid" id="catalogGrid"></div>
+        <p class="catalogx__empty" id="catalogEmpty">No hay resultados para los filtros seleccionados.</p>
+      </div>
+    </section>
     <section class="cta-final" aria-labelledby="ctaFinalTitle">
       <div class="container">
         <div class="box">
@@ -632,6 +668,76 @@
       startAutoplay();
     })();
   </script>
+
+<script>
+(function(){
+  var root = document.getElementById('catalogo-interactivo');
+  if(!root) return;
+  var tabsWrap = document.getElementById('catalogTabs');
+  var search = document.getElementById('catalogSearch');
+  var meta = document.getElementById('catalogMeta');
+  var grid = document.getElementById('catalogGrid');
+  var empty = document.getElementById('catalogEmpty');
+  if(!tabsWrap || !search || !meta || !grid || !empty) return;
+  function norm(v){ return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim(); }
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.svc-grid .svc-card'));
+  if(!cards.length){ root.style.display = 'none'; return; }
+  var data = cards.map(function(card){
+    var tagEl = card.querySelector('.svc-card__tag');
+    var titleEl = card.querySelector('h3');
+    var descEl = card.querySelector('p');
+    var tag = (tagEl ? tagEl.textContent : 'Servicio').trim();
+    var title = (titleEl ? titleEl.textContent : 'Servicio').trim();
+    var desc = (descEl ? descEl.textContent : '').trim();
+    return {cat:norm(tag), catLabel:tag, title:title, desc:desc, tags:[tag]};
+  });
+  var cats = [];
+  data.forEach(function(x){ if(!cats.some(function(c){ return c.value === x.cat; })) cats.push({value:x.cat,label:x.catLabel}); });
+  var currentCat = 'all';
+  var tabButtons = [];
+  function makeTab(value, label, active){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'catalogx__tab' + (active ? ' is-active' : '');
+    b.setAttribute('data-cat', value);
+    b.textContent = label;
+    b.addEventListener('click', function(){
+      currentCat = value;
+      tabButtons.forEach(function(x){ x.classList.remove('is-active'); });
+      b.classList.add('is-active');
+      render();
+    });
+    tabButtons.push(b);
+    tabsWrap.appendChild(b);
+  }
+  makeTab('all','Todos',true);
+  cats.forEach(function(c){ makeTab(c.value, c.label, false); });
+  function render(){
+    var q = norm(search.value);
+    var filtered = data.filter(function(item){
+      var byCat = currentCat === 'all' || item.cat === currentCat;
+      if(!byCat) return false;
+      if(!q) return true;
+      return norm(item.title + ' ' + item.desc + ' ' + item.tags.join(' ')).indexOf(q) !== -1;
+    });
+    grid.innerHTML = filtered.map(function(item){
+      return '<article class="catalogx__card">'
+        + '<h3>' + item.title + '</h3>'
+        + '<p>' + item.desc + '</p>'
+        + '<ul class="catalogx__tags">' + item.tags.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>'
+        + '<div class="catalogx__actions">'
+        + '<a class="btn btn--secondary" href="#inicio">Ver detalle</a>'
+        + '<a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta</a>'
+        + '</div>'
+        + '</article>';
+    }).join('');
+    meta.textContent = 'Mostrando ' + filtered.length + ' servicio' + (filtered.length === 1 ? '' : 's');
+    empty.classList.toggle('is-visible', filtered.length === 0);
+  }
+  search.addEventListener('input', render);
+  render();
+})();
+</script>
 </body>
 </html>
 

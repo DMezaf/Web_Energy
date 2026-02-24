@@ -160,6 +160,24 @@
     .kpi__badge{width:52px;height:52px;object-fit:contain;flex:0 0 52px}
     .kpi strong{display:block;font-size:1.32rem;color:#0f355c}
 
+    .catalogx{background:linear-gradient(180deg,#f7fbff,#fff)}
+    .catalogx__controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+    .catalogx__tabs{display:flex;flex-wrap:wrap;gap:8px}
+    .catalogx__tab{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#123a62;font-weight:700;cursor:pointer}
+    .catalogx__tab.is-active{background:#0f4c81;color:#fff;border-color:#0f4c81}
+    .catalogx__search{min-width:240px;max-width:360px;flex:1}
+    .catalogx__search input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line);padding:0 12px;font:inherit}
+    .catalogx__meta{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+    .catalogx__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .catalogx__card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 8px 20px rgba(9,32,58,.06)}
+    .catalogx__card h3{margin:0 0 8px;color:#103961;font-size:1.12rem}
+    .catalogx__card p{margin:0 0 10px;color:var(--muted)}
+    .catalogx__tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+    .catalogx__tags li{padding:3px 8px;border-radius:999px;border:1px solid rgba(15,76,129,.25);background:#eef5ff;color:#0f4c81;font-size:.8rem;font-weight:700}
+    .catalogx__actions{display:flex;gap:8px;flex-wrap:wrap}
+    .catalogx__empty{display:none;margin:0;padding:14px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);text-align:center}
+    .catalogx__empty.is-visible{display:block}
+
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
     .cta-final__card{background:rgba(255,255,255,.06);border:1px solid rgba(163,201,255,.25);border-radius:18px;padding:24px}
     .cta-final h2{margin:0 0 10px;font-size:clamp(26px,3vw,34px)}
@@ -175,6 +193,7 @@
 
     @media (max-width:980px){
       .svc-cap__metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .catalogx__grid{grid-template-columns:1fr 1fr}
       .spec-grid{grid-template-columns:1fr}
       .kpis{grid-template-columns:1fr 1fr}
       .foot{grid-template-columns:1fr 1fr}
@@ -182,6 +201,8 @@
     @media (max-width:700px){
       nav ul{display:none}
       .menu-toggle{display:inline-flex}
+      .catalogx__grid{grid-template-columns:1fr}
+      .catalogx__search{min-width:0;max-width:none;flex:1 1 100%}
       .svc-cap__metrics{grid-template-columns:1fr}
       .kpis,.foot{grid-template-columns:1fr}
     }
@@ -349,6 +370,28 @@
       </div>
     </section>
 
+    <section class="catalogx" id="catalogo-especialidades" aria-labelledby="catalogoEspecialidadesTitle">
+      <div class="container">
+        <h2 id="catalogoEspecialidadesTitle" class="section-title">Catalogo interactivo de especialidades</h2>
+        <p class="section-lead">Explora servicios por categoria y filtra por palabra clave para ubicar rapidamente el alcance tecnico que necesitas.</p>
+        <div class="catalogx__controls">
+          <div class="catalogx__tabs" id="espCatalogTabs" role="tablist" aria-label="Categorias de especialidades">
+            <button class="catalogx__tab is-active" type="button" data-cat="all">Todas</button>
+            <button class="catalogx__tab" type="button" data-cat="ingenieria">Ingenieria</button>
+            <button class="catalogx__tab" type="button" data-cat="servicio">Servicio</button>
+            <button class="catalogx__tab" type="button" data-cat="mantenimiento">Mantenimiento</button>
+            <button class="catalogx__tab" type="button" data-cat="capacitacion">Capacitacion</button>
+          </div>
+          <label class="catalogx__search" for="espCatalogSearch">
+            <input id="espCatalogSearch" type="search" placeholder="Buscar por servicio o palabra clave">
+          </label>
+        </div>
+        <p class="catalogx__meta" id="espCatalogMeta">Mostrando 0 servicios</p>
+        <div class="catalogx__grid" id="espCatalogGrid"></div>
+        <p class="catalogx__empty" id="espCatalogEmpty">No hay resultados para los filtros seleccionados.</p>
+      </div>
+    </section>
+
     <section class="cta-final" aria-labelledby="ctaTitle">
       <div class="container">
         <div class="cta-final__card">
@@ -391,6 +434,62 @@
     <div class="container copy">© 2026 VMS Energy. Todos los derechos reservados.</div>
   </footer>
 
+  <script>
+    (function(){
+      const data = [
+        {cat:'ingenieria', title:'Ingenieria conceptual y de detalle', desc:'Definicion tecnica de alcance, memorias, planos IFC y criterios de construccion.', tags:['Planos IFC','Memorias','Especificaciones'], link:'especialidad_ingenieria.html#inicio'},
+        {cat:'ingenieria', title:'Levantamiento y diagnostico de campo', desc:'Inspeccion tecnica y cierre de brechas para preparar ejecucion con menor riesgo.', tags:['Levantamiento','Diagnostico','Riesgos'], link:'especialidad_ingenieria.html#inicio'},
+        {cat:'servicio', title:'Supervision tecnica en sitio', desc:'Control de avance, seguridad, calidad y coordinacion por frentes de trabajo.', tags:['Supervision','HSE','Control'], link:'especialidad_servicio.html#inicio'},
+        {cat:'servicio', title:'Pruebas y puesta en marcha', desc:'Protocolos FAT/SAT, pruebas funcionales y liberacion operativa de sistemas.', tags:['FAT','SAT','Arranque'], link:'especialidad_servicio.html#inicio'},
+        {cat:'mantenimiento', title:'Mantenimiento preventivo', desc:'Rutinas programadas para elevar disponibilidad y reducir fallas no planeadas.', tags:['Preventivo','Disponibilidad','Confiabilidad'], link:'especialidad_mantenimiento.html#inicio'},
+        {cat:'mantenimiento', title:'Mantenimiento correctivo critico', desc:'Atencion de contingencias con respuesta tecnica en activos de operacion critica.', tags:['Correctivo','Contingencia','Activos'], link:'especialidad_mantenimiento.html#inicio'},
+        {cat:'capacitacion', title:'Capacitacion tecnica por rol', desc:'Formacion teorica y practica para operadores, mantenimiento y supervision.', tags:['Formacion','Operacion','Mantenimiento'], link:'especialidad_capacitacion.html#inicio'},
+        {cat:'capacitacion', title:'Transferencia operativa', desc:'Entrenamiento de arranque y estandarizacion de procedimientos en planta.', tags:['Entrenamiento','Arranque','SOP'], link:'especialidad_capacitacion.html#inicio'}
+      ];
+      const tabs = Array.from(document.querySelectorAll('#espCatalogTabs .catalogx__tab'));
+      const search = document.getElementById('espCatalogSearch');
+      const grid = document.getElementById('espCatalogGrid');
+      const meta = document.getElementById('espCatalogMeta');
+      const empty = document.getElementById('espCatalogEmpty');
+      if(!tabs.length || !search || !grid || !meta || !empty) return;
+
+      let currentCat = 'all';
+      function norm(v){ return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+      function render(){
+        const q = norm(search.value.trim());
+        const filtered = data.filter(function(item){
+          const byCat = currentCat === 'all' || item.cat === currentCat;
+          if(!byCat) return false;
+          if(!q) return true;
+          const text = norm(item.title + ' ' + item.desc + ' ' + item.tags.join(' '));
+          return text.includes(q);
+        });
+        grid.innerHTML = filtered.map(function(item){
+          return '<article class="catalogx__card">'
+            + '<h3>' + item.title + '</h3>'
+            + '<p>' + item.desc + '</p>'
+            + '<ul class="catalogx__tags">' + item.tags.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>'
+            + '<div class="catalogx__actions">'
+            + '<a class="btn btn--secondary" href="' + item.link + '">Ver detalle</a>'
+            + '<a class="btn btn--primary" href="contacto.html#inicio">Solicitar propuesta</a>'
+            + '</div>'
+            + '</article>';
+        }).join('');
+        meta.textContent = 'Mostrando ' + filtered.length + ' servicio' + (filtered.length === 1 ? '' : 's');
+        empty.classList.toggle('is-visible', filtered.length === 0);
+      }
+      tabs.forEach(function(tab){
+        tab.addEventListener('click', function(){
+          currentCat = tab.getAttribute('data-cat') || 'all';
+          tabs.forEach(function(x){ x.classList.remove('is-active'); });
+          tab.classList.add('is-active');
+          render();
+        });
+      });
+      search.addEventListener('input', render);
+      render();
+    })();
+  </script>
   <script>
     (function(){
       const btn = document.getElementById('menuToggle');
