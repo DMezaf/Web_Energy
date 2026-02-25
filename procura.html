@@ -14,11 +14,11 @@
   <meta property="og:title" content="Procura | VMS Energy" />
   <meta property="og:description" content="Suministro especializado para ejecución continua de proyectos industriales." />
   <meta property="og:url" content="https://www.vms-energy.mx/procura.html" />
-  <meta property="og:image" content="https://www.vms-energy.mx/assets/img/services/oil_gas.webp" />
+  <meta property="og:image" content="https://www.vms-energy.mx/assets/img/hero_suministro.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Procura | VMS Energy" />
   <meta name="twitter:description" content="Procura técnica multimarcas para operación crítica." />
-  <meta name="twitter:image" content="https://www.vms-energy.mx/assets/img/services/oil_gas.webp" />
+  <meta name="twitter:image" content="https://www.vms-energy.mx/assets/img/hero_suministro.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
     .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
     .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
     .hero{position:relative;isolation:isolate;min-height:500px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/services/oil_gas.webp') center/cover no-repeat;z-index:-1}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/hero_suministro.png') center/cover no-repeat;z-index:-1}
     .hero__content{max-width:760px;padding:86px 0 72px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
@@ -78,6 +78,13 @@
     .tot-chip{display:inline-flex;align-items:center;padding:.2rem .6rem;border-radius:999px;border:1px solid rgba(15,76,129,.22);background:#eef5ff;color:#0f4c81;font-size:.82rem;font-weight:700}
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
     .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
+    .faq{background:#f7fbff}
+    .faq-banner{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 24px rgba(9,32,58,.08);margin:0 0 16px;background:#fff}
+    .faq-banner img{width:100%;display:block;height:clamp(170px,28vw,320px);object-fit:cover;object-position:center}
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff}
+    .faq details + details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:700;color:#113960}
+    .faq p{margin:8px 0 0;color:var(--muted)}
     .foot{background:#0b1a32;color:#fff}
     .foot .container{padding:44px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .foot a{color:#cbd5e1;text-decoration:none}
@@ -117,7 +124,7 @@
         <span class="submenu__title">Especialidades</span>
         <ul class="submenu__list">
           <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
-          <li><a href="soluciones.html">Servicios</a></li>
+          <li><a href="especialidad_servicios.html">Servicios</a></li>
           <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
           <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
         </ul>
@@ -150,15 +157,15 @@
       <p class="section-lead">Suministro especializado alineado a ingeniería, construcción y continuidad operativa.</p>
       <div class="cards">
         <article class="card">
-          <img src="assets/img/services/infraestructura_electrica.webp" alt="Equipamiento eléctrico para infraestructura" loading="lazy" decoding="async">
+          <img src="assets/img/suministro_equipos_potencia_control.png" alt="Equipamiento eléctrico para infraestructura" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Eléctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentación y accesorios críticos de planta.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/services/oil_gas.webp" alt="Procura para operación industrial" loading="lazy" decoding="async">
+          <img src="assets/img/suministro_integracion_marcas_lideres.png" alt="Procura para operación industrial" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Multimarca</span><h3>Integración de marcas líderes</h3><p>Selección técnica y equivalencias con validación para cumplimiento normativo.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/services/automatizacion_control.webp" alt="Logística y soporte en suministro" loading="lazy" decoding="async">
+          <img src="assets/img/suministro_Abastecimiento_trazabilidad.png" alt="Logística y soporte en suministro" loading="lazy" decoding="async">
           <div class="card__body"><span class="tag">Logística</span><h3>Abastecimiento y trazabilidad</h3><p>Seguimiento de embarques, entregas parciales y soporte de arranque en sitio.</p></div>
         </article>
       </div>
@@ -221,6 +228,27 @@
         </div>
         <p id="procuraFeedback" class="hint full" aria-live="polite"></p>
       </form>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <div class="faq-banner">
+        <img src="assets/img/Especialidades_FAQ_preguntas_frecuentes.png" alt="Banner de preguntas frecuentes" loading="lazy" decoding="async">
+      </div>
+      <h2 id="faqTitle" class="section-title">Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Qué incluye el servicio de procura?</summary>
+        <p>Incluye selección técnica, equivalencias multimarcas, validación documental y seguimiento logístico hasta entrega en sitio.</p>
+      </details>
+      <details>
+        <summary>¿Pueden alinear procura con ingeniería y obra?</summary>
+        <p>Sí. Coordinamos suministro con cronograma de ingeniería, construcción y arranque para minimizar riesgos de integración.</p>
+      </details>
+      <details>
+        <summary>¿Cómo aseguran trazabilidad en entregas?</summary>
+        <p>Gestionamos hitos de compra, embarque y recepción con control de estatus y evidencia para cada partida crítica.</p>
+      </details>
     </div>
   </section>
 
@@ -484,6 +512,7 @@
 </script>
 </body>
 </html>
+
 
 
 
