@@ -152,19 +152,26 @@
       will-change:transform;
     }
     .diff-slide{
-      min-width:clamp(640px,86vw,980px);
+      width:fit-content;
+      min-width:0;
+      max-width:calc(100vw - 24px);
       position:relative;
-      display:grid;
-      grid-template-columns:minmax(0,62%) minmax(0,38%);
-      min-height:390px;
+      display:flex;
+      align-items:flex-end;
       overflow:hidden;
       border-radius:14px;
       border:1px solid rgba(23,44,81,.12);
       background:#FFFFFF;
+      flex:0 0 auto;
     }
     .diff-slide__media{
       position:relative;
+      width:clamp(520px,74vw,760px);
       min-height:390px;
+      flex:0 0 auto;
+      overflow:hidden;
+      border-top-right-radius:12px;
+      border-bottom-right-radius:12px;
       background:linear-gradient(180deg,rgba(15,76,129,.24),rgba(10,22,43,.26));
     }
     .diff-slide__media img{
@@ -176,9 +183,9 @@
       transition:transform .7s cubic-bezier(.22,.61,.36,1);
     }
     .diff-slide__panel{
-      position:absolute;
-      left:clamp(50%,54%,58%);
-      bottom:20px;
+      position:relative;
+      right:auto;
+      bottom:auto;
       width:clamp(150px,18vw,186px);
       max-width:186px;
       min-height:188px;
@@ -190,6 +197,9 @@
       justify-content:space-between;
       align-items:center;
       gap:10px;
+      margin-left:clamp(-108px,-9vw,-82px);
+      margin-right:clamp(10px,1.8vw,20px);
+      margin-bottom:clamp(12px,2vw,20px);
       transform:none;
       transition:transform .7s cubic-bezier(.22,.61,.36,1);
       box-shadow:0 14px 24px rgba(3,14,28,.34);
@@ -288,14 +298,18 @@
     }
     @media (max-width:980px){
       .diff-slide{
-        min-width:92vw;
-        grid-template-columns:minmax(0,66%) minmax(0,34%);
+        width:fit-content;
+        min-width:0;
+        max-width:92vw;
+      }
+      .diff-slide__media{
+        width:clamp(420px,76vw,620px);
         min-height:360px;
       }
-      .diff-slide__media{min-height:360px}
       .diff-slide__panel{
-        left:56%;
-        bottom:14px;
+        margin-left:clamp(-92px,-10vw,-70px);
+        margin-right:12px;
+        margin-bottom:14px;
         width:clamp(138px,24vw,172px);
         max-width:172px;
         min-height:174px;
@@ -310,12 +324,16 @@
     }
     @media (max-width:640px){
       .diff-slide{
+        width:92vw;
         min-width:92vw;
-        grid-template-columns:1fr;
-        min-height:380px;
         position:relative;
+        display:block;
+        max-width:none;
       }
-      .diff-slide__media{min-height:380px}
+      .diff-slide__media{
+        width:100%;
+        min-height:380px;
+      }
       .diff-slide__panel{
         position:absolute;
         left:50%;
@@ -324,6 +342,7 @@
         max-width:320px;
         min-height:unset;
         padding:7px;
+        margin:0;
         transform:translateX(-50%);
         z-index:2;
       }
@@ -451,14 +470,54 @@
       flex:0 0 calc((100% - (var(--svc-gap) * 2)) / 3);
       min-width:0;
     }
-    .svc__nav{display:flex;justify-content:flex-end;gap:10px;margin:0 0 12px}
+    .svc__nav{
+      position:absolute;
+      left:12px;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin:0;
+      z-index:3;
+      pointer-events:none;
+    }
     .svc__navBtn{
-      width:38px;height:38px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.22);
-      background:rgba(255,255,255,.08);color:#eaf2ff;
+      width:42px;height:42px;border-radius:999px;
+      border:1px solid rgba(215,242,255,.45);
+      background:rgba(8,22,44,.58);color:#eaf2ff;
       cursor:pointer;font-size:18px;line-height:1;
+      pointer-events:auto;
+      box-shadow:0 8px 22px rgba(4,12,24,.45);
+    }
+    .svc__navBtn:hover{
+      background:rgba(12,36,68,.84);
+      border-color:rgba(215,242,255,.82);
     }
     .svc__navBtn:disabled{opacity:.45;cursor:not-allowed}
+    .svc__dots{
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      margin:12px 0 0;
+    }
+    .svc__dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      border:1px solid rgba(234,242,255,.82);
+      background:rgba(255,255,255,.18);
+      padding:0;
+      cursor:pointer;
+      transition:all .22s ease;
+    }
+    .svc__dot.is-active{
+      width:26px;
+      background:linear-gradient(90deg,#78d3ff,#b9edff);
+      border-color:#b9edff;
+      box-shadow:0 0 0 3px rgba(143,215,255,.18),0 0 12px rgba(120,211,255,.45);
+    }
     .svc__card{
       border-radius:18px;overflow:hidden;
       background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
@@ -527,12 +586,8 @@
         justify-content:flex-end;
       }
       .svc__head{align-items:flex-start;flex-direction:column}
-      .svc{--svc-gap:0px}
-      .svc__grid .svc__card{flex:0 0 100%}
-    }
-    @media (min-width:641px) and (max-width:900px){
-      .svc{--svc-gap:16px}
-      .svc__grid .svc__card{flex:0 0 calc((100% - var(--svc-gap)) / 2)}
+      .svc__nav{left:8px;right:8px}
+      .svc__navBtn{width:38px;height:38px}
     }
 
     /* ===== Suministro (marcas/procura) ===== */
@@ -593,8 +648,8 @@
       max-width:360px;
       height:260px;
       border-radius:18px;
-      background:#f5f8fc;
-      border:1px solid rgba(15,76,129,.12);
+      background:#0b1a2b;
+      border:0;
       box-shadow:0 18px 46px rgba(0,0,0,.10);
       overflow:hidden;
       position:relative;
@@ -613,12 +668,17 @@
       background:transparent;
       padding:0;
       box-sizing:border-box;
+      overflow:hidden;
+      border-radius:inherit;
     }
     .cvproj .cvtab .svc__media img{
-      width:100%;
+      width:calc(100% + 12px);
+      max-width:none;
       height:100%;
-      border-radius:0;
+      border-radius:inherit;
+      margin-right:-12px;
       object-fit:cover;
+      object-position:center;
       filter:contrast(1.06) saturate(1.05);
     }
     .cvproj .cvtab .svc__glow{display:none !important}
@@ -2503,6 +2563,9 @@ label{font-size:14px}
     border-color:rgba(153,220,255,.25);
     box-shadow:0 16px 36px rgba(4,18,36,.24);
   }
+  #cv-proyectos .cvproj .cvtab.svc__card{
+    border:0 !important;
+  }
   .svc__card:hover,
   .cvproj .cvtab.svc__card:hover{
     transform:translateY(-4px);
@@ -3047,7 +3110,7 @@ label{font-size:14px}
         <a class="btn btn--secondary" href="#servicios">Ver servicios</a>
       </div>
     </div>
-    <div class="svc__carousel" id="svcEspecialidadesCarousel">
+    <div class="svc__carousel" id="svcEspecialidadesCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de servicios y especialidades">
       <div class="svc__nav" aria-label="Navegacion del carrusel">
         <button type="button" class="svc__navBtn" id="svcPrev" aria-label="Servicio anterior">‹</button>
         <button type="button" class="svc__navBtn" id="svcNext" aria-label="Siguiente servicio">›</button>
@@ -3055,6 +3118,7 @@ label{font-size:14px}
       <div class="svc__viewport">
         <div class="svc__grid" id="svcEspecialidadesGrid" role="list"></div>
       </div>
+      <div class="svc__dots" id="svcDots" aria-label="Indicadores del carrusel"></div>
     </div>
     <p class="svc__note">Responsabilidad total desde ingenieria conceptual hasta puesta en marcha y capacitacion.</p>
   </div>
@@ -13964,7 +14028,8 @@ document.addEventListener('click', function(e){
   const carousel = document.getElementById('svcEspecialidadesCarousel');
   const prevBtn = document.getElementById('svcPrev');
   const nextBtn = document.getElementById('svcNext');
-  if(!root || !carousel || !prevBtn || !nextBtn) return;
+  const dotsWrap = document.getElementById('svcDots');
+  if(!root || !carousel || !prevBtn || !nextBtn || !dotsWrap) return;
 
   root.innerHTML = data.map((item) => (
     '<article class="svc__card" role="listitem">' +
@@ -13981,15 +14046,14 @@ document.addEventListener('click', function(e){
   )).join('');
 
   let index = 0;
+  let visible = 3;
+  let maxIndex = Math.max(0, data.length - visible);
+  let dotButtons = [];
 
-  function getVisibleCount(){
-    if(window.matchMedia('(max-width: 640px)').matches) return 1;
-    if(window.matchMedia('(max-width: 900px)').matches) return 2;
+  function getVisible(){
+    if(window.matchMedia('(max-width:700px)').matches) return 1;
+    if(window.matchMedia('(max-width:1100px)').matches) return 2;
     return 3;
-  }
-
-  function getMaxIndex(){
-    return Math.max(0, data.length - getVisibleCount());
   }
 
   function getGapPx(){
@@ -13998,41 +14062,75 @@ document.addEventListener('click', function(e){
     return Number.parseFloat(gap) || 0;
   }
 
+  function buildDots(){
+    const pages = maxIndex + 1;
+    dotsWrap.innerHTML = '';
+    dotButtons = [];
+    for(let i = 0; i < pages; i++){
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'svc__dot';
+      dot.setAttribute('aria-label', 'Ir al bloque ' + (i + 1));
+      dot.addEventListener('click', function(){
+        index = i;
+        updateCarousel();
+      });
+      dotsWrap.appendChild(dot);
+      dotButtons.push(dot);
+    }
+  }
+
+  function updateResponsiveState(){
+    const nextVisible = getVisible();
+    if(nextVisible !== visible){
+      visible = nextVisible;
+      maxIndex = Math.max(0, data.length - visible);
+      index = Math.min(index, maxIndex);
+      buildDots();
+    } else if(!dotButtons.length){
+      maxIndex = Math.max(0, data.length - visible);
+      buildDots();
+    }
+  }
+
   function updateCarousel(){
+    updateResponsiveState();
     const firstCard = root.querySelector('.svc__card');
     if(!firstCard) return;
-    const maxIndex = getMaxIndex();
-    index = Math.min(index, maxIndex);
     const cardWidth = firstCard.getBoundingClientRect().width;
     const offset = index * (cardWidth + getGapPx());
     root.style.transform = 'translateX(-' + offset + 'px)';
-    prevBtn.disabled = index <= 0;
-    nextBtn.disabled = index >= maxIndex;
+    prevBtn.disabled = maxIndex <= 0;
+    nextBtn.disabled = maxIndex <= 0;
+    dotButtons.forEach(function(dot, i){
+      dot.classList.toggle('is-active', i === index);
+      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+    });
   }
 
   prevBtn.addEventListener('click', function(){
-    index = Math.max(0, index - 1);
+    if(maxIndex <= 0) return;
+    index = index <= 0 ? maxIndex : index - 1;
     updateCarousel();
   });
 
   nextBtn.addEventListener('click', function(){
-    const maxIndex = getMaxIndex();
-    index = Math.min(maxIndex, index + 1);
+    if(maxIndex <= 0) return;
+    index = index >= maxIndex ? 0 : index + 1;
     updateCarousel();
   });
 
   const AUTOPLAY_MS = 3500;
   let autoplayId = null;
   let paused = false;
+  let resumeAutoplayId = null;
 
   function nextAuto(){
-    const maxIndex = getMaxIndex();
     index = index >= maxIndex ? 0 : index + 1;
     updateCarousel();
   }
 
   function startAutoplay(){
-    const maxIndex = getMaxIndex();
     if(autoplayId || paused || maxIndex <= 0) return;
     autoplayId = window.setInterval(nextAuto, AUTOPLAY_MS);
   }
@@ -14049,10 +14147,32 @@ document.addEventListener('click', function(e){
     else startAutoplay();
   }
 
+  function resumeAutoplaySoon(){
+    if(resumeAutoplayId){
+      window.clearTimeout(resumeAutoplayId);
+    }
+    resumeAutoplayId = window.setTimeout(function(){
+      setPaused(false);
+      resumeAutoplayId = null;
+    }, 2200);
+  }
+
   carousel.addEventListener('mouseenter', () => setPaused(true));
   carousel.addEventListener('mouseleave', () => setPaused(false));
   carousel.addEventListener('focusin', () => setPaused(true));
   carousel.addEventListener('focusout', () => setPaused(false));
+  prevBtn.addEventListener('click', function(){
+    setPaused(true);
+    resumeAutoplaySoon();
+  });
+  nextBtn.addEventListener('click', function(){
+    setPaused(true);
+    resumeAutoplaySoon();
+  });
+  dotsWrap.addEventListener('click', function(){
+    setPaused(true);
+    resumeAutoplaySoon();
+  });
   document.addEventListener('visibilitychange', function(){
     setPaused(document.hidden);
   });
@@ -14510,13 +14630,107 @@ document.addEventListener('click', function(e){
   const track = panel ? panel.querySelector(".cvproj__track") : null;
   const tabs = Array.from(document.querySelectorAll(".cvproj__tab"));
   const tabCards = Array.from(document.querySelectorAll(".cvtab"));
-  const projectCards = track ? Array.from(track.querySelectorAll(".cvproj__card")) : [];
+  const MAX_INDEX_CARDS = 3;
   if(!panel || !track || !tabs.length) return;
 
-  function render(sector){
-    projectCards.forEach(function(card){
-      card.hidden = card.getAttribute("data-sector") !== sector;
+  const PROJECTS_FALLBACK = [
+    { sector:"oilgas", title:"PEMEX Nohoch-A2 Sistema Electrico y CCM Offshore", img:"assets/img/Projects/oil&gas/nohoch_a2_sistema_electrico_y_ccm.png", bullets:["EPC electrico e instrumentacion","Integracion FAT y SAT","Puesta en marcha y pruebas"] },
+    { sector:"oilgas", title:"PEMEX Balam Subestacion y Seccionamiento MT 34.5 kV", img:"assets/img/Projects/oil&gas/balam_subestacion_y_seccionamiento.png", bullets:["Control y proteccion","Arquitectura OT y comunicaciones","Cumplimiento documental"] },
+    { sector:"oilgas", title:"PEMEX Akal-J Control Electrico", img:"assets/img/Projects/oil&gas/akal_j_sistema_de_generacion_y_control_electrico.png", bullets:["Sistemas de control","Proteccion electrica","Confiabilidad operativa"] },
+    { sector:"oilgas", title:"PEMEX Ku-Maloob-Zaap Modernizacion de Turbinas de Gas", img:"assets/img/Projects/oil&gas/ku_maloob_zaap_modernizacion_de_turbinas_de-gas.png", bullets:["Modernizacion de turbinas","Control y sincronia","Pruebas de desempeno"] },
+    { sector:"oilgas", title:"Baker Hughes Variadores Outdoor E-Cabinet", img:"assets/img/Projects/oil&gas/Baker_hughes_control_y_operacion_variadores.png", bullets:["Variadores industriales","Integracion electrica","Operacion en campo"] },
+    { sector:"oilgas", title:"SLB Sistema de Bombeo con Variadores MV TRIOL", img:"assets/img/Projects/oil&gas/SLB_control_y_operacion_variadores.png", bullets:["Bombeo profundo","Variadores MV","Monitoreo y operacion"] },
+    { sector:"energia", title:"Grupo Dragon Planta Geotermica Sistema de Generacion y Sincronia", img:"assets/img/Projects/infraestructura_electrica/Grupo_Dragon_Planta_Geotermica_Sistema_de_Generacion_y_Sincronia.png", bullets:["Subestacion y protecciones","Ingenieria, procura y construccion","Comisionamiento"] },
+    { sector:"energia", title:"CH Angostura Sistemas de Cable de Potencia 400 kV", img:"assets/img/Projects/infraestructura_electrica/CH_angostura_Sistemas_de_cable_de_Potencia_400_kV.png", bullets:["Rehabilitacion y modernizacion","SCADA y medicion","Pruebas y energizacion"] },
+    { sector:"energia", title:"Ingenio Tres Valles Incremento de Capacidad en Subestaciones MT", img:"assets/img/Projects/infraestructura_electrica/Ingenio_Tres_Valles_Incremento_de_Capacidad_en_Subestaciones_MT.png", bullets:["Subestaciones MT","Aumento de capacidad","Puesta en operacion"] },
+    { sector:"energia", title:"CFE Chankanaab Sistema Electrico Integral CA/CD", img:"assets/img/Projects/infraestructura_electrica/CFE_Chankanaab_Sistema_Eléctrico_Integral_CACD.png", bullets:["Sistema integral CA/CD","Distribucion y control","Cumplimiento normativo"] },
+    { sector:"energia", title:"CFE Tamazulapan Modernizacion de Control Hidraulico", img:"assets/img/Projects/infraestructura_electrica/CFE_Tamazulapan_Modernizacion_de_Control_Hidraulico.png", bullets:["Control hidraulico","Retrofit de sistemas","Confiabilidad de planta"] },
+    { sector:"energia", title:"CH Angostura Infraestructura Electrica de Alta Tension 400 kV", img:"assets/img/Projects/infraestructura_electrica/CH_angostura_Infraestructura_Electrica_de _Alta_Tension_400_kV.png", bullets:["Alta tension 400 kV","Infraestructura electrica","Entrega en campo"] },
+    { sector:"industrial", title:"Proyecto Minero VFD Altivar 980 700 HP para Bombeo Profundo", img:"assets/img/Projects/Soluciones_industriales/Proyecto_Minero_VFD_Altivar_980_700_HP_para_Bombeo_Profundo.png", bullets:["Diseno e interconexion","Protecciones y medicion","Operacion y mantenimiento"] },
+    { sector:"industrial", title:"Coca-Cola Colima Variador Industrial TRIOL 200 HP", img:"assets/img/Projects/Soluciones_industriales/Coca_Cola_Colima_Variador_Industrial_TRIOL_ 200_HP.png", bullets:["Variador industrial","Integracion en planta","Arranque y soporte"] },
+    { sector:"industrial", title:"Campo Eolico Suministro de Sistemas de Control y Potencia", img:"assets/img/Projects/Soluciones_industriales/Campo_Eolico_Suministro_de_Sistemas_de_Control_y_Potencia.png", bullets:["Suministro especializado","Control y potencia","Implementacion EPC"] },
+    { sector:"industrial", title:"Ingenio Emiliano Zapata Control de Velocidad y Gobernadores", img:"assets/img/Projects/Soluciones_industriales/Ingenio_Emiliano_Zapata_Control_de_Velocidad_y_Gobernadores.png", bullets:["Control de velocidad","Gobernadores","Optimizacion operativa"] },
+    { sector:"industrial", title:"Ingenio Adolfo Lopez Mateos Sistema de Sincronia y Cogeneracion", img:"assets/img/Projects/Soluciones_industriales/Ingenio_Adolfo_Lopez_Mateos_Sistema_de_Sincronia_y_Cogeneracion.png", bullets:["Sincronia y cogeneracion","Integracion multimarcas","Comisionamiento"] },
+    { sector:"industrial", title:"Ingenio Tamazula Variador Regenerativo 300 HP", img:"assets/img/Projects/Soluciones_industriales/Ingenio_Tamazula_Variador_Regenerativo_300_HP.png", bullets:["Variador regenerativo","Eficiencia energetica","Operacion continua"] }
+  ];
+
+  let projects = PROJECTS_FALLBACK.slice();
+
+  function escapeHTML(str){
+    return String(str || "").replace(/[&<>\"']/g, function(s){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s];
     });
+  }
+
+  function normalizeText(str){
+    return String(str || "").toLowerCase().trim();
+  }
+
+  function normalizePath(path){
+    return String(path || "").replace(/\\/g, "/").replace(/^\.\//, "");
+  }
+
+  function inferSectorFromPath(path){
+    const p = normalizePath(path).toLowerCase();
+    if(p.indexOf("/oil&gas/") > -1) return "oilgas";
+    if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
+    if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
+    return "";
+  }
+
+  function titleFromPath(path){
+    const normalized = normalizePath(path);
+    const fileName = normalized.split("/").pop() || "";
+    const base = fileName.replace(/\.[^.]+$/, "");
+    return base
+      .replace(/[_-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function sanitizeProjects(items){
+    const seen = {};
+    return (Array.isArray(items) ? items : []).map(function(item){
+      const img = normalizePath(item && item.img ? item.img : "");
+      const sector = item && item.sector ? String(item.sector) : inferSectorFromPath(img);
+      if(!img || !sector) return null;
+      const key = normalizeText(img);
+      if(seen[key]) return null;
+      seen[key] = true;
+      const title = item && item.title ? String(item.title) : titleFromPath(img);
+      const bullets = Array.isArray(item && item.bullets) ? item.bullets : [];
+      return { sector: sector, title: title, img: img, bullets: bullets };
+    }).filter(Boolean);
+  }
+
+  function loadProjects(){
+    return fetch("assets/data/landing-projects.json", { cache: "no-store" })
+      .then(function(res){
+        if(!res.ok) throw new Error("manifest-not-found");
+        return res.json();
+      })
+      .then(sanitizeProjects)
+      .then(function(items){
+        return items.length ? items : PROJECTS_FALLBACK.slice();
+      })
+      .catch(function(){
+        return PROJECTS_FALLBACK.slice();
+      });
+  }
+
+  function render(sector){
+    const items = projects.filter(function(p){ return p.sector === sector; }).slice(0, MAX_INDEX_CARDS);
+    track.innerHTML = items.map(function(p){
+      return (
+        '<article class="cvproj__card">' +
+          '<img class="cvproj__img" src="' + escapeHTML(p.img) + '" alt="' + escapeHTML(p.title) + '" loading="lazy" decoding="async">' +
+          '<div class="cvproj__shade" aria-hidden="true"></div>' +
+          '<div class="cvproj__footer">' +
+            '<h3 class="cvproj__name">' + escapeHTML(p.title) + '</h3>' +
+          '</div>' +
+        '</article>'
+      );
+    }).join("");
   }
 
   function setActiveTab(btn){
@@ -14542,7 +14756,10 @@ document.addEventListener('click', function(e){
     if(card) card.classList.toggle("is-open");
   });
 
-  setActiveTab(tabs[0]);
+  loadProjects().then(function(data){
+    projects = data;
+    setActiveTab(tabs[0]);
+  });
 })();
 </script>
 <script id="img-error-runtime">

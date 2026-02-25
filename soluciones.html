@@ -2561,29 +2561,6 @@ label{font-size:14px}
     <p class="svc__note">Responsabilidad total desde ingeniería conceptual hasta puesta en marcha y capacitación.</p>
   </div>
 </section><!-- Clientes por sector (unbranded import v15) -->
-<section class="catalogx" id="catalogo-epc" aria-labelledby="catalogoEpcTitle">
-  <div class="container">
-    <h3 id="catalogoEpcTitle" class="section-title">Catalogo interactivo de servicios EPC</h3>
-    <p class="section-lead">Selecciona una categoria y filtra por palabra clave para localizar el alcance adecuado para tu proyecto.</p>
-    <div class="catalogx__controls">
-      <div class="catalogx__tabs" id="epcCatalogTabs" role="tablist" aria-label="Categorias de servicios EPC">
-        <button class="catalogx__tab is-active" type="button" data-cat="all">Todos</button>
-        <button class="catalogx__tab" type="button" data-cat="automatizacion">Automatizacion y Control</button>
-        <button class="catalogx__tab" type="button" data-cat="electromecanicas">Soluciones Electromecanicas</button>
-        <button class="catalogx__tab" type="button" data-cat="iluminacion">Iluminacion Industrial</button>
-        <button class="catalogx__tab" type="button" data-cat="infraestructura">Infraestructura Energetica</button>
-        <button class="catalogx__tab" type="button" data-cat="oilgas">Oil & Gas</button>
-        <button class="catalogx__tab" type="button" data-cat="solar">Solar Industrial</button>
-      </div>
-      <label class="catalogx__search" for="epcCatalogSearch">
-        <input id="epcCatalogSearch" type="search" placeholder="Buscar por servicio o palabra clave">
-      </label>
-    </div>
-    <p class="catalogx__meta" id="epcCatalogMeta">Mostrando 0 servicios</p>
-    <div class="catalogx__grid" id="epcCatalogGrid"></div>
-    <p class="catalogx__empty" id="epcCatalogEmpty">No hay resultados para los filtros seleccionados.</p>
-  </div>
-</section>
 <span id="capacidad-tecnica" class="anchor-target" aria-hidden="true"></span>
 <section class="cvx" id="cv" aria-labelledby="cvxTitle">
   <div class="container">
@@ -2780,6 +2757,30 @@ label{font-size:14px}
       </article>
     </div>
     </div>
+  </div>
+</section>
+
+<section class="catalogx" id="catalogo-epc" aria-labelledby="catalogoEpcTitle">
+  <div class="container">
+    <h3 id="catalogoEpcTitle" class="section-title">Catalogo interactivo de servicios EPC</h3>
+    <p class="section-lead">Selecciona una categoria y filtra por palabra clave para localizar el alcance adecuado para tu proyecto.</p>
+    <div class="catalogx__controls">
+      <div class="catalogx__tabs" id="epcCatalogTabs" role="tablist" aria-label="Categorias de servicios EPC">
+        <button class="catalogx__tab is-active" type="button" data-cat="all">Todos</button>
+        <button class="catalogx__tab" type="button" data-cat="automatizacion">Automatizacion y Control</button>
+        <button class="catalogx__tab" type="button" data-cat="electromecanicas">Soluciones Electromecanicas</button>
+        <button class="catalogx__tab" type="button" data-cat="iluminacion">Iluminacion Industrial</button>
+        <button class="catalogx__tab" type="button" data-cat="infraestructura">Infraestructura Energetica</button>
+        <button class="catalogx__tab" type="button" data-cat="oilgas">Oil & Gas</button>
+        <button class="catalogx__tab" type="button" data-cat="solar">Solar Industrial</button>
+      </div>
+      <label class="catalogx__search" for="epcCatalogSearch">
+        <input id="epcCatalogSearch" type="search" placeholder="Buscar por servicio o palabra clave">
+      </label>
+    </div>
+    <p class="catalogx__meta" id="epcCatalogMeta">Mostrando 0 servicios</p>
+    <div class="catalogx__grid" id="epcCatalogGrid"></div>
+    <p class="catalogx__empty" id="epcCatalogEmpty">No hay resultados para los filtros seleccionados.</p>
   </div>
 </section>
 
@@ -13659,7 +13660,7 @@ document.addEventListener('error', function(e){
   let currentSector = "oilgas";
   let currentPage = 0;
 
-  const PROJECTS = [
+  const PROJECTS_FALLBACK = [
     { sector:"oilgas", title:"PEMEX Nohoch-A2 Sistema Eléctrico y CCM Offshore", img:"assets/img/Projects/oil&gas/nohoch_a2_sistema_electrico_y_ccm.png", bullets:["EPC eléctrico e instrumentación","Integración FAT y SAT","Puesta en marcha y pruebas"] },
     { sector:"oilgas", title:"PEMEX Balam Subestación y Seccionamiento MT 34.5 kV", img:"assets/img/Projects/oil&gas/balam_subestacion_y_seccionamiento.png", bullets:["Control y protección","Arquitectura OT y comunicaciones","Cumplimiento documental"] },
     { sector:"oilgas", title:"PEMEX Akal-J Control Eléctrico", img:"assets/img/Projects/oil&gas/akal_j_sistema_de_generacion_y_control_electrico.png", bullets:["Sistemas de control","Protección eléctrica","Confiabilidad operativa"] },
@@ -13681,6 +13682,7 @@ document.addEventListener('error', function(e){
     { sector:"industrial", title:"Ingenio Adolfo López Mateos Sistema de Sincronía y Cogeneración", img:"assets/img/Projects/Soluciones_industriales/Ingenio_Adolfo_Lopez_Mateos_Sistema_de_Sincronia_y_Cogeneracion.png", bullets:["Sincronía y cogeneración","Integración multimarcas","Comisionamiento"] },
     { sector:"industrial", title:"Ingenio Tamazula Variador Regenerativo 300 HP", img:"assets/img/Projects/Soluciones_industriales/Ingenio_Tamazula_Variador_Regenerativo_300_HP.png", bullets:["Variador regenerativo","Eficiencia energética","Operación continua"] }
   ];
+  let projects = PROJECTS_FALLBACK.slice();
 
   const SECTOR_LABEL = {
     oilgas: "Oil & Gas",
@@ -13694,6 +13696,62 @@ document.addEventListener('error', function(e){
     });
   }
 
+  function normalizePath(path){
+    return String(path || "").replace(/\\/g, "/").replace(/^\.\//, "");
+  }
+
+  function normalizeText(str){
+    return String(str || "").toLowerCase().trim();
+  }
+
+  function inferSectorFromPath(path){
+    const p = normalizePath(path).toLowerCase();
+    if(p.indexOf("/oil&gas/") > -1) return "oilgas";
+    if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
+    if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
+    return "";
+  }
+
+  function titleFromPath(path){
+    const normalized = normalizePath(path);
+    const fileName = normalized.split("/").pop() || "";
+    const base = fileName.replace(/\.[^.]+$/, "");
+    return base
+      .replace(/[_-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function sanitizeProjects(items){
+    const seen = {};
+    return (Array.isArray(items) ? items : []).map(function(item){
+      const img = normalizePath(item && item.img ? item.img : "");
+      const sector = item && item.sector ? String(item.sector) : inferSectorFromPath(img);
+      if(!img || !sector) return null;
+      const key = normalizeText(img);
+      if(seen[key]) return null;
+      seen[key] = true;
+      const title = item && item.title ? String(item.title) : titleFromPath(img);
+      const bullets = Array.isArray(item && item.bullets) ? item.bullets : [];
+      return { sector: sector, title: title, img: img, bullets: bullets };
+    }).filter(Boolean);
+  }
+
+  function loadProjects(){
+    return fetch("assets/data/landing-projects.json", { cache: "no-store" })
+      .then(function(res){
+        if(!res.ok) throw new Error("manifest-not-found");
+        return res.json();
+      })
+      .then(sanitizeProjects)
+      .then(function(items){
+        return items.length ? items : PROJECTS_FALLBACK.slice();
+      })
+      .catch(function(){
+        return PROJECTS_FALLBACK.slice();
+      });
+  }
+
   function pageSize(){
     if(window.innerWidth <= 680) return 1;
     if(window.innerWidth <= 1100) return 2;
@@ -13704,7 +13762,7 @@ document.addEventListener('error', function(e){
     if(resetPage) currentPage = 0;
     currentSector = sector;
     const perPage = pageSize();
-    const items = PROJECTS.filter(function(p){ return p.sector === sector; });
+    const items = projects.filter(function(p){ return p.sector === sector; });
     const maxPage = Math.max(0, Math.ceil(items.length / perPage) - 1);
     if(currentPage > maxPage) currentPage = maxPage;
     const start = currentPage * perPage;
@@ -13776,7 +13834,10 @@ document.addEventListener('error', function(e){
     render(currentSector, false);
   });
 
-  setActiveTab(tabs[0]);
+  loadProjects().then(function(data){
+    projects = data;
+    setActiveTab(tabs[0]);
+  });
 })();
 </script>
 <script>

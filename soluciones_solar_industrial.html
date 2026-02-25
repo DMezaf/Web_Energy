@@ -336,7 +336,7 @@
         <div class="svc-grid">
           <article class="svc-card">
             <div class="svc-card__media">
-              <img src="assets/img/services/energia_solar_industrial.webp" alt="Ingeniería solar industrial en planta" loading="lazy" decoding="async">
+              <img src="assets/img/Ingenieria_Solucion_Solar.png" alt="Ingeniería solar industrial en planta" loading="lazy" decoding="async">
             </div>
             <div class="svc-card__body">
               <span class="svc-card__tag">Ingeniería</span>
@@ -346,7 +346,7 @@
           </article>
           <article class="svc-card">
             <div class="svc-card__media">
-              <img src="assets/img/services/energia_solar_industrial.webp" alt="Integración y pruebas de sistemas" loading="lazy" decoding="async">
+              <img src="assets/img/Integracion_Montaje_solar.png" alt="Integración y pruebas de sistemas" loading="lazy" decoding="async">
             </div>
             <div class="svc-card__body">
               <span class="svc-card__tag">Integración</span>
@@ -356,7 +356,7 @@
           </article>
           <article class="svc-card">
             <div class="svc-card__media">
-              <img src="assets/img/services/infraestructura_electrica.webp" alt="Comisionamiento y entrega operativa de sistema solar" loading="lazy" decoding="async">
+              <img src="assets/img/Comisionamiento_Entrega_solar.png" alt="Comisionamiento y entrega operativa de sistema solar" loading="lazy" decoding="async">
             </div>
             <div class="svc-card__body">
               <span class="svc-card__tag">Puesta en marcha</span>
@@ -392,28 +392,28 @@
         </div>
         <div class="process-carousel" id="processCarousel">
           <div class="process-track" id="processTrack">
-            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/levantamiento_tecnico.png')">
+            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/Diagnostico_Consumo_Factibilidad_solar.png')">
               <div class="process-slide__body">
                 <span class="process-slide__stage">Levantamiento energético</span>
                 <h3>Diagnóstico de consumo y factibilidad</h3>
                 <p>Levantamiento de carga, perfil de consumo y evaluación técnica para definir la solución solar óptima.</p>
               </div>
             </article>
-            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/ingeneria_detalle.png')">
+            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/Diseno_Tecnico_Solucion_Solar.png')">
               <div class="process-slide__body">
                 <span class="process-slide__stage">Ingeniería de detalle</span>
                 <h3>Diseño técnico de solución solar</h3>
                 <p>Memorias técnicas, diagrama unifilar, selección de equipos y especificaciones de instalación segura.</p>
               </div>
             </article>
-            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/procura_ejecucion.png')">
+            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/Suministro_ Montaje_Coordinado_solar.png')">
               <div class="process-slide__body">
                 <span class="process-slide__stage">Procura y Ejecución</span>
                 <h3>Suministro y montaje coordinado</h3>
                 <p>Procura de equipos críticos y ejecución electromecánica por etapas para continuidad de operación.</p>
               </div>
             </article>
-            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/pruebas_entrega.png')">
+            <article class="process-slide" data-process-slide style="--slide-image:url('assets/img/Comisionamiento_Transferencia_Operativa_solar.png')">
               <div class="process-slide__body">
                 <span class="process-slide__stage">Pruebas y Entrega</span>
                 <h3>Comisionamiento y transferencia operativa</h3>
@@ -474,7 +474,7 @@
     <section class="faq" aria-labelledby="faqTitle">
       <div class="container">
         <div class="faq-banner">
-          <img src="assets/img/services/energia_solar_industrial.webp" alt="Banner de preguntas frecuentes para energía solar industrial" loading="lazy" decoding="async">
+          <img src="assets/img/FAQ_preguntas_frecuentes_solar.png" alt="Banner de preguntas frecuentes para energía solar industrial" loading="lazy" decoding="async">
         </div>
         <h2 id="faqTitle" class="section-title">Preguntas frecuentes</h2>
         <details>
@@ -743,6 +743,101 @@
   render();
 })();
 </script>
+<script id="cases-auto-runtime">
+(function(){
+  const casesRoot = document.getElementById("casos");
+  const grid = casesRoot ? casesRoot.querySelector(".case-grid") : null;
+  if(!grid) return;
+
+  const ctaLink = grid.querySelector(".case .case__cta a");
+  const ctaText = ctaLink ? (ctaLink.textContent || "").trim() : "Solicitar proyecto";
+  const ctaHref = ctaLink ? (ctaLink.getAttribute("href") || "contacto.html#inicio") : "contacto.html#inicio";
+  const fallbackTag = (grid.querySelector(".case .case__tag")?.textContent || "Caso EPC").trim();
+
+  function escapeHTML(str){
+    return String(str || "").replace(/[&<>\"']/g, function(s){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s];
+    });
+  }
+
+  function normalizePath(path){
+    return String(path || "").replace(/\\/g, "/").replace(/^\.\//, "");
+  }
+
+  function inferSectorFromPath(path){
+    const p = normalizePath(path).toLowerCase();
+    if(p.indexOf("/oil&gas/") > -1) return "oilgas";
+    if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
+    if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
+    return "";
+  }
+
+  function inferSectorFromPage(){
+    const page = (location.pathname.split("/").pop() || "").toLowerCase();
+    if(page.indexOf("oil_gas") > -1) return "oilgas";
+    if(page.indexOf("infraestructura_energetica") > -1) return "energia";
+    if(page.indexOf("especialidad_") === 0) return "energia";
+    return "industrial";
+  }
+
+  function makeSummary(item, sector){
+    if(Array.isArray(item.bullets) && item.bullets.length){
+      return String(item.bullets[0]);
+    }
+    if(sector === "oilgas") return "Integracion electrica y control para continuidad operativa.";
+    if(sector === "energia") return "Ejecucion tecnica con foco en confiabilidad y seguridad operativa.";
+    return "Implementacion EPC con integracion y puesta en marcha en campo.";
+  }
+
+  function sectorTag(sector){
+    if(sector === "oilgas") return "Oil & Gas";
+    if(sector === "energia") return "Infraestructura Electrica";
+    if(sector === "industrial") return "Soluciones Industriales";
+    return fallbackTag;
+  }
+
+  fetch("assets/data/landing-projects.json", { cache: "no-store" })
+    .then(function(res){
+      if(!res.ok) throw new Error("manifest-not-found");
+      return res.json();
+    })
+    .then(function(items){
+      const targetSector = inferSectorFromPage();
+      const normalized = (Array.isArray(items) ? items : []).map(function(item){
+        const img = normalizePath(item && item.img ? item.img : "");
+        const sector = item && item.sector ? String(item.sector) : inferSectorFromPath(img);
+        const title = item && item.title ? String(item.title) : "Caso de referencia";
+        const bullets = Array.isArray(item && item.bullets) ? item.bullets : [];
+        if(!img || !sector) return null;
+        return { img: img, sector: sector, title: title, bullets: bullets };
+      }).filter(Boolean);
+
+      const selected = normalized.filter(function(p){ return p.sector === targetSector; }).slice(0, 3);
+      if(!selected.length) return;
+
+      const tag = sectorTag(targetSector);
+      grid.innerHTML = selected.map(function(p){
+        const summary = makeSummary(p, targetSector);
+        return (
+          '<article class="case">' +
+            '<img src="' + escapeHTML(p.img) + '" alt="' + escapeHTML(p.title) + '" loading="lazy" decoding="async">' +
+            '<div class="case__body">' +
+              '<span class="case__tag">' + escapeHTML(tag) + '</span>' +
+              '<h3>' + escapeHTML(p.title) + '</h3>' +
+              '<p>' + escapeHTML(summary) + '</p>' +
+              '<div class="case__cta">' +
+                '<a class="btn btn--primary btn--tiny" href="' + escapeHTML(ctaHref) + '">' + escapeHTML(ctaText) + '</a>' +
+              '</div>' +
+            '</div>' +
+          '</article>'
+        );
+      }).join("");
+    })
+    .catch(function(){
+      // Keep original static cases as fallback.
+    });
+})();
+</script>
 <script id="ux-nav-enhancer">
 (function(){
   var nav = document.querySelector('header nav');
@@ -809,6 +904,7 @@
 </script>
 </body>
 </html>
+
 
 
 

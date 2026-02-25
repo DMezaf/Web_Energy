@@ -740,6 +740,101 @@
   render();
 })();
 </script>
+<script id="cases-auto-runtime">
+(function(){
+  const casesRoot = document.getElementById("casos");
+  const grid = casesRoot ? casesRoot.querySelector(".case-grid") : null;
+  if(!grid) return;
+
+  const ctaLink = grid.querySelector(".case .case__cta a");
+  const ctaText = ctaLink ? (ctaLink.textContent || "").trim() : "Solicitar proyecto";
+  const ctaHref = ctaLink ? (ctaLink.getAttribute("href") || "contacto.html#inicio") : "contacto.html#inicio";
+  const fallbackTag = (grid.querySelector(".case .case__tag")?.textContent || "Caso EPC").trim();
+
+  function escapeHTML(str){
+    return String(str || "").replace(/[&<>\"']/g, function(s){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s];
+    });
+  }
+
+  function normalizePath(path){
+    return String(path || "").replace(/\\/g, "/").replace(/^\.\//, "");
+  }
+
+  function inferSectorFromPath(path){
+    const p = normalizePath(path).toLowerCase();
+    if(p.indexOf("/oil&gas/") > -1) return "oilgas";
+    if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
+    if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
+    return "";
+  }
+
+  function inferSectorFromPage(){
+    const page = (location.pathname.split("/").pop() || "").toLowerCase();
+    if(page.indexOf("oil_gas") > -1) return "oilgas";
+    if(page.indexOf("infraestructura_energetica") > -1) return "energia";
+    if(page.indexOf("especialidad_") === 0) return "energia";
+    return "industrial";
+  }
+
+  function makeSummary(item, sector){
+    if(Array.isArray(item.bullets) && item.bullets.length){
+      return String(item.bullets[0]);
+    }
+    if(sector === "oilgas") return "Integracion electrica y control para continuidad operativa.";
+    if(sector === "energia") return "Ejecucion tecnica con foco en confiabilidad y seguridad operativa.";
+    return "Implementacion EPC con integracion y puesta en marcha en campo.";
+  }
+
+  function sectorTag(sector){
+    if(sector === "oilgas") return "Oil & Gas";
+    if(sector === "energia") return "Infraestructura Electrica";
+    if(sector === "industrial") return "Soluciones Industriales";
+    return fallbackTag;
+  }
+
+  fetch("assets/data/landing-projects.json", { cache: "no-store" })
+    .then(function(res){
+      if(!res.ok) throw new Error("manifest-not-found");
+      return res.json();
+    })
+    .then(function(items){
+      const targetSector = inferSectorFromPage();
+      const normalized = (Array.isArray(items) ? items : []).map(function(item){
+        const img = normalizePath(item && item.img ? item.img : "");
+        const sector = item && item.sector ? String(item.sector) : inferSectorFromPath(img);
+        const title = item && item.title ? String(item.title) : "Caso de referencia";
+        const bullets = Array.isArray(item && item.bullets) ? item.bullets : [];
+        if(!img || !sector) return null;
+        return { img: img, sector: sector, title: title, bullets: bullets };
+      }).filter(Boolean);
+
+      const selected = normalized.filter(function(p){ return p.sector === targetSector; }).slice(0, 3);
+      if(!selected.length) return;
+
+      const tag = sectorTag(targetSector);
+      grid.innerHTML = selected.map(function(p){
+        const summary = makeSummary(p, targetSector);
+        return (
+          '<article class="case">' +
+            '<img src="' + escapeHTML(p.img) + '" alt="' + escapeHTML(p.title) + '" loading="lazy" decoding="async">' +
+            '<div class="case__body">' +
+              '<span class="case__tag">' + escapeHTML(tag) + '</span>' +
+              '<h3>' + escapeHTML(p.title) + '</h3>' +
+              '<p>' + escapeHTML(summary) + '</p>' +
+              '<div class="case__cta">' +
+                '<a class="btn btn--primary btn--tiny" href="' + escapeHTML(ctaHref) + '">' + escapeHTML(ctaText) + '</a>' +
+              '</div>' +
+            '</div>' +
+          '</article>'
+        );
+      }).join("");
+    })
+    .catch(function(){
+      // Keep original static cases as fallback.
+    });
+})();
+</script>
 <script id="ux-nav-enhancer">
 (function(){
   var nav = document.querySelector('header nav');
@@ -806,6 +901,7 @@
 </script>
 </body>
 </html>
+
 
 
 
