@@ -497,7 +497,7 @@
     .filters label{display:inline-flex;gap:8px;align-items:center;margin-right:12px;font-size:14px;color:#475569}
     .filters input[type="checkbox"]{inline-size:16px;block-size:16px}
     .hidden{display:none !important}
-      /* ===== Procura – Catálogo ===== */
+      /* ===== Suministro técnico – Catálogo ===== */
     .prod-filters{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
     .prod-filters select,.prod-filters input[type="search"]{padding:10px;border:1px solid rgba(23,44,81,.18);border-radius:10px;font-size:14px}
     .prod-accordion details{border:1px solid rgba(23,44,81,.12);border-radius:14px;background:#fff;margin:10px 0;padding:12px}
@@ -1158,7 +1158,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 }
 .reach__marker--gdl{ --x:45.25%; --y:53.1%; --dx:0px; --dy:2px; }
 .reach__marker--cdc{ --x:58.35%; --y:63.25%; --dx:1px; --dy:0px; }
-.reach__marker--usa{ --x:31.2%; --y:30.5%; --dx:0px; --dy:1px; }
+.reach__marker--usa{ --x:45.2%; --y:40.5%; --dx:0px; --dy:1px; }
 .reach__marker--caribe{ --x:66.8%; --y:53.4%; --dx:1px; --dy:0px; }
 
 .reach__bullet{
@@ -1396,7 +1396,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 </style>
 
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581092921461-cd3fd944f519?q=80&w=1600&auto=format&fit=crop" fetchpriority="high">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://www.vms-energy.mx/", "logo": "https://www.vms-energy.mx/assets/logo.png", "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Iluminación Industrial y Soluciones Electromecánicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño, procura y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Ofrecen integración multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "¿Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: 9001, 14001, 45001, 37001 y 50001, con números de registro públicos."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://www.vms-energy.mx/", "logo": "https://www.vms-energy.mx/assets/logo.png", "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Iluminación Industrial y Soluciones Electromecánicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño, suministro técnico y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Ofrecen integración multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "¿Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: 9001, 14001, 45001, 37001 y 50001, con números de registro públicos."}}]}]}</script>
 
 <!-- v9.23f STYLE PATCH: consolidated visual fixes, accessibility, and responsive polish -->
 <style id="v923f-style-patch">
@@ -1648,7 +1648,14 @@ label{font-size:14px}
     border-bottom:0 !important;
     height:18px;
   }
-  .hero-to-nos::after{content:none}\r\n  .hero-slice{\r\n    background:#fff !important;\r\n    color:var(--vms-text) !important;\r\n    border-top:0 !important;\r\n    border-bottom:0 !important;\r\n  }\r\n.hero-slice .container{
+  .hero-to-nos::after{content:none}
+  .hero-slice{
+    background:#fff !important;
+    color:var(--vms-text) !important;
+    border-top:0 !important;
+    border-bottom:0 !important;
+  }
+  .hero-slice .container{
     background:#fff;
     border:1px solid rgba(23,44,81,.12);
     box-shadow:0 8px 24px rgba(8,28,54,.08);
@@ -1666,7 +1673,8 @@ label{font-size:14px}
   .hero-slice--nosotros h1,
   .hero-slice--nosotros h2,
   .hero-slice--nosotros h3{color:#f3f8ff !important}
-  .hero-slice--nosotros p{color:#cfe2f7 !important}\r\n</style>
+  .hero-slice--nosotros p{color:#cfe2f7 !important}
+</style>
 
 
 <style id="menu-toggle-visibility-fix">
@@ -1703,6 +1711,7 @@ label{font-size:14px}
           <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
           <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
           <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n verde no solar</a></li>
         </ul>
       </li>
     </ul>
@@ -1721,29 +1730,187 @@ label{font-size:14px}
       </li>
     </ul>
   </li>
-  <li><a href="procura.html">Procura</a></li>
+  <li><a href="procura.html">Suministro técnico</a></li>
   <li><a href="contacto.html">Contacto</a></li>
 </ul>
       </nav>
     </div>
   </header>  <!-- ===== Hero ===== -->
-  <section id="inicio" class="hero hero--image-only" aria-labelledby="heroAboutTitle">
-    <img src="assets/img/hero_nosotros_VMS_Energy.png" alt="Equipo de VMS Energy en proyectos EPC de infraestructura eléctrica y automatización industrial" class="hero-image-only" loading="eager" decoding="async">
-    <div class="hero__overlay">
-      <div class="container hero__wrap">
-        <div class="hero__content">
-          <span class="eyebrow">VMS Energy</span>
-          <h1 id="heroAboutTitle">EPC eléctrico para industria crítica</h1>
-          <p>20 años diseñando, integrando y ejecutando proyectos de infraestructura eléctrica, automatización y energía con enfoque en seguridad y cumplimiento.</p>
-          <p class="hero-proof">Cobertura México, Estados Unidos, Centroamérica y Caribe · Integración multimarcas</p>
-          <div class="hero__ctas">
-            <a href="contacto.html#inicio" class="btn btn--primary" data-cta="hero-about-primary">Solicitar cotización</a>
-            <a href="index.html#cv-proyectos" class="btn btn--secondary" data-cta="hero-about-secondary">Ver proyectos destacados</a>
+  <section id="inicio" class="hero" aria-labelledby="heroAboutTitle">
+    <div class="hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Carrusel principal de Nosotros">
+      <button type="button" class="hero-carousel__nav hero-carousel__nav--prev" aria-label="Slide anterior">‹</button>
+      <button type="button" class="hero-carousel__nav hero-carousel__nav--next" aria-label="Siguiente slide">›</button>
+      <div class="hero-carousel__viewport">
+        <article id="hero-nosotros" class="hero-slide is-active" data-hero-slide style="--hero-image:url('assets/img/hero_nosotros_VMS_Energy.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h1 id="heroAboutTitle">EPC eléctrico para industria crítica</h1>
+              <p>20 años diseñando, integrando y ejecutando proyectos de infraestructura eléctrica, automatización y energía con enfoque en seguridad y cumplimiento.</p>
+              <p class="hero-proof">Cobertura México, Estados Unidos, Centroamérica y Caribe · Integración multimarcas</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary" data-cta="hero-about-primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary" data-cta="hero-about-secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
           </div>
-        </div>
+        </article>
+        <article id="hero-sig" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/hero_SIG.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Sistema Integrado de Gestión (SIG)</h2>
+              <p>Así lo hacemos: con procesos certificados, ética documentada, seguridad como cultura y eficiencia operativa medible.</p>
+              <p class="hero-proof">QHSE+ con ISO 9001, 14001, 37001, 45001 y 50001</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="hero-iso-9001" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/SIG_ISO_9001.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Excelencia en Procesos · ISO 9001</h2>
+              <p>Enfoque de mejora continua fundamentado en la norma ISO 9001 para asegurar consistencia, calidad y trazabilidad operativa.</p>
+              <p class="hero-proof">Certificado GSC9KMX505</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="hero-iso-14001" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/SIG_ISO_14001.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Solvencia Ambiental · ISO 14001</h2>
+              <p>Gestión ambiental alineada a ISO 14001 para reducir impactos, cumplir normativa y fortalecer la sustentabilidad de cada proyecto.</p>
+              <p class="hero-proof">Certificado GSC14KMX277</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="hero-iso-37001" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/SIG_ISO_37001.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Compromiso Ético · ISO 37001</h2>
+              <p>Programa antisoborno y de transparencia conforme a ISO 37001 para garantizar integridad en decisiones, contrataciones y ejecución.</p>
+              <p class="hero-proof">Certificado GSC37KMX131</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="hero-iso-45001" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/SIG_ISO_45001.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Bienestar Humano · ISO 45001</h2>
+              <p>La salud y seguridad ocupacional son eje operativo bajo ISO 45001, priorizando prevención y continuidad segura en campo.</p>
+              <p class="hero-proof">Certificado GSC45KMX182</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="hero-iso-50001" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/SIG_ISO_50001.png')">
+          <div class="container hero__wrap">
+            <div class="hero__content">
+              <span class="eyebrow">VMS Energy</span>
+              <h2>Responsabilidad Energética · ISO 50001</h2>
+              <p>Gestión energética basada en ISO 50001 para reducir y optimizar el consumo eléctrico con resultados medibles.</p>
+              <p class="hero-proof">Certificado GSC50KMX101</p>
+              <div class="hero__ctas">
+                <a href="contacto.html#inicio" class="btn btn--primary">Solicitar cotización</a>
+                <a href="index.html#cv-proyectos" class="btn btn--secondary">Ver proyectos destacados</a>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
+      <div class="hero-carousel__dots" id="heroCarouselDots" aria-label="Indicadores del carrusel"></div>
     </div>
-</section>
+  </section>
+<script>
+(function(){
+  function initHeroCarousel(){
+    const root = document.getElementById('heroCarousel');
+    if(!root) return;
+    const slides = Array.from(root.querySelectorAll('[data-hero-slide]'));
+    const prev = root.querySelector('.hero-carousel__nav--prev');
+    const next = root.querySelector('.hero-carousel__nav--next');
+    const dotsWrap = document.getElementById('heroCarouselDots');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current = Math.max(0, slides.findIndex(s => s.classList.contains('is-active')));
+    let timer = null;
+
+    if(!slides.length || !dotsWrap) return;
+
+    function setSlide(index){
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+      Array.from(dotsWrap.children).forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+    }
+
+    function startAutoplay(){
+      if(reduceMotion) return;
+      stopAutoplay();
+      timer = window.setInterval(() => setSlide(current + 1), 6000);
+    }
+
+    function stopAutoplay(){
+      if(timer){
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    dotsWrap.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'hero-carousel__dot';
+      dot.setAttribute('aria-label', 'Ir al slide ' + (i + 1));
+      dot.addEventListener('click', () => {
+        setSlide(i);
+        startAutoplay();
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    prev?.addEventListener('click', () => {
+      setSlide(current - 1);
+      startAutoplay();
+    });
+    next?.addEventListener('click', () => {
+      setSlide(current + 1);
+      startAutoplay();
+    });
+
+    root.addEventListener('mouseenter', stopAutoplay);
+    root.addEventListener('mouseleave', startAutoplay);
+    root.addEventListener('focusin', stopAutoplay);
+    root.addEventListener('focusout', startAutoplay);
+
+    setSlide(current);
+    startAutoplay();
+  }
+
+  document.addEventListener('DOMContentLoaded', initHeroCarousel);
+})();
+</script>
 <section id="nosotros" class="about" aria-labelledby="aboutTitle">
     <div class="container">
     <div class="about-stack">
@@ -1757,7 +1924,7 @@ label{font-size:14px}
         </figure>
         <div class="about-block__body">
           <h3>¿Quiénes somos?</h3>
-          <p>VMS Energy es una empresa mexicana con 20 años de experiencia en ingeniería, procura y construcción (EPC) de sistemas eléctricos, soluciones electromecánicas, infraestructura eléctrica, Oil &amp; Gas, generación solar, automatización e iluminación industrial.</p>
+          <p>VMS Energy es una empresa mexicana con 20 años de experiencia en ingeniería, suministro técnico y construcción (EPC) de sistemas eléctricos, soluciones electromecánicas, infraestructura eléctrica, Oil &amp; Gas, generación solar, automatización e iluminación industrial.</p>
           <p>Contamos con un equipo multidisciplinario para ejecutar proyectos industriales, comerciales y de infraestructura, ofreciendo soluciones integrales y personalizadas.</p>
           <p><strong>Política integral</strong></p>
           <ul class="about-block__list" style="list-style:none;padding-left:0">
@@ -1785,9 +1952,9 @@ label{font-size:14px}
         </figure>
         <div class="about-block__body">
           <h3>¿Qué hacemos en VMS Energy?</h3>
-          <p>Generamos soluciones personalizadas de ingeniería, procura y construcción confiables y sustentables bajo normativas internacionales de calidad, seguridad y sostenibilidad.</p>
+          <p>Generamos soluciones personalizadas de ingeniería, suministro técnico y construcción confiables y sustentables bajo normativas internacionales de calidad, seguridad y sostenibilidad.</p>
           <ul class="about-block__list">
-            <li>EPC: diseño, procura y construcción.</li>
+            <li>EPC: diseño, suministro técnico y construcción.</li>
             <li>Generación, transmisión y distribución eléctrica.</li>
             <li>Automatización y control multimarcas, Oil &amp; Gas e iluminación industrial.</li>
             <li>Suministro especializado: MCC, tableros, VFD, reguladores, actuadores y más.</li>
@@ -1820,7 +1987,7 @@ label{font-size:14px}
             </div>
             <p class="section-lead section-lead--light">Cobertura operativa para <strong>Estados Unidos, México, Centroamérica y el Caribe</strong>. Acompañamos proyectos EPC con logística, ingeniería y soporte en sitio.</p>
             <ul class="reach__bullets">
-              <li><strong>Respuesta ágil</strong> para etapas de procura y arranques.</li>
+              <li><strong>Respuesta ágil</strong> para etapas de suministro técnico y arranques.</li>
               <li><strong>Coordinación multi-sitio</strong> para operaciones regionales.</li>
               <li><strong>Gestión de riesgos</strong> y seguridad operacional.</li>
               <li><strong>Ejecución de proyectos</strong> en plataformas offshore, industria pesada y plantas.</li>
@@ -1911,7 +2078,7 @@ label{font-size:14px}
         <a href="contacto.html#inicio" class="btn btn--primary">Solicitar propuesta técnica</a>
       </div>
     </div>
-  </section>\r\n
+  </section>
 
   <!-- ===== Contacto ===== -->
   
@@ -3897,7 +4064,7 @@ label{font-size:14px}
       const payload = {
         need: needSel.value, brand: brandSel.value, product: prodSel.value, email: $('#email').value
       };
-      console.log('Procura payload', payload);
+      console.log('Suministro técnico payload', payload);
       toast('¡Solicitud enviada! Te contactamos en breve.');
       e.target.reset();
       fillSelect(brandSel, []); fillSelect(prodSel, []);
@@ -3934,7 +4101,7 @@ label{font-size:14px}
       boxes.forEach(b=>b.addEventListener('change', applyFilters));
       applyFilters();
     })();
-    // ===== Catálogo Procura: dataset y render =====
+    // ===== Catálogo de suministro técnico: dataset y render =====
     const CATALOGO = [
       // ABB
       {marca:'ABB', producto:'Centro de Control de Motor (MCC)', modelos:'MNS®, MNS-Up, System pro E power, NeoGear™', disponibilidad:'?'},
@@ -4091,7 +4258,7 @@ label{font-size:14px}
   tensionChecks.concat(typeChecks).forEach(c=>c.addEventListener('change', applyServiceFilters));
   applyServiceFilters();
 
-  // ===== Procura: Servicio general/específico dependent selects =====
+  // ===== Suministro técnico: Servicio general/específico dependent selects =====
   const svcGeneral = document.getElementById('svcGeneral');
   const svcEspecifico = document.getElementById('svcEspecifico');
 
@@ -4224,7 +4391,7 @@ label{font-size:14px}
   function renderMatrixEnhanced(targetEl, filter, brandItems, brandSvcCounts){
     const table = document.createElement('table');
     const thead = document.createElement('thead');
-    thead.innerHTML = '<tr><th>Marca</th><th>Procura principal</th><th>Servicios asociados</th><th>UEN</th></tr>';
+    thead.innerHTML = '<tr><th>Marca</th><th>Suministro principal</th><th>Servicios asociados</th><th>UEN</th></tr>';
     table.appendChild(thead);
     const tbody = document.createElement('tbody');
     const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'');
@@ -4333,7 +4500,7 @@ label{font-size:14px}
     const s = getState();
     const chips = [];
     if(s.brand) chips.push(`<span class="filter-chip" data-k="brand">Marca: <strong>${s.brand}</strong> <button title="Quitar">×</button></span>`);
-    if(s.product) chips.push(`<span class="filter-chip" data-k="product">Procura: <strong>${s.product}</strong> <button title="Quitar">×</button></span>`);
+    if(s.product) chips.push(`<span class="filter-chip" data-k="product">Suministro técnico: <strong>${s.product}</strong> <button title="Quitar">×</button></span>`);
     if(s.svcGen) chips.push(`<span class="filter-chip" data-k="svcGen">Servicio: <strong>${s.svcGen}</strong> <button title="Quitar">×</button></span>`);
     if(s.svcSpec) chips.push(`<span class="filter-chip" data-k="svcSpec">Específico: <strong>${s.svcSpec}</strong> <button title="Quitar">×</button></span>`);
     if(s.avail) chips.push(`<span class="filter-chip" data-k="avail">Disponibilidad: <strong>${s.avail}</strong> <button title="Quitar">×</button></span>`);
@@ -4836,7 +5003,7 @@ label{font-size:14px}
     const q = $('#searchModel')?.value || '';
     const chips=[];
     function chip(k,label,val){ if(!val) return; chips.push(`<span class="filter-chip" data-k="${k}">${label}: <strong>${val}</strong></span>`); }
-    chip('brand','Marca',brand); chip('product','Procura',product); chip('svcGen','Servicio',svcGen); chip('svcSpec','Específico',svcSpec); chip('avail','Disp',avail); chip('q','Búsqueda',q);
+    chip('brand','Marca',brand); chip('product','Suministro técnico',product); chip('svcGen','Servicio',svcGen); chip('svcSpec','Específico',svcSpec); chip('avail','Disp',avail); chip('q','Búsqueda',q);
     box.innerHTML = chips.join('') + '<span id="filtersCounter" style="margin-left:auto;font-weight:700"></span>';
     updateVisibleCount();
   }
@@ -4870,7 +5037,9 @@ label{font-size:14px}
       const table = document.createElement('table'); table.className='cable-table';
       const heads = ['Serie','Tipo','Tension','Construccion'];
       const present = heads.filter(h=> rows.some(r=> (r[h]||'').toString().trim().length>0 ));
-      const thead = document.createElement('thead'); thead.innerHTML = '<tr>' + present.map(c=>'<th>'+ (c==='Tension'?'Tensión':(c==='Construccion'?'Construcción':c)) +'</th><th>Disponibilidad</th></tr>'; table.appendChild(thead);
+      const thead = document.createElement('thead');
+      thead.innerHTML = '<tr>' + present.map(c=>'<th>'+ (c==='Tension'?'Tensión':(c==='Construccion'?'Construcción':c)) +'</th>').join('') + '<th>Disponibilidad</th></tr>';
+      table.appendChild(thead);
       const tbody = document.createElement('tbody');
       rows.forEach(r=>{
         const tr = document.createElement('tr');
@@ -5243,7 +5412,7 @@ document.addEventListener('click', function(e){
         <option value="">Selecciona interés</option>
         <option>Oil &amp; Gas</option>
         <option>Soluciones Electromecánicas</option>
-        <option>Energía Solar</option>
+        <option>Energía Solar</option><option>Generación Verde No Solar</option>
         <option>Automatización y Control</option>
         <option>Infraestructura Eléctrica</option>
         <option>Iluminación Industrial</option>
@@ -12378,7 +12547,7 @@ document.addEventListener('click', function(e){
         <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
         <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
         <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Procura</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro técnico</a></li>
         <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
       </ul>
     </div>
@@ -12388,7 +12557,8 @@ document.addEventListener('click', function(e){
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
         <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromecánicas</a></li>
         <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatización y Control</a></li>
-        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energía Solar Industrial</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energética</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminación Industrial</a></li>
@@ -12698,6 +12868,9 @@ document.addEventListener('error', function(e){
 </script>
 </body>
 </html>
+
+
+
 
 
 
