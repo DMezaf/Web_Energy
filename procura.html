@@ -312,7 +312,6 @@
             <option value="">Selecciona...</option>
             <option value="Cable electrico">Cable eléctrico</option>
             <option value="Equipo electrico">Equipo eléctrico</option>
-            <option value="Iluminacion">Iluminación</option>
           </select>
           <div class="hint">Selecciona el tipo de suministro.</div>
         </div>
@@ -336,6 +335,42 @@
           <label for="model">Modelo</label>
           <select id="model" disabled required><option value="">Selecciona...</option></select>
         </div>
+        <div>
+          <label for="contactName">Nombre</label>
+          <input class="input" id="contactName" type="text" placeholder="Nombre completo" required>
+        </div>
+        <div>
+          <label for="countryCode">Clave del país</label>
+          <select id="countryCode" required>
+            <option value="">Selecciona...</option>
+            <option value="+1">Estados Unidos (+1)</option>
+            <option value="+52">México (+52)</option>
+            <option value="+501">Belice (+501)</option>
+            <option value="+502">Guatemala (+502)</option>
+            <option value="+503">El Salvador (+503)</option>
+            <option value="+504">Honduras (+504)</option>
+            <option value="+505">Nicaragua (+505)</option>
+            <option value="+506">Costa Rica (+506)</option>
+            <option value="+507">Panamá (+507)</option>
+            <option value="+1-809">República Dominicana (+1-809)</option>
+            <option value="+1-787">Puerto Rico (+1-787)</option>
+            <option value="+1-876">Jamaica (+1-876)</option>
+            <option value="+1-868">Trinidad y Tobago (+1-868)</option>
+          </select>
+        </div>
+        <div>
+          <label for="phone">Teléfono</label>
+          <input class="input" id="phone" type="tel" placeholder="Ej. 3338112233" required>
+        </div>
+        <div>
+          <label for="workType">Tipo de trabajo</label>
+          <select id="workType" required>
+            <option value="">Selecciona...</option>
+            <option value="Suministro inmediato">Suministro inmediato</option>
+            <option value="Suministro programado">Suministro programado</option>
+            <option value="Suministro + puesta en marcha">Suministro + puesta en marcha</option>
+          </select>
+        </div>
         <div class="full">
           <label for="email">Correo</label>
           <input class="input" id="email" type="email" placeholder="tu@empresa.com" required>
@@ -343,6 +378,10 @@
         <div class="req-summary">
           <h4>Resumen de solicitud</h4>
           <div id="reqTotals" class="totals">
+            <span class="tot-chip" id="sumNombre">Nombre: —</span>
+            <span class="tot-chip" id="sumClavePais">Clave país: —</span>
+            <span class="tot-chip" id="sumTelefono">Teléfono: —</span>
+            <span class="tot-chip" id="sumTipoTrabajo">Tipo de trabajo: —</span>
             <span class="tot-chip" id="sumSuministro">Suministro: —</span>
             <span class="tot-chip" id="sumCategoria">Categoría: —</span>
             <span class="tot-chip" id="sumMarca">Marca: —</span>
@@ -416,10 +455,11 @@
       'Cables de potencia': {
         'KEI': {
           'BT': {'PVC': ['KEI-BT-PVC-4X70', 'KEI-BT-PVC-3X120']},
-          'MT': {'XLPE': ['KEI-MT-XLPE-1X240', 'KEI-MT-XLPE-1X400']}
-        },
-        'Prysmian': {
-          'BT': {'THHN': ['PRY-BT-THHN-2/0', 'PRY-BT-THHN-4/0']}
+          'MT': {'XLPE': ['KEI-MT-XLPE-1X240', 'KEI-MT-XLPE-1X400']},
+          'Solar': {'FV': ['4 mm2', '6 mm2', '10 mm2', '16 mm2', '25 mm2', '35 mm2', '50 mm2']},
+          'HV': {'XLPE': ['35 kV N2XSY', '66 kV', '132 kV']},
+          'EHV': {'XLPE': ['220 kV', '400 kV']},
+          'ESP': {'Submersible': ['Type Q', 'XtremeTemp 400°F Lead', 'Xtreme 450°F', 'X-Treme 450°F Polyimide', 'X-Treme CT', 'X-Treme Monel 450°F', 'REDA Type 205', 'REDA MaxTemp 450°F', 'REDA MaxTemp CT', 'ESP FluoroShield 400°F', 'ESP FluoroShield', 'HT-EPDM 300°F', 'ESP-180', 'ESP 205F', 'HighTemp 400°F', 'DuraTemp 450°F', 'UltraTemp Monel', 'ELG', 'KEFLG', 'KEFLG-CT', 'KEFLM', 'PEG']}
         }
       }
     },
@@ -429,31 +469,51 @@
           'Distribucion': {'BT': ['ABB-MNS-4000A', 'ABB-TS8-2500A']}
         },
         'Schneider': {
-          'Potencia': {'Prisma': ['SCH-PRISMA-3200A', 'SCH-PRISMA-4000A']}
+          'Potencia': {'PrismaSeT': ['SCH-PRISMASET-3200A', 'SCH-PRISMASET-4000A']}
         }
       },
       'Variadores': {
         'ABB': {
-          'ACS': {'Industrial': ['ACS580-250kW', 'ACS880-355kW']}
+          'ACS': {'Industrial': ['ACS580', 'ACS880']}
+        },
+        'Schneider': {
+          'Altivar': {'Process/Drive': ['ATV320', 'ATV600']}
+        },
+        'Triol': {
+          'AT': {'Serie AT': ['AT24', 'AT27']}
         },
         'WEG': {
-          'CFW': {'Linea CFW': ['CFW11-110kW', 'CFW900-200kW']}
-        }
-      }
-    },
-    'Iluminacion': {
-      'Luminarias industriales': {
-        'Signify (Philips)': {
-          'High-bay': {'LED': ['PHI-HB-150W-40K', 'PHI-HB-200W-50K']}
+          'CFW': {'Linea CFW': ['CFW11', 'CFW900']}
         },
-        'OSRAM': {
-          'Area': {'LED': ['OSR-AREA-120W-40K', 'OSR-AREA-180W-50K']}
+        'Chint': {
+          'NVF': {'Serie NVF': ['NVF2G']}
+        }
+      },
+      'Control y proteccion': {
+        'Basler Electric': {
+          'Excitacion': {'DECS': ['DECS-250E', 'DECS-450']}
+        },
+        'DEIF': {
+          'Control de generacion': {'Genset': ['AGC-4 Mk II', 'ASC-4 Solar']}
+        },
+        'Dynalco': {
+          'Instrumentacion': {'Velocidad': ['Speed Switch', 'Tachometer']}
+        },
+        'Woodward': {
+          'Controladores': {'Generacion': ['easYgen-3000XT', '2301E']}
+        },
+        'Valtek': {
+          'Posicionadores': {'Digital': ['Logix 3800', 'StarPac 3']}
         }
       }
     }
   };
 
   var mapSummary = {
+    contactName: 'sumNombre',
+    countryCode: 'sumClavePais',
+    phone: 'sumTelefono',
+    workType: 'sumTipoTrabajo',
     supplyType: 'sumSuministro',
     category: 'sumCategoria',
     brand: 'sumMarca',
@@ -468,6 +528,11 @@
   var family = document.getElementById('family');
   var description = document.getElementById('description');
   var model = document.getElementById('model');
+  var contactName = document.getElementById('contactName');
+  var countryCode = document.getElementById('countryCode');
+  var phone = document.getElementById('phone');
+  var workType = document.getElementById('workType');
+  var email = document.getElementById('email');
 
   function fillSelect(el, list){
     el.innerHTML = '<option value=\"\">Selecciona...</option>' + (list || []).map(function(v){ return '<option>' + v + '</option>'; }).join('');
@@ -544,6 +609,11 @@
   });
 
   model.addEventListener('change', updateSummary);
+  contactName.addEventListener('input', updateSummary);
+  countryCode.addEventListener('change', updateSummary);
+  phone.addEventListener('input', updateSummary);
+  workType.addEventListener('change', updateSummary);
+  email.addEventListener('input', updateSummary);
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -552,6 +622,10 @@
     required.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
     if(!ok){ feedback.textContent='Completa los campos requeridos.'; return; }
     var payload = {
+      nombre: String(contactName.value || '').trim(),
+      clavePais: String(countryCode.value || '').trim(),
+      telefono: String(phone.value || '').trim(),
+      tipoTrabajo: String(workType.value || '').trim(),
       suministro: String(supplyType.value || '').trim(),
       categoria: String(category.value || '').trim(),
       marca: String(brand.value || '').trim(),
@@ -561,6 +635,10 @@
       correo: String(email.value || '').trim()
     };
     var body =
+      'Nombre: ' + encodeURIComponent(payload.nombre) + '%0D%0A' +
+      'Clave pais: ' + encodeURIComponent(payload.clavePais) + '%0D%0A' +
+      'Telefono: ' + encodeURIComponent(payload.telefono) + '%0D%0A' +
+      'Tipo de trabajo: ' + encodeURIComponent(payload.tipoTrabajo) + '%0D%0A' +
       'Suministro: ' + encodeURIComponent(payload.suministro) + '%0D%0A' +
       'Categoria: ' + encodeURIComponent(payload.categoria) + '%0D%0A' +
       'Marca: ' + encodeURIComponent(payload.marca) + '%0D%0A' +

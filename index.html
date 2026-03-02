@@ -5367,28 +5367,39 @@ label{font-size:14px}
       'Mantenimiento': ['ABB','Schneider','Siemens','Signify (Philips)','Eaton Crouse-Hinds','OSRAM','Cree Lighting'],
       'Capacitación': ['ABB','Schneider','DEIF','Basler Electric']
     };
-    const productMap = {
-      'ABB': ['ACS580 Drive','MCC Emax 2','Relé de protección REF615'],
-      'Schneider': ['Altivar 212','NSX Breakers','Relé Sepam S40'],
-      'Schneider Electric': ['Altivar 212','NSX Breakers','Relé Sepam S40'],
+    let productMap = {
+      'ABB': ['ACS580 Drive','Relé de protección REF615','MNS-SG'],
+      'Schneider': ['Altivar ATV320','Altivar Process ATV600','PrismaSeT'],
+      'Schneider Electric': ['Altivar ATV320','Altivar Process ATV600','PrismaSeT'],
       'Siemens': ['SIVACON S8','SENTRON WL','SIPROTEC 5'],
       'GE Grid': ['Multilin 869','B90 Bus Differential'],
-      'WEG': ['Cajas MCC W22','Soft-Starters SSW','Luminarias industriales LED'],
+      'WEG': ['Motores W22','CFW900','Soft-Starters SSW'],
       'Emerson': ['DeltaV','Fisher Control Valve'],
       'Honeywell': ['Experion PKS','SmartLine Transmitter'],
-      'Basler Electric': ['DECS-250 AVR','DECS-400 AVR'],
-      'DEIF': ['Genset Controller AGC-4','ASC-4'],
+      'Basler Electric': ['DECS-250E','DECS-450'],
+      'DEIF': ['AGC-4 Mk II','ASC-4 Solar'],
       'Dynalco': ['Speed Switch','Tachometer'],
       'Triol': ['VFD AT27','VFD AT24'],
-      'Valtek': ['Valve Actuator'],
-      'Woodward': ['EGCP-3 Controller'],
-      'Chint': ['NXC/NM8N'],
-      'Kei': ['Cables BT/MT'],
-      'Signify (Philips)': ['Luminarias LED industriales','Paneles LED','Drivers Xitanium'],
-      'Eaton Crouse-Hinds': ['Iluminación ATEX','Luminarias de emergencia'],
-      'OSRAM': ['Módulos LED','Controladores DALI'],
+      'Valtek': ['Logix 3800','StarPac 3'],
+      'Woodward': ['easYgen-3000XT','ProAct Actuator'],
+      'Chint': ['NVF2G','NXC/NM8N'],
+      'Kei': ['Cables BT/MT','HV (3.3-33 kV)','EHV (66-400 kV)'],
+      'Signify (Philips)': ['CoreLine Highbay Gen6','GreenPerform Highbay G5','Drivers Xitanium'],
+      'Eaton Crouse-Hinds': ['Champ Pro PFMA','Luminarias de emergencia'],
+      'OSRAM': ['Controladores DALI','Drivers LED industriales'],
       'Cree Lighting': ['High-bay LED','Street Lighting']
     };
+    // Fuente externa opcional para mantener el catálogo fuera del HTML.
+    (async function loadAlliesProductMap(){
+      try{
+        const r = await fetch('assets/data/allies-products.json', { cache: 'no-store' });
+        if(!r.ok) return;
+        const data = await r.json();
+        if(data && data.productMap && typeof data.productMap === 'object'){
+          productMap = data.productMap;
+        }
+      }catch(_e){}
+    })();
 
     const needSel = $('#need');
     const brandSel = $('#brand');
@@ -5691,12 +5702,12 @@ label{font-size:14px}
       applyFilters();
     })();
     // ===== Catálogo de suministro técnico: dataset y render =====
-    const CATALOGO = [
+    let CATALOGO = [
       // ABB
-      {marca:'ABB', producto:'Centro de Control de Motor (MCC)', modelos:'MNS®, MNS-Up, System pro E power, NeoGear™', disponibilidad:'?'},
+      {marca:'ABB', producto:'Centro de Control de Motor (MCC)', modelos:'MNS-SG, MNS-Up, NeoGear™', disponibilidad:'?'},
       {marca:'ABB', producto:'Tablero de Distribución', modelos:'System pro E energy, Compact MNS, ProLine Panels', disponibilidad:'?'},
       {marca:'ABB', producto:'Tableros Eléctricos para Exteriores', modelos:'Gabinetes NEMA, Gemini, System pro E control', disponibilidad:'?'},
-      {marca:'ABB', producto:'Variadores (Frecuencia y Velocidad)', modelos:'ACS580, ACS880, DCS800', disponibilidad:'?'},
+      {marca:'ABB', producto:'Variadores (Frecuencia y Velocidad)', modelos:'ACS580, ACS880', disponibilidad:'?'},
       {marca:'ABB', producto:'Reguladores de Voltaje', modelos:'UNITROL®, FCR/FVR', disponibilidad:'X'},
       {marca:'ABB', producto:'Subestaciones', modelos:'—', disponibilidad:'?'},
       {marca:'ABB', producto:'HVAC²', modelos:'—', disponibilidad:'?'},
@@ -5705,7 +5716,7 @@ label{font-size:14px}
       {marca:'ABB', producto:'Cable Eléctrico', modelos:'—', disponibilidad:'?'},
       // Schneider
       {marca:'Schneider Electric', producto:'Centro de Control de Motor (MCC)', modelos:'Okken, Blokset, Prisma', disponibilidad:'?'},
-      {marca:'Schneider Electric', producto:'Variadores (Frecuencia y Velocidad)', modelos:'Altivar 212/320/630', disponibilidad:'?'},
+      {marca:'Schneider Electric', producto:'Variadores (Frecuencia y Velocidad)', modelos:'Altivar ATV320, Altivar Process ATV600', disponibilidad:'?'},
       {marca:'Schneider Electric', producto:'Tablero de Distribución', modelos:'PrismaSeT, PowerLogic', disponibilidad:'?'},
       {marca:'Schneider Electric', producto:'Actuador', modelos:'—', disponibilidad:'?'},
       {marca:'Schneider Electric', producto:'Interruptores Retrofit', modelos:'NSX/MTZ Retrofit kits', disponibilidad:'?'},
@@ -5715,31 +5726,46 @@ label{font-size:14px}
       {marca:'Siemens', producto:'Tablero de Distribución', modelos:'SENTRON WL/3VA', disponibilidad:'?'},
       {marca:'Siemens', producto:'Protección y Control', modelos:'SIPROTEC 5', disponibilidad:'?'},
       // Basler
-      {marca:'Basler Electric', producto:'Reguladores de Voltaje', modelos:'DECS-250, DECS-400', disponibilidad:'?'},
+      {marca:'Basler Electric', producto:'Reguladores de Voltaje', modelos:'DECS-250E, DECS-450', disponibilidad:'?'},
       // DEIF
-      {marca:'DEIF', producto:'Gobernador / Controlador de Velocidad', modelos:'AGC-4, ASC-4', disponibilidad:'?'},
+      {marca:'DEIF', producto:'Controlador de Generación y Sincronía', modelos:'AGC-4 Mk II, ASC-4 Solar', disponibilidad:'?'},
       // Dynalco
       {marca:'Dynalco', producto:'Gobernador / Controlador de Velocidad', modelos:'Speed Switch, Tachs', disponibilidad:'?'},
       // Triol
       {marca:'Triol', producto:'Variadores (Frecuencia y Velocidad)', modelos:'AT27, AT24', disponibilidad:'?'},
+      // Valtek
+      {marca:'Valtek', producto:'Posicionadores y Control de Válvula', modelos:'Logix 3800, StarPac 3', disponibilidad:'?'},
+      // Woodward
+      {marca:'Woodward', producto:'Controladores de Generación', modelos:'easYgen-3000XT, 2301E', disponibilidad:'?'},
+      {marca:'Woodward', producto:'Actuadores', modelos:'ProAct, L-Series', disponibilidad:'?'},
       // Chint
       {marca:'Chint', producto:'Tablero de Distribución', modelos:'NXC/NM8N', disponibilidad:'?'},
+      {marca:'Chint', producto:'Variadores (Frecuencia y Velocidad)', modelos:'NVF2G', disponibilidad:'?'},
       // Kei (cable)
-      {marca:'Kei', producto:'Cable Eléctrico', modelos:'Cables BT/MT', disponibilidad:'?'},
+      {marca:'Kei', producto:'Cable Eléctrico', modelos:'Cables BT/MT, HV (3.3-33 kV), EHV (66-400 kV)', disponibilidad:'?'},
       // Iluminación
-      {marca:'Signify (Philips)', producto:'Luminarias LED industriales', modelos:'CoreLine HighBay, GreenPerform', disponibilidad:'?'},
-      {marca:'Signify (Philips)', producto:'Drivers LED', modelos:'Xitanium, Advance', disponibilidad:'?'},
+      {marca:'Signify (Philips)', producto:'Luminarias LED industriales', modelos:'CoreLine Highbay Gen6, GreenPerform Highbay G5', disponibilidad:'?'},
+      {marca:'Signify (Philips)', producto:'Drivers LED', modelos:'Xitanium', disponibilidad:'?'},
       {marca:'Signify (Philips)', producto:'Paneles LED', modelos:'Panel CoreLine, SmartBright', disponibilidad:'?'},
-      {marca:'Eaton Crouse-Hinds', producto:'Iluminación ATEX', modelos:'Champ Pro PFM LED, Vaporgard', disponibilidad:'?'},
+      {marca:'Eaton Crouse-Hinds', producto:'Iluminación ATEX', modelos:'Champ Pro PFMA', disponibilidad:'?'},
       {marca:'Eaton Crouse-Hinds', producto:'Luminarias de emergencia', modelos:'Serie Ex eLED, Champ Emergency', disponibilidad:'?'},
       {marca:'OSRAM', producto:'Módulos LED', modelos:'PrevaLED, LINEARlight', disponibilidad:'?'},
-      {marca:'OSRAM', producto:'Controladores DALI', modelos:'OPTOTRONIC, DEXAL', disponibilidad:'?'},
+      {marca:'OSRAM', producto:'Controladores DALI', modelos:'OPTOTRONIC', disponibilidad:'?'},
       {marca:'Cree Lighting', producto:'High-Bay LED', modelos:'KBL Series, CPY500', disponibilidad:'?'},
       {marca:'Cree Lighting', producto:'Street Lighting', modelos:'XSP Series, RSW', disponibilidad:'?'},
       {marca:'WEG', producto:'Luminarias Industriales', modelos:'WLUX Series', disponibilidad:'?'}
     ];
 
-    (function(){
+    (async function(){
+      try{
+        const r = await fetch('assets/data/allies-products.json', { cache:'no-store' });
+        if(r.ok){
+          const data = await r.json();
+          if(data && Array.isArray(data.catalogo) && data.catalogo.length){
+            CATALOGO = data.catalogo;
+          }
+        }
+      }catch(_e){}
       const acc = document.getElementById('prodAccordion');
       const brandSel = document.getElementById('brandFilter');
       const productSel = document.getElementById('productFilter');
