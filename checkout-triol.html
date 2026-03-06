@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout Triol | VMS Energy</title>
+  <meta name="description" content="Checkout visual tipo WooCommerce para variadores Triol." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#eef4fb;--ink:#10233d;--muted:#55708a;--line:#d9e4f0;--blue:#0f4c81;--white:#fff;--accent:#ff7a00}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Manrope",system-ui,sans-serif;background:linear-gradient(180deg,#f7fbff,#ecf3fa);color:var(--ink)}
+    .container{width:min(1180px,calc(100% - 32px));margin:0 auto}
+    .top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,228,240,.9)}
+    .top__bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+    .top__logo img{height:38px}
+    .page{padding:22px 0 36px}
+    .kicker{display:inline-flex;padding:.26rem .66rem;border-radius:999px;background:#eef4ff;border:1px solid #cfe0f4;color:#0f4c81;font-size:12px;font-weight:800}
+    h1{margin:10px 0 8px;font-size:clamp(30px,5vw,44px);line-height:1.02}
+    .lead{margin:0;color:var(--muted);font-size:16px;max-width:70ch}
+    .steps{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .step{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;border:1px solid #d4e1ef;background:#fff;color:#59728c;font-weight:700;font-size:13px}
+    .step.is-active{background:#0f4c81;border-color:#0f4c81;color:#fff}
+    .layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:18px;margin-top:22px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 12px 28px rgba(16,35,61,.06)}
+    .panel h2{margin:0 0 14px;font-size:24px;color:#113960}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:grid;gap:6px;font-size:13px;color:#49657f;font-weight:700}
+    input,select{width:100%;border:1px solid #ceddeb;border-radius:12px;padding:12px 13px;font:inherit;color:#10233d;background:#fff}
+    .methods{display:grid;gap:10px}
+    .method{display:grid;grid-template-columns:auto 78px minmax(0,1fr);align-items:center;gap:12px;padding:14px;border:1px solid #d6e3f0;border-radius:16px;background:#f8fbff;cursor:pointer;transition:border-color .18s ease, box-shadow .18s ease, background .18s ease}
+    .method:hover{border-color:#aecaeb;background:#fbfdff}
+    .method input{margin-top:4px;accent-color:#0f4c81}
+    .method.is-selected{border-color:#0f4c81;background:#f3f8ff;box-shadow:0 0 0 3px rgba(15,76,129,.14)}
+    .method__logo{width:78px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #d7e3ef;box-shadow:inset 0 1px 0 rgba(255,255,255,.18);padding:8px}
+    .method__logo img{width:100%;height:100%;object-fit:contain;display:block}
+    .method__body strong{display:block;color:#10233d}
+    .method__body span{display:block;margin-top:2px;color:#4f6983;font-size:13px;line-height:1.45}
+    .summary{display:grid;gap:12px}
+    .summary__line{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#38526c}
+    .summary__line strong{color:#10233d}
+    .summary__total{padding-top:12px;border-top:1px solid #dde8f3}
+    .btns{display:grid;gap:10px;margin-top:18px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;border-radius:14px;padding:13px 16px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer}
+    .btn--primary{background:linear-gradient(180deg,#ff8b1f,#ff6a00);color:#fff}
+    .btn--secondary{background:#fff;border-color:#d3dfeb;color:#0b2747}
+    .note{margin-top:12px;color:#5d748b;font-size:13px;line-height:1.6}
+    @media (max-width:880px){.layout,.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container top__bar">
+      <a class="top__logo" href="VMShop.html"><img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="lazy" decoding="async" /></a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <span class="kicker">Simulación visual</span>
+      <h1>Checkout</h1>
+      <p class="lead">Pantalla de pago simulada para validar estructura de compra, datos y opciones de pasarela.</p>
+      <div class="steps">
+        <span class="step">1. Carrito</span>
+        <span class="step is-active">2. Checkout</span>
+        <span class="step">3. Confirmación</span>
+      </div>
+
+      <div class="layout">
+        <section class="panel">
+          <h2>Datos del comprador</h2>
+          <div class="grid">
+            <label>Nombre completo<input id="name" type="text" value="Comprador demo" /></label>
+            <label>Correo<input id="email" type="email" value="compras@empresa-demo.com" /></label>
+            <label>Empresa<input id="company" type="text" value="Empresa Demo" /></label>
+            <label>Telefono<input id="phone" type="tel" value="+52 33 0000 0000" /></label>
+            <label>Ciudad<input id="city" type="text" value="Zapopan" /></label>
+            <label>Pais<select id="country"><option selected>Mexico</option><option>Estados Unidos</option></select></label>
+          </div>
+          <h2 style="margin-top:20px">Método de pago</h2>
+          <div class="methods">
+            <label class="method">
+              <input type="radio" name="payment" value="stripe" checked />
+              <span class="method__logo method__logo--stripe" aria-hidden="true">
+                <img src="assets/img/landings/checkout/payment-stripe-logo.webp" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="method__body"><strong>Tarjeta vía Stripe</strong><span>Simulación visual de pasarela embebida.</span></span>
+            </label>
+            <label class="method">
+              <input type="radio" name="payment" value="paypal" />
+              <span class="method__logo method__logo--paypal" aria-hidden="true">
+                <img src="assets/img/landings/checkout/payment-paypal-logo.webp" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="method__body"><strong>PayPal</strong><span>Redirección simulada a autorización externa.</span></span>
+            </label>
+            <label class="method">
+              <input type="radio" name="payment" value="spei" />
+              <span class="method__logo method__logo--spei" aria-hidden="true">
+                <img src="assets/img/landings/checkout/payment-spei-logo.webp" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="method__body"><strong>Transferencia SPEI</strong><span>Confirmación manual posterior a orden.</span></span>
+            </label>
+          </div>
+          <div class="btns">
+            <button id="placeOrder" class="btn btn--primary" type="button">Realizar pedido</button>
+            <a id="backCart" class="btn btn--secondary" href="carrito-triol.html">Volver al carrito</a>
+          </div>
+          <p class="note">No se envían datos ni se realiza cobro. Esta pantalla simula la experiencia de checkout previa a una integración real con WooCommerce y pasarela.</p>
+        </section>
+
+        <aside class="panel">
+          <h2>Tu pedido</h2>
+          <div class="summary">
+            <div class="summary__line"><span>Producto</span><strong id="summaryProduct">AT24</strong></div>
+            <div class="summary__line"><span>Código</span><strong id="summaryCode">TRIOL</strong></div>
+            <div class="summary__line"><span>Cantidad</span><strong id="summaryQty">1</strong></div>
+            <div class="summary__line"><span>Método</span><strong id="summaryMethod">Tarjeta vía Stripe</strong></div>
+            <div class="summary__line"><span>Subtotal</span><strong id="summarySubtotal">USD 0.00</strong></div>
+            <div class="summary__line"><span>IVA</span><strong>Incluido</strong></div>
+            <div class="summary__line summary__total"><span>Total</span><strong id="summaryTotal">USD 0.00</strong></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script>
+  (function(){
+    function formatUsd(num){ return new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}).format(num); }
+    function decode(params,key,fallback){ return (params.get(key) || fallback || '').trim(); }
+    var params = new URLSearchParams(window.location.search);
+    var model = decode(params,'model','AT24');
+    var code = decode(params,'codigo','TRIOL-CATALOGO');
+    var qty = parseInt(decode(params,'qty','1'),10) || 1;
+    var price = parseFloat(decode(params,'price','0')) || 0;
+    function methodLabel(){
+      var selected = document.querySelector('input[name="payment"]:checked');
+      if(!selected) return 'Tarjeta vía Stripe';
+      return {
+        stripe:'Tarjeta vía Stripe',
+        paypal:'PayPal',
+        spei:'Transferencia SPEI'
+      }[selected.value] || 'Tarjeta vía Stripe';
+    }
+    function syncSelectedMethod(){
+      Array.prototype.forEach.call(document.querySelectorAll('.method'), function(label){
+        var input = label.querySelector('input[name="payment"]');
+        label.classList.toggle('is-selected', !!(input && input.checked));
+      });
+    }
+    function buildThanksUrl(){
+      var url = new URL('gracias-compra-triol.html', window.location.origin);
+      params.forEach(function(value,key){ url.searchParams.set(key,value); });
+      url.searchParams.set('qty', String(qty));
+      url.searchParams.set('payment', methodLabel());
+      url.searchParams.set('order', 'VMS-' + Math.floor(Date.now() / 1000));
+      url.searchParams.set('buyer', document.getElementById('name').value || 'Comprador demo');
+      return url.pathname + '?' + url.searchParams.toString();
+    }
+    function render(){
+      syncSelectedMethod();
+      document.title = 'Checkout | ' + model + ' | VMS Energy';
+      document.getElementById('summaryProduct').textContent = model;
+      document.getElementById('summaryCode').textContent = code;
+      document.getElementById('summaryQty').textContent = String(qty);
+      document.getElementById('summaryMethod').textContent = methodLabel();
+      document.getElementById('summarySubtotal').textContent = 'USD ' + formatUsd(price * qty);
+      document.getElementById('summaryTotal').textContent = 'USD ' + formatUsd(price * qty);
+      document.getElementById('backCart').setAttribute('href', 'carrito-triol.html?' + params.toString());
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('input[name="payment"]'), function(input){
+      input.addEventListener('change', render);
+    });
+    document.getElementById('placeOrder').addEventListener('click', function(){
+      window.location.href = buildThanksUrl();
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>
+
+
+

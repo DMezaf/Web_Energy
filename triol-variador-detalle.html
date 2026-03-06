@@ -1,0 +1,388 @@
+﻿<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle de variador Triol | VMS Energy</title>
+  <meta name="description" content="Ficha de detalle para variadores Triol AT24 en VMS Energy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#eef4fb;--ink:#10233d;--muted:#4a627b;--line:#d7e3f1;--blue:#0f4c81;--blue-dark:#0b2747;--soft:#f7faff;--accent:#ff7a00;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Manrope",system-ui,sans-serif;background:linear-gradient(180deg,#f5f8fc 0%,#eaf1f8 100%);color:var(--ink)}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .container{width:min(1160px,calc(100% - 32px));margin:0 auto}
+    .top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(215,227,241,.9)}
+    .top__bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+    .top__logo img{height:38px;width:auto}
+    .top__actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .top__link{color:#1d4873;text-decoration:none;font-size:14px;font-weight:700;padding:10px 12px;border-radius:999px}
+    .top__link:hover{background:#eef4ff}
+    .crumbs{padding:18px 0 10px;color:#54708d;font-size:13px}
+    .crumbs a{text-decoration:none;color:#1d4873}
+    .hero{padding:0 0 18px}
+    .hero__box{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:18px;align-items:center;background:linear-gradient(125deg,rgba(11,39,71,.98),rgba(15,76,129,.92));border-radius:24px;padding:18px;color:#fff;overflow:hidden;box-shadow:0 22px 44px rgba(10,28,48,.14)}
+    .hero__eyebrow{display:inline-flex;align-self:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:.3rem .7rem;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.02em}
+    .hero h1{margin:10px 0 8px;font-size:clamp(28px,4.4vw,44px);line-height:1.02}
+    .hero__lead{margin:0;color:#d8e6f5;font-size:15px;line-height:1.5;max-width:58ch}
+    .hero__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 16px;text-decoration:none;font-weight:800;border:1px solid transparent}
+    .btn--primary{background:linear-gradient(180deg,#ff8b1f,#ff6a00);color:#fff}
+    .btn--secondary{background:#fff;color:var(--blue-dark);border-color:#d3deea}
+    .hero__media{background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:10px;display:flex;align-items:center;justify-content:center;height:clamp(360px,58vh,640px)}
+    .hero__media img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
+    .section{padding:0 0 18px}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:0}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 8px 20px rgba(16,35,61,.06)}
+    .stat__label{display:block;font-size:12px;color:#647b93;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+    .stat__value{display:block;margin-top:6px;font-size:18px;font-weight:800;color:#10233d}
+    .layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:18px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 20px rgba(16,35,61,.05)}
+    .panel h2{margin:0 0 12px;font-size:22px;color:#113960}
+    .panel p{margin:0;color:var(--muted);line-height:1.7}
+    .spec-list,.bullet-list{margin:0;padding-left:18px;display:grid;gap:8px;color:#17314d}
+    .spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+    .spec{background:var(--soft);border:1px solid #e3edf7;border-radius:16px;padding:14px}
+    .spec b{display:block;font-size:12px;color:#5d748b;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+    .side-stack{display:grid;gap:18px}
+    .purchase{background:linear-gradient(160deg,#10233d,#113960);color:#fff}
+    .purchase h2,.purchase p{color:#fff}
+    .purchase p{color:#d9e6f3}
+    .purchase .btn--secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.24)}
+    .family-badge{display:inline-flex;background:#eef4ff;color:#0f4c81;border:1px solid #c9daf3;border-radius:999px;padding:.25rem .65rem;font-size:12px;font-weight:800}
+    .foot{background:#09131f;color:#cbd5e1;padding:38px 0 46px;margin-top:8px}
+    .foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:22px}
+    .foot h4{margin:0 0 10px;color:#fff}
+    .foot p{margin:0;color:#cbd5e1;line-height:1.6}
+    .foot__list{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+    .foot__list a{color:#cbd5e1;text-decoration:none;font-size:14px;line-height:1.5}
+    .foot__list a:hover{color:#fff}
+    .foot__social{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .foot__social a{color:#cbd5e1;text-decoration:none;font-size:13px;border:1px solid rgba(255,255,255,.18);padding:.22rem .5rem;border-radius:999px}
+    .foot__social a:hover{color:#fff;border-color:rgba(255,255,255,.36)}
+    @media (max-width:920px){.hero__box,.layout,.foot__grid,.stats{grid-template-columns:1fr 1fr}.hero__box{grid-template-columns:1fr}.hero__media{height:clamp(280px,46vh,420px);order:-1}}
+    @media (max-width:760px){.hero__box,.layout,.stats,.spec-grid,.foot__grid{grid-template-columns:1fr}.top__bar{align-items:flex-start}.top__actions{justify-content:flex-start}.hero__media{height:clamp(220px,38vh,320px)}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container top__bar">
+      <a class="top__logo" href="VMShop.html" aria-label="Ir a VMShop">
+        <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="lazy" decoding="async" />
+      </a>
+      <div class="top__actions">
+        <a class="top__link" href="lp-triol-variadores.html">Catálogo Triol</a>
+        <a class="top__link" href="procura.html">Suministro técnico</a>
+        <a class="top__link" data-preserve-query href="contacto_cta.html?producto=vmshop#ctaForm">Comprar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container crumbs">
+      <a href="VMShop.html">VMShop</a> / <a href="lp-triol-variadores.html">Triol Variadores</a> / <span id="crumbModel">Detalle</span>
+    </div>
+
+    <section class="hero">
+      <div class="container">
+        <article class="hero__box">
+          <div>
+            <span id="familyBadge" class="hero__eyebrow">Serie AT24</span>
+            <h1 id="heroTitle">Variador Triol AT24</h1>
+            <p id="heroLead" class="hero__lead">Ficha de referencia comercial para validar familia, precio y datos de suministro del variador seleccionado.</p>
+            <div class="hero__actions">
+              <a id="heroBuy" class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=triol-vfd#ctaForm">Comprar</a>
+              <a class="btn btn--secondary" href="lp-triol-variadores.html#catalogo">Volver al catálogo</a>
+            </div>
+          </div>
+          <div class="hero__media">
+            <img id="heroImage" src="assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp" alt="Variador Triol" loading="lazy" decoding="async" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stats">
+        <article class="stat"><span class="stat__label">Código</span><span id="statCode" class="stat__value">EQU</span></article>
+        <article class="stat"><span class="stat__label">Familia</span><span id="statFamily" class="stat__value">UC</span></article>
+        <article class="stat"><span class="stat__label">Disponibilidad</span><span id="statQty" class="stat__value">1 pieza</span></article>
+        <article class="stat"><span class="stat__label">Precio con IVA</span><span id="statPrice" class="stat__value">USD 0.00</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container layout">
+        <div class="panel">
+          <span id="inlineFamilyBadge" class="family-badge">Categoría UC</span>
+          <h2 id="overviewTitle">Resumen del equipo</h2>
+          <p id="overviewText">Este variador pertenece a la serie Triol AT24 y se presenta como una opción de referencia para integración en procesos industriales con demanda de control de velocidad, continuidad y soporte de ingeniería.</p>
+          <div class="spec-grid">
+            <div class="spec"><b>Modelo</b><span id="specModel">AT24-11K-4-UC01</span></div>
+            <div class="spec"><b>Segmento de potencia</b><span id="specPower">11K</span></div>
+            <div class="spec"><b>Marca</b><span id="specBrand">TRIOL</span></div>
+          </div>
+        </div>
+
+        <div class="side-stack">
+          <aside class="panel purchase">
+            <h2>Comprar este variador</h2>
+            <p>Usa el flujo de compra actual para reservar el equipo y continuar con validación comercial o técnica según tu proyecto.</p>
+            <div class="hero__actions">
+              <a id="sideBuy" class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=triol-vfd#ctaForm">Comprar</a>
+              <a class="btn btn--secondary" href="lp-triol-variadores.html#catalogo">Seguir comparando</a>
+            </div>
+          </aside>
+          <aside class="panel">
+            <h2>Aplicaciones sugeridas</h2>
+            <ul id="applicationsList" class="bullet-list">
+              <li>Bombas, ventilacion y control de velocidad en planta.</li>
+              <li>Retrofits y expansiones con criterios de continuidad operativa.</li>
+              <li>Integraciones donde se requiere respaldo comercial y técnico.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container layout">
+        <div class="panel">
+          <h2>Información comercial clave</h2>
+          <ul id="commercialList" class="spec-list">
+            <li>Precio expresado en USD con IVA del 16% incluido.</li>
+            <li>La cantidad visible corresponde a la referencia comercial cargada en el catalogo.</li>
+            <li>La compra puede complementarse con ingeniería de integración, parametrización y arranque.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Que validar antes de comprar</h2>
+          <ul id="validationList" class="spec-list">
+            <li>Compatibilidad con la carga, el tablero y la arquitectura de control.</li>
+            <li>Condiciones de trabajo continuo, severidad de la aplicacion y entorno de instalacion.</li>
+            <li>Requerimientos de suministro, comisionamiento y soporte en sitio.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" aria-label="Pie de pagina corporativo VMS">
+    <div class="container foot__grid">
+      <div>
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy" loading="lazy" decoding="async" width="140" height="48" style="display:block;object-fit:contain;margin-bottom:10px" />
+        <p>Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con soluciones versátiles y sustentables.</p>
+        <div class="foot__social">
+          <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contáctanos</h4>
+        <ul class="foot__list">
+          <li><a href="tel:+523338130739">+52 33 3813 0739 Guadalajara</a></li>
+          <li><a href="tel:+529383814824">+52 938 381 4824 Cd. del Carmen</a></li>
+          <li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nosotros</h4>
+        <ul class="foot__list">
+          <li><a href="aviso-privacidad.html" target="_blank">Aviso de Privacidad</a></li>
+          <li><a href="codigo-conducta.html">Código de Ética y Conducta</a></li>
+          <li><a href="politica-interna_antilavado.html">Politica Interna Antilavado</a></li>
+          <li><a href="politica-antisoborno.html">Politica Antisoborno</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul class="foot__list">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#soluciones">Soluciones</a></li>
+          <li><a href="index.html#procura">Suministro técnico</a></li>
+          <li><a href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Landings VMShop</h4>
+        <ul class="foot__list">
+          <li><a href="VMShop.html">Inicio VMShop</a></li>
+          <li><a href="lp-triol-variadores.html">Triol Variadores</a></li>
+          <li><a href="lp-kei-cable-potencia.html">Cable KEI</a></li>
+          <li><a href="lp-esp-cables.html">ESP Cables</a></li>
+          <li><a href="lp-cables-ehv.html">Cables EHV</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    function preserveQueryLinks(){
+      var params = window.location.search;
+      if(!params) return;
+      var links = document.querySelectorAll('[data-preserve-query]');
+      links.forEach(function(link){
+        var url = new URL(link.getAttribute('href'), window.location.origin);
+        var current = new URLSearchParams(window.location.search);
+        current.forEach(function(value, key){
+          if(!url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        link.setAttribute('href', url.pathname + '?' + url.searchParams.toString() + (url.hash || ''));
+      });
+    }
+
+    function formatUsd(num){
+      return new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(num);
+    }
+
+    function buildCartUrl(product){
+      var cart = new URL('carrito-triol.html', window.location.origin);
+      cart.searchParams.set('model', product.model);
+      cart.searchParams.set('codigo', product.codigo);
+      cart.searchParams.set('family', product.family || 'ALL');
+      cart.searchParams.set('marca', product.marca);
+      cart.searchParams.set('cantidad', product.cantidad);
+      cart.searchParams.set('price', String(product.price || 0));
+      cart.searchParams.set('src', product.src || '');
+      cart.searchParams.set('cta', product.cta || 'contacto_cta.html?producto=triol-vfd#ctaForm');
+      return cart.pathname + '?' + cart.searchParams.toString();
+    }
+
+    function familyTheme(family){
+      var map = {
+        UC: {
+          badge: 'Categoría UC',
+          lead: 'Variador recomendado para proyectos de integración, retrofits y mejoras de eficiencia con tiempos de implementación controlados.',
+          overview: 'Equipo de la familia UC orientado a balancear costo, disponibilidad y desempeño operativo en integraciones industriales.',
+          applications: [
+            'Retrofits de bombas, ventiladores y equipos auxiliares.',
+            'Expansiones de planta donde importa acelerar puesta en marcha.',
+            'Aplicaciones con foco en eficiencia energetica y control estable.'
+          ]
+        },
+        UH: {
+          badge: 'Categoría UH',
+          lead: 'Variador enfocado a cargas exigentes y continuidad operativa en entornos de mayor esfuerzo y robustez requerida.',
+          overview: 'Equipo de la familia UH pensado para trabajo severo, estabilidad de carga y soporte a procesos criticos.',
+          applications: [
+            'Cargas pesadas con regimen operativo intensivo.',
+            'Procesos donde una parada no programada tiene impacto alto.',
+            'Integraciones con exigencia superior de robustez.'
+          ]
+        },
+        SD: {
+          badge: 'Categoría SD',
+          lead: 'Variador orientado a potencias elevadas y escenarios donde la estabilidad del proceso es prioritaria.',
+          overview: 'Equipo de la familia SD para motores de mayor demanda y arquitectura de crecimiento futuro en potencia.',
+          applications: [
+            'Motores de alto torque y demanda energetica elevada.',
+            'Escenarios con variación de carga y necesidad de control estable.',
+            'Aplicaciones industriales que requieren base para escalar capacidad.'
+          ]
+        },
+        ALL: {
+          badge: 'Serie AT24',
+          lead: 'Ficha de referencia comercial para validar familia, precio y datos de suministro del variador seleccionado.',
+          overview: 'Variador de la serie Triol AT24 con enfoque en control de velocidad, integración industrial y soporte comercial.',
+          applications: [
+            'Bombas, ventilacion y control de velocidad en planta.',
+            'Retrofits y expansiones con criterios de continuidad operativa.',
+            'Integraciones donde se requiere respaldo comercial y técnico.'
+          ]
+        }
+      };
+      return map[family] || map.ALL;
+    }
+
+    function decodeParam(params, key, fallback){
+      return (params.get(key) || fallback || '').trim();
+    }
+
+    var params = new URLSearchParams(window.location.search);
+    var family = decodeParam(params, 'family', 'ALL').toUpperCase();
+    var model = decodeParam(params, 'model', 'AT24');
+    var code = decodeParam(params, 'codigo', 'Referencia');
+    var brand = decodeParam(params, 'marca', 'TRIOL');
+    var qty = decodeParam(params, 'cantidad', '1');
+    var src = decodeParam(params, 'src', '');
+    var cta = decodeParam(params, 'cta', 'contacto_cta.html?producto=triol-vfd#ctaForm');
+    var priceNum = parseFloat(decodeParam(params, 'price', '0')) || 0;
+    var powerTokenMatch = model.match(/^AT24-([A-Z0-9]+)-/i);
+    var powerToken = powerTokenMatch ? powerTokenMatch[1] : 'Serie AT24';
+    var fallbackImages = {
+      ALL: 'assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp',
+      UC: 'assets/img/landings/triol/card-triol-variadores-uc.webp',
+      UH: 'assets/img/landings/triol/card-triol-variadores-uh.webp',
+      SD: 'assets/img/landings/triol/card-triol-variadores-sd.webp'
+    };
+    var theme = familyTheme(family);
+
+    document.title = model + ' | Variador Triol | VMS Energy';
+    document.getElementById('crumbModel').textContent = model;
+    document.getElementById('familyBadge').textContent = theme.badge;
+    document.getElementById('heroTitle').textContent = model;
+    document.getElementById('heroLead').textContent = theme.lead;
+    var cartUrl = buildCartUrl({
+      model: model,
+      codigo: code,
+      family: family,
+      marca: brand,
+      cantidad: qty,
+      price: priceNum,
+      src: src,
+      cta: cta
+    });
+    document.getElementById('heroBuy').setAttribute('href', cartUrl);
+    document.getElementById('sideBuy').setAttribute('href', cartUrl);
+    document.getElementById('heroImage').src = src || fallbackImages[family] || fallbackImages.ALL;
+    document.getElementById('heroImage').alt = 'Variador ' + brand + ' ' + model;
+    document.getElementById('heroImage').onerror = function(){
+      this.src = fallbackImages[family] || fallbackImages.ALL;
+    };
+
+    document.getElementById('statCode').textContent = code;
+    document.getElementById('statFamily').textContent = family;
+    document.getElementById('statQty').textContent = qty + ' pieza' + (qty === '1' ? '' : 's');
+    document.getElementById('statPrice').textContent = 'USD ' + formatUsd(priceNum);
+
+    document.getElementById('inlineFamilyBadge').textContent = theme.badge;
+    document.getElementById('overviewTitle').textContent = 'Resumen del equipo ' + model;
+    document.getElementById('overviewText').textContent = theme.overview;
+    document.getElementById('specModel').textContent = model;
+    document.getElementById('specPower').textContent = powerToken;
+    document.getElementById('specBrand').textContent = brand;
+
+    document.getElementById('applicationsList').innerHTML = theme.applications.map(function(item){
+      return '<li>' + item + '</li>';
+    }).join('');
+
+    document.getElementById('commercialList').innerHTML = [
+      'Precio expresado en USD con IVA del 16% incluido para el modelo ' + model + '.',
+      'Código comercial de referencia: ' + code + '.',
+      'La cantidad visible en catálogo para esta referencia es de ' + qty + ' pieza(s).'
+    ].map(function(item){ return '<li>' + item + '</li>'; }).join('');
+
+    document.getElementById('validationList').innerHTML = [
+      'Compatibilidad de la familia ' + family + ' con la carga y la severidad del proceso.',
+      'Condiciones de alimentacion, tablero y arquitectura de control del proyecto.',
+      'Necesidad de ingeniería de integración, arranque o soporte en sitio.'
+    ].map(function(item){ return '<li>' + item + '</li>'; }).join('');
+
+    preserveQueryLinks();
+  })();
+  </script>
+</body>
+</html>
+
+
+

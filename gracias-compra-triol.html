@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedido confirmado | VMS Energy</title>
+  <meta name="description" content="Confirmación visual de pedido para variadores Triol." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#10233d;--muted:#55708a;--line:#d9e4f0;--blue:#0f4c81;--ok:#0c8a52;--white:#fff;--accent:#ff7a00}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Manrope",system-ui,sans-serif;background:linear-gradient(180deg,#f7fbff,#ecf3fa);color:var(--ink)}
+    .container{width:min(980px,calc(100% - 32px));margin:0 auto}
+    .page{padding:34px 0 40px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 16px 36px rgba(16,35,61,.08)}
+    .badge{display:inline-flex;padding:.3rem .72rem;border-radius:999px;background:#eaf9f1;border:1px solid rgba(12,138,82,.22);color:var(--ok);font-size:12px;font-weight:800}
+    h1{margin:14px 0 10px;font-size:clamp(32px,5vw,48px);line-height:1.02}
+    .lead{margin:0;color:var(--muted);font-size:16px;line-height:1.6;max-width:64ch}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+    .item{background:#f7fbff;border:1px solid #d8e5f2;border-radius:18px;padding:16px}
+    .item b{display:block;font-size:12px;color:#678099;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;border-radius:14px;padding:13px 16px;text-decoration:none;font-weight:800;border:1px solid transparent}
+    .btn--primary{background:linear-gradient(180deg,#ff8b1f,#ff6a00);color:#fff}
+    .btn--secondary{background:#fff;border-color:#d3dfeb;color:#0b2747}
+    .note{margin-top:18px;color:#5d748b;font-size:13px;line-height:1.6}
+    @media (max-width:760px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <section class="card">
+        <span class="badge">Pedido generado</span>
+        <h1>Gracias por tu compra</h1>
+        <p id="lead" class="lead">Tu pedido demo ha sido registrado dentro de esta simulación visual de checkout.</p>
+        <div class="grid">
+          <div class="item"><b>Orden</b><span id="orderId">VMS-0000</span></div>
+          <div class="item"><b>Producto</b><span id="productName">AT24</span></div>
+          <div class="item"><b>Método</b><span id="paymentMethod">Tarjeta vía Stripe</span></div>
+          <div class="item"><b>Comprador</b><span id="buyerName">Comprador demo</span></div>
+          <div class="item"><b>Cantidad</b><span id="qtyValue">1</span></div>
+          <div class="item"><b>Total</b><span id="totalValue">USD 0.00</span></div>
+        </div>
+        <div class="actions">
+        <a class="btn btn--primary" href="lp-triol-variadores.html">Volver al catálogo</a>
+          <a id="viewProduct" class="btn btn--secondary" href="triol-variador-detalle.html">Ver producto</a>
+        </div>
+        <p class="note">Esta página es parte de una simulación visual. No se cobró al cliente ni se generó una orden real en backend o WooCommerce.</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+  (function(){
+    function formatUsd(num){ return new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}).format(num); }
+    function decode(params,key,fallback){ return (params.get(key) || fallback || '').trim(); }
+    var params = new URLSearchParams(window.location.search);
+    var model = decode(params,'model','AT24');
+    var qty = parseInt(decode(params,'qty','1'),10) || 1;
+    var price = parseFloat(decode(params,'price','0')) || 0;
+    document.title = 'Pedido confirmado | ' + model + ' | VMS Energy';
+    document.getElementById('orderId').textContent = decode(params,'order','VMS-0000');
+    document.getElementById('productName').textContent = model;
+    document.getElementById('paymentMethod').textContent = decode(params,'payment','Tarjeta vía Stripe');
+    document.getElementById('buyerName').textContent = decode(params,'buyer','Comprador demo');
+    document.getElementById('qtyValue').textContent = String(qty);
+    document.getElementById('totalValue').textContent = 'USD ' + formatUsd(price * qty);
+    document.getElementById('lead').textContent = 'Tu pedido demo para ' + model + ' fue confirmado dentro de la simulación visual de checkout.';
+    document.getElementById('viewProduct').setAttribute('href', 'triol-variador-detalle.html?' + params.toString());
+  })();
+  </script>
+</body>
+</html>
+
+
+
