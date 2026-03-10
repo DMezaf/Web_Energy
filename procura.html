@@ -1,23 +1,23 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Suministro técnico | VMS Energy</title>
-  <meta name="description" content="Suministro técnico especializado multimarcas para proyectos EPC: compatibilidad, tiempos de entrega y soporte en campo." />
+  <title>Suministro t&eacute;cnico | VMS Energy</title>
+  <meta name="description" content="Suministro t&eacute;cnico especializado multimarcas para proyectos EPC: compatibilidad, tiempos de entrega y soporte en campo." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://www.vms-energy.mx/procura.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="Suministro técnico | VMS Energy" />
-  <meta property="og:description" content="Suministro especializado para ejecución continua de proyectos industriales." />
+  <meta property="og:title" content="Suministro t&eacute;cnico | VMS Energy" />
+  <meta property="og:description" content="Suministro especializado para ejecuci&oacute;n continua de proyectos industriales." />
   <meta property="og:url" content="https://www.vms-energy.mx/procura.html" />
   <meta property="og:image" content="https://www.vms-energy.mx/assets/img/hero_suministro.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Suministro técnico | VMS Energy" />
-  <meta name="twitter:description" content="Suministro técnico multimarcas para operación crítica." />
+  <meta name="twitter:title" content="Suministro t&eacute;cnico | VMS Energy" />
+  <meta name="twitter:description" content="Suministro t&eacute;cnico multimarcas para operaci&oacute;n cr&iacute;tica." />
   <meta name="twitter:image" content="https://www.vms-energy.mx/assets/img/hero_suministro.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,60 +288,111 @@
 }
 .nav-item--has-submenu.nav-force-sub-open > .submenu{display:block !important}
 </style>
-</head>
+<style id="nav-submenu-styles-vms">
+  nav{position:relative}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+  .nav-item--has-submenu{position:relative}
+  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+  .nav-item--has-submenu:hover .submenu,
+  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+  @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
+  @media (max-width:760px){
+    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
+    nav ul.is-open{display:grid;gap:10px}
+    .menu-toggle{display:inline-flex}
+    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
+    .nav-item--has-submenu.is-open .submenu{display:block}
+  }
+</style></head>
 <body>
-<header aria-label="Barra de navegación">
-  <div class="container topbar">
-    <a class="brand__logo" href="index.html#inicio" aria-label="Ir al inicio"><img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" width="72" height="72"></a>
-    <nav aria-label="Principal">
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
-      <ul id="menuList">
-  <li><a href="index.html">Inicio</a></li>
-  <li><a href="nosotros.html">Nosotros</a></li>
-  <li class="nav-item--has-submenu">
-    <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Servicios EPC</a>
-    <ul class="submenu" role="menu" aria-label="Submenu de servicios EPC">
-      <li class="submenu__group">
-        <span class="submenu__title">Servicios EPC</span>
-        <ul class="submenu__list">
-          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
-          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
-          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
-          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
-          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
-          <li><a href="soluciones_solar_industrial.html">Solar industrial</a></li>
-          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n verde no solar</a></li>
+<header aria-label="Barra de navegaci&oacute;n">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi�n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi�n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
         </ul>
-      </li>
-    </ul>
-  </li>
-  <li class="nav-item--has-submenu">
-    <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Especialidades</a>
-    <ul class="submenu" role="menu" aria-label="Submenu de especialidades">
-      <li class="submenu__group">
-        <span class="submenu__title">Especialidades</span>
-        <ul class="submenu__list">
-          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
-          <li><a href="especialidad_servicios.html">Servicios</a></li>
-          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
-          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><a href="procura.html">Suministro técnico</a></li>
-  <li><a href="contacto.html">Contacto</a></li>
-</ul>
-    </nav>
-  </div>
-</header>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
 
 <main>
   <section id="inicio" class="hero" aria-labelledby="heroTitle">
     <div class="container hero__content">
-      <span class="eyebrow">Suministro técnico especializado</span>
-      <h1 id="heroTitle">Suministro técnico para operación continua</h1>
-      <p>Gestionamos suministro técnico multimarcas para proyectos EPC y mantenimiento industrial, con trazabilidad, compatibilidad técnica y tiempos de entrega controlados.</p>
+      <span class="eyebrow">Suministro t&eacute;cnico especializado</span>
+      <h1 id="heroTitle">Suministro t&eacute;cnico para operaci&oacute;n continua</h1>
+      <p>Gestionamos suministro t&eacute;cnico multimarcas para proyectos EPC y mantenimiento industrial, con trazabilidad, compatibilidad t&eacute;cnica y tiempos de entrega controlados.</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#solicitud">Solicitar suministro</a>
         <a class="btn btn--secondary" href="contacto_cta.html#ctaForm">Hablar con un especialista</a>
@@ -351,20 +402,20 @@
 
   <section aria-labelledby="alcanceTitle">
     <div class="container">
-      <h2 id="alcanceTitle" class="section-title">Qué cubrimos en suministro técnico</h2>
-      <p class="section-lead">Suministro especializado al&iacute;neado a ingeniería, construcción y continuidad operativa.</p>
+      <h2 id="alcanceTitle" class="section-title">Qu&eacute; cubrimos en suministro t&eacute;cnico</h2>
+      <p class="section-lead">Suministro especializado al&iacute;neado a ingenier&iacute;a, construcci&oacute;n y continuidad operativa.</p>
       <div class="cards">
         <article class="card">
-          <img src="assets/img/suministro_equipos_potencia_control.png" alt="Equipamiento eléctrico para infraestructura" loading="lazy" decoding="async">
-          <div class="card__body"><span class="tag">Eléctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentación y accesorios críticos de planta.</p></div>
+          <img src="assets/img/suministro_equipos_potencia_control.png" alt="Equipamiento el&eacute;ctrico para infraestructura" loading="lazy" decoding="async">
+          <div class="card__body"><span class="tag">El&eacute;ctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentaci&oacute;n y accesorios cr&iacute;ticos de planta.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/suministro_integracion_marcas_lideres.png" alt="Suministro técnico para operación industrial" loading="lazy" decoding="async">
-          <div class="card__body"><span class="tag">Multimarca</span><h3>Integración de marcas líderes</h3><p>Selección técnica y equivalencias con validación para cumplimiento normativo.</p></div>
+          <img src="assets/img/suministro_integracion_marcas_lideres.png" alt="Suministro t&eacute;cnico para operaci&oacute;n industrial" loading="lazy" decoding="async">
+          <div class="card__body"><span class="tag">Multimarca</span><h3>Integraci&oacute;n de marcas l&iacute;deres</h3><p>Selecci&oacute;n t&eacute;cnica y equivalencias con validaci&oacute;n para cumplimiento normativo.</p></div>
         </article>
         <article class="card">
-          <img src="assets/img/suministro_Abastecimiento_trazabilidad.png" alt="Logística y soporte en suministro" loading="lazy" decoding="async">
-          <div class="card__body"><span class="tag">Logística</span><h3>Abastecimiento y trazabilidad</h3><p>Seguimiento de embarques, entregas parciales y soporte de arranque en sitio.</p></div>
+          <img src="assets/img/suministro_Abastecimiento_trazabilidad.png" alt="Log&iacute;stica y soporte en suministro" loading="lazy" decoding="async">
+          <div class="card__body"><span class="tag">Log&iacute;stica</span><h3>Abastecimiento y trazabilidad</h3><p>Seguimiento de embarques, entregas parciales y soporte de arranque en sitio.</p></div>
         </article>
       </div>
     </div>
@@ -373,19 +424,19 @@
   <section id="solicitud" class="form-wrap" aria-labelledby="solicitudTitle">
     <div class="container">
       <h2 id="solicitudTitle" class="section-title">Suministro de productos</h2>
-      <p class="section-lead">Flujo rápido de cotización: selecciona tu necesidad, marca y producto.</p>
+      <p class="section-lead">Flujo r&aacute;pido de cotizaci&oacute;n: selecciona tu necesidad, marca y producto.</p>
       <form id="supplyFormV9_20" class="form-card procura__form" novalidate>
         <div>
           <label for="supplyType">Suministro</label>
           <select id="supplyType" required>
             <option value="">Selecciona...</option>
-            <option value="Cable electrico">Cable eléctrico</option>
-            <option value="Equipo electrico">Equipo eléctrico</option>
+            <option value="Cable electrico">Cable el&eacute;ctrico</option>
+            <option value="Equipo electrico">Equipo el&eacute;ctrico</option>
           </select>
           <div class="hint">Selecciona el tipo de suministro.</div>
         </div>
         <div>
-          <label for="category">Categoría</label>
+          <label for="category">Categor&iacute;a</label>
           <select id="category" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
@@ -397,7 +448,7 @@
           <select id="family" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
-          <label for="description">Descripción</label>
+          <label for="description">Descripci&oacute;n</label>
           <select id="description" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
@@ -409,26 +460,26 @@
           <input class="input" id="contactName" type="text" placeholder="Nombre completo" required>
         </div>
         <div>
-          <label for="countryCode">Clave del país</label>
+          <label for="countryCode">Clave del pa&iacute;s</label>
           <select id="countryCode" required>
             <option value="">Selecciona...</option>
             <option value="+1">Estados Unidos (+1)</option>
-            <option value="+52">México (+52)</option>
+            <option value="+52">M&eacute;xico (+52)</option>
             <option value="+501">Belice (+501)</option>
             <option value="+502">Guatemala (+502)</option>
             <option value="+503">El Salvador (+503)</option>
             <option value="+504">Honduras (+504)</option>
             <option value="+505">Nicaragua (+505)</option>
             <option value="+506">Costa Rica (+506)</option>
-            <option value="+507">Panamá (+507)</option>
-            <option value="+1-809">República Dominicana (+1-809)</option>
+            <option value="+507">Panam&aacute; (+507)</option>
+            <option value="+1-809">Rep&uacute;blica Dominicana (+1-809)</option>
             <option value="+1-787">Puerto Rico (+1-787)</option>
             <option value="+1-876">Jamaica (+1-876)</option>
             <option value="+1-868">Trinidad y Tobago (+1-868)</option>
           </select>
         </div>
         <div>
-          <label for="phone">Teléfono</label>
+          <label for="phone">Tel&eacute;fono</label>
           <input class="input" id="phone" type="tel" placeholder="Ej. 3338112233" required>
         </div>
         <div>
@@ -448,14 +499,14 @@
           <h4>Resumen de solicitud</h4>
           <div id="reqTotals" class="totals">
             <span class="tot-chip" id="sumNombre">Nombre: —</span>
-            <span class="tot-chip" id="sumClavePais">Clave país: —</span>
-            <span class="tot-chip" id="sumTelefono">Teléfono: —</span>
+            <span class="tot-chip" id="sumClavePais">Clave pa&iacute;s: —</span>
+            <span class="tot-chip" id="sumTelefono">Tel&eacute;fono: —</span>
             <span class="tot-chip" id="sumTipoTrabajo">Tipo de trabajo: —</span>
             <span class="tot-chip" id="sumSuministro">Suministro: —</span>
-            <span class="tot-chip" id="sumCategoria">Categoría: —</span>
+            <span class="tot-chip" id="sumCategoria">Categor&iacute;a: —</span>
             <span class="tot-chip" id="sumMarca">Marca: —</span>
             <span class="tot-chip" id="sumFamilia">Familia: —</span>
-            <span class="tot-chip" id="sumDescripcion">Descripción: —</span>
+            <span class="tot-chip" id="sumDescripcion">Descripci&oacute;n: —</span>
             <span class="tot-chip" id="sumModelo">Modelo: —</span>
           </div>
         </div>
@@ -470,18 +521,18 @@
 
   <section class="exclusive" aria-labelledby="exclusiveTitle">
     <div class="container">
-      <h2 id="exclusiveTitle" class="section-title">Exclusividad en distribución</h2>
-      <p class="section-lead">Representaciones estratégicas para suministro especializado con validación técnica y soporte durante el ciclo del proyecto.</p>
+      <h2 id="exclusiveTitle" class="section-title">Exclusividad en distribuci&oacute;n</h2>
+      <p class="section-lead">Representaciones estrat&eacute;gicas para suministro especializado con validaci&oacute;n t&eacute;cnica y soporte durante el ciclo del proyecto.</p>
       <div class="exclusive-grid">
         <article class="exclusive-card">
-          <img src="assets/img/Exclusividad_distribucion_Triol.png" alt="Exclusividad en distribución de Variadores Triol" loading="lazy" decoding="async">
-          <span class="tag">Distribución exclusiva</span>
+          <img src="assets/img/Exclusividad_distribucion_Triol.png" alt="Exclusividad en distribuci&oacute;n de Variadores Triol" loading="lazy" decoding="async">
+          <span class="tag">Distribuci&oacute;n exclusiva</span>
           <h3>Variadores Triol</h3>
-          <p>Portafolio de variadores orientado a control de motores en aplicaciones industriales críticas.</p>
+          <p>Portafolio de variadores orientado a control de motores en aplicaciones industriales cr&iacute;ticas.</p>
           <ul class="exclusive-list">
-            <li>Aplicaciones en bombeo, ventilación y bandas transportadoras.</li>
-            <li>Soporte para selección técnica y parametrización inicial.</li>
-            <li>Integración con estrategia de continuidad operativa.</li>
+            <li>Aplicaciones en bombeo, ventilaci&oacute;n y bandas transportadoras.</li>
+            <li>Soporte para selecci&oacute;n t&eacute;cnica y parametrizaci&oacute;n inicial.</li>
+            <li>Integraci&oacute;n con estrategia de continuidad operativa.</li>
           </ul>
           <div class="exclusive-actions">
             <a class="btn btn--primary" href="contacto_cta.html?producto=variadores-triol#ctaForm">
@@ -495,15 +546,15 @@
           </div>
         </article>
         <article class="exclusive-card">
-          <img src="assets/img/Exclusividad_distribucion_KEI.png" alt="Exclusividad en distribución de Cable de Potencia KEI" loading="lazy" decoding="async">
-          <span class="tag">Distribución exclusiva</span>
-          <h3>Cable de Potencia KEI</h3>
-          <p>Soluciones de cableado de potencia para infraestructura eléctrica industrial y proyectos EPC, incluyendo ESP cables, EHV y FV.</p>
+          <img src="assets/img/Exclusividad_distribucion_KEI.png" alt="Exclusividad en distribuci&oacute;n de Cable de potencia KEI" loading="lazy" decoding="async">
+          <span class="tag">Distribuci&oacute;n exclusiva</span>
+          <h3>Cable de potencia KEI</h3>
+          <p>Soluciones de cableado de potencia para infraestructura el&eacute;ctrica industrial y proyectos EPC, incluyendo ESP cables, EHV y FV.</p>
           <ul class="exclusive-list">
-            <li>Suministro para media y baja tensión con trazabilidad documental.</li>
-            <li>Líneas especializadas: ESP cables, EHV y FV para aplicaciones específicas.</li>
-            <li>Al&iacute;neación con normativas y requisitos de ingeniería de proyecto.</li>
-            <li>Planeación logística para entregas parciales y en sitio.</li>
+            <li>Suministro para media y baja tensi&oacute;n con trazabilidad documental.</li>
+            <li>L&iacute;neas especializadas: ESP cables, EHV y FV para aplicaciones espec&iacute;ficas.</li>
+            <li>Al&iacute;neaci&oacute;n con normativas y requisitos de ingenier&iacute;a de proyecto.</li>
+            <li>Planeaci&oacute;n log&iacute;stica para entregas parciales y en sitio.</li>
           </ul>
           <div class="exclusive-actions">
             <a class="btn btn--primary" href="contacto_cta.html?producto=cable-potencia-kei#ctaForm">
@@ -527,114 +578,99 @@
       </div>
       <h2 id="faqTitle" class="section-title">Preguntas frecuentes</h2>
       <details>
-        <summary>¿Qué incluye el servicio de suministro técnico?</summary>
-        <p>Incluye selección técnica, equivalencias multimarcas, validación documental y seguimiento logístico hasta entrega en sitio.</p>
+        <summary>&iquest;Qu&eacute; incluye el servicio de suministro t&eacute;cnico?</summary>
+        <p>Incluye selecci&oacute;n t&eacute;cnica, equivalencias multimarcas, validaci&oacute;n documental y seguimiento log&iacute;stico hasta entrega en sitio.</p>
       </details>
       <details>
-        <summary>¿Pueden al&iacute;near suministro técnico con ingeniería y obra?</summary>
-        <p>Sí. Coordinamos suministro con cronograma de ingeniería, construcción y arranque para minimizar riesgos de integración.</p>
+        <summary>&iquest;Pueden al&iacute;near suministro t&eacute;cnico con ingenier&iacute;a y obra?</summary>
+        <p>S&iacute;. Coordinamos suministro con cronograma de ingenier&iacute;a, construcci&oacute;n y arranque para minimizar riesgos de integraci&oacute;n.</p>
       </details>
       <details>
-        <summary>¿Cómo aseguran trazabilidad en entregas?</summary>
-        <p>Gestionamos hitos de compra, embarque y recepción con control de estatus y evidencia para cada partida crítica.</p>
+        <summary>&iquest;C&oacute;mo aseguran trazabilidad en entregas?</summary>
+        <p>Gestionamos hitos de compra, embarque y recepci&oacute;n con control de estatus y evidencia para cada partida cr&iacute;tica.</p>
       </details>
     </div>
   </section>
 
   <section class="cta-final" aria-labelledby="ctaFinalTitle">
     <div class="container"><div class="box">
-      <h2 id="ctaFinalTitle">¿Necesitas una propuesta integral EPC + suministro técnico?</h2>
-      <p>Coordinamos ingeniería, suministro y ejecución para reducir riesgos de integración.</p>
-      <div class="hero__actions"><a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar propuesta técnica</a></div>
+      <h2 id="ctaFinalTitle">&iquest;Necesitas una propuesta integral EPC + suministro t&eacute;cnico?</h2>
+      <p>Coordinamos ingenier&iacute;a, suministro y ejecuci&oacute;n para reducir riesgos de integraci&oacute;n.</p>
+      <div class="hero__actions"><a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar propuesta t&eacute;cnica</a></div>
     </div></div>
   </section>
 </main>
 
-<footer id="footer" class="foot" aria-label="Pie de página corporativo">
-  <div class="container" style="padding:50px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
-    <!-- Identidad -->
+<footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
         <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
       </div>
-      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con las soluciones más versátiles y sustentables para nuestros clientes.</p>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
       <div style="display:flex;gap:14px;margin-top:14px">
-        <!-- Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
         </a>
-        <!-- Instagram -->
         <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
         </a>
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
         </a>
       </div>
     </div>
 
-    <!-- Contáctanos -->
     <div>
-      <h4 style="color:#fff;margin:0 0 10px">Contáctanos</h4>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li style="display:flex;align-items:center;gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a1 1 0 0 1 1 .75 12.07 12.07 0 0 0 .7 2.22 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l1.94-1.38a1 1 0 0 1 1-.12 12.07 12.07 0 0 0 2.22.7 1 1 0 0 1 .75 1z"/></svg>
-          <span><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</span>
-        </li>
-        <li style="display:flex;align-items:center;gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a1 1 0 0 1 1 .75 12.07 12.07 0 0 0 .7 2.22 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l1.94-1.38a1 1 0 0 1 1-.12 12.07 12.07 0 0 0 2.22.7 1 1 0 0 1 .75 1z"/></svg>
-          <span><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</span>
-        </li>
-        <li style="display:flex;align-items:center;gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.511l-8 5.333-8-5.333V6h16zm0 12H4V8.156l8 5.333 8-5.333V18z"/></svg>
-          <strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong>
-        </li>
+        <li><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
       </ul>
     </div>
-    <!-- Nosotros -->
+
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="aviso-privacidad.html" target="_blank" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-        <li><a href="codigo-conducta.html" style="color:#cbd5e1;text-decoration:none">Código de Ética y Conducta</a></li>
-        <li><a href="politica-interna_antilavado.html" style="color:#cbd5e1;text-decoration:none">Política Interna Antilavado</a></li>
-        <li><a href="politica-antisoborno.html" style="color:#cbd5e1;text-decoration:none">Política Antisoborno</a></li>
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buzón de sugerencias</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-        <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-        
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
     </div>
-    <!-- Navegación -->
+
     <div>
-      <h4 style="color:#fff;margin:0 0 10px">Navegación</h4>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
         <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-        <li><a href="index.html#nosotros" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-        <li><a href="index.html#soluciones" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="index.html#procura" style="color:#cbd5e1;text-decoration:none">Suministro técnico</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
         <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
       </ul>
     </div>
-    <!-- Servicios EPC -->
+
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromecánicas</a></li>
-        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatización y Control</a></li>
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
         <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-          <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ\u00e9tica</a></li>
-        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminación Industrial</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>
     </div>
   </div>
 </footer>
 <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
-  Desarrollado por el equipo digital de VMS Energy · v10.1
+  Desarrollado por el equipo digital de VMS Energy &middot; v10.1
 </div>
 
 <script>
@@ -658,7 +694,7 @@
           'Solar': {'FV': ['4 mm2', '6 mm2', '10 mm2', '16 mm2', '25 mm2', '35 mm2', '50 mm2']},
           'HV': {'XLPE': ['35 kV N2XSY', '66 kV', '132 kV']},
           'EHV': {'XLPE': ['220 kV', '400 kV']},
-          'ESP': {'Submersible': ['Type Q', 'XtremeTemp 400°F Lead', 'Xtreme 450°F', 'X-Treme 450°F Polyimide', 'X-Treme CT', 'X-Treme Monel 450°F', 'REDA Type 205', 'REDA MaxTemp 450°F', 'REDA MaxTemp CT', 'ESP FluoroShield 400°F', 'ESP FluoroShield', 'HT-EPDM 300°F', 'ESP-180', 'ESP 205F', 'HighTemp 400°F', 'DuraTemp 450°F', 'UltraTemp Monel', 'ELG', 'KEFLG', 'KEFLG-CT', 'KEFLM', 'PEG']}
+          'ESP': {'Submersible': ['Type Q', 'XtremeTemp 400&deg;F Lead', 'Xtreme 450&deg;F', 'X-Treme 450&deg;F Polyimide', 'X-Treme CT', 'X-Treme Monel 450&deg;F', 'REDA Type 205', 'REDA MaxTemp 450&deg;F', 'REDA MaxTemp CT', 'ESP FluoroShield 400&deg;F', 'ESP FluoroShield', 'HT-EPDM 300&deg;F', 'ESP-180', 'ESP 205F', 'HighTemp 400&deg;F', 'DuraTemp 450&deg;F', 'UltraTemp Monel', 'ELG', 'KEFLG', 'KEFLG-CT', 'KEFLM', 'PEG']}
         }
       }
     },
@@ -845,7 +881,7 @@
       'Descripcion: ' + encodeURIComponent(payload.descripcion) + '%0D%0A' +
       'Modelo: ' + encodeURIComponent(payload.modelo) + '%0D%0A' +
       'Correo: ' + encodeURIComponent(payload.correo);
-    var subject = encodeURIComponent('Lead web - Suministro técnico VMS Energy');
+    var subject = encodeURIComponent('Lead web - Suministro t&eacute;cnico VMS Energy');
     window.location.href = 'mailto:contacto@vmsenergy.com?subject=' + subject + '&body=' + body;
     feedback.textContent='Se abrio tu cliente de correo para finalizar el envio.';
   });
@@ -923,9 +959,9 @@
     <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
     <form class="quicklead-form" id="quickLeadForm" novalidate>
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
-      <input type="email" id="qlEmail" name="email" placeholder="Correo electrónico" autocomplete="email" required>
+      <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
       <select id="qlDialCode" name="lada" required>
-<option value="+52" selected>México (+52)</option>
+<option value="+52" selected>M&eacute;xico (+52)</option>
 <option value="+1">Estados Unidos (+1)</option>
 <option value="+501">Belice (+501)</option>
 <option value="+502">Guatemala (+502)</option>
@@ -933,21 +969,21 @@
 <option value="+504">Honduras (+504)</option>
 <option value="+505">Nicaragua (+505)</option>
 <option value="+506">Costa Rica (+506)</option>
-<option value="+507">Panamá (+507)</option>
+<option value="+507">Panam&aacute; (+507)</option>
 <option value="+1-809">Rep. Dominicana (+1-809)</option>
 <option value="+1-787">Puerto Rico (+1-787)</option>
 <option value="+1-876">Jamaica (+1-876)</option>
 <option value="+1-868">Trinidad y Tobago (+1-868)</option></select>
-      <input type="tel" id="qlPhone" name="telefono" placeholder="Número telefónico" autocomplete="tel" required>
+      <input type="tel" id="qlPhone" name="telefono" placeholder="N&uacute;mero telef&oacute;nico" autocomplete="tel" required>
       <select id="qlState" name="estado" required>
         <option value="">Selecciona tu estado</option>
-        <option value="Aguascalientes">Aguascalientes</option><option value="Baja California">Baja California</option><option value="Baja California Sur">Baja California Sur</option><option value="Campeche">Campeche</option><option value="Chiapas">Chiapas</option><option value="Chihuahua">Chihuahua</option><option value="CDMX">CDMX</option><option value="Coahuila">Coahuila</option><option value="Colima">Colima</option><option value="Durango">Durango</option><option value="Estado de México">Estado de México</option><option value="Guanajuato">Guanajuato</option><option value="Guerrero">Guerrero</option><option value="Hidalgo">Hidalgo</option><option value="Jalisco">Jalisco</option><option value="Michoacán">Michoacán</option><option value="Morelos">Morelos</option><option value="Nayarit">Nayarit</option><option value="Nuevo León">Nuevo León</option><option value="Oaxaca">Oaxaca</option><option value="Puebla">Puebla</option><option value="Querétaro">Querétaro</option><option value="Quintana Roo">Quintana Roo</option><option value="San Luis Potosí">San Luis Potosí</option><option value="Sinaloa">Sinaloa</option><option value="Sonora">Sonora</option><option value="Tabasco">Tabasco</option><option value="Tamaulipas">Tamaulipas</option><option value="Tlaxcala">Tlaxcala</option><option value="Veracruz">Veracruz</option><option value="Yucatán">Yucatán</option><option value="Zacatecas">Zacatecas</option>
+        <option value="Aguascalientes">Aguascalientes</option><option value="Baja California">Baja California</option><option value="Baja California Sur">Baja California Sur</option><option value="Campeche">Campeche</option><option value="Chiapas">Chiapas</option><option value="Chihuahua">Chihuahua</option><option value="CDMX">CDMX</option><option value="Coahuila">Coahuila</option><option value="Colima">Colima</option><option value="Durango">Durango</option><option value="Estado de M&eacute;xico">Estado de M&eacute;xico</option><option value="Guanajuato">Guanajuato</option><option value="Guerrero">Guerrero</option><option value="Hidalgo">Hidalgo</option><option value="Jalisco">Jalisco</option><option value="Michoac&aacute;n">Michoac&aacute;n</option><option value="Morelos">Morelos</option><option value="Nayarit">Nayarit</option><option value="Nuevo Le&oacute;n">Nuevo Le&oacute;n</option><option value="Oaxaca">Oaxaca</option><option value="Puebla">Puebla</option><option value="Quer&eacute;taro">Quer&eacute;taro</option><option value="Quintana Roo">Quintana Roo</option><option value="San Luis Potos&iacute;">San Luis Potos&iacute;</option><option value="Sinaloa">Sinaloa</option><option value="Sonora">Sonora</option><option value="Tabasco">Tabasco</option><option value="Tamaulipas">Tamaulipas</option><option value="Tlaxcala">Tlaxcala</option><option value="Veracruz">Veracruz</option><option value="Yucat&aacute;n">Yucat&aacute;n</option><option value="Zacatecas">Zacatecas</option>
       </select>
       <textarea id="qlMessage" name="mensaje" placeholder="Mensaje"></textarea>
       <div>
-        <label for="qlFiles">Adjuntar archivos (Excel, imágenes, PDF)</label>
+        <label for="qlFiles">Adjuntar archivos (Excel, im&aacute;genes, PDF)</label>
         <input type="file" id="qlFiles" name="archivos" accept=".xlsx,.xls,.csv,.pdf,.png,.jpg,.jpeg,.webp" multiple>
-        <p class="quicklead-form__hint">Nota: se abrirá tu correo para enviar la solicitud; los archivos se adjuntan manualmente.</p>
+        <p class="quicklead-form__hint">Nota: se abrir&aacute; tu correo para enviar la solicitud; los archivos se adjuntan manualmente.</p>
       </div>
       <p class="quicklead-form__feedback" id="quickLeadFeedback" aria-live="polite"></p>
       <button class="quicklead-form__send" type="submit">Enviar</button>
@@ -977,7 +1013,7 @@
     var state=(document.getElementById('qlState').value||'').trim();
     var message=(document.getElementById('qlMessage').value||'').trim();
     var filesInput=document.getElementById('qlFiles');
-    if(!name||!email||!dialCode||!phone||!state){ feedback.textContent='Completa nombre, correo, lada, teléfono y estado.'; return; }
+    if(!name||!email||!dialCode||!phone||!state){ feedback.textContent='Completa nombre, correo, lada, tel&eacute;fono y estado.'; return; }
     var fileNames=[];
     if(filesInput&&filesInput.files&&filesInput.files.length){ for(var i=0;i<filesInput.files.length;i+=1){ fileNames.push(filesInput.files[i].name); } }
     var bodyLines=['Nombre: '+name,'Correo: '+email,'Telefono: '+phoneFull,'Estado: '+state,'Mensaje: '+(message||'Sin mensaje'),'Archivos seleccionados: '+(fileNames.length?fileNames.join(', '):'Sin archivos')];
@@ -988,7 +1024,7 @@
   });
 })();
 </script>
-<div class="sticky-actions" aria-label="Acciones rápidas">
+<div class="sticky-actions" aria-label="Acciones r&aacute;pidas">
   <a class="sticky-actions__btn sticky-actions__btn--left" href="https://wa.me/523332582234" target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">
     <svg class="sticky-actions__icon" viewBox="0 0 32 32" aria-hidden="true">
       <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
@@ -1006,7 +1042,7 @@
     <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
       <path fill="#fff" d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.75-.75a.75.75 0 0 0-.75.75v.2l8 4.8 8-4.8v-.2a.75.75 0 0 0-.75-.75H4.75zm15.25 3.28-7.48 4.49a1 1 0 0 1-1.04 0L4 9.28v7.97c0 .41.34.75.75.75h14.5c.41 0 .75-.34.75-.75V9.28z"/>
     </svg>
-    Formulario básico
+    Formulario b&aacute;sico
   </a>
 </div>
 <script id="global-nav-runtime">
@@ -1182,19 +1218,19 @@
 
   function categoriaDetallada(link){
     var p = (location.pathname.split('/').pop() || '').toLowerCase();
-    if(p.indexOf('procura') > -1) return 'Suministro técnico';
-    if(p.indexOf('especialidad_capacitacion') > -1) return 'Especialidad - Capacitación';
-    if(p.indexOf('especialidad_ingenieria') > -1) return 'Especialidad - Ingeniería';
+    if(p.indexOf('procura') > -1) return 'Suministro t&eacute;cnico';
+    if(p.indexOf('especialidad_capacitacion') > -1) return 'Especialidad - Capacitaci&oacute;n';
+    if(p.indexOf('especialidad_ingenieria') > -1) return 'Especialidad - Ingenier&iacute;a';
     if(p.indexOf('especialidad_servicios') > -1) return 'Especialidad - Servicios';
     if(p.indexOf('especialidad_mantenimiento') > -1) return 'Especialidad - Mantenimiento';
 
-    if(p.indexOf('soluciones_automatizacion_control') > -1) return 'Servicio EPC - Automatización y Control';
-    if(p.indexOf('soluciones_electromecanicas') > -1) return 'Servicio EPC - Soluciones Electromecánicas';
-    if(p.indexOf('soluciones_iluminacion_industrial') > -1) return 'Servicio EPC - Iluminación Industrial';
-    if(p.indexOf('soluciones_infraestructura_energetica') > -1) return 'Servicio EPC - Infraestructura Energética';
+    if(p.indexOf('soluciones_automatizacion_control') > -1) return 'Servicio EPC - Automatizaci&oacute;n y Control';
+    if(p.indexOf('soluciones_electromecanicas') > -1) return 'Servicio EPC - Soluciones Electromec&aacute;nicas';
+    if(p.indexOf('soluciones_iluminacion_industrial') > -1) return 'Servicio EPC - Iluminaci&oacute;n Industrial';
+    if(p.indexOf('soluciones_infraestructura_energetica') > -1) return 'Servicio EPC - Infraestructura Energ&eacute;tica';
     if(p.indexOf('soluciones_oil_gas') > -1) return 'Servicio EPC - Oil & Gas';
-    if(p.indexOf('soluciones_solar_industrial') > -1) return 'Servicio EPC - Energía Solar Industrial';
-    if(p.indexOf('soluciones_verde_no_solar') > -1) return 'Servicio EPC - Generación Verde No Solar';
+    if(p.indexOf('soluciones_solar_industrial') > -1) return 'Servicio EPC - Energ&iacute;a Solar Industrial';
+    if(p.indexOf('soluciones_verde_no_solar') > -1) return 'Servicio EPC - Generaci&oacute;n Verde No Solar';
 
     var servicioRef = (inferServicioCatalogo(link) || inferServicio(link)).toLowerCase();
     var servicioRefNorm = servicioRef.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -1204,21 +1240,21 @@
       var tabText = clean(tab ? tab.textContent : '');
       if(tabText && tabText.toLowerCase() !== 'todos') return 'Especialidad - ' + tabText;
 
-      if(/capacit|formacion|entrenamiento|transferencia/.test(servicioRefNorm)) return 'Especialidad - Capacitación';
+      if(/capacit|formacion|entrenamiento|transferencia/.test(servicioRefNorm)) return 'Especialidad - Capacitaci&oacute;n';
       if(/mantenim|preventivo|correctivo/.test(servicioRefNorm)) return 'Especialidad - Mantenimiento';
-      if(/ingenier|conceptual|detalle|ifc|levantamiento|diagnostico/.test(servicioRefNorm)) return 'Especialidad - Ingeniería';
+      if(/ingenier|conceptual|detalle|ifc|levantamiento|diagnostico/.test(servicioRefNorm)) return 'Especialidad - Ingenier&iacute;a';
       if(/supervisi|pruebas|puesta en marcha|fat|sat/.test(servicioRefNorm)) return 'Especialidad - Servicios';
       return 'Especialidad';
     }
 
     if(p.indexOf('soluciones') > -1 || p.indexOf('index') > -1 || p.indexOf('nosotros') > -1){
-      if(/automatiz|control/.test(servicioRefNorm)) return 'Servicio EPC - Automatización y Control';
-      if(/electromecan/.test(servicioRefNorm)) return 'Servicio EPC - Soluciones Electromecánicas';
-      if(/iluminacion/.test(servicioRefNorm)) return 'Servicio EPC - Iluminación Industrial';
-      if(/infraestructura energetica/.test(servicioRefNorm)) return 'Servicio EPC - Infraestructura Energética';
+      if(/automatiz|control/.test(servicioRefNorm)) return 'Servicio EPC - Automatizaci&oacute;n y Control';
+      if(/electromecan/.test(servicioRefNorm)) return 'Servicio EPC - Soluciones Electromec&aacute;nicas';
+      if(/iluminacion/.test(servicioRefNorm)) return 'Servicio EPC - Iluminaci&oacute;n Industrial';
+      if(/infraestructura energetica/.test(servicioRefNorm)) return 'Servicio EPC - Infraestructura Energ&eacute;tica';
       if(/oil|gas/.test(servicioRefNorm)) return 'Servicio EPC - Oil & Gas';
-      if(/solar/.test(servicioRefNorm)) return 'Servicio EPC - Energía Solar Industrial';
-      if(/verde no solar|biogas|biomasa|hidroelect/.test(servicioRefNorm)) return 'Servicio EPC - Generación Verde No Solar';
+      if(/solar/.test(servicioRefNorm)) return 'Servicio EPC - Energ&iacute;a Solar Industrial';
+      if(/verde no solar|biogas|biomasa|hidroelect/.test(servicioRefNorm)) return 'Servicio EPC - Generaci&oacute;n Verde No Solar';
       return 'Servicio EPC';
     }
 
@@ -1249,8 +1285,59 @@
   });
 })();
 </script>
-</body>
+<script id="nav-submenu-script-vms">
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var list = document.getElementById('menuList');
+  if(toggle && list){
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      var open = list.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  var nav = document.querySelector('header nav');
+  if(!nav) return;
+  var media = window.matchMedia('(max-width: 760px)');
+  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+  function syncSubmenus(){
+    var mobile = media.matches;
+    parents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
+      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
+      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+    });
+  }
+  parents.forEach(function(parent){
+    var trigger = parent.querySelector(':scope > a');
+    var submenu = parent.querySelector(':scope > .submenu');
+    if(!trigger || !submenu) return;
+    trigger.addEventListener('click', function(e){
+      if(!media.matches) return;
+      e.preventDefault();
+      var open = parent.classList.toggle('is-open');
+      submenu.style.display = open ? 'block' : 'none';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  syncSubmenus();
+  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
+  else if(media.addListener) media.addListener(syncSubmenus);
+})();
+</script></body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

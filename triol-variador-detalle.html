@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -67,20 +67,104 @@
     @media (max-width:920px){.hero__box,.layout,.foot__grid,.stats{grid-template-columns:1fr 1fr}.hero__box{grid-template-columns:1fr}.hero__media{height:clamp(280px,46vh,420px);order:-1}}
     @media (max-width:760px){.hero__box,.layout,.stats,.spec-grid,.foot__grid{grid-template-columns:1fr}.top__bar{align-items:flex-start}.top__actions{justify-content:flex-start}.hero__media{height:clamp(220px,38vh,320px)}}
   </style>
-</head>
+<style id="nav-submenu-styles-vms">
+  nav{position:relative}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+  .nav-item--has-submenu{position:relative}
+  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+  .nav-item--has-submenu:hover .submenu,
+  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+  @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
+  @media (max-width:760px){
+    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
+    nav ul.is-open{display:grid;gap:10px}
+    .menu-toggle{display:inline-flex}
+    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
+    .nav-item--has-submenu.is-open .submenu{display:block}
+  }
+</style></head>
 <body>
-  <header class="top">
-    <div class="container top__bar">
-      <a class="top__logo" href="VMShop.html" aria-label="Ir a VMShop">
-        <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="lazy" decoding="async" />
-      </a>
-      <div class="top__actions">
-        <a class="top__link" href="lp-triol-variadores.html">Catálogo Triol</a>
-        <a class="top__link" href="procura.html">Suministro técnico</a>
-        <a class="top__link" data-preserve-query href="contacto_cta.html?producto=vmshop#ctaForm">Comprar</a>
+  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
       </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi�n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi�n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+
+
+
+
+
+
+
+
 
   <main>
     <div class="container crumbs">
@@ -96,7 +180,7 @@
             <p id="heroLead" class="hero__lead">Ficha de referencia comercial para validar familia, precio y datos de suministro del variador seleccionado.</p>
             <div class="hero__actions">
               <a id="heroBuy" class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=triol-vfd#ctaForm">Comprar</a>
-              <a class="btn btn--secondary" href="lp-triol-variadores.html#catalogo">Volver al catálogo</a>
+              <a class="btn btn--secondary" href="lp-triol-variadores.html#catalogo">Volver al cat&aacute;logo</a>
             </div>
           </div>
           <div class="hero__media">
@@ -108,7 +192,7 @@
 
     <section class="section">
       <div class="container stats">
-        <article class="stat"><span class="stat__label">Código</span><span id="statCode" class="stat__value">EQU</span></article>
+        <article class="stat"><span class="stat__label">C&oacute;digo</span><span id="statCode" class="stat__value">EQU</span></article>
         <article class="stat"><span class="stat__label">Familia</span><span id="statFamily" class="stat__value">UC</span></article>
         <article class="stat"><span class="stat__label">Disponibilidad</span><span id="statQty" class="stat__value">1 pieza</span></article>
         <article class="stat"><span class="stat__label">Precio con IVA</span><span id="statPrice" class="stat__value">USD 0.00</span></article>
@@ -118,9 +202,9 @@
     <section class="section">
       <div class="container layout">
         <div class="panel">
-          <span id="inlineFamilyBadge" class="family-badge">Categoría UC</span>
+          <span id="inlineFamilyBadge" class="family-badge">Categor&iacute;a UC</span>
           <h2 id="overviewTitle">Resumen del equipo</h2>
-          <p id="overviewText">Este variador pertenece a la serie Triol AT24 y se presenta como una opción de referencia para integración en procesos industriales con demanda de control de velocidad, continuidad y soporte de ingeniería.</p>
+          <p id="overviewText">Este variador pertenece a la serie Triol AT24 y se presenta como una opci&oacute;n de referencia para integraci&oacute;n en procesos industriales con demanda de control de velocidad, continuidad y soporte de ingenier&iacute;a.</p>
           <div class="spec-grid">
             <div class="spec"><b>Modelo</b><span id="specModel">AT24-11K-4-UC01</span></div>
             <div class="spec"><b>Segmento de potencia</b><span id="specPower">11K</span></div>
@@ -131,7 +215,7 @@
         <div class="side-stack">
           <aside class="panel purchase">
             <h2>Comprar este variador</h2>
-            <p>Usa el flujo de compra actual para reservar el equipo y continuar con validación comercial o técnica según tu proyecto.</p>
+            <p>Usa el flujo de compra actual para reservar el equipo y continuar con validaci&oacute;n comercial o t&eacute;cnica seg&uacute;n tu proyecto.</p>
             <div class="hero__actions">
               <a id="sideBuy" class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=triol-vfd#ctaForm">Comprar</a>
               <a class="btn btn--secondary" href="lp-triol-variadores.html#catalogo">Seguir comparando</a>
@@ -142,7 +226,7 @@
             <ul id="applicationsList" class="bullet-list">
               <li>Bombas, ventilacion y control de velocidad en planta.</li>
               <li>Retrofits y expansiones con criterios de continuidad operativa.</li>
-              <li>Integraciones donde se requiere respaldo comercial y técnico.</li>
+              <li>Integraciones donde se requiere respaldo comercial y t&eacute;cnico.</li>
             </ul>
           </aside>
         </div>
@@ -152,11 +236,11 @@
     <section class="section">
       <div class="container layout">
         <div class="panel">
-          <h2>Información comercial clave</h2>
+          <h2>Informaci&oacute;n comercial clave</h2>
           <ul id="commercialList" class="spec-list">
             <li>Precio expresado en USD con IVA del 16% incluido.</li>
             <li>La cantidad visible corresponde a la referencia comercial cargada en el catalogo.</li>
-            <li>La compra puede complementarse con ingeniería de integración, parametrización y arranque.</li>
+            <li>La compra puede complementarse con ingenier&iacute;a de integraci&oacute;n, parametrizaci&oacute;n y arranque.</li>
           </ul>
         </div>
         <div class="panel">
@@ -171,56 +255,74 @@
     </section>
   </main>
 
-  <footer class="foot" aria-label="Pie de pagina corporativo VMS">
-    <div class="container foot__grid">
-      <div>
-        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy" loading="lazy" decoding="async" width="140" height="48" style="display:block;object-fit:contain;margin-bottom:10px" />
-        <p>Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con soluciones versátiles y sustentables.</p>
-        <div class="foot__social">
-          <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
       </div>
-      <div>
-        <h4>Contáctanos</h4>
-        <ul class="foot__list">
-          <li><a href="tel:+523338130739">+52 33 3813 0739 Guadalajara</a></li>
-          <li><a href="tel:+529383814824">+52 938 381 4824 Cd. del Carmen</a></li>
-          <li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Nosotros</h4>
-        <ul class="foot__list">
-          <li><a href="aviso-privacidad.html" target="_blank">Aviso de Privacidad</a></li>
-          <li><a href="codigo-conducta.html">Código de Ética y Conducta</a></li>
-          <li><a href="politica-interna_antilavado.html">Politica Interna Antilavado</a></li>
-          <li><a href="politica-antisoborno.html">Politica Antisoborno</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Navegación</h4>
-        <ul class="foot__list">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="index.html#soluciones">Soluciones</a></li>
-          <li><a href="index.html#procura">Suministro técnico</a></li>
-          <li><a href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Landings VMShop</h4>
-        <ul class="foot__list">
-          <li><a href="VMShop.html">Inicio VMShop</a></li>
-          <li><a href="lp-triol-variadores.html">Triol Variadores</a></li>
-          <li><a href="lp-kei-cable-potencia.html">Cable KEI</a></li>
-          <li><a href="lp-esp-cables.html">ESP Cables</a></li>
-          <li><a href="lp-cables-ehv.html">Cables EHV</a></li>
-        </ul>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+        </a>
       </div>
     </div>
-  </footer>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
+        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
   <script>
   (function(){
@@ -261,9 +363,9 @@
     function familyTheme(family){
       var map = {
         UC: {
-          badge: 'Categoría UC',
-          lead: 'Variador recomendado para proyectos de integración, retrofits y mejoras de eficiencia con tiempos de implementación controlados.',
-          overview: 'Equipo de la familia UC orientado a balancear costo, disponibilidad y desempeño operativo en integraciones industriales.',
+          badge: 'Categor&iacute;a UC',
+          lead: 'Variador recomendado para proyectos de integraci&oacute;n, retrofits y mejoras de eficiencia con tiempos de implementaci&oacute;n controlados.',
+          overview: 'Equipo de la familia UC orientado a balancear costo, disponibilidad y desempe&ntilde;o operativo en integraciones industriales.',
           applications: [
             'Retrofits de bombas, ventiladores y equipos auxiliares.',
             'Expansiones de planta donde importa acelerar puesta en marcha.',
@@ -271,7 +373,7 @@
           ]
         },
         UH: {
-          badge: 'Categoría UH',
+          badge: 'Categor&iacute;a UH',
           lead: 'Variador enfocado a cargas exigentes y continuidad operativa en entornos de mayor esfuerzo y robustez requerida.',
           overview: 'Equipo de la familia UH pensado para trabajo severo, estabilidad de carga y soporte a procesos criticos.',
           applications: [
@@ -281,23 +383,23 @@
           ]
         },
         SD: {
-          badge: 'Categoría SD',
+          badge: 'Categor&iacute;a SD',
           lead: 'Variador orientado a potencias elevadas y escenarios donde la estabilidad del proceso es prioritaria.',
           overview: 'Equipo de la familia SD para motores de mayor demanda y arquitectura de crecimiento futuro en potencia.',
           applications: [
             'Motores de alto torque y demanda energetica elevada.',
-            'Escenarios con variación de carga y necesidad de control estable.',
+            'Escenarios con variaci&oacute;n de carga y necesidad de control estable.',
             'Aplicaciones industriales que requieren base para escalar capacidad.'
           ]
         },
         ALL: {
           badge: 'Serie AT24',
           lead: 'Ficha de referencia comercial para validar familia, precio y datos de suministro del variador seleccionado.',
-          overview: 'Variador de la serie Triol AT24 con enfoque en control de velocidad, integración industrial y soporte comercial.',
+          overview: 'Variador de la serie Triol AT24 con enfoque en control de velocidad, integraci&oacute;n industrial y soporte comercial.',
           applications: [
             'Bombas, ventilacion y control de velocidad en planta.',
             'Retrofits y expansiones con criterios de continuidad operativa.',
-            'Integraciones donde se requiere respaldo comercial y técnico.'
+            'Integraciones donde se requiere respaldo comercial y t&eacute;cnico.'
           ]
         }
       };
@@ -368,21 +470,70 @@
 
     document.getElementById('commercialList').innerHTML = [
       'Precio expresado en USD con IVA del 16% incluido para el modelo ' + model + '.',
-      'Código comercial de referencia: ' + code + '.',
-      'La cantidad visible en catálogo para esta referencia es de ' + qty + ' pieza(s).'
+      'C&oacute;digo comercial de referencia: ' + code + '.',
+      'La cantidad visible en cat&aacute;logo para esta referencia es de ' + qty + ' pieza(s).'
     ].map(function(item){ return '<li>' + item + '</li>'; }).join('');
 
     document.getElementById('validationList').innerHTML = [
       'Compatibilidad de la familia ' + family + ' con la carga y la severidad del proceso.',
       'Condiciones de alimentacion, tablero y arquitectura de control del proyecto.',
-      'Necesidad de ingeniería de integración, arranque o soporte en sitio.'
+      'Necesidad de ingenier&iacute;a de integraci&oacute;n, arranque o soporte en sitio.'
     ].map(function(item){ return '<li>' + item + '</li>'; }).join('');
 
     preserveQueryLinks();
   })();
   </script>
-</body>
+<script id="nav-submenu-script-vms">
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var list = document.getElementById('menuList');
+  if(toggle && list){
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      var open = list.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  var nav = document.querySelector('header nav');
+  if(!nav) return;
+  var media = window.matchMedia('(max-width: 760px)');
+  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+  function syncSubmenus(){
+    var mobile = media.matches;
+    parents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
+      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
+      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+    });
+  }
+  parents.forEach(function(parent){
+    var trigger = parent.querySelector(':scope > a');
+    var submenu = parent.querySelector(':scope > .submenu');
+    if(!trigger || !submenu) return;
+    trigger.addEventListener('click', function(e){
+      if(!media.matches) return;
+      e.preventDefault();
+      var open = parent.classList.toggle('is-open');
+      submenu.style.display = open ? 'block' : 'none';
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  syncSubmenus();
+  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
+  else if(media.addListener) media.addListener(syncSubmenus);
+})();
+</script></body>
 </html>
+
+
+
+
+
+
+
 
 
 
