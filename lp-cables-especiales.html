@@ -483,16 +483,86 @@
       font-weight:700;
       box-shadow:0 12px 30px rgba(8,24,44,.35);
     }
-        .foot{background:#0b1428;color:#cbd5e1}
-    .foot__grid{display:grid;grid-template-columns:1.2fr repeat(4,minmax(160px,1fr));gap:20px;padding:30px 0}
-    .foot h4{margin:0 0 10px;color:#fff;font-size:1rem}
-    .foot p{margin:0;color:#cbd5e1;line-height:1.5;font-size:14px}
-    .foot__list{margin:0;padding:0;list-style:none;display:grid;gap:6px}
-    .foot__list a{color:#cbd5e1;text-decoration:none;font-size:14px;line-height:1.5}
-    .foot__list a:hover{color:#fff}
-    .foot__social{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-    .foot__social a{color:#cbd5e1;text-decoration:none;font-size:13px;border:1px solid rgba(255,255,255,.18);padding:.22rem .5rem;border-radius:999px}
-    .foot__social a:hover{color:#fff;border-color:rgba(255,255,255,.36)}
+        .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    #footer h4{
+      margin:0 0 10px !important;
+      font-size:1rem;
+      line-height:1.2;
+    }
+    #footer ul{
+      margin:0 !important;
+      padding:0 !important;
+      list-style:none;
+      font-size:14px;
+      line-height:1.7;
+    }
+    #footer li{
+      margin:0 0 4px;
+    }
+    #footer a{word-break:break-word}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:#0F4C81;
+    }
+    @media (max-width:1300px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    }
+    @media (max-width:980px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    }
+    @media (max-width:700px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+      #footer ul{
+        line-height:1.6;
+      }
+    }n
 
     @media (max-width:960px){
       .hero__inner{grid-template-columns:1fr}
@@ -523,7 +593,8 @@
       .sticky-cta{display:block}
       .tech{padding-bottom:104px}
     }
-  </style>
+      .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
@@ -547,9 +618,47 @@
     .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
     .nav-item--has-submenu.is-open .submenu{display:block}
   }
-</style></head>
+    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style><style id="vmshop-header-styles">
+  .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+  .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px}
+  header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(23,44,81,.14);backdrop-filter:saturate(180%) blur(8px)}
+  header .container{max-width:1200px}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+  .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
+  nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+  nav a{color:#172C51;text-decoration:none;font-weight:700}
+  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+  .nav-item--has-submenu{position:relative}
+  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+  @media (max-width:760px){
+    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
+    nav ul.is-open{display:grid;gap:10px}
+    .menu-toggle{display:inline-flex}
+    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
+    .nav-item--has-submenu.is-open .submenu{display:block}
+  }
+    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style>
+</head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="announcement">
+    <div class="container">
+      <span>Env&iacute;o coordinado para proyectos industriales</span>
+      <span>|</span>
+      <span>Asesor&iacute;a t&eacute;cnica previa a compra</span>
+      <span>|</span>
+      <span>VMShop by VMS Energy</span>
+    </div>
+  </div>
+<header aria-label="Barra de navegaci&oacute;n">
     <div class="container topbar">
       <div class="brand">
         <div class="brand__logo">
@@ -588,6 +697,7 @@
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -1205,11 +1315,18 @@
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
       </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
     </div>
+
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
@@ -1249,13 +1366,118 @@
       </ul>
     </div>
   </div>
-</footer>
+    <div class="foot-note">Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy</div>
+
 
   <div class="sticky-cta">
     <a data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar propuesta de Cables ESP</a>
   </div>
 
   <script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var list = document.getElementById('menuList');
+    if(toggle && list){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        var open = list.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var nav = document.querySelector('header nav');
+    if(nav){
+      var media = window.matchMedia('(max-width: 680px)');
+      var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+      function syncSubmenus(){
+        var mobile = media.matches;
+        parents.forEach(function(parent){
+          var trigger = parent.querySelector(':scope > a');
+          var submenu = parent.querySelector(':scope > .submenu');
+          if(!trigger || !submenu) return;
+          if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
+          else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
+          trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+        });
+      }
+      parents.forEach(function(parent){
+        var trigger = parent.querySelector(':scope > a');
+        var submenu = parent.querySelector(':scope > .submenu');
+        if(!trigger || !submenu) return;
+        trigger.addEventListener('click', function(e){
+          if(!media.matches) return;
+          e.preventDefault();
+          var open = parent.classList.toggle('is-open');
+          submenu.style.display = open ? 'block' : 'none';
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+      syncSubmenus();
+      if(media.addEventListener) media.addEventListener('change', syncSubmenus);
+      else if(media.addListener) media.addListener(syncSubmenus);
+    }
+
+    var carousel = document.getElementById('heroCarousel');
+    if(carousel){
+      var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-slide]'));
+      var dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-carousel-dot]'));
+      var prevBtn = carousel.querySelector('[data-carousel-prev]');
+      var nextBtn = carousel.querySelector('[data-carousel-next]');
+      var index = 0;
+      var timer = null;
+
+      function render(nextIndex){
+        index = (nextIndex + slides.length) % slides.length;
+        slides.forEach(function(slide, i){ slide.classList.toggle('is-active', i === index); });
+        dots.forEach(function(dot, i){
+          var active = i === index;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+      }
+      function startAutoplay(){
+        stopAutoplay();
+        timer = window.setInterval(function(){ render(index + 1); }, 5200);
+      }
+      function stopAutoplay(){
+        if(timer){ window.clearInterval(timer); timer = null; }
+      }
+
+      if(prevBtn){ prevBtn.addEventListener('click', function(){ render(index - 1); startAutoplay(); }); }
+      if(nextBtn){ nextBtn.addEventListener('click', function(){ render(index + 1); startAutoplay(); }); }
+      dots.forEach(function(dot){
+        dot.addEventListener('click', function(){
+          var dotIndex = Number(dot.getAttribute('data-carousel-dot'));
+          if(Number.isNaN(dotIndex)) return;
+          render(dotIndex);
+          startAutoplay();
+        });
+      });
+      carousel.addEventListener('mouseenter', stopAutoplay);
+      carousel.addEventListener('mouseleave', startAutoplay);
+      carousel.addEventListener('focusin', stopAutoplay);
+      carousel.addEventListener('focusout', startAutoplay);
+      render(0);
+      startAutoplay();
+    }
+  })();
+  
+    var featuredTrack = document.getElementById('featuredTrack');
+    if(featuredTrack){
+      var featuredPrev = document.querySelector('[data-featured-prev]');
+      var featuredNext = document.querySelector('[data-featured-next]');
+      var getFeaturedStep = function(){
+        var card = featuredTrack.querySelector('.product-card');
+        return card ? card.getBoundingClientRect().width + 14 : 320;
+      };
+      var scrollFeatured = function(dir){
+        featuredTrack.scrollBy({ left: dir * getFeaturedStep(), behavior: 'smooth' });
+      };
+      if(featuredPrev) featuredPrev.addEventListener('click', function(){ scrollFeatured(-1); });
+      if(featuredNext) featuredNext.addEventListener('click', function(){ scrollFeatured(1); });
+    }
+</script>
+
+<script>
   (function(){
     function normalizeVariantKey(text){
       return (text || '')
@@ -1886,6 +2108,22 @@
 })();
 </script></body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

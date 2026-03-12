@@ -28,16 +28,86 @@
     .top__logo img{height:38px;width:auto;display:block}
     .top__actions{display:flex;gap:8px;flex-wrap:wrap}
     .top__link{display:inline-flex;align-items:center;justify-content:center;padding:.46rem .82rem;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--cobalt);font-weight:700;background:#fff}
-        .foot{background:#0b1428;color:#cbd5e1}
-    .foot__grid{display:grid;grid-template-columns:1.2fr repeat(4,minmax(160px,1fr));gap:20px;padding:30px 0}
-    .foot h4{margin:0 0 10px;color:#fff;font-size:1rem}
-    .foot p{margin:0;color:#cbd5e1;line-height:1.5;font-size:14px}
-    .foot__list{margin:0;padding:0;list-style:none;display:grid;gap:6px}
-    .foot__list a{color:#cbd5e1;text-decoration:none;font-size:14px;line-height:1.5}
-    .foot__list a:hover{color:#fff}
-    .foot__social{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-    .foot__social a{color:#cbd5e1;text-decoration:none;font-size:13px;border:1px solid rgba(255,255,255,.18);padding:.22rem .5rem;border-radius:999px}
-    .foot__social a:hover{color:#fff;border-color:rgba(255,255,255,.36)}
+        .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    #footer h4{
+      margin:0 0 10px !important;
+      font-size:1rem;
+      line-height:1.2;
+    }
+    #footer ul{
+      margin:0 !important;
+      padding:0 !important;
+      list-style:none;
+      font-size:14px;
+      line-height:1.7;
+    }
+    #footer li{
+      margin:0 0 4px;
+    }
+    #footer a{word-break:break-word}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:#0F4C81;
+    }
+    @media (max-width:1300px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    }
+    @media (max-width:980px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    }
+    @media (max-width:700px){
+      #footer .container{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+      #footer ul{
+        line-height:1.6;
+      }
+    }n
     .hero{padding:26px 0}
     .hero__box{background:linear-gradient(115deg,rgba(8,18,34,.82),rgba(15,76,129,.54)),url("assets/img/landings/triol/hero-triol-variadores-vms-energy.webp") center/cover no-repeat;border-radius:18px;padding:34px;color:#fff}
     h1{margin:8px 0 10px;font-size:clamp(30px,5vw,48px);line-height:1.05}
@@ -126,7 +196,8 @@
      .insight-card__cta:hover{text-decoration:underline}
      @media (max-width:760px){.grid{grid-template-columns:1fr}.foot__grid{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr 1fr}.shop-filters{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr}.cat-hero{grid-template-columns:1fr}.cat-hero__media{order:-1;min-height:160px}.insights__grid{grid-template-columns:1fr 1fr}}
      @media (max-width:520px){.shop-grid{grid-template-columns:1fr}.insights__grid{grid-template-columns:1fr}}
-  </style>
+      .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
@@ -150,9 +221,47 @@
     .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
     .nav-item--has-submenu.is-open .submenu{display:block}
   }
-</style></head>
+    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style><style id="vmshop-header-styles">
+  .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+  .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px}
+  header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(23,44,81,.14);backdrop-filter:saturate(180%) blur(8px)}
+  header .container{max-width:1200px}
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+  .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+  .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
+  nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+  nav a{color:#172C51;text-decoration:none;font-weight:700}
+  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+  .nav-item--has-submenu{position:relative}
+  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+  @media (max-width:760px){
+    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
+    nav ul.is-open{display:grid;gap:10px}
+    .menu-toggle{display:inline-flex}
+    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
+    .nav-item--has-submenu.is-open .submenu{display:block}
+  }
+    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+</style>
+</head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="announcement">
+    <div class="container">
+      <span>Env&iacute;o coordinado para proyectos industriales</span>
+      <span>|</span>
+      <span>Asesor&iacute;a t&eacute;cnica previa a compra</span>
+      <span>|</span>
+      <span>VMShop by VMS Energy</span>
+    </div>
+  </div>
+<header aria-label="Barra de navegaci&oacute;n">
     <div class="container topbar">
       <div class="brand">
         <div class="brand__logo">
@@ -191,6 +300,7 @@
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -467,11 +577,18 @@
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
       </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
     </div>
+
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
@@ -511,252 +628,330 @@
       </ul>
     </div>
   </div>
-</footer>
+    <div class="foot-note">Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy</div>
+
 
   <script>
   (function(){
-    function preserveQueryLinks(){
-      var params = window.location.search;
-      if(!params) return;
-      var links = document.querySelectorAll('[data-preserve-query]');
-      links.forEach(function(link){
-        var url = new URL(link.getAttribute('href'), window.location.origin);
-        var current = new URLSearchParams(window.location.search);
-        current.forEach(function(value, key){
-          if(!url.searchParams.has(key)) url.searchParams.set(key, value);
+    var toggle = document.getElementById('menuToggle');
+    var list = document.getElementById('menuList');
+    if(toggle && list){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        var open = list.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var nav = document.querySelector('header nav');
+    if(nav){
+      var media = window.matchMedia('(max-width: 680px)');
+      var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+      function syncSubmenus(){
+        var mobile = media.matches;
+        parents.forEach(function(parent){
+          var trigger = parent.querySelector(':scope > a');
+          var submenu = parent.querySelector(':scope > .submenu');
+          if(!trigger || !submenu) return;
+          if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
+          else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
+          trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
         });
-        link.setAttribute('href', url.pathname + '?' + url.searchParams.toString() + (url.hash || ''));
-      });
-    }
-    preserveQueryLinks();
-
-    var table = document.getElementById('catalogoTable');
-    var grid = document.getElementById('catalogShop');
-    var countChip = document.getElementById('shopCount');
-    var searchInput = document.getElementById('shopSearch');
-    var familySelect = document.getElementById('shopFamily');
-    var sortSelect = document.getElementById('shopSort');
-    var catHero = document.getElementById('catHero');
-    var catHeroKicker = document.getElementById('catHeroKicker');
-    var catHeroTitle = document.getElementById('catHeroTitle');
-    var catHeroText = document.getElementById('catHeroText');
-    var catHeroImage = document.getElementById('catHeroImage');
-    if(!table || !table.tBodies.length || !grid || !countChip || !searchInput || !familySelect || !sortSelect) return;
-
-    var rows = table.tBodies[0].rows;
-    var familyImages = {
-      ALL: 'assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp',
-      UC: 'assets/img/landings/triol/card-triol-variadores-uc.webp',
-      UH: 'assets/img/landings/triol/card-triol-variadores-uh.webp',
-      SD: 'assets/img/landings/triol/card-triol-variadores-sd.webp'
-    };
-    var products = [];
-    Array.prototype.forEach.call(rows, function(row){
-      var partida = (row.cells[0].textContent || '').trim();
-      var codigo = (row.cells[1].textContent || '').trim();
-      var marca = (row.cells[2].textContent || '').trim();
-      var model = (row.cells[3].textContent || '').trim();
-      var cantidad = (row.cells[4].textContent || '').trim();
-      var precio = (row.cells[5].textContent || '').trim();
-      var slug = model.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-      var src = 'assets/img/landings/triol/products/variador-triol-' + slug + '.webp';
-      var cta = 'contacto_cta.html?producto=' + encodeURIComponent('triol-' + model.toLowerCase()) + '#ctaForm';
-      var familyMatch = model.match(/-(UC|UH|SD)\d*$/i);
-      var family = familyMatch ? familyMatch[1].toUpperCase() : '';
-      var priceNum = parseFloat(precio.replace(/,/g, '')) || 0;
-      var priceIvaNum = priceNum * 1.16;
-
-      products.push({
-        partida: parseInt(partida, 10) || 0,
-        codigo: codigo,
-        marca: marca,
-        model: model,
-        cantidad: cantidad,
-        precio: precio,
-        priceNum: priceNum,
-        priceIvaNum: priceIvaNum,
-        family: family,
-        src: src,
-        cta: cta,
-        detailUrl: '',
-        cartUrl: ''
-      });
-    });
-
-    products.forEach(function(product){
-      product.cartUrl = buildCartUrl(product);
-      product.detailUrl = buildDetailUrl(product);
-    });
-
-    var catCountAll = document.getElementById('catCountAll');
-    var catCountUC = document.getElementById('catCountUC');
-    var catCountUH = document.getElementById('catCountUH');
-    var catCountSD = document.getElementById('catCountSD');
-    function countByFamily(code){
-      return products.filter(function(p){ return p.family === code; }).length;
-    }
-    if(catCountAll){ catCountAll.textContent = '(' + products.length + ')'; }
-    if(catCountUC){ catCountUC.textContent = '(' + countByFamily('UC') + ')'; }
-    if(catCountUH){ catCountUH.textContent = '(' + countByFamily('UH') + ')'; }
-    if(catCountSD){ catCountSD.textContent = '(' + countByFamily('SD') + ')'; }
-
-    var heroCopy = {
-      ALL: {
-        kicker: 'Cat&aacute;logo completo',
-        title: 'Variadores Triol AT24 para operaci&oacute;n industrial',
-        text: 'Explora todo el portafolio y compara modelos por capacidad, familia y precio con IVA incluido.',
-        image: familyImages.ALL,
-        alt: 'Cat&aacute;logo completo de variadores Triol'
-      },
-      UC: {
-        kicker: 'Categor&iacute;a UC',
-        title: 'Variadores UC para proyectos de integraci&oacute;n y eficiencia',
-        text: 'Selecci&oacute;n recomendada para balancear costo, desempe&ntilde;o y velocidad de implementaci&oacute;n en planta.',
-        image: familyImages.UC,
-        alt: 'Categor&iacute;a UC de variadores Triol'
-      },
-      UH: {
-        kicker: 'Categor&iacute;a UH',
-        title: 'Variadores UH para trabajo severo y continuidad operativa',
-        text: 'L&iacute;nea enfocada a aplicaciones exigentes con prioridad en robustez y estabilidad en carga.',
-        image: familyImages.UH,
-        alt: 'Categor&iacute;a UH de variadores Triol'
-      },
-      SD: {
-        kicker: 'Categor&iacute;a SD',
-        title: 'Variadores SD para potencia elevada y control estable',
-        text: 'Soluciones para motores de mayor demanda, con base t&eacute;cnica para crecimiento futuro.',
-        image: familyImages.SD,
-        alt: 'Categor&iacute;a SD de variadores Triol'
       }
-    };
-
-    function updateCategoryHero(family){
-      if(!catHero || !catHeroKicker || !catHeroTitle || !catHeroText || !catHeroImage) return;
-      var key = family || 'ALL';
-      var content = heroCopy[key] || heroCopy.ALL;
-      catHero.setAttribute('data-theme', key);
-      catHeroKicker.textContent = content.kicker;
-      catHeroTitle.textContent = content.title;
-      catHeroText.textContent = content.text;
-      catHeroImage.src = content.image || familyImages.ALL;
-      catHeroImage.alt = content.alt || 'Variadores Triol';
-    }
-
-    function formatUsd(num){
-      return new Intl.NumberFormat('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      }).format(num);
-    }
-
-    function buildCartUrl(p){
-      var cart = new URL('carrito-triol.html', window.location.origin);
-      cart.searchParams.set('model', p.model);
-      cart.searchParams.set('codigo', p.codigo);
-      cart.searchParams.set('family', p.family || 'ALL');
-      cart.searchParams.set('marca', p.marca);
-      cart.searchParams.set('cantidad', p.cantidad);
-      cart.searchParams.set('price', String(p.priceIvaNum));
-      cart.searchParams.set('src', p.src);
-      cart.searchParams.set('partida', String(p.partida));
-      cart.searchParams.set('cta', p.cta);
-      return cart.pathname + '?' + cart.searchParams.toString();
-    }
-
-    function buildDetailUrl(p){
-      var detail = new URL('triol-variador-detalle.html', window.location.origin);
-      detail.searchParams.set('model', p.model);
-      detail.searchParams.set('codigo', p.codigo);
-      detail.searchParams.set('family', p.family || 'ALL');
-      detail.searchParams.set('marca', p.marca);
-      detail.searchParams.set('cantidad', p.cantidad);
-      detail.searchParams.set('price', String(p.priceIvaNum));
-      detail.searchParams.set('src', p.src);
-      detail.searchParams.set('partida', String(p.partida));
-      detail.searchParams.set('cta', p.cta);
-      return detail.pathname + '?' + detail.searchParams.toString();
-    }
-
-    function cardTemplate(p){
-      return ''
-        + '<article class="shop-card" data-partida="' + p.partida + '" data-codigo="' + p.codigo + '" data-model="' + p.model + '" data-family="' + p.family + '" data-price="' + p.priceIvaNum + '">'
-        + '<div class="shop-card__media">'
-        + '  <span class="shop-card__badge">' + p.marca + '</span>'
-        + '  <img src="' + p.src + '" alt="Variador ' + p.marca + ' ' + p.model + '" loading="lazy" decoding="async" />'
-        + '</div>'
-        + '<div class="shop-card__body">'
-        + '  <p class="shop-card__code">C&oacute;digo ' + p.codigo + ' | Partida ' + p.partida + '</p>'
-        + '  <h3 class="shop-card__title">' + p.model + '</h3>'
-        + '  <p class="shop-card__meta">Cantidad: ' + p.cantidad + ' pieza(s)</p>'
-        + '  <p class="shop-card__price">USD ' + formatUsd(p.priceIvaNum) + '</p>'
-        + '  <p class="shop-card__price-note">Precio con IVA 16% incluido</p>'
-        + '  <div class="shop-card__actions">'
-        + '    <a class="shop-card__cta shop-card__cta--ghost" data-preserve-query href="' + p.detailUrl + '">Ver detalles</a>'
-        + '    <a class="shop-card__cta" data-preserve-query href="' + p.cartUrl + '">A&ntilde;adir al carrito</a>'
-        + '  </div>'
-        + '</div>'
-        + '</article>';
-    }
-
-    function applyFilters(){
-      var q = (searchInput.value || '').trim().toLowerCase();
-      var family = (familySelect.value || '').trim().toUpperCase();
-      var sort = sortSelect.value;
-      var filtered = products.filter(function(p){
-        var matchQ = !q || p.model.toLowerCase().indexOf(q) !== -1 || p.codigo.toLowerCase().indexOf(q) !== -1;
-        var matchF = !family || p.family === family;
-        return matchQ && matchF;
+      parents.forEach(function(parent){
+        var trigger = parent.querySelector(':scope > a');
+        var submenu = parent.querySelector(':scope > .submenu');
+        if(!trigger || !submenu) return;
+        trigger.addEventListener('click', function(e){
+          if(!media.matches) return;
+          e.preventDefault();
+          var open = parent.classList.toggle('is-open');
+          submenu.style.display = open ? 'block' : 'none';
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
       });
-      if(sort === 'price_asc'){
-        filtered.sort(function(a,b){ return a.priceIvaNum - b.priceIvaNum; });
-      } else if(sort === 'price_desc'){
-        filtered.sort(function(a,b){ return b.priceIvaNum - a.priceIvaNum; });
-      } else {
-        filtered.sort(function(a,b){ return a.partida - b.partida; });
+      syncSubmenus();
+      if(media.addEventListener) media.addEventListener('change', syncSubmenus);
+      else if(media.addListener) media.addListener(syncSubmenus);
+    }
+
+    var carousel = document.getElementById('heroCarousel');
+    if(carousel){
+      var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-slide]'));
+      var dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-carousel-dot]'));
+      var prevBtn = carousel.querySelector('[data-carousel-prev]');
+      var nextBtn = carousel.querySelector('[data-carousel-next]');
+      var index = 0;
+      var timer = null;
+
+      function render(nextIndex){
+        index = (nextIndex + slides.length) % slides.length;
+        slides.forEach(function(slide, i){ slide.classList.toggle('is-active', i === index); });
+        dots.forEach(function(dot, i){
+          var active = i === index;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
+      }
+      function startAutoplay(){
+        stopAutoplay();
+        timer = window.setInterval(function(){ render(index + 1); }, 5200);
+      }
+      function stopAutoplay(){
+        if(timer){ window.clearInterval(timer); timer = null; }
       }
 
-      grid.innerHTML = filtered.map(cardTemplate).join('');
-      Array.prototype.forEach.call(grid.querySelectorAll('img'), function(image){
-        image.onerror = function(){
-          var family = ((this.closest('.shop-card') || {}).dataset || {}).family || 'ALL';
-          this.src = familyImages[family] || familyImages.ALL;
-        };
+      if(prevBtn){ prevBtn.addEventListener('click', function(){ render(index - 1); startAutoplay(); }); }
+      if(nextBtn){ nextBtn.addEventListener('click', function(){ render(index + 1); startAutoplay(); }); }
+      dots.forEach(function(dot){
+        dot.addEventListener('click', function(){
+          var dotIndex = Number(dot.getAttribute('data-carousel-dot'));
+          if(Number.isNaN(dotIndex)) return;
+          render(dotIndex);
+          startAutoplay();
+        });
       });
-      countChip.textContent = filtered.length + ' producto' + (filtered.length === 1 ? '' : 's');
-      updateCategoryHero(family || 'ALL');
-      preserveQueryLinks();
+      carousel.addEventListener('mouseenter', stopAutoplay);
+      carousel.addEventListener('mouseleave', startAutoplay);
+      carousel.addEventListener('focusin', stopAutoplay);
+      carousel.addEventListener('focusout', startAutoplay);
+      render(0);
+      startAutoplay();
     }
-
-    searchInput.addEventListener('input', applyFilters);
-    familySelect.addEventListener('change', applyFilters);
-    sortSelect.addEventListener('change', applyFilters);
-    Array.prototype.forEach.call(document.querySelectorAll('[data-family-quick]'), function(btn){
-      btn.addEventListener('click', function(){
-        familySelect.value = (btn.getAttribute('data-family-quick') || '').toUpperCase();
-        applyFilters();
-        var section = document.getElementById('catalogShop');
-        if(section){ section.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      });
-    });
-    var heroBuyBtn = document.getElementById('heroBuyBtn');
-    if(heroBuyBtn){
-      heroBuyBtn.setAttribute('href', buildCartUrl({
-        model: 'AT24',
-        codigo: 'TRIOL-CATALOGO',
-        family: 'ALL',
-        marca: 'TRIOL',
-        cantidad: '1',
-        priceIvaNum: 0,
-        src: familyImages.ALL,
-        partida: 0,
-        cta: 'contacto_cta.html?producto=triol-vfd#ctaForm'
-      }));
-    }
-    applyFilters();
-    preserveQueryLinks();
   })();
-  </script>
+  
+    var featuredTrack = document.getElementById('featuredTrack');
+  if(featuredTrack){
+      var featuredPrev = document.querySelector('[data-featured-prev]');
+      var featuredNext = document.querySelector('[data-featured-next]');
+      var getFeaturedStep = function(){
+        var card = featuredTrack.querySelector('.product-card');
+        return card ? card.getBoundingClientRect().width + 14 : 320;
+      };
+      var scrollFeatured = function(dir){
+        featuredTrack.scrollBy({ left: dir * getFeaturedStep(), behavior: 'smooth' });
+      };
+      if(featuredPrev) featuredPrev.addEventListener('click', function(){ scrollFeatured(-1); });
+      if(featuredNext) featuredNext.addEventListener('click', function(){ scrollFeatured(1); });
+    }
+</script>
+<script id="triol-catalog-script">
+(function(){
+  var table = document.getElementById('catalogoTable');
+  var grid = document.getElementById('catalogShop');
+  if(!table || !grid) return;
+
+  var searchInput = document.getElementById('shopSearch');
+  var familySelect = document.getElementById('shopFamily');
+  var sortSelect = document.getElementById('shopSort');
+  var countChip = document.getElementById('shopCount');
+  var quickButtons = Array.prototype.slice.call(document.querySelectorAll('[data-family-quick]'));
+  var countAll = document.getElementById('catCountAll');
+  var countUC = document.getElementById('catCountUC');
+  var countUH = document.getElementById('catCountUH');
+  var countSD = document.getElementById('catCountSD');
+
+  var hero = document.getElementById('catHero');
+  var heroKicker = document.getElementById('catHeroKicker');
+  var heroTitle = document.getElementById('catHeroTitle');
+  var heroText = document.getElementById('catHeroText');
+  var heroImage = document.getElementById('catHeroImage');
+
+  var heroCopy = {
+    ALL: {
+      kicker: 'Cat\u00e1logo completo',
+      title: 'Variadores Triol AT24 para operaci\u00f3n industrial',
+      text: 'Explora todo el portafolio y compara modelos por capacidad, familia y precio con IVA incluido.',
+      image: 'assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp'
+    },
+    UC: {
+      kicker: 'Categor\u00eda UC',
+      title: 'Variadores UC para integraciones eficientes',
+      text: 'Balance entre desempe\u00f1o y costo para proyectos de retrofit y expansi\u00f3n industrial.',
+      image: 'assets/img/landings/triol/card-triol-variadores-uc.webp'
+    },
+    UH: {
+      kicker: 'Categor\u00eda UH',
+      title: 'Variadores UH para trabajo severo',
+      text: 'Robustez para ambientes exigentes con continuidad de operaci\u00f3n y cargas pesadas.',
+      image: 'assets/img/landings/triol/card-triol-variadores-uh.webp'
+    },
+    SD: {
+      kicker: 'Categor\u00eda SD',
+      title: 'Variadores SD para alta potencia',
+      text: 'Control estable en aplicaciones de gran torque y demanda energ\u00e9tica elevada.',
+      image: 'assets/img/landings/triol/card-triol-variadores-sd.webp'
+    }
+  };
+
+  function parseNumber(value){
+    if(!value) return 0;
+    var cleaned = String(value).replace(/,/g, '');
+    var num = parseFloat(cleaned);
+    return Number.isFinite(num) ? num : 0;
+  }
+
+  function getFamilyFromModel(model){
+    var upper = String(model || '').toUpperCase();
+    if(upper.indexOf('-UC') !== -1) return 'UC';
+    if(upper.indexOf('-UH') !== -1) return 'UH';
+    if(upper.indexOf('-SD') !== -1) return 'SD';
+    return '';
+  }
+
+  function guessImagePath(model){
+    if(!model) return '';
+    var slug = String(model).toLowerCase();
+    return 'assets/img/catalogo_variadores/variador-triol-' + slug + '.png';
+  }
+
+  var rows = Array.prototype.slice.call(table.querySelectorAll('tbody tr'));
+  var data = rows.map(function(row){
+    var cells = Array.prototype.slice.call(row.querySelectorAll('td'));
+    var raw = cells.map(function(cell){ return cell.textContent.trim(); });
+    if(raw.length < 5) return null;
+
+    var partida = raw[0] || '';
+    var codigo = raw[1] || '';
+    var marca = raw[2] || '';
+    var modelo = raw[3] || '';
+    var imagen = '';
+    var cantidad = '';
+    var precio = '';
+
+    if(raw.length >= 7){
+      imagen = raw[4] || '';
+      cantidad = raw[5] || '';
+      precio = raw[6] || '';
+    }else{
+      cantidad = raw[4] || '';
+      precio = raw[5] || '';
+    }
+
+    var familia = getFamilyFromModel(modelo);
+    var priceValue = parseNumber(precio);
+    var imagePath = imagen || guessImagePath(modelo);
+
+    return {
+      partida: partida,
+      codigo: codigo,
+      marca: marca || 'TRIOL',
+      modelo: modelo,
+      familia: familia,
+      cantidad: cantidad,
+      precio: precio,
+      priceValue: priceValue,
+      image: imagePath
+    };
+  }).filter(Boolean);
+
+  function updateCounts(items){
+    if(countChip) countChip.textContent = items.length + ' productos';
+  }
+
+  function updateCategoryCounts(){
+    var total = data.length;
+    var uc = data.filter(function(item){ return item.familia === 'UC'; }).length;
+    var uh = data.filter(function(item){ return item.familia === 'UH'; }).length;
+    var sd = data.filter(function(item){ return item.familia === 'SD'; }).length;
+    if(countAll) countAll.textContent = '(' + total + ')';
+    if(countUC) countUC.textContent = '(' + uc + ')';
+    if(countUH) countUH.textContent = '(' + uh + ')';
+    if(countSD) countSD.textContent = '(' + sd + ')';
+  }
+
+  function render(items){
+    if(!grid) return;
+    if(!items.length){
+      grid.innerHTML = '<div style="grid-column:1/-1;border:1px dashed #cfdceb;border-radius:12px;padding:18px;color:#415a72;background:#f7faff">No se encontraron variadores con esos filtros.</div>';
+      updateCounts(items);
+      return;
+    }
+
+    var formatter = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
+    grid.innerHTML = items.map(function(item){
+      var image = item.image ? '<img src="' + item.image + '" alt="Variador Triol ' + item.modelo + '" loading="lazy" decoding="async" onerror="this.closest(\'.shop-card__media\').classList.add(\'catalog__img-cell--empty\');this.remove();">' : '';
+      var familyLabel = item.familia ? 'Familia ' + item.familia : 'Variador Triol';
+      var priceText = item.priceValue ? formatter.format(item.priceValue) : item.precio;
+      var buyUrl = 'carrito-triol.html?producto=' + encodeURIComponent(item.modelo);
+      return (
+        '<article class="shop-card">' +
+          '<div class="shop-card__media">' +
+            '<span class="shop-card__badge">' + familyLabel + '</span>' +
+            image +
+          '</div>' +
+          '<div class="shop-card__body">' +
+            '<p class="shop-card__code">' + item.codigo + '</p>' +
+            '<h3 class="shop-card__title">' + item.modelo + '</h3>' +
+            '<p class="shop-card__meta">Cantidad: ' + item.cantidad + '</p>' +
+            '<p class="shop-card__price">' + priceText + '</p>' +
+            '<p class="shop-card__price-note">USD + IVA</p>' +
+            '<div class="shop-card__actions">' +
+              '<a class="shop-card__cta" href="' + buyUrl + '">A\u00f1adir al carrito</a>' +
+              '<a class="shop-card__cta shop-card__cta--ghost" href="triol-variador-detalle.html?modelo=' + encodeURIComponent(item.modelo) + '">Ver detalle</a>' +
+            '</div>' +
+          '</div>' +
+        '</article>'
+      );
+    }).join('');
+
+    updateCounts(items);
+  }
+
+  function applyFilters(){
+    var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    var family = familySelect ? familySelect.value : '';
+    var sort = sortSelect ? sortSelect.value : 'default';
+
+    var filtered = data.filter(function(item){
+      var matchesFamily = !family || item.familia === family;
+      if(!matchesFamily) return false;
+      if(!query) return true;
+      var haystack = (item.codigo + ' ' + item.modelo + ' ' + item.marca).toLowerCase();
+      return haystack.indexOf(query) !== -1;
+    });
+
+    if(sort === 'price_asc'){
+      filtered = filtered.slice().sort(function(a, b){ return a.priceValue - b.priceValue; });
+    }else if(sort === 'price_desc'){
+      filtered = filtered.slice().sort(function(a, b){ return b.priceValue - a.priceValue; });
+    }
+
+    render(filtered);
+  }
+
+  function setHero(theme){
+    var key = theme && heroCopy[theme] ? theme : 'ALL';
+    var copy = heroCopy[key];
+    if(hero) hero.setAttribute('data-theme', key);
+    if(heroKicker) heroKicker.textContent = copy.kicker;
+    if(heroTitle) heroTitle.textContent = copy.title;
+    if(heroText) heroText.textContent = copy.text;
+    if(heroImage) heroImage.src = copy.image;
+  }
+
+  if(searchInput) searchInput.addEventListener('input', applyFilters);
+  if(familySelect) familySelect.addEventListener('change', function(){
+    setHero(familySelect.value || 'ALL');
+    applyFilters();
+  });
+  if(sortSelect) sortSelect.addEventListener('change', applyFilters);
+
+  quickButtons.forEach(function(button){
+    button.addEventListener('click', function(){
+      var family = button.getAttribute('data-family-quick') || '';
+      if(familySelect) familySelect.value = family;
+      setHero(family || 'ALL');
+      applyFilters();
+      var anchor = document.getElementById('catalogo');
+      if(anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  updateCategoryCounts();
+  setHero(familySelect && familySelect.value ? familySelect.value : 'ALL');
+  applyFilters();
+})();
+</script>
 <script id="nav-submenu-script-vms">
 (function(){
   var toggle = document.getElementById('menuToggle');
@@ -801,6 +996,22 @@
 })();
 </script></body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

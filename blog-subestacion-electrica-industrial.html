@@ -474,17 +474,70 @@ tr:last-child td{border-bottom:none}
 
 .btn:active{transform: translateY(0px)}
 
-.foot{
-  margin-top:22px;
-  color:var(--muted);
-  font-size:12.5px;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.chip{
+.foot{background:#0b1428;color:#cbd5e1}
+    #footer .container{
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    #footer h4{
+      margin:0 0 10px !important;
+      font-size:1rem;
+      line-height:1.2;
+    }
+    #footer ul{
+      margin:0 !important;
+      padding:0 !important;
+      list-style:none;
+      font-size:14px;
+      line-height:1.7;
+    }
+    #footer li{
+      margin:0 0 4px;
+    }
+    #footer a{word-break:break-word}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:#0F4C81;
+    }
+    @media (max-width:1300px){
+      #footer .container{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        gap:20px !important;
+        padding:34px 0 !important;
+      }
+    }
+    @media (max-width:980px){
+      #footer .container{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+    }
+    @media (max-width:700px){
+      #footer .container{
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+        padding:24px 0 !important;
+      }
+      #footer ul{
+        line-height:1.6;
+      }
+    }\n.chip{
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: .4px;
@@ -3629,8 +3682,70 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__group + .submenu__grou
 header[aria-label="Barra de navegaci&oacute;n"] .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
 header[aria-label="Barra de navegaci&oacute;n"] .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-.foot{background:#0b1a32;color:#fff}
-.foot a{color:#cbd5e1}
+.foot{background:#0b1428;color:#cbd5e1}
+    #footer .container{
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    #footer h4{
+      margin:0 0 10px !important;
+      font-size:1rem;
+      line-height:1.2;
+    }
+    #footer ul{
+      margin:0 !important;
+      padding:0 !important;
+      list-style:none;
+      font-size:14px;
+      line-height:1.7;
+    }
+    #footer li{
+      margin:0 0 4px;
+    }
+    #footer a{word-break:break-word}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:#0F4C81;
+    }
+    @media (max-width:1300px){
+      #footer .container{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        gap:20px !important;
+        padding:34px 0 !important;
+      }
+    }
+    @media (max-width:980px){
+      #footer .container{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+    }
+    @media (max-width:700px){
+      #footer .container{
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+        padding:24px 0 !important;
+      }
+      #footer ul{
+        line-height:1.6;
+      }
+    }\n.foot a{color:#cbd5e1}
 .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
 .foot-social__link svg{width:18px;height:18px;fill:currentColor}
 @media (max-width:980px){header[aria-label="Barra de navegaci&oacute;n"] nav ul{gap:14px}header[aria-label="Barra de navegaci&oacute;n"] .submenu{min-width:280px}}
@@ -3717,6 +3832,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -3990,6 +4106,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4073,6 +4190,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4156,6 +4274,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4239,6 +4358,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4577,6 +4697,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4704,6 +4825,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4830,6 +4952,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -4955,6 +5078,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -6663,7 +6787,13 @@ badge.textContent = c.title + ' (' + c.p + '%)';
         <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
         <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
       </ul>
+    </div>    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+      </ul>
     </div>
+
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
@@ -6749,6 +6879,12 @@ badge.textContent = c.title + ' (' + c.p + '%)';
 </script></body>
 
 </html>
+
+
+
+
+
+
 
 
 

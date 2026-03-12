@@ -64,8 +64,70 @@
     nav a{color:#172C51;text-decoration:none;font-weight:700}
     
     .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
-    .foot{background:#0b1a32;color:#fff}
-    .foot .container{padding:50px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+    .foot{background:#0b1428;color:#cbd5e1}
+    #footer .container{
+      display:grid !important;
+      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
+      gap:18px !important;
+      padding:40px 0 !important;
+      align-items:start;
+    }
+    #footer h4{
+      margin:0 0 10px !important;
+      font-size:1rem;
+      line-height:1.2;
+    }
+    #footer ul{
+      margin:0 !important;
+      padding:0 !important;
+      list-style:none;
+      font-size:14px;
+      line-height:1.7;
+    }
+    #footer li{
+      margin:0 0 4px;
+    }
+    #footer a{word-break:break-word}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:#0F4C81;
+    }
+    @media (max-width:1300px){
+      #footer .container{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        gap:20px !important;
+        padding:34px 0 !important;
+      }
+    }
+    @media (max-width:980px){
+      #footer .container{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+    }
+    @media (max-width:700px){
+      #footer .container{
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+        padding:24px 0 !important;
+      }
+      #footer ul{
+        line-height:1.6;
+      }
+    }\n.foot .container{padding:50px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
     .foot a{color:#cbd5e1;text-decoration:none}
     .foot-social__link{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;transition:all .25s ease}
     .foot-social__link svg{width:18px;height:18px;fill:#fff}
@@ -141,6 +203,7 @@
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
                   <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
@@ -264,7 +327,13 @@
         <li><a href="tel:+529383814824">+52 938 381 4824</a> Ciudad del Carmen</li>
         <li><strong><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;">contacto@vmsenergy.com</a></strong></li>
       </ul>
+    </div>    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+      </ul>
     </div>
+
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
@@ -422,5 +491,11 @@
 })();
 </script></body>
 </html>
+
+
+
+
+
+
 
 
