@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto CTA | VMS Energy</title>
   <meta name="description" content="Formulario r&aacute;pido para solicitudes de cotizaci&oacute;n, propuesta e inicio de proyecto." />
+  <meta name="robots" content="noindex,nofollow" />
   <style>
     :root{--navy:#172C51;--cobalt:#0F4C81;--line:rgba(23,44,81,.16);--muted:#4B647F}
     *{box-sizing:border-box} body{margin:0;font-family:"Roboto Condensed",Arial,sans-serif;color:#10233D;background:#f3f7fc}
@@ -139,7 +140,10 @@
     .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
     .nav-item--has-submenu.is-open .submenu{display:block}
   }
-</style></head>
+</style>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/contacto_cta.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/contacto_cta.html" />
+</head>
 <body>
     <header aria-label="Barra de navegaci&oacute;n">
     <div class="container topbar">
@@ -169,6 +173,13 @@
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
                 </ul>
               </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Sectores</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="nav-item--has-submenu">
@@ -181,7 +192,8 @@
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
                   <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#c2410c;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Fire Control</a></li><li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
             </div>
@@ -195,13 +207,14 @@
                   <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
                   <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
                   <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi�n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi�n</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
                 </ul>
               </div>
             </div>
           </li>
+          <li><a href="carreras.html">Carreras</a></li>
           <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
         </ul>
       </nav>
@@ -225,7 +238,10 @@
     <form id="ctaLeadForm" class="form-card" novalidate>
       <div class="form-grid">
         <div><label for="ctaNombre">Nombre completo*</label><input class="input" id="ctaNombre" name="nombre" autocomplete="name" required></div>
-        <div><label for="ctaDialCode">Lada pa&iacute;s*</label><select class="input" id="ctaDialCode" name="lada" required>
+        <div><label for="ctaEmpresa">Empresa*</label><input class="input" id="ctaEmpresa" name="empresa" autocomplete="organization" required></div>
+        <div class="full"><label for="ctaCorreo">Correo electr&oacute;nico*</label><input class="input" id="ctaCorreo" type="email" name="correo" autocomplete="email" required></div>
+
+        <div class="cta-extra" hidden><label for="ctaDialCode">Lada pa&iacute;s*</label><select class="input" id="ctaDialCode" name="lada">
 <option value="+52" selected>M&eacute;xico (+52)</option>
 <option value="+1">Estados Unidos (+1)</option>
 <option value="+501">Belice (+501)</option>
@@ -239,17 +255,17 @@
 <option value="+1-787">Puerto Rico (+1-787)</option>
 <option value="+1-876">Jamaica (+1-876)</option>
 <option value="+1-868">Trinidad y Tobago (+1-868)</option></select></div>
-        <div><label for="ctaTelefono">Tel&eacute;fono*</label><input class="input" id="ctaTelefono" name="telefono" autocomplete="tel" required></div>
-        <div><label for="ctaPuesto">Puesto*</label><input class="input" id="ctaPuesto" name="puesto" required></div>
-        <div><label for="ctaEmpresa">Empresa*</label><input class="input" id="ctaEmpresa" name="empresa" autocomplete="organization" required></div>
-        <div class="full"><label for="ctaCorreo">Correo electr&oacute;nico*</label><input class="input" id="ctaCorreo" type="email" name="correo" autocomplete="email" required></div>
+        <div class="cta-extra" hidden><label for="ctaTelefono">Tel&eacute;fono*</label><input class="input" id="ctaTelefono" name="telefono" type="tel" autocomplete="tel"></div>
+        <div class="full cta-extra" hidden><label for="ctaPuesto">Puesto</label><input class="input" id="ctaPuesto" name="puesto"></div>
 
-        <div><label for="ctxCategoria">Categor&iacute;a*</label><input class="input readonly" id="ctxCategoria" name="categoria" readonly></div>
-        <div><label for="ctxEtapa">Etapa de ejecuci&oacute;n</label><input class="input readonly" id="ctxEtapa" name="etapa" readonly></div>
-        <div class="full"><label for="ctxServicioCatalogo">Servicio del cat&aacute;logo</label><input class="input readonly" id="ctxServicioCatalogo" name="servicio_catalogo" readonly></div>
-        <div class="full"><label for="ctaProyectoDesc">Descripci&oacute;n del proyecto</label><textarea class="input" id="ctaProyectoDesc" name="descripcion_proyecto" rows="4" placeholder="Describe alcance, objetivos, tiempos, restricciones y cualquier dato t&eacute;cnico relevante"></textarea></div>
-        <div class="full"><label for="ctaArchivos">Adjuntar archivos (PDF, Excel, Word, im&aacute;genes)</label><input class="input" type="file" id="ctaArchivos" name="archivos" accept=".pdf,.xlsx,.xls,.csv,.doc,.docx,.png,.jpg,.jpeg,.webp" multiple><p class="hint">Nota: se abrir&aacute; tu correo para finalizar el env&iacute;o. Los archivos seleccionados se listan y se adjuntan manualmente desde tu cliente de correo.</p></div>
-              </div>
+        <div class="full"><label for="ctaProyectoDesc">Descripci&oacute;n breve</label><textarea class="input" id="ctaProyectoDesc" name="descripcion_proyecto" rows="4" placeholder="Cu&eacute;ntanos brevemente alcance, objetivo o necesidad t&eacute;cnica"></textarea></div>
+
+        <div class="full cta-extra" hidden><label for="ctaArchivos">Adjuntar archivos (PDF, Excel, Word, im&aacute;genes)</label><input class="input" type="file" id="ctaArchivos" name="archivos" accept=".pdf,.xlsx,.xls,.csv,.doc,.docx,.png,.jpg,.jpeg,.webp" multiple><p class="hint">Nota: se abrir&aacute; tu correo para finalizar el env&iacute;o. Los archivos seleccionados se listan y se adjuntan manualmente desde tu cliente de correo.</p></div>
+
+        <input type="hidden" id="ctxCategoria" name="categoria">
+        <input type="hidden" id="ctxEtapa" name="etapa">
+        <input type="hidden" id="ctxServicioCatalogo" name="servicio_catalogo">
+      </div>
       <div class="actions">
         <button type="submit" class="btn btn--primary">Enviar solicitud</button>
       </div>
@@ -289,6 +305,11 @@
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
         <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
       </ul>
+    </div>    <div>
+      <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+      </ul>
     </div>
 
 
@@ -312,6 +333,7 @@
         <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
         <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
         <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
         <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
       </ul>
     </div>
@@ -369,6 +391,21 @@
         }
       }
 
+      // Flujo SEM/cotizacion: si llega ?producto=* o src=lp-*, mostrar campos extra (telefono, puesto, archivos)
+      var isSemFlow = !!producto || /lp-/i.test(src);
+      if(isSemFlow){
+        var extras = document.querySelectorAll('.cta-extra');
+        Array.prototype.forEach.call(extras, function(el){ el.removeAttribute('hidden'); });
+        var dialEl = document.getElementById('ctaDialCode');
+        var telEl = document.getElementById('ctaTelefono');
+        if(dialEl) dialEl.setAttribute('required', '');
+        if(telEl) telEl.setAttribute('required', '');
+        var h1El = document.querySelector('.hero h1');
+        if(h1El) h1El.textContent = 'Solicitud de cotización' + (productoLabel ? ' — ' + productoLabel : '');
+        var introEl = document.querySelector('.hero p');
+        if(introEl) introEl.textContent = 'Comparte tus datos y especificaciones técnicas para que ingeniería prepare tu cotización.';
+      }
+
       var form = document.getElementById('ctaLeadForm');
       var feedback = document.getElementById('ctaFeedback');
       form.addEventListener('submit', function(e){
@@ -379,21 +416,32 @@
         if(!ok){ feedback.textContent = 'Completa los campos requeridos.'; return; }
 
         var projectDesc = (document.getElementById('ctaProyectoDesc').value || '').trim();
-        var filesInput = document.getElementById('ctaArchivos');
-        var fileNames = [];
-        if(filesInput && filesInput.files && filesInput.files.length){ for(var i=0; i<filesInput.files.length; i+=1){ fileNames.push(filesInput.files[i].name); } }
 
         var body =
           'Nombre: ' + encodeURIComponent(form.nombre.value.trim()) + '%0D%0A' +
-          'Telefono: ' + encodeURIComponent((((form.lada.value || '').trim() ? (form.lada.value.trim() + ' ') : '') + form.telefono.value.trim())) + '%0D%0A' +
-          'Puesto: ' + encodeURIComponent(form.puesto.value.trim()) + '%0D%0A' +
           'Empresa: ' + encodeURIComponent(form.empresa.value.trim()) + '%0D%0A' +
-          'Correo: ' + encodeURIComponent(form.correo.value.trim()) + '%0D%0A%0D%0A' +
+          'Correo: ' + encodeURIComponent(form.correo.value.trim());
+
+        if(isSemFlow){
+          var ladaVal = ((form.lada && form.lada.value) || '').trim();
+          var telVal = ((form.telefono && form.telefono.value) || '').trim();
+          var puestoVal = ((form.puesto && form.puesto.value) || '').trim();
+          body += '%0D%0A' + 'Telefono: ' + encodeURIComponent((ladaVal ? ladaVal + ' ' : '') + telVal);
+          if(puestoVal) body += '%0D%0A' + 'Puesto: ' + encodeURIComponent(puestoVal);
+        }
+
+        body += '%0D%0A%0D%0A' +
           'Categoria: ' + encodeURIComponent(document.getElementById('ctxCategoria').value) + '%0D%0A' +
           'Etapa de ejecucion: ' + encodeURIComponent(document.getElementById('ctxEtapa').value) + '%0D%0A' +
           'Servicio catalogo: ' + encodeURIComponent(document.getElementById('ctxServicioCatalogo').value) + '%0D%0A' +
-          'Descripcion del proyecto: ' + encodeURIComponent(projectDesc || 'No especificada') + '%0D%0A' +
-          'Archivos seleccionados: ' + encodeURIComponent(fileNames.length ? fileNames.join(', ') : 'Sin archivos');
+          'Descripcion: ' + encodeURIComponent(projectDesc || 'No especificada');
+
+        if(isSemFlow){
+          var filesInput = document.getElementById('ctaArchivos');
+          var fileNames = [];
+          if(filesInput && filesInput.files && filesInput.files.length){ for(var i=0; i<filesInput.files.length; i+=1){ fileNames.push(filesInput.files[i].name); } }
+          body += '%0D%0A' + 'Archivos seleccionados: ' + encodeURIComponent(fileNames.length ? fileNames.join(', ') : 'Sin archivos');
+        }
 
         var subject = encodeURIComponent('Lead web CTA - VMS Energy');
         window.location.href = 'mailto:contacto@vmsenergy.com?subject=' + subject + '&body=' + body;

@@ -1,24 +1,27 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico | VMS Energy</title>
-  <meta name="description" content="Buenas practicas de mantenimiento y reparacion de subestaciones AT, MT y BT para confiabilidad de red." />
+  <title>Mantenimiento de Subestaciones AT, MT y BT en M&eacute;xico | VMS Energy</title>
+  <meta name="description" content="Gu&iacute;a t&eacute;cnica de mantenimiento predictivo, preventivo y correctivo de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico. Pruebas, normativa NOM e IEEE y caso 69 kV." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://www.vms-energy.mx/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
-  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
+  <meta property="og:type" content="article" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico | VMS Energy" />
-  <meta property="og:description" content="Buenas practicas de mantenimiento y reparacion de subestaciones AT, MT y BT para confiabilidad de red." />
-  <meta property="og:url" content="https://www.vms-energy.mx/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
-  <meta property="og:image" content="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg" />
+  <meta property="og:title" content="Mantenimiento de Subestaciones AT, MT y BT en M&eacute;xico | VMS Energy" />
+  <meta property="og:description" content="Gu&iacute;a t&eacute;cnica de mantenimiento predictivo, preventivo y correctivo de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico. Pruebas, normativa NOM e IEEE y caso 69 kV." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/mantenimiento-subestaciones/og-mantenimiento-subestaciones.webp" />
+  <meta property="article:published_time" content="2026-04-27" />
+  <meta property="article:modified_time" content="2026-04-27" />
+  <meta property="article:section" content="Operaci&oacute;n y mantenimiento" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico | VMS Energy" />
-  <meta name="twitter:description" content="Buenas practicas de mantenimiento y reparacion de subestaciones AT, MT y BT para confiabilidad de red." />
-  <meta name="twitter:image" content="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg" />
+  <meta name="twitter:title" content="Mantenimiento de Subestaciones AT, MT y BT en M&eacute;xico | VMS Energy" />
+  <meta name="twitter:description" content="Gu&iacute;a t&eacute;cnica de mantenimiento predictivo, preventivo y correctivo de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/mantenimiento-subestaciones/og-mantenimiento-subestaciones.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -45,131 +48,121 @@
     .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    .privacy-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden}
-    .privacy-hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(100deg,rgba(8,24,48,.9) 0%,rgba(10,32,62,.78) 54%,rgba(15,76,129,.62) 100%),
-        url('assets/img/hero_codigo_etica_conducta_vms_mejorada.png') center/cover no-repeat;
-      z-index:-1;
-    }
-    .privacy-hero .container{padding:88px 20px 80px}
-    .privacy-hero__eyebrow{display:inline-block;padding:.28rem .64rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 14px}
-    .privacy-hero h1{margin:0 0 10px;font-size:clamp(30px,4.6vw,52px);line-height:1.05}
-    .privacy-hero p{margin:0;max-width:900px;font-size:clamp(16px,2vw,20px);color:#e2ecf9}
-    .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
     .btn--primary{background:var(--cobalt);color:#fff}
     .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
-    .privacy-wrap{padding:40px 0 56px;background:linear-gradient(180deg,#f7f9fc,#fff)}
-    .privacy-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(8,28,54,.08);padding:18px 20px;margin-bottom:18px}
-    .privacy-card h2{margin:0 0 12px;color:#12365f;font-size:clamp(22px,2.6vw,30px);line-height:1.2}
-    .privacy-card p{margin:0 0 12px;color:#203754}
-    .privacy-card ol,.privacy-card ul{margin:0 0 12px 20px;padding:0;color:#203754}
-    .privacy-card li{margin:0 0 8px}
-    .privacy-note{margin:0 0 14px;color:#4a5f79;font-size:.95rem}
-    .ethics-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:18px;align-items:center}
-    .ethics-media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(8,28,54,.1)}
-    .ethics-media img{display:block;width:100%;height:auto;max-height:min(68vh,840px);object-fit:contain;background:#f1f5f9}
-    .ethics-tab{background:#fff;border:1px solid rgba(15,76,129,.24);border-radius:16px;padding:22px 20px;box-shadow:0 14px 28px rgba(8,28,54,.12);max-width:390px}
-    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:#0f4c81}
-    .ethics-tab p{margin:0 0 16px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#203754}
-    .privacy-doc__btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:12px;border:1px solid rgba(23,44,81,.16);font-weight:700;background:#fff;color:#12365f}
-    .privacy-doc__btn--primary{background:#0f4c81;border-color:#0f4c81;color:#fff}
-    .privacy-doc__btn--outline{background:#fff;border:2px solid #0ea5e9;color:#0284c7;padding:12px 24px;border-radius:12px;letter-spacing:.02em}
     .foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
+    #footer .container{display:grid !important;grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;gap:18px !important;padding:40px 0 !important;align-items:start}
+    #footer h4{margin:0 0 10px !important;font-size:1rem;line-height:1.2}
+    #footer ul{margin:0 !important;padding:0 !important;list-style:none;font-size:14px;line-height:1.7}
+    #footer li{margin:0 0 4px}
     #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
-    #footer .foot-link--strong{color:#fff;font-weight:700}
-    .foot-social__link{
-      display:inline-flex;
-      width:26px;
-      height:26px;
-    }
-    .foot-social__link svg{
-      fill:#fff;
-      transition:fill .3s ease;
-    }
-    .foot-social__link:hover svg,
-    .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
-    }
-    @media (max-width:1300px){
-      #footer .container{
-        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-        gap:20px !important;
-        padding:34px 0 !important;
-      }
-    }
-    @media (max-width:980px){
-      #footer .container{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-      }
-    }
-    @media (max-width:700px){
-      #footer .container{
-        grid-template-columns:1fr !important;
-        gap:16px !important;
-        padding:24px 0 !important;
-      }
-      #footer ul{
-        line-height:1.6;
-      }
-    }\n.foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:#0F4C81}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
     .foot-social__link svg{width:18px;height:18px;fill:currentColor}
     @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
-    @media (max-width:900px){.ethics-showcase{grid-template-columns:1fr}.ethics-tab{max-width:100%}.ethics-tab h3{font-size:clamp(30px,6vw,40px)}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}}
-      .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+
+    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),var(--article-image, url('assets/img/Especialidades_servicios.png')) center/cover no-repeat;z-index:-1}
     .hero__content{max-width:820px;padding:86px 0 72px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
     .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
-    .blog-intro{margin:0 0 26px;color:#4a5f79;font-size:1.08rem;max-width:950px}
-    .blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .blog-card{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
-    .blog-card__media{height:190px;overflow:hidden;background:#0d2448}
-    .blog-card__media img{width:100%;height:100%;object-fit:cover;display:block}
-    .blog-card__body{padding:16px}
-    .blog-card h3{margin:0 0 10px;font-size:1.1rem;line-height:1.25;color:#103961}
-    .blog-card p{margin:0 0 14px;color:#4b647f}
-    .blog-card a{text-decoration:none;color:#0f4c81;font-weight:700}
-    .blog-card a:hover{text-decoration:underline}
-    @media (max-width:980px){.blog-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-grid{grid-template-columns:1fr}}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:#0f4c81}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid #0f4c81;border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:#0f4c81;text-transform:uppercase;margin-bottom:6px}
+    .article-media{margin:22px 0;border:1px solid rgba(23,44,81,.12);border-radius:18px;overflow:hidden;background:#f7fbff;box-shadow:0 10px 24px rgba(9,32,58,.08)}
+    .article-media img{display:block;width:100%;height:auto;object-fit:cover}
+    .article-media figcaption{padding:12px 16px;color:#4a5f79;font-size:.95rem;background:#fff}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:620px}
+    .article-table th,.article-table td{padding:14px 16px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.94rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:#0f4c81}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:#0f4c81;text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,#0f4c81 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#0f4c81;text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .lead-magnet{margin:28px 0;padding:22px;border-radius:20px;border:1px dashed #0f4c81;background:linear-gradient(135deg,rgba(15,76,129,.05),rgba(74,163,255,.05))}
+    .lead-magnet__row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center}
+    .lead-magnet h3{margin:0 0 6px;color:#12365f}
+    .lead-magnet p{margin:0;color:#314a67}
+    .related-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+    .related-services .article-mini-card{display:flex;flex-direction:column;justify-content:space-between}
+    .related-services a{display:inline-block;margin-top:10px;font-weight:700;color:#0f4c81;text-decoration:none}
+    .related-services a:hover{text-decoration:underline}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,#0f4c81);color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:#0f4c81;width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#0f4c81;text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:#0f4c81;color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}.related-services{grid-template-columns:1fr 1fr}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar,.related-services,.lead-magnet__row{grid-template-columns:1fr}.article-table{min-width:0}.lead-magnet__row{gap:12px}}
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://www.vms-energy.mx/", "logo": "https://www.vms-energy.mx/assets/logo.png", "description": "VMS Energy — EPC de Infraestructura El&eacute;ctrica, Automatizaci&oacute;n y Control, oil & Gas, Energ&iacute;a Solar Industrial, Generaci&oacute;n Verde No Solar y servicios en Centrales Hidroel&eacute;ctricas de CFE, Iluminaci&oacute;n Industrial y Soluciones Electromec&aacute;nicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC el&eacute;ctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Dise&ntilde;o, suministro t&eacute;cnico y construcci&oacute;n en generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n"}, {"@type": "Service", "name": "EPC de Iluminaci&oacute;n Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Dise&ntilde;o luminot&eacute;cnico, selecci&oacute;n multimarcas, instalaci&oacute;n y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "&iquest;Ofrecen integraci&oacute;n multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "&iquest;Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;: 9001, 14001, 45001, 37001 y 50001, con n&uacute;meros de registro p&uacute;blicos."}}]}]}</script></head>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento de subestaciones AT, MT y BT","item":"https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html"}]},{"@type":"BlogPosting","headline":"Mantenimiento y reparaci&oacute;n de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico","description":"Gu&iacute;a t&eacute;cnica de mantenimiento predictivo, preventivo y correctivo de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico. Pruebas, normativa NOM e IEEE y caso 69 kV.","image":"https://vmsenergy.com/assets/img/blog/mantenimiento-subestaciones/og-mantenimiento-subestaciones.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-04-27","dateModified":"2026-04-27","mainEntityOfPage":"https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html","articleSection":"Operaci&oacute;n y mantenimiento","keywords":"mantenimiento subestaciones, AT MT BT, termograf&iacute;a, pruebas el&eacute;ctricas, NOM-001-SEDE, IEEE 62, M&eacute;xico"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Cada cu&aacute;nto se debe hacer mantenimiento a una subestaci&oacute;n industrial?","acceptedAnswer":{"@type":"Answer","text":"La inspecci&oacute;n visual mensual o trimestral, las pruebas el&eacute;ctricas mayores cada 12 a 24 meses y un mantenimiento mayor con paro programado cada 4 a 6 a&ntilde;os es un esquema de referencia. El plan exacto depende de criticidad del proceso, niveles de tensi&oacute;n y resultados del an&aacute;lisis predictivo."}},{"@type":"Question","name":"&iquest;Cu&aacute;l es la diferencia entre mantenimiento preventivo, predictivo y correctivo?","acceptedAnswer":{"@type":"Answer","text":"El predictivo se basa en datos y monitoreo continuo para anticipar fallas. El preventivo sigue un calendario de inspecciones y pruebas peri&oacute;dicas. El correctivo interviene cuando ya ocurri&oacute; la falla. El orden l&oacute;gico para minimizar OPEX es predictivo, luego preventivo y solo correctivo en emergencia."}},{"@type":"Question","name":"&iquest;Qu&eacute; pruebas el&eacute;ctricas son obligatorias para subestaciones en M&eacute;xico?","acceptedAnswer":{"@type":"Answer","text":"La NOM-001-SEDE-2012 y la NOM-029-STPS-2011 establecen el marco general. En la pr&aacute;ctica industrial son obligadas la termograf&iacute;a, resistencia de aislamiento, factor de potencia, an&aacute;lisis del aceite dielectrico (NMX-J-169-ANCE) y resistencia de contactos en interruptores."}},{"@type":"Question","name":"&iquest;Se puede hacer mantenimiento sin parar la operaci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"Las inspecciones predictivas como termograf&iacute;a, an&aacute;lisis de descargas parciales y monitoreo en l&iacute;nea se ejecutan con la subestaci&oacute;n energizada. Las pruebas el&eacute;ctricas mayores y la intervenci&oacute;n a transformadores e interruptores requieren paro programado y bloqueo seguro."}},{"@type":"Question","name":"&iquest;Cu&aacute;nto tiempo de paro requiere un mantenimiento mayor?","acceptedAnswer":{"@type":"Answer","text":"Un mantenimiento mayor a una subestaci&oacute;n de 13.8 a 69 kV suele requerir entre 24 y 72 horas de paro programado, dependiendo del alcance, n&uacute;mero de bah&iacute;as y si se incluye intervenci&oacute;n al transformador de potencia. La planeaci&oacute;n con el cliente es cr&iacute;tica para minimizar la ventana."}},{"@type":"Question","name":"&iquest;Qu&eacute; normativa cubre el aceite dielectrico de transformadores?","acceptedAnswer":{"@type":"Answer","text":"La NMX-J-169-ANCE define m&eacute;todos de prueba para aceite mineral aislante en transformadores. El IEEE C57.106 y la IEC 60422 son las referencias internacionales m&aacute;s usadas para criterios de aceptaci&oacute;n y diagn&oacute;stico de gases disueltos (DGA)."}},{"@type":"Question","name":"&iquest;Conviene contrato anual de mantenimiento o atenci&oacute;n por evento?","acceptedAnswer":{"@type":"Answer","text":"Para procesos cr&iacute;ticos un contrato anual con plan predictivo y preventivo es m&aacute;s econ&oacute;mico que la atenci&oacute;n por evento. La intervenci&oacute;n por evento solo conviene en instalaciones secundarias con baja criticidad o con plan de modernizaci&oacute;n cercano."}},{"@type":"Question","name":"&iquest;Mantenimiento o reemplazo del transformador?","acceptedAnswer":{"@type":"Answer","text":"Si las pruebas dieldectricas, anal&iacute;tica de aceite y termograf&iacute;a indican degradaci&oacute;n estructural del aislamiento, el mantenimiento ya no recupera vida &uacute;til y conviene evaluar modernizaci&oacute;n. La gu&iacute;a de modernizaci&oacute;n y el autodiagn&oacute;stico ayudan a decidir entre intervenci&oacute;n y reemplazo."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" />
+</head>
 <body>
   <header aria-label="Barra de navegaci&oacute;n">
     <div class="container topbar">
@@ -199,6 +192,13 @@
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
                 </ul>
               </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Sectores</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="nav-item--has-submenu">
@@ -211,7 +211,8 @@
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
                   <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#c2410c;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Fire Control</a></li><li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
               </div>
             </div>
@@ -225,56 +226,487 @@
                   <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
                   <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
                   <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi�n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi�n</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
                 </ul>
               </div>
             </div>
           </li>
+          <li><a href="carreras.html">Carreras</a></li>
           <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
-
-
-
-
-
-
-
-
-      <main>
-    <section id="inicio" class="hero" aria-labelledby="articleTitle" style="--article-image:url('https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg')">
+  <main>
+    <section id="inicio" class="hero" aria-labelledby="articleTitle" style="--article-image:url('assets/img/blog/mantenimiento-subestaciones/hero-mantenimiento-subestaciones.webp')">
       <div class="container hero__content">
-        <span class="eyebrow">VMS Energy &middot; Blog</span>
-        <h1 id="articleTitle">Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico</h1>
-        <p>Buenas practicas de mantenimiento y reparacion de subestaciones AT, MT y BT para confiabilidad de red.</p>
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; Operaci&oacute;n y mantenimiento</span>
+        <h1 id="articleTitle">Mantenimiento y reparaci&oacute;n de subestaciones el&eacute;ctricas AT, MT y BT en M&eacute;xico</h1>
+        <p>Gu&iacute;a t&eacute;cnica para planear inspecciones, pruebas y reparaciones que sostengan la confiabilidad el&eacute;ctrica de tu planta &mdash; desde baja tensi&oacute;n hasta 69 kV y arriba.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="https://vmsenergy.com/mantenimiento-y-reparacion-de-subestaciones-electricas-at-mt-y-bt-en-mexico/" target="_blank" rel="noopener noreferrer">Ver articulo completo</a>
-          <a class="btn btn--secondary" href="blog.html">Volver al blog</a>
+          <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=mantenimiento-subestaciones">Solicitar diagn&oacute;stico</a>
+        </div>
+        <div class="hero__meta">
+          <span>Actualizado abril 2026</span>
+          <span>&middot;</span>
+          <span>Lectura 9 min</span>
+          <span>&middot;</span>
+          <span>Por equipo t&eacute;cnico VMS Energy</span>
         </div>
       </div>
     </section>
 
-    <section class="blog-wrap" aria-labelledby="resumenTitle">
+    <section id="articulo" class="blog-wrap" aria-labelledby="leadTitle">
       <div class="container">
-        <h2 id="resumenTitle" class="section-title">Resumen</h2>
-        <article class="blog-card" style="max-width:900px;margin:0 auto;">
-          <a class="blog-card__media" href="https://vmsenergy.com/mantenimiento-y-reparacion-de-subestaciones-electricas-at-mt-y-bt-en-mexico/" target="_blank" rel="noopener noreferrer" style="height:340px;">
-            <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg" alt="Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico" loading="lazy" decoding="async">
-          </a>
-          <div class="blog-card__body">
-            <p>El mantenimiento de subestaciones de alta, media y baja tension es clave para garantizar estabilidad y confiabilidad del sistema electrico.</p>
-            <a href="https://vmsenergy.com/mantenimiento-y-reparacion-de-subestaciones-electricas-at-mt-y-bt-en-mexico/" target="_blank" rel="noopener noreferrer">Continuar lectura en vmsenergy.com</a>
-          </div>
-        </article>
+        <div class="blog-layout">
+          <article class="blog-article">
+            <h2 id="leadTitle">Por qu&eacute; el mantenimiento de subestaciones es el activo m&aacute;s rentable de tu planta</h2>
+            <p class="article-lead">En la operaci&oacute;n industrial mexicana &mdash; cementeras, mineras, alimentos y bebidas, oil &amp; gas, manufactura pesada &mdash; la subestaci&oacute;n es el cuello de botella entre la red y todo lo dem&aacute;s. Si falla, no falla un equipo: falla la planta. El mantenimiento bien planeado no es un gasto recurrente, es la forma m&aacute;s barata de comprar continuidad operativa.</p>
+            <p>Esta gu&iacute;a explica c&oacute;mo planear, ejecutar y normar el mantenimiento de subestaciones de baja, media y alta tensi&oacute;n en M&eacute;xico: tipos de mantenimiento, pruebas el&eacute;ctricas obligadas, normativa aplicable, frecuencias t&iacute;picas y un caso real de intervenci&oacute;n a 69 kV en planta cementera. Al final encontrar&aacute;s un checklist anual descargable que puedes usar como base de tu propio plan.</p>
+
+            <div class="article-callout">
+              Cada hora de paro no programado en una planta industrial mexicana cuesta entre 8 y 120 veces lo que costar&iacute;a haber prevenido la falla con mantenimiento predictivo. El argumento financiero del mantenimiento ya no se discute &mdash; lo que se discute es c&oacute;mo ejecutarlo bien.
+            </div>
+
+            <nav class="article-toc" aria-label="&Iacute;ndice del art&iacute;culo">
+              <h3>&Iacute;ndice</h3>
+              <ol>
+                <li><a href="#alcance">Qu&eacute; incluye el mantenimiento de una subestaci&oacute;n AT, MT y BT</a></li>
+                <li><a href="#tipos">Tipos de mantenimiento: predictivo, preventivo y correctivo</a></li>
+                <li><a href="#pruebas">Pruebas el&eacute;ctricas clave</a></li>
+                <li><a href="#normativa">Normativa aplicable en M&eacute;xico</a></li>
+                <li><a href="#frecuencias">Frecuencias recomendadas y plan anual</a></li>
+                <li><a href="#alertas">Se&ntilde;ales de reparaci&oacute;n urgente</a></li>
+                <li><a href="#caso">Caso real &mdash; mantenimiento mayor 69 kV cementera Jalisco</a></li>
+                <li><a href="#decision">&iquest;Mantenimiento o modernizaci&oacute;n?</a></li>
+                <li><a href="#proveedor">C&oacute;mo elegir proveedor de mantenimiento el&eacute;ctrico</a></li>
+                <li><a href="#descarga">Checklist anual descargable</a></li>
+                <li><a href="#faq">Preguntas frecuentes</a></li>
+              </ol>
+            </nav>
+
+            <h2 id="alcance">1. Qu&eacute; incluye el mantenimiento de una subestaci&oacute;n AT, MT y BT</h2>
+            <p>En la pr&aacute;ctica mexicana se manejan tres niveles de tensi&oacute;n: <strong>baja tensi&oacute;n (BT)</strong> hasta 1 kV, <strong>media tensi&oacute;n (MT)</strong> entre 1 y 35 kV (donde caen 13.8 y 23 kV, los m&aacute;s comunes a nivel industrial) y <strong>alta tensi&oacute;n (AT)</strong> arriba de 35 kV (69, 115 y 138 kV en interconexi&oacute;n con CFE). Cada nivel impone exigencias distintas de aislamiento, distancias, protecciones y procedimientos de seguridad.</p>
+            <p>El mantenimiento abarca todos los componentes activos y pasivos de la subestaci&oacute;n. No es solo "limpiar y reapretar":</p>
+            <ul>
+              <li><strong>Transformadores de potencia:</strong> aceite, devanados, bushings, cambiador de derivaciones, sistemas de enfriamiento.</li>
+              <li><strong>Interruptores de potencia:</strong> mecanismo de operaci&oacute;n, c&aacute;maras (SF6, vac&iacute;o o aceite), contactos principales y de arqueo.</li>
+              <li><strong>Seccionadores y cuchillas:</strong> contactos, mecanismos, alineaci&oacute;n.</li>
+              <li><strong>Transformadores de instrumento (TC y TP):</strong> aislamiento, relaci&oacute;n y polaridad.</li>
+              <li><strong>Sistemas de protecci&oacute;n y rel&eacute;s:</strong> verificaci&oacute;n de ajustes, pruebas funcionales primarias y secundarias.</li>
+              <li><strong>Sistemas de control y SCADA:</strong> integridad de se&ntilde;ales, comunicaciones, sincronizaci&oacute;n de tiempo.</li>
+              <li><strong>Servicios auxiliares AC/DC:</strong> banco de bater&iacute;as, cargadores, distribuci&oacute;n auxiliar.</li>
+              <li><strong>Malla de tierra y apartarrayos:</strong> resistividad, continuidad, integridad de conexiones equipotenciales.</li>
+              <li><strong>Obra civil y estructuras:</strong> soportes, fundaciones, drenajes, control de acceso.</li>
+            </ul>
+            <p>Si quieres ver c&oacute;mo se dise&ntilde;a una subestaci&oacute;n por capas &mdash; potencia, protecci&oacute;n, control y comunicaciones &mdash; antes de planear su mantenimiento, revisa nuestra <a href="blog-subestacion-electrica-industrial.html#autodiagnostico">gu&iacute;a de modernizaci&oacute;n de subestaciones</a> que entra en detalle al modelo NSIC.</p>
+
+            <h2 id="tipos">2. Tipos de mantenimiento: predictivo, preventivo y correctivo</h2>
+            <p>Los tres enfoques no son alternativos &mdash; son complementarios y deben coexistir en un plan maduro. La diferencia est&aacute; en cu&aacute;nto OPEX absorben y cu&aacute;nto riesgo residual dejan.</p>
+
+            <figure class="article-media">
+              <img src="assets/img/blog/mantenimiento-subestaciones/tipos-mantenimiento-subestaciones.svg" alt="Comparativa visual de mantenimiento predictivo, preventivo y correctivo en subestaciones el&eacute;ctricas" loading="lazy" decoding="async">
+              <figcaption>Los tres enfoques son complementarios. Empezar por correctivo es el camino m&aacute;s caro.</figcaption>
+            </figure>
+
+            <div class="article-table-wrap">
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>Enfoque</th>
+                    <th>Cu&aacute;ndo aplica</th>
+                    <th>Datos / herramientas</th>
+                    <th>Frecuencia t&iacute;pica</th>
+                    <th>Riesgo residual</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Predictivo</strong></td>
+                    <td>Operaci&oacute;n normal, sin paro.</td>
+                    <td>Termograf&iacute;a, monitoreo en l&iacute;nea, an&aacute;lisis de aceite (DGA), descargas parciales.</td>
+                    <td>Continuo o trimestral.</td>
+                    <td>Bajo &mdash; anticipa fallas antes de que escalen.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Preventivo</strong></td>
+                    <td>Paro programado planeado.</td>
+                    <td>Pruebas el&eacute;ctricas, inspecci&oacute;n visual, reapriete, lubricaci&oacute;n, calibraci&oacute;n.</td>
+                    <td>Anual a bianual.</td>
+                    <td>Medio &mdash; depende de calidad de la rutina.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Correctivo</strong></td>
+                    <td>Tras una falla en operaci&oacute;n.</td>
+                    <td>Diagn&oacute;stico de causa ra&iacute;z, refacciones, reparaci&oacute;n o reemplazo.</td>
+                    <td>Ad-hoc.</td>
+                    <td>Alto &mdash; m&aacute;s caro, m&aacute;s lento, m&aacute;s riesgoso.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>El error t&iacute;pico es ejecutar solo preventivo "porque siempre se ha hecho as&iacute;" sin instrumentar lo predictivo. Una termograf&iacute;a semestral de USD 2,000 puede detectar un punto caliente que evita un incendio de transformador de USD 800,000 m&aacute;s tres semanas de paro.</p>
+
+            <h2 id="pruebas">3. Pruebas el&eacute;ctricas clave</h2>
+            <p>Estas son las pruebas que cualquier plan serio de mantenimiento de subestaci&oacute;n industrial debe contemplar. Las primeras tres son no invasivas (predictivas); el resto requieren equipo desenergizado.</p>
+
+            <figure class="article-media">
+              <img src="assets/img/blog/mantenimiento-subestaciones/pruebas-electricas-subestaciones.svg" alt="Infograf&iacute;a de pruebas el&eacute;ctricas: termograf&iacute;a, factor de potencia, rigidez dielectrica y resistencia de aislamiento en subestaciones" loading="lazy" decoding="async">
+              <figcaption>Seis pruebas que conforman el n&uacute;cleo de un plan de mantenimiento profesional de subestaci&oacute;n.</figcaption>
+            </figure>
+
+            <h3>Termograf&iacute;a infrarroja</h3>
+            <p>Inspecci&oacute;n con c&aacute;mara t&eacute;rmica de barras, conexiones, bushings y mecanismos en operaci&oacute;n. Detecta puntos calientes por mal apriete, corrosi&oacute;n o sobrecarga antes de que escalen a falla. Es la prueba con mejor relaci&oacute;n costo-beneficio del cat&aacute;logo.</p>
+
+            <h3>Resistencia de aislamiento (megger) y absorci&oacute;n dielectrica</h3>
+            <p>Mide la integridad del aislamiento s&oacute;lido en transformadores, cables y motores aplicando tensi&oacute;n DC. El &iacute;ndice de polarizaci&oacute;n (PI) y el cociente de absorci&oacute;n dielectrica (DAR) indican humedad o contaminaci&oacute;n del aislamiento.</p>
+
+            <h3>Factor de potencia y tan-delta</h3>
+            <p>En transformadores de potencia, bushings y cables. Detecta envejecimiento del aislamiento por humedad, contaminaci&oacute;n o degradaci&oacute;n t&eacute;rmica. Tendencia ascendente en mediciones sucesivas es se&ntilde;al temprana de p&eacute;rdida de vida &uacute;til.</p>
+
+            <h3>An&aacute;lisis f&iacute;sico-qu&iacute;mico y dielectrico del aceite</h3>
+            <p>El aceite del transformador es testigo silencioso de su salud interna. El an&aacute;lisis de gases disueltos (DGA) por cromatograf&iacute;a permite detectar arcos, descargas parciales o sobrecalentamiento de papel y aceite. Las pruebas de rigidez dielectrica (BDV), humedad, acidez y tensi&oacute;n interfacial completan el diagn&oacute;stico.</p>
+
+            <h3>Resistencia de contactos en interruptores (DLRO)</h3>
+            <p>Mide ca&iacute;da de tensi&oacute;n con corriente de prueba alta (100&minus;600 A DC) en contactos principales de interruptores y seccionadores. Una resistencia anormal indica desgaste, oxidaci&oacute;n o falta de presi&oacute;n de contacto &mdash; precursores de calentamiento y arqueo.</p>
+
+            <h3>Mediciones de puesta a tierra y continuidad de malla</h3>
+            <p>Verifica la efectividad del sistema de tierras de la subestaci&oacute;n. Una malla degradada es un riesgo de seguridad invisible: tensi&oacute;n de paso y de contacto pueden volverse letales sin previo aviso. Se mide resistividad de suelo, resistencia de la malla y continuidad de conexiones equipotenciales.</p>
+
+            <div class="article-table-wrap">
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>Prueba</th>
+                    <th>Qu&eacute; detecta</th>
+                    <th>Norma de referencia</th>
+                    <th>Frecuencia recomendada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Termograf&iacute;a</td>
+                    <td>Puntos calientes, mal apriete, sobrecarga.</td>
+                    <td>NETA MTS, ASTM E1934</td>
+                    <td>Semestral</td>
+                  </tr>
+                  <tr>
+                    <td>Resistencia de aislamiento</td>
+                    <td>Humedad, contaminaci&oacute;n, degradaci&oacute;n.</td>
+                    <td>IEEE 43, IEC 60270</td>
+                    <td>Anual</td>
+                  </tr>
+                  <tr>
+                    <td>Factor de potencia / tan-delta</td>
+                    <td>Envejecimiento del aislamiento.</td>
+                    <td>IEEE C57.152</td>
+                    <td>Anual a bianual</td>
+                  </tr>
+                  <tr>
+                    <td>An&aacute;lisis de aceite (DGA + FQ)</td>
+                    <td>Arcos, descargas, sobrecalentamiento.</td>
+                    <td>NMX-J-169-ANCE, IEEE C57.106, IEC 60422</td>
+                    <td>Anual (semestral en cr&iacute;ticos)</td>
+                  </tr>
+                  <tr>
+                    <td>Resistencia de contactos (DLRO)</td>
+                    <td>Desgaste, oxidaci&oacute;n.</td>
+                    <td>IEC 62271</td>
+                    <td>Anual a bianual</td>
+                  </tr>
+                  <tr>
+                    <td>Sistema de tierras</td>
+                    <td>Tensi&oacute;n de paso/contacto, continuidad.</td>
+                    <td>IEEE 80, IEEE 81, NOM-001-SEDE</td>
+                    <td>Bianual</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="normativa">4. Normativa aplicable en M&eacute;xico</h2>
+            <p>El marco normativo para mantenimiento el&eacute;ctrico industrial en M&eacute;xico combina NOM mexicanas obligatorias y est&aacute;ndares internacionales adoptados por la pr&aacute;ctica:</p>
+            <ul>
+              <li><strong>NOM-001-SEDE-2012</strong> &mdash; Instalaciones el&eacute;ctricas de utilizaci&oacute;n. Marco general obligatorio para toda instalaci&oacute;n industrial en M&eacute;xico.</li>
+              <li><strong>NOM-029-STPS-2011</strong> &mdash; Mantenimiento de las instalaciones el&eacute;ctricas en los centros de trabajo. Obligaciones del patr&oacute;n para operaci&oacute;n y mantenimiento seguro.</li>
+              <li><strong>NMX-J-169-ANCE</strong> &mdash; M&eacute;todos de prueba para transformadores de distribuci&oacute;n y potencia.</li>
+              <li><strong>IEEE 62 / IEEE C57.152</strong> &mdash; Gu&iacute;as de diagn&oacute;stico para transformadores l&iacute;quido-aislados, ampliamente adoptadas a nivel industrial.</li>
+              <li><strong>IEC 60076</strong> &mdash; Especificaciones para transformadores de potencia.</li>
+              <li><strong>IEC 60270</strong> &mdash; T&eacute;cnicas para medici&oacute;n de descargas parciales en aislamiento.</li>
+              <li><strong>CFE-G0000-62</strong> y est&aacute;ndares NRF de PEMEX cuando aplica al cliente.</li>
+              <li><strong>NFPA 70E</strong> &mdash; Seguridad el&eacute;ctrica en lugares de trabajo, an&aacute;lisis de arc flash y EPP categor&iacute;as 1-4.</li>
+            </ul>
+            <p>Para el cliente industrial, lo importante no es memorizar la lista &mdash; es exigir que el proveedor de mantenimiento entregue evidencia documental de cumplimiento por cada una. Un reporte serio incluye protocolos firmados, certificados de calibraci&oacute;n del equipo de prueba y un dictamen t&eacute;cnico contra norma.</p>
+
+            <h2 id="frecuencias">5. Frecuencias recomendadas y plan anual</h2>
+            <p>El plan anual debe combinar inspecciones cortas frecuentes con intervenciones grandes espaciadas. Una matriz de referencia para subestaciones industriales 13.8&minus;69 kV en M&eacute;xico:</p>
+
+            <div class="article-table-wrap">
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>Equipo</th>
+                    <th>Inspecci&oacute;n visual</th>
+                    <th>Pruebas el&eacute;ctricas</th>
+                    <th>Mantenimiento mayor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Transformador de potencia</td>
+                    <td>Mensual</td>
+                    <td>DGA semestral, dielectricas anuales</td>
+                    <td>Cada 6 a&ntilde;os</td>
+                  </tr>
+                  <tr>
+                    <td>Interruptor de potencia (SF6)</td>
+                    <td>Trimestral</td>
+                    <td>DLRO y tiempo de operaci&oacute;n anuales</td>
+                    <td>Cada 5 a&ntilde;os o seg&uacute;n n&uacute;mero de operaciones</td>
+                  </tr>
+                  <tr>
+                    <td>Seccionadores y cuchillas</td>
+                    <td>Trimestral</td>
+                    <td>DLRO bianual</td>
+                    <td>Cada 6-8 a&ntilde;os</td>
+                  </tr>
+                  <tr>
+                    <td>Rel&eacute;s de protecci&oacute;n</td>
+                    <td>N/A</td>
+                    <td>Pruebas funcionales anuales</td>
+                    <td>Recalibraci&oacute;n cada 4-5 a&ntilde;os</td>
+                  </tr>
+                  <tr>
+                    <td>Banco de bater&iacute;as DC</td>
+                    <td>Mensual</td>
+                    <td>Conductancia y descarga anuales</td>
+                    <td>Reemplazo cada 8-12 a&ntilde;os</td>
+                  </tr>
+                  <tr>
+                    <td>Malla de tierra</td>
+                    <td>Anual visual</td>
+                    <td>Resistividad y resistencia bianuales</td>
+                    <td>Refresco cada 10 a&ntilde;os</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Los n&uacute;meros son referencia industrial t&iacute;pica. La criticidad del proceso, condiciones ambientales (corrosivos, altitud, temperatura) y el historial de la subestaci&oacute;n pueden ajustar frecuencias en ambos sentidos.</p>
+
+            <h2 id="alertas">6. Se&ntilde;ales de que tu subestaci&oacute;n necesita reparaci&oacute;n urgente</h2>
+            <p>Si tu subestaci&oacute;n presenta cualquiera de estas se&ntilde;ales, no esperes al pr&oacute;ximo paro programado:</p>
+            <ul>
+              <li>Disparos repetidos o intempestivos sin causa identificable.</li>
+              <li>Ruidos an&oacute;malos en transformador (zumbido m&aacute;s fuerte de lo habitual, golpes met&aacute;licos internos).</li>
+              <li>Olor a aceite quemado o a aislamiento.</li>
+              <li>Fugas visibles de aceite en transformadores, bushings o tanques.</li>
+              <li>Lecturas t&eacute;rmicas an&oacute;malas en monitoreo en l&iacute;nea o termograf&iacute;a.</li>
+              <li>Alarmas de Buchholz, sobre-presi&oacute;n o nivel bajo de aceite activas.</li>
+              <li>Calentamiento visible o decoloraci&oacute;n en barras y conexiones.</li>
+              <li>Dificultad para operar interruptores o seccionadores (pegado, golpeteo, tiempos de operaci&oacute;n fuera de spec).</li>
+              <li>Presencia de descargas parciales audibles o visibles (efecto corona).</li>
+              <li>Variaciones inexplicables en lecturas de tensi&oacute;n, corriente o factor de potencia.</li>
+            </ul>
+            <p>Cualquiera de estas requiere intervenci&oacute;n correctiva inmediata con personal calificado, no esperar al pr&oacute;ximo cronograma. El costo de actuar tarde escala exponencialmente.</p>
+
+            <h2 id="caso">7. Caso real &mdash; mantenimiento mayor 69 kV cementera Jalisco (2025)</h2>
+
+            <div class="case-card">
+              <div class="case-card__head">
+                <span class="case-card__tag">Caso de operaci&oacute;n &middot; 2025</span>
+                <h3>Mantenimiento mayor a subestaci&oacute;n 69 kV &mdash; planta cementera, Jalisco</h3>
+              </div>
+              <div class="case-card__body">
+                <p><strong>Contexto:</strong> planta cementera en Jalisco con subestaci&oacute;n de 69/13.8 kV alimentando hornos rotativos, molinos y servicios auxiliares. La criticidad operativa exige que cualquier intervenci&oacute;n se ejecute dentro de una ventana de paro programado pactada con producci&oacute;n con meses de anticipaci&oacute;n.</p>
+                <p><strong>Alcance ejecutado por VMS Energy:</strong></p>
+                <ul>
+                  <li>Pruebas dielectricas integrales al transformador de potencia 69/13.8 kV: factor de potencia, resistencia de aislamiento, an&aacute;lisis f&iacute;sico-qu&iacute;mico y DGA del aceite.</li>
+                  <li>Mantenimiento mayor a interruptores de potencia: revisi&oacute;n de mecanismos, contactos, prueba de tiempos y resistencia DLRO.</li>
+                  <li>Reapriete certificado de conexiones de potencia con torque calibrado y registro fotogr&aacute;fico.</li>
+                  <li>Termograf&iacute;a previa y posterior a la intervenci&oacute;n para validar resultado.</li>
+                  <li>Verificaci&oacute;n y refresco de protecciones, incluyendo pruebas funcionales de rel&eacute;s y comprobaci&oacute;n de coordinaci&oacute;n.</li>
+                  <li>Inspecci&oacute;n y mediciones a la malla de tierra, con dictamen contra IEEE 80.</li>
+                  <li>Documentaci&oacute;n completa: protocolos firmados, dict&aacute;menes t&eacute;cnicos y entrega de bit&aacute;cora.</li>
+                </ul>
+                <p><strong>Resultado:</strong> subestaci&oacute;n devuelta a operaci&oacute;n dentro de la ventana planificada, con pruebas de aceptaci&oacute;n favorables y un plan de seguimiento predictivo a 12 meses. El cliente conserv&oacute; la continuidad de la l&iacute;nea de producci&oacute;n y obtuvo un dosier t&eacute;cnico utilizable para auditor&iacute;as ISO y reporting corporativo.</p>
+              </div>
+            </div>
+
+            <figure class="article-media">
+              <img src="assets/img/blog/mantenimiento-subestaciones/caso-cementera-jalisco-69kv.webp" alt="Mantenimiento mayor a subestaci&oacute;n 69 kV en planta cementera de Jalisco intervenida por VMS Energy en 2025" loading="lazy" decoding="async">
+              <figcaption>Intervenci&oacute;n integral 69 kV en planta cementera, Jalisco. Foto referencial.</figcaption>
+            </figure>
+
+            <section class="article-cta" aria-labelledby="ctaMidTitle">
+              <h3 id="ctaMidTitle">&iquest;Tu subestaci&oacute;n necesita un diagn&oacute;stico independiente?</h3>
+              <p>Hacemos visita t&eacute;cnica con termograf&iacute;a y revisi&oacute;n preliminar para determinar el alcance real de mantenimiento que tu instalaci&oacute;n requiere. Sin compromiso de contrataci&oacute;n.</p>
+              <div class="article-actions">
+                <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-subestaciones">Solicitar visita t&eacute;cnica</a>
+                <a class="btn btn--secondary" href="especialidad_mantenimiento.html#inicio" style="border-color:rgba(255,255,255,.6);color:#fff">Ver servicio completo</a>
+              </div>
+            </section>
+
+            <h2 id="decision">8. &iquest;Mantenimiento o modernizaci&oacute;n? C&oacute;mo decidir</h2>
+            <p>Llega un punto en que el mantenimiento ya no recupera vida &uacute;til &mdash; solo aplaza lo inevitable. Estos son los criterios de discernimiento m&aacute;s usados:</p>
+            <ul>
+              <li><strong>Edad t&eacute;cnica:</strong> equipos con m&aacute;s de 35 a&ntilde;os de servicio en MT o m&aacute;s de 40 en AT entran en zona de evaluaci&oacute;n estructural.</li>
+              <li><strong>Tendencia de pruebas dielectricas:</strong> si el factor de potencia y el DGA muestran degradaci&oacute;n acelerada en mediciones sucesivas, el aislamiento ya no se recupera.</li>
+              <li><strong>Disponibilidad de refacciones:</strong> equipos descontinuados con stock global &lt; 6 meses son riesgo operativo creciente.</li>
+              <li><strong>Capacidad y crecimiento:</strong> si la planta planea expansi&oacute;n, modernizar a 1.5x el rating actual evita una segunda intervenci&oacute;n en 3 a&ntilde;os.</li>
+              <li><strong>Brechas normativas:</strong> protecciones electromec&aacute;nicas obsoletas, comunicaciones sin SCADA, mallas no certificables &mdash; el costo de remediar puede acercarse al de reemplazar.</li>
+            </ul>
+            <p>Si tras el diagn&oacute;stico el problema es estructural &mdash; dise&ntilde;o, capacidad o protecciones obsoletas &mdash; aplica nuestro <a href="blog-subestacion-electrica-industrial.html#autodiagnostico">autodiagn&oacute;stico de modernizaci&oacute;n</a> que ordena la decisi&oacute;n por capas (NSIC) y traduce hallazgos t&eacute;cnicos a CAPEX y OPEX accionables.</p>
+
+            <h2 id="proveedor">9. C&oacute;mo elegir proveedor de mantenimiento el&eacute;ctrico</h2>
+            <p>Cinco criterios pr&aacute;cticos para evaluar a un proveedor antes de firmar contrato anual:</p>
+            <ol>
+              <li><strong>Certificaciones ISO vigentes:</strong> 9001 (calidad), 14001 (ambiental), 45001 (SST), 37001 (antisoborno) y 50001 (energ&iacute;a) son piso, no plus.</li>
+              <li><strong>Equipo de prueba calibrado y trazable:</strong> exige certificados de calibraci&oacute;n vigentes contra patrones nacionales (CENAM o equivalente).</li>
+              <li><strong>Capacidad multimarca:</strong> que pueda intervenir equipos ABB, Siemens, Schneider, GE, Hitachi y similares sin atarte a un solo fabricante.</li>
+              <li><strong>Experiencia documentada en tu sector:</strong> referencias verificables en cementeras, mineras, alimentos o el sector que aplique.</li>
+              <li><strong>Capacidad EPC integral:</strong> si el diagn&oacute;stico revela que necesitas modernizaci&oacute;n, te conviene un proveedor que pueda ejecutar ingenier&iacute;a, suministro y construcci&oacute;n &mdash; no rebrincar entre tres contratistas distintos.</li>
+            </ol>
+
+            <div class="article-callout">
+              VMS Energy cumple las cinco con 16 a&ntilde;os de operaci&oacute;n, sedes en Guadalajara y Ciudad del Carmen, y portafolio EPC integral. Esto no es ventaja en abstracto: significa que el mismo equipo que diagnostica puede modernizar si los datos lo justifican &mdash; sin discontinuidad t&eacute;cnica.
+            </div>
+
+            <h2 id="descarga">10. Checklist anual descargable</h2>
+
+            <div class="lead-magnet">
+              <div class="lead-magnet__row">
+                <div>
+                  <h3>Checklist anual de inspecci&oacute;n &mdash; subestaciones AT, MT y BT</h3>
+                  <p>Plantilla imprimible con 12 secciones, 80+ puntos de verificaci&oacute;n, alineada con NOM-001-SEDE-2012, NOM-029-STPS-2011 y mejores pr&aacute;cticas IEEE/IEC. &Uacute;sala como base de tu plan o como hoja de auditor&iacute;a a tu proveedor actual.</p>
+                </div>
+                <a class="btn btn--primary" href="checklist-anual-subestaciones-at-mt-bt.html" target="_blank" rel="noopener">Descargar checklist</a>
+              </div>
+            </div>
+
+            <h2 id="faq">11. Preguntas frecuentes</h2>
+            <section class="article-faq" aria-label="Preguntas frecuentes">
+              <details>
+                <summary>&iquest;Cada cu&aacute;nto se debe hacer mantenimiento a una subestaci&oacute;n industrial?</summary>
+                <p>La inspecci&oacute;n visual mensual o trimestral, las pruebas el&eacute;ctricas mayores cada 12 a 24 meses y un mantenimiento mayor con paro programado cada 4 a 6 a&ntilde;os es un esquema de referencia. El plan exacto depende de criticidad del proceso, niveles de tensi&oacute;n y resultados del an&aacute;lisis predictivo.</p>
+              </details>
+              <details>
+                <summary>&iquest;Cu&aacute;l es la diferencia entre mantenimiento preventivo, predictivo y correctivo?</summary>
+                <p>El predictivo se basa en datos y monitoreo continuo para anticipar fallas. El preventivo sigue un calendario de inspecciones y pruebas peri&oacute;dicas. El correctivo interviene cuando ya ocurri&oacute; la falla. El orden l&oacute;gico para minimizar OPEX es predictivo, luego preventivo y solo correctivo en emergencia.</p>
+              </details>
+              <details>
+                <summary>&iquest;Qu&eacute; pruebas el&eacute;ctricas son obligatorias para subestaciones en M&eacute;xico?</summary>
+                <p>La NOM-001-SEDE-2012 y la NOM-029-STPS-2011 establecen el marco general. En la pr&aacute;ctica industrial son obligadas la termograf&iacute;a, resistencia de aislamiento, factor de potencia, an&aacute;lisis del aceite dielectrico (NMX-J-169-ANCE) y resistencia de contactos en interruptores.</p>
+              </details>
+              <details>
+                <summary>&iquest;Se puede hacer mantenimiento sin parar la operaci&oacute;n?</summary>
+                <p>Las inspecciones predictivas como termograf&iacute;a, an&aacute;lisis de descargas parciales y monitoreo en l&iacute;nea se ejecutan con la subestaci&oacute;n energizada. Las pruebas el&eacute;ctricas mayores y la intervenci&oacute;n a transformadores e interruptores requieren paro programado y bloqueo seguro (LOTO).</p>
+              </details>
+              <details>
+                <summary>&iquest;Cu&aacute;nto tiempo de paro requiere un mantenimiento mayor?</summary>
+                <p>Un mantenimiento mayor a una subestaci&oacute;n de 13.8 a 69 kV suele requerir entre 24 y 72 horas de paro programado, dependiendo del alcance, n&uacute;mero de bah&iacute;as y si se incluye intervenci&oacute;n al transformador de potencia. La planeaci&oacute;n con el cliente es cr&iacute;tica para minimizar la ventana.</p>
+              </details>
+              <details>
+                <summary>&iquest;Qu&eacute; normativa cubre el aceite dielectrico de transformadores?</summary>
+                <p>La NMX-J-169-ANCE define m&eacute;todos de prueba para aceite mineral aislante. El IEEE C57.106 y la IEC 60422 son las referencias internacionales m&aacute;s usadas para criterios de aceptaci&oacute;n y diagn&oacute;stico de gases disueltos (DGA).</p>
+              </details>
+              <details>
+                <summary>&iquest;Conviene contrato anual de mantenimiento o atenci&oacute;n por evento?</summary>
+                <p>Para procesos cr&iacute;ticos un contrato anual con plan predictivo y preventivo es m&aacute;s econ&oacute;mico que la atenci&oacute;n por evento. La intervenci&oacute;n por evento solo conviene en instalaciones secundarias con baja criticidad o con plan de modernizaci&oacute;n cercano que har&aacute; obsoleto el equipo actual.</p>
+              </details>
+              <details>
+                <summary>&iquest;Mantenimiento o reemplazo del transformador?</summary>
+                <p>Si las pruebas dielectricas, anal&iacute;tica de aceite y termograf&iacute;a indican degradaci&oacute;n estructural del aislamiento, el mantenimiento ya no recupera vida &uacute;til y conviene evaluar modernizaci&oacute;n. La <a href="blog-subestacion-electrica-industrial.html#autodiagnostico">gu&iacute;a de modernizaci&oacute;n y el autodiagn&oacute;stico</a> ayudan a decidir entre intervenci&oacute;n y reemplazo.</p>
+              </details>
+            </section>
+
+            <div class="article-divider" aria-hidden="true"></div>
+
+            <h2 id="servicios-relacionados">Servicios relacionados</h2>
+            <div class="related-services">
+              <article class="article-mini-card">
+                <span class="tag">Especialidad</span>
+                <h3>Mantenimiento</h3>
+                <p>Servicio integral de mantenimiento el&eacute;ctrico industrial multimarca con cobertura nacional.</p>
+                <a href="especialidad_mantenimiento.html#inicio">Ver especialidad &rarr;</a>
+              </article>
+              <article class="article-mini-card">
+                <span class="tag">Soluci&oacute;n EPC</span>
+                <h3>Infraestructura energ&eacute;tica</h3>
+                <p>Subestaciones, l&iacute;neas y sistemas de potencia: ingenier&iacute;a, suministro y construcci&oacute;n.</p>
+                <a href="soluciones_infraestructura_energetica.html#inicio">Ver soluci&oacute;n &rarr;</a>
+              </article>
+              <article class="article-mini-card">
+                <span class="tag">Soluci&oacute;n EPC</span>
+                <h3>Electromec&aacute;nicas</h3>
+                <p>Integraci&oacute;n el&eacute;ctrica y mec&aacute;nica de procesos industriales y servicios auxiliares.</p>
+                <a href="soluciones_electromecanicas.html#inicio">Ver soluci&oacute;n &rarr;</a>
+              </article>
+            </div>
+
+            <section class="article-cta" aria-labelledby="ctaFinalTitle">
+              <h3 id="ctaFinalTitle">&iquest;Listo para planear el mantenimiento que tu subestaci&oacute;n necesita?</h3>
+              <p>VMS Energy ofrece desde diagn&oacute;sticos puntuales hasta contratos anuales con plan predictivo, preventivo y atenci&oacute;n a emergencias 24/7. Cobertura nacional desde Guadalajara y Ciudad del Carmen.</p>
+              <div class="article-actions">
+                <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-subestaciones">Solicitar cotizaci&oacute;n</a>
+                <a class="btn btn--secondary" href="checklist-anual-subestaciones-at-mt-bt.html" target="_blank" rel="noopener" style="border-color:rgba(255,255,255,.6);color:#fff">Descargar checklist</a>
+              </div>
+            </section>
+          </article>
+
+          <aside class="blog-sidebar" aria-label="Informaci&oacute;n complementaria">
+            <section class="sidebar-card sidebar-card--accent">
+              <h3>&iquest;Necesitas evaluaci&oacute;n inmediata?</h3>
+              <p>Visita t&eacute;cnica con termograf&iacute;a preliminar sin compromiso.</p>
+              <a class="btn" href="contacto_cta.html?producto=mantenimiento-subestaciones">Solicitar visita</a>
+            </section>
+
+            <section class="sidebar-card">
+              <h3>Puntos clave</h3>
+              <ul>
+                <li>Predictivo + preventivo &gt; correctivo en costo total.</li>
+                <li>Termograf&iacute;a semestral es la mejor inversi&oacute;n.</li>
+                <li>NOM-001-SEDE y NOM-029-STPS son piso legal.</li>
+                <li>Mantenimiento mayor cada 4-6 a&ntilde;os.</li>
+                <li>Contrato anual &gt; atenci&oacute;n por evento en cr&iacute;ticos.</li>
+              </ul>
+            </section>
+
+            <section class="sidebar-card">
+              <h3>Lecturas relacionadas</h3>
+              <p><a class="sidebar-link" href="blog-subestacion-electrica-industrial.html">Modernizaci&oacute;n de subestaciones &rarr;</a></p>
+              <p><a class="sidebar-link" href="blog-importancia-tableros-distribucion.html">Tableros de distribuci&oacute;n &rarr;</a></p>
+              <p><a class="sidebar-link" href="blog-caso-exito-embotelladora-colima-2022.html">Caso Embotelladora Colima &rarr;</a></p>
+            </section>
+
+            <section class="sidebar-card">
+              <h3>Servicios relacionados</h3>
+              <p><a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento &rarr;</a></p>
+              <p><a class="sidebar-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura energ&eacute;tica &rarr;</a></p>
+              <p><a class="sidebar-link" href="soluciones_electromecanicas.html#inicio">Electromec&aacute;nicas &rarr;</a></p>
+            </section>
+
+            <section class="sidebar-card">
+              <h3>Contacto directo</h3>
+              <p><strong>Guadalajara:</strong><br><a class="sidebar-link" href="tel:+523338130739">+52 33 3813 0739</a></p>
+              <p><strong>Ciudad del Carmen:</strong><br><a class="sidebar-link" href="tel:+529383814824">+52 938 381 4824</a></p>
+              <p><a class="sidebar-link" href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
+            </section>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
+
+  <div class="mobile-phone-sticky" aria-hidden="false">
+    <a href="tel:+523338130739" aria-label="Llamar a VMS Energy Guadalajara">&#9742; Llamar a VMS</a>
+  </div>
+
 <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
   <div class="container">
     <div>
@@ -308,6 +740,12 @@
           <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
     </div>
 
 
@@ -331,6 +769,7 @@
         <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
         <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
         <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
         <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
       </ul>
     </div>
@@ -397,39 +836,3 @@
 })();
 </script></body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

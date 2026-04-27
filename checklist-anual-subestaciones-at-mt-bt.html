@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checklist anual de inspecci&oacute;n &mdash; subestaciones AT, MT y BT | VMS Energy</title>
+  <meta name="description" content="Checklist imprimible de inspecci&oacute;n anual para subestaciones el&eacute;ctricas industriales AT, MT y BT alineado a NOM-001-SEDE, NOM-029-STPS e IEEE." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://vmsenergy.com/checklist-anual-subestaciones-at-mt-bt.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#0F172A;--muted:#4a5f79;--line:#d8e0ec;--soft:#f5f9ff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#eef2f8;line-height:1.5}
+    .toolbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .toolbar__brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:700}
+    .toolbar__brand img{height:36px;width:auto}
+    .toolbar__actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:6px;border-radius:10px;padding:9px 14px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:.95rem;font-family:inherit}
+    .btn--primary{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+    .btn--primary:hover{background:#0d3f6c}
+    .btn--ghost{background:#fff;color:var(--cobalt);border-color:var(--line)}
+    .btn--ghost:hover{background:var(--soft)}
+    .sheet{max-width:880px;margin:18px auto;background:#fff;padding:36px 44px;border:1px solid var(--line);box-shadow:0 14px 28px rgba(8,28,54,.08)}
+    .sheet h1{margin:0 0 6px;color:var(--navy);font-size:1.7rem;line-height:1.15}
+    .sheet h2{margin:28px 0 10px;color:var(--cobalt);font-size:1.18rem;line-height:1.2;border-bottom:2px solid var(--cobalt);padding-bottom:6px}
+    .sheet h3{margin:14px 0 6px;color:var(--navy);font-size:1rem}
+    .sheet p{margin:0 0 10px;color:var(--ink)}
+    .sheet .lead{color:var(--muted);font-size:.96rem;margin:0 0 12px}
+    .meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:14px 0 4px}
+    .meta-grid .field{display:flex;flex-direction:column;gap:2px;font-size:.92rem}
+    .meta-grid label{color:var(--muted);font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+    .meta-grid .value{border-bottom:1px solid var(--line);min-height:22px;padding:2px 4px}
+    .checklist{margin:0;padding:0;list-style:none}
+    .checklist li{display:grid;grid-template-columns:22px 1fr 110px;gap:10px;align-items:start;padding:7px 0;border-bottom:1px dotted var(--line);font-size:.96rem}
+    .checklist li:last-child{border-bottom:0}
+    .checklist input[type=checkbox]{width:18px;height:18px;margin-top:2px;accent-color:var(--cobalt)}
+    .checklist .note{font-size:.82rem;color:var(--muted);margin-top:2px}
+    .checklist .val{border:1px solid var(--line);border-radius:6px;padding:3px 6px;font-size:.85rem;background:#fff;font-family:inherit;width:100%}
+    .checklist .val:focus{outline:2px solid rgba(15,76,129,.3);border-color:var(--cobalt)}
+    .ref{display:inline-block;background:var(--soft);color:var(--cobalt);font-size:.74rem;font-weight:700;padding:2px 7px;border-radius:999px;margin-left:6px}
+    .legend{font-size:.84rem;color:var(--muted);margin:6px 0 14px}
+    .legend strong{color:var(--ink)}
+    .signoff{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .signoff .field{display:flex;flex-direction:column;gap:4px}
+    .signoff .line{border-bottom:1.5px solid var(--ink);height:48px}
+    .signoff label{color:var(--muted);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .footer-info{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .footer-info a{color:var(--cobalt);text-decoration:none;font-weight:700}
+    .footer-info a:hover{text-decoration:underline}
+    .scope-bar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+    .scope-chip{background:var(--soft);color:var(--cobalt);font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid #cfdef0}
+    @media (max-width:720px){
+      .sheet{padding:22px;margin:10px}
+      .meta-grid{grid-template-columns:1fr}
+      .signoff{grid-template-columns:1fr;gap:14px}
+      .checklist li{grid-template-columns:22px 1fr;gap:8px}
+      .checklist .val{grid-column:1/-1;margin-left:30px;width:calc(100% - 30px)}
+    }
+    @media print{
+      body{background:#fff}
+      .toolbar{display:none}
+      .sheet{box-shadow:none;border:0;margin:0;padding:18mm 16mm;max-width:100%}
+      .sheet h2{page-break-after:avoid}
+      .checklist li{break-inside:avoid;font-size:10pt}
+      .meta-grid{font-size:10pt}
+      .signoff{break-inside:avoid;margin-top:16mm}
+      a{color:inherit;text-decoration:none}
+      .ref{border:1px solid #999;background:#fff;color:#000}
+      .scope-chip{border:1px solid #999;background:#fff}
+      @page{size:letter;margin:14mm}
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar" role="toolbar" aria-label="Acciones del checklist">
+    <div class="toolbar__brand">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager">
+      <span>Checklist anual &middot; Subestaciones AT, MT y BT</span>
+    </div>
+    <div class="toolbar__actions">
+      <button class="btn btn--primary" type="button" onclick="window.print()">&#128424; Imprimir / PDF</button>
+      <a class="btn btn--ghost" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html#descarga">&larr; Volver al art&iacute;culo</a>
+    </div>
+  </div>
+
+  <main class="sheet" aria-labelledby="docTitle">
+    <h1 id="docTitle">Checklist anual de inspecci&oacute;n &mdash; subestaciones el&eacute;ctricas AT, MT y BT</h1>
+    <p class="lead">Plantilla de referencia para inspecci&oacute;n y mantenimiento anual de subestaciones industriales. Alineada con NOM-001-SEDE-2012, NOM-029-STPS-2011, IEEE C57, IEEE 80 y mejores pr&aacute;cticas industriales. Esta plantilla no sustituye un protocolo formal con equipo de prueba calibrado &mdash; es una hoja de ruta para planeaci&oacute;n y auditor&iacute;a.</p>
+
+    <div class="scope-bar" aria-label="Niveles de tensi&oacute;n cubiertos">
+      <span class="scope-chip">Baja tensi&oacute;n &lt; 1 kV</span>
+      <span class="scope-chip">Media tensi&oacute;n 1&minus;35 kV</span>
+      <span class="scope-chip">Alta tensi&oacute;n &gt; 35 kV</span>
+      <span class="scope-chip">12 secciones &middot; 80+ puntos</span>
+    </div>
+
+    <h2>0. Datos generales</h2>
+    <div class="meta-grid">
+      <div class="field"><label>Cliente / planta</label><div class="value" contenteditable="true" role="textbox" aria-label="Cliente">&nbsp;</div></div>
+      <div class="field"><label>Ubicaci&oacute;n</label><div class="value" contenteditable="true" role="textbox" aria-label="Ubicaci&oacute;n">&nbsp;</div></div>
+      <div class="field"><label>Identificaci&oacute;n de la subestaci&oacute;n</label><div class="value" contenteditable="true" role="textbox" aria-label="ID subestaci&oacute;n">&nbsp;</div></div>
+      <div class="field"><label>Niveles de tensi&oacute;n</label><div class="value" contenteditable="true" role="textbox" aria-label="Niveles de tensi&oacute;n">&nbsp;</div></div>
+      <div class="field"><label>Fecha de inspecci&oacute;n</label><div class="value" contenteditable="true" role="textbox" aria-label="Fecha">&nbsp;</div></div>
+      <div class="field"><label>Pr&oacute;xima inspecci&oacute;n programada</label><div class="value" contenteditable="true" role="textbox" aria-label="Pr&oacute;xima inspecci&oacute;n">&nbsp;</div></div>
+      <div class="field"><label>T&eacute;cnico responsable</label><div class="value" contenteditable="true" role="textbox" aria-label="T&eacute;cnico">&nbsp;</div></div>
+      <div class="field"><label>Supervisor de planta</label><div class="value" contenteditable="true" role="textbox" aria-label="Supervisor">&nbsp;</div></div>
+    </div>
+    <p class="legend"><strong>C&oacute;mo usar:</strong> marca cada item ejecutado. Anota valor medido cuando aplique. Para items con desviaci&oacute;n, agregar nota en la secci&oacute;n 11 (Hallazgos). <strong>EPP:</strong> aplicar an&aacute;lisis arc flash y EPP categor&iacute;a NFPA 70E correspondiente antes de iniciar.</p>
+
+    <h2>1. Inspecci&oacute;n visual general del recinto</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c1-1"><label for="c1-1">Estado del cerramiento perimetral, accesos y se&ntilde;al&eacute;tica de seguridad.</label><span></span></li>
+      <li><input type="checkbox" id="c1-2"><label for="c1-2">Iluminaci&oacute;n del patio y casetas operativa.</label><span></span></li>
+      <li><input type="checkbox" id="c1-3"><label for="c1-3">Limpieza general &mdash; ausencia de vegetaci&oacute;n invasiva, polvo, residuos.</label><span></span></li>
+      <li><input type="checkbox" id="c1-4"><label for="c1-4">Drenajes pluviales libres y operativos.</label><span></span></li>
+      <li><input type="checkbox" id="c1-5"><label for="c1-5">Estructuras met&aacute;licas: pintura, corrosi&oacute;n, integridad de tornillera.</label><span></span></li>
+      <li><input type="checkbox" id="c1-6"><label for="c1-6">Se&ntilde;alizaci&oacute;n de equipos y diagramas unifilares actualizados a la vista.</label><span></span></li>
+      <li><input type="checkbox" id="c1-7"><label for="c1-7">Equipo contra incendio: extintores vigentes, sistemas fijos operativos.</label><span></span></li>
+    </ul>
+
+    <h2>2. Transformador de potencia <span class="ref">NMX-J-169-ANCE &middot; IEEE C57.152</span></h2>
+    <h3>Inspecci&oacute;n visual y mec&aacute;nica</h3>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c2-1"><label for="c2-1">Nivel de aceite en tanque principal y bushings dentro de spec.</label><input type="text" class="val" placeholder="Lectura"></li>
+      <li><input type="checkbox" id="c2-2"><label for="c2-2">Ausencia de fugas en juntas, v&aacute;lvulas, radiadores y conservador.</label><span></span></li>
+      <li><input type="checkbox" id="c2-3"><label for="c2-3">Estado de bushings: sin fisuras, sin contaminaci&oacute;n superficial.</label><span></span></li>
+      <li><input type="checkbox" id="c2-4"><label for="c2-4">Term&oacute;metros de aceite y devanados calibrados; alarmas activas.</label><span></span></li>
+      <li><input type="checkbox" id="c2-5"><label for="c2-5">Rel&eacute; Buchholz operativo, sin gas acumulado.</label><span></span></li>
+      <li><input type="checkbox" id="c2-6"><label for="c2-6">V&aacute;lvula de sobrepresi&oacute;n en buen estado.</label><span></span></li>
+      <li><input type="checkbox" id="c2-7"><label for="c2-7">Sistema de enfriamiento (ventiladores/bombas): operativo, sin ruido an&oacute;malo.</label><span></span></li>
+      <li><input type="checkbox" id="c2-8"><label for="c2-8">Cambiador de derivaciones (OLTC/DETC): contador, posici&oacute;n correcta.</label><span></span></li>
+      <li><input type="checkbox" id="c2-9"><label for="c2-9">Conexi&oacute;n a tierra del tanque verificada y continua.</label><span></span></li>
+    </ul>
+    <h3>Pruebas el&eacute;ctricas y anal&iacute;ticas</h3>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c2-10"><label for="c2-10">Resistencia de aislamiento (megger), con DAR y PI.</label><input type="text" class="val" placeholder="M&Omega;"></li>
+      <li><input type="checkbox" id="c2-11"><label for="c2-11">Factor de potencia / tan-delta en devanados y bushings.</label><input type="text" class="val" placeholder="%"></li>
+      <li><input type="checkbox" id="c2-12"><label for="c2-12">Resistencia &oacute;hmica de devanados.</label><input type="text" class="val" placeholder="m&Omega;"></li>
+      <li><input type="checkbox" id="c2-13"><label for="c2-13">Relaci&oacute;n de transformaci&oacute;n (TTR) en todas las posiciones del OLTC.</label><span></span></li>
+      <li><input type="checkbox" id="c2-14"><label for="c2-14">An&aacute;lisis de gases disueltos (DGA) en aceite.</label><input type="text" class="val" placeholder="ppm"></li>
+      <li><input type="checkbox" id="c2-15"><label for="c2-15">Pruebas f&iacute;sico-qu&iacute;micas: BDV, humedad, acidez, tensi&oacute;n interfacial.</label><span></span></li>
+    </ul>
+
+    <h2>3. Interruptores de potencia <span class="ref">IEC 62271</span></h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c3-1"><label for="c3-1">Inspecci&oacute;n visual del mecanismo de operaci&oacute;n.</label><span></span></li>
+      <li><input type="checkbox" id="c3-2"><label for="c3-2">SF6: presi&oacute;n nominal y ausencia de fugas (densidad).</label><input type="text" class="val" placeholder="bar"></li>
+      <li><input type="checkbox" id="c3-3"><label for="c3-3">Vac&iacute;o: integridad de la c&aacute;mara y presi&oacute;n de los contactos.</label><span></span></li>
+      <li><input type="checkbox" id="c3-4"><label for="c3-4">Aceite (si aplica): nivel y calidad dielectrica de la c&aacute;mara.</label><span></span></li>
+      <li><input type="checkbox" id="c3-5"><label for="c3-5">Resistencia de contactos (DLRO) por polo.</label><input type="text" class="val" placeholder="&micro;&Omega;"></li>
+      <li><input type="checkbox" id="c3-6"><label for="c3-6">Tiempos de operaci&oacute;n (cierre/apertura) dentro de spec.</label><input type="text" class="val" placeholder="ms"></li>
+      <li><input type="checkbox" id="c3-7"><label for="c3-7">Bobinas de cierre y disparo: continuidad y consumo.</label><span></span></li>
+      <li><input type="checkbox" id="c3-8"><label for="c3-8">Contador de operaciones registrado.</label><input type="text" class="val" placeholder="#ops"></li>
+      <li><input type="checkbox" id="c3-9"><label for="c3-9">Resorte de cierre / motor cargador operativo.</label><span></span></li>
+    </ul>
+
+    <h2>4. Seccionadores y cuchillas</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c4-1"><label for="c4-1">Mecanismo de operaci&oacute;n: lubricaci&oacute;n, libre de obst&aacute;culos.</label><span></span></li>
+      <li><input type="checkbox" id="c4-2"><label for="c4-2">Alineaci&oacute;n y presi&oacute;n de contactos principales.</label><span></span></li>
+      <li><input type="checkbox" id="c4-3"><label for="c4-3">Cuchillas de tierra: continuidad y operaci&oacute;n.</label><span></span></li>
+      <li><input type="checkbox" id="c4-4"><label for="c4-4">Resistencia de contactos (DLRO).</label><input type="text" class="val" placeholder="&micro;&Omega;"></li>
+      <li><input type="checkbox" id="c4-5"><label for="c4-5">Enclavamientos mec&aacute;nicos y el&eacute;ctricos verificados.</label><span></span></li>
+    </ul>
+
+    <h2>5. Transformadores de instrumento (TC y TP)</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c5-1"><label for="c5-1">Inspecci&oacute;n visual: aislamiento, contaminaci&oacute;n, fugas.</label><span></span></li>
+      <li><input type="checkbox" id="c5-2"><label for="c5-2">Resistencia de aislamiento primario y secundario.</label><span></span></li>
+      <li><input type="checkbox" id="c5-3"><label for="c5-3">Polaridad y relaci&oacute;n de transformaci&oacute;n verificadas.</label><span></span></li>
+      <li><input type="checkbox" id="c5-4"><label for="c5-4">Conexiones secundarias firmes y aterrizadas.</label><span></span></li>
+      <li><input type="checkbox" id="c5-5"><label for="c5-5">Carga (burden) secundaria dentro de spec.</label><span></span></li>
+    </ul>
+
+    <h2>6. Sistemas de protecci&oacute;n y rel&eacute;s <span class="ref">NOM-001-SEDE</span></h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c6-1"><label for="c6-1">Verificaci&oacute;n de ajustes contra estudio de coordinaci&oacute;n vigente.</label><span></span></li>
+      <li><input type="checkbox" id="c6-2"><label for="c6-2">Pruebas funcionales primarias por inyecci&oacute;n.</label><span></span></li>
+      <li><input type="checkbox" id="c6-3"><label for="c6-3">Pruebas secundarias por inyecci&oacute;n a rel&eacute;s.</label><span></span></li>
+      <li><input type="checkbox" id="c6-4"><label for="c6-4">Verificaci&oacute;n de l&oacute;gicas de disparo y enclavamientos.</label><span></span></li>
+      <li><input type="checkbox" id="c6-5"><label for="c6-5">Sincronizaci&oacute;n de tiempo entre rel&eacute;s (IRIG-B / NTP).</label><span></span></li>
+      <li><input type="checkbox" id="c6-6"><label for="c6-6">Reporte de eventos y registros oscilogr&aacute;ficos descargados.</label><span></span></li>
+      <li><input type="checkbox" id="c6-7"><label for="c6-7">Firmware actualizado seg&uacute;n recomendaci&oacute;n del fabricante.</label><span></span></li>
+    </ul>
+
+    <h2>7. Servicios auxiliares DC y banco de bater&iacute;as</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c7-1"><label for="c7-1">Tensi&oacute;n de flotaci&oacute;n del cargador dentro de spec.</label><input type="text" class="val" placeholder="V"></li>
+      <li><input type="checkbox" id="c7-2"><label for="c7-2">Tensi&oacute;n por celda registrada.</label><span></span></li>
+      <li><input type="checkbox" id="c7-3"><label for="c7-3">Prueba de conductancia / impedancia interna por celda.</label><span></span></li>
+      <li><input type="checkbox" id="c7-4"><label for="c7-4">Prueba de descarga de capacidad (cuando aplica).</label><span></span></li>
+      <li><input type="checkbox" id="c7-5"><label for="c7-5">Limpieza de bornes, ausencia de sulfataci&oacute;n.</label><span></span></li>
+      <li><input type="checkbox" id="c7-6"><label for="c7-6">Ventilaci&oacute;n del cuarto de bater&iacute;as adecuada.</label><span></span></li>
+      <li><input type="checkbox" id="c7-7"><label for="c7-7">Distribuci&oacute;n DC: protecciones, alarmas, supervisi&oacute;n de aislamiento.</label><span></span></li>
+    </ul>
+
+    <h2>8. Servicios auxiliares AC</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c8-1"><label for="c8-1">Tablero de servicios auxiliares: protecciones, etiquetado, accesibilidad.</label><span></span></li>
+      <li><input type="checkbox" id="c8-2"><label for="c8-2">Iluminaci&oacute;n de emergencia operativa.</label><span></span></li>
+      <li><input type="checkbox" id="c8-3"><label for="c8-3">Calefactores anti-condensaci&oacute;n en gabinetes operativos.</label><span></span></li>
+      <li><input type="checkbox" id="c8-4"><label for="c8-4">Termograf&iacute;a de tableros de servicios auxiliares.</label><span></span></li>
+    </ul>
+
+    <h2>9. Malla de tierra y apartarrayos <span class="ref">IEEE 80 &middot; IEEE 81</span></h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c9-1"><label for="c9-1">Resistividad del suelo medida.</label><input type="text" class="val" placeholder="&Omega;&middot;m"></li>
+      <li><input type="checkbox" id="c9-2"><label for="c9-2">Resistencia de la malla de tierra.</label><input type="text" class="val" placeholder="&Omega;"></li>
+      <li><input type="checkbox" id="c9-3"><label for="c9-3">Continuidad de conexiones equipotenciales.</label><span></span></li>
+      <li><input type="checkbox" id="c9-4"><label for="c9-4">Tensi&oacute;n de paso y de contacto calculadas dentro de l&iacute;mite seguro.</label><span></span></li>
+      <li><input type="checkbox" id="c9-5"><label for="c9-5">Apartarrayos: inspecci&oacute;n visual, contadores de operaciones.</label><span></span></li>
+      <li><input type="checkbox" id="c9-6"><label for="c9-6">Resistencia de aislamiento de apartarrayos verificada.</label><span></span></li>
+    </ul>
+
+    <h2>10. SCADA, comunicaciones y termograf&iacute;a</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="c10-1"><label for="c10-1">Comunicaci&oacute;n con centro de control verificada (sin alarmas activas).</label><span></span></li>
+      <li><input type="checkbox" id="c10-2"><label for="c10-2">Switches industriales operativos, sin errores de puerto.</label><span></span></li>
+      <li><input type="checkbox" id="c10-3"><label for="c10-3">Sincronizaci&oacute;n GPS / NTP en l&iacute;nea.</label><span></span></li>
+      <li><input type="checkbox" id="c10-4"><label for="c10-4">Respaldo de configuraciones de IEDs y rel&eacute;s actualizado.</label><span></span></li>
+      <li><input type="checkbox" id="c10-5"><label for="c10-5">Termograf&iacute;a integral del patio (energizado) y reporte fotogr&aacute;fico.</label><span></span></li>
+      <li><input type="checkbox" id="c10-6"><label for="c10-6">Termograf&iacute;a de tableros de control y servicios auxiliares.</label><span></span></li>
+    </ul>
+
+    <h2>11. Hallazgos, desviaciones y recomendaciones</h2>
+    <p class="lead">Listar items detectados fuera de spec con severidad (Alta / Media / Baja) y plazo recomendado de remediaci&oacute;n.</p>
+    <div class="meta-grid" style="grid-template-columns:1fr">
+      <div class="field"><label>Hallazgo 1</label><div class="value" contenteditable="true" role="textbox" style="min-height:42px">&nbsp;</div></div>
+      <div class="field"><label>Hallazgo 2</label><div class="value" contenteditable="true" role="textbox" style="min-height:42px">&nbsp;</div></div>
+      <div class="field"><label>Hallazgo 3</label><div class="value" contenteditable="true" role="textbox" style="min-height:42px">&nbsp;</div></div>
+      <div class="field"><label>Hallazgo 4</label><div class="value" contenteditable="true" role="textbox" style="min-height:42px">&nbsp;</div></div>
+    </div>
+
+    <h2>12. Dictamen general</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" id="d-1"><label for="d-1"><strong>APROBADO</strong> &mdash; subestaci&oacute;n apta para operaci&oacute;n normal.</label><span></span></li>
+      <li><input type="checkbox" id="d-2"><label for="d-2"><strong>APROBADO CON OBSERVACIONES</strong> &mdash; operaci&oacute;n con plan de remediaci&oacute;n.</label><span></span></li>
+      <li><input type="checkbox" id="d-3"><label for="d-3"><strong>NO APROBADO</strong> &mdash; requiere intervenci&oacute;n correctiva inmediata.</label><span></span></li>
+    </ul>
+
+    <div class="signoff">
+      <div class="field"><label>T&eacute;cnico responsable / firma</label><div class="line"></div><div style="font-size:.82rem;color:var(--muted);margin-top:4px">Nombre, c&eacute;dula y fecha</div></div>
+      <div class="field"><label>Supervisor de planta / firma</label><div class="line"></div><div style="font-size:.82rem;color:var(--muted);margin-top:4px">Nombre, puesto y fecha</div></div>
+    </div>
+
+    <div class="footer-info">
+      <span>Plantilla VMS Energy v1.0 &middot; abril 2026</span>
+      <span>&iquest;Necesitas ayuda con el plan de mantenimiento? <a href="contacto_cta.html?producto=mantenimiento-subestaciones">Cont&aacute;ctanos</a></span>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('[contenteditable=true]').forEach(function(el){
+      el.addEventListener('focus', function(){ if(el.textContent.trim() === ''){ el.innerHTML=''; }});
+    });
+  </script>
+</body>
+</html>
