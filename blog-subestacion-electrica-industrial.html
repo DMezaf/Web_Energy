@@ -93,7 +93,7 @@ a:hover{text-decoration:underline}
   height:3px;
   background:linear-gradient(90deg,var(--accent3),var(--accent2));
   width:0%;
-  transition: width .08s l&iacute;near;
+  transition: width .08s linear;
 }
 
 .container{max-width:var(--max); margin:0 auto; padding: 28px 18px 80px;}
@@ -3665,23 +3665,23 @@ img{
 
 
 /* Ecosystem shell fix (header/footer from index.html inside blog template) */
-header[aria-label="Barra de navegaci&oacute;n"]{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
-header[aria-label="Barra de navegaci&oacute;n"] .container{max-width:1200px;margin-inline:auto;padding:0 20px}
-header[aria-label="Barra de navegaci&oacute;n"] .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0;position:static;z-index:auto;background:transparent;backdrop-filter:none;border-bottom:0}
-header[aria-label="Barra de navegaci&oacute;n"] .brand{display:flex;align-items:center;gap:0;font-weight:400;letter-spacing:0}
-header[aria-label="Barra de navegaci&oacute;n"] .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
-header[aria-label="Barra de navegaci&oacute;n"] .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
-header[aria-label="Barra de navegaci&oacute;n"] nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
-header[aria-label="Barra de navegaci&oacute;n"] nav a{color:#172C51;text-decoration:none;font-weight:700;letter-spacing:.2px}
-header[aria-label="Barra de navegaci&oacute;n"] .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
-header[aria-label="Barra de navegaci&oacute;n"] .nav-item--has-submenu{position:relative}
-header[aria-label="Barra de navegaci&oacute;n"] .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
-header[aria-label="Barra de navegaci&oacute;n"] .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-header[aria-label="Barra de navegaci&oacute;n"] .nav-item--has-submenu:hover .submenu,header[aria-label="Barra de navegaci&oacute;n"] .nav-item--has-submenu:focus-within .submenu{display:block}
-header[aria-label="Barra de navegaci&oacute;n"] .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-header[aria-label="Barra de navegaci&oacute;n"] .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-header[aria-label="Barra de navegaci&oacute;n"] .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+header[aria-label="Barra de navegación"]{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+header[aria-label="Barra de navegación"] .container{max-width:1200px;margin-inline:auto;padding:0 20px}
+header[aria-label="Barra de navegación"] .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0;position:static;z-index:auto;background:transparent;backdrop-filter:none;border-bottom:0}
+header[aria-label="Barra de navegación"] .brand{display:flex;align-items:center;gap:0;font-weight:400;letter-spacing:0}
+header[aria-label="Barra de navegación"] .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+header[aria-label="Barra de navegación"] .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+header[aria-label="Barra de navegación"] nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+header[aria-label="Barra de navegación"] nav a{color:#172C51;text-decoration:none;font-weight:700;letter-spacing:.2px}
+header[aria-label="Barra de navegación"] .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+header[aria-label="Barra de navegación"] .nav-item--has-submenu{position:relative}
+header[aria-label="Barra de navegación"] .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+header[aria-label="Barra de navegación"] .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+header[aria-label="Barra de navegación"] .nav-item--has-submenu:hover .submenu,header[aria-label="Barra de navegación"] .nav-item--has-submenu:focus-within .submenu{display:block}
+header[aria-label="Barra de navegación"] .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+header[aria-label="Barra de navegación"] .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+header[aria-label="Barra de navegación"] .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 .foot{background:#0b1428;color:#cbd5e1}
     #footer .container{
       display:grid !important;
@@ -3748,8 +3748,8 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
     }\n.foot a{color:#cbd5e1}
 .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
 .foot-social__link svg{width:18px;height:18px;fill:currentColor}
-@media (max-width:980px){header[aria-label="Barra de navegaci&oacute;n"] nav ul{gap:14px}header[aria-label="Barra de navegaci&oacute;n"] .submenu{min-width:280px}}
-@media (max-width:680px){header[aria-label="Barra de navegaci&oacute;n"] nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}header[aria-label="Barra de navegaci&oacute;n"] nav ul.is-open{display:grid;gap:10px}header[aria-label="Barra de navegaci&oacute;n"] .menu-toggle{display:inline-flex}header[aria-label="Barra de navegaci&oacute;n"] .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}header[aria-label="Barra de navegaci&oacute;n"] .nav-item--has-submenu.is-open .submenu{display:block}}</style>
+@media (max-width:980px){header[aria-label="Barra de navegación"] nav ul{gap:14px}header[aria-label="Barra de navegación"] .submenu{min-width:280px}}
+@media (max-width:680px){header[aria-label="Barra de navegación"] nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}header[aria-label="Barra de navegación"] nav ul.is-open{display:grid;gap:10px}header[aria-label="Barra de navegación"] .menu-toggle{display:inline-flex}header[aria-label="Barra de navegación"] .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}header[aria-label="Barra de navegación"] .nav-item--has-submenu.is-open .submenu{display:block}}</style>
 
 <script type="application/ld+json" id="schema-vms-autodiagnostico">
 {
@@ -3796,7 +3796,7 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-subestacion-electrica-industrial.html" />
 </head>
 <body>
-<header aria-label="Barra de navegaci&oacute;n">
+<header aria-label="Barra de navegación">
     <div class="container topbar">
       <div class="brand">
         <div class="brand__logo">
@@ -3807,7 +3807,18 @@ header[aria-label="Barra de navegaci&oacute;n"] .submenu__list a{display:block;c
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
         <ul id="menuList">
           <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li class="nav-item--has-submenu">
             <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
@@ -6242,6 +6253,13 @@ badge.textContent = c.title + ' (' + c.p + '%)';
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+        </ul>
+      </div>
     </div>
 
     <div>

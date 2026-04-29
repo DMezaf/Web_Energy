@@ -187,7 +187,18 @@
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
         <ul id="menuList">
           <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li class="nav-item--has-submenu">
             <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
@@ -343,6 +354,13 @@
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+        </ul>
+      </div>
     </div>
 
     <div>
