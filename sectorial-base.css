@@ -80,6 +80,8 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 }
 .nav-item--has-submenu:hover .submenu,
 .nav-item--has-submenu:has(:focus-visible) .submenu { display: block }
+.nav-item--has-submenu:hover .submenu--mega,
+.nav-item--has-submenu:has(:focus-visible) .submenu--mega { display: flex }
 @media (min-width: 681px) {
   .nav-item--has-submenu:has(~ .nav-item--has-submenu:hover) .submenu,
   .nav-item--has-submenu:has(~ .nav-item--has-submenu :focus-visible) .submenu { display: none }
@@ -88,7 +90,7 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 .submenu__title { display: block; color: #0f4c81; font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; text-decoration: none }
 .submenu__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
 .submenu__list a { display: block; color: #12365f; font-weight: 600; font-size: .9rem; line-height: 1.25; padding: 3px 0 }
-.submenu--mega { min-width: 500px; display: flex; gap: 0 }
+.submenu--mega { min-width: 500px; gap: 0 }
 .submenu--mega .submenu__group { flex: 1; min-width: 0 }
 .submenu--mega .submenu__group + .submenu__group { margin-top: 0; padding-top: 0; border-top: none; padding-left: 14px; border-left: 1px solid rgba(23,44,81,.1) }
 
