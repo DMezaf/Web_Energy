@@ -1,0 +1,997 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pruebas FAT y SAT de Transformadores: Gu&iacute;a T&eacute;cnica IEC 60076 | VMS Energy</title>
+  <meta name="description" content="Gu&iacute;a t&eacute;cnica completa de pruebas FAT y SAT para transformadores industriales: relaci&oacute;n de transformaci&oacute;n, resistencia de devanados, Zcc, p&eacute;rdidas, factor de potencia del aislamiento y an&aacute;lisis DGA conforme IEC 60076." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Pruebas FAT y SAT de Transformadores: Gu&iacute;a T&eacute;cnica IEC 60076 | VMS Energy" />
+  <meta property="og:description" content="Protocolos de prueba de aceptaci&oacute;n en f&aacute;brica (FAT) y en sitio (SAT) para transformadores: TTR, resistencia de devanados, Zcc, p&eacute;rdidas en vac&iacute;o y carga, tangente delta, pruebas diel&eacute;ctricas y DGA." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp" />
+  <meta property="article:published_time" content="2026-05-08" />
+  <meta property="article:modified_time" content="2026-05-08" />
+  <meta property="article:section" content="Ingenier&iacute;a el&eacute;ctrica" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pruebas FAT y SAT de Transformadores: Gu&iacute;a T&eacute;cnica IEC 60076 | VMS Energy" />
+  <meta name="twitter:description" content="Protocolos completos de aceptaci&oacute;n de transformadores: TTR, Zcc, p&eacute;rdidas, factor de potencia del aislamiento y DGA conforme IEC 60076." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.png');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn--primary{background:var(--cobalt);color:#fff}
+    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:560px}
+    .article-table th,.article-table td{padding:14px 16px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.94rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table td.pass{color:#166534;font-weight:700}
+    .article-table td.fail{color:#991b1b;font-weight:700}
+    .article-table td.caution{color:#92400e;font-weight:700}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .formula-box{margin:22px 0;padding:20px 22px;border-radius:16px;background:#eef5ff;border:1px solid rgba(15,76,129,.2);font-family:monospace}
+    .formula-box p{margin:0 0 8px;color:var(--concept-primary);font-size:1.02rem}
+    .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
+    .test-badge{display:inline-block;padding:.18rem .52rem;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .test-badge--fat{background:rgba(15,76,129,.12);color:var(--concept-primary)}
+    .test-badge--sat{background:rgba(22,101,52,.12);color:#166534}
+    .test-badge--both{background:rgba(109,40,217,.12);color:#6d28d9}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Pruebas FAT y SAT de transformadores","item":"https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html"}]},{"@type":"BlogPosting","headline":"Pruebas FAT y SAT de transformadores: gu&iacute;a t&eacute;cnica IEC 60076","description":"Protocolos de prueba de aceptaci&oacute;n en f&aacute;brica (FAT) y en sitio (SAT) para transformadores industriales: TTR, resistencia de devanados, Zcc, p&eacute;rdidas en vac&iacute;o y carga, tangente delta, pruebas diel&eacute;ctricas y an&aacute;lisis DGA conforme IEC 60076.","image":"https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-05-08","dateModified":"2026-05-08","mainEntityOfPage":"https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html","articleSection":"Ingenier&iacute;a el&eacute;ctrica","keywords":"pruebas transformadores, FAT SAT transformadores, IEC 60076, relaci&oacute;n de transformaci&oacute;n, resistencia devanados, impedancia cortocircuito, p&eacute;rdidas vac&iacute;o, tangente delta, DGA transformadores, pruebas diel&eacute;ctricas, aceptaci&oacute;n transformadores"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Qu&eacute; diferencia hay entre FAT y SAT en transformadores?","acceptedAnswer":{"@type":"Answer","text":"El FAT (Factory Acceptance Test) es el conjunto de pruebas que se realiza en las instalaciones del fabricante antes de que el equipo salga de f&aacute;brica. Verifica que el transformador fue fabricado conforme a las especificaciones del pedido. El SAT (Site Acceptance Test) se ejecuta ya en el sitio de instalaci&oacute;n, despu&eacute;s del transporte y montaje, antes de la primera energizaci&oacute;n comercial. Su objetivo es confirmar que el equipo lleg&oacute; sin da&ntilde;os y que la instalaci&oacute;n es correcta. Algunas pruebas se repiten en ambas etapas; otras son exclusivas de cada una."}},{"@type":"Question","name":"&iquest;Qu&eacute; tolerancia acepta la norma IEC 60076 en la relaci&oacute;n de transformaci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"Conforme a IEC 60076-1, la desviaci&oacute;n m&aacute;xima aceptable en la relaci&oacute;n de transformaci&oacute;n (TTR) es de &plusmn;0.5 % respecto al valor declarado en la placa de datos, cuando se mide en la derivaci&oacute;n nominal. Para otras derivaciones de tap, la tolerancia se calcula con base en el rango total del cambiador. Desviaciones mayores indican cortocircuito entre espiras o una conexi&oacute;n interna incorrecta y son causa de rechazo inmediato."}},{"@type":"Question","name":"&iquest;Cu&aacute;ndo se realiza el an&aacute;lisis DGA y qu&eacute; gases son los m&aacute;s cr&iacute;ticos?","acceptedAnswer":{"@type":"Answer","text":"El an&aacute;lisis de gases disueltos (DGA, Dissolved Gas Analysis) aplica &uacute;nicamente a transformadores en aceite. En FAT se realiza opcionalmente como referencia basal (gases casi nulos en equipo nuevo). En SAT se toma una muestra antes de la primera energizaci&oacute;n para confirmar que el llenado de aceite fue correcto, y otra 24-72 horas despu&eacute;s de la primera energizaci&oacute;n para detectar cualquier generaci&oacute;n anormal. Los gases m&aacute;s cr&iacute;ticos son: hidr&oacute;geno (H2) y etileno (C2H4) indican fallas en aceite; acetileno (C2H2) es se&ntilde;al inequ&iacute;voca de descarga de arco; mon&oacute;xido de carbono (CO) y di&oacute;xido de carbono (CO2) indican degradaci&oacute;n del papel aislante."}},{"@type":"Question","name":"&iquest;Qu&eacute; es la prueba de tangente delta y cu&aacute;ndo preocupa?","acceptedAnswer":{"@type":"Answer","text":"La tangente delta (tan &delta;) o factor de potencia del aislamiento mide las p&eacute;rdidas diel&eacute;ctricas en el sistema de aislamiento del transformador. Un aislamiento en perfecto estado tiene tan &delta; muy cercano a cero. Valores elevados indican presencia de humedad, contaminaci&oacute;n o degradaci&oacute;n del aislamiento. En transformadores nuevos, los valores t&iacute;picos son menores a 0.5% (0.005) a 20&deg;C. Un valor superior a 1.0% en equipo nuevo es motivo de rechazo o investigaci&oacute;n por parte del fabricante. En campo, valores que triplican la lectura de f&aacute;brica indicada en el protocolo FAT sugieren contaminaci&oacute;n por humedad durante el transporte o almacenamiento."}},{"@type":"Question","name":"&iquest;C&oacute;mo se mide la resistencia de devanados y qu&eacute; indica?","acceptedAnswer":{"@type":"Answer","text":"La resistencia de devanados se mide con un micro-ohm&iacute;metro o puente de Kelvin de alta resoluci&oacute;n, inyectando una corriente DC estabilizada. Los valores se corrigen a la temperatura de referencia de 75&deg;C seg&uacute;n IEC 60076-1. La prueba detecta conexiones flojas, empalmes incorrectos, devanados con espiras cortocircuitadas o soldaduras deficientes. El desequilibrio entre fases del mismo devanado no debe superar el 2% en transformadores trifas. Un desequilibrio mayor o una lectura que no coincide con el protocolo FAT indica un problema interno que debe investigarse antes de energizar."}},{"@type":"Question","name":"&iquest;Qu&eacute; pruebas diel&eacute;ctricas son obligatorias en FAT?","acceptedAnswer":{"@type":"Answer","text":"Conforme a IEC 60076-3, las pruebas diel&eacute;ctricas de rutina obligatorias en FAT son: prueba de tensi&oacute;n aplicada (ACWV), que aplica una tensi&oacute;n CA al doble de la tensi&oacute;n nominal durante 60 segundos a cada devanado contra tierra y los dem&aacute;s devanados; y prueba de tensi&oacute;n inducida (ACPD o IVPD), que induce una tensi&oacute;n elevada entre bornes del mismo devanado para probar el aislamiento entre espiras, entre capas y entre devanados. Adem&aacute;s, para transformadores de alta tensi&oacute;n (&gt;72.5 kV) se realizan pruebas de impulso de rayo (LI) y de impulso de maniobra (SI) como pruebas de tipo."}},{"@type":"Question","name":"&iquest;El resultado del FAT garantiza que el transformador llegar&aacute; bien al sitio?","acceptedAnswer":{"@type":"Answer","text":"No, el FAT garantiza que el transformador sali&oacute; de f&aacute;brica conforme a la especificaci&oacute;n. El transporte de grandes transformadores de potencia implica riesgos reales: golpes, vibraciones, inclinaci&oacute;n excesiva, ingreso de humedad por fallas en el sello de nitr&oacute;geno o presuri&shy;zaci&oacute;n. Por eso el SAT es obligatorio e independiente del FAT. El protocolo SAT m&iacute;nimo siempre debe incluir: inspecci&oacute;n f&iacute;sica completa, medici&oacute;n de resistencia de devanados, TTR, factor de potencia del aislamiento (tangente delta) y — en transformadores en aceite — an&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, DGA) antes de la primera energizaci&oacute;n."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+</head>
+<body>
+  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="cta-header" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" style="--article-image:url('assets/img/Especialidades_servicios.png')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; Ingenier&iacute;a el&eacute;ctrica</span>
+        <h1 id="hero-title">Pruebas FAT y SAT de transformadores industriales: gu&iacute;a t&eacute;cnica IEC 60076</h1>
+        <p>Protocolos de aceptaci&oacute;n en f&aacute;brica y en sitio: qu&eacute; se mide, c&oacute;mo se interpreta y cu&aacute;ndo rechazar un equipo.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=pruebas-fat-sat-transformadores">Solicitar protocolo FAT/SAT</a>
+        </div>
+        <div class="hero__meta">
+          <span>&#128197; 8 mayo 2026</span>
+          <span>&#9201; 12 min de lectura</span>
+          <span>&#128218; IEC 60076 &middot; IEEE C57</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENIDO ═══════════════ -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── ARTÍCULO ── -->
+        <article class="blog-article" aria-label="Art&iacute;culo: Pruebas FAT y SAT de transformadores">
+
+          <!-- Tabla de contenidos -->
+          <nav class="article-toc" aria-label="Tabla de contenidos">
+            <h3>Contenido del art&iacute;culo</h3>
+            <ol>
+              <li><a href="#fat-vs-sat">FAT vs SAT &mdash; diferencias y objetivos</a></li>
+              <li><a href="#ttr">Relaci&oacute;n de transformaci&oacute;n (TTR)</a></li>
+              <li><a href="#resistencia">Resistencia de devanados</a></li>
+              <li><a href="#zcc">Impedancia de cortocircuito (Zcc) y p&eacute;rdidas en carga</a></li>
+              <li><a href="#vacio">P&eacute;rdidas en vac&iacute;o y corriente de excitaci&oacute;n</a></li>
+              <li><a href="#dielectrico">Factor de potencia del aislamiento (tangente delta)</a></li>
+              <li><a href="#pruebas-hv">Pruebas diel&eacute;ctricas de alta tensi&oacute;n</a></li>
+              <li><a href="#dga">An&aacute;lisis de gases disueltos (DGA)</a></li>
+              <li><a href="#criterios">Criterios de aceptaci&oacute;n y banderas rojas</a></li>
+              <li><a href="#caso">Caso de estudio: SAT de transformador 2&thinsp;500 kVA</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <!-- Intro -->
+          <p class="article-lead">Un transformador puede salir perfecto de f&aacute;brica y llegar da&ntilde;ado al sitio. O puede cumplir todos los par&aacute;metros en papel y fallar en servicio porque nadie verific&oacute; el aislamiento despu&eacute;s del transporte. Las pruebas de aceptaci&oacute;n &mdash;FAT en f&aacute;brica, SAT en campo&mdash; son la &uacute;ltima l&iacute;nea de defensa antes de energizar un equipo que puede costar cientos de miles de d&oacute;lares y cuya falla puede detener una planta completa.</p>
+
+          <p>Esta gu&iacute;a documenta los protocolos t&eacute;cnicos que VMS Energy aplica en proyectos EPC: qu&eacute; pruebas se realizan, en qu&eacute; etapa, c&oacute;mo se interpretan los resultados y cu&aacute;les son los criterios de rechazo conforme a la serie IEC 60076 y las normas IEEE C57.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. FAT vs SAT -->
+          <h2 id="fat-vs-sat">1. FAT vs SAT &mdash; diferencias y objetivos</h2>
+
+          <p>Ambas etapas de prueba tienen objetivos distintos y complementarios. Confundirlas &mdash;o sustituir una por la otra&mdash; es un error que puede dejar vulnerabilidades no detectadas en el sistema.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table" aria-label="Comparaci&oacute;n FAT vs SAT">
+              <thead>
+                <tr>
+                  <th>Criterio</th>
+                  <th>FAT &mdash; F&aacute;brica</th>
+                  <th>SAT &mdash; Sitio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cu&aacute;ndo</strong></td>
+                  <td>Antes del despacho, con el equipo terminado</td>
+                  <td>Despu&eacute;s de montaje, antes de la primera energizaci&oacute;n</td>
+                </tr>
+                <tr>
+                  <td><strong>D&oacute;nde</strong></td>
+                  <td>Instalaciones del fabricante</td>
+                  <td>Sitio final de operaci&oacute;n</td>
+                </tr>
+                <tr>
+                  <td><strong>Objetivo</strong></td>
+                  <td>Verificar cumplimiento con la hoja de datos del pedido</td>
+                  <td>Confirmar integridad despu&eacute;s de transporte e instalaci&oacute;n</td>
+                </tr>
+                <tr>
+                  <td><strong>Normativa base</strong></td>
+                  <td>IEC 60076-1, IEC 60076-3, IEC 60076-2</td>
+                  <td>IEC 60076-1, IEEE C57.12.91, criterios del proyecto</td>
+                </tr>
+                <tr>
+                  <td><strong>Qui&eacute;n testifica</strong></td>
+                  <td>Ingeniero del cliente / supervisor EPC</td>
+                  <td>Superintendente EPC + comisionador</td>
+                </tr>
+                <tr>
+                  <td><strong>Si falla</strong></td>
+                  <td>El fabricante repara antes de despachar</td>
+                  <td>Equipo no se energiza; se investiga causa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Principio fundamental:</strong> El FAT certifica lo que sali&oacute; de f&aacute;brica. El SAT certifica lo que se instalar&aacute; en servicio. Ninguno reemplaza al otro. En proyectos EPC, ambos protocolos deben estar definidos en el contrato con el fabricante desde la fase de especificaci&oacute;n.
+          </div>
+
+          <!-- 2. TTR -->
+          <h2 id="ttr">2. Relaci&oacute;n de transformaci&oacute;n (TTR)</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>La prueba de relaci&oacute;n de transformaci&oacute;n (Turns Ratio Test, TTR) verifica que la relaci&oacute;n entre las tensiones de primario y secundario de cada tap del cambiador coincide con lo declarado en la placa de datos. Es la prueba m&aacute;s fundamental &mdash;si la raz&oacute;n de transformaci&oacute;n no es correcta, el transformador no funcionar&aacute; para la aplicaci&oacute;n para la que fue especificado.</p>
+
+          <h3>C&oacute;mo se realiza</h3>
+          <p>Se utiliza un equipo TTR (puente de relaci&oacute;n de transformaci&oacute;n) que inyecta una tensi&oacute;n CA de baja magnitud al primario y mide la tensi&oacute;n inducida en el secundario, calculando autom&aacute;ticamente la raz&oacute;n. La prueba se realiza en todas las posiciones del cambiador de taps: posici&oacute;n nominal, l&iacute;mite superior e inferior, y al menos una posici&oacute;n intermedia.</p>
+
+          <div class="formula-box">
+            <p>Raz&oacute;n de transformaci&oacute;n medida vs declarada:</p>
+            <p>a = V<sub>1</sub> / V<sub>2</sub></p>
+            <p>Desviaci&oacute;n (%) = |a<sub>medida</sub> &minus; a<sub>nominal</sub>| / a<sub>nominal</sub> &times; 100</p>
+            <p class="formula-result">Tolerancia IEC 60076-1: &le; &plusmn;0.5 % en posici&oacute;n nominal</p>
+          </div>
+
+          <h3>Interpretaci&oacute;n de resultados</h3>
+          <ul>
+            <li><strong>Desviaci&oacute;n &lt; 0.5%:</strong> Resultado conforme. Registrar en protocolo.</li>
+            <li><strong>Desviaci&oacute;n 0.5%&ndash;1.0%:</strong> Zona de alerta. Repetir prueba, verificar conexiones del equipo TTR. Si persiste, investigar con el fabricante.</li>
+            <li><strong>Desviaci&oacute;n &gt; 1.0%:</strong> Causa de rechazo. Puede indicar espiras cortocircuitadas, conexi&oacute;n incorrecta del cambiador de taps o error en la placa de datos.</li>
+            <li><strong>Desequilibrio entre fases en el mismo tap:</strong> Desviaci&oacute;n mayor de 0.3% entre fases sugiere problema interno en una de las columnas del n&uacute;cleo.</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Resistencia de devanados -->
+          <h2 id="resistencia">3. Resistencia de devanados</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>La medici&oacute;n de resistencia de devanados (DC Winding Resistance) detecta problemas en el circuito el&eacute;ctrico interno del transformador: conexiones flojas, soldaduras deficientes, espiras cortocircuitadas o problemas en los contactos del cambiador de taps.</p>
+
+          <h3>Procedimiento</h3>
+          <p>Se inyecta una corriente directa estabilizada (t&iacute;picamente 10&ndash;25 A) en cada devanado y se mide la ca&iacute;da de tensi&oacute;n resultante con un micro-ohm&iacute;metro de alta precisi&oacute;n (resoluci&oacute;n m&iacute;nima de 1 &micro;&Omega;). <strong>El devanado debe estar completamente demagnetizado</strong> antes de la prueba; de lo contrario, las variaciones de flux inducen errores significativos. La medici&oacute;n se repite en cada tap del cambiador.</p>
+
+          <p>Todos los valores se corrigen a la temperatura de referencia de 75&deg;C seg&uacute;n la f&oacute;rmula de IEC 60076-1:</p>
+
+          <div class="formula-box">
+            <p>R<sub>75</sub> = R<sub>T</sub> &times; (235 + 75) / (235 + T)</p>
+            <p>&nbsp;&nbsp;Donde: R<sub>T</sub> = resistencia medida a temperatura T (&deg;C)</p>
+            <p>&nbsp;&nbsp;235 = constante para cobre (use 225 para aluminio)</p>
+            <p class="formula-result">La temperatura del devanado debe medirse en el momento de la prueba y registrarse en el protocolo</p>
+          </div>
+
+          <h3>Criterios de aceptaci&oacute;n</h3>
+          <ul>
+            <li><strong>Desequilibrio entre fases:</strong> m&aacute;ximo 2% para devanados trifas (IEC 60076-1)</li>
+            <li><strong>Comparaci&oacute;n con valores de f&aacute;brica (en SAT):</strong> la variaci&oacute;n no debe superar el 5% respecto al protocolo FAT corregido a la misma temperatura</li>
+            <li><strong>Diferencia entre taps:</strong> los valores deben variar monoton&oacute;nicamente seg&uacute;n el cambiador; saltos irregulares indican contactos deficientes</li>
+          </ul>
+
+          <div class="article-callout--warning article-callout">
+            <strong>Advertencia de seguridad:</strong> Los devanados de AT almacenan energ&iacute;a inductiva significativa. Al concluir la prueba, <strong>nunca desconectar los cables antes de desactivar y descargar el equipo de medici&oacute;n</strong>. La descarga brusca puede generar arco y da&ntilde;ar el aislamiento o causar accidentes al personal.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Zcc -->
+          <h2 id="zcc">4. Impedancia de cortocircuito (Zcc) y p&eacute;rdidas en carga</h2>
+
+          <span class="test-badge test-badge--fat">Solo FAT</span>
+
+          <p>La prueba de impedancia de cortocircuito (o tensi&oacute;n de cortocircuito, Ucc) mide la impedancia interna del transformador expresada como porcentaje de la tensi&oacute;n nominal. Este valor determina la corriente m&aacute;xima de cortocircuito que puede circular en el secundario, lo que es cr&iacute;tico para el dimensionamiento de equipos de protecci&oacute;n.</p>
+
+          <h3>Procedimiento</h3>
+          <p>Con el secundario en cortocircuito, se eleva la tensi&oacute;n del primario hasta que circula la corriente nominal en ambos devanados. La tensi&oacute;n en ese punto, expresada como porcentaje de la tensi&oacute;n nominal, es la <em>tensi&oacute;n de cortocircuito Ucc (%)</em>. La potencia consumida en ese estado es la <strong>p&eacute;rdida en carga</strong> o p&eacute;rdida en el cobre (P<sub>cc</sub>), que incluye las p&eacute;rdidas &oacute;hmicas en los devanados y las p&eacute;rdidas adicionales por corrientes de Foucault.</p>
+
+          <div class="formula-box">
+            <p>Zcc (%) = U<sub>cc</sub> / U<sub>N</sub> &times; 100</p>
+            <p>I<sub>cc(AT)</sub> = S<sub>N</sub> / (&radic;3 &times; U<sub>N(AT)</sub>) / Zcc</p>
+            <p class="formula-result">Tolerancia IEC 60076-1: &plusmn;7.5% del valor declarado en placa para transformadores de distribuci&oacute;n</p>
+          </div>
+
+          <h3>Implicaciones pr&aacute;cticas del valor Zcc</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Zcc (%)</th>
+                  <th>Corriente de cortocircuito</th>
+                  <th>Regulaci&oacute;n de tensi&oacute;n</th>
+                  <th>Aplicaci&oacute;n t&iacute;pica</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.5 &ndash; 4.0</td>
+                  <td class="fail">Alta (25&ndash;29&times; I<sub>N</sub>)</td>
+                  <td class="pass">Excelente (&lt;3%)</td>
+                  <td>Tableros con alta capacidad de ruptura, cargas variables sensibles</td>
+                </tr>
+                <tr>
+                  <td>4.5 &ndash; 5.75</td>
+                  <td>Media (17&ndash;22&times; I<sub>N</sub>)</td>
+                  <td>Buena (3&ndash;5%)</td>
+                  <td>Distribuci&oacute;n industrial est&aacute;ndar, la mayor parte de proyectos EPC</td>
+                </tr>
+                <tr>
+                  <td>6.0 &ndash; 7.5</td>
+                  <td class="pass">Baja (13&ndash;17&times; I<sub>N</sub>)</td>
+                  <td class="fail">Moderada (5&ndash;7%)</td>
+                  <td>Alta potencia, interruptores de menor capacidad de ruptura, alimentaci&oacute;n a cargas pesadas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Pérdidas en vacío -->
+          <h2 id="vacio">5. P&eacute;rdidas en vac&iacute;o y corriente de excitaci&oacute;n</h2>
+
+          <span class="test-badge test-badge--fat">Solo FAT</span>
+
+          <p>La prueba de vac&iacute;o (no-load test) se realiza con el secundario abierto, aplicando la tensi&oacute;n nominal al primario. Mide dos par&aacute;metros que caracterizan el n&uacute;cleo magn&eacute;tico del transformador:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">P&eacute;rdidas en vac&iacute;o (P&rsquo;0)</span>
+              <h3>P&eacute;rdidas en el hierro</h3>
+              <p>Potencia consumida por hist&eacute;resis y corrientes de Foucault en el n&uacute;cleo. Est&aacute;n presentes <strong>siempre que el transformador est&eacute; energizado</strong>, independientemente de la carga. Su valor no debe superar el 5% del garantizado.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Corriente en vac&iacute;o (I&rsquo;0 %)</span>
+              <h3>Corriente de excitaci&oacute;n</h3>
+              <p>Porcentaje de la corriente nominal necesario para magnetizar el n&uacute;cleo. T&iacute;picamente 0.2&ndash;2% en transformadores modernos. Valores elevados pueden indicar l&aacute;minas de n&uacute;cleo da&ntilde;adas o incorrecta presi&oacute;n de apilamiento.</p>
+            </div>
+          </div>
+
+          <h3>Importancia en el ciclo de vida</h3>
+          <p>Las p&eacute;rdidas en vac&iacute;o representan el costo energ&eacute;tico permanente del transformador. En proyectos con evaluaci&oacute;n de Costo Total de Propiedad (TCO), un transformador con p&eacute;rdidas en vac&iacute;o 20% mayores puede costar varios miles de d&oacute;lares adicionales en energ&iacute;a a lo largo de su vida &uacute;til. Por eso las especificaciones EPC exigentes establecen valores m&aacute;ximos garantizados de P&rsquo;0, no solo tolerancias respecto al valor declarado.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Tangente delta -->
+          <h2 id="dielectrico">6. Factor de potencia del aislamiento (tangente delta)</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>El factor de potencia del aislamiento &mdash;colinente conocido como tangente delta (tan &delta;) o disipation factor (DF)&mdash; es la medida m&aacute;s sensible del estado del sistema de aislamiento del transformador. Cuantifica las p&eacute;rdidas diel&eacute;ctricas del aislamiento s&oacute;lido (papel) y l&iacute;quido (aceite o resina) expresadas como cociente entre la corriente resistiva (p&eacute;rdidas reales) y la corriente capacitiva total.</p>
+
+          <div class="formula-box">
+            <p>tan &delta; = I<sub>R</sub> / I<sub>C</sub> = P / (U &times; I<sub>total</sub>)</p>
+            <p>&nbsp;&nbsp;Un aislamiento ideal ser&iacute;a puramente capacitivo: tan &delta; = 0</p>
+            <p class="formula-result">En transformadores nuevos: tan &delta; &lt; 0.005 (0.5%) a 20&deg;C &mdash; IEC 60250</p>
+          </div>
+
+          <h3>Configuraciones de medici&oacute;n</h3>
+          <p>La prueba se realiza con el transformador desenergizado, usando un puente de Schering o equipo equivalent. Se miden tres configuraciones cl&aacute;sicas:</p>
+          <ul>
+            <li><strong>CH (Devanado AT a tierra, devanado BT cortocircuitado a tierra):</strong> Mide el aislamiento del devanado de alta tensi&oacute;n hacia tierra y hacia el devanado de BT.</li>
+            <li><strong>CL (Devanado BT, AT cortocircuitado a tierra):</strong> Mide el aislamiento del devanado de baja tensi&oacute;n.</li>
+            <li><strong>CHL (AT a BT, ambos flotando):</strong> Mide el aislamiento entre devanados, particularmente sensible a la condici&oacute;n del papel entre capas.</li>
+          </ul>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>tan &delta; (%)</th>
+                  <th>Interpretaci&oacute;n</th>
+                  <th>Acci&oacute;n recomendada</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pass">&lt; 0.5</td>
+                  <td>Excelente &mdash; aislamiento sano</td>
+                  <td>Registrar como base. Energizar.</td>
+                </tr>
+                <tr>
+                  <td>0.5 &ndash; 1.0</td>
+                  <td>Bueno &mdash; aceptable en equipo nuevo</td>
+                  <td>Registrar. Comparar con valores FAT.</td>
+                </tr>
+                <tr>
+                  <td class="caution">1.0 &ndash; 2.0</td>
+                  <td>Zona de precauci&oacute;n</td>
+                  <td>Investigar si el valor FAT era menor. Revisar condiciones de almacenamiento y transporte. Considerar secado.</td>
+                </tr>
+                <tr>
+                  <td class="fail">&gt; 2.0 (equipo nuevo)</td>
+                  <td>Inaceptable</td>
+                  <td>No energizar. Reportar al fabricante. Posible da&ntilde;o o contaminaci&oacute;n de aislamiento.</td>
+                </tr>
+                <tr>
+                  <td class="fail">&gt; 3&times; valor FAT (SAT)</td>
+                  <td>Da&ntilde;o o humedad por transporte</td>
+                  <td>No energizar. Proceso de secado o retorno a f&aacute;brica.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Pruebas dieléctricas -->
+          <h2 id="pruebas-hv">7. Pruebas diel&eacute;ctricas de alta tensi&oacute;n</h2>
+
+          <span class="test-badge test-badge--fat">Solo FAT (rutina)</span>
+
+          <p>Las pruebas diel&eacute;ctricas verifican que el aislamiento del transformador puede soportar las sobretensiones a las que estar&aacute; sometido en servicio. IEC 60076-3 establece dos pruebas de rutina y pruebas de tipo adicionales para niveles de tensi&oacute;n elevados.</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Prueba de tensi&oacute;n aplicada (ACWV)</span>
+              <h3>Applied Voltage Withstand</h3>
+              <p>Se aplica una tensi&oacute;n CA separada a cada devanado durante <strong>60 segundos</strong>. La tensi&oacute;n de prueba es funci&oacute;n del nivel de aislamiento del devanado (NBI). Prueba el aislamiento entre devanados y entre cada devanado y tierra.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Tensi&oacute;n inducida (ACPD / IVPD)</span>
+              <h3>Induced Voltage</h3>
+              <p>Se induce una tensi&oacute;n entre bornes del mismo devanado a frecuencia elevada (100&ndash;400 Hz) para evitar saturaci&oacute;n. Prueba el aislamiento entre espiras, entre capas y entre devanados bajo condici&oacute;n de operaci&oacute;n.</p>
+            </div>
+          </div>
+
+          <h3>Pruebas de tipo &mdash; impulso de rayo (LI) e impulso de maniobra (SI)</h3>
+          <p>Para transformadores con tensi&oacute;n nominal &ge; 72.5 kV, la prueba de impulso de rayo (Lightning Impulse, LI) es obligatoria como prueba de tipo. Se aplica un impulso de forma 1.2/50 &micro;s con amplitud definida por el Nivel B&aacute;sico de Impulso (NBI) del equipo. La onda debe ser registrada en osciloscopio digital de alta velocidad y comparada con la onda de referencia. Cualquier deformaci&oacute;n de la onda es evidencia de falla interna.</p>
+
+          <div class="article-callout">
+            <strong>Nota EPC:</strong> Las pruebas de tipo (LI, SI, calentamiento) son realizadas habitualmente solo una vez por dise&ntilde;o de fabricante, no en cada unidad. En proyectos cr&iacute;ticos, el cliente puede exigir prueba de LI por unidad; esto debe negociarse en la especificaci&oacute;n t&eacute;cnica y repr&eacute;cial antes del pedido, ya que implica costo y tiempo adicional.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. DGA -->
+          <h2 id="dga">8. An&aacute;lisis de gases disueltos (DGA)</h2>
+
+          <span class="test-badge test-badge--sat">Prioritario en SAT</span>
+
+          <p>El an&aacute;lisis de gases disueltos en aceite (Dissolved Gas Analysis) es la herramienta diagn&oacute;stica m&aacute;s informativa disponible para transformadores en aceite. Los distintos tipos de falla el&eacute;ctrica o t&eacute;rmica generan gases caracter&iacute;sticos que quedan disueltos en el aceite y pueden ser identificados por cromatograf&iacute;a de gas (GC).</p>
+
+          <h3>Gases clave y su significado</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Gas</th>
+                  <th>S&iacute;mbolo</th>
+                  <th>Origen probable</th>
+                  <th>Nivel de alerta (equipo nuevo)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hidr&oacute;geno</td>
+                  <td>H&#8322;</td>
+                  <td>Descarga parcial en aceite, sobrecalentamiento leve</td>
+                  <td class="caution">&gt; 100 ppm</td>
+                </tr>
+                <tr>
+                  <td>Metano</td>
+                  <td>CH&#8324;</td>
+                  <td>Sobrecalentamiento de aceite (&lt;300&deg;C)</td>
+                  <td class="caution">&gt; 120 ppm</td>
+                </tr>
+                <tr>
+                  <td>Etileno</td>
+                  <td>C&#8322;H&#8324;</td>
+                  <td>Sobrecalentamiento severo de aceite (&gt;500&deg;C)</td>
+                  <td class="caution">&gt; 50 ppm</td>
+                </tr>
+                <tr>
+                  <td>Etano</td>
+                  <td>C&#8322;H&#8326;</td>
+                  <td>Sobrecalentamiento moderado de aceite</td>
+                  <td>&gt; 65 ppm</td>
+                </tr>
+                <tr>
+                  <td>Acetileno</td>
+                  <td>C&#8322;H&#8322;</td>
+                  <td><strong>Arco el&eacute;ctrico en aceite</strong></td>
+                  <td class="fail">&gt; 1 ppm (cualquier nivel es alarma)</td>
+                </tr>
+                <tr>
+                  <td>Mon&oacute;xido de carbono</td>
+                  <td>CO</td>
+                  <td>Degradaci&oacute;n t&eacute;rmica del papel aislante (&lt;300&deg;C)</td>
+                  <td class="caution">&gt; 350 ppm</td>
+                </tr>
+                <tr>
+                  <td>Di&oacute;xido de carbono</td>
+                  <td>CO&#8322;</td>
+                  <td>Degradaci&oacute;n del papel (&gt;300&deg;C) o envejecimiento normal</td>
+                  <td>&gt; 2,500 ppm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>M&eacute;todo de interpretaci&oacute;n: relaci&oacute;n de Rogers y c&oacute;digos IEC 60599</h3>
+          <p>Los gases no se interpretan en forma aislada sino mediante relaciones entre ellos. El m&eacute;todo de los <strong>c&oacute;digos IEC 60599</strong> (revisado de Rogers) clasifica la falla probable calculando tres cocientes: CH&#8324;/H&#8322;, C&#8322;H&#8322;/C&#8322;H&#8324; y C&#8322;H&#8324;/C&#8322;H&#8326;. El m&eacute;todo de Duval ofrece un tri&aacute;ngulo gr&aacute;fico que permite identificar el tipo de falla con mayor robustez cuando alguno de los cocientes es indefinido por valores cero.</p>
+
+          <div class="article-callout">
+            <strong>Protocolo SAT para transformadores en aceite:</strong> Tomar muestra antes de la primera energizaci&oacute;n para confirmar que el llenado fue correcto y establecer el valor basal. Repetir a las 24 horas despu&eacute;s de la primera energizaci&oacute;n y comparar. Un incremento explosivo de cualquier gas entre ambas muestras es se&ntilde;al de falla activa.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Criterios de aceptación -->
+          <h2 id="criterios">9. Criterios de aceptaci&oacute;n y banderas rojas</h2>
+
+          <p>El protocolo de aceptaci&oacute;n debe documentar los criterios de paso/falla antes de iniciar las pruebas, no durante su an&aacute;lisis. A continuaci&oacute;n, un resumen consolidado de los umbrales de rechazo m&aacute;s relevantes:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Prueba</th>
+                  <th>Etapa</th>
+                  <th>Criterio de rechazo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Relaci&oacute;n de transformaci&oacute;n</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">Desviaci&oacute;n &gt; 0.5% en tap nominal; desequilibrio entre fases &gt; 0.3%</td>
+                </tr>
+                <tr>
+                  <td>Resistencia de devanados</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">Desequilibrio entre fases &gt; 2%; variaci&oacute;n vs FAT &gt; 5%</td>
+                </tr>
+                <tr>
+                  <td>Impedancia Zcc (%)</td>
+                  <td>FAT</td>
+                  <td class="fail">Desviaci&oacute;n &gt; 7.5% del valor garantizado (IEC 60076-1)</td>
+                </tr>
+                <tr>
+                  <td>P&eacute;rdidas en carga (Pcc)</td>
+                  <td>FAT</td>
+                  <td class="fail">Excede valor garantizado en m&aacute;s de 10% (IEC 60076-1)</td>
+                </tr>
+                <tr>
+                  <td>P&eacute;rdidas en vac&iacute;o (P&rsquo;0)</td>
+                  <td>FAT</td>
+                  <td class="fail">Excede valor garantizado en m&aacute;s de 10%</td>
+                </tr>
+                <tr>
+                  <td>Tangente delta (tan &delta;)</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">&gt; 2.0% en equipo nuevo; &gt; 3&times; valor FAT en SAT</td>
+                </tr>
+                <tr>
+                  <td>Prueba diel&eacute;ctrica (ACWV)</td>
+                  <td>FAT</td>
+                  <td class="fail">Cualquier falla (disruptiva o destello) durante la prueba</td>
+                </tr>
+                <tr>
+                  <td>Acetileno (DGA)</td>
+                  <td>SAT</td>
+                  <td class="fail">Cualquier concentraci&oacute;n &gt; 1 ppm o incremento entre muestras</td>
+                </tr>
+                <tr>
+                  <td>H&#8322; o CO (DGA)</td>
+                  <td>SAT</td>
+                  <td class="caution">Supera niveles de alerta de IEC 60599 antes de la primera carga</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 10. Caso de estudio -->
+          <h2 id="caso">10. Caso de estudio: SAT de transformador 2&thinsp;500 kVA, Dyn11</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Caso SAT &mdash; Planta de procesamiento, Sonora</span>
+              <h3>Transformador DEEMSA 2&thinsp;500 kVA, 34.5 kV / 480 V, Dyn11, ONAN, Zcc 5.75%</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Contexto:</strong> Proyecto EPC para planta de procesamiento mineral en Sonora, 1&thinsp;500 msnm. Transformador transportado en cami&oacute;n plataforma desde Monterrey (560 km). La unidad lleg&oacute; sin incidentes aparentes seg&uacute;n el acelerom&eacute;tro de impacto, pero se ejecut&oacute; el protocolo SAT completo seg&uacute;n especificaci&oacute;n del proyecto.</p>
+              <p><strong>Resultados del SAT:</strong></p>
+              <ul>
+                <li><strong>Inspecci&oacute;n f&iacute;sica:</strong> Sin da&ntilde;os mec&aacute;nicos visibles. Presi&oacute;n de nitr&oacute;geno (conservador sellado): 2.1 psi positivos &mdash; correcto, indica sello intacto.</li>
+                <li><strong>TTR (relaci&oacute;n de transformaci&oacute;n):</strong> Fases A: 71.87 (nominal: 71.88), B: 71.89, C: 71.87. Desviaci&oacute;n m&aacute;x. 0.013% &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>Resistencia de devanados (AT a 23&deg;C):</strong> A: 14.82 &Omega;, B: 14.85 &Omega;, C: 14.83 &Omega;. Desequilibrio: 0.20% &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>Tangente delta (CH):</strong> 0.38% &mdash; FAT registrado: 0.31%. Variaci&oacute;n: +22.6%, dentro de la tolerancia de 3&times;. <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>Rigidez diel&eacute;ctrica del aceite (antes de energizar):</strong> 52 kV/mm &mdash; l&iacute;mite m&iacute;nimo 30 kV/mm (IEC 60156) &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>Humedad en aceite:</strong> 8.2 ppm &mdash; l&iacute;mite 35 ppm para 34.5 kV (IEC 60422) &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>DGA antes de energizar:</strong> Todos los gases &lt; 5 ppm. Acetileno: no detectado &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
+                <li><strong>DGA a 24 horas de operaci&oacute;n:</strong> H&#8322;: 12 ppm, CH&#8324;: 8 ppm, todos los dem&aacute;s gases &lt; 5 ppm, acetileno: no detectado &mdash; <span style="color:#166534;font-weight:700">NORMAL</span></li>
+              </ul>
+              <p><strong>Conclusi&oacute;n:</strong> Transformador aprobado para operaci&oacute;n comercial. Se documenta el DGA basal como referencia para el programa de mantenimiento predictivo a 6 meses.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Preguntas frecuentes sobre pruebas FAT y SAT</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>&iquest;Qu&eacute; diferencia hay entre FAT y SAT en transformadores?</summary>
+              <p>El FAT (Factory Acceptance Test) se realiza en las instalaciones del fabricante, antes de que el equipo sea despachado. Verifica que el transformador fue construido conforme a la hoja de datos del pedido. El SAT (Site Acceptance Test) se ejecuta en el sitio de instalaci&oacute;n, despu&eacute;s del transporte y montaje, confirmando que el equipo lleg&oacute; sin da&ntilde;os y que la instalaci&oacute;n es correcta antes de la primera energizaci&oacute;n comercial. Algunos par&aacute;metros se miden en ambas etapas; otros son exclusivos de cada una.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; tolerancia acepta IEC 60076 en la relaci&oacute;n de transformaci&oacute;n?</summary>
+              <p>Conforme a IEC 60076-1, la desviaci&oacute;n m&aacute;xima aceptable en la relaci&oacute;n de transformaci&oacute;n (TTR) es de &plusmn;0.5% respecto al valor declarado, cuando se mide en la derivaci&oacute;n nominal. Desviaciones mayores indican cortocircuito entre espiras o conexi&oacute;n interna incorrecta y son causa de rechazo.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Cu&aacute;ndo se realiza el DGA y qu&eacute; gases son los m&aacute;s cr&iacute;ticos?</summary>
+              <p>El DGA aplica solo a transformadores en aceite. En FAT, se puede tomar opcionalmente como valor basal. En SAT, es obligatorio antes de la primera energizaci&oacute;n y se repite 24&ndash;72 horas despu&eacute;s. El gas m&aacute;s cr&iacute;tico es el <strong>acetileno (C&#8322;H&#8322;)</strong>: cualquier concentraci&oacute;n &mdash;incluso 1 ppm&mdash; es se&ntilde;al inequ&iacute;voca de arco el&eacute;ctrico y causa inmediata de investigaci&oacute;n. Hidr&oacute;geno (&gt;100 ppm), etileno (&gt;50 ppm) y CO (&gt;350 ppm) son los siguientes en prioridad.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; es la tangente delta y cu&aacute;ndo preocupa?</summary>
+              <p>La tangente delta (tan &delta;) mide las p&eacute;rdidas diel&eacute;ctricas del aislamiento. Un aislamiento perfecto tendr&iacute;a tan &delta; = 0; la humedad, contaminaci&oacute;n y envejecimiento lo elevan. En transformadores nuevos, el valor debe ser menor a 0.5% (0.005) a 20&deg;C. Un valor mayor a 2.0% en equipo nuevo es causa de rechazo. En SAT, un valor mayor a tres veces el registrado en el FAT indica posible ingreso de humedad durante el transporte o almacenamiento y requiere investigaci&oacute;n antes de energizar.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;C&oacute;mo se mide la resistencia de devanados y qu&eacute; detecta?</summary>
+              <p>Se usa un micro-ohm&iacute;metro que inyecta corriente DC estabilizada y mide la ca&iacute;da de tensi&oacute;n. Los valores se corrigen a 75&deg;C (IEC 60076-1). La prueba detecta conexiones flojas, soldaduras deficientes, espiras cortocircuitadas y contactos defectuosos en el cambiador de taps. El desequilibrio entre fases no debe superar 2%. En SAT, la variaci&oacute;n respecto al protocolo FAT no debe ser mayor al 5%.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;El resultado del FAT garantiza que el transformador llegar&aacute; bien al sitio?</summary>
+              <p>No. El FAT garantiza que sali&oacute; de f&aacute;brica conforme a especificaci&oacute;n. El transporte puede provocar golpes, vibraci&oacute;n, humedad por falla en el sello de presi&oacute;n positiva, o llenado de aceite incorrecto en campo. Por eso el SAT es mandatorio e independiente del FAT. Como m&iacute;nimo, el SAT debe incluir TTR, resistencia de devanados, tangente delta y &mdash;en transformadores en aceite&mdash; an&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, DGA) antes de la primera energizaci&oacute;n.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; pruebas diel&eacute;ctricas son obligatorias en FAT?</summary>
+              <p>Conforme a IEC 60076-3, las pruebas diel&eacute;ctricas de rutina obligatorias en FAT son: prueba de <strong>tensi&oacute;n aplicada (ACWV)</strong>, que somete cada devanado a una tensi&oacute;n CA separada durante 60 segundos; y prueba de <strong>tensi&oacute;n inducida (ACPD/IVPD)</strong>, que induce tensi&oacute;n elevada entre bornes del mismo devanado a frecuencia elevada para probar el aislamiento entre espiras. Para transformadores de AT (&ge; 72.5 kV), se a&ntilde;aden pruebas de impulso de rayo (LI) e impulso de maniobra (SI) como pruebas de tipo.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>¿Necesita un protocolo FAT/SAT para su proyecto?</h3>
+            <p>VMS Energy dise&ntilde;a, supervisa y ejecuta protocolos de prueba de aceptaci&oacute;n conforme a IEC 60076 e IEEE C57 para transformadores de distribuci&oacute;n y potencia en proyectos EPC. Desde la especificaci&oacute;n t&eacute;cnica hasta el comisionamiento y primera energizaci&oacute;n.</p>
+            <div class="article-actions">
+              <a class="btn btn--primary" href="contacto_cta.html?producto=pruebas-fat-sat-transformadores">Solicitar protocolo FAT/SAT</a>
+              <a class="btn btn--secondary" href="especialidad_servicios.html#inicio">Ver servicios de comisionamiento</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+          <!-- CTA accent -->
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>Supervisi&oacute;n FAT en f&aacute;brica</h3>
+            <p>Nuestros ingenieros asisten como representantes t&eacute;cnicos del cliente durante las pruebas FAT para garantizar que ning&uacute;n resultado quede sin documentar ni validar.</p>
+            <a class="btn" href="contacto_cta.html?producto=supervision-fat">Agendar supervisi&oacute;n</a>
+          </div>
+
+          <!-- Checklist SAT -->
+          <div class="sidebar-card">
+            <h3>Checklist SAT m&iacute;nimo</h3>
+            <ul>
+              <li>&#10003; Inspecci&oacute;n f&iacute;sica y presuri&shy;zaci&oacute;n (N&#8322;)</li>
+              <li>&#10003; Relaci&oacute;n de transformaci&oacute;n (TTR)</li>
+              <li>&#10003; Resistencia de devanados</li>
+              <li>&#10003; Tangente delta / factor de potencia del aislamiento</li>
+              <li>&#10003; Rigidez diel&eacute;ctrica del aceite</li>
+              <li>&#10003; Humedad en aceite (ppm H&#8322;O)</li>
+              <li>&#10003; DGA antes de energizar</li>
+              <li>&#10003; Verificaci&oacute;n del grupo vectorial</li>
+              <li>&#10003; Prueba de continuidad y aislamiento de borneras</li>
+              <li>&#10003; DGA a 24 h despu&eacute;s de la primera energizaci&oacute;n</li>
+            </ul>
+          </div>
+
+          <!-- Normas aplicables -->
+          <div class="sidebar-card">
+            <h3>Normas de referencia</h3>
+            <ul>
+              <li><strong>IEC 60076-1</strong> &mdash; Requisitos generales</li>
+              <li><strong>IEC 60076-2</strong> &mdash; Calentamiento y enfriamiento</li>
+              <li><strong>IEC 60076-3</strong> &mdash; Niveles de aislamiento y pruebas diel&eacute;ctricas</li>
+              <li><strong>IEC 60599</strong> &mdash; Interpretaci&oacute;n de DGA</li>
+              <li><strong>IEC 60156</strong> &mdash; Rigidez diel&eacute;ctrica del aceite</li>
+              <li><strong>IEC 60422</strong> &mdash; Guia de mantenimiento de aceite</li>
+              <li><strong>IEEE C57.12.91</strong> &mdash; Pruebas de transformadores de distribuci&oacute;n</li>
+              <li><strong>IEEE C57.104</strong> &mdash; DGA en transformadores</li>
+            </ul>
+          </div>
+
+          <!-- Artículos relacionados -->
+          <div class="sidebar-card">
+            <h3>Art&iacute;culos relacionados</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">&#8594; Selecci&oacute;n de transformadores industriales</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">&#8594; Mantenimiento de subestaciones AT/MT/BT</a></li>
+            </ul>
+          </div>
+
+          <!-- Servicios vinculados -->
+          <div class="sidebar-card">
+            <h3>Servicios relacionados</h3>
+            <p>Pruebas y comisionamiento de transformadores como parte del ciclo EPC.</p>
+            <a class="sidebar-link" href="especialidad_servicios.html#inicio">&#8594; Instalaci&oacute;n y comisionamiento</a><br><br>
+            <a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">&#8594; Diagn&oacute;stico y mantenimiento</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">&#8594; Suministro t&eacute;cnico de transformadores</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Contacto t&eacute;cnico</h3>
+            <p>Hable con un ingeniero especialista en transformadores y subestaciones.</p>
+            <p><strong>&#128222;</strong> <a href="tel:+526141234567">+52 614 XXX XXXX</a></p>
+            <p><strong>&#9993;</strong> <a href="mailto:ingenieria@vmsenergy.com">ingenieria@vmsenergy.com</a></p>
+          </div>
+
+        </aside><!-- /blog-sidebar -->
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="foot" id="footer" aria-label="Pie de p&aacute;gina">
+    <div class="container">
+      <div>
+        <h4>VMS Energy</h4>
+        <ul>
+          <li><a class="foot-link" href="nosotros.html#inicio">Nosotros</a></li>
+          <li><a class="foot-link" href="certificaciones.html#inicio">Certificaciones</a></li>
+          <li><a class="foot-link" href="blog.html">Blog</a></li>
+          <li><a class="foot-link" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="foot-social__link" href="https://www.linkedin.com/company/vmsenergy" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.103v1.561h.046c.434-.821 1.495-1.686 3.076-1.686 3.289 0 3.894 2.165 3.894 4.979v6.598h-.657zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.558 13.019H3.779V9h3.116v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a class="foot-link" href="soluciones_electromecanicas.html#inicio">Electromec&aacute;nica</a></li>
+          <li><a class="foot-link" href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n</a></li>
+          <li><a class="foot-link" href="soluciones_solar_industrial.html#inicio">Solar Industrial</a></li>
+          <li><a class="foot-link" href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+          <li><a class="foot-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a class="foot-link" href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+          <li><a class="foot-link" href="especialidad_servicios.html#inicio">Servicios</a></li>
+          <li><a class="foot-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+          <li><a class="foot-link" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suministro</h4>
+        <ul>
+          <li><a class="foot-link" href="procura.html#inicio">Procura t&eacute;cnica</a></li>
+          <li><a class="foot-link" href="VMShop.html">VMShop</a></li>
+          <li><a class="foot-link" href="lp-cable-de-potencia-kei.html">Cable KEI</a></li>
+          <li><a class="foot-link" href="lp-triol-variadores.html">Variadores Triol</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Blog T&eacute;cnico</h4>
+        <ul>
+          <li><a class="foot-link" href="blog-seleccion-transformadores-industriales.html">Selecci&oacute;n de transformadores</a></li>
+          <li><a class="foot-link" href="blog-pruebas-aceptacion-transformadores.html">Pruebas FAT y SAT</a></li>
+          <li><a class="foot-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">Mantenimiento subestaciones</a></li>
+          <li><a class="foot-link" href="blog.html">Ver todos los art&iacute;culos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(203,213,225,.14);padding:18px 0;text-align:center;font-size:.88rem;color:#7b93b3">
+      &copy; 2026 VMS Energy &mdash; Ingenier&iacute;a el&eacute;ctrica EPC &middot; M&eacute;xico
+    </div>
+  </footer>
+
+  <!-- Botón flotante móvil -->
+  <div class="mobile-phone-sticky">
+    <a href="tel:+526141234567" aria-label="Llamar a VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script>
+    /* === Mobile nav toggle === */
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('menuList');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    /* Close on outside click */
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    /* Submenu mobile toggle */
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if (window.innerWidth <= 680) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,33 +1,35 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy</title>
+  <title>M&aacute;s de 17 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy</title>
   <meta name="description" content="VMS Energy: empresa EPC con 5 certificaciones ISO, clientes Tier 1 (PEMEX, Coca-Cola, CEMEX) y cobertura nacional. Con&oacute;cenos y solicita tu consultor&iacute;a." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/nosotros.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="20 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy" />
+  <meta property="og:title" content="M&aacute;s de 17 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy" />
   <meta property="og:description" content="VMS Energy: empresa EPC con 5 certificaciones ISO, clientes Tier 1 (PEMEX, Coca-Cola, CEMEX) y cobertura nacional. Con&oacute;cenos y solicita tu consultor&iacute;a." />
   <meta property="og:url" content="https://vmsenergy.com/nosotros.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="20 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy" />
+  <meta name="twitter:title" content="M&aacute;s de 17 A&ntilde;os en EPC El&eacute;ctrico Industrial M&eacute;xico | VMS Energy" />
   <meta name="twitter:description" content="VMS Energy: empresa EPC con 5 certificaciones ISO, clientes Tier 1 (PEMEX, Coca-Cola, CEMEX) y cobertura nacional. Con&oacute;cenos y solicita tu consultor&iacute;a." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.png" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/nosotros.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/nosotros.html" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --navy:#172C51; /* Azul Marino */
-      --cobalt:#0F4C81; /* Azul Cobalto (acentos) */
+       /* Azul Marino */
+       /* Azul Cobalto (acentos) */
       --blue-2:#274B7C;
       --blue-3:#3A6FA5;
       --gray:#F2F4F7;
@@ -38,7 +40,6 @@
     html{scroll-behavior:smooth}
     body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#ffffff;}
     /* ===== Layout ===== */
-    .container{max-width:1200px;margin-inline:auto;padding:0 20px}
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
@@ -67,7 +68,7 @@
       z-index:60;
     }
     .nav-item--has-submenu:hover .submenu,
-    .nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{
       margin-top:10px;
       padding-top:10px;
@@ -75,7 +76,7 @@
     }
     .submenu__title{
       display:block;
-      color:#0f4c81;
+      color:var(--concept-primary);
       font-size:.76rem;
       font-weight:800;
       letter-spacing:.08em;
@@ -111,8 +112,6 @@
       .menu-toggle{display:inline-flex}
     }
 /* ===== Hero ===== */
-    .hero{position:relative;isolation:isolate;background:radial-gradient(80% 60% at 70% 20%, rgba(63,111,165,.25), transparent 60%),linear-gradient(180deg, #0a162b 0%, #0a162b 40%, #0f2244 100%);
-      color:#fff;overflow:hidden}
     .hero:before{content:none}
     .hero-carousel{position:relative}
     .hero-carousel__viewport{position:relative}
@@ -316,8 +315,8 @@
       cursor:pointer;
     }
     .diff-carousel__dot.is-active{
-      background:#0F4C81;
-      border-color:#0F4C81;
+      background:var(--concept-primary);
+      border-color:var(--concept-primary);
     }
     @media (max-width:980px){
       .diff-slide{
@@ -398,31 +397,6 @@
     .quote{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:16px;padding:18px}
     .quote p{margin:0 0 10px}
     .quote .who{font-size:14px;color:#475569}
-
-    .foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -439,7 +413,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -693,7 +667,7 @@
     /* ===== Nosotros Carousel ===== */
     .nos-carousel{padding:22px 0 36px;background:linear-gradient(180deg,#f7f9fc,#fff)}
     .nos-carousel__head{margin:0 0 14px;position:static !important;top:auto !important}
-    .nos-carousel__kicker{margin:0 0 4px;color:#0F4C81;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+    .nos-carousel__kicker{margin:0 0 4px;color:var(--concept-primary);letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
     .nos-carousel__title{margin:0;color:#172C51;font-size:clamp(1.2rem,2.2vw,1.9rem);line-height:1.15}
     .nos-carousel__box{position:relative;overflow:hidden;border-radius:18px;border:1px solid rgba(23,44,81,.12);box-shadow:0 14px 36px rgba(0,0,0,.14)}
     .nos-carousel__slide{display:none}
@@ -703,10 +677,10 @@
     .nos-carousel__nav--prev{left:12px}
     .nos-carousel__nav--next{right:12px}
     .nos-carousel__tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:12px 0}
-    .nos-carousel__tab{padding:7px 12px;border-radius:999px;border:1px solid rgba(23,44,81,.24);background:#fff;color:#0F4C81;font-size:.86rem;font-weight:700;cursor:pointer}
-    .nos-carousel__tab.is-active{background:#0F4C81;color:#fff;border-color:#0F4C81}
+    .nos-carousel__tab{padding:7px 12px;border-radius:999px;border:1px solid rgba(23,44,81,.24);background:#fff;color:var(--concept-primary);font-size:.86rem;font-weight:700;cursor:pointer}
+    .nos-carousel__tab.is-active{background:var(--concept-primary);color:#fff;border-color:var(--concept-primary)}
     .nos-carousel__caption{margin-top:12px;padding:12px 14px;border-radius:12px;background:#fff;border:1px solid rgba(23,44,81,.12)}
-    .nos-carousel__caption-title{margin:0 0 4px;color:#0F4C81;font-size:1rem}
+    .nos-carousel__caption-title{margin:0 0 4px;color:var(--concept-primary);font-size:1rem}
     .nos-carousel__caption-text{margin:0;width:100%;max-width:none;color:#475569;font-size:.94rem;line-height:1.58;text-wrap:pretty}
     .hero-slice--nosotros .nos-carousel{
       padding:14px 0 0;
@@ -722,7 +696,7 @@
       color:#eaf3ff;
     }
     .hero-slice--nosotros .nos-carousel__tab.is-active{
-      background:#0F4C81;
+      background:var(--concept-primary);
       border-color:#8ed7ff;
       color:#fff;
     }
@@ -1338,12 +1312,12 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   white-space:nowrap !important;
   border:0 !important;
 }
-</style>
+  </style>
 
 <style>
 .matrix-blueprint {
   background: #172C51;
-  border: 1px solid #0F4C81;
+  border: 1px solid var(--concept-primary);
   color: #E5E9F0;
   border-radius: 12px;
   padding: 1.5rem;
@@ -1360,7 +1334,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   vertical-align: top;
 }
 .matrix-blueprint th {
-  background: #0F4C81;
+  background: var(--concept-primary);
   color: #fff;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -1368,7 +1342,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   position: sticky; top: 0; z-index: 1;
 }
 .btn-blueprint {
-  background: #0F4C81;
+  background: var(--concept-primary);
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -1382,14 +1356,14 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 .matrix-search input {
   background: rgba(255,255,255,0.1);
   color: #E5E9F0;
-  border: 1px solid #0F4C81;
+  border: 1px solid var(--concept-primary);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.9rem;
   width: 280px;
 }
 .matrix-search input::placeholder { color: #9CA3AF; }
-.tag{display:inline-block;padding:.1rem .45rem;border-radius:999px;background:#0F4C81;color:#fff;font-size:.7rem;margin:.15rem .35rem .15rem 0}
+.tag{display:inline-block;padding:.1rem .45rem;border-radius:999px;background:var(--concept-primary);color:#fff;font-size:.7rem;margin:.15rem .35rem .15rem 0}
 </style>
 
 <style>
@@ -1399,7 +1373,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 .cvx__kicker{margin:0;color:rgba(23,44,81,.68);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
 .cvx__title{margin:.28rem 0 .4rem;color:#0b2545;font-size:clamp(1.45rem,2.2vw,2rem);line-height:1.1}
 .cvx__lead{margin:0;color:#475569}
-.cvx__industry{color:#0f4c81;font-weight:700}
+.cvx__industry{color:var(--concept-primary);font-weight:700}
 .cvx__grid{margin-top:16px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
 .cvx__card{grid-column:span 4;background:linear-gradient(180deg,#0b2344 0%,#0a1c35 100%);border:1px solid rgba(127,183,255,.22);border-radius:18px;box-shadow:0 18px 48px rgba(0,0,0,.14);padding:18px;color:#fff}
 .cvx__card--wide{grid-column:span 8}
@@ -1421,8 +1395,6 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 <!-- v9.23f STYLE PATCH: consolidated visual fixes, accessibility, and responsive polish -->
 <style id="v923f-style-patch">
   :root{
-    --navy:#172C51;
-    --cobalt:#0F4C81;
     --blue-2:#274B7C;
     --blue-3:#3A6FA5;
     --gray:#F2F4F7;
@@ -1457,15 +1429,15 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
   /* Toast + Cable table (dedupe to one canonical variant) */
   .toast-stack{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;flex-direction:column;gap:8px}
-  .toast{display:flex;align-items:center;gap:.6rem;background:#172C51;color:#E5E9F0;border:1px solid #0F4C81;
+  .toast{display:flex;align-items:center;gap:.6rem;background:#172C51;color:#E5E9F0;border:1px solid var(--concept-primary);
          border-radius:10px;padding:.6rem .9rem;box-shadow:0 6px 24px rgba(15,76,129,.35);
          opacity:0;transform:translateY(8px);transition:all .25s ease;font-weight:600;position:relative;overflow:hidden}
   .toast.show{opacity:1;transform:translateY(0)}
-  .toast__bar{position:absolute;left:0;bottom:0;height:3px;background:#0F4C81;width:100%;animation:toastbar l&iacute;near forwards}
+  .toast__bar{position:absolute;left:0;bottom:0;height:3px;background:var(--concept-primary);width:100%;animation:toastbar l&iacute;near forwards}
   @keyframes toastbar{from{width:100%}to{width:0}}
   .cable-table{width:100%;border-collapse:collapse;margin:.5rem 0;min-width:640px}
   .cable-table th,.cable-table td{border:1px solid rgba(15,76,129,.25);padding:.5rem .7rem;text-align:left}
-  .cable-table thead th{background:#0F4C81;color:#fff;font-weight:700;letter-spacing:.02em}
+  .cable-table thead th{background:var(--concept-primary);color:#fff;font-weight:700;letter-spacing:.02em}
   .cable-table tbody tr:nth-child(even) td{background:rgba(15,76,129,.05)}
   .cable-table tbody tr:hover{background:rgba(15,76,129,.10)}
 
@@ -1549,23 +1521,23 @@ label{font-size:14px}
 .diff__grid,.sol__grid,.testi__grid{gap:12px}
 .card{padding:14px;border-radius:14px}
 /* Sticky quick-CTA */
-.quickbar{position:sticky;bottom:0;z-index:50;background:#0F4C81;color:#fff;
+.quickbar{position:sticky;bottom:0;z-index:50;background:var(--concept-primary);color:#fff;
   display:flex;align-items:center;justify-content:space-between;gap:10px;
   padding:10px 12px;border-top:1px solid rgba(255,255,255,.2)}
 .quickbar__sum{display:flex;gap:6px;flex-wrap:wrap;font-size:12px}
 .quickbar .chip{background:#172C51;border:1px solid rgba(255,255,255,.25);color:#fff}
-.quickbar .btn{background:#fff;color:#0F4C81;border-color:#fff}
+.quickbar .btn{background:#fff;color:var(--concept-primary);border-color:#fff}
 /* Checkbox as pill */
 .filters input[type="checkbox"]{appearance:none;inline-size:18px;block-size:18px;border:1px solid rgba(23,44,81,.25);border-radius:4px;display:inline-grid;place-items:center}
 .filters input[type="checkbox"]::after{content:"";inline-size:12px;block-size:12px;background:transparent;border-radius:2px;transform:scale(0);transition:transform .15s ease, background .15s ease}
-.filters input[type="checkbox"]:checked{border-color:#0F4C81;background:#E6EEF7}
-.filters input[type="checkbox"]:checked::after{background:#0F4C81;transform:scale(1)}
+.filters input[type="checkbox"]:checked{border-color:var(--concept-primary);background:#E6EEF7}
+.filters input[type="checkbox"]:checked::after{background:var(--concept-primary);transform:scale(1)}
 /* One-line toolbar */
 .inline-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0}
 .inline-toolbar .btn{padding:6px 10px;border-radius:999px}
 .inline-toolbar .muted{font-size:12px;color:#dbe3ef}
 /* Auto-advance focus ring */
-:focus-visible{outline:2px solid #0F4C81;outline-offset:2px}
+:focus-visible{outline:2px solid var(--concept-primary);outline-offset:2px}
 /* Mobile */
 @media (max-width:680px){
   .quickbar{flex-direction:column;align-items:flex-start}
@@ -1577,7 +1549,7 @@ label{font-size:14px}
   :root{
     --vms-bg:#071428;
     --vms-bg-2:#0c2346;
-    --vms-primary:#0F4C81;
+    --vms-primary:var(--concept-primary);
     --vms-primary-2:#0b3c67;
     --vms-accent:#8ed7ff;
     --vms-surface:#ffffff;
@@ -1800,19 +1772,11 @@ label{font-size:14px}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-  @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
-  @media (max-width:760px){
-    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
-    nav ul.is-open{display:grid;gap:10px}
-    .menu-toggle{display:inline-flex}
-    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
-    .nav-item--has-submenu.is-open .submenu{display:block}
-  }
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}}
 </style></head>
 <body>
   <div class="toast-stack" id="toasts" aria-live="polite"></div>
@@ -1835,16 +1799,21 @@ label{font-size:14px}
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -1854,13 +1823,30 @@ label{font-size:14px}
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -1869,15 +1855,28 @@ label{font-size:14px}
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -1921,7 +1920,7 @@ label{font-size:14px}
             <div class="hero__content">
               <span class="eyebrow">VMS Energy</span>
               <h1 id="heroAboutTitle">EPC el&eacute;ctrico para industria cr&iacute;tica</h1>
-              <p>Casi 20 a&ntilde;os dise&ntilde;ando, integrando y ejecutando proyectos de infraestructura el&eacute;ctrica, automatizaci&oacute;n y energ&iacute;a con enfoque en seguridad y cumplimiento.</p>
+              <p>M&aacute;s de 17 a&ntilde;os dise&ntilde;ando, integrando y ejecutando proyectos de infraestructura el&eacute;ctrica, automatizaci&oacute;n y energ&iacute;a con enfoque en seguridad y cumplimiento.</p>
               <p class="hero-proof">Cobertura M&eacute;xico, Estados Unidos, Centroam&eacute;rica y Caribe &middot; Integraci&oacute;n multimarcas</p>
               <div class="hero__ctas">
                 <a href="contacto_cta.html#ctaForm" class="btn btn--primary" data-cta="hero-about-primary">Solicitar consultor&iacute;a gratuita</a>
@@ -2086,6 +2085,29 @@ label{font-size:14px}
   document.addEventListener('DOMContentLoaded', initHeroCarousel);
 })();
 </script>
+<style>.kpi-strip{background:#172C51;color:#fff;padding:40px 0}.kpi-strip__grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}.kpi-strip__item{padding:24px 16px;border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:last-child{border-right:none}.kpi-strip__number{display:block;font-size:clamp(30px,3.8vw,46px);font-weight:700;line-height:1;color:#8ed7ff;margin:0 0 8px}.kpi-strip__label{display:block;font-size:clamp(13px,1.1vw,15px);opacity:.82;line-height:1.35}@media(max-width:680px){.kpi-strip{padding:32px 0}.kpi-strip__grid{grid-template-columns:repeat(2,1fr)}.kpi-strip__item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-last-child(-n+2){border-bottom:none}}</style>
+<section class="kpi-strip" aria-label="Capacidad operativa VMS Energy">
+  <div class="container">
+    <div class="kpi-strip__grid">
+      <div class="kpi-strip__item">
+        <span class="kpi-strip__number">+178</span>
+        <span class="kpi-strip__label">Proyectos ejecutados</span>
+      </div>
+      <div class="kpi-strip__item">
+        <span class="kpi-strip__number">76+</span>
+        <span class="kpi-strip__label">Ingenieros y t&eacute;cnicos fijos</span>
+      </div>
+      <div class="kpi-strip__item">
+        <span class="kpi-strip__number">5 ISOs</span>
+        <span class="kpi-strip__label">Sistema de gesti&oacute;n certificado</span>
+      </div>
+      <div class="kpi-strip__item">
+        <span class="kpi-strip__number">4 pa&iacute;ses</span>
+        <span class="kpi-strip__label">M&eacute;xico, EE.UU., Centroam&eacute;rica y Caribe</span>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="nosotros" class="about" aria-labelledby="aboutTitle">
     <div class="container">
     <div class="about-stack">
@@ -2099,7 +2121,7 @@ label{font-size:14px}
         </figure>
         <div class="about-block__body">
           <h3>&iquest;Qui&eacute;nes somos?</h3>
-          <p>VMS Energy es una empresa mexicana con casi 20 a&ntilde;os de experiencia en ingenier&iacute;a, suministro t&eacute;cnico y construcci&oacute;n (EPC) de sistemas el&eacute;ctricos, soluciones electromec&aacute;nicas, infraestructura el&eacute;ctrica, Oil &amp; Gas, generaci&oacute;n solar, automatizaci&oacute;n e iluminaci&oacute;n industrial.</p>
+          <p>VMS Energy es una empresa mexicana con m&aacute;s de 17 a&ntilde;os de experiencia en ingenier&iacute;a, suministro t&eacute;cnico y construcci&oacute;n (EPC) de sistemas el&eacute;ctricos, soluciones electromec&aacute;nicas, infraestructura el&eacute;ctrica, Oil &amp; Gas, generaci&oacute;n solar, automatizaci&oacute;n e iluminaci&oacute;n industrial.</p>
           <p>Contamos con un equipo multidisciplinario para ejecutar proyectos industriales, comerciales y de infraestructura, ofreciendo soluciones integrales y personalizadas.</p>
           <p><strong>Pol&iacute;tica integral</strong></p>
           <ul class="about-block__list" style="list-style:none;padding-left:0">
@@ -2115,6 +2137,7 @@ label{font-size:14px}
           <h3>Filosof&iacute;a institucional</h3>
           <p><strong>Misi&oacute;n:</strong> ofrecer venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con soluciones vers&aacute;tiles y sustentables.</p>
           <p><strong>Visi&oacute;n:</strong> ser una empresa l&iacute;der al 2030 en soluciones EPC en el mercado energ&eacute;tico en M&eacute;xico.</p>
+          <p><strong>Prop&oacute;sito:</strong> ser el socio EPC de referencia para la industria energ&eacute;tica e industrial de M&eacute;xico, ejecutando proyectos el&eacute;ctricos complejos con certeza t&eacute;cnica, seguridad certificada y compromiso &eacute;tico, contribuyendo al crecimiento sostenible de nuestros clientes hacia 2030.</p>
           <ul class="about-block__list">
             <li><strong>Valores VMS:</strong> Verdad, Motivaci&oacute;n, Salud y Seguridad, Enviroment, Nobleza y Eficiencia.</li>
             <li><strong>Enfoque:</strong> &eacute;tica, respeto ambiental, eficiencia energ&eacute;tica y mejora continua.</li>
@@ -2209,7 +2232,7 @@ label{font-size:14px}
         <button type="button" class="diff-carousel__btn diff-carousel__btn--next" aria-label="Siguiente diferenciador">&#8250;</button>
         <div class="diff-carousel__viewport">
           <div class="diff-carousel__track">
-            <article class="diff-slide" data-diff-title="Cumplimiento y seguridad" data-diff-text="Metodolog&iacute;as EPC con control de riesgos y cronogramas realistas. Evidencia: certificaciones ISO 9001, 45001 y 37001.">
+            <article class="diff-slide" data-diff-title="Cumplimiento y seguridad" data-diff-text="5 certificaciones ISO activas: Calidad, Medio Ambiente, Seguridad, Energ&iacute;a y Antisoborno.">
               <div class="diff-slide__media">
                 <img src="assets/img/carrousel_cumplimiento_seguridad.webp" alt="Cumplimiento y seguridad en proyectos EPC" loading="lazy" decoding="async">
               </div>
@@ -2218,7 +2241,7 @@ label{font-size:14px}
                 <h3 class="diff-slide__title">Cumplimiento y seguridad</h3>
               </div>
             </article>
-            <article class="diff-slide" data-diff-title="Integraci&oacute;n multimarcas" data-diff-text="Integraci&oacute;n con marcas l&iacute;deres para operaci&oacute;n continua en entornos cr&iacute;ticos. Evidencia: experiencia ejecutando proyectos con ABB, Siemens y Schneider.">
+            <article class="diff-slide" data-diff-title="Integraci&oacute;n multimarcas" data-diff-text="Trabajamos con ABB, Siemens, Schneider, Eaton y 16 marcas m&aacute;s. Sin dependencia de un solo fabricante.">
               <div class="diff-slide__media">
                 <img src="assets/img/carrousel_integracion_multimarcas.webp" alt="Integraci&oacute;n multimarcas en campo" loading="lazy" decoding="async">
               </div>
@@ -2227,16 +2250,16 @@ label{font-size:14px}
                 <h3 class="diff-slide__title">Integraci&oacute;n multimarcas</h3>
               </div>
             </article>
-            <article class="diff-slide" data-diff-title="Ingenier&iacute;a experta" data-diff-text="Equipo senior para generaci&oacute;n, transmisi&oacute;n, distribuci&oacute;n y automatizaci&oacute;n industrial. Evidencia: casi 20 a&ntilde;os resolviendo proyectos de alta criticidad.">
+            <article class="diff-slide" data-diff-title="Ingenier&iacute;a experta" data-diff-text="Ingenieros especializados en AT/MT, automatizaci&oacute;n industrial y Oil &amp; Gas. M&aacute;s de 17 a&ntilde;os ejecutando proyectos el&eacute;ctricos de alta criticidad en M&eacute;xico.">
               <div class="diff-slide__media">
-                <img src="assets/img/carrousel_ingener&iacute;a_experta.png" alt="Ingenier&iacute;a experta para infraestructura energ&eacute;tica" loading="lazy" decoding="async">
+                <img src="assets/img/carrousel_ingenería_experta.png" alt="Ingenier&iacute;a experta para infraestructura energ&eacute;tica" loading="lazy" decoding="async">
               </div>
               <div class="diff-slide__panel">
                 <img class="diff-slide__badge" src="assets/img/badge_ingenieria_experta.webp" alt="Badge Ingenier&iacute;a experta" loading="lazy" decoding="async">
                 <h3 class="diff-slide__title">Ingenier&iacute;a experta</h3>
               </div>
             </article>
-            <article class="diff-slide" data-diff-title="Time-to-value" data-diff-text="Suministro &aacute;gil y comisionamiento estructurado para reducir tiempos de puesta en marcha. Evidencia: ejecuci&oacute;n EPC con foco en continuidad y disponibilidad.">
+            <article class="diff-slide" data-diff-title="Time-to-value" data-diff-text="Gesti&oacute;n integral desde ingenier&iacute;a hasta puesta en marcha. Un solo interlocutor, cronograma comprometido.">
               <div class="diff-slide__media">
                 <img src="assets/img/carrousel_time_to_value.webp" alt="Ejecuci&oacute;n &aacute;gil y time-to-value en proyectos EPC" loading="lazy" decoding="async">
               </div>
@@ -5499,7 +5522,7 @@ document.addEventListener('click', function(e){
   position:relative;
   width:min(92vw, 520px);
   margin:7vh auto 0;
-  background:#0f4c81;
+  background:var(--concept-primary);
   border:1px solid rgba(255,255,255,.18);
   border-radius:12px;
   box-shadow:0 18px 56px rgba(0,0,0,.45);
@@ -12544,79 +12567,79 @@ document.addEventListener('click', function(e){
     default: {
       label: 'Todas las industrias',
       solutions: [
-        { name: 'Electricas', count: 158 },
+        { name: 'El&eacute;ctricas', count: 158 },
         { name: 'Automatizaci&oacute;n y Control', count: 61 },
-        { name: 'Electromecanica', count: 25 },
+        { name: 'Electromec&aacute;nica', count: 25 },
         { name: 'Solar', count: 2 }
       ],
       services: ['EPC', 'Suministro', 'Mantenimiento', 'Ingenier&iacute;a de detalle'],
-      Especialidades: ['Integracion BT/MT', 'Puesta en marcha', 'Retrofit', 'Normatividad y seguridad']
+      Especialidades: ['Integraci&oacute;n BT/MT', 'Puesta en marcha', 'Retrofit', 'Normatividad y seguridad']
     },
     oilgas: {
       label: 'Oil & Gas',
       solutions: [
-        { name: 'Electricas', count: 74 },
+        { name: 'El&eacute;ctricas', count: 74 },
         { name: 'Automatizaci&oacute;n y Control', count: 48 },
-        { name: 'Electromecanica', count: 19 },
+        { name: 'Electromec&aacute;nica', count: 19 },
         { name: 'Solar', count: 1 }
       ],
-      services: ['EPC', 'Modernizacion', 'Mantenimiento', 'Integracion de control'],
-      Especialidades: ['Areas clasificadas', 'Paros programados', 'Comisionamiento offshore', 'Confiabilidad operativa']
+      services: ['EPC', 'Modernizaci&oacute;n', 'Mantenimiento', 'Integraci&oacute;n de control'],
+      Especialidades: ['&Aacute;reas clasificadas', 'Paros programados', 'Comisionamiento offshore', 'Confiabilidad operativa']
     },
     energia: {
-      label: 'Generacion e Infraestructura Electrica',
+      label: 'Generaci&oacute;n e Infraestructura El&eacute;ctrica',
       solutions: [
-        { name: 'Electricas', count: 92 },
+        { name: 'El&eacute;ctricas', count: 92 },
         { name: 'Automatizaci&oacute;n y Control', count: 29 },
-        { name: 'Electromecanica', count: 17 },
+        { name: 'Electromec&aacute;nica', count: 17 },
         { name: 'Solar', count: 2 }
       ],
       services: ['EPC', 'Ingenier&iacute;a', 'Suministro', 'Mantenimiento'],
-      Especialidades: ['Subestaciones BT/MT', 'Pruebas y energizacion', 'Proteccion y control', 'Calidad de energia']
+      Especialidades: ['Subestaciones BT/MT', 'Pruebas y energizaci&oacute;n', 'Protecci&oacute;n y control', 'Calidad de energ&iacute;a']
     },
     mineria: {
-      label: 'Mineria y Metales',
+      label: 'Miner&iacute;a y Metales',
       solutions: [
-        { name: 'Electricas', count: 46 },
+        { name: 'El&eacute;ctricas', count: 46 },
         { name: 'Automatizaci&oacute;n y Control', count: 31 },
-        { name: 'Electromecanica', count: 23 },
+        { name: 'Electromec&aacute;nica', count: 23 },
         { name: 'Solar', count: 1 }
       ],
-      services: ['EPC', 'Suministro', 'Mantenimiento', 'Rehabilitacion'],
-      Especialidades: ['Variadores de velocidad', 'Motores y tableros', 'Bombeo profundo', 'Operacion continua']
+      services: ['EPC', 'Suministro', 'Mantenimiento', 'Rehabilitaci&oacute;n'],
+      Especialidades: ['Variadores de velocidad', 'Motores y tableros', 'Bombeo profundo', 'Operaci&oacute;n continua']
     },
     procesos: {
       label: 'Alimentos, Bebidas y Papel',
       solutions: [
-        { name: 'Electricas', count: 52 },
+        { name: 'El&eacute;ctricas', count: 52 },
         { name: 'Automatizaci&oacute;n y Control', count: 34 },
-        { name: 'Electromecanica', count: 18 },
+        { name: 'Electromec&aacute;nica', count: 18 },
         { name: 'Solar', count: 1 }
       ],
-      services: ['EPC', 'Automatizacion', 'Mantenimiento', 'Suministro especializado'],
-      Especialidades: ['Eficiencia energetica', 'Control de proceso', 'Instrumentacion', 'Integraci&oacute;n multimarcas']
+      services: ['EPC', 'Automatizaci&oacute;n', 'Mantenimiento', 'Suministro especializado'],
+      Especialidades: ['Eficiencia energ&eacute;tica', 'Control de proceso', 'Instrumentaci&oacute;n', 'Integraci&oacute;n multimarcas']
     },
     industrial: {
       label: 'Industrial y Manufactura',
       solutions: [
-        { name: 'Electricas', count: 63 },
+        { name: 'El&eacute;ctricas', count: 63 },
         { name: 'Automatizaci&oacute;n y Control', count: 40 },
-        { name: 'Electromecanica', count: 21 },
+        { name: 'Electromec&aacute;nica', count: 21 },
         { name: 'Solar', count: 2 }
       ],
       services: ['EPC', 'Suministro', 'Mantenimiento', 'Ingenier&iacute;a conceptual y detalle'],
-      Especialidades: ['HVAC industrial', 'Centros de datos', 'Tableros de potencia', 'Migracion de sistemas legacy']
+      Especialidades: ['HVAC industrial', 'Centros de datos', 'Tableros de potencia', 'Migraci&oacute;n de sistemas legacy']
     },
     agua: {
       label: 'Agua y Saneamiento',
       solutions: [
-        { name: 'Electricas', count: 38 },
+        { name: 'El&eacute;ctricas', count: 38 },
         { name: 'Automatizaci&oacute;n y Control', count: 27 },
-        { name: 'Electromecanica', count: 15 },
+        { name: 'Electromec&aacute;nica', count: 15 },
         { name: 'Solar', count: 1 }
       ],
-      services: ['EPC', 'Mantenimiento', 'Suministro', 'Supervision tecnica'],
-      Especialidades: ['Sistemas de bombeo', 'Control de motores', 'Telemetria y SCADA', 'Continuidad de operacion']
+      services: ['EPC', 'Mantenimiento', 'Suministro', 'Supervisi&oacute;n t&eacute;cnica'],
+      Especialidades: ['Sistemas de bombeo', 'Control de motores', 'Telemetr&iacute;a y SCADA', 'Continuidad de operaci&oacute;n']
     }
   };
 
@@ -12752,6 +12775,8 @@ document.addEventListener('click', function(e){
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -12759,6 +12784,7 @@ document.addEventListener('click', function(e){
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -12785,6 +12811,7 @@ document.addEventListener('click', function(e){
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

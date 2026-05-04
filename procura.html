@@ -1,34 +1,34 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Procura y Suministro T&eacute;cnico | VMS Energy</title>
-  <meta name="description" content="Procura especializada de equipos el&eacute;ctricos, instrumentaci&oacute;n y materiales industriales. Distribuci&oacute;n KEI, Triol y multimarca ABB, Siemens, Schneider." />
+  <meta name="description" content="Procura especializada de equipos el&eacute;ctricos industriales: transformadores, UPS industriales Borri, sistemas BESS Geolis, inversores Livoltek y WEG. VMS Energy &mdash; EPC turnkey con 20 a&ntilde;os de experiencia." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/procura.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
   <meta property="og:title" content="Procura y Suministro T&eacute;cnico | VMS Energy" />
-  <meta property="og:description" content="Procura especializada de equipos el&eacute;ctricos, instrumentaci&oacute;n y materiales industriales. Distribuci&oacute;n KEI, Triol y multimarca ABB, Siemens, Schneider." />
+  <meta property="og:description" content="Suministro de equipos de potencia y confiabilidad el&eacute;ctrica para industria: transformadores, UPS y BESS industriales. VMS Energy." />
   <meta property="og:url" content="https://vmsenergy.com/procura.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_suministro.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Procura y Suministro T&eacute;cnico | VMS Energy" />
-  <meta name="twitter:description" content="Procura especializada de equipos el&eacute;ctricos, instrumentaci&oacute;n y materiales industriales. Distribuci&oacute;n KEI, Triol y multimarca ABB, Siemens, Schneider." />
+  <meta name="twitter:description" content="Suministro de equipos de potencia y confiabilidad el&eacute;ctrica para industria: transformadores, UPS y BESS industriales. VMS Energy." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_suministro.png" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/procura.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/procura.html" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#10233D;--muted:#4B647F;--line:rgba(23,44,81,.14);--soft:#F3F8FF}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    :root{--corp-hero-img: url('assets/img/hero_suministro.png');
+    }
     header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
@@ -41,7 +41,7 @@
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
     .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
@@ -49,11 +49,6 @@
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer}
     .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
     .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
-    .hero{position:relative;isolation:isolate;min-height:500px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/hero_suministro.png') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding:86px 0 72px}
-    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
-    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
     section{padding:56px 0}
@@ -64,7 +59,7 @@
     .card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
     .card img{width:100%;height:170px;object-fit:cover;display:block}
     .card__body{padding:14px}
-    .tag{display:inline-flex;padding:.2rem .6rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-size:.8rem;font-weight:700}
+    .tag{display:inline-flex;padding:.2rem .6rem;border-radius:999px;background:#eef5ff;color:var(--concept-primary);font-size:.8rem;font-weight:700}
     .card h3{margin:8px 0 6px;color:#103961}
     .card p{margin:0;color:var(--muted)}
     .form-wrap{background:linear-gradient(180deg,#f7fbff,#fff)}
@@ -77,7 +72,7 @@
     .req-summary{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;padding:10px;background:#f7fbff}
     .req-summary h4{margin:0 0 8px;color:#113960}
     .totals{display:flex;flex-wrap:wrap;gap:8px}
-    .tot-chip{display:inline-flex;align-items:center;padding:.2rem .6rem;border-radius:999px;border:1px solid rgba(15,76,129,.22);background:#eef5ff;color:#0f4c81;font-size:.82rem;font-weight:700}
+    .tot-chip{display:inline-flex;align-items:center;padding:.2rem .6rem;border-radius:999px;border:1px solid rgba(15,76,129,.22);background:#eef5ff;color:var(--concept-primary);font-size:.82rem;font-weight:700}
     .cta-final{padding:64px 0;background:linear-gradient(180deg,#0a1f3d,#0f315d);color:#fff}
     .cta-final .box{border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px;background:rgba(255,255,255,.03)}
     .faq{background:#f7fbff}
@@ -97,30 +92,6 @@
     .exclusive-actions{margin-top:12px}
     .exclusive-actions .btn + .btn{margin-left:8px}
     .btn__icon{width:16px;height:16px;display:block;flex:0 0 16px}
-.foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -137,7 +108,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -192,7 +163,7 @@
     border:1px solid rgba(255,255,255,.2);
   }
   .sticky-actions__btn--left{ left:14px; background:#25D366; }
-  .sticky-actions__btn--center{ left:50%; transform:translateX(-50%); background:#0F4C81; }
+  .sticky-actions__btn--center{ left:50%; transform:translateX(-50%); background:var(--concept-primary); }
   .sticky-actions__btn--right{ right:14px; background:#172C51; }
   .sticky-actions__icon{ width:18px; height:18px; display:block; flex:0 0 18px; }
   @media (max-width:640px){
@@ -303,19 +274,11 @@
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-  @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
-  @media (max-width:760px){
-    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
-    nav ul.is-open{display:grid;gap:10px}
-    .menu-toggle{display:inline-flex}
-    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
-    .nav-item--has-submenu.is-open .submenu{display:block}
-  }
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}}
 </style></head>
 <body>
 <header aria-label="Barra de navegaci&oacute;n">
@@ -336,16 +299,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -355,13 +323,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -370,15 +355,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -433,7 +431,7 @@
       <div class="cards">
         <article class="card">
           <img src="assets/img/suministro_equipos_potencia_control.webp" alt="Equipamiento el&eacute;ctrico para infraestructura" loading="lazy" decoding="async">
-          <div class="card__body"><span class="tag">El&eacute;ctrico</span><h3>Equipos de potencia y control</h3><p>Tableros, protecciones, variadores, instrumentaci&oacute;n y accesorios cr&iacute;ticos de planta.</p></div>
+          <div class="card__body"><span class="tag">El&eacute;ctrico</span><h3>Equipos de potencia y control</h3><p>Suministro especializado de equipos el&eacute;ctricos cr&iacute;ticos: transformadores de distribuci&oacute;n y potencia, sistemas UPS industriales, soluciones BESS de almacenamiento de energ&iacute;a, convertidores de frecuencia e inversores para generaci&oacute;n solar. Marcas: DEEMSA, WEG, ABB, Siemens, Borri, Geolis, Livoltek.</p></div>
         </article>
         <article class="card">
           <img src="assets/img/suministro_integracion_marcas_lideres.webp" alt="Suministro t&eacute;cnico para operaci&oacute;n industrial" loading="lazy" decoding="async">
@@ -547,12 +545,12 @@
 
   <section class="exclusive" aria-labelledby="exclusiveTitle">
     <div class="container">
-      <h2 id="exclusiveTitle" class="section-title">Exclusividad en distribuci&oacute;n</h2>
-      <p class="section-lead">Representaciones estrat&eacute;gicas para suministro especializado con validaci&oacute;n t&eacute;cnica y soporte durante el ciclo del proyecto.</p>
+      <h2 id="exclusiveTitle" class="section-title">Representaciones estrat&eacute;gicas</h2>
+      <p class="section-lead">Suministro especializado con validaci&oacute;n t&eacute;cnica y soporte durante el ciclo del proyecto: representaci&oacute;n exclusiva KEI en M&eacute;xico y distribuci&oacute;n autorizada Triol con inventario disponible.</p>
       <div class="exclusive-grid">
         <article class="exclusive-card">
-          <img src="assets/img/Exclusividad_distribucion_Triol.webp" alt="Exclusividad en distribuci&oacute;n de Variadores Triol" loading="lazy" decoding="async">
-          <span class="tag">Distribuci&oacute;n exclusiva</span>
+          <img src="assets/img/Distribucion_autorizada_Triol.webp" alt="Distribuci&oacute;n autorizada de Variadores Triol con inventario en M&eacute;xico" loading="lazy" decoding="async">
+          <span class="tag">Inventario en M&eacute;xico</span>
           <h3>Variadores Triol</h3>
           <p>Portafolio de variadores orientado a control de motores en aplicaciones industriales cr&iacute;ticas.</p>
           <ul class="exclusive-list">
@@ -677,6 +675,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -684,6 +684,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -710,6 +711,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>
@@ -746,9 +748,94 @@
       }
     },
     'Equipo electrico': {
+      'Transformadores': {
+        'DEEMSA': {
+          'Distribución en aceite': {
+            'BT (hasta 600 V)': ['15 kVA', '25 kVA', '37.5 kVA', '50 kVA', '75 kVA', '100 kVA', '167 kVA', '250 kVA', '333 kVA', '500 kVA'],
+            'MT (13.8 kV &ndash; 34.5 kV)': ['150 kVA', '250 kVA', '500 kVA', '750 kVA', '1,000 kVA', '1,500 kVA', '2,000 kVA', '2,500 kVA']
+          },
+          'Distribución tipo seco': {
+            'BT / MT': ['15 kVA', '30 kVA', '45 kVA', '75 kVA', '112.5 kVA', '150 kVA', '225 kVA', '300 kVA', '500 kVA', '750 kVA', '1,000 kVA', '1,500 kVA']
+          },
+          'Potencia': {
+            'AT (hasta 115 kV)': ['1 MVA', '1.5 MVA', '2 MVA', '3 MVA', '5 MVA', '7.5 MVA', '10 MVA']
+          }
+        },
+        'WEG': {
+          'Distribución en aceite': {
+            'BT (hasta 600 V)': ['10 kVA', '15 kVA', '25 kVA', '45 kVA', '75 kVA', '112.5 kVA', '150 kVA', '225 kVA', '300 kVA', '500 kVA'],
+            'MT (13.8 kV &ndash; 34.5 kV)': ['300 kVA', '500 kVA', '750 kVA', '1,000 kVA', '1,500 kVA', '2,000 kVA', '2,500 kVA']
+          },
+          'Distribución tipo seco': {
+            'BT / MT': ['45 kVA', '75 kVA', '112.5 kVA', '150 kVA', '225 kVA', '300 kVA', '500 kVA', '750 kVA', '1,000 kVA', '1,500 kVA', '2,000 kVA']
+          },
+          'Potencia': {
+            'AT / MAT': ['1 MVA', '2.5 MVA', '5 MVA', '10 MVA', '20 MVA']
+          }
+        },
+        'ABB': {
+          'Distribución': {
+            'MT (10 kV &ndash; 36 kV)': ['100 kVA', '250 kVA', '500 kVA', '1,000 kVA', '1,600 kVA', '2,500 kVA']
+          },
+          'Potencia': {
+            'AT (69 kV &ndash; 400 kV)': ['5 MVA', '10 MVA', '20 MVA', '40 MVA', '63 MVA', '100 MVA']
+          }
+        },
+        'Siemens': {
+          'Distribución': {
+            'MT (10 kV &ndash; 36 kV)': ['160 kVA', '250 kVA', '400 kVA', '630 kVA', '1,000 kVA', '1,600 kVA', '2,000 kVA', '2,500 kVA']
+          },
+          'Potencia': {
+            'AT (69 kV &ndash; 400 kV)': ['10 MVA', '20 MVA', '40 MVA', '80 MVA', '160 MVA']
+          }
+        }
+      },
+      'Sistemas de confiabilidad eléctrica y almacenamiento de energía': {
+        'Geolis': {
+          'BESS compacto &mdash; GOC-series': {
+            'Sistema todo en uno (bater&iacute;a + PCS + BMS en gabinete)': ['100 kW / 215 kWh', '125 kW / 241 kWh']
+          },
+          'BESS modular multi-gabinete': {
+            'Separaci&oacute;n f&iacute;sica AC/DC para escalabilidad y eficiencia t&eacute;rmica': ['250 kW / 522 kWh']
+          },
+          'BESS contenedor 20 ft': {
+            'Soluci&oacute;n preintegrada de f&aacute;brica para proyectos medianos y grandes': ['1 MW / 2 MWh', 'Escalable a multi-MWh']
+          }
+        },
+        'Borri': {
+          'E2001 &mdash; UPS monof&aacute;sico industrial': {
+            'Doble conversi&oacute;n online con aislamiento galv&aacute;nico total': ['5 kVA', '10 kVA', '20 kVA', '40 kVA', '60 kVA', '80 kVA', '100 kVA', '120 kVA', '160 kVA', '200 kVA']
+          },
+          'E3001 &mdash; UPS trif&aacute;sico industrial': {
+            'Doble conversi&oacute;n online de alta disponibilidad industrial': ['5 kVA', '10 kVA', '20 kVA', '40 kVA', '60 kVA', '80 kVA', '100 kVA', '120 kVA', '160 kVA', '200 kVA', '250 kVA', '300 kVA', '400 kVA', '500 kVA', '600 kVA']
+          },
+          'Ingenio SFC &mdash; Convertidor de frecuencia': {
+            'Conversi&oacute;n 50 Hz &harr; 60 Hz sin partes m&oacute;viles, tecnolog&iacute;a IGBT': ['100 kVA', '200 kVA', '400 kVA', '600 kVA', '800 kVA', '1,000 kVA', '1,500 kVA', '2,000 kVA']
+          }
+        },
+        'Livoltek': {
+          'Inversores h&iacute;bridos industriales': {
+            'Red + solar + bater&iacute;a en un solo sistema de control': ['Plantas industriales con generaci&oacute;n FV']
+          },
+          'Sistemas solar + almacenamiento': {
+            'Soluci&oacute;n integrada para proyectos EPC solar con respaldo': ['Agroindustria', 'Manufactura', 'Parques industriales']
+          }
+        },
+        'WEG': {
+          'Inversores solares SIW': {
+            'Inversores de cadena y centrales FV para proyectos EPC e integraci&oacute;n con BESS': ['Cadena (string)', 'Centrales FV']
+          },
+          'Variadores de frecuencia CFW': {
+            'Control de motores en cargas cr&iacute;ticas durante respaldo': ['CFW11', 'CFW900']
+          },
+          'Transformadores de distribuci&oacute;n': {
+            'BT/MT/AT, secos y en aceite, para adecuaci&oacute;n de voltaje en sistemas UPS/BESS': ['Distribuci&oacute;n seco', 'Distribuci&oacute;n aceite', 'Potencia AT']
+          }
+        }
+      },
       'Tableros': {
         'ABB': {
-          'Distribucion': {'BT': ['ABB-MNS-4000A', 'ABB-TS8-2500A']}
+          'Distribución': {'BT': ['ABB-MNS-4000A', 'ABB-TS8-2500A']}
         },
         'Schneider': {
           'Potencia': {'PrismaSeT': ['SCH-PRISMASET-3200A', 'SCH-PRISMASET-4000A']}
@@ -765,24 +852,24 @@
           'AT': {'Serie AT': ['AT24', 'AT27']}
         },
         'WEG': {
-          'CFW': {'L&iacute;nea CFW': ['CFW11', 'CFW900']}
+          'CFW': {'Línea CFW': ['CFW11', 'CFW900']}
         },
         'Chint': {
           'NVF': {'Serie NVF': ['NVF2G']}
         }
       },
-      'Control y proteccion': {
+      'Control y protección': {
         'Basler Electric': {
-          'Excitacion': {'DECS': ['DECS-250E', 'DECS-450']}
+          'Excitación': {'DECS': ['DECS-250E', 'DECS-450']}
         },
         'DEIF': {
-          'Control de generacion': {'Genset': ['AGC-4 Mk II', 'ASC-4 Solar']}
+          'Control de generación': {'Genset': ['AGC-4 Mk II', 'ASC-4 Solar']}
         },
         'Dynalco': {
-          'Instrumentacion': {'Velocidad': ['Speed Switch', 'Tachometer']}
+          'Instrumentación': {'Velocidad': ['Speed Switch', 'Tachometer']}
         },
         'Woodward': {
-          'Controladores': {'Generacion': ['easYgen-3000XT', '2301E']}
+          'Controladores': {'Generación': ['easYgen-3000XT', '2301E']}
         },
         'Valtek': {
           'Posicionadores': {'Digital': ['Logix 3800', 'StarPac 3']}
@@ -1144,6 +1231,7 @@
     if(!trigger) return;
 
     trigger.addEventListener('click', function(e){
+      if(!isCompact()) return;
       var currentlyOpen = parent.classList.contains('nav-force-sub-open') || parent.classList.contains('is-open');
       if(!currentlyOpen){
         e.preventDefault();
@@ -1347,37 +1435,6 @@
 })();
 </script></body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

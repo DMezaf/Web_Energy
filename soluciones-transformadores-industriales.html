@@ -1,0 +1,523 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="equipamiento">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Transformadores Industriales | Suministro e Instalaci&oacute;n | VMS Energy</title>
+  <meta name="description" content="Suministro, instalaci&oacute;n y comisionamiento de transformadores industriales: distribuci&oacute;n, potencia, secos y aceite. Pruebas de aceptaci&oacute;n FAT/SAT. Normativa aplicada seg&uacute;n los requisitos del proyecto. M&eacute;xico."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <link rel="canonical" href="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="es_MX"/>
+  <meta property="og:site_name" content="VMS Energy"/>
+  <meta property="og:title" content="Transformadores Industriales | VMS Energy"/>
+  <meta property="og:description" content="Suministro, instalaci&oacute;n y comisionamiento de transformadores de distribuci&oacute;n y potencia. Pruebas de aceptaci&oacute;n FAT/SAT, selecci&oacute;n multimarca. Normativa aplicada seg&uacute;n los requisitos del proyecto en M&eacute;xico."/>
+  <meta property="og:url" content="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-transformadores-industriales.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="equipamiento-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Hero image (específico de esta página) ── */
+    :root { --equip-hero-img: url('assets/img/hero_que_hacemos_VMS_Energy.png'); }
+
+    /* ── Tipos de transformador ── */
+    .tipos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+    .tipo-card{background:#fff;border:1px solid var(--border-line);border-radius:16px;padding:20px 16px;box-shadow:0 3px 12px rgba(8,28,54,.06);transition:box-shadow .2s,transform .2s}
+    .tipo-card:hover{box-shadow:0 8px 24px rgba(8,28,54,.12);transform:translateY(-2px)}
+    .tipo-card__icon{font-size:1.5rem;margin-bottom:10px}
+    .tipo-card__title{font-size:.98rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .tipo-card__specs{font-size:.82rem;color:#6b7280;margin:0 0 10px;line-height:1.5}
+    .tipo-tag{display:inline-block;padding:.15rem .45rem;border-radius:6px;font-size:.72rem;font-weight:700;background:#eff6ff;color:var(--concept-primary);border:1px solid rgba(51,65,85,.2);margin:2px}
+
+    /* ── Pruebas de aceptación ── */
+    .pruebas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .prueba-card{background:#fff;border:1px solid var(--border-line);border-radius:14px;padding:16px 14px}
+    .prueba-card__norm{font-size:.7rem;font-weight:800;color:var(--spec-badge-norm);text-transform:uppercase;letter-spacing:.06em;margin:0 0 4px}
+    .prueba-card__title{font-size:.94rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .prueba-card__desc{font-size:.84rem;color:#4b5563;margin:0;line-height:1.5}
+
+    /* ── Marcas ── */
+    .marca-featured{background:linear-gradient(135deg,#0f4c81 0%,#172C51 100%);color:#fff;border-radius:18px;padding:24px 28px;margin:20px 0 0;display:flex;flex-direction:column;gap:8px}
+    .marca-featured__badge{display:inline-flex;align-items:center;padding:.25rem .65rem;border-radius:999px;background:rgba(142,215,255,.18);border:1px solid rgba(142,215,255,.35);color:#8ed7ff;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;width:fit-content}
+    .marca-featured__name{font-size:1.6rem;font-weight:800;margin:0;color:#fff}
+    .marca-featured__desc{font-size:.92rem;color:rgba(255,255,255,.82);margin:0;line-height:1.55;max-width:680px}
+    .marcas-sublabel{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#6b7280;margin:24px 0 12px}
+    .marcas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .marca-card{background:#fff;border:1px solid var(--border-line,rgba(23,44,81,.14));border-radius:14px;padding:16px 14px}
+    .marca-card__name{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .marca-card__series{font-size:.82rem;color:#4b5563;margin:0;line-height:1.45}
+    /* ── Responsive (componentes específicos) ── */
+    @media(max-width:980px){
+      .tipos-grid{grid-template-columns:repeat(2,1fr)}
+      .pruebas-grid{grid-template-columns:repeat(2,1fr)}
+      .marcas-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:700px){
+      .tipos-grid{grid-template-columns:1fr}
+      .pruebas-grid{grid-template-columns:1fr}
+      .marcas-grid{grid-template-columns:1fr}
+      .marca-featured{padding:18px 20px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Service","name":"Transformadores Industriales","provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"areaServed":"MX","description":"Suministro, instalación y comisionamiento de transformadores de distribución y potencia bajo IEC 60076 en México.","serviceType":"Ingeniería EPC de transformadores industriales","url":"https://vmsenergy.com/soluciones-transformadores-industriales.html",
+    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Tipos de transformadores","itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador de distribución (< 2500 kVA)"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador de potencia (> 2500 kVA)"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador seco (resina epoxi)"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador en aceite ONAN/ONAF/OFAF"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Autotransformador"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformadores especiales (rectificador, horno, tierra)"}}
+    ]}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"¿Qué norma rige los transformadores industriales?","acceptedAnswer":{"@type":"Answer","text":"La serie IEC 60076 es la norma principal: IEC 60076-1 (requisitos generales), IEC 60076-2 (temperatura), IEC 60076-3 (niveles de aislamiento), IEC 60076-5 (resistencia al cortocircuito). En México aplica también NOM-003-ENER para eficiencia."}},
+      {"@type":"Question","name":"¿Qué significa Dyn11 en un transformador?","acceptedAnswer":{"@type":"Answer","text":"Dyn11 es el grupo vectorial: D = devanado primario en triángulo (delta), y = devanado secundario en estrella (wye), n = neutro accesible, 11 = desfase de 330° (equivalente a -30°) entre tensiones de fase primaria y secundaria. Es el grupo estándar para transformadores de distribución MT/BT."}},
+      {"@type":"Question","name":"¿Cuál es la diferencia entre transformador seco y en aceite?","acceptedAnswer":{"@type":"Answer","text":"El transformador seco usa resina epoxi como aislante; es apto para interiores, áreas con restricciones de incendio y altitudes altas. El transformador en aceite usa aceite mineral dieléctrico; ofrece mayor capacidad de refrigeración (ONAN, ONAF, OFAF), mayor rango de potencia y menor costo por kVA, pero requiere cubeto de contención."}},
+      {"@type":"Question","name":"¿Qué pruebas de aceptación se realizan a un transformador?","acceptedAnswer":{"@type":"Answer","text":"Según IEC 60076-1: (1) relación de transformación, (2) resistencia de devanados, (3) impedancia de cortocircuito y pérdidas en carga, (4) pérdidas en vacío y corriente de vacío, (5) ensayo dieléctrico de tensión aplicada, (6) ensayo de tensión inducida. Opcionales: ensayo de impulso (BIL), temperatura, ruido."}},
+      {"@type":"Question","name":"¿VMS Energy instala transformadores de cualquier marca?","acceptedAnswer":{"@type":"Answer","text":"Sí. VMS Energy tiene alianza comercial estratégica con Deemsa (fabricante mexicano) y suministra además WEG, HPS, ABB, Siemens, Schneider Electric, Prolec-GE y CELSA según los requisitos del proyecto. También realiza instalación, pruebas de aceptación, comisionamiento y mantenimiento de transformadores de cualquier fabricante."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+<header aria-label="Barra de navegaci&oacute;n">
+  <div class="container topbar">
+    <a href="index.html" class="brand__logo" aria-label="VMS Energy">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager" decoding="async" width="72" height="72">
+    </a>
+    <nav aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+      <ul id="menuList">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="nosotros.html" aria-haspopup="true">Nosotros</a>
+          <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+            <div class="submenu__group">
+              <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+              <ul class="submenu__list">
+                <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                <li><a href="proyectos-vms.html">Proyectos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+                <li class="nav-item--has-submenu">
+          <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+          <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+            <div class="submenu__group">
+              <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <span class="submenu__title">Por Sector</span>
+              <ul class="submenu__list">
+                <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+          <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+            <div class="submenu__group">
+              <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+              <ul class="submenu__list">
+                <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; Transformadores</a></li>
+                <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#servicios" aria-haspopup="true">Servicios</a>
+          <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+            <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="VMShop.html" aria-haspopup="true">VMShop</a>
+          <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+            <div class="submenu__group">
+              <ul class="submenu__list">
+                <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="carreras.html">Carreras</a></li>
+        <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy &middot; Equipamiento El&eacute;ctrico</div>
+      <h1 id="heroTitle">Transformadores Industriales<br><em>De la selecci&oacute;n al comisionamiento</em></h1>
+      <p>Suministro multimarca, instalaci&oacute;n, pruebas de aceptaci&oacute;n y puesta en servicio de transformadores de distribuci&oacute;n y potencia para la industria en M&eacute;xico.</p>
+      <div class="hero-btns">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar cotizaci&oacute;n</a>
+        <a class="btn btn--ghost" href="#tipos">Ver tipos de transformadores</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">&#9889; Hasta 100 MVA</span>
+        <span class="hero-stat">&#9889; BT / MT / AT hasta 400 kV</span>
+        <span class="hero-stat">&#9889; Seco y en aceite</span>
+        <span class="hero-stat">&#9889; Normativa nacional e internacional</span>
+        <span class="hero-stat">&#9889; Pruebas FAT y SAT incluidas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPOS -->
+  <section class="section" id="tipos" aria-labelledby="tiposTitle">
+    <div class="container">
+      <span class="sec-label">Portafolio de suministro</span>
+      <h2 class="sec-h2" id="tiposTitle">Tipos de transformadores que suministramos e instalamos</h2>
+      <p class="sec-lead">Selecci&oacute;n basada en requisitos del proceso: nivel de tensi&oacute;n, ambiente, potencia, grupo vectorial y clase de eficiencia.</p>
+      <div class="tipos-grid">
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#128267;</div>
+          <p class="tipo-card__title">Distribuci&oacute;n &lt; 2&thinsp;500 kVA</p>
+          <p class="tipo-card__specs">Primarios 6&ndash;34.5 kV &rarr; secundarios 220&ndash;480 V. Grupos Dyn11 o Yyn0. Uso industrial, comercial y subestaciones de cliente final.</p>
+          <span class="tipo-tag">Seco IP20&ndash;IP54</span><span class="tipo-tag">Aceite ONAN</span><span class="tipo-tag">NOM-003-ENER</span>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#9889;</div>
+          <p class="tipo-card__title">Potencia &gt; 2&thinsp;500 kVA</p>
+          <p class="tipo-card__specs">Hasta 100 MVA. Refrigeraci&oacute;n ONAN, ONAF, OFAF, ODAF. Para plantas generadoras, subestaciones de transmisi&oacute;n y grandes industrias.</p>
+          <span class="tipo-tag">AT/EAT</span><span class="tipo-tag">ODAF</span><span class="tipo-tag">BIL hasta 1550 kV</span>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#128293;</div>
+          <p class="tipo-card__title">Transformador seco &mdash; resina epoxi</p>
+          <p class="tipo-card__specs">Clase F o H. Para interiores, &aacute;reas con riesgo de incendio, hospitales, aeropuertos, plataformas y zonas de altitud elevada (&gt; 3&thinsp;000 m).</p>
+          <span class="tipo-tag">Clase F / H</span><span class="tipo-tag">IP20&ndash;IP54</span><span class="tipo-tag">Sin mantenimiento de l&iacute;quido</span>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#128167;</div>
+          <p class="tipo-card__title">Transformador en aceite mineral</p>
+          <p class="tipo-card__specs">Aceite mineral ASTM D27 o aceite vegetal (BIOTEMP). Refrigeraci&oacute;n natural (ONAN), sopladores (ONAF) o bombas (OFAF/ODAF). Mayor rango de potencia.</p>
+          <span class="tipo-tag">ONAN / ONAF</span><span class="tipo-tag">OFAF / ODAF</span><span class="tipo-tag">Cubeto de contenci&oacute;n</span>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#128260;</div>
+          <p class="tipo-card__title">Autotransformador</p>
+          <p class="tipo-card__specs">Reducci&oacute;n o elevaci&oacute;n de tensi&oacute;n con devanado com&uacute;n. Aplicaci&oacute;n en arranque estrella-tri&aacute;ngulo, ajuste de tensi&oacute;n de red y acoplamiento de sistemas de distinta tensi&oacute;n nominal.</p>
+          <span class="tipo-tag">Arranque Y-&Delta;</span><span class="tipo-tag">Ajuste de tensi&oacute;n</span>
+        </div>
+        <div class="tipo-card">
+          <div class="tipo-card__icon">&#9881;</div>
+          <p class="tipo-card__title">Transformadores especiales</p>
+          <p class="tipo-card__specs">Rectificadores 6/12 pulsos (reducci&oacute;n de arm&oacute;nicas), hornos de arco el&eacute;ctrico, puesta a tierra (NGR/NER), de medici&oacute;n (TC/TP) e impedancia de puesta a tierra.</p>
+          <span class="tipo-tag">Rectificador 12p</span><span class="tipo-tag">Horno EAF</span><span class="tipo-tag">NGR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARÁMETROS DE SELECCIÓN -->
+  <section class="section section--alt" id="seleccion" aria-labelledby="selTitle">
+    <div class="container">
+      <span class="sec-label">Ingenier&iacute;a de selecci&oacute;n</span>
+      <h2 class="sec-h2" id="selTitle">Par&aacute;metros clave de especificaci&oacute;n</h2>
+      <p class="sec-lead">La selecci&oacute;n incorrecta del grupo vectorial o el nivel BIL son las causas m&aacute;s frecuentes de falla prematura en transformadores industriales.</p>
+      <table class="param-table" aria-label="Par&aacute;metros de selecci&oacute;n de transformadores">
+        <thead><tr><th>Par&aacute;metro</th><th>Valor / Rango t&iacute;pico</th><th>Criterio de selecci&oacute;n</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Potencia aparente (kVA)</strong></td><td>15 &ndash; 100&thinsp;000 kVA</td><td>Factor de demanda + factor de diversidad; reservar 15&ndash;25% de margen</td></tr>
+          <tr><td><strong>Tensi&oacute;n primaria / secundaria</strong></td><td>220 V &ndash; 400 kV</td><td>Seg&uacute;n red CFE o generador; tolerancia &plusmn;5%</td></tr>
+          <tr><td><strong>Grupo vectorial</strong></td><td>Dyn11, YNd11, Dd0, Yyn0</td><td>Dyn11 est&aacute;ndar distribuci&oacute;n; YNd11 para generadores; Dd0 para inter-bus</td></tr>
+          <tr><td><strong>Nivel BIL (kV cresta)</strong></td><td>20 &ndash; 1550 kV</td><td>Zona de mayor actividad tormentosa: BIL elevado + pararrayos ZnO en bornes</td></tr>
+          <tr><td><strong>Impedancia de cortocircuito (Uk%)</strong></td><td>4 &ndash; 12%</td><td>Uk bajo = corrientes arranque mayores; Uk alto = mejor regulaci&oacute;n de voltaje</td></tr>
+          <tr><td><strong>Clase de refrigeraci&oacute;n</strong></td><td>ONAN / ONAF / OFAF / Seco F-H</td><td>Interior sin ventilaci&oacute;n &rarr; seco; exterior con espacio &rarr; aceite ONAN</td></tr>
+          <tr><td><strong>Conexiones de taps</strong></td><td>&plusmn;2x2.5% &oacute; &plusmn;5% OCTC / OLTC</td><td>OLTC si variaci&oacute;n de red &gt; &plusmn;5%; OCTC si red estable</td></tr>
+          <tr><td><strong>Clase de eficiencia</strong></td><td>NER1 / NER2 (NOM-003-ENER)</td><td>NER2 obligatorio en proyectos CFE; NER1 en suministro privado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRUEBAS DE ACEPTACIÓN -->
+  <section class="section" id="pruebas" aria-labelledby="pruTitle">
+    <div class="container">
+      <span class="sec-label">IEC 60076 &mdash; Pruebas de aceptaci&oacute;n</span>
+      <h2 class="sec-h2" id="pruTitle">FAT y SAT: pruebas de f&aacute;brica y sitio</h2>
+      <p class="sec-lead">VMS Energy acompa&ntilde;a al cliente en las pruebas de aceptaci&oacute;n en f&aacute;brica (FAT) y realiza las pruebas de sitio (SAT) antes del energizado definitivo.</p>
+      <div class="pruebas-grid">
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-1 &sect;11.1</p>
+          <p class="prueba-card__title">Relaci&oacute;n de transformaci&oacute;n</p>
+          <p class="prueba-card__desc">Medici&oacute;n de la relaci&oacute;n de transformaci&oacute;n en cada tap. Tolerancia: &plusmn;0.5% respecto al valor nominal.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-1 &sect;11.2</p>
+          <p class="prueba-card__title">Resistencia de devanados</p>
+          <p class="prueba-card__desc">Medici&oacute;n a temperatura conocida en cada devanado. Permite calcular p&eacute;rdidas en carga y verificar integridad de conexiones.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-1 &sect;11.4</p>
+          <p class="prueba-card__title">Impedancia y p&eacute;rdidas en carga</p>
+          <p class="prueba-card__desc">Ensayo de cortocircuito: determina Uk% y P<sub>cc</sub>. Tolerancia: &plusmn;5% en p&eacute;rdidas, &plusmn;7.5% en Uk% para &lt; 630 kVA.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-1 &sect;11.5</p>
+          <p class="prueba-card__title">P&eacute;rdidas en vac&iacute;o y corriente de vac&iacute;o</p>
+          <p class="prueba-card__desc">Ensayo a tensi&oacute;n y frecuencia nominales. Determina P<sub>0</sub> e I<sub>0</sub>%. Clave para proyectar costos de energ&iacute;a en operaci&oacute;n continua.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-3</p>
+          <p class="prueba-card__title">Ensayo diel&eacute;ctrico &mdash; tensi&oacute;n aplicada</p>
+          <p class="prueba-card__desc">Aplicaci&oacute;n de tensi&oacute;n AC durante 60 s entre devanados y tierra. Verifica integridad del sistema de aislamiento.</p>
+        </div>
+        <div class="prueba-card">
+          <p class="prueba-card__norm">IEC 60076-5</p>
+          <p class="prueba-card__title">Resistencia al cortocircuito</p>
+          <p class="prueba-card__desc">Prueba de cortocircuito din&aacute;mico con corriente asim&eacute;trica de cresta. Verifica que el transformador soporte fuerzas electromagn&eacute;ticas durante falla.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="section section--alt" id="marcas" aria-labelledby="marcTitle">
+    <div class="container">
+      <span class="sec-label">Alianza comercial y portafolio multimarca</span>
+      <h2 class="sec-h2" id="marcTitle">Fabricantes que suministramos</h2>
+      <p class="sec-lead">VMS Energy eval&uacute;a la mejor opci&oacute;n seg&uacute;n aplicaci&oacute;n, presupuesto, tiempo de entrega y soporte t&eacute;cnico local. Acceso a inventario nacional para respuesta r&aacute;pida.</p>
+      <div class="marca-featured">
+        <span class="marca-featured__badge">Socio comercial estrat&eacute;gico</span>
+        <p class="marca-featured__name">Deemsa</p>
+        <p class="marca-featured__desc">Fabricante mexicano de transformadores de distribuci&oacute;n y potencia. Alianza comercial directa con VMS Energy: acceso a inventario local, soporte t&eacute;cnico conjunto y tiempos de entrega competitivos para proyectos industriales en M&eacute;xico.</p>
+      </div>
+      <p class="marcas-sublabel">Tambi&eacute;n suministramos</p>
+      <div class="marcas-grid">
+        <div class="marca-card">
+          <p class="marca-card__name">WEG</p>
+          <p class="marca-card__series">Transformadores secos y en aceite para aplicaciones industriales y de generaci&oacute;n energ&eacute;tica</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">HPS</p>
+          <p class="marca-card__series">Hammond Power Solutions &mdash; transformadores secos para aplicaciones industriales y comerciales</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">ABB</p>
+          <p class="marca-card__series">TrafoStar / RESIBLOC seco / OFAF hasta 1000 MVA</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Siemens</p>
+          <p class="marca-card__series">GEAFOL (seco) / DTTH / EMDS hasta 400 kV</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Schneider Electric</p>
+          <p class="marca-card__series">Trihal (seco) / Minera / Unibloc distribuci&oacute;n</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Prolec&nbsp;GE</p>
+          <p class="marca-card__series">Distribuci&oacute;n y potencia para CFE; fabricaci&oacute;n nacional M&eacute;xico</p>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">CELSA / TRAFO</p>
+          <p class="marca-card__series">Transformadores de distribuci&oacute;n monoetapa y trifase para mercado nacional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORMAS -->
+  <section class="section" id="normas" aria-labelledby="normTitle">
+    <div class="container">
+      <span class="sec-label">Marco normativo</span>
+      <h2 class="sec-h2" id="normTitle">Marco normativo de referencia</h2>
+      <p style="color:#475569;font-size:clamp(14px,1.3vw,16px);margin:0 0 24px;max-width:780px">Las normas presentadas son de car&aacute;cter <strong>informativo</strong> y representan el marco t&eacute;cnico m&aacute;s com&uacute;n en proyectos de transformadores industriales. La normativa aplicable &mdash; incluyendo est&aacute;ndares nacionales, requerimientos del cliente o de la autoridad competente &mdash; se determina y acuerda en la etapa de ingenier&iacute;a b&aacute;sica conforme a los requisitos espec&iacute;ficos del proyecto.</p>
+      <div class="normas-grid">
+        <div class="norma-card"><span class="norma-card__code">IEC 60076-1</span><span class="norma-card__text">Transformadores de potencia. Requisitos generales: tolerancias, conexiones, placas de datos.</span></div>
+        <div class="norma-card"><span class="norma-card__code">IEC 60076-3</span><span class="norma-card__text">Niveles de aislamiento, pruebas diel&eacute;ctricas y separaciones en aire.</span></div>
+        <div class="norma-card"><span class="norma-card__code">IEC 60076-5</span><span class="norma-card__text">Capacidad para soportar cortocircuito. Fuerzas din&aacute;micas y t&eacute;rmicas durante falla.</span></div>
+        <div class="norma-card"><span class="norma-card__code">IEC 60076-11</span><span class="norma-card__text">Transformadores tipo seco. Clases de temperatura y ensayos de envejecimiento t&eacute;rmico.</span></div>
+        <div class="norma-card"><span class="norma-card__code">NOM-003-ENER</span><span class="norma-card__text">Eficiencia energ&eacute;tica para transformadores de distribuci&oacute;n. Clases NER1 y NER2 en M&eacute;xico.</span></div>
+        <div class="norma-card"><span class="norma-card__code">CFE L0000-06</span><span class="norma-card__text">Especificaci&oacute;n CFE para transformadores de distribuci&oacute;n en subestaciones del sistema p&uacute;blico.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <div style="text-align:center;max-width:580px;margin:0 auto 6px">
+        <span class="sec-label">Preguntas frecuentes</span>
+        <h2 class="sec-h2" id="faqTitle">Dudas t&eacute;cnicas m&aacute;s comunes</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>&iquest;Qu&eacute; norma rige los transformadores industriales?</summary>
+          <div class="faq-body">La serie <strong>IEC 60076</strong> es la norma internacional principal: IEC 60076-1 (requisitos generales), 60076-2 (temperatura), 60076-3 (aislamiento y pruebas diel&eacute;ctricas), 60076-5 (resistencia al cortocircuito) e IEC 60076-11 para transformadores secos. En M&eacute;xico se complementa con <strong>NOM-003-ENER</strong> (eficiencia) y <strong>CFE L0000-06</strong> para proyectos de CFE.</div>
+        </details>
+        <details class="faq">
+          <summary>&iquest;Qu&eacute; significa el grupo vectorial Dyn11?</summary>
+          <div class="faq-body"><strong>D</strong> = devanado primario en tri&aacute;ngulo (Delta), <strong>y</strong> = devanado secundario en estrella (wye), <strong>n</strong> = neutro accesible en el secundario, <strong>11</strong> = desfase de 330&deg; (equivalente a &minus;30&deg;) entre tensiones de fase. El Dyn11 es el grupo est&aacute;ndar para transformadores de distribuci&oacute;n MT/BT porque el neutro accesible permite la distribuci&oacute;n monof&aacute;sica y la conexi&oacute;n de puesta a tierra del sistema.</div>
+        </details>
+        <details class="faq">
+          <summary>&iquest;Cu&aacute;l es la diferencia entre transformador seco y en aceite?</summary>
+          <div class="faq-body">El <strong>transformador seco</strong> usa resina epoxi como aislante: apto para interiores, zonas de riesgo de incendio y altitudes elevadas; no requiere cubeto de contenci&oacute;n. El <strong>transformador en aceite</strong> usa aceite mineral diel&eacute;ctrico: mayor eficiencia de refrigeraci&oacute;n, mayor rango de potencia (hasta 100 MVA+) y menor costo por kVA, pero requiere cubeto y mayor espacio. Para altitudes &gt; 4&thinsp;000 m recomendamos seco con derating o consulta al fabricante.</div>
+        </details>
+        <details class="faq">
+          <summary>&iquest;Qu&eacute; pruebas de aceptaci&oacute;n se realizan seg&uacute;n IEC 60076-1?</summary>
+          <div class="faq-body">Las pruebas de rutina obligatorias son: (1) relaci&oacute;n de transformaci&oacute;n, (2) resistencia de devanados, (3) impedancia de cortocircuito y p&eacute;rdidas en carga, (4) p&eacute;rdidas en vac&iacute;o y corriente de vac&iacute;o, (5) ensayo diel&eacute;ctrico de tensi&oacute;n aplicada. Pruebas de tipo opcionales: impulso BIL, ensayo de temperatura y ruido. VMS Energy acompa&ntilde;a al cliente en el FAT de f&aacute;brica y ejecuta las pruebas SAT de sitio.</div>
+        </details>
+        <details class="faq">
+          <summary>&iquest;Qu&eacute; es el BIL y c&oacute;mo se selecciona?</summary>
+          <div class="faq-body">El <strong>BIL (Basic Impulse Insulation Level)</strong> es la m&aacute;xima tensi&oacute;n de impulso que soporta el transformador expresada en kV cresta. Se selecciona seg&uacute;n la tensi&oacute;n nominal del sistema y la zona de actividad tormentosa: a mayor keraunic level (d&iacute;as de tormenta al a&ntilde;o), mayor BIL y m&aacute;s importante la coordinaci&oacute;n con pararrayos ZnO. Para 34.5 kV el BIL est&aacute;ndar es 200 kV; para 115 kV es 550 kV.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band" aria-labelledby="ctaTitle">
+    <div class="container">
+      <h2 id="ctaTitle">Solicita tu especificaci&oacute;n de transformador</h2>
+      <p>Comparte los datos de tu proceso y nuestro equipo prepara una propuesta t&eacute;cnica con selecci&oacute;n multimarca y an&aacute;lisis de costo-ciclo de vida.</p>
+      <div class="cta-band-btns">
+        <a class="btn" style="background:#fff;color:#0f4c81" href="contacto.html#ctaForm">Solicitar cotizaci&oacute;n</a>
+        <a class="btn" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff" href="blog-seleccion-transformadores-industriales.html">Leer gu&iacute;a de selecci&oacute;n</a>
+      </div>
+    </div>
+  </div>
+
+<!-- cross-link: análisis FQ aceite -->
+<div style="margin:24px 0;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+  <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">¿Transformadores en operación que necesitan diagnóstico?</p>
+  <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">El análisis físico-químico y DGA del aceite dieléctrico es la primera línea de mantenimiento predictivo para transformadores en aceite. VMS Energy ofrece el diagnóstico completo.</p>
+  <a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">
+    Ver análisis FQ y DGA de aceite →
+  </a>
+</div>
+</main>
+
+<footer id="footer" class="foot" aria-label="Pie de p&aacute;gina">
+  <div class="container">
+    <div>
+      <div style="margin-bottom:10px"><img src="assets/brand/vms_logo_white.png" alt="VMS Energy" loading="lazy" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain"></div>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Suministro e instalaci&oacute;n de equipamiento el&eacute;ctrico industrial: transformadores, variadores, CCM y sistemas de protecci&oacute;n.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Cont&aacute;ctanos</h4>
+      <ul style="color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nosotros</h4>
+      <ul style="color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" class="foot-link">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" class="foot-link">C&oacute;digo de &Eacute;tica</a></li>
+        <li><a href="sostenibilidad.html" class="foot-link">Sostenibilidad</a></li>
+        <li><a href="buzon-sugerencias.html" class="foot-link">Buz&oacute;n de sugerencias</a></li>
+        <li><a href="blog.html" class="foot-link">Blog</a></li>
+        <li><a href="certificaciones.html" class="foot-link">Certificaciones</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Navegaci&oacute;n</h4>
+      <ul style="color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" class="foot-link">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" class="foot-link">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" class="foot-link">Soluciones</a></li>
+        <li><a href="procura.html#inicio" class="foot-link">Suministro t&eacute;cnico</a></li>
+        <li><a href="carreras.html" class="foot-link">Carreras</a></li>
+        <li><a href="contacto.html#inicio" class="foot-link">Contactar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Equipamiento cr&iacute;tico</h4>
+      <ul style="color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" class="foot-link">Confiabilidad El&eacute;ctrica</a></li>
+        <li><a href="soluciones-ccm-industrial.html#inicio" class="foot-link">CCM Industrial</a></li>
+        <li><a href="soluciones-transformadores-industriales.html#inicio" class="foot-link">Transformadores</a></li>
+        <li><a href="soluciones-variadores-frecuencia.html#inicio" class="foot-link">Variadores de Frecuencia</a></li>
+        <li><a href="soluciones-correccion-factor-potencia.html#inicio" class="foot-link">Correcci&oacute;n FP</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy</div>
+
+<div class="sticky-wa"><a href="https://wa.me/523338130739?text=Hola%2C+me+interesa+un+transformador+industrial" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9C13.4 28.3 14.7 29 16 29c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 2c5.5 0 10 4.5 10 10s-4.5 10-10 10c-1.3 0-2.6-.3-3.7-.8l-.3-.2-4.6 1.2 1.2-4.4-.2-.3C7.3 17.6 6 16.3 6 15 6 9.5 10.5 5 16 5zm-3.4 4.8c-.2 0-.5 0-.7.3-.2.3-.9 1-.9 2.3s.9 2.7 1.1 2.9c.2.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7.4 0 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.4-.3c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1l-.7.9c-.1.1-.2.2-.4.1s-.9-.3-1.8-.9a6 6 0 0 1-1.2-1.3c-.1-.2 0-.4.1-.5l.3-.3.2-.4.1-.3c0-.1 0-.3-.1-.4l-.7-1.8c-.2-.4-.4-.4-.6-.4h-.6z"/></svg></a></div>
+<div class="sticky-cta"><a href="contacto.html#ctaForm">Cotizar transformador</a></div>
+<script>
+(function(){
+  var t=document.getElementById('menuToggle'),l=document.getElementById('menuList');
+  if(t&&l){t.addEventListener('click',function(e){e.preventDefault();var o=l.classList.toggle('is-open');t.setAttribute('aria-expanded',o?'true':'false')});}
+  var nav=document.querySelector('header nav');if(!nav)return;
+  var media=window.matchMedia('(max-width:680px)');
+  var parents=Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+  function sync(){var m=media.matches;parents.forEach(function(p){var a=p.querySelector(':scope > a'),s=p.querySelector(':scope > .submenu');if(!a||!s)return;if(m){s.style.display=p.classList.contains('is-open')?'block':'none';}else{s.style.display='';p.classList.remove('is-open');}a.setAttribute('aria-expanded',p.classList.contains('is-open')?'true':'false');});}
+  parents.forEach(function(p){var a=p.querySelector(':scope > a'),s=p.querySelector(':scope > .submenu');if(!a||!s)return;a.addEventListener('click',function(e){if(!media.matches)return;e.preventDefault();var o=p.classList.toggle('is-open');s.style.display=o?'block':'none';a.setAttribute('aria-expanded',o?'true':'false');});});
+  sync();if(media.addEventListener)media.addEventListener('change',sync);else if(media.addListener)media.addListener(sync);
+})();
+</script>
+</body>
+</html>

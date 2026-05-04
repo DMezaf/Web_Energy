@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es-MX" data-concept="servicios-especializados">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Calidad de Energía Eléctrica Industrial | THD · Armónicos · IEEE 519 | VMS Energy</title>
+  <meta name="description" content="Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: armónicos (THD), flicker, huecos de tensión y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000 en México."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://vmsenergy.com/lp-calidad-de-energia-industrial.html"/>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="servicios-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── CALIDAD DE ENERGÍA INDUSTRIAL — page CSS ─────────────── */
+    :root {
+      --serv-hero-img: url('assets/img/hero_que_hacemos_VMS_Energy.png');
+      --serv-hero-before-display: block;
+      --serv-hero-gradient-bg: transparent;
+    }
+    .hero-eyebrow{display:inline-flex;gap:7px;padding:.28rem .72rem;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:.8rem;margin:0 0 16px}
+    /* Parámetros grid */
+    .param-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .param-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);border-left:4px solid var(--concept-primary)}
+    .param-card__norm{font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+    .param-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .param-card__desc{font-size:.87rem;color:#4b5563;margin:0;line-height:1.55}
+    /* Soluciones cards */
+    .sol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+    .sol-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:24px 20px;box-shadow:0 3px 12px rgba(8,28,54,.06)}
+    .sol-card__tag{display:inline-block;font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;background:rgba(15,76,129,.08);padding:.2rem .6rem;border-radius:999px}
+    .sol-card__title{font-size:1.05rem;font-weight:800;color:#0f172a;margin:0 0 10px}
+    .sol-card__desc{font-size:.88rem;color:#4b5563;margin:0 0 10px;line-height:1.55}
+    .sol-card__ideal{font-size:.8rem;color:#64748b;font-style:italic;margin:0}
+    /* Proceso de diagnóstico */
+    .proceso-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+    .paso{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:20px 16px;text-align:center;position:relative}
+    .paso__num{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+    .paso__title{font-size:.92rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .paso__desc{font-size:.8rem;color:#64748b;margin:0;line-height:1.5}
+    /* Entregables */
+    .entregables-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .ent-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;text-align:center}
+    .ent-card__icon{font-size:1.4rem;margin-bottom:8px}
+    .ent-card__title{font-size:.9rem;font-weight:800;color:#0f172a;margin:0}
+    /* Ref cards */
+    .ref-card__cliente{color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;font-size:.75rem;font-weight:800}
+    /* Responsive */
+    @media(max-width:1100px){.param-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:980px){.sol-grid{grid-template-columns:1fr};.proceso-steps{grid-template-columns:repeat(2,1fr)};.entregables-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){.param-grid{grid-template-columns:1fr};.proceso-steps{grid-template-columns:1fr};.entregables-grid{grid-template-columns:1fr 1fr}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Service",
+     "name":"Calidad de Energía Eléctrica Industrial",
+     "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com"},
+     "description":"Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: armónicos THD, flicker, huecos de tensión y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000.",
+     "areaServed":{"@type":"Country","name":"México"},
+     "serviceType":"Power Quality Analysis & Correction"},
+    {"@type":"FAQPage",
+     "mainEntity":[
+       {"@type":"Question","name":"¿Qué miden en un diagnóstico de calidad de energía?",
+        "acceptedAnswer":{"@type":"Answer","text":"Medimos THDi y THDv (distorsión armónica de corriente y tensión), factor de potencia real y de desplazamiento, huecos de tensión (voltage dips), flicker (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos."}},
+       {"@type":"Question","name":"¿Qué norma aplica para armónicos en México?",
+        "acceptedAnswer":{"@type":"Answer","text":"La norma de referencia internacional más usada en proyectos industriales en México es IEEE 519-2022, que fija límites de THDi y THDv según el nivel de corto circuito en el punto de acoplamiento común (PCC). También aplican IEC 61000-3-2 e IEC 61000-3-12 según la potencia del equipo, y la NMX-J-098-ANCE para instalaciones en México."}},
+       {"@type":"Question","name":"¿Cuánto tiempo dura la campaña de medición?",
+        "acceptedAnswer":{"@type":"Answer","text":"La medición mínima recomendada es de 7 días continuos para capturar variaciones de carga entre turnos, días de semana y fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción) recomendamos 14 o 28 días de medición."}},
+       {"@type":"Question","name":"¿Qué equipos utilizan para la medición de calidad de energía?",
+        "acceptedAnswer":{"@type":"Answer","text":"Utilizamos analizadores clase A según IEC 61000-4-30: Fluke 435-II, Hioki PW8001 y Dranetz HDPQ. Estos equipos registran todos los parámetros normalizados con resolución de 10/12 ciclos y almacenamiento de formas de onda para análisis post-evento."}},
+       {"@type":"Question","name":"¿La corrección de armónicos mejora el factor de potencia?",
+        "acceptedAnswer":{"@type":"Answer","text":"Depende de la solución. Los filtros activos (APF) corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los filtros pasivos corrigen armónicos específicos pero pueden introducir resonancia si no se diseñan correctamente con el sistema."}},
+       {"@type":"Question","name":"¿Cuánto cuesta un proyecto de corrección de calidad de energía?",
+        "acceptedAnswer":{"@type":"Answer","text":"El costo varía según la potencia del sistema, el número de puntos de medición y la solución técnica seleccionada. Un diagnóstico completo de 7 días con informe IEEE 519 parte de una inversión accesible para plantas medianas; la corrección mediante filtros activos o pasivos se dimensiona después del diagnóstico para garantizar que la solución sea proporcional al ahorro y las penalizaciones evitadas."}},
+       {"@type":"Question","name":"¿Los variadores de frecuencia generan problemas de calidad de energía?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. Los variadores de frecuencia (VFDs) con rectificadores de 6 pulsos generan principalmente armónicos de orden 5° y 7° (con THDi que puede superar el 40% sin mitigación). La solución más costo-eficiente es agregar reactancias de línea en la entrada del VFD, que reducen el THDi a niveles por debajo de IEEE 519. Para plantas con múltiples VFDs, un filtro activo centralizado es la opción más económica a escala."}}
+     ]}
+  ]}
+  </script>
+  <nav aria-label="Barra de navegación" style="display:none" id="breadcrumb-ld">
+  </nav>
+</head>
+<body>
+<header aria-label="Barra de navegación">
+  <div class="container topbar">
+    <a href="index.html" class="brand__logo" aria-label="VMS Energy"><img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager" decoding="async" width="72" height="72"></a>
+    <nav aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
+      <ul id="menuList">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="nosotros.html" aria-haspopup="true">Nosotros</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Nosotros">
+            <div class="submenu__group">
+              <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+              <ul class="submenu__list">
+                <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                <li><a href="proyectos-vms.html">Proyectos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+          <div class="submenu submenu--mega" role="menu" aria-label="Submenú de soluciones">
+            <div class="submenu__group">
+              <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
+                <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html#inicio">Generación Verde No Solar</a></li>
+                <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación Industrial</a></li>
+                <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones Eléctricas MT/AT</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <span class="submenu__title">Por Sector</span>
+              <ul class="submenu__list">
+                <li><a href="soluciones_mineria.html#inicio">Minería</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Equipamiento">
+            <div class="submenu__group">
+              <span class="submenu__title">Equipamiento Crítico</span>
+              <ul class="submenu__list">
+                <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad Eléctrica (UPS/BESS)</a></li>
+                <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores Industriales</a></li>
+                <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Corrección de Factor de Potencia</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#servicios" aria-haspopup="true">Servicios</a>
+          <div class="submenu" role="menu" aria-label="Submenú de servicios">
+            <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detección y Supresión de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios Eléctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; Calidad de Energía</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="procura.html#inicio">Procura</a></li>
+        <li><a href="contacto.html#inicio" class="btn btn--nav">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy &middot; Servicios Especializados</div>
+      <h1 id="heroTitle">Calidad de Energía Eléctrica Industrial<br><em>THD · Armónicos · Flicker · IEEE&nbsp;519</em></h1>
+      <p>Medición clase A (IEC 61000-4-30), análisis de armónicos, huecos de tensión y factor de potencia, y soluciones de corrección — filtros pasivos, activos y APF — para instalaciones industriales en México.</p>
+      <div class="hero-btns">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar diagnóstico</a>
+        <a class="btn btn--ghost" href="#diagnostico">Ver metodología</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">⚡ IEEE 519-2022</span>
+        <span class="hero-stat">⚡ IEC 61000-4-30 Clase A</span>
+        <span class="hero-stat">⚡ Fluke 435-II / Hioki PW8001</span>
+        <span class="hero-stat">⚡ ETAP &amp; PowerWorld</span>
+        <span class="hero-stat">⚡ Informe en 10 días hábiles</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMA ===== -->
+  <section class="section section--alt" aria-labelledby="problemaTitle">
+    <div class="container">
+      <span class="sec-label">El costo oculto</span>
+      <h2 class="sec-h2" id="problemaTitle">Los problemas de calidad de energía no aparecen en la factura — aparecen en producción</h2>
+      <p class="sec-lead">Fallas prematuras en variadores, relevadores que disparan sin causa aparente, rechazos de lote en proceso farmacéutico o alimenticio, penalizaciones de CFE por factor de potencia bajo. Todos tienen el mismo origen: energía fuera de los límites normativos en el punto de acoplamiento.</p>
+      <div class="param-grid" id="parametros">
+        <div class="param-card">
+          <p class="param-card__norm">IEEE 519-2022 / IEC 61000-3-2</p>
+          <p class="param-card__title">Armónicos de corriente y tensión (THD)</p>
+          <p class="param-card__desc">El THDi generado por rectificadores, VFDs y UPS de doble conversión puede superar el 40% en instalaciones sin mitigación. Inyecta calor en transformadores y neutros, reduce la vida útil de aislamientos y puede hacer disparar protecciones sin falla real.</p>
+        </div>
+        <div class="param-card">
+          <p class="param-card__norm">IEC 61000-4-15 / EN 50160</p>
+          <p class="param-card__title">Flicker y variaciones de tensión (Pst / Plt)</p>
+          <p class="param-card__desc">Cargas de arranque pesado — hornos de arco, soldadoras, compresores de gran potencia — producen variaciones rápidas de tensión que se perciben como parpadeo en iluminación y generan errores en equipos de medición y control de precisión.</p>
+        </div>
+        <div class="param-card">
+          <p class="param-card__norm">IEEE 1159 / IEC 61000-4-11</p>
+          <p class="param-card__title">Huecos de tensión y transitorios (Voltage Dips)</p>
+          <p class="param-card__desc">Un hueco de tensión de 100 ms al 70% puede reiniciar un PLC, disparar un VFD o detener una línea de embotellado. El origen puede ser externo (red CFE) o interno (arranques de motores de gran potencia) y solo se detecta con medición continua.</p>
+        </div>
+        <div class="param-card">
+          <p class="param-card__norm">IEEE 519 / NMX-J-098-ANCE</p>
+          <p class="param-card__title">Factor de potencia y potencia reactiva</p>
+          <p class="param-card__desc">Un factor de potencia por debajo de 0.90 genera cargos por demanda reactiva en la tarifa industrial de CFE. La corrección incorrecta — condensadores sin reactancia de desintonización — puede amplificar armónicos existentes en lugar de reducirlos.</p>
+        </div>
+        <div class="param-card">
+          <p class="param-card__norm">IEC 61000-2-2 / CIGRE WG C4</p>
+          <p class="param-card__title">Desequilibrio de tensión e interarmónicos</p>
+          <p class="param-card__desc">El desequilibrio mayor al 2% en sistemas trifásicos genera corrientes de secuencia negativa que calientan motores y generadores hasta un 20% adicional. Los interarmónicos — frecuencias no múltiplos de 60 Hz — son característicos de cicloconvertidores y soldadoras de frecuencia variable.</p>
+        </div>
+        <div class="param-card">
+          <p class="param-card__norm">IEEE 519 / IEC 61000-3-12</p>
+          <p class="param-card__title">Armónicos de alta frecuencia en inversores solares</p>
+          <p class="param-card__desc">Los inversores fotovoltaicos de conmutación rápida (IGBT) inyectan armónicos de alto orden (hasta el 40°–50°) que pueden interferir con sistemas de comunicación industrial, relés de distancia y medidores de energía del tipo Clase 0.2S.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESO DE DIAGNÓSTICO ===== -->
+  <section class="section" id="diagnostico" aria-labelledby="diagTitle">
+    <div class="container">
+      <span class="sec-label">Metodología</span>
+      <h2 class="sec-h2" id="diagTitle">De la medición al informe — en cuatro pasos</h2>
+      <p class="sec-lead">Todo proyecto de calidad de energía comienza con datos reales. No dimensionamos ni proponemos soluciones sin medición instrumentada en campo.</p>
+      <div class="proceso-steps">
+        <div class="paso">
+          <div class="paso__num">1</div>
+          <p class="paso__title">Levantamiento y definición de puntos</p>
+          <p class="paso__desc">Revisamos el unifilar, identificamos cargas no lineales, puntos de acoplamiento (PCC) y circuitos críticos. Definimos la cantidad y ubicación de analizadores para la campaña de medición.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">2</div>
+          <p class="paso__title">Medición continua — mínimo 7 días</p>
+          <p class="paso__desc">Instalamos analizadores clase A (Fluke 435-II, Hioki PW8001 o Dranetz HDPQ) en los puntos definidos. Registramos THDi, THDv, PF, flicker Pst/Plt, dips y transitorios sin interrumpir operación.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">3</div>
+          <p class="paso__title">Análisis e identificación de fuentes</p>
+          <p class="paso__desc">Procesamos los datos en ETAP y PowerWorld. Identificamos las fuentes generadoras de distorsión, cuantificamos el cumplimiento vs. IEEE 519-2022 e IEC 61000, y modelamos el impacto en el sistema.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">4</div>
+          <p class="paso__title">Informe + propuesta de corrección</p>
+          <p class="paso__desc">Entregamos informe técnico clase A con resultados por parámetro, comparativa contra límites normativos, diagnóstico de causa raíz y propuesta de solución dimensionada con análisis de retorno de inversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUCIONES ===== -->
+  <section class="section section--alt" id="soluciones" aria-labelledby="solTitle">
+    <div class="container">
+      <span class="sec-label">Soluciones de corrección</span>
+      <h2 class="sec-h2" id="solTitle">La solución depende del problema — no al revés</h2>
+      <p class="sec-lead">Seleccionamos la tecnología de corrección después del diagnóstico. Ningún filtro activo o banco de condensadores se dimensiona sin los datos de medición que justifican la inversión.</p>
+      <div class="sol-grid">
+        <div class="sol-card">
+          <span class="sol-card__tag">Armónicos</span>
+          <h3 class="sol-card__title">Reactancias de línea en entrada de VFD</h3>
+          <p class="sol-card__desc">La solución más costo-eficiente para variadores de frecuencia con rectificadores de 6 pulsos. Una reactancia del 3-5% reduce el THDi del VFD de ~40% a ~30% sin infraestructura adicional. Recomendada como primera línea cuando el número de VFDs es limitado y el THD total está por debajo del umbral crítico.</p>
+          <p class="sol-card__ideal">Ideal para: plantas con 1-10 variadores medianos, presupuesto ajustado, integración rápida.</p>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__tag">Armónicos</span>
+          <h3 class="sol-card__title">Filtros pasivos LC sintonizados</h3>
+          <p class="sol-card__desc">Circuitos resonantes LC sintonizados a los órdenes harmónicos dominantes (5°, 7°, 11°, 13°). Ofrecen alta atenuación a frecuencia de sintonía con costo más bajo que los filtros activos. El diseño debe validarse contra la impedancia del sistema para evitar resonancia paralela con la red CFE o con bancos de FP existentes.</p>
+          <p class="sol-card__ideal">Ideal para: grandes cargas con perfil armónico estable, industria pesada, siderurgia, cementeras.</p>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__tag">Armónicos + Reactiva</span>
+          <h3 class="sol-card__title">Filtro activo de potencia (APF / Active Power Filter)</h3>
+          <p class="sol-card__desc">Inyecta corriente de compensación dinámica que cancela los armónicos medidos en tiempo real (hasta el armónico 50°). Sin resonancia con la red. Puede compensar simultáneamente potencia reactiva y desequilibrio de fases. La solución más flexible para cargas variables o mezclas de equipos heterogéneos en el mismo sistema.</p>
+          <p class="sol-card__ideal">Ideal para: plantas con VFDs + UPS + rectificadores, proceso variable, farmacéutica, manufactura de precisión.</p>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__tag">Factor de Potencia</span>
+          <h3 class="sol-card__title">Banco de capacitores con reactancia de desintonización</h3>
+          <p class="sol-card__desc">Corrección de potencia reactiva mediante bancos automáticos (APFC) con contactores o tiristores. La reactancia de desintonización (tipicamente 7% o 14%) aleja la frecuencia de resonancia del banco de los armónicos dominantes del sistema, evitando el efecto amplificador que generan los bancos de FP sin desintonización en entornos con alta distorsión armónica.</p>
+          <p class="sol-card__ideal">Ideal para: plantas con cos φ &lt; 0.90 y THDi &lt; 15%, industria general, comercio, infraestructura.</p>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__tag">Reactiva Dinámica</span>
+          <h3 class="sol-card__title">STATCOM — compensación estática de potencia reactiva</h3>
+          <p class="sol-card__desc">Compensador estático basado en convertidor VSC que inyecta o absorbe potencia reactiva en milisegundos. A diferencia de los bancos de condensadores, el STATCOM puede operar con tensión de barra muy baja (justo cuando más se necesita la compensación) y no genera resonancia. Reduce flicker en cargas pulsantes como hornos de arco y grandes arranques.</p>
+          <p class="sol-card__ideal">Ideal para: hornos de arco, grandes compresores, acerías, plantas con alto flicker y variaciones de tensión.</p>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__tag">Protección integral</span>
+          <h3 class="sol-card__title">UPS con filtrado activo y acondicionador de línea</h3>
+          <p class="sol-card__desc">Los UPS de doble conversión online generan tensión sinusoidal limpia a la salida con independencia total de los armónicos en la red de entrada. Para equipos de producción altamente sensibles — máquinas CNC, servidores de proceso, PLCs críticos — el acondicionador de tensión combinado con UPS ofrece inmunidad total a dips, flicker y armónicos de red.</p>
+          <p class="sol-card__ideal">Ideal para: cargas críticas de proceso, salas de control, equipos de medición de alta precisión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS DE REFERENCIA ===== -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Proyectos de referencia</span>
+      <h2 class="sec-h2" id="refTitle">Casos de corrección de calidad de energía ejecutados</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">Planta Embotelladora — Jalisco</p>
+          <p class="ref-card__lugar">📍 Guadalajara, Jalisco</p>
+          <p class="ref-card__desc">Diagnóstico de calidad de energía y corrección de THDi en planta embotelladora con 24 variadores de frecuencia en líneas de llenado y pasteurización. Instalación de reactancias de línea y filtro activo centralizado; THDi reducido del 38% al 7%, eliminando disparos injustificados en protecciones de proceso.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Terminal de Almacenamiento — Pemex Refinación</p>
+          <p class="ref-card__lugar">📍 Salamanca, Guanajuato</p>
+          <p class="ref-card__desc">Estudio de calidad de energía según IEEE 519-2022 en terminal de almacenamiento de hidrocarburos. Medición en 6 puntos durante 14 días; identificación de resonancia paralela entre banco de FP existente y armónicos de 5° orden. Rediseño del banco con reactancia de desintonización al 7%.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Planta Química — Grupo Industrial</p>
+          <p class="ref-card__lugar">📍 Veracruz</p>
+          <p class="ref-card__desc">Corrección de factor de potencia y supresión de armónicos en planta química con rectificadores de gran potencia. Diseño e instalación de banco APFC con reactancia de desintonización 14% y filtro pasivo sintonizado a 5° armónico. Factor de potencia mejorado de 0.78 a 0.97; eliminación de penalización CFE mensual.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Azucarero — Oaxaca</p>
+          <p class="ref-card__lugar">📍 Tuxtepec, Oaxaca</p>
+          <p class="ref-card__desc">Campaña de medición de calidad de energía durante arranque de zafra. Cuantificación de flicker (Pst &gt; 1.8) generado por arranques de molinos y difusores. Propuesta de STATCOM 2 MVAr para compensación dinámica de reactiva durante arranques masivos y reducción de flicker a valores por debajo de límite EN 50160.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Parque Solar Industrial — CFE suministrador</p>
+          <p class="ref-card__lugar">📍 Sonora</p>
+          <p class="ref-card__desc">Auditoría de calidad de energía en punto de interconexión MT de parque solar de 3.2 MW. Verificación de cumplimiento de límites armónicos del Código de Red CENACE. Medición de THDv e interarmónicos de inversores Sungrow; ajuste de parámetros de filtro LCL en inversores para cumplimiento pleno.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Planta Farmacéutica — Estado de México</p>
+          <p class="ref-card__lugar">📍 Toluca, Estado de México</p>
+          <p class="ref-card__desc">Diagnóstico y corrección de huecos de tensión que reiniciaban equipos de manufactura crítica. Medición continua de 28 días con Dranetz HDPQ; identificación de origen en arranques de compresor de 450 HP en barra compartida. Solución: UPS de doble conversión + reactor de limitación de caída en circuito de compresor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENTREGABLES ===== -->
+  <section class="section section--alt" id="entregables" aria-labelledby="entTitle">
+    <div class="container">
+      <span class="sec-label">Entregables</span>
+      <h2 class="sec-h2" id="entTitle">¿Qué recibe el cliente?</h2>
+      <p class="sec-lead">Cada diagnóstico se entrega con documentación completa lista para respaldo ante CFE, auditorías de calidad o decisiones de inversión en corrección.</p>
+      <div class="entregables-grid">
+        <div class="ent-card"><div class="ent-card__icon">📄</div><p class="ent-card__title">Informe técnico PDF firmado (clase A IEC 61000-4-30)</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📊</div><p class="ent-card__title">Datos crudos de medición en formato CSV / Excel</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📈</div><p class="ent-card__title">Espectro armónico por punto y por fase (hasta 50°)</p></div>
+        <div class="ent-card"><div class="ent-card__icon">⚡</div><p class="ent-card__title">Comparativa THDi / THDv vs. límites IEEE 519-2022</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🗺️</div><p class="ent-card__title">Modelo ETAP del sistema eléctrico con cargas medidas</p></div>
+        <div class="ent-card"><div class="ent-card__icon">💡</div><p class="ent-card__title">Propuesta de corrección dimensionada con análisis de ROI</p></div>
+        <div class="ent-card"><div class="ent-card__icon">📋</div><p class="ent-card__title">Resumen ejecutivo para dirección y comité de inversión</p></div>
+        <div class="ent-card"><div class="ent-card__icon">🎯</div><p class="ent-card__title">Presentación de resultados y sesión de Q&amp;A técnica</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Preguntas frecuentes</span>
+      <h2 class="sec-h2" id="faqTitle">Dudas sobre calidad de energía eléctrica</h2>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>¿Qué miden en un diagnóstico de calidad de energía?</summary>
+          <div class="faq-body">Medimos <strong>THDi y THDv</strong> (distorsión armónica de corriente y tensión), <strong>factor de potencia</strong> real y de desplazamiento, <strong>huecos de tensión</strong> (voltage dips), <strong>flicker</strong> (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué norma aplica para armónicos en México?</summary>
+          <div class="faq-body">La norma de referencia internacional más usada en proyectos industriales en México es <strong>IEEE 519-2022</strong>, que fija límites de THDi y THDv según el nivel de cortocircuito en el punto de acoplamiento común (PCC). También aplican <strong>IEC 61000-3-2</strong> e <strong>IEC 61000-3-12</strong> según la potencia del equipo generador, y la <strong>NMX-J-098-ANCE</strong> para instalaciones en México. Para parques solares conectados a la red CFE aplica adicionalmente el Código de Red de CENACE.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Cuánto tiempo dura la campaña de medición?</summary>
+          <div class="faq-body">La medición mínima recomendada es de <strong>7 días continuos</strong> para capturar variaciones de carga entre turnos y días laborables vs. fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción estacional) recomendamos <strong>14 o 28 días</strong> de medición para que el perfil sea representativo del peor caso operativo.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Los variadores de frecuencia son los únicos generadores de armónicos?</summary>
+          <div class="faq-body">No. Los principales generadores de armónicos en una planta industrial son: <strong>variadores de frecuencia</strong> (VFDs) con rectificadores de 6 y 12 pulsos, <strong>UPS de doble conversión</strong>, <strong>rectificadores de carga de baterías</strong>, <strong>hornos de arco</strong>, <strong>fuentes de alimentación conmutadas</strong> en equipos de automatización, <strong>inversores fotovoltaicos</strong> y <strong>soldadoras de frecuencia variable</strong>. La identificación de la fuente dominante es la base para dimensionar correctamente la solución.</div>
+        </details>
+        <details class="faq">
+          <summary>¿La corrección de armónicos mejora el factor de potencia?</summary>
+          <div class="faq-body">Depende de la solución. Los <strong>filtros activos (APF)</strong> corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los <strong>filtros pasivos</strong> corrigen armónicos específicos pero no compensan reactiva fundamental. Los <strong>bancos de condensadores sin filtrado</strong> pueden empeorar el problema armónico si no se diseñan con reactancia de desintonización correcta.</div>
+        </details>
+        <details class="faq">
+          <summary>¿El diagnóstico requiere detener la producción?</summary>
+          <div class="faq-body"><strong>No</strong>. La instalación de los analizadores de calidad de energía se realiza sobre los conductores en operación mediante pinzas de corriente de efecto Hall sin contacto directo con conductores energizados. El diagnóstico no interrumpe la operación de la planta. La instalación de la solución de corrección (filtros, bancos o APF) sí puede requerir una ventana de paro breve para la conexión al tablero principal.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Cuánto tiempo tarda en ver resultados después de instalar los filtros?</summary>
+          <div class="faq-body">Los resultados son inmediatos tras la puesta en servicio. Un <strong>filtro activo (APF)</strong> entra en compensación en microsegundos; la reducción del THDi es medible en el primer ciclo de red. La validación final se hace con una segunda campaña de medición post-instalación de 7 días para confirmar el cumplimiento de los límites de IEEE 519 y la eliminación de penalizaciones de CFE.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>¿Su instalación cumple con IEEE 519-2022?</h2>
+      <p>La única forma de saberlo es medir. Solicite un diagnóstico de calidad de energía sin compromiso — entregamos el informe en 10 días hábiles a partir del fin de la campaña de medición.</p>
+      <div class="cta-band-btns">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar diagnóstico</a>
+        <a class="btn btn--ghost" href="lp-estudios-electricos-industriales.html">Ver estudios eléctricos</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot" id="footer" aria-label="Pie de página">
+  <div class="container">
+    <div>
+      <h4>VMS Energy</h4>
+      <p style="font-size:13px;color:#94a3b8;line-height:1.6;margin:0 0 12px">Ingeniería EPC eléctrica, suministro técnico y servicios especializados para la industria en México.</p>
+      <div style="display:flex;gap:8px">
+        <a href="https://www.linkedin.com/company/vms-energy/" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy" style="width:32px;height:32px;border-radius:50%;background:#1e3a5f;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:14px;text-decoration:none">in</a>
+      </div>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+        <li><a href="lp-deteccion-control-supresion-fuego.html">Detección y Supresión de Fuego</a></li>
+        <li><a href="lp-estudios-electricos-industriales.html">Estudios Eléctricos</a></li>
+        <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+        <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+        <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energía</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Soluciones</h4>
+      <ul>
+        <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energética</a></li>
+        <li><a href="soluciones_automatizacion_control.html">Automatización y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html">Energía Solar Industrial</a></li>
+        <li><a href="soluciones-correccion-factor-potencia.html">Corrección de Factor de Potencia</a></li>
+        <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="certificaciones.html">Certificaciones ISO</a></li>
+        <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+        <li><a href="proyectos-vms.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="aviso-privacidad.html">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html">Código de Ética</a></li>
+        <li><a href="politica-antisoborno.html">Política Antisoborno</a></li>
+      </ul>
+      <p style="font-size:11px;color:#64748b;margin-top:16px">© 2025 VMS Energy S.A. de C.V.<br>Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const list   = document.getElementById('menuList');
+  if(toggle && list){
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if(window.innerWidth < 900){ e.preventDefault(); a.closest('.nav-item--has-submenu').classList.toggle('is-open'); }
+      });
+    });
+  }
+  // FAQ accordion
+  document.querySelectorAll('.faq').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if(d.open) document.querySelectorAll('.faq[open]').forEach(o => { if(o !== d) o.removeAttribute('open'); });
+    });
+  });
+</script>
+</body>
+</html>

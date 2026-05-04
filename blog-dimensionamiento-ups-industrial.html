@@ -1,0 +1,943 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo Dimensionar un UPS Industrial: Topologías IEC 62040-3, Autonomía y Banco de Baterías | VMS Energy</title>
+  <meta name="description" content="Guía técnica completa para dimensionar un UPS industrial: topologías VFI/VI/VFD según IEC 62040-3, cálculo de autonomía, selección de banco de baterías LFP vs VRLA, normas aplicables y caso real Oil & Gas en Paraíso, Tabasco." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Cómo Dimensionar un UPS Industrial: Topologías IEC 62040-3 y Banco de Baterías | VMS Energy" />
+  <meta property="og:description" content="Del inventario de cargas críticas al paquete IFC: metodología de dimensionamiento de UPS y BESS industriales en proyectos EPC." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/ups-bess/og-dimensionamiento-ups-industrial.webp" />
+  <meta property="article:published_time" content="2026-07-24" />
+  <meta property="article:modified_time" content="2026-07-24" />
+  <meta property="article:section" content="UPS y BESS Industrial" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dimensionamiento UPS Industrial: Topologías IEC 62040-3, Autonomía y Baterías | VMS Energy" />
+  <meta name="twitter:description" content="Guía técnica: topologías VFI/VI/VFD, cálculo de autonomía, LFP vs VRLA, peak shaving BESS y caso real Oil & Gas en Tabasco." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/ups-bess/og-dimensionamiento-ups-industrial.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/services/infraestructura_electrica.webp');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn--primary{background:var(--cobalt);color:#fff}
+    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#991b1b;background:linear-gradient(135deg,rgba(153,27,27,.07),rgba(239,68,68,.07));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-mini-card .tag--green{color:#166534}
+    .article-mini-card .tag--amber{color:#92400e}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:520px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.92rem;letter-spacing:.02em}
+    .article-table td{color:#314a67;font-size:.97rem}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table .good{color:#166534;font-weight:700}
+    .article-table .mid{color:#92400e}
+    .article-table .hi{color:#991b1b;font-weight:700}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+
+    /* Fórmula highlight */
+    .formula-box{margin:18px 0;padding:16px 20px;background:#f0f6ff;border:1px solid rgba(15,76,129,.18);border-radius:14px;font-family:monospace,monospace;font-size:1.02rem;color:#12365f;overflow-x:auto}
+    .formula-box .formula-label{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--concept-primary);margin-bottom:6px}
+    .formula-box .formula-note{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.88rem;color:#4a5f79;margin-top:8px;font-style:italic}
+
+    /* Topología UPS badge */
+    .topo-badge{display:inline-block;padding:.2rem .6rem;border-radius:8px;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-right:6px}
+    .topo-badge--vfi{background:rgba(22,101,52,.12);color:#166534}
+    .topo-badge--vi{background:rgba(180,83,9,.12);color:#92400e}
+    .topo-badge--vfd{background:rgba(100,116,139,.12);color:#475569}
+
+    /* Tabla de baterías comparativa */
+    .bat-compare{margin:22px 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .bat-card{padding:18px;border-radius:16px;border:1px solid rgba(23,44,81,.12)}
+    .bat-card--vrla{background:#fffbf0;border-color:rgba(180,83,9,.2)}
+    .bat-card--lfp{background:#f0fdf4;border-color:rgba(22,101,52,.2)}
+    .bat-card h3{margin:0 0 10px;font-size:1.05rem}
+    .bat-card--vrla h3{color:#92400e}
+    .bat-card--lfp h3{color:#166534}
+    .bat-card ul{margin:0 0 0 16px;padding:0;font-size:.97rem;color:#314a67}
+    .bat-card li{margin:0 0 8px}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar,.bat-compare{grid-template-columns:1fr}.article-table{min-width:0}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"UPS y BESS Industrial","item":"https://vmsenergy.com/confiabilidad-electrica-industrial.html"},{"@type":"ListItem","position":4,"name":"Dimensionamiento UPS industrial","item":"https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html"}]},{"@type":"BlogPosting","headline":"Cómo dimensionar un UPS industrial: topologías IEC 62040-3, autonomía y selección de banco de baterías","description":"Guía técnica completa para dimensionar un UPS industrial: topologías VFI/VI/VFD según IEC 62040-3, cálculo de autonomía, selección de banco de baterías LFP vs VRLA, normas aplicables y caso real Oil & Gas en Paraíso, Tabasco.","image":"https://vmsenergy.com/assets/img/blog/ups-bess/og-dimensionamiento-ups-industrial.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-07-24","dateModified":"2026-07-24","mainEntityOfPage":"https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html","articleSection":"UPS y BESS Industrial","keywords":"UPS industrial México, dimensionamiento UPS, topología VFI IEC 62040-3, banco de baterías LFP, BESS peak shaving, Borri UPS industrial, Geolis BESS, autonomía UPS planta industrial, confiabilidad eléctrica EPC"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué topología UPS recomienda la norma IEC 62040-3 para instalaciones industriales críticas?","acceptedAnswer":{"@type":"Answer","text":"La norma IEC 62040-3 define tres topologías: VFI (doble conversión online), VI (interactivo) y VFD (standby). Para instalaciones industriales críticas — Oil & Gas, minería, manufactura de proceso continuo, salas de control — la única topología aceptable es VFI porque proporciona aislamiento galvánico total, tiempo de transferencia cero y regulación de voltaje y frecuencia completamente independiente de la red. VI y VFD son adecuadas solo para aplicaciones no críticas."}},{"@type":"Question","name":"¿Cómo se calcula el tiempo de autonomía de un banco de baterías para UPS?","acceptedAnswer":{"@type":"Answer","text":"La fórmula es: t_autonomía (h) = C_banco (kWh) × η_inversor / P_carga (kW). La potencia de carga en kW se obtiene multiplicando la potencia aparente en kVA por el factor de potencia cosφ de las cargas conectadas. La eficiencia del inversor en UPS VFI modernos es típicamente 92–96%. Ejemplo: sala de control de 30 kW, banco de 72 kWh, η = 0.95 → autonomía = 72 × 0.95 / 30 = 2.28 horas."}},{"@type":"Question","name":"¿Cuál es la diferencia entre baterías LFP y VRLA para un banco de UPS industrial?","acceptedAnswer":{"@type":"Answer","text":"Las VRLA (plomo-ácido selladas): costo inicial bajo, vida útil 3–5 años en ciclos frecuentes, sensibles a temperatura y densidad ~30–50 Wh/kg. Las LFP (litio ferrofosfato): ≥8 000 ciclos de vida útil, densidad 90–160 Wh/kg, operación de -20 °C a +60 °C, sin mantenimiento. Para BESS industriales con ciclos diarios de carga-descarga, la LFP es la tecnología correcta porque el costo por ciclo es radicalmente menor. Para UPS de respaldo puro con muy pocos ciclos al año, la VRLA puede seguir siendo costo-efectiva."}},{"@type":"Question","name":"¿Qué normas aplican a la instalación de un sistema UPS industrial en México?","acceptedAnswer":{"@type":"Answer","text":"Las principales normas son: IEC 62040-1 (requisitos de seguridad UPS), IEC 62040-3 (métodos de medición y clasificación de topología), IEC 61427-2 (requisitos de baterías para sistemas de almacenamiento estacionario), UL 9540 y UL 9540A (seguridad de sistemas BESS), NFPA 855 (instalación de sistemas de almacenamiento de energía), NFPA 70 (NEC — código eléctrico para instalación en instalaciones en EUA y proyectos exportados), y NOM-001-SEDE-2012 para instalaciones eléctricas en México."}},{"@type":"Question","name":"¿Cuándo se justifica instalar un BESS en lugar de solo un generador de respaldo?","acceptedAnswer":{"@type":"Answer","text":"El BESS responde en milisegundos — sin tiempo de arranque — y es silencioso, sin emisiones y con mantenimiento mínimo. El generador ofrece autonomía ilimitada mientras haya combustible pero tiene arranque de 10–30 segundos (durante los cuales la carga está sin respaldo), requiere mantenimiento frecuente, emite gases y tiene costo de combustible continuo. La arquitectura óptima para instalaciones críticas es BESS + generador: el BESS cubre el gap de arranque del generador y los microcortes (< 2 s), el generador proporciona la autonomía larga (> 30 min) si la interrupción se prolonga."}},{"@type":"Question","name":"¿Qué es el peak shaving y cómo se dimensiona el BESS para ese caso de uso?","acceptedAnswer":{"@type":"Answer","text":"El peak shaving consiste en descargar el BESS durante los picos de demanda para reducir el máximo registrado en el medidor de CFE. Para dimensionar el BESS: (1) analizar la curva de demanda en ventanas de 15 minutos durante al menos 30 días; (2) identificar el delta de demanda que se quiere recortar (kW) y la duración típica de los picos (minutos); (3) la potencia del BESS debe igualar ese delta, y la energía mínima es: E = P_recorte (kW) × duración_pico (h). Con cargos por demanda CFE de $300–500/kW/mes, un BESS bien dimensionado tiene retornos de 18 a 36 meses."}},{"@type":"Question","name":"¿Cómo se integra un UPS Borri con un BESS Geolis en un proyecto EPC?","acceptedAnswer":{"@type":"Answer","text":"Son sistemas complementarios con roles distintos: el UPS Borri protege las cargas críticas de control (instrumentación, DCS, SCADA, comunicaciones) con respaldo de minutos — sin tiempo de transferencia, con aislamiento galvánico total. El BESS Geolis actúa a escala del sistema eléctrico de la planta: peak shaving, respaldo ante interrupciones de larga duración e integración con generación solar. En un proyecto EPC de VMS Energy, ambos sistemas se integran al tablero de distribución principal y al SCADA de planta mediante Modbus TCP o DNP3, permitiendo monitoreo centralizado y estrategias coordinadas de gestión de energía."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-dimensionamiento-ups-industrial.html" />
+</head>
+<body>
+  <header aria-label="Barra de navegación">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="carreras.html">Carreras</a></li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="--article-image:url('assets/img/services/infraestructura_electrica.webp')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; UPS y BESS Industrial &middot; Serie #1</span>
+        <h1 id="hero-title">Cómo dimensionar un UPS industrial: topologías IEC 62040-3, autonomía y selección de banco de baterías</h1>
+        <p>El documento que define si su proceso crítico sobrevive una falla de red de 2 segundos o de 4 horas — y por qué elegir la topología equivocada lo expone de todas formas.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#articulo">Leer artículo</a>
+          <a class="btn btn--secondary" href="confiabilidad-electrica-industrial.html">Ver UPS y BESS Industrial</a>
+        </div>
+        <div class="hero__meta">
+          <span>&#128197; 24 julio 2026</span>
+          <span>&#9201; 12 min de lectura</span>
+          <span>&#128218; UPS Industrial &middot; IEC 62040-3 &middot; LFP vs VRLA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <article class="blog-article" aria-label="Artículo: Dimensionamiento UPS industrial">
+
+          <nav class="article-toc" aria-label="Tabla de contenidos">
+            <h3>Contenido del artículo</h3>
+            <ol>
+              <li><a href="#topologias">Las tres topologías UPS según IEC 62040-3: VFI, VI y VFD</a></li>
+              <li><a href="#inventario">Paso 1 — Inventario y clasificación de cargas críticas</a></li>
+              <li><a href="#autonomia">Paso 2 — Cálculo de autonomía requerida</a></li>
+              <li><a href="#banco">Paso 3 — Selección del banco de baterías: LFP vs VRLA</a></li>
+              <li><a href="#bess">Paso 4 — Cuándo añadir un BESS al ecosistema</a></li>
+              <li><a href="#normas">Normas aplicables a instalaciones UPS y BESS industriales</a></li>
+              <li><a href="#caso">Caso: base operativa Oil &amp; Gas en Paraíso, Tabasco</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <p class="article-lead">En una planta industrial, hay dos tipos de interrupción eléctrica: las que el proceso puede absorber sin consecuencias — y las que cuestan millones. La diferencia entre una y otra no la hace la confiabilidad de CFE: la hace la ingeniería de respaldo. Un UPS mal dimensionado puede fallar en exactamente el momento en que más se necesita: cuando la red cae durante un arranque de maquinaria pesada que genera una caída de tensión que el UPS no puede absorber, o cuando la autonomía calculada en condiciones de laboratorio no se alcanza porque el banco de baterías nunca fue parametrizado a la temperatura real de la sala eléctrica.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Topologías -->
+          <h2 id="topologias">1. Las tres topologías UPS según IEC 62040-3: VFI, VI y VFD</h2>
+
+          <p>La norma <strong>IEC 62040-3</strong> es el estándar internacional que clasifica los UPS según cómo responden a variaciones de tensión y frecuencia en la red de entrada. Esta clasificación es más precisa — y más útil para ingeniería de proyectos — que los términos comerciales "online", "interactivo" y "standby", que los fabricantes usan de manera inconsistente.</p>
+
+          <div class="article-grid article-grid--3">
+            <div class="article-mini-card">
+              <span class="tag">IEC 62040-3</span>
+              <h3><span class="topo-badge topo-badge--vfi">VFI</span>Voltage &amp; Frequency Independent</h3>
+              <p><strong>Doble conversión online.</strong> La carga es alimentada 100% del tiempo desde el inversor: la red carga las baterías y el inversor alimenta la carga. Tiempo de transferencia: <strong>0 ms</strong>. Aislamiento galvánico total. Regula voltaje y frecuencia independientemente de la red. Eficiencia: 92–96%.</p>
+              <p style="margin-top:8px;font-size:.9rem;color:#166534"><strong>Aplicación:</strong> Oil &amp; Gas, minería, salas de control crítico, hospitales, telecomunicaciones.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag tag--amber">IEC 62040-3</span>
+              <h3><span class="topo-badge topo-badge--vi">VI</span>Voltage Independent</h3>
+              <p><strong>Interactivo / Line-interactive.</strong> La red alimenta la carga directamente a través de un regulador (AVR/transformador). Las baterías solo entran cuando la red falla. Tiempo de transferencia: <strong>4–12 ms</strong> (dentro de la ventana tolerada por equipos TI según CBEMA, pero problemático para cargas industriales sensibles).</p>
+              <p style="margin-top:8px;font-size:.9rem;color:#92400e"><strong>Aplicación:</strong> oficinas, cargas de TI no críticas, pequeños centros de datos en entornos estables.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag" style="color:#475569">IEC 62040-3</span>
+              <h3><span class="topo-badge topo-badge--vfd">VFD</span>Voltage &amp; Frequency Dependent</h3>
+              <p><strong>Standby / Offline.</strong> La carga está conectada directamente a la red; el inversor solo actúa cuando la tensión de red cae fuera de rango. Tiempo de transferencia: <strong>10–25 ms</strong>. Sin regulación de voltaje ni frecuencia en operación normal. Sin aislamiento galvánico.</p>
+              <p style="margin-top:8px;font-size:.9rem;color:#475569"><strong>Aplicación:</strong> respaldo básico en oficinas, PCs, entornos sin cargas sensibles.</p>
+            </div>
+          </div>
+
+          <div class="article-callout article-callout--warning">
+            <strong>Error frecuente:</strong> especificar un UPS "online" sin verificar que la norma del fabricante corresponda a topología VFI según IEC 62040-3. Algunos fabricantes denominan "online" a sistemas VI con tiempos de transferencia de 4–8 ms que no garantizan cero interrupción. Para proyectos industriales, solicitar siempre la clasificación IEC 62040-3 explícita en la ficha técnica del equipo.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Inventario -->
+          <h2 id="inventario">2. Paso 1 — Inventario y clasificación de cargas críticas</h2>
+
+          <p>Antes de dimensionar el UPS es imprescindible separar las cargas del sistema eléctrico de la planta en tres categorías:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Categoría</th>
+                  <th>Ejemplos típicos</th>
+                  <th>Consecuencia de interrupción</th>
+                  <th>Requiere UPS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cargas críticas A</strong></td>
+                  <td>DCS, PLC, SCADA, HMI, sistemas de seguridad (ESD/SIS), comunicaciones, UPS de telecomunicaciones</td>
+                  <td class="hi">Pérdida de control del proceso, riesgo de seguridad, parada de emergencia descontrolada</td>
+                  <td class="good">VFI obligatorio</td>
+                </tr>
+                <tr>
+                  <td><strong>Cargas críticas B</strong></td>
+                  <td>Bombas de sellado de compresor, sistemas de lubricación, enfriamiento de transformadores, iluminación de emergencia</td>
+                  <td class="mid">Daño mecánico a equipos rotatorios, tiempo de arranque prolongado</td>
+                  <td class="mid">VFI o generador (según tiempo de respuesta)</td>
+                </tr>
+                <tr>
+                  <td><strong>Cargas no críticas</strong></td>
+                  <td>Iluminación general, HVAC de oficinas, equipos auxiliares de taller</td>
+                  <td>Interrupción de confort, no de producción</td>
+                  <td class="na">No requiere UPS; generador suficiente</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>El inventario debe registrar para cada carga crítica A y B: potencia nominal (kVA), factor de potencia (cosφ), potencia activa real (kW = kVA × cosφ), sensibilidad a microcortes (ms), y si genera armónicos — variadores de frecuencia e inversores inyectan THDi que puede saturar el transformador interno del UPS si no está especificado correctamente.</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Potencia del UPS requerida</span>
+            P_UPS (kVA) = Σ P_cargas (kVA) × FSD × 1.20
+            <span class="formula-note">FSD = Factor de simultaneidad de demanda (típico 0.80–0.90 para cargas industriales mixtas). El factor 1.20 es el margen de reserva estándar para permitir crecimiento futuro y proteger la vida útil del transformador interno del UPS.</span>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Autonomía -->
+          <h2 id="autonomia">3. Paso 2 — Cálculo de autonomía requerida</h2>
+
+          <p>La autonomía requerida se define por el plan de continuidad operativa (BCP) de la planta, no por lo que "se ve razonable". Las preguntas correctas son:</p>
+
+          <ul>
+            <li><strong>¿Cuánto tiempo tarda el generador de emergencia en arrancar y estabilizarse?</strong> — Típicamente 10–30 s. El UPS debe cubrir ese gap más un margen de seguridad. Autonomía mínima: <strong>5–15 minutos</strong>.</li>
+            <li><strong>¿Qué pasa si el generador no arranca?</strong> — El UPS debe dar tiempo para un shutdown seguro del proceso. Autonomía típica: <strong>30–60 minutos</strong>.</li>
+            <li><strong>¿El sitio opera en zona de baja confiabilidad de CFE?</strong> — En zonas remotas de Oil &amp; Gas o minería, interrupciones de 2–8 horas son posibles. Autonomía requerida: <strong>2–8 horas</strong> (aquí el BESS complementa al UPS).</li>
+          </ul>
+
+          <div class="formula-box">
+            <span class="formula-label">Capacidad del banco de baterías para autonomía objetivo</span>
+            C_banco (kWh) = P_carga (kW) × t_autonomía (h) / η_inversor
+            <span class="formula-note">η_inversor en UPS VFI modernos (Borri E3001): 94–96%. | Ejemplo: 40 kW de cargas críticas, autonomía objetivo 60 min, η = 0.95 → C_banco = 40 × 1.0 / 0.95 = 42.1 kWh.</span>
+          </div>
+
+          <div class="article-callout">
+            <strong>Corrección por temperatura:</strong> la capacidad de las baterías VRLA se reduce significativamente con la temperatura. A 25 °C la capacidad es nominal (100%). A 35 °C: ~88%. A 40 °C: ~79%. Si la sala eléctrica no tiene HVAC o supera los 30 °C de manera habitual, el banco debe sobredimensionarse para compensar, o migrar a baterías LFP que son mucho menos sensibles a la temperatura (rango operativo -20 °C a +60 °C sin degradación severa de capacidad).
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Banco de baterías -->
+          <h2 id="banco">4. Paso 3 — Selección del banco de baterías: LFP vs VRLA</h2>
+
+          <p>La química del banco de baterías es la decisión que más impacta el costo total de propiedad (TCO) del UPS durante su vida útil. No es solo el precio inicial — es cuántos años dura y cuánto cuesta reemplazarlo.</p>
+
+          <div class="bat-compare">
+            <div class="bat-card bat-card--vrla">
+              <h3>VRLA / AGM (Plomo-Ácido Selladas)</h3>
+              <ul>
+                <li><strong>Ciclos de vida:</strong> 500–1 000 ciclos (profundidad 80%)</li>
+                <li><strong>Vida útil en flotación:</strong> 5–10 años a 20 °C, 3–5 años a 30 °C</li>
+                <li><strong>Densidad energética:</strong> 30–50 Wh/kg</li>
+                <li><strong>Temperatura óptima:</strong> 20–25 °C (sensible al calor)</li>
+                <li><strong>Costo inicial:</strong> Bajo ($100–180 USD/kWh)</li>
+                <li><strong>Mantenimiento:</strong> Revisión de bornes, test de impedancia semestral</li>
+                <li><strong>Costo por ciclo:</strong> Alto en aplicaciones de ciclos frecuentes</li>
+                <li><strong>Mejor caso de uso:</strong> UPS de respaldo puro con &lt;50 ciclos/año en sala climatizada</li>
+              </ul>
+            </div>
+            <div class="bat-card bat-card--lfp">
+              <h3>LFP — LiFePO₄ (Litio Ferrofosfato)</h3>
+              <ul>
+                <li><strong>Ciclos de vida:</strong> ≥8 000 ciclos (Geolis certificado UL9540A)</li>
+                <li><strong>Vida útil:</strong> 15–20 años con degradación mínima</li>
+                <li><strong>Densidad energética:</strong> 90–160 Wh/kg</li>
+                <li><strong>Temperatura operativa:</strong> -20 °C a +60 °C sin degradación severa</li>
+                <li><strong>Costo inicial:</strong> Mayor ($300–500 USD/kWh)</li>
+                <li><strong>Mantenimiento:</strong> Mínimo — BMS integrado gestiona equilibrado de celdas</li>
+                <li><strong>Costo por ciclo:</strong> Muy bajo (ideal para BESS con ciclos diarios)</li>
+                <li><strong>Mejor caso de uso:</strong> BESS con peak shaving diario, zonas calurosas, sitios sin HVAC en cuarto de baterías</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Parámetro</th>
+                  <th>VRLA/AGM</th>
+                  <th>LFP (LiFePO₄)</th>
+                  <th>Ventaja</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ciclos de vida (DoD 80%)</td>
+                  <td>500 – 1 000</td>
+                  <td class="good">≥ 8 000</td>
+                  <td class="good">LFP ×8–16</td>
+                </tr>
+                <tr>
+                  <td>Vida útil en flotación</td>
+                  <td class="mid">5–10 años (a 20 °C)</td>
+                  <td class="good">15–20 años</td>
+                  <td class="good">LFP ×2</td>
+                </tr>
+                <tr>
+                  <td>Densidad energética (Wh/kg)</td>
+                  <td class="mid">30–50</td>
+                  <td class="good">90–160</td>
+                  <td class="good">LFP ×3</td>
+                </tr>
+                <tr>
+                  <td>Sensibilidad al calor</td>
+                  <td class="hi">Alta (–50% a 40 °C)</td>
+                  <td class="good">Baja (opera –20 a +60 °C)</td>
+                  <td class="good">LFP</td>
+                </tr>
+                <tr>
+                  <td>Costo inicial (USD/kWh)</td>
+                  <td class="good">$100–180</td>
+                  <td class="mid">$300–500</td>
+                  <td class="good">VRLA</td>
+                </tr>
+                <tr>
+                  <td>Costo total de propiedad (10 años)</td>
+                  <td class="hi">Alto (2–3 reemplazos de banco)</td>
+                  <td class="good">Bajo (sin reemplazo en 10 años)</td>
+                  <td class="good">LFP</td>
+                </tr>
+                <tr>
+                  <td>Seguridad</td>
+                  <td>Gas H₂ en sobrecarga (ventilación)</td>
+                  <td class="good">Sin gas, sin riesgo de fuga</td>
+                  <td class="good">LFP</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. BESS -->
+          <h2 id="bess">5. Paso 4 — Cuándo añadir un BESS al ecosistema</h2>
+
+          <p>El UPS protege las cargas críticas de control durante segundos o minutos. El BESS actúa a escala del sistema eléctrico de la planta durante horas — y con objetivos económicos, no solo de respaldo. Son sistemas complementarios, no sustitutos.</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Caso de uso 1</span>
+              <h3>Peak shaving — ahorro en tarifa CFE</h3>
+              <p>Reducir la demanda máxima registrada en el medidor. Las tarifas HM/HSL incluyen cargos de $300–500/kW/mes. Un BESS de 150 kW eliminando picos de 30 minutos ahorra $45 000–75 000/mes. ROI típico: <strong>18–36 meses</strong>.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag tag--green">Caso de uso 2</span>
+              <h3>Respaldo de larga duración</h3>
+              <p>En zonas con confiabilidad CFE baja (Oil &amp; Gas remoto, minería) donde las interrupciones duran 2–8 horas. El BESS sustituye o complementa al generador para cargas no críticas, reduciendo consumo de diésel.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag tag--green">Caso de uso 3</span>
+              <h3>Integración solar + BESS</h3>
+              <p>Almacenar el excedente fotovoltaico del mediodía para uso en tarde-noche. Con inversores Livoltek + Geolis, la tasa de autoconsumo solar supera el <strong>85%</strong> — sin curtailment y sin inyectar a la red.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag tag--amber">Caso de uso 4</span>
+              <h3>Regulación de frecuencia</h3>
+              <p>En microrredes o instalaciones con generación propia (cogeneración, solar, generadores), el BESS amortigua los transitorios de frecuencia que el generador no puede seguir con suficiente velocidad de respuesta (&lt;100 ms).</p>
+            </div>
+          </div>
+
+          <div class="article-callout">
+            <strong>Arquitectura recomendada para instalaciones críticas industriales:</strong> UPS VFI Borri (cero ms de transferencia) para cargas de control y seguridad → BESS Geolis (respaldo y peak shaving) para el sistema eléctrico general → Generador de emergencia (autonomía ilimitada mientras haya combustible). Los tres niveles se integran al SCADA de planta para monitoreo centralizado y estrategias automatizadas de gestión de energía.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Normas -->
+          <h2 id="normas">6. Normas aplicables a instalaciones UPS y BESS industriales</h2>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Norma</th>
+                  <th>Alcance</th>
+                  <th>Aplica a</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>IEC 62040-1</strong></td>
+                  <td>Requisitos de seguridad para UPS</td>
+                  <td>Todos los UPS industriales</td>
+                </tr>
+                <tr>
+                  <td><strong>IEC 62040-3</strong></td>
+                  <td>Métodos de medición y clasificación de topología (VFI/VI/VFD)</td>
+                  <td>Especificación y comparación de UPS</td>
+                </tr>
+                <tr>
+                  <td><strong>IEC 61427-2</strong></td>
+                  <td>Requisitos de baterías para sistemas de almacenamiento estacionario de energía</td>
+                  <td>Bancos de baterías en UPS y BESS</td>
+                </tr>
+                <tr>
+                  <td><strong>UL 9540</strong></td>
+                  <td>Estándar de seguridad para sistemas de almacenamiento de energía</td>
+                  <td>BESS industriales (certificación del sistema completo)</td>
+                </tr>
+                <tr>
+                  <td><strong>UL 9540A</strong></td>
+                  <td>Método de prueba para evaluación de propagación térmica en sistemas BESS</td>
+                  <td>Geolis BESS — prueba de seguridad de celda LFP</td>
+                </tr>
+                <tr>
+                  <td><strong>NFPA 855</strong></td>
+                  <td>Estándar de instalación de sistemas de almacenamiento de energía estacionario</td>
+                  <td>Diseño del cuarto de baterías y distancias de separación BESS</td>
+                </tr>
+                <tr>
+                  <td><strong>NOM-001-SEDE-2012</strong></td>
+                  <td>Instalaciones eléctricas (utilización) en México</td>
+                  <td>Conexión e instalación de UPS/BESS al sistema eléctrico de la planta</td>
+                </tr>
+                <tr>
+                  <td><strong>IEEE Std 1562</strong></td>
+                  <td>Guía para optimización del tamaño de sistemas de baterías de plomo-ácido en aplicaciones estacionarias</td>
+                  <td>Dimensionamiento de bancos VRLA/AGM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Caso -->
+          <h2 id="caso">7. Caso: base operativa Oil &amp; Gas — Paraíso, Tabasco</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Caso EPC documentado</span>
+              <h3>Base operativa Oil &amp; Gas — Paraíso, Tabasco (zona costera, alta humedad)</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Descripción:</strong> Instalación de respaldo eléctrico para oficinas operativas y sala de control de un campo de producción de hidrocarburos. Zona con temperatura ambiente de 32–38 °C, HR promedio 85%, historial de interrupciones CFE de 4–8 h/mes. Sin generador de emergencia pre-instalado.</p>
+
+              <p><strong>Inventario de cargas críticas (Categoría A):</strong></p>
+              <ul>
+                <li>Sistema SCADA + servidores de historiador: 8 kVA, cosφ = 0.85 → 6.8 kW</li>
+                <li>Switches de red y comunicaciones: 2 kVA, cosφ = 0.90 → 1.8 kW</li>
+                <li>Pantallas HMI (sala de control): 3 kVA, cosφ = 0.85 → 2.55 kW</li>
+                <li>Sistema de seguridad y acceso: 1.5 kVA, cosφ = 0.90 → 1.35 kW</li>
+                <li>Iluminación de emergencia sala de control: 1 kW</li>
+                <li><strong>Total cargas A:</strong> 15.5 kVA / 13.5 kW</li>
+              </ul>
+
+              <p><strong>Cargas no críticas (Categoría C) — sin respaldo UPS:</strong> HVAC de oficinas (80 kW), iluminación general, comedor.</p>
+
+              <p><strong>Decisión de topología:</strong> UPS VFI (IEC 62040-3) — obligatorio por la presencia de SCADA y sistema de seguridad ESD.</p>
+
+              <p><strong>Dimensionamiento del UPS:</strong></p>
+              <ul>
+                <li>Carga total: 15.5 kVA × FSD 0.85 = 13.2 kVA real simultánea</li>
+                <li>Margen de crecimiento 20%: 13.2 × 1.20 = <strong>15.8 kVA → UPS Borri E2001 de 20 kVA seleccionado</strong></li>
+                <li>Factor de potencia de salida: 0.9 → potencia activa: 18 kW</li>
+              </ul>
+
+              <p><strong>Dimensionamiento del banco de baterías:</strong></p>
+              <ul>
+                <li>Autonomía objetivo: 4 horas (cubre el historial de interrupciones más frecuentes)</li>
+                <li>Potencia de carga: 13.5 kW reales</li>
+                <li>C_banco = 13.5 kW × 4 h / 0.95 = <strong>56.8 kWh</strong></li>
+                <li>Temperatura ambiente: 35 °C promedio → factor de corrección VRLA: 0.82</li>
+                <li>Si VRLA: C_banco_corregido = 56.8 / 0.82 = <strong>69.3 kWh</strong> — banco muy grande para sala sin HVAC</li>
+                <li><strong>Decisión: banco LFP</strong> — sin degradación por temperatura, 56.8 kWh nominales suficientes, vida útil 15+ años vs 3–5 de VRLA a 35 °C</li>
+              </ul>
+
+              <p><strong>BESS complementario para cargas no críticas y peak shaving:</strong></p>
+              <ul>
+                <li>Modelo: <strong>Geolis GOC125-241</strong> — 125 kW / 241 kWh, celdas LFP, IP66, acabado anticorrosivo C5</li>
+                <li>Función 1: respaldo de iluminación general y comunicaciones de oficina durante interrupciones CFE (hasta 4 h a 50 kW de demanda)</li>
+                <li>Función 2: peak shaving — reducción de picos de demanda del HVAC en horario de carga máxima (14:00–19:00)</li>
+                <li>Protección IP66 y acabado C5 — validado para ambiente marino/costero de Tabasco</li>
+                <li>Integración: Modbus TCP al SCADA de campo, monitoreo de SoC, temperatura y ciclos en tiempo real</li>
+              </ul>
+
+              <p><strong>Resultado:</strong> La instalación logra 4 horas de autonomía total para cargas críticas de control y 2 horas para cargas generales, cubre el 95% del historial de interrupciones CFE del sitio sin necesidad de arrancar un generador. El peak shaving del BESS reduce la demanda máxima registrada en 90 kW, generando un ahorro estimado de $36 000/mes en tarifa HM.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. FAQ -->
+          <h2 id="faq">8. Preguntas frecuentes</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>¿Qué topología UPS recomienda IEC 62040-3 para instalaciones industriales críticas?</summary>
+              <p>La única topología adecuada para procesos industriales críticos es <strong>VFI (Voltage and Frequency Independent)</strong> — doble conversión online. Proporciona tiempo de transferencia cero, aislamiento galvánico total entre la red y la carga, y regulación de voltaje y frecuencia completamente independiente de la calidad de la red. Las topologías VI (interactivo) y VFD (standby) tienen tiempos de transferencia de 4–25 ms que pueden afectar equipos de control, PLCs y sistemas de seguridad industrial.</p>
+            </details>
+
+            <details>
+              <summary>¿Cómo se calcula el tiempo de autonomía de un banco de baterías para UPS?</summary>
+              <p>La fórmula es: <strong>t (h) = C_banco (kWh) × η_inversor / P_carga (kW)</strong>. La potencia de carga en kW se obtiene de la potencia aparente en kVA multiplicada por el cosφ de las cargas. La eficiencia del inversor en UPS VFI modernos como Borri es típicamente 94–96%. Para baterías VRLA, hay que aplicar adicionalmente el factor de corrección por temperatura de la sala eléctrica — a 35 °C las VRLA entregan solo el 82% de su capacidad nominal.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuál es la diferencia entre baterías LFP y VRLA para un UPS industrial?</summary>
+              <p>La <strong>VRLA</strong> (plomo-ácido sellada) tiene costo inicial bajo pero vida útil de 3–5 años a 30 °C y es muy sensible al calor. La <strong>LFP</strong> (litio ferrofosfato) tiene costo inicial mayor pero ≥8 000 ciclos de vida, opera sin degradación severa de -20 °C a +60 °C y no requiere mantenimiento de agua. Para aplicaciones en salas sin HVAC, zonas costeras calurosas o sistemas BESS con ciclos diarios, la LFP tiene un costo total de propiedad (TCO) considerablemente menor a lo largo de 10 años.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué normas aplican a la instalación de un sistema UPS/BESS industrial en México?</summary>
+              <p>Las principales son: <strong>IEC 62040-1</strong> (seguridad UPS), <strong>IEC 62040-3</strong> (clasificación de topología), <strong>IEC 61427-2</strong> (baterías estacionarias), <strong>UL 9540 / UL 9540A</strong> (seguridad del sistema BESS y prueba de propagación térmica), <strong>NFPA 855</strong> (instalación de almacenamiento de energía) y <strong>NOM-001-SEDE-2012</strong> para la instalación eléctrica en México. Los sistemas Geolis de VMS Energy están certificados bajo UL9540 y UL9540A.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuándo se justifica un BESS en lugar de solo un generador de respaldo?</summary>
+              <p>El BESS responde en <strong>milisegundos</strong> sin tiempo de arranque, es silencioso, sin emisiones y con mínimo mantenimiento. El generador ofrece autonomía ilimitada pero necesita 10–30 s para arrancar y estabilizarse. La <strong>arquitectura óptima</strong> para instalaciones críticas es BESS + generador: el BESS cubre el gap de arranque del generador y todos los microcortes (&lt;2 s); el generador proporciona autonomía larga si la interrupción supera la capacidad del BESS. Un BESS solo (sin generador) aplica cuando las interrupciones históricas son cortas (&lt;4 h) y el sitio no justifica el costo operativo de un generador.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué es el peak shaving y cómo se dimensiona el BESS para ese caso de uso?</summary>
+              <p>El peak shaving consiste en descargar el BESS durante los picos de demanda para reducir el máximo registrado en el medidor de CFE. Para dimensionar: (1) analizar la curva de demanda en ventanas de 15 min durante 30 días; (2) identificar el delta de demanda a recortar (kW) y la duración típica de los picos; (3) la energía mínima del BESS es: <strong>E = P_recorte (kW) × duración_pico (h)</strong>. Con cargos CFE de $300–500/kW/mes, el ROI típico es de 18–36 meses.</p>
+            </details>
+
+            <details>
+              <summary>¿Cómo se integra un UPS Borri con un BESS Geolis en un proyecto EPC?</summary>
+              <p>Son complementarios con roles distintos: el <strong>UPS Borri</strong> protege las cargas de control (DCS, SCADA, ESD) con cero ms de transferencia y aislamiento galvánico total. El <strong>BESS Geolis</strong> actúa a escala del sistema eléctrico de planta: peak shaving, respaldo de largo plazo e integración solar. En proyectos VMS Energy, ambos se integran al tablero de distribución principal y al SCADA mediante Modbus TCP o DNP3 para monitoreo centralizado y estrategias coordinadas de gestión de energía.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>¿Necesita dimensionar un UPS o BESS para su instalación industrial?</h3>
+            <p>VMS Energy realiza el inventario de cargas críticas, la ingeniería de dimensionamiento y la selección de equipo óptimo. Proyectos EPC de confiabilidad eléctrica con Borri, Geolis y Livoltek en todo México.</p>
+            <div class="article-actions">
+              <a class="btn btn--primary" href="confiabilidad-electrica-industrial.html">Ver UPS y BESS Industrial</a>
+              <a class="btn btn--secondary" href="contacto_cta.html?servicio=ups-bess-industrial">Solicitar evaluación energética</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>Confiabilidad Eléctrica Industrial</h3>
+            <p>UPS Borri, BESS Geolis y soluciones de respaldo para instalaciones críticas en México. Ingeniería EPC completa.</p>
+            <a class="btn" href="confiabilidad-electrica-industrial.html">Ver soluciones UPS/BESS</a>
+          </div>
+
+          <!-- Referencia rápida -->
+          <div class="sidebar-card">
+            <h3>Referencia rápida UPS/BESS</h3>
+            <ul>
+              <li><strong>VFI</strong> = doble conversión, 0 ms, obligatorio para procesos críticos</li>
+              <li><strong>VI</strong> = interactivo, 4–12 ms, cargas TI no críticas</li>
+              <li><strong>VFD</strong> = standby, 10–25 ms, oficinas básicas</li>
+              <li><strong>LFP</strong> = ≥8 000 ciclos, -20 a +60 °C, sin degradación por calor</li>
+              <li><strong>VRLA</strong> = 500–1 000 ciclos, sensible al calor, costo inicial bajo</li>
+              <li><strong>t autonomía</strong> = C_banco × η / P_carga</li>
+            </ul>
+          </div>
+
+          <!-- Modelos Borri/Geolis -->
+          <div class="sidebar-card">
+            <h3>Equipos en portafolio VMS Energy</h3>
+            <ul>
+              <li><strong>Borri E3001</strong> — UPS trifásico VFI 5–600 kVA</li>
+              <li><strong>Borri E2001</strong> — UPS monofásico VFI 5–200 kVA</li>
+              <li><strong>Borri Ingenio SFC</strong> — Convertidor estático 100–2 000 kVA</li>
+              <li><strong>Geolis GOC125-241</strong> — BESS 125 kW / 241 kWh LFP</li>
+              <li><strong>Geolis GOC250-522</strong> — BESS 250 kW / 522 kWh LFP</li>
+              <li><strong>Livoltek</strong> — Inversor híbrido solar + BESS</li>
+            </ul>
+          </div>
+
+          <!-- Normas -->
+          <div class="sidebar-card">
+            <h3>Normas clave UPS / BESS</h3>
+            <ul>
+              <li><strong>IEC 62040-1</strong> &mdash; seguridad UPS</li>
+              <li><strong>IEC 62040-3</strong> &mdash; clasificación topología</li>
+              <li><strong>IEC 61427-2</strong> &mdash; baterías estacionarias</li>
+              <li><strong>UL 9540 / 9540A</strong> &mdash; seguridad BESS</li>
+              <li><strong>NFPA 855</strong> &mdash; instalación BESS</li>
+              <li><strong>NOM-001-SEDE-2012</strong> &mdash; instalación eléctrica MX</li>
+            </ul>
+          </div>
+
+          <!-- Serie UPS/BESS -->
+          <div class="sidebar-card">
+            <h3>Serie: UPS y BESS Industrial</h3>
+            <ul>
+              <li><strong>&#8594; #1 Dimensionamiento UPS (este artículo)</strong></li>
+            </ul>
+            <br>
+            <a class="sidebar-link" href="blog.html">&#8594; Ver todos los blogs técnicos</a>
+          </div>
+
+          <!-- Blogs técnicos -->
+          <div class="sidebar-card">
+            <h3>Otros blogs técnicos</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-carga-termica-hvac-industrial.html">&#8594; HVAC #1 Carga térmica ASHRAE</a></li>
+              <li><a class="sidebar-link" href="blog-ingenieria-detalle-epc-electrico.html">&#8594; Ingeniería de detalle EPC</a></li>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">&#8594; Selección de transformadores</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">&#8594; Pruebas FAT y SAT</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Contacto técnico</h3>
+            <p>Especialistas en confiabilidad eléctrica industrial UPS/BESS.</p>
+            <p><strong>&#128222;</strong> <a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</p>
+            <p><strong>&#128222;</strong> <a href="tel:+529383814824">+52 938 381 4824</a> Cd. del Carmen</p>
+            <p><strong>&#9993;</strong> <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
+          </div>
+
+        </aside>
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+      </div>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
+        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
+        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <div class="mobile-phone-sticky">
+    <a href="tel:+523338130739" aria-label="Llamar a VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('menuList');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if (window.innerWidth <= 680) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

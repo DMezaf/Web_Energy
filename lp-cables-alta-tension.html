@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,8 +28,10 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="equipamiento-base.css">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#10233D;--line:rgba(23,44,81,.14);--soft:#f4f8ff}
+    :root{--navy:#172C51;--cobalt:var(--concept-primary);--ink:#10233D;--line:rgba(23,44,81,.14);--soft:#f4f8ff}
     *{box-sizing:border-box}
     body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
     .container{max-width:1080px;margin:0 auto;padding:0 20px}
@@ -41,15 +43,15 @@
     nav{position:relative}
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
     .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
     .nav-item--has-submenu:hover .submenu,
-    .nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-    .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
     .top{padding:10px 0;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);position:sticky;top:0;z-index:80;backdrop-filter:saturate(180%) blur(8px)}
@@ -57,7 +59,7 @@
     .top__logo{display:inline-flex;align-items:center}
     .top__logo img{height:38px;width:auto;display:block}
     .top__actions{display:flex;gap:8px;flex-wrap:wrap}
-    .top__link{display:inline-flex;align-items:center;justify-content:center;padding:.46rem .82rem;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--cobalt);font-weight:700;background:#fff}
+    .top__link{display:inline-flex;align-items:center;justify-content:center;padding:.46rem .82rem;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--concept-primary);font-weight:700;background:#fff}
         .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
     #footer .container{
       max-width:1200px;
@@ -100,7 +102,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -147,7 +149,7 @@
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:11px 15px;text-decoration:none;font-weight:700;border:1px solid transparent}
     .btn--primary{background:linear-gradient(180deg,#1aa08a,#0d7e79);border-color:rgba(7,99,95,.72);color:#fff}
-    .btn--secondary{background:#fff;color:var(--cobalt);border-color:var(--line)}
+    .btn--secondary{background:#fff;color:var(--concept-primary);border-color:var(--line)}
     .grid{padding:0 0 42px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .card{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--soft)}
     .card h2{margin:0 0 8px;color:#113960}
@@ -162,7 +164,7 @@
     .catalog-table__table th:nth-child(1){width:18%}
     .catalog-table__table th:nth-child(2){width:52%}
     .catalog-table__table th:nth-child(3){width:30%}
-.catalog-tag{display:inline-flex;align-items:center;gap:4px;padding:.22rem .55rem;border-radius:999px;font-size:11px;font-weight:700;background:#f3f7ff;color:#0f4c81;border:1px solid #d2e1f6}
+.catalog-tag{display:inline-flex;align-items:center;gap:4px;padding:.22rem .55rem;border-radius:999px;font-size:11px;font-weight:700;background:#f3f7ff;color:var(--concept-primary);border:1px solid #d2e1f6}
     .catalog-tag--stock{background:#ecfdf5;color:#0f6b50;border-color:#a7e7c7}
     .catalog-breadcrumb{font-size:13px;color:#4d627a;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:4px}
     .catalog-breadcrumb a{color:#335a8a;text-decoration:none}
@@ -170,9 +172,9 @@
     .catalog-breadcrumb__sep{color:#8aa0bb}
     .catalog-toolbar{display:grid;grid-template-columns:1fr .95fr .95fr;gap:10px;align-items:center;margin-top:14px}
     .catalog-search{width:100%;border:1px solid #cfdceb;border-radius:10px;padding:10px 11px;font:inherit;color:var(--ink);background:#fff}
-    .catalog-search:focus{outline:2px solid rgba(15,76,129,.25);border-color:#0f4c81}
+    .catalog-search:focus{outline:2px solid rgba(15,76,129,.25);border-color:var(--concept-primary)}
     .catalog-select{width:100%;border:1px solid #cfdceb;border-radius:10px;padding:10px 11px;font:inherit;color:var(--ink);background:#fff}
-    .catalog-select:focus{outline:2px solid rgba(15,76,129,.25);border-color:#0f4c81}
+    .catalog-select:focus{outline:2px solid rgba(15,76,129,.25);border-color:var(--concept-primary)}
     .catalog__meta{margin:10px 0 0;font-size:13px;color:#35516f}
     .catalog__count{font-weight:700;color:#113960}
     .catalog-grid{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
@@ -182,14 +184,14 @@
 .catalog-card__thumb{width:100%;height:100%;border-radius:14px;background:#fff;border:1px solid #d3e2f5;object-fit:contain;object-position:center;display:block;box-shadow:0 6px 16px rgba(16,35,61,.12)}
 .catalog-card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .catalog-card__label{font-weight:700;color:#113960;font-size:13px}
-.catalog-card__reco{display:inline-flex;padding:.2rem .6rem;border-radius:999px;font-size:11px;font-weight:700;background:#eef4ff;border:1px solid #c9daf3;color:#0f4c81;white-space:nowrap}
+.catalog-card__reco{display:inline-flex;padding:.2rem .6rem;border-radius:999px;font-size:11px;font-weight:700;background:#eef4ff;border:1px solid #c9daf3;color:var(--concept-primary);white-space:nowrap}
 .catalog-card__name{margin:6px 0 0;color:#10233d;font-size:19px;line-height:1.25}
 .catalog-card__stock{margin-top:8px;display:inline-flex;align-items:center;background:#ecfdf5;color:#0f6b50;border:1px solid #a7e7c7;border-radius:999px;padding:.18rem .58rem;font-size:11px;font-weight:700}
 .catalog-card__stock--stock{background:#ecfdf5;color:#0f6b50;border-color:#a7e7c7}
-.catalog-card__stock--lead{background:#eef4ff;color:#0f4c81;border-color:#c6d8f0}
+.catalog-card__stock--lead{background:#eef4ff;color:var(--concept-primary);border-color:#c6d8f0}
 .catalog-card__stock--request{background:#fff7ed;color:#9a4d00;border-color:#ffd8ad}
 .catalog-tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
-.catalog-tag{display:inline-flex;align-items:center;gap:4px;padding:.22rem .55rem;border-radius:999px;font-size:11px;font-weight:700;background:#f3f7ff;color:#0f4c81;border:1px solid #d2e1f6}
+.catalog-tag{display:inline-flex;align-items:center;gap:4px;padding:.22rem .55rem;border-radius:999px;font-size:11px;font-weight:700;background:#f3f7ff;color:var(--concept-primary);border:1px solid #d2e1f6}
 .catalog-tag--soft{background:#f8f2ff;color:#5b3a92;border-color:#e5d6fb}
 .catalog-tag--mt{background:#eafaf4;color:#0f6b50;border-color:#b8ead6}
 .catalog-tag--hv{background:#fff4e6;color:#8a4b00;border-color:#ffd7a8}
@@ -206,16 +208,16 @@
     .notes-panel{border:1px solid #d9e6f7;border-radius:16px;background:linear-gradient(135deg,#f4f8ff 0%,#ffffff 60%);padding:16px;box-shadow:0 8px 20px rgba(16,35,61,.08)}
     .notes-panel__head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:8px}
     .notes-panel__title{margin:0;color:#113960;font-size:18px}
-    .notes-panel__tag{display:inline-flex;align-items:center;background:#e7f0ff;color:#0f4c81;border:1px solid #c9daf3;border-radius:999px;padding:.22rem .7rem;font-size:11px;font-weight:700}
+    .notes-panel__tag{display:inline-flex;align-items:center;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.22rem .7rem;font-size:11px;font-weight:700}
     .notes-panel__sub{margin:0;color:#35516f;font-size:14px;line-height:1.5}
     .notes-grid{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     .notes-card{background:#fff;border:1px solid #e1ecfb;border-radius:12px;padding:12px;display:grid;gap:6px}
     .notes-card__title{margin:0;color:#0f355d;font-size:14px;font-weight:700}
     .notes-card__text{margin:0;color:#2b456a;font-size:13px;line-height:1.5}
     .notes-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .notes-badge{display:inline-flex;align-items:center;border-radius:999px;border:1px dashed #c6d8f0;color:#0f4c81;background:#f3f7ff;padding:.2rem .6rem;font-size:11px;font-weight:700}
+    .notes-badge{display:inline-flex;align-items:center;border-radius:999px;border:1px dashed #c6d8f0;color:var(--concept-primary);background:#f3f7ff;padding:.2rem .6rem;font-size:11px;font-weight:700}
     .note-list{margin:0;padding-left:18px;display:grid;gap:6px;line-height:1.5;color:#152f4d}
-    .chip{display:inline-flex;align-items:center;background:#eef4ff;color:#0f4c81;border:1px solid #c9daf3;border-radius:999px;padding:.16rem .55rem;font-size:11px;font-weight:700;margin-bottom:8px}
+    .chip{display:inline-flex;align-items:center;background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.16rem .55rem;font-size:11px;font-weight:700;margin-bottom:8px}
     .muted{color:#5f7182}
     .list{margin:0;padding-left:18px;line-height:1.6}
     @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -247,25 +249,26 @@
     .steps__copy{margin:6px 0 14px;color:#3f5f80;font-size:1rem}
     .steps__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .step{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#ffffff,#f5f9ff);padding:14px 14px 15px;box-shadow:0 10px 24px rgba(10,31,56,.07)}
-    .step__badge{display:inline-flex;width:30px;height:30px;border-radius:999px;background:#eaf3ff;color:#0f4c81;align-items:center;justify-content:center;font-weight:800}
+    .step__badge{display:inline-flex;width:30px;height:30px;border-radius:999px;background:#eaf3ff;color:var(--concept-primary);align-items:center;justify-content:center;font-weight:800}
     .step h3{margin:8px 0 6px;color:#103961;font-size:1.1rem}
     .step p{margin:0;color:#4b647f}
     @media (max-width:900px){.hero__inner{grid-template-columns:1fr}}
     @media (max-width:760px){.steps__grid{grid-template-columns:1fr}}    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+.submenu--mega{min-width:500px;display:flex;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
   .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -278,7 +281,7 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style><style id="vmshop-header-styles">
-  .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+  .announcement{background:linear-gradient(90deg,var(--concept-primary),#0c3e69);color:#fff;font-size:.92rem}
   .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px}
   header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(23,44,81,.14);backdrop-filter:saturate(180%) blur(8px)}
   header .container{max-width:1200px}
@@ -291,9 +294,9 @@
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:760px){
@@ -307,6 +310,72 @@
 </style>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-cables-alta-tension.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-cables-alta-tension.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Suministro de Cables de Alta Tensión",
+        "provider": { "@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/" },
+        "areaServed": "México",
+        "serviceType": "Suministro técnico y EPC de cables de alta tensión para transmisión y subestaciones",
+        "description": "Suministro de cables de alta tensión XLPE 6/10 kV a 36/66 kV en proyectos EPC industriales en México. Marcas KEI y Südkabel. Documentación IEC/LAPEM, trazabilidad por bobina, tendido, empalmes y pruebas hipot bajo un mismo contrato.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo de cables AT VMS Energy",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable XLPE AT 6/10 kV a 12/20 kV sin y con armadura" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable AT 23 kV – 36/66 kV para interconexión CFE/LAPEM" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conductor de aluminio vs cobre según proyecto" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Empalmes y terminaciones AT certificadas" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EPC integral: suministro + tendido + pruebas hipot" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué información necesito para cotizar cable de alta tensión?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nivel de tensión (U0/U en kV), longitud total por tramo, tipo de instalación (enterrado directo, ducto HDPE, bandeja aérea), norma requerida (IEC 60502-2, NMX-J, CFE/LAPEM), temperatura ambiente del sitio y cronograma de entrega. VMS Energy entrega respuesta técnica en 24–48 h hábiles." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo se requiere armadura en un cable de alta tensión?",
+            "acceptedAnswer": { "@type": "Answer", "text": "La armadura (alambres de acero galvanizado) es obligatoria en instalación directamente enterrada y recomendada en ductos con riesgo de daño mecánico o terrenos agresivos con sulfatos. En bandeja interior sin riesgo mecánico generalmente no es necesaria, lo que reduce costo y facilita el tendido." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo usar conductor de aluminio en lugar de cobre para AT?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. El aluminio reduce el costo del conductor pero requiere secciones ~1.5 veces mayores para igual ampacidad (IEC 60287). La decisión depende del balance entre costo, peso, espacio en bandejas y requerimientos del cliente. VMS Energy realiza el análisis técnico-económico en la fase de ingeniería básica." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿VMS Energy también instala el cable AT o solo lo suministra?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Las dos opciones son posibles. Como contratista EPC, VMS Energy integra suministro, tendido, empalmes premoldeados, terminaciones y pruebas de alta tensión (hipot, descargas parciales) bajo un solo contrato, eliminando el riesgo de interfaces entre contratistas." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué documentación entrega VMS con el suministro de cable AT?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Certificado de pruebas de fábrica tipo e individual por bobina (IEC 60502-2), hoja de datos del cable, reporte de longitudes medidas, etiquetado de trazabilidad por lote y, cuando el proyecto lo requiere, documentación específica para CFE/LAPEM o auditorías ISO." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se calcula la ampacidad de un cable AT enterrado?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Según IEC 60287, la ampacidad depende de: sección del conductor, resistividad térmica del suelo (típico 1.0–2.5 K·m/W en México), temperatura del suelo (15–35°C según región), profundidad de instalación (mínimo 0.8 m para MT según NOM-001) y agrupamiento de circuitos. VMS Energy elabora la memoria de cálculo como entregable EPC." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son los fabricantes de cable AT que maneja VMS Energy?",
+            "acceptedAnswer": { "@type": "Answer", "text": "KEI Wires & Cables (India, certificación IEC, amplia disponibilidad en México) para la mayoría de proyectos, y Südkabel (Alemania) para proyectos que requieren fabricación europea, norma VDE o estándares de alta ingeniería exigidos por socios tecnológicos internacionales." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
     <div class="announcement">
@@ -336,16 +405,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -355,13 +429,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -370,15 +461,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -394,6 +498,7 @@
                   <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
                   <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                  <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
                 </ul>
               </div>
             </div>
@@ -457,6 +562,59 @@
       </div>
     </section>
 
+    <!-- BLOQUE A: Multi-proveedor estrat&eacute;gico -->
+    <section style="background:var(--soft,#f4f8ff);padding:36px 0">
+      <div class="container">
+        <div class="notes-panel">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">Portafolio de fabricantes</span>
+            <h3 class="notes-panel__title">No llegamos con un solo cat&aacute;logo. Llegamos con la especificaci&oacute;n correcta para tu proyecto.</h3>
+          </div>
+          <p class="notes-panel__sub">VMS Energy selecciona el fabricante &oacute;ptimo seg&uacute;n el nivel de tensi&oacute;n, sector, norma aplicable, disponibilidad y cronograma de tu proyecto. KEI Wires &amp; Cables es nuestro partner estrat&eacute;gico principal, pero trabajamos con los mejores fabricantes del mundo cuando el proyecto lo requiere.</p>
+          <div class="notes-grid" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
+            <div class="notes-card">
+              <h4 class="notes-card__title">KEI Wires &amp; Cables</h4>
+              <p class="notes-card__text">Representante exclusivo para M&eacute;xico. Potencia MT/AT/EHV, cables ESP para Oil &amp; Gas, fotovoltaicos, instrumentaci&oacute;n y control. Primera opci&oacute;n para la mayor&iacute;a de proyectos industriales en M&eacute;xico.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">S&uuml;dkabel</h4>
+              <p class="notes-card__text">Especialidad en cables EHV de alta ingenier&iacute;a (fabricaci&oacute;n alemana). Ideal cuando el proyecto requiere est&aacute;ndares europeos, certificaciones VDE o construcciones especiales para transmisi&oacute;n de extra alta tensi&oacute;n.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Helukabel</h4>
+              <p class="notes-card__text">Soluciones para control, instrumentaci&oacute;n y aplicaciones especiales: LSZH para espacios confinados, EMC blindados, alta temperatura (silicona), cables para industria alimentaria y rob&oacute;tica.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Condumex / Viakon</h4>
+              <p class="notes-card__text">Fabricaci&oacute;n nacional bajo NMX-J. Baja tensi&oacute;n y control con tiempos de entrega cortos. Ideal para proyectos con componente nacional requerida o urgencias en campo. Cumplimiento NOM-001-SEDE.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE B: Conexi&oacute;n EPC Turnkey -->
+    <section style="padding:36px 0 28px">
+      <div class="container">
+        <div class="notes-panel" style="border-left:4px solid var(--cobalt,#0F4C81)">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">EPC Integrado</span>
+            <h3 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h3>
+          </div>
+          <p class="notes-panel__sub">El suministro a trav&eacute;s de VMShop no es una compra de producto. Es la etapa de procura dentro de un proyecto EPC que VMS ingenia, construye y pone en marcha.</p>
+          <ul class="note-list">
+            <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
+            <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
+            <li><strong>Log&iacute;stica por hitos:</strong> Entregamos cable cuando la obra lo necesita, en la cantidad correcta y con trazabilidad completa por bobina.</li>
+            <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
+          </ul>
+          <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
+            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container grid">
         <article class="card">
@@ -485,7 +643,8 @@
           <span class="catalog-breadcrumb__sep" aria-hidden="true">/</span>
           <span>Cables de alta tensi&oacute;n</span>
         </nav>
-        <h2 class="catalog__title">cat&aacute;logo de cables de alta tensi&oacute;n (KEI)</h2>
+        <h2 class="catalog__title">Cat&aacute;logo de cables de alta tensi&oacute;n</h2>
+        <p style="font-size:.9rem;color:var(--muted,#4E6782);margin:4px 0 0">Fabricante principal: KEI Wires &amp; Cables. Construcciones alternativas disponibles con S&uuml;dkabel bajo especificaci&oacute;n de proyecto.</p>
         <p class="catalog__intro">Selecci&oacute;n de configuraci&oacute;n base por nivel de tensi&oacute;n y construcci&oacute;n. Disponibilidad on-demand para proyectos especiales.</p>
                 <p class="catalog__meta">Respuesta t&eacute;cnica en 24&ndash;48 h h&aacute;biles.</p>
         <div class="cta">
@@ -520,10 +679,22 @@
             </div>
             <p class="notes-panel__sub">La selecci&oacute;n final depende de nivel de tensi&oacute;n, m&eacute;todo de instalaci&oacute;n, coordinaci&oacute;n de protecciones y l&iacute;mites de ca&iacute;da de tensi&oacute;n del proyecto.</p>
             <ul class="note-list">
-              <li>Validar ampacidad y temperatura de Operaci&oacute;n del conductor.</li>
-              <li>Confirmar construcci&oacute;n y blindajes conforme a norma aplicable.</li>
-              <li>Coordinar log&iacute;stica y entregas por fases de obra.</li>
+              <li><strong>Ampacidad y temperatura:</strong> Validar corriente admisible del conductor a 90 &deg;C en operaci&oacute;n normal y 250 &deg;C en cortocircuito. Aplicar factores de correcci&oacute;n por temperatura ambiente, agrupamiento y m&eacute;todo de instalaci&oacute;n (ducto, bandeja, enterrado).</li>
+              <li><strong>Construcci&oacute;n y blindaje:</strong> Para instalaci&oacute;n subterr&aacute;nea en suelos agresivos, especificar armadura de acero y cubierta HDPE. Para instalaci&oacute;n en bandeja con riesgo de humedad, validar barrera antihumedad longitudinal.</li>
+              <li><strong>Norma aplicable:</strong> Proyectos con conexi&oacute;n a CFE deben cumplir especificaciones LAPEM. Proyectos privados: IEC 60502 (MT) o IEC 60840 (AT). Verificar si el proyecto requiere NMX-J o norma internacional.</li>
+              <li><strong>Coordinaci&oacute;n log&iacute;stica:</strong> Cable AT bajo pedido (on-demand) requiere 8 a 14 semanas de fabricaci&oacute;n. Incluir este tiempo en el cronograma EPC antes de comprometer fecha de puesta en servicio.</li>
+              <li><strong>QA/QC en recepci&oacute;n:</strong> Todo suministro VMS incluye certificado de pruebas por bobina, etiquetado de trazabilidad y verificaci&oacute;n de longitudes antes de instalaci&oacute;n.</li>
             </ul>
+            <div class="notes-badges" style="margin-top:12px">
+              <span class="notes-badge">IEC 60502</span>
+              <span class="notes-badge">IEC 60840</span>
+              <span class="notes-badge">NMX-J</span>
+              <span class="notes-badge">LAPEM/CFE</span>
+              <span class="notes-badge">NOM-001-SEDE</span>
+            </div>
+            <p style="margin:14px 0 0;padding:12px 14px;background:rgba(15,76,129,.06);border-radius:10px;font-size:.92rem;color:var(--muted,#4E6782)">
+              &iquest;T&eacute;rminos como XLPE, EPR, U0/U, LAPEM o NMX-J? Cons&uacute;ltalos en el <a href="glosario-cable-electrico.html" style="color:var(--cobalt,#0F4C81);font-weight:700;text-decoration:none">glosario t&eacute;cnico de cable &rarr;</a>
+            </p>
           </div>
         </div>
       </div>
@@ -531,14 +702,52 @@
           <section class="faq">
       <div class="container">
         <h2 class="catalog__title">Preguntas frecuentes</h2>
-        <div class="grid">
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
           <article class="card">
-            <h3>&iquest;Qu&eacute; informaci&oacute;n necesito para cotizar?</h3>
-            <p>Nivel de tensi&oacute;n, longitud, tipo de instalaci&oacute;n, norma requerida y cronograma de entrega.</p>
+            <h3>&iquest;Qu&eacute; informaci&oacute;n necesito para cotizar cable AT?</h3>
+            <p>Nivel de tensi&oacute;n (U0/U en kV), longitud total por tramo, tipo de instalaci&oacute;n (enterrado, bandeja, ducto), norma requerida (IEC, NMX-J, CFE/LAPEM), temperatura ambiente del sitio y cronograma de entrega requerido.</p>
           </article>
           <article class="card">
-            <h3>&iquest;Pueden coordinar entregas por etapas?</h3>
-            <p>S&iacute;, programamos entregas por fases con trazabilidad y documentaci&oacute;n.</p>
+            <h3>&iquest;Pueden coordinar entregas por etapas de obra?</h3>
+            <p>S&iacute;. Programamos entregas por hitos con trazabilidad por bobina y documentaci&oacute;n completa (certificados de prueba, MTC, empaque). Esto es est&aacute;ndar en todos nuestros proyectos EPC.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Qu&eacute; diferencia hay entre cable con armadura y sin armadura?</h3>
+            <p>La armadura (alambres de acero galvanizado) protege mec&aacute;nicamente contra impactos y aplastamiento. Es obligatoria en instalaci&oacute;n directamente enterrada y recomendada en ductos con riesgo de da&ntilde;o mec&aacute;nico. En bandeja interior sin riesgo mec&aacute;nico, generalmente no es necesaria.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Puedo usar conductores de aluminio en lugar de cobre?</h3>
+            <p>S&iacute;. El aluminio reduce el costo del conductor pero requiere secciones mayores para igual ampacidad (aproximadamente 1.5 veces). La decisi&oacute;n depende del balance entre costo, peso, espacio disponible en bandejas y requerimientos del cliente o norma del proyecto.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Qu&eacute; documentaci&oacute;n entrega VMS con el suministro?</h3>
+            <p>Certificado de pruebas de f&aacute;brica (tipo e individual por bobina), hoja de datos del cable, reporte de longitudes medidas, etiquetado de trazabilidad por lote y, si el proyecto lo requiere, documentaci&oacute;n para CFE/PEMEX.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Tambi&eacute;n instalan el cable o solo lo suministran?</h3>
+            <p>Las dos opciones son posibles. VMS Energy es contratista EPC &mdash; si el proyecto lo requiere, integramos suministro, tendido, empalmes, terminaciones y pruebas bajo un solo contrato. Si solo necesitas suministro, tambi&eacute;n lo hacemos con la misma rigurosidad t&eacute;cnica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos de uso -->
+    <section style="padding:36px 0;background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%)">
+      <div class="container">
+        <h2 style="margin:0 0 6px;color:var(--cobalt,#0F4C81)">Proyectos donde este cable fue clave</h2>
+        <p style="margin:0 0 20px;color:var(--muted,#4E6782)">Casos reales de suministro integrado al alcance EPC. Datos t&eacute;cnicos y log&iacute;sticos &mdash; sin revelar informaci&oacute;n confidencial del cliente.</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Subestaci&oacute;n MT en planta automotriz &mdash; Jalisco</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Suministro de 3.2 km de cable XLPE 6/10 kV con entrega en 2 fases alineada al cronograma de instalaci&oacute;n EPC. Documentaci&oacute;n completa para auditor&iacute;a ISO del cliente.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Ampliaci&oacute;n de red 34.5 kV &mdash; sector minero</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Especificaci&oacute;n y suministro de cable AT con armadura para instalaci&oacute;n subterr&aacute;nea en terreno con alto contenido de sulfatos. Selecci&oacute;n de cubierta HDPE para resistencia qu&iacute;mica.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Interconexi&oacute;n de planta de cogeneraci&oacute;n &mdash; Veracruz</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Suministro y tendido de cable 23 kV para interconexi&oacute;n con CFE. Documentaci&oacute;n LAPEM incluida. Coordinaci&oacute;n de empalmes y terminaciones como parte del alcance EPC.</p>
           </article>
         </div>
       </div>
@@ -594,6 +803,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -601,6 +812,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -627,6 +839,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

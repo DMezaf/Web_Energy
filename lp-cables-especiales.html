@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,10 +19,12 @@
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-cables-especiales.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-cables-especiales.html" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="equipamiento-base.css">
   <style>
     :root{
       --navy:#172C51;
-      --cobalt:#0F4C81;
+      --cobalt:var(--concept-primary);
       --ink:#10233D;
       --muted:#4E6782;
       --line:rgba(23,44,81,.14);
@@ -46,7 +48,7 @@
 
     .top{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(7px);border-bottom:1px solid var(--line)}
     .top__bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
-    .top a{text-decoration:none;color:var(--cobalt);font-weight:700}
+    .top a{text-decoration:none;color:var(--concept-primary);font-weight:700}
     .top__logo{display:inline-flex;align-items:center}
     .top__logo img{height:38px;width:auto;display:block}
     .top__actions{display:flex;gap:8px}
@@ -54,7 +56,7 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 15px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer}
     .btn--primary{color:#fff;background:linear-gradient(180deg,var(--warm),var(--warm-dark));border-color:rgba(11,124,119,.7)}
     .btn--primary:hover{background:linear-gradient(180deg,#20b39a,#0f8d83)}
-    .btn--secondary{color:var(--cobalt);background:#fff;border-color:var(--line)}
+    .btn--secondary{color:var(--concept-primary);background:#fff;border-color:var(--line)}
     .btn--ghost{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.26)}
     .btn--small{padding:9px 11px;border-radius:10px;font-size:.86rem}
 
@@ -174,10 +176,10 @@
       width:100%;
       height:4px;
       border-radius:16px 16px 0 0;
-      background:linear-gradient(90deg,#0f4c81,#2f7ec2);
+      background:linear-gradient(90deg,var(--concept-primary),#2f7ec2);
     }
     .step__head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
-    .step__badge{display:inline-flex;width:30px;height:30px;border-radius:999px;background:#eaf3ff;color:#0f4c81;align-items:center;justify-content:center;font-weight:800}
+    .step__badge{display:inline-flex;width:30px;height:30px;border-radius:999px;background:#eaf3ff;color:var(--concept-primary);align-items:center;justify-content:center;font-weight:800}
     .step__icon{display:inline-flex;padding:.2rem .58rem;border-radius:999px;background:#eef6ff;color:#1e5284;border:1px solid rgba(15,76,129,.18);font-size:.78rem;font-weight:800;letter-spacing:.02em}
     .step h3{margin:0 0 6px;color:#103961;font-size:1.35rem;line-height:1.16}
     .step p{margin:0;color:var(--muted);font-size:1.08rem}
@@ -252,7 +254,7 @@
     .line-family-card__meta{display:none}
     .line-family-card__chev{
       width:26px;height:26px;border-radius:999px;display:inline-grid;place-items:center;
-      border:1px solid rgba(15,76,129,.22);background:#fff;color:#0f4c81;font-weight:900;font-size:1.05rem;
+      border:1px solid rgba(15,76,129,.22);background:#fff;color:var(--concept-primary);font-weight:900;font-size:1.05rem;
       transition:transform .2s ease, background .2s ease;
     }
     #catalogo .line-group.is-open .line-family-card__chev{transform:rotate(45deg);background:#eaf3ff}
@@ -287,7 +289,7 @@
       border-radius:8px;
       background:#eef6ff;
       border:1px solid rgba(15,76,129,.24);
-      color:#0f4c81;
+      color:var(--concept-primary);
       text-decoration:none;
       font-weight:800;
       font-size:.78rem;
@@ -301,7 +303,7 @@
       gap:8px;
       padding:.34rem .72rem;
       border-radius:999px;
-      background:linear-gradient(90deg,#0f4c81,#1f6bad);
+      background:linear-gradient(90deg,var(--concept-primary),#1f6bad);
       color:#fff;
       font-size:1rem;
       font-weight:800;
@@ -347,7 +349,7 @@
     }
     .sku-context__label{color:#103961;font-weight:800;font-size:.9rem}
     .sku-context__change{
-      color:#0f4c81;
+      color:var(--concept-primary);
       text-decoration:none;
       font-weight:800;
       font-size:.84rem;
@@ -358,7 +360,7 @@
     }
     .sku-zone__actions{display:flex;justify-content:flex-end;margin:0 0 10px}
     .btn--tertiary{
-      color:#0f4c81;
+      color:var(--concept-primary);
       background:#eef6ff;
       border:1px solid rgba(15,76,129,.24);
     }
@@ -416,7 +418,7 @@
       border-radius:0;
       border:0;
       background:transparent;
-      color:#0f4c81;
+      color:var(--concept-primary);
       text-decoration:none;
       font-weight:600;
       font-size:.76rem;
@@ -448,7 +450,7 @@
       border-radius:8px;
       border:1px solid rgba(15,76,129,.24);
       background:#eef6ff;
-      color:#0f4c81;
+      color:var(--concept-primary);
       text-decoration:none;
       font-weight:700;
       font-size:.8rem;
@@ -527,7 +529,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -596,20 +598,21 @@
       .tech{padding-bottom:104px}
     }
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+.submenu--mega{min-width:500px;display:flex;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
   .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -622,7 +625,7 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style><style id="vmshop-header-styles">
-  .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+  .announcement{background:linear-gradient(90deg,var(--concept-primary),#0c3e69);color:#fff;font-size:.92rem}
   .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px}
   header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(23,44,81,.14);backdrop-filter:saturate(180%) blur(8px)}
   header .container{max-width:1200px}
@@ -635,9 +638,9 @@
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:760px){
@@ -649,6 +652,72 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Suministro de Cable ESP para Bombeo Electrosumergible",
+        "provider": { "@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/" },
+        "areaServed": "México",
+        "serviceType": "Suministro técnico de cable ESP (Electrical Submersible Pump) para pozos petroleros",
+        "description": "Suministro de cable ESP familia Arteria (180°F, 205°F, 290°F, 400°F, 450°F) para sistemas de bombeo electrosumergible en pozos de petróleo y gas en México. Formatos Flat y Round, disponibilidad en stock para familias 180°F y 205°F, coordinación desde Ciudad del Carmen.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo cable ESP VMS Energy",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 180°F — pozos convencionales, aislamiento EPDM" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 205°F — pozos con temperatura moderada-alta" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 290°F / 400°F — pozos de alta temperatura" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 450°F KEFLG — ambientes con H₂S y fluidos corrosivos" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formatos Flat y Round según geometría del pozo" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo selecciono la familia Arteria correcta para mi pozo?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El criterio principal es la temperatura de fondo de pozo (BHT, Bottom Hole Temperature). Arteria 180°F para condiciones normales, 205°F para pozos más calientes, 290–400°F para pozos de alta temperatura. Para ambientes con H₂S o fluidos corrosivos se especifica la variante KEFLG con cubierta de Kapton (Poliimida). VMS ayuda en la selección con el perfil de temperatura del pozo." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo usar cable ESP Flat y cuándo Round?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Round es más flexible y recomendado para pozos desviados, de radio corto o con cambios de dirección. Flat ocupa menos espacio en el anular del pozo y puede ser más económico en pozos verticales con espacio suficiente. La decisión también depende del diámetro del casing disponible." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Manejan disponibilidad inmediata de cable ESP en México?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Algunos SKUs de familias 180°F y 205°F están en stock en México con entrega en 24–72 h desde Ciudad del Carmen. Las familias de mayor temperatura (290°F, 400°F y 450°F) son generalmente bajo pedido con tiempos de fabricación de 8 a 16 semanas." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El cable ESP incluye protección contra H₂S?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Las familias Arteria 400°F y 450°F con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H₂S y fluidos corrosivos. Para ambientes con alta concentración de H₂S, se especifica la variante KEFLG o KEFLEG. VMS Energy verifica la compatibilidad con el análisis de fluido del pozo." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se dimensiona la sección del cable ESP para un motor sumergible?",
+            "acceptedAnswer": { "@type": "Answer", "text": "La sección se calcula con: potencia del motor (kW), voltaje de alimentación en superficie, profundidad del pozo (caída de tensión), temperatura del fluido (corrección de ampacidad) y presencia de VSD (variador de velocidad). VMS Energy puede hacer el dimensionamiento eléctrico como parte del soporte técnico." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿VMS Energy tiene presencia en zonas petroleras del Golfo de México?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. VMS Energy tiene oficina operativa en Ciudad del Carmen, Campeche, con capacidad de respuesta rápida para suministros en el Activo Cantarell, KMZ, Litoral de Tabasco y plataformas marinas. Esta proximidad permite entregas en 24–72 h en situaciones de emergencia operativa." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué documentación técnica entrega VMS con el cable ESP?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Hoja de datos técnica del cable (temperatura, construcción, aislamiento), certificado de origen, reporte de longitud medida por bobina y, cuando el operador lo requiere, documentación de trazabilidad para auditoría PEMEX o IOC. La documentación se entrega junto con la bobina para validación en campo." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
     <div class="announcement">
@@ -678,16 +747,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -697,13 +771,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -712,15 +803,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -736,6 +840,7 @@
                   <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
                   <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                  <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
                 </ul>
               </div>
             </div>
@@ -808,6 +913,81 @@
           <h3>Acompa&ntilde;amiento t&eacute;cnico</h3>
           <p>Planeaci&oacute;n de entrega coordinada para mantener continuidad de instalaci&oacute;n y arranque.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- Contexto de aplicaci&oacute;n ESP -->
+    <section style="padding:28px 0;background:var(--soft,#f4f8ff)">
+      <div class="container">
+        <div class="notes-panel">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">Contexto de aplicaci&oacute;n</span>
+            <h3 class="notes-panel__title">Los cables ESP no se compran en cat&aacute;logo. Se especifican para cada pozo.</h3>
+          </div>
+          <p class="notes-panel__sub">Cada instalaci&oacute;n de bomba sumergible el&eacute;ctrica (ESP) tiene condiciones &uacute;nicas de temperatura, presi&oacute;n, geometr&iacute;a del pozo y perfil de producci&oacute;n. La selecci&oacute;n incorrecta del cable es una de las causas m&aacute;s frecuentes de falla prematura en sistemas ESP.</p>
+          <ul class="note-list">
+            <li><strong>Temperatura del fluido:</strong> El perfil t&eacute;rmico del pozo determina la familia Arteria (180 &deg;F, 205 &deg;F, 290 &deg;F, 400 &deg;F o 450 &deg;F). No usar temperatura superficial &mdash; usar temperatura de fondo de pozo (BHT).</li>
+            <li><strong>Geometr&iacute;a del pozo:</strong> Pozos desviados o de radio corto requieren cable Round para mejor comportamiento mec&aacute;nico. Pozos verticales y rectos permiten cable Flat con mayor eficiencia de espacio en el anular.</li>
+            <li><strong>Ambiente corrosivo:</strong> Presencia de H&#8322;S, CO&#8322; o fluidos con alta salinidad requiere construcciones con aislamiento EPDM o Kapton (familias 400 y 450). El aislamiento PP est&aacute;ndar (familia 180/205) no es adecuado para estos ambientes.</li>
+            <li><strong>Coordinaci&oacute;n con el sistema ESP:</strong> El cable debe ser compatible con la potencia del motor, el variador (VSD) y la longitud del pozo. VMS coordina la especificaci&oacute;n con el fabricante del sistema ESP cuando el proyecto lo requiere.</li>
+          </ul>
+          <p style="margin:14px 0 0;padding:12px 14px;background:rgba(15,76,129,.06);border-radius:10px;font-size:.92rem;color:var(--muted,#4E6782)">
+            &iquest;T&eacute;rminos como ESP, BHT, EPR, Clase 5 o Kapton? Cons&uacute;ltalos en el <a href="glosario-cable-electrico.html" style="color:var(--cobalt,#0F4C81);font-weight:700;text-decoration:none">glosario t&eacute;cnico de cable &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE A: Multi-proveedor estrat&eacute;gico -->
+    <section style="background:var(--soft,#f4f8ff);padding:36px 0">
+      <div class="container">
+        <div class="notes-panel">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">Portafolio de fabricantes</span>
+            <h3 class="notes-panel__title">No llegamos con un solo cat&aacute;logo. Llegamos con la especificaci&oacute;n correcta para tu proyecto.</h3>
+          </div>
+          <p class="notes-panel__sub">VMS Energy selecciona el fabricante &oacute;ptimo seg&uacute;n el nivel de tensi&oacute;n, sector, norma aplicable, disponibilidad y cronograma de tu proyecto. KEI Wires &amp; Cables es nuestro partner estrat&eacute;gico principal, pero trabajamos con los mejores fabricantes del mundo cuando el proyecto lo requiere.</p>
+          <div class="notes-grid" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
+            <div class="notes-card">
+              <h4 class="notes-card__title">KEI Wires &amp; Cables</h4>
+              <p class="notes-card__text">Representante exclusivo para M&eacute;xico. Potencia MT/AT/EHV, cables ESP para Oil &amp; Gas, fotovoltaicos, instrumentaci&oacute;n y control. Primera opci&oacute;n para la mayor&iacute;a de proyectos industriales en M&eacute;xico.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">S&uuml;dkabel</h4>
+              <p class="notes-card__text">Especialidad en cables EHV de alta ingenier&iacute;a (fabricaci&oacute;n alemana). Ideal cuando el proyecto requiere est&aacute;ndares europeos, certificaciones VDE o construcciones especiales para transmisi&oacute;n de extra alta tensi&oacute;n.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Helukabel</h4>
+              <p class="notes-card__text">Soluciones para control, instrumentaci&oacute;n y aplicaciones especiales: LSZH para espacios confinados, EMC blindados, alta temperatura (silicona), cables para industria alimentaria y rob&oacute;tica.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Condumex / Viakon</h4>
+              <p class="notes-card__text">Fabricaci&oacute;n nacional bajo NMX-J. Baja tensi&oacute;n y control con tiempos de entrega cortos. Ideal para proyectos con componente nacional requerida o urgencias en campo. Cumplimiento NOM-001-SEDE.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE B: Conexi&oacute;n EPC Turnkey -->
+    <section style="padding:36px 0 28px">
+      <div class="container">
+        <div class="notes-panel" style="border-left:4px solid var(--cobalt,#0F4C81)">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">EPC Integrado</span>
+            <h3 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h3>
+          </div>
+          <p class="notes-panel__sub">El suministro a trav&eacute;s de VMShop no es una compra de producto. Es la etapa de procura dentro de un proyecto EPC que VMS ingenia, construye y pone en marcha.</p>
+          <ul class="note-list">
+            <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
+            <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
+            <li><strong>Log&iacute;stica por hitos:</strong> Entregamos cable cuando la obra lo necesita, en la cantidad correcta y con trazabilidad completa por bobina.</li>
+            <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
+          </ul>
+          <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
+            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -1312,6 +1492,52 @@
         </div>
       </div>
     </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">Preguntas frecuentes &mdash; Cables ESP</h2>
+        <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3>&iquest;C&oacute;mo selecciono la familia Arteria correcta para mi pozo?</h3>
+            <p>El criterio principal es la temperatura de fondo de pozo (BHT, Bottom Hole Temperature). Arteria 180 &deg;F para condiciones normales, 205 &deg;F para pozos m&aacute;s calientes, 290&ndash;450 &deg;F para pozos de alta temperatura y ambientes corrosivos. VMS puede ayudarte a seleccionar si compartes el perfil de temperatura del pozo.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Flat o Round para mi instalaci&oacute;n?</h3>
+            <p>Round es m&aacute;s flexible y recomendado para pozos desviados, de radio corto o con cambios de direcci&oacute;n. Flat ocupa menos espacio en el anular del pozo y puede ser m&aacute;s econ&oacute;mico en pozos verticales con espacio suficiente. La decisi&oacute;n tambi&eacute;n depende del di&aacute;metro del casing.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Manejan disponibilidad en campo o solo bajo pedido?</h3>
+            <p>Algunos SKUs de familias 180 &deg;F y 205 &deg;F est&aacute;n disponibles en stock en M&eacute;xico. Las familias de mayor temperatura (400 &deg;F y 450 &deg;F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulta disponibilidad al cotizar con SKU espec&iacute;fico.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;El cable incluye protecci&oacute;n contra H&#8322;S?</h3>
+            <p>Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H&#8322;S y fluidos corrosivos. Para ambientes con alta concentraci&oacute;n de H&#8322;S, especificar la variante KEFLG o KEFLEG. Consulta a VMS con el an&aacute;lisis de fluido del pozo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos de uso -->
+    <section style="padding:36px 0;background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%)">
+      <div class="container">
+        <h2 style="margin:0 0 6px;color:var(--cobalt,#0F4C81)">Proyectos donde este cable fue clave</h2>
+        <p style="margin:0 0 20px;color:var(--muted,#4E6782)">Casos reales de suministro integrado al alcance EPC. Datos t&eacute;cnicos y log&iacute;sticos &mdash; sin revelar informaci&oacute;n confidencial del cliente.</p>
+        <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Reemplazo de cables ESP en bater&iacute;a de pozos &mdash; Tabasco</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">8 pozos con Arteria 290 &deg;F Round, stock disponible para entrega en 72 h. Coordinaci&oacute;n con cuadrilla de cambio de equipo de bombeo para minimizar tiempo muerto de producci&oacute;n.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Reparaci&oacute;n de emergencia pozo offshore &mdash; Campeche</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 400 &deg;F Flat con coordinaci&oacute;n urgente desde Ciudad del Carmen. Documentaci&oacute;n t&eacute;cnica completa entregada con la bobina para validaci&oacute;n del operador.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Nuevo proyecto ESP con variador (VSD)</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 450 &deg;F KEFLG, especificaci&oacute;n coordinada con fabricante del sistema ESP. Verificaci&oacute;n de compatibilidad con motor sumergible y curva de operaci&oacute;n del VSD.</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
     <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
@@ -1364,6 +1590,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -1371,6 +1599,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -1397,6 +1626,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

@@ -1,0 +1,895 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instalaci&oacute;n y Comisionamiento de Transformadores en Proyectos EPC | VMS Energy</title>
+  <meta name="description" content="Gu&iacute;a t&eacute;cnica de instalaci&oacute;n y comisionamiento de transformadores industriales en proyectos EPC: recepci&oacute;n en sitio, iza&shy;je, conexionado AT/BT, llenado de aceite, primera energizaci&oacute;n y protocolo de arranque bajo carga." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Instalaci&oacute;n y Comisionamiento de Transformadores EPC | VMS Energy" />
+  <meta property="og:description" content="Protocolo completo de instalaci&oacute;n y comisionamiento de transformadores: recepci&oacute;n, iza&shy;je, conexionado, pruebas SAT, primera energizaci&oacute;n y arranque bajo carga en proyectos EPC industriales." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp" />
+  <meta property="article:published_time" content="2026-05-22" />
+  <meta property="article:modified_time" content="2026-05-22" />
+  <meta property="article:section" content="Ingenier&iacute;a el&eacute;ctrica" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instalaci&oacute;n y Comisionamiento de Transformadores EPC | VMS Energy" />
+  <meta name="twitter:description" content="De la recepci&oacute;n al primer kilovatio: protocolo completo de instalaci&oacute;n y comisionamiento de transformadores industriales." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.png');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn--primary{background:var(--cobalt);color:#fff}
+    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#dc2626;background:linear-gradient(135deg,rgba(220,38,38,.08),rgba(248,113,113,.05));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:500px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.93rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .formula-box{margin:22px 0;padding:20px 22px;border-radius:16px;background:#eef5ff;border:1px solid rgba(15,76,129,.2);font-family:monospace}
+    .formula-box p{margin:0 0 8px;color:var(--concept-primary);font-size:1.02rem}
+    .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
+
+    /* Flujo de pasos numerados */
+    .step-flow{margin:24px 0;display:grid;gap:0}
+    .step{display:grid;grid-template-columns:52px 1fr;gap:0;align-items:start}
+    .step + .step{margin-top:0}
+    .step__num{display:flex;flex-direction:column;align-items:center;padding-top:2px}
+    .step__circle{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:800;font-size:1rem;display:grid;place-items:center;flex-shrink:0}
+    .step__line{width:2px;background:rgba(15,76,129,.18);flex:1;min-height:24px;margin-top:4px}
+    .step:last-child .step__line{display:none}
+    .step__body{padding:0 0 24px 14px}
+    .step__body h3{margin:4px 0 8px;color:#12365f;font-size:1.1rem}
+    .step__body p{margin:0 0 10px;color:#314a67}
+    .step__body ul{margin:0 0 10px 18px;color:#314a67}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.step{grid-template-columns:42px 1fr}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Instalaci&oacute;n y comisionamiento de transformadores EPC","item":"https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html"}]},{"@type":"BlogPosting","headline":"Instalaci&oacute;n y comisionamiento de transformadores en proyectos EPC","description":"Protocolo completo de instalaci&oacute;n y comisionamiento de transformadores industriales: recepci&oacute;n, iza&shy;je, conexionado AT/BT, llenado de aceite, pruebas SAT, primera energizaci&oacute;n y arranque bajo carga.","image":"https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-05-22","dateModified":"2026-05-22","mainEntityOfPage":"https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html","articleSection":"Ingenier&iacute;a el&eacute;ctrica","keywords":"comisionamiento transformadores, instalaci&oacute;n transformadores, primera energizaci&oacute;n, EPC el&eacute;ctrico, recepci&oacute;n transformador, iza&shy;je transformador, conexionado AT BT, pruebas pre-energizaci&oacute;n, llenado aceite transformador, arranque bajo carga, subestaci&oacute;n el&eacute;ctrica M&eacute;xico"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Cu&aacute;nto tiempo toma el comisionamiento de un transformador de distribuci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"El comisionamiento de un transformador de distribuci&oacute;n (hasta 5 MVA) en condiciones normales toma entre 3 y 7 d&iacute;as h&aacute;biles de trabajo en sitio, dependiendo del nivel de tensi&oacute;n, el tipo de aceite (nueva carga vs. llenado en sitio) y el alcance del SAT requerido. Esto incluye: recepci&oacute;n e inspecci&oacute;n (0.5 d&iacute;as), posicionamiento y obra civil final (1&ndash;2 d&iacute;as), conexionado y accesorios (1 d&iacute;a), pruebas SAT (1 d&iacute;a), y protocolo de primera energizaci&oacute;n (0.5 d&iacute;as). En transformadores de potencia (&gt; 5 MVA) con llenado de aceite en sitio y secado, el proceso puede extenderse a 2&ndash;4 semanas."}},{"@type":"Question","name":"&iquest;Qu&eacute; riesgo implica energizar sin el SAT completo?","acceptedAnswer":{"@type":"Answer","text":"Energizar sin SAT es un error que puede tener consecuencias graves e irreversibles. Los riesgos principales son: (1) Da&ntilde;o oculto por transporte: un golpe que da&ntilde;&oacute; conexiones internas puede no ser visible externamente pero provoca una falla catastr&oacute;fica minutos despu&eacute;s de la primera energizaci&oacute;n. (2) Polaridad de grupo vectorial incorrecta: conectar un transformador Dyn11 como si fuera Yyn0 en una red existente genera corrientes de circulaci&oacute;n que pueden destruir el equipo o el transformador en paralelo. (3) Aceite contaminado con humedad: la primera energizaci&oacute;n bajo tensi&oacute;n elevada puede desencadenar una descarga interna en un aceite con rigidez diel&eacute;ctrica insuficiente. El SAT es la &uacute;ltima barrera antes de poner en riesgo el equipo, el personal y la continuidad del proceso."}},{"@type":"Question","name":"&iquest;Por qu&eacute; se requiere esperar 24 horas antes de la primera energizaci&oacute;n en algunos transformadores?","acceptedAnswer":{"@type":"Answer","text":"Cuando un transformador en aceite llega con el conservador vac&iacute;o (transportado con presi&oacute;n de nitr&oacute;geno) y se llena de aceite en sitio, es necesario un per&iacute;odo de reposo de al menos 12&ndash;24 horas antes de energizar. Durante este tiempo, el aceite impregna completamente el sistema de aislamiento (papel y cart&oacute;n), las burbujas de aire atrapadas migran a la superficie, y el aceite estabiliza su temperatura. Energizar antes de que este proceso concluya implica el riesgo de descargas parciales en las burbujas remanentes, que pueden da&ntilde;ar el aislamiento progresivamente o provocar una falla catast&oacute;fica inmediata."}},{"@type":"Question","name":"&iquest;C&oacute;mo se verifica el grupo vectorial antes de energizar?","acceptedAnswer":{"@type":"Answer","text":"La verificaci&oacute;n del grupo vectorial (polarity test) se realiza con el instrumento TTR en modo de prueba de grupo vectorial, o manualmente inyectando una tensi&oacute;n de baja magnitud en el primario y midiendo las tensiones entre terminales del secundario en diferentes combinaciones. Para un Dyn11, la relaci&oacute;n de tensi&oacute;n entre AN, BN y CN del secundario debe mostrar el desfase de 30&deg; esperado respecto al primario. Esto es especialmente cr&iacute;tico cuando el nuevo transformador se conectar&aacute; en paralelo con otro existente: ambos deben tener el mismo grupo vectorial; cualquier diferencia produce corrientes de circulaci&oacute;n destructivas al momento de la sincronizaci&oacute;n."}},{"@type":"Question","name":"&iquest;Qu&eacute; documentos debe entregar el contratista EPC al finalizar el comisionamiento?","acceptedAnswer":{"@type":"Answer","text":"El dossier de comisionamiento que VMS Energy entrega al cliente incluye: (1) Informe de recepci&oacute;n en sitio con registro fotogr&aacute;fico y estado del aceler&oacute;metro de impacto. (2) Protocolo SAT completo con resultados firmados de TTR, resistencia de devanados, Megger + IP, rigidez diel&eacute;ctrica y an&aacute;lisis de aceite. (3) Acta de primera energizaci&oacute;n con fecha, hora y condiciones de red. (4) Registro de mediciones bajo carga a 24 y 72 horas. (5) Informe DGA post-primera energizaci&oacute;n. (6) Planos as-built actualizados con conexiones reales. (7) Lista de desviacione o punch list resueltas."}},{"@type":"Question","name":"&iquest;Es necesario instalar protecciones antes de la primera energizaci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"S&iacute;, absolutamente. Ninguna primera energizaci&oacute;n debe realizarse sin que el sistema de protecci&oacute;n est&eacute; operativo y coordinado. Como m&iacute;nimo, antes de la primera energizaci&oacute;n deben estar en servicio: el interruptor principal de AT con protecci&oacute;n de sobreintensidad y falla a tierra, el rel&eacute; Buchholz (en transformadores en aceite), las protecciones de temperatura de aceite y devanados, y la protecci&oacute;n diferencial si el proyecto la contempla. Energizar sin Buchholz activo en un transformador en aceite es particularmente riesgoso: el primer defecto interno producir&aacute; una falla de mayor magnitud antes de que cualquier otra protecci&oacute;n actue."}},{"@type":"Question","name":"&iquest;Cu&aacute;l es la diferencia entre comisionamiento en fr&iacute;o y en caliente?","acceptedAnswer":{"@type":"Answer","text":"El comisionamiento en fr&iacute;o (cold commissioning) verifica todas las funciones del transformador y su sistema auxiliar sin energizar la parte de alta tensi&oacute;n: pruebas SAT, verificaci&oacute;n de cableado de protecci&oacute;n y alarmas, operaci&oacute;n del cambiador de taps, funcionamiento de ventiladores y bombas de aceite, y prueba funcional del rel&eacute; Buchholz. El comisionamiento en caliente (hot commissioning) es la secuencia de primera energizaci&oacute;n y carga progresiva. Ambas etapas son obligatorias; el comisionamiento en fr&iacute;o no puede sustituir al SAT, y el comisionamiento en caliente no puede realizarse sin haber completado el fr&iacute;o."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+</head>
+<body>
+  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="cta-header" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" style="--article-image:url('assets/img/Especialidades_servicios.png')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; Proyectos EPC</span>
+        <h1 id="hero-title">Instalaci&oacute;n y comisionamiento de transformadores en proyectos EPC: del transporte al primer kilovatio</h1>
+        <p>El protocolo completo &mdash; de la recepci&oacute;n en sitio a la entrega operativa &mdash; para garantizar que ning&uacute;n transformador se energice antes de estar listo.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=comisionamiento-transformadores">Solicitar comisionamiento</a>
+        </div>
+        <div class="hero__meta">
+          <span>&#128197; 22 mayo 2026</span>
+          <span>&#9201; 13 min de lectura</span>
+          <span>&#128218; IEC 60076 &middot; NOM-001-SEDE &middot; NMX-J-116-ANCE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENIDO ═══════════════ -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── ARTÍCULO ── -->
+        <article class="blog-article" aria-label="Art&iacute;culo: Instalaci&oacute;n y comisionamiento de transformadores EPC">
+
+          <!-- Tabla de contenidos -->
+          <nav class="article-toc" aria-label="Tabla de contenidos">
+            <h3>Contenido del art&iacute;culo</h3>
+            <ol>
+              <li><a href="#recepcion">Recepci&oacute;n en sitio y verificaci&oacute;n de transporte</a></li>
+              <li><a href="#obra-civil">Preparaci&oacute;n del &aacute;rea y obra civil</a></li>
+              <li><a href="#izaje">Posicionamiento e iza&shy;je</a></li>
+              <li><a href="#aceite">Llenado de aceite y conexi&oacute;n de accesorios</a></li>
+              <li><a href="#conexionado">Conexionado AT y BT &mdash; secuencia y verificaciones</a></li>
+              <li><a href="#pre-energizacion">Pruebas pre-energizaci&oacute;n (comisionamiento en fr&iacute;o)</a></li>
+              <li><a href="#primera-energia">Primera energizaci&oacute;n &mdash; protocolo paso a paso</a></li>
+              <li><a href="#carga">Comisionamiento bajo carga &mdash; primeras 72 horas</a></li>
+              <li><a href="#documentacion">Documentaci&oacute;n y entrega al cliente</a></li>
+              <li><a href="#caso">Caso de estudio: subestaci&oacute;n 5 MVA, planta automotriz Guanajuato</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <!-- Intro -->
+          <p class="article-lead">En un proyecto EPC, la instalaci&oacute;n y el comisionamiento de un transformador industrial no es simplemente descargar el equipo y conectarlo. Es una secuencia de pasos t&eacute;cnicos interdependientes donde un error en cualquier etapa puede significar desde un retraso costoso hasta una falla catastr&oacute;fica irreversible. Cada paso tiene un prop&oacute;sito espec&iacute;fico y cada verificaci&oacute;n existe porque alguien, en alg&uacute;n proyecto, no la hizo y pag&oacute; las consecuencias.</p>
+
+          <p>Este art&iacute;culo documenta el protocolo que VMS Energy ejecuta en cada comisionamiento de transformador &mdash;desde la llamada de coordinaci&oacute;n antes del despacho hasta la entrega del dossier de comisionamiento al cliente&mdash;, con el nivel de detalle que un ingeniero de campo necesita para ejecutarlo o supervisarlo.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Recepción -->
+          <h2 id="recepcion">1. Recepci&oacute;n en sitio y verificaci&oacute;n de transporte</h2>
+
+          <p>La recepci&oacute;n no comienza cuando el cami&oacute;n llega al sitio: comienza con la planificaci&oacute;n log&iacute;stica. Para transformadores de m&aacute;s de 5 MVA o con dimensiones que excedan el paso libre en rutas restringidas, se requiere tramitar permisos de transporte de carga sobredimensionada con antelaci&oacute;n. El ingeniero de comisionamiento debe conocer el peso, las dimensiones y el punto de descarga antes del arribo.</p>
+
+          <h3>Verificaciones cr&iacute;ticas al momento de la descarga</h3>
+          <ul>
+            <li><strong>Aceler&oacute;metro de impacto (shock indicator):</strong> El fabricante instala una etiqueta de impacto en el tanque. Si el indicador muestra activaci&oacute;n (cambio de color), el equipo recibi&oacute; un golpe por encima del umbral programado (t&iacute;picamente 2&ndash;3 g). <strong>No mover el equipo al sitio de instalaci&oacute;n sin documentar y notificar al fabricante y al seguro.</strong></li>
+            <li><strong>Presi&oacute;n positiva de nitr&oacute;geno:</strong> Los transformadores en aceite se env&iacute;an con el tanque lleno de nitr&oacute;geno a presi&oacute;n ligeramente positiva (0.3&ndash;0.5 psi). La presi&oacute;n se verifica con el man&oacute;metro del conservador. Presi&oacute;n negativa indica que entr&oacute; aire (y posiblemente humedad) al tanque durante el transporte.</li>
+            <li><strong>Inspecci&oacute;n visual exterior:</strong> Buscar deformaciones del tanque, fugas en sellos y bridas, doblado de pasatapas (bushings), da&ntilde;os en radiadores o cajas de terminales. Fotografiar cualquier anomal&iacute;a antes de moverla.</li>
+            <li><strong>Documentaci&oacute;n de placa:</strong> Verificar que la unidad recibida corresponde exactamente al pedido: potencia, relaci&oacute;n de tensi&oacute;n, grupo vectorial, Zcc, cooling code. Un transformador intercambiado en f&aacute;brica o log&iacute;stica es m&aacute;s com&uacute;n de lo que parece.</li>
+          </ul>
+
+          <div class="article-callout--warning article-callout">
+            <strong>Si el aceler&oacute;metro est&aacute; activado:</strong> No energizar bajo ning&uacute;n concepto hasta realizar un diagn&oacute;stico completo (TTR, resistencia de devanados, tangente delta, DGA). La reparaci&oacute;n de un transformador que fall&oacute; por da&ntilde;o de transporte no detectado es responsabilidad del cliente y el contratista, no del fabricante.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Obra civil -->
+          <h2 id="obra-civil">2. Preparaci&oacute;n del &aacute;rea y obra civil</h2>
+
+          <p>El transformador no puede instalarse sobre cualquier superficie. La obra civil de la subestaci&oacute;n debe estar terminada y validada antes de posicionar el equipo. Los elementos m&iacute;nimos son:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Cimentaci&oacute;n y base</span>
+              <h3>Nivel y carga</h3>
+              <p>La base de concreto debe ser plana (m&aacute;xima desviaci&oacute;n: 3 mm en 3 m), con capacidad de carga superior al peso total del transformador con aceite. Las m&eacute;nsulas o rieles de posicionamiento deben estar anclados seg&uacute;n planos civi.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Cubeto de contenci&oacute;n</span>
+              <h3>Protecci&oacute;n ambiental</h3>
+              <p>Obligatorio para transformadores en aceite. El cubeto debe contener el 110% del volumen total de aceite del transformador. Sin cubeto terminado y aprobado, el transformador no se instala. NOM-138-SEMARNAT aplica.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Sistema de tierra</span>
+              <h3>Malla equipotencial</h3>
+              <p>El punto de tierra del tanque del transformador debe conectarse a la malla de tierra de la subestaci&oacute;n antes de cualquier otra conexi&oacute;n. Verificar resistencia de malla seg&uacute;n NOM-001-SEDE-2012.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Accesos y barreras</span>
+              <h3>Seguridad perimetral</h3>
+              <p>El &aacute;rea debe estar cercada, se&ntilde;alizada con advertencias de alto voltaje y con acceso controlado antes de iniciar cualquier conexionado. Verificar que el personal de obra civil ha desalojado la zona.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Izaje -->
+          <h2 id="izaje">3. Posicionamiento e iza&shy;je</h2>
+
+          <p>El iza&shy;je de un transformador industrial es una operaci&oacute;n cr&iacute;tica que requiere planificaci&oacute;n espec&iacute;fica, equipo certificado y personal competente. No se improvisa en campo.</p>
+
+          <h3>Requisitos del plan de iza&shy;je</h3>
+          <ul>
+            <li><strong>Puntos de izaje:</strong> Utilizar &uacute;nicamente los ganchos o argollas de iza&shy;je marcados en el tanque por el fabricante. Jamas sujetar desde pasatapas, radiadores o accesorios.</li>
+            <li><strong>Capacidad de la gr&uacute;a:</strong> La gr&uacute;a debe tener una capacidad m&iacute;nima del 125% del peso a izar, considerando el &aacute;ngulo real de los cables y el radio de operaci&oacute;n.</li>
+            <li><strong>Inclinaci&oacute;n m&aacute;xima:</strong> Durante el iza&shy;je y la descarga, el transformador no debe inclinarse m&aacute;s de 15&deg; del plano horizontal (o seg&uacute;n la indicaci&oacute;n del fabricante en el manual). Una inclinaci&oacute;n excesiva en un transformador lleno de aceite puede desplazar el aceite y descubrir partes del n&uacute;cleo, lo que provoca oxidaci&oacute;n local.</li>
+            <li><strong>Posicionamiento final:</strong> El eje de ruedas debe alinearse con las gu&iacute;as de la base seg&uacute;n plano; los tapones de drenaje de aceite deben quedar accesibles para mantenimiento futuro; los radiadores orientados hacia donde permitan convinci&oacute;n natural si es ONAN.</li>
+          </ul>
+
+          <div class="article-callout">
+            <strong>Nota EPC:</strong> En proyectos donde el transformador se instalar&aacute; en un recinto cerrado (cuarto de transformadores), la secuencia de iza&shy;je e introducci&oacute;n debe estar coordinada con el cronograma de obra civil. Una vez cerrada la estructura, mover el equipo puede ser imposible sin demoler partes del edificio.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Aceite -->
+          <h2 id="aceite">4. Llenado de aceite y conexi&oacute;n de accesorios</h2>
+
+          <p>Los transformadores de distribuci&oacute;n menores a 1 MVA suelen llegar llenos de aceite de f&aacute;brica. Los de mayor potencia frecuentemente llegan sin aceite (o con aceite parcial) para reducir peso en el transporte. El llenado en sitio es una operaci&oacute;n delicada que, si se hace incorrectamente, puede contaminar el aceite con humedad.</p>
+
+          <h3>Procedimiento de llenado en sitio</h3>
+          <ol>
+            <li><strong>Verificar que el aceite nuevo tiene ficha de calidad:</strong> Rigidez diel&eacute;ctrica &ge; 60 kV/mm, humedad &lt; 10 ppm, acidez &lt; 0.05 mgKOH/g antes de llenado.</li>
+            <li><strong>Vaciar el nitr&oacute;geno del tanque lentamente</strong> por la v&aacute;lvula designada, a trav&eacute;s de un filtro desecante para evitar que entre aire h&uacute;medo.</li>
+            <li><strong>Llenado al vac&iacute;o:</strong> El m&eacute;todo preferible es llenar el transformador bajo vac&iacute;o (&lt; 1 mbar) para garantizar que no quedan burbujas de aire atrapadas. El aceite entra por la parte inferior; el vac&iacute;o se aplica por la parte superior.</li>
+            <li><strong>Reposo obligatorio:</strong> Una vez llenado, esperar m&iacute;nimo 12 horas (24 horas para AT) antes de la primera energizaci&oacute;n para permitir que el aceite impregne completamente el papel y las burbujas residuales escapen.</li>
+            <li><strong>Verificar nivel final de aceite</strong> en el indicador del conservador a temperatura de referencia (25&deg;C). Ajustar si es necesario.</li>
+          </ol>
+
+          <h3>Conexi&oacute;n de accesorios</h3>
+          <p>Antes del conexionado el&eacute;ctrico, verificar y conectar todos los accesorios del transformador:</p>
+          <ul>
+            <li>Rel&eacute; Buchholz (en l&iacute;nea entre tanque y conservador) &mdash; verificar orientaci&oacute;n correcta de la flecha de flujo</li>
+            <li>Term&oacute;metro de aceite y transductor de temperatura de devanados (OTI / WTI)</li>
+            <li>Indicador de nivel de aceite</li>
+            <li>V&aacute;lvulas de muestreo de aceite (AT y BT si aplica)</li>
+            <li>Cambiador de taps manual o motor&shy;izado (verificar posici&oacute;n inicial)</li>
+            <li>Ventiladores y bombas de aceite si el cooling code es ONAF u OFAF</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Conexionado -->
+          <h2 id="conexionado">5. Conexionado AT y BT &mdash; secuencia y verificaciones</h2>
+
+          <p>El conexionado el&eacute;ctrico del transformador es el paso de mayor riesgo para el personal si no se realizan las verificaciones correctas. La secuencia correcta minimiza el riesgo de accidente y errores de polaridad.</p>
+
+          <h3>Secuencia de conexionado recomendada</h3>
+
+          <div class="step-flow">
+            <div class="step">
+              <div class="step__num"><div class="step__circle">1</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Conexi&oacute;n de tierra del tanque</h3>
+                <p>Primera conexi&oacute;n que se realiza, &uacute;ltima que se retira. El tanque del transformador debe estar equipotencialmente conectado a la malla de tierra de la subestaci&oacute;n antes de tocar cualquier terminal. Verificar resistencia de la conexi&oacute;n con micro-ohm&iacute;metro (&lt; 1 &Omega;).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">2</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Conexi&oacute;n del neutro BT a tierra</h3>
+                <p>En configuraci&oacute;n Dyn11, el neutro del secundario se conecta s&oacute;lidamente a tierra (sistema TN) o mediante resistencia de neutro (sistema IT o TT) seg&uacute;n el estudio de coordinaci&oacute;n. Nunca dejar el neutro sin conexi&oacute;n definida.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">3</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Conexi&oacute;n de cables BT</h3>
+                <p>Conectar los cables del secundario (BT) a las borneras del transformador, verificando la secuencia de fases seg&uacute;n el plano unifilar: A-B-C en el orden correcto para el tablero de distribuci&oacute;n aguas abajo. Reapretar a par de torque especificado por el fabricante.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">4</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Conexi&oacute;n de cables AT</h3>
+                <p>Los cables de alta tensi&oacute;n se conectan al final, con el interruptor de AT en posici&oacute;n abierta y bloqueado. Verificar distancias m&iacute;nimas de aislamiento en aire seg&uacute;n NOM-001-SEDE-2012 y planos aprobados. El torque de los conectores AT sigue especificaci&oacute;n del fabricante de bushing.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">5</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Cableado de protecci&oacute;n y alarmas</h3>
+                <p>Conexi&oacute;n del cableado de control: contactos del rel&eacute; Buchholz (alarma y disparo), contactos de sobretemperatura OTI y WTI, indicador de nivel de aceite, y alarmas del OLTC si aplica. Verificar continuidad y polaridad de cada circuito de control.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-callout--danger article-callout">
+            <strong>Regla absoluta:</strong> Ning&uacute;n trabajador debe estar en contacto f&iacute;sico con terminales o conductores del transformador mientras exista posibilidad de que el interruptor de AT pueda ser operado &mdash;incluso si est&aacute; supuestamente abierto. Aplicar LOTO (Lockout-Tagout) certificado en el interruptor de AT durante todo el proceso de conexionado.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Pre-energización -->
+          <h2 id="pre-energizacion">6. Pruebas pre-energizaci&oacute;n (comisionamiento en fr&iacute;o)</h2>
+
+          <p>El comisionamiento en fr&iacute;o verifica que el transformador y su sistema auxiliar est&aacute;n listos para ser energizados. Se realiza con el interruptor de AT abierto y el transformador sin tensi&oacute;n en ninguna parte del equipo.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table" aria-label="Pruebas de comisionamiento en fr&iacute;o">
+              <thead>
+                <tr><th>Prueba</th><th>M&eacute;todo</th><th>Criterio de aceptaci&oacute;n</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Relaci&oacute;n de transformaci&oacute;n (TTR)</td>
+                  <td>Instrumento TTR en todos los taps</td>
+                  <td>Desviaci&oacute;n &le; 0.5% del nominal</td>
+                </tr>
+                <tr>
+                  <td>Verificaci&oacute;n de grupo vectorial</td>
+                  <td>TTR modo grupo vectorial o prueba manual</td>
+                  <td>Grupo vectorial conforme a placa (ej. Dyn11)</td>
+                </tr>
+                <tr>
+                  <td>Resistencia de devanados</td>
+                  <td>Micro-ohm&iacute;metro, corriente DC</td>
+                  <td>Desequilibrio &lt; 2%; variaci&oacute;n vs. FAT &lt; 5%</td>
+                </tr>
+                <tr>
+                  <td>Resistencia de aislamiento (Megger)</td>
+                  <td>Seg&uacute;n nivel de tensi&oacute;n (500&ndash;5,000 V DC)</td>
+                  <td>PI &gt; 2.0; RA &gt; 1,000 M&Omega; a temperatura de prueba</td>
+                </tr>
+                <tr>
+                  <td>An&aacute;lisis de aceite (rigidez y humedad)</td>
+                  <td>Cup test IEC 60156; Karl Fischer</td>
+                  <td>BDV &ge; 40 kV/mm (MT); H&#8322;O &lt; 20 ppm</td>
+                </tr>
+                <tr>
+                  <td>Verificaci&oacute;n de protecci&oacute;n y alarmas</td>
+                  <td>Prueba funcional de contactos Buchholz, OTI, WTI</td>
+                  <td>Todos los contactos operativos y verificados</td>
+                </tr>
+                <tr>
+                  <td>Prueba LOTO y barreras</td>
+                  <td>Verificaci&oacute;n visual y prueba de continuidad de aterrizado temporal</td>
+                  <td>Todos los aterrizados temporales retirados; LOTO retirado solo por responsable autorizado</td>
+                </tr>
+                <tr>
+                  <td>Verificaci&oacute;n de cambiador de taps</td>
+                  <td>Operaci&oacute;n manual o motorizada en todos los taps</td>
+                  <td>Operaci&oacute;n fluida; posici&oacute;n en tap nominal para primera energizaci&oacute;n</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Todas las pruebas deben quedar documentadas con resultados num&eacute;ricos antes de proceder.</strong> La firma del ingeniero responsable en el protocolo SAT es el aval de que el equipo est&aacute; listo para la primera energizaci&oacute;n.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Primera energización -->
+          <h2 id="primera-energia">7. Primera energizaci&oacute;n &mdash; protocolo paso a paso</h2>
+
+          <p>La primera energizaci&oacute;n es el momento de mayor incertidumbre en el comisionamiento. Se han completado todas las verificaciones posibles en fr&iacute;o, pero el comportamiento real del equipo bajo tensi&oacute;n solo es observable en este instante. El protocolo debe garantizar que si algo falla, las consecuencias sean las m&iacute;nimas posibles.</p>
+
+          <div class="step-flow">
+            <div class="step">
+              <div class="step__num"><div class="step__circle">1</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Coordinaci&oacute;n con el operador de la red</h3>
+                <p>Notificar al operador de la red de AT (CFE u operador privado) la intenci&oacute;n de energizar. Confirmar la tensi&oacute;n y frecuencia actual en el punto de conexi&oacute;n. Obtener autorizaci&oacute;n formal si el proyecto lo requiere.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">2</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Verificaci&oacute;n de zona libre de personal</h3>
+                <p>Confirmar que ning&uacute;n trabajador se encuentra dentro del &aacute;rea de peligro del transformador y la celda de AT. Verificar que todas las compuertas de la celda est&aacute;n cerradas. El comisionador debe estar en posici&oacute;n con l&iacute;nea de visi&oacute;n directa al panel de control y al transformador.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">3</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Energizaci&oacute;n de la celda de AT sin carga en el secundario</h3>
+                <p>El interruptor de BT o el interruptor principal del tablero aguas abajo deben estar en posici&oacute;n ABIERTA. Cerrar el interruptor de AT. El transformador queda energizado en vac&iacute;o. <strong>Verificar inmediatamente la ausencia de ruidos anormales, vibraciones, chispas o cualquier indicaci&oacute;n de alarma.</strong> Si algo es anormal: abrir el interruptor AT de inmediato.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">4</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Medici&oacute;n de tensiones en vac&iacute;o</h3>
+                <p>Con el transformador energizado en vac&iacute;o, medir las tensiones en los bornes del secundario (BT): tensiones de fase, tensi&oacute;n de neutro a tierra, y verificar la secuencia de fases con secuenci&oacute;metro. Los valores deben corresponder a la tensi&oacute;n nominal del secundario &plusmn; el ajuste de tap seleccionado.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">5</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Conexi&oacute;n de la carga &mdash; carga progresiva</h3>
+                <p>Una vez confirmadas las tensiones, conectar el interruptor principal del tablero BT. Si el sistema lo permite, cargar progresivamente (25% &rarr; 50% &rarr; 75% &rarr; 100%) monitoreando corrientes de fase, tensi&oacute;n, temperatura y cualquier indicaci&oacute;n de alarma.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">6</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Registro de mediciones bajo carga inicial</h3>
+                <p>A la primera carga estable: registrar corrientes de cada fase (AT y BT), tensiones de l&iacute;nea y fase, factor de potencia, temperatura de aceite y temperatura ambiente. Este registro es la l&iacute;nea base del equipo en operaci&oacute;n.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. Carga 72h -->
+          <h2 id="carga">8. Comisionamiento bajo carga &mdash; primeras 72 horas</h2>
+
+          <p>Las primeras 72 horas de operaci&oacute;n son el per&iacute;odo de mayor vigilancia. La mayor&iacute;a de las fallas post-energizaci&oacute;n que no son detectables en fr&iacute;o se manifiestan en este intervalo.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Tiempo</th><th>Verificaci&oacute;n</th><th>Acci&oacute;n si hay anomal&iacute;a</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>0&ndash;1 hora</strong></td>
+                  <td>Inspecci&oacute;n visual completa: nivel de aceite, ruidos, vibraci&oacute;n, olor. Medici&oacute;n de corrientes de fase.</td>
+                  <td>Cualquier anomal&iacute;a: desenergizar y evaluar</td>
+                </tr>
+                <tr>
+                  <td><strong>4 horas</strong></td>
+                  <td>Temperatura de aceite (OTI) en tendencia correcta. Verificar que los ventiladores ONAF arrancan en el umbral programado.</td>
+                  <td>Temperatura mayor a lo esperado para la carga: verificar obstrucci&oacute;n en radiadores</td>
+                </tr>
+                <tr>
+                  <td><strong>24 horas</strong></td>
+                  <td>Medici&oacute;n completa: tensiones, corrientes, temperatura aceite y devanados, FP. <strong>DGA muestra #1</strong> (primera muestra post-energizaci&oacute;n).</td>
+                  <td>Acetileno en DGA: desenergizar inmediatamente</td>
+                </tr>
+                <tr>
+                  <td><strong>48 horas</strong></td>
+                  <td>Inspecci&oacute;n visual de borneras con c&aacute;mara IR port&aacute;til (con carga). Verificar ajuste de tapas y bridas.</td>
+                  <td>Punto caliente &Delta;T &gt; 15&deg;C: reapretar o investigar</td>
+                </tr>
+                <tr>
+                  <td><strong>72 horas</strong></td>
+                  <td>Registro final de mediciones bajo carga est&aacute;tica. <strong>DGA muestra #2</strong> y comparaci&oacute;n con muestra #1.</td>
+                  <td>Incremento explosivo en cualquier gas: notificar y evaluar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Criterio de alta temprana (early release):</strong> Si el DGA a 24 horas no muestra acetileno y todos los gases est&aacute;n por debajo de los umbrales de Condici&oacute;n 1 (IEEE C57.104), y todas las mediciones el&eacute;ctricas son normales, el transformador puede entregarse al cliente con el DGA a 72 horas como confirmaci&oacute;n. En proyectos cr&iacute;ticos, VMS Energy recomienda un tercer DGA a los 30 d&iacute;as como cierre del comisionamiento.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Documentación -->
+          <h2 id="documentacion">9. Documentaci&oacute;n y entrega al cliente</h2>
+
+          <p>El dossier de comisionamiento es el entregable final de esta fase del proyecto EPC. No es un tr&aacute;mite administrativo: es el registro legal y t&eacute;cnico que define el estado de referencia del equipo, protege al contratista en caso de disputas y es el punto de partida del programa de mantenimiento.</p>
+
+          <h3>Contenido del dossier de comisionamiento VMS Energy</h3>
+          <ul>
+            <li>Informe de recepci&oacute;n con fotograf&iacute;as y estado del aceler&oacute;metro</li>
+            <li>Protocolo SAT completo: TTR, resistencia de devanados, Megger + PI, grupo vectorial</li>
+            <li>An&aacute;lisis de aceite pre-energizaci&oacute;n (rigidez, humedad, DGA basal)</li>
+            <li>Acta de primera energizaci&oacute;n: fecha, hora, condiciones de red, personal presente</li>
+            <li>Registro de mediciones en vac&iacute;o: tensiones de fase, secuencia de fases</li>
+            <li>Registro de mediciones bajo carga a 4 h, 24 h, 48 h y 72 h</li>
+            <li>DGA a 24 h y 72 h (para transformadores en aceite)</li>
+            <li>Termograf&iacute;a IR de borneras AT y BT a las 48 h</li>
+            <li>Punch list (lista de desviaciones menores y su resoluci&oacute;n)</li>
+            <li>Planos as-built del conexionado final</li>
+            <li>Manual del fabricante y hoja de datos del transformador</li>
+            <li>Recomendaciones para el programa de mantenimiento predictivo inicial</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 10. Caso de estudio -->
+          <h2 id="caso">10. Caso de estudio: subestaci&oacute;n 5 MVA, planta automotriz Guanajuato</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Caso EPC &mdash; Planta automotriz, Silao, Guanajuato</span>
+              <h3>Transformador de potencia 5 MVA, 34.5 kV / 13.8 kV / 480 V, Dyn11&ndash;Dyn11, ONAF &mdash; Transformador trifas de dos devanados secundarios</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Contexto:</strong> Proyecto EPC para nueva l&iacute;nea de ensamblaje. Transformador de potencia de 5 MVA con dos secundarios independientes: uno de 13.8 kV para distribuci&oacute;n interna a tableros MT, y uno de 480 V para la l&iacute;nea de ensamblaje. El equipo lleg&oacute; con el tanque presurizado con nitr&oacute;geno, sin aceite, para ser llenado en sitio. Peso en vac&iacute;o: 14,200 kg; peso total con aceite: 21,800 kg. El comisionamiento fue coordinado con la parada de producci&oacute;n de planta: ventana de 6 d&iacute;as.</p>
+
+              <p><strong>Cronograma ejecutado:</strong></p>
+              <ul>
+                <li><strong>D&iacute;a 1:</strong> Recepci&oacute;n. Aceler&oacute;metro: no activado. Presi&oacute;n N&#8322;: 0.42 psi &mdash; correcto. Inspecci&oacute;n visual sin anomal&iacute;as. La gr&uacute;a de 35 ton realiz&oacute; el posicionamiento en 4 horas sin incidentes.</li>
+                <li><strong>D&iacute;as 1&ndash;2:</strong> Llenado de aceite al vac&iacute;o (7,600 litros de aceite nuevo, BDV = 68 kV/mm, 6 ppm H&#8322;O). Per&iacute;odo de reposo de 24 horas.</li>
+                <li><strong>D&iacute;a 3:</strong> Conexionado AT (34.5 kV), secundarios MT y BT, neutros y tierra. Cableado de protecci&oacute;n completo.</li>
+                <li><strong>D&iacute;a 4:</strong> Comisionamiento en fr&iacute;o (SAT). TTR en los tres devanados: desviaci&oacute;n m&aacute;x 0.09%. Grupo vectorial Dyn11&ndash;Dyn11 confirmado. Megger: PI AT = 3.8, PI BT&sup1; = 3.2, PI BT&sup2; = 3.5. Rigidez post-llenado: 61 kV/mm. DGA basal: todos &lt; 3 ppm, acetileno: ND. Todo conforme.</li>
+                <li><strong>D&iacute;a 5:</strong> Primera energizaci&oacute;n a las 07:30 hrs. Energizaci&oacute;n en vac&iacute;o: sin ruidos anormales. Tensiones en devanado BT 480 V: 481&ndash;480&ndash;481 V (dentro del &plusmn;0.5% del tap nominal). Conexi&oacute;n de carga MT primero al 30%, luego al 100% en 2 horas. Mediciones a la hora: corrientes balanceadas, temperatura aceite 28&deg;C sobre la ambiente, ventiladores ONAF arrancados en 58&deg;C seg&uacute;n setpoint. DGA a 24 h: sin acetileno, TDCG = 45 ppm &mdash; Condici&oacute;n 1.</li>
+                <li><strong>D&iacute;a 6:</strong> Termograf&iacute;a con carga al 85%: &Delta;T m&aacute;ximo en borneras = 4&deg;C, dentro del rango normal. DGA a 72 h: TDCG = 52 ppm, sin variaci&oacute;n significativa. Planta en arranque de producci&oacute;n. Entrega del dossier de comisionamiento al cliente.</li>
+              </ul>
+
+              <p><strong>Resultado:</strong> Comisionamiento completado en 6 d&iacute;as (dentro de la ventana de parada). Equipo entregado con todas las m&eacute;tricas dentro de criterios. DGA de seguimiento programado a los 30 d&iacute;as y 6 meses.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Preguntas frecuentes sobre instalaci&oacute;n y comisionamiento</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>&iquest;Cu&aacute;nto tiempo toma el comisionamiento de un transformador de distribuci&oacute;n?</summary>
+              <p>Entre 3 y 7 d&iacute;as h&aacute;biles para transformadores hasta 5 MVA, incluyendo recepci&oacute;n, posicionamiento, conexionado, SAT y primera energizaci&oacute;n. En transformadores de potencia con llenado de aceite en sitio y secado al vac&iacute;o, el proceso puede extenderse a 2&ndash;4 semanas. La ventana de comisionamiento debe estar definida en el cronograma EPC desde la fase de ingeniería.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; riesgo implica energizar sin el SAT completo?</summary>
+              <p>Riesgos graves e irreversibles: da&ntilde;o oculto por transporte que se manifiesta como falla catastr&oacute;fica en los primeros minutos; polaridad de grupo vectorial incorrecta que destruye equipos en paralelo; o aceite con rigidez insuficiente que provoca descarga interna al aplicar tensi&oacute;n. El SAT es la &uacute;ltima barrera antes de exponer el equipo, el personal y el proceso a riesgos inaceptables.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Por qu&eacute; se requiere esperar antes de la primera energizaci&oacute;n al llenar de aceite en sitio?</summary>
+              <p>El aceite necesita al menos 12&ndash;24 horas para impregnar completamente el papel aislante y que las burbujas de aire atrapadas escapen a la superficie. Energizar antes de que este proceso concluya implica riesgo de descargas parciales en las burbujas, que pueden da&ntilde;ar el aislamiento progresivamente o provocar una falla inmediata.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;C&oacute;mo se verifica el grupo vectorial antes de energizar?</summary>
+              <p>Con instrumento TTR en modo grupo vectorial, o manualmente inyectando tensi&oacute;n de baja magnitud en el primario y midiendo tensiones entre combinaciones de terminales del secundario. Es cr&iacute;tico cuando el transformador se conectar&aacute; en paralelo con otro existente: ambos deben tener el mismo grupo vectorial o las corrientes de circulaci&oacute;n al sincronizar destruir&aacute;n ambos equipos.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; documentos entrega el contratista EPC al finalizar?</summary>
+              <p>El dossier de comisionamiento incluye: informe de recepci&oacute;n, protocolo SAT completo, an&aacute;lisis de aceite pre-energizaci&oacute;n, acta de primera energizaci&oacute;n, registro de mediciones bajo carga (4h, 24h, 48h, 72h), DGA a 24h y 72h, termograf&iacute;a IR, punch list resuelta, planos as-built y recomendaciones de mantenimiento predictivo.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Es necesario instalar protecciones antes de la primera energizaci&oacute;n?</summary>
+              <p>S&iacute;, absolutamente. Como m&iacute;nimo deben estar activos: el interruptor de AT con protecci&oacute;n de sobreintensidad, el rel&eacute; Buchholz (en transformadores en aceite), las protecciones de temperatura OTI y WTI, y la protecci&oacute;n diferencial si el proyecto la contempla. Energizar sin Buchholz activo es especialmente riesgoso: el primer defecto interno produce una falla de mayor magnitud antes de que cualquier otra protecci&oacute;n actue.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Cu&aacute;l es la diferencia entre comisionamiento en fr&iacute;o y en caliente?</summary>
+              <p>El comisionamiento en fr&iacute;o verifica el equipo sin energizar la parte de AT: SAT, verificaci&oacute;n de cableado de protecci&oacute;n, prueba funcional del Buchholz y el OLTC. El comisionamiento en caliente es la secuencia de primera energizaci&oacute;n y carga progresiva. Ambas etapas son obligatorias; el fr&iacute;o no sustituye al SAT, y el caliente no puede realizarse sin haber completado el fr&iacute;o.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>&iquest;Necesita un contratista EPC para la instalaci&oacute;n y comisionamiento de su subestaci&oacute;n?</h3>
+            <p>VMS Energy ejecuta el ciclo completo: desde la recepci&oacute;n del transformador en sitio hasta la entrega del dossier de comisionamiento con el equipo en operaci&oacute;n y el primer DGA post-energizaci&oacute;n. Con experiencia en transformadores de distribuci&oacute;n y potencia hasta 115 kV.</p>
+            <div class="article-actions">
+              <a class="btn btn--primary" href="contacto_cta.html?producto=comisionamiento-epc">Solicitar propuesta EPC</a>
+              <a class="btn btn--secondary" href="especialidad_servicios.html#inicio">Ver servicios de comisionamiento</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+          <!-- CTA accent -->
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>Comisionamiento EPC llave en mano</h3>
+            <p>Enviamos a nuestro equipo de comisionamiento con todos los instrumentos necesarios: TTR, Megger, micro-ohm&iacute;metro, c&aacute;mara IR y kit de muestreo de aceite.</p>
+            <a class="btn" href="contacto_cta.html?producto=comisionamiento-epc">Agendar visita</a>
+          </div>
+
+          <!-- Checklist comisionamiento -->
+          <div class="sidebar-card">
+            <h3>Checklist go/no-go</h3>
+            <ul>
+              <li>&#10003; Aceler&oacute;metro no activado</li>
+              <li>&#10003; Presi&oacute;n N&#8322; positiva en recepci&oacute;n</li>
+              <li>&#10003; Obra civil y cubeto terminados</li>
+              <li>&#10003; Malla de tierra instalada y probada</li>
+              <li>&#10003; Aceite con BDV &ge; 40 kV/mm</li>
+              <li>&#10003; Reposo m&iacute;nimo 24 h post-llenado</li>
+              <li>&#10003; TTR y grupo vectorial correctos</li>
+              <li>&#10003; Megger PI &gt; 2.0</li>
+              <li>&#10003; Buchholz y protecciones activas</li>
+              <li>&#10003; LOTO retirado y zona despejada</li>
+              <li>&#10003; DGA basal (pre-energizaci&oacute;n)</li>
+            </ul>
+          </div>
+
+          <!-- Artículos de la serie -->
+          <div class="sidebar-card">
+            <h3>Serie: Transformadores Industriales</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">&#8594; #1 Selecci&oacute;n</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">&#8594; #2 Pruebas FAT y SAT</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-transformadores-operacion.html">&#8594; #3 Mantenimiento predictivo</a></li>
+              <li><a class="sidebar-link" href="blog-instalacion-comisionamiento-transformadores-epc.html"><strong>&#8594; #4 Instalaci&oacute;n EPC (este art&iacute;culo)</strong></a></li>
+            </ul>
+          </div>
+
+          <!-- Servicios vinculados -->
+          <div class="sidebar-card">
+            <h3>Servicios relacionados</h3>
+            <a class="sidebar-link" href="especialidad_servicios.html#inicio">&#8594; Instalaci&oacute;n y comisionamiento</a><br><br>
+            <a class="sidebar-link" href="especialidad_ingenieria.html#inicio">&#8594; Ingenier&iacute;a de subestaciones</a><br><br>
+            <a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">&#8594; Mantenimiento post-comisionamiento</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">&#8594; Suministro de transformadores</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Contacto t&eacute;cnico</h3>
+            <p>Hable con un ingeniero especialista en comisionamiento el&eacute;ctrico EPC.</p>
+            <p><strong>&#128222;</strong> <a href="tel:+526141234567">+52 614 XXX XXXX</a></p>
+            <p><strong>&#9993;</strong> <a href="mailto:proyectos@vmsenergy.com">proyectos@vmsenergy.com</a></p>
+          </div>
+
+        </aside><!-- /blog-sidebar -->
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="foot" id="footer" aria-label="Pie de p&aacute;gina">
+    <div class="container">
+      <div>
+        <h4>VMS Energy</h4>
+        <ul>
+          <li><a class="foot-link" href="nosotros.html#inicio">Nosotros</a></li>
+          <li><a class="foot-link" href="certificaciones.html#inicio">Certificaciones</a></li>
+          <li><a class="foot-link" href="blog.html">Blog</a></li>
+          <li><a class="foot-link" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="foot-social__link" href="https://www.linkedin.com/company/vmsenergy" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.103v1.561h.046c.434-.821 1.495-1.686 3.076-1.686 3.289 0 3.894 2.165 3.894 4.979v6.598h-.657zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.558 13.019H3.779V9h3.116v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a class="foot-link" href="soluciones_electromecanicas.html#inicio">Electromec&aacute;nica</a></li>
+          <li><a class="foot-link" href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n</a></li>
+          <li><a class="foot-link" href="soluciones_solar_industrial.html#inicio">Solar Industrial</a></li>
+          <li><a class="foot-link" href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+          <li><a class="foot-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a class="foot-link" href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+          <li><a class="foot-link" href="especialidad_servicios.html#inicio">Servicios</a></li>
+          <li><a class="foot-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+          <li><a class="foot-link" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suministro</h4>
+        <ul>
+          <li><a class="foot-link" href="procura.html#inicio">Procura t&eacute;cnica</a></li>
+          <li><a class="foot-link" href="VMShop.html">VMShop</a></li>
+          <li><a class="foot-link" href="lp-cable-de-potencia-kei.html">Cable KEI</a></li>
+          <li><a class="foot-link" href="lp-triol-variadores.html">Variadores Triol</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Blog T&eacute;cnico</h4>
+        <ul>
+          <li><a class="foot-link" href="blog-seleccion-transformadores-industriales.html">Selecci&oacute;n de transformadores</a></li>
+          <li><a class="foot-link" href="blog-pruebas-aceptacion-transformadores.html">Pruebas FAT y SAT</a></li>
+          <li><a class="foot-link" href="blog-mantenimiento-transformadores-operacion.html">Mantenimiento predictivo</a></li>
+          <li><a class="foot-link" href="blog-instalacion-comisionamiento-transformadores-epc.html">Instalaci&oacute;n y comisionamiento</a></li>
+          <li><a class="foot-link" href="blog.html">Ver todos los art&iacute;culos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(203,213,225,.14);padding:18px 0;text-align:center;font-size:.88rem;color:#7b93b3">
+      &copy; 2026 VMS Energy &mdash; Ingenier&iacute;a el&eacute;ctrica EPC &middot; M&eacute;xico
+    </div>
+  </footer>
+
+  <div class="mobile-phone-sticky">
+    <a href="tel:+526141234567" aria-label="Llamar a VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('menuList');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if (window.innerWidth <= 680) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

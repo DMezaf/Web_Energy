@@ -1,0 +1,384 @@
+/*
+ * ============================================================
+ *  tokens.css — Sistema de diseño VMS Energy
+ *  Versión 1.0 · Mayo 2026
+ * ============================================================
+ *
+ *  CÓMO USAR ESTE ARCHIVO
+ *  ─────────────────────────────────────────────────────────
+ *  1. Incluir en el <head> ANTES de cualquier otro <style>:
+ *       <link rel="stylesheet" href="tokens.css" />
+ *
+ *  2. Agregar el atributo data-concept en <html>:
+ *       <html lang="es-MX" data-concept="corporativo">
+ *
+ *  3. Para páginas Sectoriales, agregar también data-sector:
+ *       <html lang="es-MX" data-concept="sectorial" data-sector="mineria">
+ *
+ *  CONCEPTOS DISPONIBLES
+ *  ─────────────────────────────────────────────────────────
+ *  data-concept="corporativo"           → Inicio, Nosotros, Servicios EPC,
+ *                                          Capacitación, Carreras, Contactar
+ *  data-concept="sectorial"             → Minería, Agroindustria, Alim. & Beb.
+ *    data-sector="mineria"              → override oscuro noche
+ *    data-sector="agroindustria"        → override verde bosque
+ *    data-sector="alimentos-bebidas"    → override ámbar/marrón
+ *  data-concept="equipamiento"          → Variadores, Subestaciones, Tableros…
+ *  data-concept="servicios-especializados" → LPs de Turbogeneradores,
+ *                                            Mantenimiento, Oil & Gas, Fuego
+ *  data-concept="eshop"                 → VMShop / páginas Triol
+ *
+ * ============================================================
+ */
+
+
+/* ============================================================
+   0 · GLOBAL — compartido por todos los conceptos
+   ============================================================ */
+:root {
+
+  /* Tipografía */
+  --font-body: "Roboto Condensed", system-ui, -apple-system, Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Paleta base corporativa (fallback si no hay data-concept) */
+  --navy:   #172C51;
+  --cobalt: #0F4C81;
+
+  /* Colores de texto globales */
+  --text-primary:   #0F172A;
+  --text-muted:     #475569;
+  --text-hint:      #94A3B8;
+
+  /* Superficies y bordes globales */
+  --bg-page:        #FFFFFF;
+  --bg-surface:     #F2F4F7;
+  --bg-soft:        #F5F8FC;
+  --border-line:    rgba(23, 44, 81, .12);
+  --border-hover:   rgba(23, 44, 81, .24);
+
+  /* Espaciado y layout */
+  --max-width:      1100px;
+  --max-width-wide: 1200px;
+  --radius-card:    14px;
+  --radius-hero:    24px;
+  --radius-btn:     999px;
+  --radius-tag:     999px;
+
+  /* Sombras */
+  --shadow-card:    0 4px 16px rgba(9, 32, 58, .08);
+  --shadow-hover:   0 8px 24px rgba(9, 32, 58, .14);
+  --shadow-nav:     0 14px 30px rgba(8, 28, 54, .12);
+
+  /* Transiciones */
+  --transition-base: .2s ease;
+
+  /* Estado / semántica (compartidos) */
+  --success:  #16A34A;
+  --warning:  #D97706;
+  --danger:   #EF4444;
+  --info:     #0F4C81;
+
+  /* ── Tokens de concepto (valores base = Corporativo) ── */
+  --concept-primary:       #0F4C81;   /* hero grad, CTA bg, headings accent */
+  --concept-dark:          #172C51;   /* hero bg dark stop, nav, footer */
+  --concept-darker:        #0b1a30;   /* hero bg darkest stop */
+  --concept-accent:        #3A6FA5;   /* pills, subrayados, íconos secundarios */
+  --concept-accent-light:  #DBEAFE;   /* chips, badge bg, section--alt */
+  --concept-accent-text:   #1E3A5F;   /* texto sobre accent-light */
+  --concept-kpi-bg:        #172C51;   /* tira KPI fondo */
+  --concept-kpi-val:       #93C5FD;   /* número KPI */
+  --concept-kpi-lbl:       #BFDBFE;   /* etiqueta KPI */
+  --concept-btn-primary:   #0F4C81;   /* botón primario bg */
+  --concept-btn-text:      #FFFFFF;   /* botón primario texto */
+  --concept-hero-tag-bg:   rgba(255,255,255,.12);
+  --concept-hero-tag-border: rgba(255,255,255,.22);
+  --concept-hero-tag-text: #E8F2FF;
+  --concept-section-alt:   #F0F6FF;   /* sección alternada fondo */
+  --concept-section-dark:  #172C51;   /* sección oscura bg */
+  --concept-hero-gradient: linear-gradient(135deg, #0b1a30 0%, #172C51 50%, #0F4C81 100%);
+}
+
+
+/* ============================================================
+   1 · CONCEPTO CORPORATIVO
+      Páginas: index, nosotros, servicios-epc, entrega-proyectos,
+               capacitacion, suministro-tecnico, carreras, contactar
+   ============================================================ */
+[data-concept="corporativo"] {
+  --concept-primary:       #0F4C81;
+  --concept-dark:          #172C51;
+  --concept-darker:        #0b1a30;
+  --concept-accent:        #3A6FA5;
+  --concept-accent-light:  #DBEAFE;
+  --concept-accent-text:   #1E3A5F;
+  --concept-kpi-bg:        #172C51;
+  --concept-kpi-val:       #93C5FD;
+  --concept-kpi-lbl:       #BFDBFE;
+  --concept-btn-primary:   #0F4C81;
+  --concept-btn-text:      #FFFFFF;
+  --concept-hero-tag-text: #E8F2FF;
+  --concept-section-alt:   #F0F6FF;
+  --concept-section-dark:  #172C51;
+  --concept-hero-gradient: linear-gradient(135deg, #0b1a30 0%, #172C51 50%, #0F4C81 100%);
+}
+
+
+/* ============================================================
+   2 · CONCEPTO SECTORIAL — base (común a los 3 sectores)
+      Override por sector debajo con data-sector="..."
+   ============================================================ */
+[data-concept="sectorial"] {
+  /* El sector específico sobreescribe --sector-* abajo */
+  --concept-primary:       var(--sector-primary, #15803D);
+  --concept-dark:          var(--sector-dark,    #14532D);
+  --concept-darker:        var(--sector-darker,  #0f3a15);
+  --concept-accent:        var(--sector-accent,  #16A34A);
+  --concept-accent-light:  var(--sector-light,   #DCFCE7);
+  --concept-accent-text:   var(--sector-text,    #14532D);
+  --concept-kpi-bg:        var(--sector-kpi-bg,  #14532D);
+  --concept-kpi-val:       var(--sector-kpi-val, #86EFAC);
+  --concept-kpi-lbl:       var(--sector-kpi-lbl, #6EE7B7);
+  --concept-btn-primary:   var(--sector-primary, #16A34A);
+  --concept-btn-text:      #FFFFFF;
+  --concept-hero-tag-text: #E8F9EE;
+  --concept-section-alt:   var(--sector-section-alt, #F0FDF4);
+  --concept-section-dark:  #172C51;
+  --concept-hero-gradient: var(--sector-gradient, linear-gradient(135deg, #0f3a15 0%, #1a5e26 50%, #0d4a1a 100%));
+}
+
+/* — Sector: Minería (dark, azul noche) — */
+[data-concept="sectorial"][data-sector="mineria"] {
+  --sector-primary:      #1A6FA3;
+  --sector-dark:         #0f3d5e;
+  --sector-darker:       #0b1220;
+  --sector-accent:       #9CE37B;   /* lima eléctrica = acento de vida en minería */
+  --sector-light:        #E0F2FE;
+  --sector-text:         #0C2340;
+  --sector-kpi-bg:       #0b1220;
+  --sector-kpi-val:      #9CE37B;
+  --sector-kpi-lbl:      #7DD3FC;
+  --sector-section-alt:  #F0F7FF;
+  --sector-gradient:     linear-gradient(115deg, rgba(7,14,26,.88), rgba(14,58,90,.75));
+  /* Variables heredadas de la página actual (compatibilidad) */
+  --night:   #0b1220;
+  --azure:   #1a6fa3;
+  --ocean:   #0f3d5e;
+  --lime:    #9ce37b;
+  --sun:     #f0b429;
+  --ink:     #13233c;
+  --muted:   #5e6f86;
+}
+
+/* — Sector: Agroindustria (verde bosque) — */
+[data-concept="sectorial"][data-sector="agroindustria"] {
+  --sector-primary:      #16A34A;
+  --sector-dark:         #14532D;
+  --sector-darker:       #0f3a15;
+  --sector-accent:       #86EFAC;
+  --sector-light:        #DCFCE7;
+  --sector-text:         #14532D;
+  --sector-kpi-bg:       #14532D;
+  --sector-kpi-val:      #86EFAC;
+  --sector-kpi-lbl:      #6EE7B7;
+  --sector-section-alt:  #F0FDF4;
+  --sector-gradient:     linear-gradient(135deg, #0f3a15 0%, #1a5e26 50%, #0d4a1a 100%);
+  /* Compatibilidad agroindustria */
+  --green: #15803D;
+}
+
+/* — Sector: Alimentos & Bebidas (ámbar / marrón industrial) — */
+[data-concept="sectorial"][data-sector="alimentos-bebidas"] {
+  --sector-primary:      #B45309;
+  --sector-dark:         #92400E;
+  --sector-darker:       #78350F;
+  --sector-accent:       #FDE68A;
+  --sector-light:        #FEF3C7;
+  --sector-text:         #451A03;
+  --sector-kpi-bg:       #451A03;
+  --sector-kpi-val:      #FDE68A;
+  --sector-kpi-lbl:      #FCD34D;
+  --sector-section-alt:  #FFFBEB;
+  --sector-gradient:     linear-gradient(135deg, #78350f 0%, #b45309 50%, #92400e 100%);
+}
+
+
+/* ============================================================
+   3 · CONCEPTO EQUIPAMIENTO
+      Páginas: variadores-frecuencia, subestaciones, tableros-mcc,
+               transformadores, motores, ups-respaldo, etc.
+      Identidad: gris técnico / slate — communica precisión industrial
+   ============================================================ */
+[data-concept="equipamiento"] {
+  --concept-primary:       #334155;   /* slate-700 */
+  --concept-dark:          #1E293B;   /* slate-800 */
+  --concept-darker:        #0F172A;   /* slate-900 */
+  --concept-accent:        #475569;   /* slate-600 */
+  --concept-accent-light:  #E2E8F0;   /* slate-200 */
+  --concept-accent-text:   #1E293B;
+  --concept-kpi-bg:        #1E293B;
+  --concept-kpi-val:       #94A3B8;   /* slate-400 */
+  --concept-kpi-lbl:       #CBD5E1;   /* slate-300 */
+  --concept-btn-primary:   #334155;
+  --concept-btn-text:      #FFFFFF;
+  --concept-hero-tag-text: #E2E8F0;
+  --concept-section-alt:   #F8FAFC;
+  --concept-section-dark:  #1E293B;
+  --concept-hero-gradient: linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #334155 100%);
+  /* Acento cobre/técnico para iconografía de especificaciones */
+  --spec-accent:           #D97706;   /* amber-600 — resalta valores de spec */
+  --spec-accent-light:     #FEF3C7;
+  --spec-badge-norm:       #0F4C81;   /* color norma IEC/IEEE/NOM */
+}
+
+
+/* ============================================================
+   4 · CONCEPTO SERVICIOS ESPECIALIZADOS
+      Páginas: lp-turbogeneradores-woodward, lp-mantenimiento-predictivo,
+               lp-mantenimiento-oil-gas, lp-deteccion-control-supresion-fuego
+      Identidad: índigo — expertise técnico diferenciado, urgencia controlada
+   ============================================================ */
+[data-concept="servicios-especializados"] {
+  --concept-primary:       #4F46E5;   /* indigo-600 */
+  --concept-dark:          #3730A3;   /* indigo-700 */
+  --concept-darker:        #1E1B4B;   /* indigo-950 */
+  --concept-accent:        #6366F1;   /* indigo-500 */
+  --concept-accent-light:  #EEF2FF;   /* indigo-50 */
+  --concept-accent-text:   #3730A3;
+  --concept-kpi-bg:        #1E1B4B;
+  --concept-kpi-val:       #A5B4FC;   /* indigo-300 */
+  --concept-kpi-lbl:       #C7D2FE;   /* indigo-200 */
+  --concept-btn-primary:   #4F46E5;
+  --concept-btn-text:      #FFFFFF;
+  --concept-hero-tag-text: #E0E7FF;
+  --concept-section-alt:   #EEF2FF;
+  --concept-section-dark:  #1E1B4B;
+  --concept-hero-gradient: linear-gradient(135deg, #1E1B4B 0%, #3730A3 55%, #4F46E5 100%);
+  /* Badge urgencia/disponibilidad 24/7 */
+  --urgency-badge-bg:      #FEF3C7;
+  --urgency-badge-text:    #92400E;
+}
+
+
+/* ============================================================
+   5 · CONCEPTO E-SHOP
+      Páginas: vmshop, triol-variador-detalle, fichas de producto
+      Identidad: slate neutro + acento naranja comercial
+   ============================================================ */
+[data-concept="eshop"] {
+  --concept-primary:       #0F4C81;   /* mantiene marca VMS en e-commerce */
+  --concept-dark:          #1E293B;
+  --concept-darker:        #0F172A;
+  --concept-accent:        #F97316;   /* orange-500 — precio, CTA compra */
+  --concept-accent-light:  #FFF7ED;   /* orange-50 */
+  --concept-accent-text:   #9A3412;
+  --concept-kpi-bg:        #1E293B;
+  --concept-kpi-val:       #F97316;
+  --concept-kpi-lbl:       #CBD5E1;
+  --concept-btn-primary:   #F97316;   /* botón "Solicitar cotización" */
+  --concept-btn-text:      #FFFFFF;
+  --concept-hero-tag-text: #E2E8F0;
+  --concept-section-alt:   #F8FAFC;
+  --concept-section-dark:  #1E293B;
+  --concept-hero-gradient: linear-gradient(135deg, #0F172A 0%, #1E293B 55%, #0F4C81 100%);
+  /* Precios y badges de producto */
+  --price-color:           #F97316;
+  --price-old-color:       #94A3B8;
+  --badge-new:             #16A34A;
+  --badge-stock:           #0F4C81;
+  --badge-quote:           #F97316;
+}
+
+
+/* ============================================================
+   UTILIDADES DE CONCEPTO — clases helper para apply rápido
+   Usar en lugar de hardcodear colores en cada página
+   ============================================================ */
+
+/* Botón primario de concepto */
+.btn--concept {
+  background: var(--concept-primary);
+  color: var(--concept-btn-text);
+  border: 1px solid transparent;
+}
+.btn--concept:hover {
+  opacity: .88;
+}
+
+/* Tag / pill de hero */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--concept-hero-tag-bg, rgba(255,255,255,.12));
+  border: 1px solid var(--concept-hero-tag-border, rgba(255,255,255,.22));
+  color: var(--concept-hero-tag-text);
+  padding: .3rem .75rem;
+  border-radius: var(--radius-tag);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+/* Sección alternada */
+.section--alt {
+  background: var(--concept-section-alt);
+}
+
+/* Sección oscura de concepto */
+.section--dark {
+  background: var(--concept-section-dark);
+  color: #fff;
+}
+
+/* Badge de norma/certificación (Equipamiento) */
+.norm-badge {
+  background: var(--spec-accent-light, #DBEAFE);
+  color: var(--spec-badge-norm, #0F4C81);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .15rem .6rem;
+  border-radius: 4px;
+}
+
+/* Badge de urgencia/disponibilidad (Servicios Especializados) */
+.urgency-badge {
+  background: var(--urgency-badge-bg, #FEF3C7);
+  color: var(--urgency-badge-text, #92400E);
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .2rem .7rem;
+  border-radius: var(--radius-tag);
+}
+
+
+/* ============================================================
+   COMPATIBILIDAD RETROACTIVA
+   Variables heredadas de páginas existentes — no eliminar
+   hasta completar migración de todas las páginas.
+   ============================================================ */
+:root {
+  /* Aliases corporativos existentes */
+  --navy:       #172C51;
+  --cobalt:     #0F4C81;
+  --blue-2:     #274B7C;
+  --blue-3:     #3A6FA5;
+  --gray:       #F2F4F7;
+  --text:       #0F172A;
+  --verde-tech: #22C55E;
+  --danger:     #EF4444;
+  /* Aliases minería existentes */
+  --night:      #0b1220;
+  --ocean:      #0f3d5e;
+  --azure:      #1a6fa3;
+  --lime:       #9ce37b;
+  --sun:        #f0b429;
+  --ink:        #13233c;
+  --muted:      #5e6f86;
+  --line:       rgba(23,44,81,.12);
+  --soft:       #f5f8fc;
+  /* Alias sector genérico */
+  --sector:     #15803D;
+  --green:      #15803D;
+}

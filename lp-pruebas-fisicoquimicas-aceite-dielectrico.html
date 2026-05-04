@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="es-MX" data-concept="servicios-especializados">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Análisis Físico-Químico y DGA de Aceite Dieléctrico | Transformadores | VMS Energy</title>
+  <meta name="description" content="Servicio de análisis físico-químico y DGA de aceite dieléctrico para transformadores industriales. BDV, humedad, acidez, tensión interfacial, tan δ, gases disueltos. NMX-J-169-ANCE, IEC 60422, IEEE C57.104. México."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://vmsenergy.com/lp-pruebas-fisicoquimicas-aceite-dielectrico.html"/>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="servicios-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── PRUEBAS FÍSICO-QUÍMICAS ACEITE DIELÉCTRICO — page CSS ─── */
+    :root {
+      --serv-hero-img: url('assets/img/Especialidad_Mantenimiento_Mantenimiento_Preventivo.webp');
+      --serv-hero-before-display: block;
+      --serv-hero-gradient-bg: transparent;
+    }
+    .hero-eyebrow{display:inline-flex;gap:7px;padding:.28rem .72rem;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:.8rem;margin:0 0 16px}
+
+    /* Parámetros grid */
+    .param-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .param-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);border-left:4px solid var(--concept-primary)}
+    .param-card__norm{font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+    .param-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .param-card__desc{font-size:.87rem;color:#4b5563;margin:0 0 8px;line-height:1.55}
+    .param-card__criterio{font-size:.8rem;color:#64748b;margin:0;padding:8px 10px;background:#f8fafc;border-radius:8px;line-height:1.45}
+    .param-card__criterio strong{color:#dc2626}
+
+    /* DGA métodos */
+    .dga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .dga-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:24px 20px;box-shadow:0 3px 12px rgba(8,28,54,.06);text-align:center}
+    .dga-card__icon{font-size:2rem;margin-bottom:12px}
+    .dga-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .dga-card__norm{display:inline-block;font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;background:rgba(15,76,129,.08);padding:.2rem .6rem;border-radius:999px}
+    .dga-card__desc{font-size:.87rem;color:#4b5563;margin:0;line-height:1.55}
+
+    /* Gas table */
+    .gas-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:.88rem}
+    .gas-table th{background:var(--concept-primary);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+    .gas-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.1);color:#374151;vertical-align:top}
+    .gas-table tr:nth-child(even) td{background:#f8fafc}
+    .gas-tag{display:inline-block;font-size:.72rem;font-weight:800;padding:.15rem .5rem;border-radius:999px}
+    .gas-tag--rojo{background:#fee2e2;color:#dc2626}
+    .gas-tag--amarillo{background:#fef9c3;color:#92400e}
+    .gas-tag--verde{background:#dcfce7;color:#15803d}
+
+    /* Proceso */
+    .proceso-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .paso{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:20px 16px;position:relative}
+    .paso__num{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 0 12px}
+    .paso__title{font-size:.92rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .paso__desc{font-size:.82rem;color:#64748b;margin:0;line-height:1.5}
+
+    /* Entregables */
+    .entregables-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .ent-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;text-align:center}
+    .ent-card__icon{font-size:1.4rem;margin-bottom:8px}
+    .ent-card__title{font-size:.88rem;font-weight:800;color:#0f172a;margin:0}
+    .ent-card__sub{font-size:.77rem;color:#64748b;margin:4px 0 0}
+
+    /* Ref cards */
+    .ref-card__cliente{color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;font-size:.75rem;font-weight:800}
+
+    /* RAG badge */
+    .rag-strip{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .rag-badge{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;flex:1;min-width:180px}
+    .rag-badge--verde{background:#dcfce7;border:1px solid #86efac}
+    .rag-badge--amarillo{background:#fef9c3;border:1px solid #fde047}
+    .rag-badge--rojo{background:#fee2e2;border:1px solid #fca5a5}
+    .rag-badge__dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
+    .rag-badge--verde .rag-badge__dot{background:#22c55e}
+    .rag-badge--amarillo .rag-badge__dot{background:#eab308}
+    .rag-badge--rojo .rag-badge__dot{background:#ef4444}
+    .rag-badge__text{font-size:.85rem;color:#1e293b;line-height:1.35}
+    .rag-badge__text strong{display:block;font-weight:800}
+
+    /* Responsive */
+    @media(max-width:1100px){.param-grid{grid-template-columns:repeat(2,1fr)};.dga-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:980px){.proceso-steps{grid-template-columns:repeat(2,1fr)};.entregables-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){.param-grid{grid-template-columns:1fr};.dga-grid{grid-template-columns:1fr};.proceso-steps{grid-template-columns:1fr};.entregables-grid{grid-template-columns:1fr 1fr};.gas-table{font-size:.8rem}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Service",
+     "name":"Análisis Físico-Químico y DGA de Aceite Dieléctrico para Transformadores",
+     "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com"},
+     "description":"Análisis físico-químico completo y diagnóstico por gases disueltos (DGA) del aceite dieléctrico de transformadores industriales. Rigidez dieléctrica, humedad, acidez, tensión interfacial, tangente delta y cromatografía de gases. Conforme NMX-J-169-ANCE, IEC 60422 e IEEE C57.104.",
+     "areaServed":{"@type":"Country","name":"México"},
+     "serviceType":"Dielectric Oil Analysis – Physical-Chemical & Dissolved Gas Analysis"},
+    {"@type":"FAQPage",
+     "mainEntity":[
+       {"@type":"Question","name":"¿Con qué frecuencia se debe analizar el aceite de un transformador?",
+        "acceptedAnswer":{"@type":"Answer","text":"Según IEC 60422: transformadores nuevos en los primeros 2 años — una vez al año. Equipos en servicio continuo sin anomalías — cada 12 a 24 meses. Con historial de problemas, carga elevada o ambiente agresivo — cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave — frecuencia mensual hasta estabilizar. VMS Energy recomienda establecer el primer análisis dentro de los 90 días de operación como valor basal de referencia."}},
+       {"@type":"Question","name":"¿Qué indica la presencia de acetileno (C₂H₂) en el DGA?",
+        "acceptedAnswer":{"@type":"Answer","text":"El acetileno se genera exclusivamente a temperaturas superiores a 700°C, lo que lo asocia directamente con arcos eléctricos internos. Cualquier detección de acetileno — incluso en cantidades de 1 a 2 ppm — es una señal de alerta que requiere análisis inmediato de tendencia e investigación. Concentraciones superiores a 35 ppm (IEEE C57.104) clasifican el equipo en Condición 3 o 4, indicando posible falla activa y la necesidad de retirar el transformador de servicio para inspección interna."}},
+       {"@type":"Question","name":"¿Cuándo se reemplaza el aceite versus cuándo se filtra o regenera?",
+        "acceptedAnswer":{"@type":"Answer","text":"El filtrado (deshidratación y desgasificación) recupera rigidez dieléctrica y reduce humedad, pero no elimina los productos de degradación del aceite envejecido. Si la acidez supera 0.5 mgKOH/g, el color ASTM excede 4.0 o el tan δ a 90°C supera 1%, el aceite debe regenerarse con tierra de blanqueo o reemplazarse. El reemplazo es obligatorio si el papel aislante está degradado (DP < 200), ya que regenerar el aceite en ese escenario no resuelve el problema de fondo."}},
+       {"@type":"Question","name":"¿Se puede tomar la muestra de aceite con el transformador energizado?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sí. El muestreo de aceite en caliente — con el equipo energizado y bajo carga — es el protocolo preferido porque representa las condiciones reales de operación y garantiza que los gases disueltos no se hayan dispersado. Se realiza a través de la válvula de muestreo inferior con equipo de jeringa de vidrio hermético sin burbujas, conforme al procedimiento IEC 60475. El técnico de VMS Energy utiliza equipo de protección personal apropiado para el nivel de tensión y ejecuta el muestreo sin interrumpir el proceso del cliente."}},
+       {"@type":"Question","name":"¿Qué es el Triángulo de Duval y cómo se interpreta?",
+        "acceptedAnswer":{"@type":"Answer","text":"El Triángulo de Duval (IEC 60599) es un método gráfico que utiliza los porcentajes relativos de metano (CH₄), etileno (C₂H₄) y acetileno (C₂H₂) para clasificar el tipo de falla: PD (descargas parciales), T1/T2/T3 (sobrecalentamiento leve/moderado/severo), D1 (arco de baja energía) y D2 (arco de alta energía). La coordenada del equipo en el triángulo indica la zona de falla predominante. VMS Energy incluye el triángulo de Duval graficado con la coordenada del equipo en todos sus informes, junto con la tendencia histórica si existen mediciones previas."}},
+       {"@type":"Question","name":"¿Qué nivel de rigidez dieléctrica es inaceptable para continuar operando?",
+        "acceptedAnswer":{"@type":"Answer","text":"Según IEC 60422: transformadores de MT (hasta 36 kV) — mínimo aceptable 30 kV/mm; valor objetivo ≥ 40 kV/mm. Transformadores de AT (72.5 kV y superior) — mínimo aceptable 50 kV/mm. Para aceite nuevo antes de llenado, VMS Energy exige ≥ 60 kV/mm. Un resultado por debajo de 20 kV/mm en cualquier nivel de tensión es una emergencia que requiere acción inmediata — el aceite debe filtrarse o reemplazarse antes de continuar operando."}},
+       {"@type":"Question","name":"¿Los transformadores secos (clase F o H) requieren análisis físico-químico de aceite?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Los transformadores secos (cast resin o VPI) no contienen aceite dieléctrico y por tanto no aplica el análisis FQ ni el DGA. Para transformadores secos, el diagnóstico predictivo se realiza mediante termografía infrarroja (puntos calientes en bornes y devanados), medición de resistencia de aislamiento Megger, factor de potencia dieléctrico de la resina, y análisis de descargas parciales (PD). VMS Energy aplica el protocolo correcto según el tipo de aislamiento del equipo."}},
+       {"@type":"Question","name":"¿VMS Energy realiza también el tratamiento o rehabilitación del aceite?",
+        "acceptedAnswer":{"@type":"Answer","text":"El análisis FQ y DGA es el servicio de diagnóstico que VMS Energy ejecuta directamente. Si el informe concluye que el aceite requiere tratamiento, VMS Energy coordina con laboratorios especializados en regeneración y filtrado mediante plantas móviles de deshidratación-desgasificación en vacío. También gestionamos el suministro de aceite nuevo cuando el diagnóstico indica reemplazo total, asegurando que el aceite suministrado cumpla las especificaciones IEC 60296 clase II antes del llenado."}}
+     ]}
+  ]}
+  </script>
+</head>
+<body>
+<header aria-label="Barra de navegación">
+  <div class="container topbar">
+    <a href="index.html" class="brand__logo" aria-label="VMS Energy"><img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager" decoding="async" width="72" height="72"></a>
+    <nav aria-label="Principal">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
+      <ul id="menuList">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li class="nav-item--has-submenu">
+          <a href="nosotros.html" aria-haspopup="true">Nosotros</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Nosotros">
+            <div class="submenu__group">
+              <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+              <ul class="submenu__list">
+                <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+                <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                <li><a href="proyectos-vms.html">Proyectos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+          <div class="submenu submenu--mega" role="menu" aria-label="Submenú de soluciones">
+            <div class="submenu__group">
+              <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromecánicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html#inicio">Automatización y Control</a></li>
+                <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html#inicio">Generación Verde No Solar</a></li>
+                <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energética</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminación Industrial</a></li>
+                <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones Eléctricas MT/AT</a></li>
+              </ul>
+            </div>
+            <div class="submenu__group">
+              <span class="submenu__title">Por Sector</span>
+              <ul class="submenu__list">
+                <li><a href="soluciones_mineria.html#inicio">Minería</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+          <div class="submenu" role="menu" aria-label="Submenú de Equipamiento">
+            <div class="submenu__group">
+              <span class="submenu__title">Equipamiento Crítico</span>
+              <ul class="submenu__list">
+                <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad Eléctrica (UPS/BESS)</a></li>
+                <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores Industriales</a></li>
+                <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Corrección de Factor de Potencia</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item--has-submenu">
+          <a href="soluciones.html#servicios" aria-haspopup="true">Servicios</a>
+          <div class="submenu" role="menu" aria-label="Submenú de servicios">
+            <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detección y Supresión de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios Eléctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="procura.html#inicio">Procura</a></li>
+        <li><a href="contacto.html#inicio" class="btn btn--nav">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero-eyebrow">
+          <span>&#128268;</span>
+          <span>Diagnóstico Predictivo · Aceite Dieléctrico</span>
+        </span>
+        <h1 class="hero__title" id="heroTitle">Análisis Físico-Químico<br>y DGA de Aceite Dieléctrico</h1>
+        <p class="hero__lead">10 parámetros normalizados + diagnóstico de gases disueltos (DGA) por cromatografía. Detectamos fallas incipientes antes de que se conviertan en averías catastróficas. Conforme <strong>NMX-J-169-ANCE · IEC 60422 · IEEE C57.104</strong>.</p>
+        <div class="hero__actions">
+          <a href="contacto.html#inicio" class="btn btn--primary">&#128203; Solicitar diagnóstico</a>
+          <a href="#parametros" class="btn btn--ghost">Ver parámetros →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KPI STRIP ═════════════════════════════════════════════════════ -->
+  <div class="kpi-strip" aria-label="Indicadores del servicio">
+    <div class="container" style="display:flex;gap:0;flex-wrap:wrap">
+      <div class="kpi">
+        <span class="kpi__val">10+</span>
+        <span class="kpi__lbl">Parámetros FQ y DGA</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">7 gases</span>
+        <span class="kpi__lbl">Cromatografía GC-FID/TCD</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">IEC 60156</span>
+        <span class="kpi__lbl">Cup test rigidez BDV</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">Duval</span>
+        <span class="kpi__lbl">Triángulo + Rogers ratio</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">138 kV</span>
+        <span class="kpi__lbl">AT · MT · Distribución</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PARÁMETROS FÍSICO-QUÍMICOS ════════════════════════════════════ -->
+  <section class="section" id="parametros" aria-labelledby="paramTitle">
+    <div class="container">
+      <span class="sec-label">Alcance técnico</span>
+      <h2 class="sec-h2" id="paramTitle">10 parámetros con norma y criterio de aceptación</h2>
+      <p class="sec-lead">Cada análisis incluye la comparación contra los valores límite de IEC 60422, con clasificación de condición RAG (verde · amarillo · rojo) por parámetro y por equipo.</p>
+      <div class="param-grid">
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60156 · ASTM D877/D1816</p>
+          <h3 class="param-card__title">Rigidez dieléctrica (BDV)</h3>
+          <p class="param-card__desc">Cup test con electrodo normalizado, 5–6 mediciones promediadas. Detecta humedad y partículas sólidas en suspensión.</p>
+          <p class="param-card__criterio">MT ≥ 30 kV/mm | AT ≥ 50 kV/mm<br>Aceite nuevo: ≥ 60 kV/mm<br><strong>&lt; 20 kV/mm → emergencia</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60814 · Karl Fischer</p>
+          <h3 class="param-card__title">Contenido de humedad (H₂O)</h3>
+          <p class="param-card__desc">Titulación Karl Fischer coulométrica. La humedad reduce la rigidez dieléctrica y acelera el envejecimiento del papel aislante.</p>
+          <p class="param-card__criterio">MT &lt; 25 ppm | AT &lt; 10 ppm<br>Aceite nuevo &lt; 5 ppm<br><strong>&gt; 35 ppm → deshidratación inmediata</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D974 · IEC 62021-1</p>
+          <h3 class="param-card__title">Acidez (índice de neutralización)</h3>
+          <p class="param-card__desc">Mide los ácidos orgánicos producidos por oxidación del aceite. Ácidos corrosivos degradan el papel y los metales internos.</p>
+          <p class="param-card__criterio">Normal &lt; 0.15 mgKOH/g<br>Precaución 0.15–0.30 | Acción &gt; 0.30<br><strong>&gt; 0.50 mgKOH/g → reemplazo</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D971 · IEC 60422</p>
+          <h3 class="param-card__title">Tensión interfacial</h3>
+          <p class="param-card__desc">Medida de la tensión en la interfaz aceite-agua. Desciende con la presencia de productos de oxidación y lodos.</p>
+          <p class="param-card__criterio">Normal &gt; 28 mN/m<br>Precaución 22–28 | Acción &lt; 22 mN/m<br><strong>&lt; 18 mN/m → regeneración</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60247 · ASTM D924</p>
+          <h3 class="param-card__title">Factor de potencia dieléctrico (tan δ)</h3>
+          <p class="param-card__desc">Medido a 90 °C. Indica pérdidas dieléctricas; sube con contaminación, envejecimiento y presencia de agua.</p>
+          <p class="param-card__criterio">Normal &lt; 0.05% (90 °C)<br>Precaución 0.05–0.20%<br><strong>&gt; 0.50% → acción correctiva</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D1524</p>
+          <h3 class="param-card__title">Color ASTM</h3>
+          <p class="param-card__desc">Indicador visual del envejecimiento del aceite. El oscurecimiento progresivo señala oxidación y formación de lodos.</p>
+          <p class="param-card__criterio">Aceite nuevo ≤ 0.5<br>En servicio: ≤ 3.5 aceptable<br><strong>&gt; 5.0 → aceite muy degradado</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D445</p>
+          <h3 class="param-card__title">Viscosidad cinemática</h3>
+          <p class="param-card__desc">Medida a 40 °C. Afecta la circulación del aceite y la eficiencia de enfriamiento. Sube por polimerización térmica.</p>
+          <p class="param-card__criterio">Aceite mineral clase II: ≤ 11 mm²/s (40 °C)<br>Referencia fabricante como valor de línea base</p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D92 · ASTM D93</p>
+          <h3 class="param-card__title">Punto de inflamación</h3>
+          <p class="param-card__desc">Temperatura mínima a la que los vapores se inflaman. Un descenso significativo sugiere contaminación con solventes o combustibles.</p>
+          <p class="param-card__criterio">Aceite nuevo ≥ 135 °C<br>En servicio ≥ 125 °C<br><strong>Descenso &gt; 15 °C → investigar</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D2668 · IEC 60666</p>
+          <h3 class="param-card__title">Inhibidor de oxidación (DBPC)</h3>
+          <p class="param-card__desc">Concentración de 2,6-ditercbutilparacresol. Aceites inhibidos pierden protección cuando el DBPC se agota y la oxidación se acelera.</p>
+          <p class="param-card__criterio">Aceite inhibido: 0.20–0.35% m/m<br><strong>&lt; 0.08% → reponer inhibidor</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60450 · ASTM D4243</p>
+          <h3 class="param-card__title">Grado de polimerización del papel (DP)</h3>
+          <p class="param-card__desc">Muestreo de papel aislante. El DP indica vida útil residual del aislamiento sólido — irreversible una vez degradado.</p>
+          <p class="param-card__criterio">Nuevo DP 1000–1200<br>DP &lt; 400 → 50% vida consumida<br><strong>DP &lt; 200 → riesgo de ruptura</strong></p>
+        </div>
+
+      </div>
+
+      <!-- RAG legend -->
+      <div class="rag-strip" style="margin-top:28px">
+        <div class="rag-badge rag-badge--verde">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>VERDE — Normal</strong>Parámetro dentro del rango de operación continua</div>
+        </div>
+        <div class="rag-badge rag-badge--amarillo">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>AMARILLO — Precaución</strong>Monitoreo más frecuente; planificar acción</div>
+        </div>
+        <div class="rag-badge rag-badge--rojo">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>ROJO — Acción requerida</strong>Intervención antes del próximo ciclo de operación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DGA — GASES DISUELTOS ══════════════════════════════════════════ -->
+  <section class="section section--alt" aria-labelledby="dgaTitle">
+    <div class="container">
+      <span class="sec-label">Diagnóstico avanzado</span>
+      <h2 class="sec-h2" id="dgaTitle">DGA: Análisis de Gases Disueltos por Cromatografía</h2>
+      <p class="sec-lead">El DGA es la técnica predictiva más poderosa para transformadores en aceite. Detecta fallas incipientes con meses de anticipación mediante la cuantificación de 7 gases clave.</p>
+
+      <div class="dga-grid">
+        <div class="dga-card">
+          <div class="dga-card__icon">🔺</div>
+          <h3 class="dga-card__title">Triángulo de Duval</h3>
+          <span class="dga-card__norm">IEC 60599</span>
+          <p class="dga-card__desc">Utiliza los porcentajes relativos de CH₄, C₂H₄ y C₂H₂ para clasificar el tipo de falla: descargas parciales (PD), sobrecalentamiento T1/T2/T3 y arcos D1/D2. Incluido gráficamente en cada informe.</p>
+        </div>
+        <div class="dga-card">
+          <div class="dga-card__icon">📐</div>
+          <h3 class="dga-card__title">Método de Rogers</h3>
+          <span class="dga-card__norm">IEEE C57.104</span>
+          <p class="dga-card__desc">Cocientes de gases (CH₄/H₂, C₂H₄/C₂H₆, C₂H₂/C₂H₄) para clasificar la falla por temperatura y energía. Complementa el triángulo de Duval en casos en zona de frontera.</p>
+        </div>
+        <div class="dga-card">
+          <div class="dga-card__icon">📈</div>
+          <h3 class="dga-card__title">Análisis de Tendencias</h3>
+          <span class="dga-card__norm">IEC 60422</span>
+          <p class="dga-card__desc">La tasa de generación de gas (ppm/mes) es tan importante como el valor absoluto. Una tendencia ascendente en acetileno o hidrógeno, aunque por debajo del umbral, puede indicar falla activa.</p>
+        </div>
+      </div>
+
+      <!-- Gas table -->
+      <h3 style="margin:32px 0 0;font-size:1.05rem;color:#0f172a">Los 7 gases del DGA: origen y significado diagnóstico</h3>
+      <div style="overflow-x:auto">
+        <table class="gas-table" aria-label="Gases disueltos en aceite dieléctrico">
+          <thead>
+            <tr>
+              <th>Gas</th>
+              <th>Fórmula</th>
+              <th>Origen principal</th>
+              <th>Umbral IEEE C57.104 (Cond. 2)</th>
+              <th>Indicador de</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hidrógeno</strong></td>
+              <td>H₂</td>
+              <td>Descargas parciales, sobrecalentamiento leve</td>
+              <td>100 ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">DP / sobrecalentamiento</span></td>
+            </tr>
+            <tr>
+              <td><strong>Metano</strong></td>
+              <td>CH₄</td>
+              <td>Sobrecalentamiento aceite (&lt; 300 °C)</td>
+              <td>120 ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Térmica leve</span></td>
+            </tr>
+            <tr>
+              <td><strong>Etano</strong></td>
+              <td>C₂H₆</td>
+              <td>Sobrecalentamiento aceite (150–300 °C)</td>
+              <td>65 ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Térmica moderada</span></td>
+            </tr>
+            <tr>
+              <td><strong>Etileno</strong></td>
+              <td>C₂H₄</td>
+              <td>Sobrecalentamiento severo aceite (&gt; 300 °C)</td>
+              <td>50 ppm</td>
+              <td><span class="gas-tag gas-tag--rojo">Térmica severa</span></td>
+            </tr>
+            <tr>
+              <td><strong>Acetileno</strong></td>
+              <td>C₂H₂</td>
+              <td>Arcos eléctricos (&gt; 700 °C)</td>
+              <td>35 ppm</td>
+              <td><span class="gas-tag gas-tag--rojo">Arco eléctrico</span></td>
+            </tr>
+            <tr>
+              <td><strong>Monóxido de carbono</strong></td>
+              <td>CO</td>
+              <td>Degradación del papel aislante (celulosa)</td>
+              <td>350 ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Papel degradado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Dióxido de carbono</strong></td>
+              <td>CO₂</td>
+              <td>Degradación normal/acelerada del papel</td>
+              <td>2500 ppm</td>
+              <td><span class="gas-tag gas-tag--verde">Referencia papel</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.8rem;color:#64748b;margin-top:10px">* TDCG (Total Dissolved Combustible Gas) = H₂ + CH₄ + C₂H₂ + C₂H₄ + C₂H₆ + CO. Condición 1: &lt; 720 ppm (normal). Condición 2: 720–1920 ppm (precaución). Condición 3: 1920–4630 ppm (acción). Condición 4: &gt; 4630 ppm (emergencia). Fuente: IEEE C57.104.</p>
+    </div>
+  </section>
+
+  <!-- ══ PROCESO DEL SERVICIO ═══════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="procesoTitle">
+    <div class="container">
+      <span class="sec-label">Flujo del servicio</span>
+      <h2 class="sec-h2" id="procesoTitle">De la muestra al plan de acción en 6 etapas</h2>
+      <p class="sec-lead">Un proceso estructurado que garantiza trazabilidad de la muestra, rigor analítico y recomendaciones accionables para el equipo de mantenimiento del cliente.</p>
+      <div class="proceso-steps">
+        <div class="paso">
+          <div class="paso__num">01</div>
+          <h3 class="paso__title">Levantamiento de flota</h3>
+          <p class="paso__desc">Inventario de transformadores, kVA, nivel de tensión, tipo de aceite, historial de análisis previos y condiciones de carga. Define prioridad de muestreo.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">02</div>
+          <h3 class="paso__title">Muestreo conforme IEC 60475</h3>
+          <p class="paso__desc">Muestra bajo carga (en caliente) con jeringa de vidrio hermética. Sin burbujas, sin contaminación de aire. Cadena de custodia documentada hasta el laboratorio.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">03</div>
+          <h3 class="paso__title">Análisis de laboratorio</h3>
+          <p class="paso__desc">Cromatógrafo GC-FID/TCD para los 7 gases. Cup test IEC 60156 (rigidez BDV). Karl Fischer (humedad). Coulometría y espectrofotometría para el resto de parámetros.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">04</div>
+          <h3 class="paso__title">Diagnóstico experto</h3>
+          <p class="paso__desc">Interpretación Duval + Rogers + análisis de tendencias históricas. Clasificación RAG por parámetro. Comparación con valores de la campaña anterior.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">05</div>
+          <h3 class="paso__title">Informe técnico</h3>
+          <p class="paso__desc">Informe PDF por equipo con triángulo de Duval graficado, tabla comparativa IEC 60422, condición RAG y recomendaciones priorizadas (inmediata / 6 meses / anual).</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">06</div>
+          <h3 class="paso__title">Programa de seguimiento</h3>
+          <p class="paso__desc">Calendario de próxima campaña de muestreo, alertas de umbral individuales por equipo y base de datos histórica en Excel para integración al CMMS del cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROYECTOS DE REFERENCIA ════════════════════════════════════════ -->
+  <section class="section section--alt" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Experiencia comprobada</span>
+      <h2 class="sec-h2" id="refTitle">Proyectos de referencia</h2>
+      <p class="sec-lead">Desde flotas de distribución hasta transformadores de potencia offshore, con detección de fallas activas antes de la avería.</p>
+      <div class="ref-grid">
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">Pemex · Offshore Campeche</p>
+          <h3 class="ref-card__title">Plataforma AKAL-J — DGA de emergencia en transformador 115 kV</h3>
+          <p class="ref-card__desc">Análisis DGA de urgencia en transformador de generación offshore tras disparo inesperado de protección diferencial. Detección de acetileno (C₂H₂ = 82 ppm, TDCG = 1,340 ppm — Condición 3). Diagnóstico: arco interno en devanado de AT. Retiro programado antes de falla catastrófica y sustitución coordinada en ventana de mantenimiento.</p>
+        </article>
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">CFE División Centro</p>
+          <h3 class="ref-card__title">Auditoría de flota — 28 transformadores 115/13.8 kV</h3>
+          <p class="ref-card__desc">Programa anual de diagnóstico FQ y DGA para flota de distribución de CFE División Centro. Clasificación por condición RAG: 19 en condición 1 (normal), 7 en condición 2 (seguimiento semestral), 2 en condición 3 con recomendación de retiro programado. Integración de resultados al sistema SAP-PM del cliente.</p>
+        </article>
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">Ingenio Azucarero · Oaxaca</p>
+          <h3 class="ref-card__title">Diagnóstico pre y post zafra — 8 transformadores de potencia</h3>
+          <p class="ref-card__desc">Análisis de aceite antes y después de cada temporada de zafra (5 meses de carga intensa). Detección de humedad elevada (38 ppm) en TR-02 asociada a condensación nocturna por falla de sello en conservador. Corrección mecánica y deshidratación antes de la siguiente temporada evitaron una falla en plena cosecha.</p>
+        </article>
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">Planta Química · Veracruz</p>
+          <h3 class="ref-card__title">Programa periódico — 12 transformadores de proceso continuo</h3>
+          <p class="ref-card__desc">Diagnóstico semestral conforme IEC 60422 para 12 transformadores de potencia en planta de proceso continuo Clase I. Detección temprana de sobrecalentamiento de contactos en cambiador de taps (etileno en ascenso: 8→24→67 ppm en 18 meses). Intervención preventiva sin paro de producción no programado.</p>
+        </article>
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">Parque Solar · Sonora</p>
+          <h3 class="ref-card__title">DGA post-comisionamiento — transformadores de elevación</h3>
+          <p class="ref-card__desc">Primer DGA basal (muestra #1 a 24 h y #2 a 72 h post-energización) y análisis FQ completo para 4 transformadores string y 1 central de potencia en parque solar de 80 MWp. Todos los parámetros en Condición 1. Base de datos historial entregada para programa predictivo anual.</p>
+        </article>
+
+        <article class="ref-card">
+          <p class="ref-card__cliente">Pemex Refinación · Salamanca</p>
+          <h3 class="ref-card__title">Auditoría integral — 40 transformadores de proceso</h3>
+          <p class="ref-card__desc">Levantamiento, muestreo y análisis de flota completa de transformadores en refinería (distribución 13.8 kV y potencia 115 kV). Priorización de 40 equipos por condición RAG para plan de mantenimiento mayor. 3 equipos identificados con BDV crítica (&lt; 22 kV/mm) y DGA Condición 3; atendidos en siguiente paro programado.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ENTREGABLES ════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="entTitle">
+    <div class="container">
+      <span class="sec-label">Documentación técnica</span>
+      <h2 class="sec-h2" id="entTitle">Entregables del análisis</h2>
+      <p class="sec-lead">Cada campaña de diagnóstico genera un dossier completo que el equipo de mantenimiento puede integrar directamente a su CMMS.</p>
+      <div class="entregables-grid">
+        <div class="ent-card">
+          <div class="ent-card__icon">📋</div>
+          <p class="ent-card__title">Informe FQ por equipo</p>
+          <p class="ent-card__sub">PDF con todos los parámetros, valores medidos y criterios IEC 60422</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">🔺</div>
+          <p class="ent-card__title">Triángulo de Duval</p>
+          <p class="ent-card__sub">Gráfico con coordenada del equipo y zona de falla identificada</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">📈</div>
+          <p class="ent-card__title">Tendencias DGA</p>
+          <p class="ent-card__sub">Gráfica de evolución de gases (mínimo 3 campañas históricas)</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">🔴</div>
+          <p class="ent-card__title">Clasificación RAG</p>
+          <p class="ent-card__sub">Semáforo por parámetro y por equipo para priorización de mantenimiento</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">⚡</div>
+          <p class="ent-card__title">Recomendaciones priorizadas</p>
+          <p class="ent-card__sub">Inmediata / 6 meses / anual con justificación técnica y norma aplicable</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">📐</div>
+          <p class="ent-card__title">Cocientes de Rogers</p>
+          <p class="ent-card__sub">Cálculo de ratios CH₄/H₂, C₂H₄/C₂H₆ y C₂H₂/C₂H₄ con interpretación</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">📅</div>
+          <p class="ent-card__title">Programa de muestreo</p>
+          <p class="ent-card__sub">Calendario de próxima campaña por equipo según condición RAG</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon">📊</div>
+          <p class="ent-card__title">Base de datos Excel</p>
+          <p class="ent-card__sub">Evolución histórica de todos los parámetros para integración a CMMS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CROSS-LINK: Mantenimiento Predictivo ════════════════════════════ -->
+  <div class="container" style="padding-top:0;padding-bottom:0">
+    <div style="margin:0 0 8px;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+      <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">¿Análisis FQ como parte de tu estrategia predictiva?</p>
+      <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">VMS Energy integra el diagnóstico de aceite dieléctrico con termografía IR, Megger, VLF y vibración en un programa unificado de mantenimiento predictivo.</p>
+      <a href="lp-mantenimiento-predictivo.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">Ver servicio de mantenimiento predictivo →</a>
+    </div>
+  </div>
+
+  <!-- ══ FAQ ════════════════════════════════════════════════════════════ -->
+  <section class="section section--alt" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Preguntas frecuentes</span>
+      <h2 class="sec-h2" id="faqTitle">Lo que los equipos de mantenimiento nos preguntan</h2>
+      <dl class="faq-list">
+
+        <div class="faq">
+          <dt>¿Con qué frecuencia se debe analizar el aceite de un transformador?</dt>
+          <dd>Según IEC 60422: transformadores nuevos en los primeros 2 años — una vez al año. Equipos en servicio continuo sin anomalías — cada 12 a 24 meses. Con historial de problemas, carga elevada o ambiente agresivo — cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave — frecuencia mensual hasta estabilizar. VMS Energy recomienda establecer el primer análisis dentro de los 90 días de operación como valor basal de referencia.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Qué indica la presencia de acetileno (C₂H₂) en el DGA?</dt>
+          <dd>El acetileno se genera exclusivamente a temperaturas superiores a 700 °C, asociadas directamente a arcos eléctricos internos. Cualquier detección de acetileno — incluso 1 a 2 ppm — es señal de alerta que requiere análisis inmediato de tendencia. Concentraciones superiores a 35 ppm (Condición 3, IEEE C57.104) indican posible falla activa y la necesidad de retirar el equipo para inspección interna antes de energizar de nuevo.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Cuándo se reemplaza el aceite versus cuándo se filtra o regenera?</dt>
+          <dd>El filtrado (deshidratación y desgasificación) recupera rigidez dieléctrica y reduce humedad, pero no elimina los productos de oxidación del aceite envejecido. Si la acidez supera 0.5 mgKOH/g, el color ASTM excede 4.0 o el tan δ a 90 °C supera 1%, el aceite debe regenerarse o reemplazarse. El reemplazo total es la única opción cuando el papel aislante está degradado (DP &lt; 200), ya que regenerar el aceite en ese escenario no resuelve el problema de fondo.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Se puede tomar la muestra de aceite con el transformador energizado?</dt>
+          <dd>Sí. El muestreo en caliente — con el equipo energizado y bajo carga — es el protocolo preferido porque representa las condiciones reales de operación y garantiza que los gases disueltos no se hayan dispersado. Se realiza a través de la válvula de muestreo inferior con jeringa de vidrio hermética sin burbujas, conforme a IEC 60475. El técnico de VMS Energy utiliza equipo de protección personal para el nivel de tensión y ejecuta el muestreo sin interrumpir el proceso del cliente.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Qué es el Triángulo de Duval y cómo se interpreta?</dt>
+          <dd>El Triángulo de Duval (IEC 60599) utiliza los porcentajes relativos de metano (CH₄), etileno (C₂H₄) y acetileno (C₂H₂) para clasificar el tipo de falla: PD (descargas parciales), T1/T2/T3 (sobrecalentamiento leve/moderado/severo a &lt;300°C / 300–700°C / &gt;700°C) y D1/D2 (arco de baja o alta energía). La coordenada del equipo en el triángulo define la zona de falla predominante. VMS Energy incluye el triángulo graficado en todos sus informes, con la evolución histórica de la coordenada cuando existen mediciones previas.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Qué nivel de rigidez dieléctrica (BDV) es inaceptable para continuar operando?</dt>
+          <dd>Según IEC 60422: transformadores de MT (hasta 36 kV) — mínimo aceptable 30 kV/mm; valor objetivo ≥ 40 kV/mm. Transformadores de AT (72.5 kV y superior) — mínimo aceptable 50 kV/mm. Para aceite nuevo antes del llenado, VMS Energy exige ≥ 60 kV/mm. Un resultado por debajo de 20 kV/mm en cualquier nivel de tensión es una emergencia: el aceite debe filtrarse o reemplazarse antes de continuar operando.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿Los transformadores secos (clase F o H) requieren análisis físico-químico de aceite?</dt>
+          <dd>No. Los transformadores secos (cast resin o VPI) no contienen aceite dieléctrico y por tanto no aplica el análisis FQ ni el DGA. Para transformadores secos, el diagnóstico predictivo se realiza mediante termografía infrarroja, Megger e índice de polarización, factor de potencia dieléctrico de la resina, y análisis de descargas parciales (PD). VMS Energy aplica el protocolo correcto según el tipo de aislamiento del equipo.</dd>
+        </div>
+
+        <div class="faq">
+          <dt>¿VMS Energy realiza también el tratamiento o rehabilitación del aceite?</dt>
+          <dd>El análisis FQ y DGA es el servicio de diagnóstico que VMS Energy ejecuta directamente. Si el informe concluye que el aceite requiere tratamiento, coordinamos con laboratorios especializados en regeneración y filtrado mediante plantas móviles de deshidratación-desgasificación en vacío. También gestionamos el suministro de aceite nuevo cuando el diagnóstico indica reemplazo total, asegurando que el aceite cumpla las especificaciones IEC 60296 clase II antes del llenado.</dd>
+        </div>
+
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══ CROSS-LINK: Subestaciones y Transformadores ═════════════════════ -->
+  <div class="container" style="padding-top:0;padding-bottom:0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px">
+      <div style="padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+        <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">¿Mantenimiento de subestación completo?</p>
+        <p style="margin:0 0 10px;font-size:.92rem;color:#172c51">Combinamos el análisis FQ/DGA con pruebas eléctricas (TTR, Megger, VLF) en un alcance EPC de mantenimiento mayor.</p>
+        <a href="lp-subestaciones-electricas.html" style="font-size:.88rem;font-weight:600;color:#0f4c81;text-decoration:none">Ver servicio de subestaciones →</a>
+      </div>
+      <div style="padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+        <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">¿Diagnóstico de transformador nuevo?</p>
+        <p style="margin:0 0 10px;font-size:.92rem;color:#172c51">El análisis FQ/DGA basal es parte del protocolo de comisionamiento de transformadores industriales que ejecuta VMS Energy.</p>
+        <a href="soluciones-transformadores-industriales.html" style="font-size:.88rem;font-weight:600;color:#0f4c81;text-decoration:none">Ver transformadores industriales →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CTA BAND ═══════════════════════════════════════════════════════ -->
+  <section class="cta-band" aria-labelledby="ctaTitle">
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="ctaTitle">¿Cuándo fue el último análisis de aceite de sus transformadores?</h2>
+        <p class="cta-band__sub">Si no tiene un historial de DGA como valor basal, el primer análisis es urgente — independientemente de si el equipo opera con normalidad. Las fallas por arco interno dan señal en el DGA hasta 12 meses antes de manifestarse como avería.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contacto.html#inicio" class="btn btn--white">&#128203; Solicitar diagnóstico</a>
+        <a href="blog-mantenimiento-transformadores-operacion.html" class="btn btn--outline-white">Leer guía técnica →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer aria-label="Pie de página">
+  <div class="container footer__grid">
+    <div>
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" width="60" height="60" loading="lazy" decoding="async">
+      <p style="font-size:.85rem;color:#94a3b8;margin-top:12px;max-width:260px">Ingeniería eléctrica especializada para la industria. Más de 20 años de experiencia en México.</p>
+    </div>
+    <nav aria-label="Servicios Especializados">
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:10px">Servicios Especializados</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px">
+        <li><a href="lp-mantenimiento-predictivo.html" style="font-size:.88rem;color:#cbd5e1">Mantenimiento Predictivo</a></li>
+        <li><a href="lp-subestaciones-electricas.html" style="font-size:.88rem;color:#cbd5e1">Subestaciones MT/AT</a></li>
+        <li><a href="lp-calidad-de-energia-industrial.html" style="font-size:.88rem;color:#cbd5e1">Calidad de Energía</a></li>
+        <li><a href="lp-tendido-cableado-electrico-industrial.html" style="font-size:.88rem;color:#cbd5e1">Tendido y Cableado</a></li>
+        <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="font-size:.88rem;color:#e2e8f0;font-weight:700">Análisis Aceite Dieléctrico</a></li>
+        <li><a href="lp-estudios-electricos-industriales.html" style="font-size:.88rem;color:#cbd5e1">Estudios Eléctricos</a></li>
+        <li><a href="lp-turbogeneradores-woodward.html" style="font-size:.88rem;color:#cbd5e1">Turbogeneradores</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Blog relacionado">
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:10px">Guías técnicas relacionadas</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px">
+        <li><a href="blog-mantenimiento-transformadores-operacion.html" style="font-size:.88rem;color:#cbd5e1">Diagnóstico predictivo de transformadores</a></li>
+        <li><a href="blog-pruebas-aceptacion-transformadores.html" style="font-size:.88rem;color:#cbd5e1">Pruebas FAT/SAT en transformadores</a></li>
+        <li><a href="blog-instalacion-comisionamiento-transformadores-epc.html" style="font-size:.88rem;color:#cbd5e1">Comisionamiento transformadores EPC</a></li>
+        <li><a href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" style="font-size:.88rem;color:#cbd5e1">Mantenimiento de subestaciones</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:10px">Contacto</p>
+      <address style="font-style:normal;font-size:.88rem;color:#cbd5e1;line-height:1.7">
+        <a href="mailto:contacto@vmsenergy.com" style="color:#cbd5e1">contacto@vmsenergy.com</a><br>
+        <a href="contacto.html#inicio" style="color:#7dd3fc;font-weight:600;text-decoration:none">→ Solicitar diagnóstico FQ/DGA</a>
+      </address>
+    </div>
+  </div>
+  <div class="container" style="border-top:1px solid rgba(148,163,184,.2);margin-top:32px;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+    <p style="font-size:.8rem;color:#64748b;margin:0">&copy; 2026 VMS Energy. Todos los derechos reservados.</p>
+    <p style="font-size:.8rem;color:#64748b;margin:0">NMX-J-169-ANCE &middot; IEC 60422 &middot; IEEE C57.104 &middot; IEC 60599</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const list   = document.getElementById('menuList');
+  if(toggle && list){
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+</script>
+</body>
+</html>

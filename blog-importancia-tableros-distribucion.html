@@ -1,33 +1,32 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tableros de Distribuci&oacute;n El&eacute;ctrica Industrial | VMS Energy</title>
-  <meta name="description" content="Conoce por que los tableros de distribucion electrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
+  <meta name="description" content="Conoce por qu&eacute; los tableros de distribuci&oacute;n el&eacute;ctrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/blog-importancia-tableros-distribucion.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
   <meta property="og:title" content="Tableros de Distribuci&oacute;n El&eacute;ctrica Industrial | VMS Energy" />
-  <meta property="og:description" content="Conoce por que los tableros de distribucion electrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
+  <meta property="og:description" content="Conoce por qu&eacute; los tableros de distribuci&oacute;n el&eacute;ctrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
   <meta property="og:url" content="https://vmsenergy.com/blog-importancia-tableros-distribucion.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/portada.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tableros de Distribuci&oacute;n El&eacute;ctrica Industrial | VMS Energy" />
-  <meta name="twitter:description" content="Conoce por que los tableros de distribucion electrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
+  <meta name="twitter:description" content="Conoce por qu&eacute; los tableros de distribuci&oacute;n el&eacute;ctrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/portada.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--line:rgba(23,44,81,.14)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-    .container{max-width:1200px;margin-inline:auto;padding:0 20px}
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp');
+    }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
@@ -40,25 +39,11 @@
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-    .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    .privacy-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden}
-    .privacy-hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(100deg,rgba(8,24,48,.9) 0%,rgba(10,32,62,.78) 54%,rgba(15,76,129,.62) 100%),
-        url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp') center/cover no-repeat;
-      z-index:-1;
-    }
-    .privacy-hero .container{padding:88px 20px 80px}
-    .privacy-hero__eyebrow{display:inline-block;padding:.28rem .64rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 14px}
-    .privacy-hero h1{margin:0 0 10px;font-size:clamp(30px,4.6vw,52px);line-height:1.05}
-    .privacy-hero p{margin:0;max-width:900px;font-size:clamp(16px,2vw,20px);color:#e2ecf9}
     .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
     .btn--primary{background:var(--cobalt);color:#fff}
@@ -74,35 +59,11 @@
     .ethics-media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(8,28,54,.1)}
     .ethics-media img{display:block;width:100%;height:auto;max-height:min(68vh,840px);object-fit:contain;background:#f1f5f9}
     .ethics-tab{background:#fff;border:1px solid rgba(15,76,129,.24);border-radius:16px;padding:22px 20px;box-shadow:0 14px 28px rgba(8,28,54,.12);max-width:390px}
-    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:#0f4c81}
+    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:var(--concept-primary)}
     .ethics-tab p{margin:0 0 16px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#203754}
     .privacy-doc__btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:12px;border:1px solid rgba(23,44,81,.16);font-weight:700;background:#fff;color:#12365f}
-    .privacy-doc__btn--primary{background:#0f4c81;border-color:#0f4c81;color:#fff}
+    .privacy-doc__btn--primary{background:var(--concept-primary);border-color:var(--concept-primary);color:#fff}
     .privacy-doc__btn--outline{background:#fff;border:2px solid #0ea5e9;color:#0284c7;padding:12px 24px;border-radius:12px;letter-spacing:.02em}
-    .foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -119,7 +80,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -144,29 +105,23 @@
       }
     }\n.foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
-    @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
     @media (max-width:900px){.ethics-showcase{grid-template-columns:1fr}.ethics-tab{max-width:100%}.ethics-tab h3{font-size:clamp(30px,6vw,40px)}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}}
-      .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),var(--article-image, url('assets/img/Especialidades_servicios.png')) center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:820px;padding:86px 0 72px}
-    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
-    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
     .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
     .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
     .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
     .blog-article h2{margin:0 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f}
-    .blog-article h3{margin:28px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.2;color:#0f4c81}
+    .blog-article h3{margin:28px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.2;color:var(--concept-primary)}
     .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
     .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
     .blog-article li{margin:0 0 10px}
     .blog-article strong{color:#16395d}
     .article-lead{font-size:1.14rem;color:#213b59}
     .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
-    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid #0f4c81;border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
     .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
     .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
     .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
@@ -184,7 +139,7 @@
     .article-faq details + details{margin-top:12px}
     .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
     .article-faq p{margin:12px 0 0}
-    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,#0f4c81 56%,#3a6fa5);color:#fff}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
     .article-cta h3{margin:0 0 10px;color:#fff}
     .article-cta p{margin:0 0 16px;color:#e2ecf9}
     .article-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -194,12 +149,12 @@
     .sidebar-card p{margin:0 0 12px;color:#4a5f79}
     .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
     .sidebar-card li + li{margin-top:8px}
-    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#0f4c81;text-decoration:none}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
     .sidebar-link:hover{text-decoration:underline}
     @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"Article","headline":"Tableros de Distribucion Electrica: importancia, seguridad y seleccion industrial","description":"Conoce por que los tableros de distribucion electrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales.","image":"https://vmsenergy.com/assets/img/portada.webp","author":{"@type":"Organization","name":"VMS Energy"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"mainEntityOfPage":"https://vmsenergy.com/blog-importancia-tableros-distribucion.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Que hace un tablero de distribucion electrica?","acceptedAnswer":{"@type":"Answer","text":"Recibe, protege y distribuye la energia electrica hacia diferentes circuitos, equipos y sistemas dentro de una instalacion."}},{"@type":"Question","name":"&iquest;Por que son importantes en una planta industrial?","acceptedAnswer":{"@type":"Answer","text":"Porque mejoran la seguridad, facilitan el mantenimiento, ayudan a aislar fallas y aportan continuidad operativa en procesos criticos."}},{"@type":"Question","name":"&iquest;Que se debe considerar al seleccionar uno?","acceptedAnswer":{"@type":"Answer","text":"Nivel de tension, corriente nominal, capacidad de cortocircuito, tipo de carga, ambiente de operacion, normas aplicables y expansion futura."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"Article","headline":"Tableros de Distribuci&oacute;n El&eacute;ctrica: importancia, seguridad y selecci&oacute;n industrial","description":"Conoce por qu&eacute; los tableros de distribuci&oacute;n el&eacute;ctrica son clave para la seguridad, continuidad operativa y eficiencia de los sistemas industriales.","image":"https://vmsenergy.com/assets/img/portada.webp","author":{"@type":"Organization","name":"VMS Energy"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"mainEntityOfPage":"https://vmsenergy.com/blog-importancia-tableros-distribucion.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Qu&eacute; hace un tablero de distribuci&oacute;n el&eacute;ctrica?","acceptedAnswer":{"@type":"Answer","text":"Recibe, protege y distribuye la energ&iacute;a el&eacute;ctrica hacia diferentes circuitos, equipos y sistemas dentro de una instalaci&oacute;n."}},{"@type":"Question","name":"&iquest;Por qu&eacute; son importantes en una planta industrial?","acceptedAnswer":{"@type":"Answer","text":"Porque mejoran la seguridad, facilitan el mantenimiento, ayudan a aislar fallas y aportan continuidad operativa en procesos cr&iacute;ticos."}},{"@type":"Question","name":"&iquest;Qu&eacute; se debe considerar al seleccionar uno?","acceptedAnswer":{"@type":"Answer","text":"Nivel de tensi&oacute;n, corriente nominal, capacidad de cortocircuito, tipo de carga, ambiente de operaci&oacute;n, normas aplicables y expansi&oacute;n futura."}}]}]}</script>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-importancia-tableros-distribucion.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-importancia-tableros-distribucion.html" />
 </head>
@@ -222,16 +177,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -241,13 +201,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -256,15 +233,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -304,11 +294,11 @@
     <section id="inicio" class="hero" aria-labelledby="articleTitle" style="--article-image:url('assets/img/portada.webp')">
       <div class="container hero__content">
         <span class="eyebrow">VMS Energy &middot; Blog</span>
-        <h1 id="articleTitle">Tableros de Distribucion Electrica: importancia, seguridad y eficiencia en sistemas industriales</h1>
-        <p>Una guia clara para entender su funcion, beneficios, criterios de seleccion y el impacto que tienen en la continuidad operativa de una planta.</p>
+        <h1 id="articleTitle">Tableros de Distribuci&oacute;n El&eacute;ctrica: importancia, seguridad y eficiencia en sistemas industriales</h1>
+        <p>Una gu&iacute;a clara para entender su funci&oacute;n, beneficios, criterios de selecci&oacute;n y el impacto que tienen en la continuidad operativa de una planta.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#articulo">Leer articulo</a>
-          <a class="btn btn--secondary" href="contacto.html#inicio">Solicitar asesoria</a>
+          <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
+          <a class="btn btn--secondary" href="contacto.html#inicio">Solicitar asesor&iacute;a</a>
         </div>
       </div>
     </section>
@@ -317,71 +307,71 @@
       <div class="container">
         <div class="blog-layout">
           <article class="blog-article">
-            <h2 id="resumenTitle">La base operativa de un sistema electrico confiable</h2>
-            <p class="article-lead">En cualquier instalacion industrial, comercial o de infraestructura, la energia electrica debe distribuirse de forma segura, confiable y continua. En ese proceso, los tableros de distribucion desempenan un papel central, ya que reciben la energia, la protegen y la reparten hacia los distintos equipos, cargas y sistemas de la instalacion.</p>
-            <p>Su correcta seleccion, integracion y mantenimiento no solo ayuda a garantizar la operacion del sistema electrico, sino que tambien reduce riesgos, mejora la continuidad operativa y facilita el crecimiento futuro de la planta.</p>
+            <h2 id="resumenTitle">La base operativa de un sistema el&eacute;ctrico confiable</h2>
+            <p class="article-lead">En cualquier instalaci&oacute;n industrial, comercial o de infraestructura, la energ&iacute;a el&eacute;ctrica debe distribuirse de forma segura, confiable y continua. En ese proceso, los tableros de distribuci&oacute;n desempe&ntilde;an un papel central, ya que reciben la energ&iacute;a, la protegen y la reparten hacia los distintos equipos, cargas y sistemas de la instalaci&oacute;n.</p>
+            <p>Su correcta selecci&oacute;n, integraci&oacute;n y mantenimiento no solo ayuda a garantizar la operaci&oacute;n del sistema el&eacute;ctrico, sino que tambi&eacute;n reduce riesgos, mejora la continuidad operativa y facilita el crecimiento futuro de la planta.</p>
 
             <div class="article-callout">
-              Un tablero de distribucion no solo reparte energia. Tambien protege activos, reduce el impacto de fallas y aporta orden operativo a toda la instalacion.
+              Un tablero de distribuci&oacute;n no solo reparte energ&iacute;a. Tambi&eacute;n protege activos, reduce el impacto de fallas y aporta orden operativo a toda la instalaci&oacute;n.
             </div>
 
-            <h3>&iquest;Que es un tablero de distribucion electrica?</h3>
-            <p>Un tablero de distribucion electrica es un conjunto que concentra dispositivos de proteccion, maniobra, medicion y control para administrar la energia dentro de una instalacion. Su funcion principal es recibir la energia electrica desde una fuente de alimentacion y distribuirla de manera ordenada hacia diferentes circuitos o cargas.</p>
-            <p>Dependiendo de la aplicacion, estos tableros pueden formar parte de sistemas de baja o media tension y estar disenados para operar en entornos industriales con requerimientos especificos de seguridad, confiabilidad y desempeno.</p>
+            <h3>&iquest;Qu&eacute; es un tablero de distribuci&oacute;n el&eacute;ctrica?</h3>
+            <p>Un tablero de distribuci&oacute;n el&eacute;ctrica es un conjunto que concentra dispositivos de protecci&oacute;n, maniobra, medici&oacute;n y control para administrar la energ&iacute;a dentro de una instalaci&oacute;n. Su funci&oacute;n principal es recibir la energ&iacute;a el&eacute;ctrica desde una fuente de alimentaci&oacute;n y distribuirla de manera ordenada hacia diferentes circuitos o cargas.</p>
+            <p>Dependiendo de la aplicaci&oacute;n, estos tableros pueden formar parte de sistemas de baja o media tensi&oacute;n y estar dise&ntilde;ados para operar en entornos industriales con requerimientos espec&iacute;ficos de seguridad, confiabilidad y desempe&ntilde;o.</p>
 
             <figure class="article-media">
-              <img src="assets/img/Imagen1.webp" alt="Tablero de distribucion electrica industrial con protecciones y equipos de maniobra" loading="lazy" decoding="async">
-              <figcaption>Los tableros concentran proteccion, maniobra y distribucion en un solo punto operativo del sistema.</figcaption>
+              <img src="assets/img/Imagen1.webp" alt="Tablero de distribuci&oacute;n el&eacute;ctrica industrial con protecciones y equipos de maniobra" loading="lazy" decoding="async">
+              <figcaption>Los tableros concentran protecci&oacute;n, maniobra y distribuci&oacute;n en un solo punto operativo del sistema.</figcaption>
             </figure>
 
-            <h3>&iquest;Por que son tan importantes en los sistemas electricos?</h3>
-            <p>La importancia de los tableros de distribucion radica en que son un punto critico dentro de la infraestructura electrica. De su diseno y funcionamiento depende que la energia llegue correctamente a motores, iluminacion, centros de control, sistemas auxiliares y procesos productivos.</p>
+            <h3>&iquest;Por qu&eacute; son tan importantes en los sistemas el&eacute;ctricos?</h3>
+            <p>La importancia de los tableros de distribuci&oacute;n radica en que son un punto cr&iacute;tico dentro de la infraestructura el&eacute;ctrica. De su dise&ntilde;o y funcionamiento depende que la energ&iacute;a llegue correctamente a motores, iluminaci&oacute;n, centros de control, sistemas auxiliares y procesos productivos.</p>
 
             <div class="article-grid" aria-label="Beneficios principales">
               <section class="article-mini-card">
-                <h3>Seguridad electrica</h3>
+                <h3>Seguridad el&eacute;ctrica</h3>
                 <p>Integran protecciones para aislar sobrecargas, cortocircuitos y fallas, reduciendo riesgos para personas y equipos.</p>
               </section>
               <section class="article-mini-card">
                 <h3>Continuidad operativa</h3>
-                <p>Una correcta coordinacion de protecciones evita que una sola falla afecte toda la operacion.</p>
+                <p>Una correcta coordinaci&oacute;n de protecciones evita que una sola falla afecte toda la operaci&oacute;n.</p>
               </section>
               <section class="article-mini-card">
                 <h3>Mantenimiento ordenado</h3>
-                <p>Facilitan inspecciones, maniobras y ampliaciones con mayor control tecnico y menor tiempo de paro.</p>
+                <p>Facilitan inspecciones, maniobras y ampliaciones con mayor control t&eacute;cnico y menor tiempo de paro.</p>
               </section>
               <section class="article-mini-card">
                 <h3>Escalabilidad</h3>
-                <p>Un diseno bien planteado permite crecimiento futuro sin reemplazos prematuros ni improvisaciones.</p>
+                <p>Un dise&ntilde;o bien planteado permite crecimiento futuro sin reemplazos prematuros ni improvisaciones.</p>
               </section>
             </div>
 
-            <h3>Funciones principales de un tablero de distribucion</h3>
+            <h3>Funciones principales de un tablero de distribuci&oacute;n</h3>
             <ul>
-              <li><strong>Recepcion de energia:</strong> reciben la energia proveniente de transformadores, subestaciones u otras fuentes de alimentacion.</li>
-              <li><strong>Proteccion del sistema:</strong> incorporan interruptores y dispositivos que ayudan a aislar fallas y proteger circuitos.</li>
-              <li><strong>Distribucion de cargas:</strong> reparten la energia hacia diferentes alimentadores, equipos o zonas de operacion.</li>
-              <li><strong>Maniobra y control:</strong> permiten operaciones de conexion, desconexion y supervision manual o automatizada.</li>
-              <li><strong>Medicion y monitoreo:</strong> pueden integrar instrumentos para corriente, voltaje, demanda, factor de potencia y calidad de energia.</li>
+              <li><strong>Recepci&oacute;n de energ&iacute;a:</strong> reciben la energ&iacute;a proveniente de transformadores, subestaciones u otras fuentes de alimentaci&oacute;n.</li>
+              <li><strong>Protecci&oacute;n del sistema:</strong> incorporan interruptores y dispositivos que ayudan a aislar fallas y proteger circuitos.</li>
+              <li><strong>Distribuci&oacute;n de cargas:</strong> reparten la energ&iacute;a hacia diferentes alimentadores, equipos o zonas de operaci&oacute;n.</li>
+              <li><strong>Maniobra y control:</strong> permiten operaciones de conexi&oacute;n, desconexi&oacute;n y supervisi&oacute;n manual o automatizada.</li>
+              <li><strong>Medici&oacute;n y monitoreo:</strong> pueden integrar instrumentos para corriente, voltaje, demanda, factor de potencia y calidad de energ&iacute;a.</li>
             </ul>
 
             <figure class="article-media">
-              <img src="assets/img/imagen2.webp" alt="Detalle de componentes internos de un tablero de distribucion electrica" loading="lazy" decoding="async">
-              <figcaption>La correcta integracion de componentes ayuda a mejorar seguridad, orden y continuidad operativa.</figcaption>
+              <img src="assets/img/imagen2.webp" alt="Detalle de componentes internos de un tablero de distribuci&oacute;n el&eacute;ctrica" loading="lazy" decoding="async">
+              <figcaption>La correcta integraci&oacute;n de componentes ayuda a mejorar seguridad, orden y continuidad operativa.</figcaption>
             </figure>
 
             <div class="article-divider" aria-hidden="true"></div>
 
-            <h3>Beneficios para la operacion industrial</h3>
-            <p>En una planta industrial, contar con tableros de distribucion bien disenados genera ventajas tecnicas y economicas importantes. Cuando el sistema esta bien segmentado, una falla en un circuito derivado no necesariamente compromete toda la linea de produccion. Esto ayuda a reducir tiempos muertos, mejorar la disponibilidad de los activos y facilitar el mantenimiento preventivo.</p>
-            <p>Tambien mejora la seguridad del personal al ofrecer una operacion mas controlada y una mejor integracion de protecciones. En entornos con procesos criticos, esto puede marcar la diferencia entre una detencion localizada y una interrupcion de alto impacto.</p>
+            <h3>Beneficios para la operaci&oacute;n industrial</h3>
+            <p>En una planta industrial, contar con tableros de distribuci&oacute;n bien dise&ntilde;ados genera ventajas t&eacute;cnicas y econ&oacute;micas importantes. Cuando el sistema est&aacute; bien segmentado, una falla en un circuito derivado no necesariamente compromete toda la l&iacute;nea de producci&oacute;n. Esto ayuda a reducir tiempos muertos, mejorar la disponibilidad de los activos y facilitar el mantenimiento preventivo.</p>
+            <p>Tambi&eacute;n mejora la seguridad del personal al ofrecer una operaci&oacute;n m&aacute;s controlada y una mejor integraci&oacute;n de protecciones. En entornos con procesos cr&iacute;ticos, esto puede marcar la diferencia entre una detenci&oacute;n localizada y una interrupci&oacute;n de alto impacto.</p>
 
-            <h3>&iquest;Que debe considerarse al seleccionar un tablero de distribucion?</h3>
-            <p>La eleccion de un tablero no debe basarse solo en la capacidad electrica. Tambien es importante evaluar las condiciones reales de operacion, el tipo de carga conectada y los objetivos de crecimiento de la instalacion.</p>
+            <h3>&iquest;Qu&eacute; debe considerarse al seleccionar un tablero de distribuci&oacute;n?</h3>
+            <p>La elecci&oacute;n de un tablero no debe basarse solo en la capacidad el&eacute;ctrica. Tambi&eacute;n es importante evaluar las condiciones reales de operaci&oacute;n, el tipo de carga conectada y los objetivos de crecimiento de la instalaci&oacute;n.</p>
 
             <figure class="article-media">
-              <img src="assets/img/imagen3.webp" alt="Tablero electrico para aplicacion industrial con configuracion modular" loading="lazy" decoding="async">
-              <figcaption>Seleccionar un tablero implica revisar capacidad, ambiente, tipo de carga y posibilidades de expansion.</figcaption>
+              <img src="assets/img/imagen3.webp" alt="Tablero el&eacute;ctrico para aplicaci&oacute;n industrial con configuraci&oacute;n modular" loading="lazy" decoding="async">
+              <figcaption>Seleccionar un tablero implica revisar capacidad, ambiente, tipo de carga y posibilidades de expansi&oacute;n.</figcaption>
             </figure>
 
             <div class="article-table-wrap">
@@ -389,15 +379,15 @@
                 <thead>
                   <tr>
                     <th>Criterio</th>
-                    <th>Que revisar</th>
-                    <th>Impacto en la operacion</th>
+                    <th>Qu&eacute; revisar</th>
+                    <th>Impacto en la operaci&oacute;n</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Nivel de tension</td>
-                    <td>Baja o media tension segun la arquitectura del sistema.</td>
-                    <td>Define aislamiento, protecciones y configuracion general.</td>
+                    <td>Nivel de tensi&oacute;n</td>
+                    <td>Baja o media tensi&oacute;n seg&uacute;n la arquitectura del sistema.</td>
+                    <td>Define aislamiento, protecciones y configuraci&oacute;n general.</td>
                   </tr>
                   <tr>
                     <td>Corriente nominal</td>
@@ -406,21 +396,21 @@
                   </tr>
                   <tr>
                     <td>Capacidad de cortocircuito</td>
-                    <td>Niveles de falla esperados en el punto de instalacion.</td>
-                    <td>Mejora la seguridad y el desempeno ante eventos electricos.</td>
+                    <td>Niveles de falla esperados en el punto de instalaci&oacute;n.</td>
+                    <td>Mejora la seguridad y el desempe&ntilde;o ante eventos el&eacute;ctricos.</td>
                   </tr>
                   <tr>
                     <td>Tipo de carga</td>
-                    <td>Motores, iluminacion, procesos criticos, control o servicios auxiliares.</td>
-                    <td>Determina la seleccion de protecciones, maniobra y monitoreo.</td>
+                    <td>Motores, iluminaci&oacute;n, procesos cr&iacute;ticos, control o servicios auxiliares.</td>
+                    <td>Determina la selecci&oacute;n de protecciones, maniobra y monitoreo.</td>
                   </tr>
                   <tr>
-                    <td>Ambiente de operacion</td>
-                    <td>Polvo, humedad, temperatura, corrosivos o area clasificada.</td>
-                    <td>Influye en gabinete, materiales y grado de proteccion.</td>
+                    <td>Ambiente de operaci&oacute;n</td>
+                    <td>Polvo, humedad, temperatura, corrosivos o &aacute;rea clasificada.</td>
+                    <td>Influye en gabinete, materiales y grado de protecci&oacute;n.</td>
                   </tr>
                   <tr>
-                    <td>Expansion futura</td>
+                    <td>Expansi&oacute;n futura</td>
                     <td>Espacios de reserva, modularidad y accesibilidad.</td>
                     <td>Facilita crecimiento sin rehacer la infraestructura.</td>
                   </tr>
@@ -429,54 +419,54 @@
             </div>
 
             <h3>Riesgos de un tablero mal seleccionado o mal mantenido</h3>
-            <p>Un tablero inadecuado puede convertirse en una fuente de problemas operativos y de seguridad. Algunos sintomas frecuentes son disparos intempestivos, sobrecalentamiento, fallas repetitivas en protecciones, perdida de continuidad operativa y dificultades para mantenimiento o expansion.</p>
-            <p>Por ello, ademas de una correcta ingenieria y fabricacion, es indispensable contar con programas de inspeccion, pruebas y mantenimiento que aseguren el buen estado de los componentes a lo largo del tiempo.</p>
+            <p>Un tablero inadecuado puede convertirse en una fuente de problemas operativos y de seguridad. Algunos s&iacute;ntomas frecuentes son disparos intempestivos, sobrecalentamiento, fallas repetitivas en protecciones, p&eacute;rdida de continuidad operativa y dificultades para mantenimiento o expansi&oacute;n.</p>
+            <p>Por ello, adem&aacute;s de una correcta ingenier&iacute;a y fabricaci&oacute;n, es indispensable contar con programas de inspecci&oacute;n, pruebas y mantenimiento que aseguren el buen estado de los componentes a lo largo del tiempo.</p>
 
             <figure class="article-media">
-              <img src="assets/img/imagen7.webp" alt="Falla o condicion critica en tablero de distribucion electrica industrial" loading="lazy" decoding="async">
+              <img src="assets/img/imagen7.webp" alt="Falla o condici&oacute;n cr&iacute;tica en tablero de distribuci&oacute;n el&eacute;ctrica industrial" loading="lazy" decoding="async">
               <figcaption>Un tablero mal seleccionado o con mantenimiento deficiente puede derivar en fallas, calentamiento y paros no programados.</figcaption>
             </figure>
 
-            <h3>El valor de la ingenieria especializada</h3>
-            <p>En aplicaciones industriales, energeticas y de procesos criticos, los tableros de distribucion deben responder a condiciones particulares de operacion, espacio, seguridad y normatividad. Un enfoque de ingenieria especializado considera desde el levantamiento tecnico hasta la integracion, pruebas, puesta en marcha y mantenimiento.</p>
-            <p>Esto permite que la solucion final este alineada con las necesidades reales del proyecto y no solo con una especificacion generica.</p>
+            <h3>El valor de la ingenier&iacute;a especializada</h3>
+            <p>En aplicaciones industriales, energ&eacute;ticas y de procesos cr&iacute;ticos, los tableros de distribuci&oacute;n deben responder a condiciones particulares de operaci&oacute;n, espacio, seguridad y normatividad. Un enfoque de ingenier&iacute;a especializado considera desde el levantamiento t&eacute;cnico hasta la integraci&oacute;n, pruebas, puesta en marcha y mantenimiento.</p>
+            <p>Esto permite que la soluci&oacute;n final est&eacute; alineada con las necesidades reales del proyecto y no solo con una especificaci&oacute;n gen&eacute;rica.</p>
 
             <figure class="article-media">
-              <img src="assets/img/imagen4.webp" alt="Ingenieria e integracion de tablero de distribucion para sistema electrico industrial" loading="lazy" decoding="async">
-              <figcaption>La ingenieria especializada permite integrar tableros mas confiables, mantenibles y listos para crecer con la operacion.</figcaption>
+              <img src="assets/img/imagen4.webp" alt="Ingenier&iacute;a e integraci&oacute;n de tablero de distribuci&oacute;n para sistema el&eacute;ctrico industrial" loading="lazy" decoding="async">
+              <figcaption>La ingenier&iacute;a especializada permite integrar tableros m&aacute;s confiables, mantenibles y listos para crecer con la operaci&oacute;n.</figcaption>
             </figure>
 
             <section class="article-faq" aria-labelledby="faqTitle">
               <h3 id="faqTitle">Preguntas frecuentes</h3>
               <details>
-                <summary>&iquest;Que hace exactamente un tablero de distribucion electrica?</summary>
-                <p>Recibe, protege y distribuye la energia electrica hacia diferentes circuitos, equipos y sistemas dentro de una instalacion, permitiendo una operacion ordenada y segura.</p>
+                <summary>&iquest;Qu&eacute; hace exactamente un tablero de distribuci&oacute;n el&eacute;ctrica?</summary>
+                <p>Recibe, protege y distribuye la energ&iacute;a el&eacute;ctrica hacia diferentes circuitos, equipos y sistemas dentro de una instalaci&oacute;n, permitiendo una operaci&oacute;n ordenada y segura.</p>
               </details>
               <details>
-                <summary>&iquest;Por que son importantes en una planta industrial?</summary>
-                <p>Porque ayudan a mantener la continuidad operativa, mejoran la seguridad, facilitan el mantenimiento y reducen el impacto de fallas electricas en procesos criticos.</p>
+                <summary>&iquest;Por qu&eacute; son importantes en una planta industrial?</summary>
+                <p>Porque ayudan a mantener la continuidad operativa, mejoran la seguridad, facilitan el mantenimiento y reducen el impacto de fallas el&eacute;ctricas en procesos cr&iacute;ticos.</p>
               </details>
               <details>
-                <summary>&iquest;Que se debe revisar antes de seleccionar uno?</summary>
-                <p>El nivel de tension, la corriente nominal, la capacidad de cortocircuito, el tipo de carga, el ambiente de operacion, la normatividad aplicable y la posibilidad de crecimiento futuro.</p>
+                <summary>&iquest;Qu&eacute; se debe revisar antes de seleccionar uno?</summary>
+                <p>El nivel de tensi&oacute;n, la corriente nominal, la capacidad de cortocircuito, el tipo de carga, el ambiente de operaci&oacute;n, la normatividad aplicable y la posibilidad de crecimiento futuro.</p>
               </details>
             </section>
 
             <section class="article-cta" aria-labelledby="ctaTitle">
-              <h3 id="ctaTitle">&iquest;Necesitas evaluar, modernizar o disenar un tablero de distribucion?</h3>
-              <p>En VMS Energy desarrollamos soluciones alineadas con los requerimientos tecnicos, operativos y normativos de cada instalacion industrial.</p>
+              <h3 id="ctaTitle">&iquest;Necesitas evaluar, modernizar o dise&ntilde;ar un tablero de distribuci&oacute;n?</h3>
+              <p>En VMS Energy desarrollamos soluciones alineadas con los requerimientos t&eacute;cnicos, operativos y normativos de cada instalaci&oacute;n industrial.</p>
               <div class="article-actions">
-                <a class="btn btn--primary" href="contacto.html#inicio">Solicitar diagnostico tecnico</a>
+                <a class="btn btn--primary" href="contacto.html#inicio">Solicitar diagn&oacute;stico t&eacute;cnico</a>
                 <a class="btn btn--secondary" href="soluciones_infraestructura_energetica.html#inicio">Ver soluciones de infraestructura</a>
               </div>
             </section>
           </article>
 
-          <aside class="blog-sidebar" aria-label="Informacion complementaria">
+          <aside class="blog-sidebar" aria-label="Informaci&oacute;n complementaria">
             <section class="sidebar-card">
               <h3>Puntos clave</h3>
               <ul>
-                <li>Distribuyen energia de forma segura y ordenada.</li>
+                <li>Distribuyen energ&iacute;a de forma segura y ordenada.</li>
                 <li>Protegen circuitos, equipos y personal.</li>
                 <li>Reducen paros no programados.</li>
                 <li>Facilitan mantenimiento y crecimiento futuro.</li>
@@ -485,15 +475,15 @@
 
             <section class="sidebar-card">
               <h3>Enlaces relacionados</h3>
-              <p>Conecta este articulo con otras paginas del sitio para fortalecer navegacion y SEO interno.</p>
-              <p><a class="sidebar-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energetica</a></p>
+              <p>Conecta este art&iacute;culo con otras p&aacute;ginas del sitio para fortalecer navegaci&oacute;n y SEO interno.</p>
+              <p><a class="sidebar-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></p>
               <p><a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></p>
               <p><a class="sidebar-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">Subestaciones AT, MT y BT</a></p>
             </section>
 
             <section class="sidebar-card">
               <h3>Sugerencia SEO</h3>
-              <p>Si esta version se publica tambien en el sitio principal, conviene mantener un solo URL canonico para evitar contenido duplicado.</p>
+              <p>Si esta versi&oacute;n se publica tambi&eacute;n en el sitio principal, conviene mantener un solo URL can&oacute;nico para evitar contenido duplicado.</p>
             </section>
           </aside>
         </div>
@@ -550,6 +540,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -557,6 +549,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -583,6 +576,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

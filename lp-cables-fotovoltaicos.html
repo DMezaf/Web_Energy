@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,8 +31,10 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="equipamiento-base.css">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#10233D;--line:rgba(23,44,81,.14);--soft:#f4f8ff}
+    :root{--navy:#172C51;--cobalt:var(--concept-primary);--ink:#10233D;--line:rgba(23,44,81,.14);--soft:#f4f8ff}
     *{box-sizing:border-box}
     body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
     .container{max-width:1080px;margin:0 auto;padding:0 20px}
@@ -44,15 +46,15 @@
     nav{position:relative}
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
     .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
     .nav-item--has-submenu:hover .submenu,
-    .nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-    .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
     .top{padding:10px 0;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);position:sticky;top:0;z-index:80;backdrop-filter:saturate(180%) blur(8px)}
@@ -60,7 +62,7 @@
     .top__logo{display:inline-flex;align-items:center}
     .top__logo img{height:38px;width:auto;display:block}
     .top__actions{display:flex;gap:8px;flex-wrap:wrap}
-    .top__link{display:inline-flex;align-items:center;justify-content:center;padding:.46rem .82rem;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--cobalt);font-weight:700;background:#fff}
+    .top__link{display:inline-flex;align-items:center;justify-content:center;padding:.46rem .82rem;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--concept-primary);font-weight:700;background:#fff}
         .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
     #footer .container{
       max-width:1200px;
@@ -103,7 +105,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -150,7 +152,7 @@
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:11px 15px;text-decoration:none;font-weight:700;border:1px solid transparent}
     .btn--primary{background:linear-gradient(180deg,#1aa08a,#0d7e79);border-color:rgba(7,99,95,.72);color:#fff}
-    .btn--secondary{background:#fff;color:var(--cobalt);border-color:var(--line)}
+    .btn--secondary{background:#fff;color:var(--concept-primary);border-color:var(--line)}
     .grid{padding:0 0 42px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .card{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--soft)}
     .card h2{margin:0 0 8px;color:#113960}
@@ -163,9 +165,9 @@
     .catalog-breadcrumb__sep{color:#8aa0bb}
     .catalog-toolbar{display:grid;grid-template-columns:1fr .95fr .95fr;gap:10px;align-items:center;margin-top:14px}
     .catalog-search{width:100%;border:1px solid #cfdceb;border-radius:10px;padding:10px 11px;font:inherit;color:var(--ink);background:#fff}
-    .catalog-search:focus{outline:2px solid rgba(15,76,129,.25);border-color:#0f4c81}
+    .catalog-search:focus{outline:2px solid rgba(15,76,129,.25);border-color:var(--concept-primary)}
     .catalog-select{width:100%;border:1px solid #cfdceb;border-radius:10px;padding:10px 11px;font:inherit;color:var(--ink);background:#fff}
-    .catalog-select:focus{outline:2px solid rgba(15,76,129,.25);border-color:#0f4c81}
+    .catalog-select:focus{outline:2px solid rgba(15,76,129,.25);border-color:var(--concept-primary)}
     .catalog__meta{margin:10px 0 0;font-size:13px;color:#35516f}
     .catalog__count{font-weight:700;color:#113960}
     .catalog-grid{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
@@ -175,11 +177,11 @@
     .catalog-card__thumb{width:100%;height:100%;border-radius:12px;background:#fff;border:1px solid #d3e2f5;object-fit:contain;object-position:center;display:block;box-shadow:0 2px 8px rgba(16,35,61,.06)}
     .catalog-card__head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
     .catalog-card__label{font-weight:700;color:#113960}
-    .catalog-card__reco{display:inline-flex;padding:.18rem .5rem;border-radius:999px;font-size:11px;font-weight:700;background:#eef4ff;border:1px solid #c9daf3;color:#0f4c81;white-space:nowrap}
+    .catalog-card__reco{display:inline-flex;padding:.18rem .5rem;border-radius:999px;font-size:11px;font-weight:700;background:#eef4ff;border:1px solid #c9daf3;color:var(--concept-primary);white-space:nowrap}
     .catalog-card__name{margin:8px 0 0;color:#10233d;font-size:18px;line-height:1.2}
     .catalog-card__stock{margin-top:6px;display:inline-flex;align-items:center;background:#ecfdf5;color:#0f6b50;border:1px solid #a7e7c7;border-radius:999px;padding:.16rem .52rem;font-size:11px;font-weight:700}
     .catalog-card__stock--stock{background:#ecfdf5;color:#0f6b50;border-color:#a7e7c7}
-    .catalog-card__stock--lead{background:#eef4ff;color:#0f4c81;border-color:#c6d8f0}
+    .catalog-card__stock--lead{background:#eef4ff;color:var(--concept-primary);border-color:#c6d8f0}
     .catalog-card__stock--request{background:#fff7ed;color:#9a4d00;border-color:#ffd8ad}
     .catalog-card__meta{margin-top:6px;display:inline-flex;align-items:center;background:#f6f8fb;color:#2b456a;border:1px solid #d6e3f2;border-radius:999px;padding:.16rem .52rem;font-size:11px;font-weight:700}
     .catalog-card__colors{display:flex;align-items:center;gap:10px;margin-top:10px}
@@ -188,7 +190,7 @@
     .catalog-card__color-btn[data-color="rojo"]{background:radial-gradient(circle at 30% 30%, #ff9f9f, #d11616 70%)}
     .catalog-card__color-btn[data-color="negro"]{background:radial-gradient(circle at 30% 30%, #7b8794, #111827 70%)}
     .catalog-card__color-btn:hover{transform:scale(1.06)}
-    .catalog-card__color-btn:focus-visible{outline:2px solid #0f4c81;outline-offset:2px}
+    .catalog-card__color-btn:focus-visible{outline:2px solid var(--concept-primary);outline-offset:2px}
     .catalog-card__color-btn.is-active{border-color:#10233d;box-shadow:0 0 0 3px rgba(16,35,61,.18)}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .catalog-card__specs{margin:8px 0 0;padding-left:16px;display:grid;gap:4px;color:#10233d;line-height:1.35;font-size:14px;white-space:nowrap}
@@ -203,16 +205,16 @@
     .notes-panel{border:1px solid #d9e6f7;border-radius:16px;background:linear-gradient(135deg,#f4f8ff 0%,#ffffff 60%);padding:16px;box-shadow:0 8px 20px rgba(16,35,61,.08)}
     .notes-panel__head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:8px}
     .notes-panel__title{margin:0;color:#113960;font-size:18px}
-    .notes-panel__tag{display:inline-flex;align-items:center;background:#e7f0ff;color:#0f4c81;border:1px solid #c9daf3;border-radius:999px;padding:.22rem .7rem;font-size:11px;font-weight:700}
+    .notes-panel__tag{display:inline-flex;align-items:center;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.22rem .7rem;font-size:11px;font-weight:700}
     .notes-panel__sub{margin:0;color:#35516f;font-size:14px;line-height:1.5}
     .notes-grid{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
     .notes-card{background:#fff;border:1px solid #e1ecfb;border-radius:12px;padding:12px;display:grid;gap:6px}
     .notes-card__title{margin:0;color:#0f355d;font-size:14px;font-weight:700}
     .notes-card__text{margin:0;color:#2b456a;font-size:13px;line-height:1.5}
     .notes-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .notes-badge{display:inline-flex;align-items:center;border-radius:999px;border:1px dashed #c6d8f0;color:#0f4c81;background:#f3f7ff;padding:.2rem .6rem;font-size:11px;font-weight:700}
+    .notes-badge{display:inline-flex;align-items:center;border-radius:999px;border:1px dashed #c6d8f0;color:var(--concept-primary);background:#f3f7ff;padding:.2rem .6rem;font-size:11px;font-weight:700}
     .note-list{margin:0;padding-left:18px;display:grid;gap:6px;line-height:1.5;color:#152f4d}
-    .chip{display:inline-flex;align-items:center;background:#eef4ff;color:#0f4c81;border:1px solid #c9daf3;border-radius:999px;padding:.16rem .55rem;font-size:11px;font-weight:700;margin-bottom:8px}
+    .chip{display:inline-flex;align-items:center;background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.16rem .55rem;font-size:11px;font-weight:700;margin-bottom:8px}
     .muted{color:#5f7182}
     .list{margin:0;padding-left:18px;line-height:1.6}
     @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -227,20 +229,21 @@
     .catalog-card__head{flex-direction:column}
     .catalog-card__reco{align-self:flex-start}}
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+.submenu--mega{min-width:500px;display:flex;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
   .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -253,7 +256,7 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style><style id="vmshop-header-styles">
-  .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+  .announcement{background:linear-gradient(90deg,var(--concept-primary),#0c3e69);color:#fff;font-size:.92rem}
   .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:1200px}
   header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(23,44,81,.14);backdrop-filter:saturate(180%) blur(8px)}
   header .container{max-width:1200px}
@@ -266,9 +269,9 @@
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:760px){
@@ -280,6 +283,69 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Service",
+        "name":"Cables Fotovoltaicos para Infraestructura Solar",
+        "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
+        "areaServed":"M\u00e9xico",
+        "serviceType":"Suministro e ingenier\u00eda de cable fotovoltaico PV1-F para parques solares industriales",
+        "description":"Suministro de cable fotovoltaico PV1-F KEI para strings DC, troncales y cableado de infraestructura solar. Incluyendo dimensionamiento el\u00e9ctrico, especificaci\u00f3n y suministro integrado dentro de proyectos EPC solar llave en mano.",
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"Cat\u00e1logo de Cables Fotovoltaicos VMS Energy",
+          "itemListElement":[
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 4 mm\u00b2 — string DC est\u00e1ndar"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 6 mm\u00b2 — string DC alta corriente"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 10 mm\u00b2 — string largo o alta corriente"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 16 mm\u00b2 — troncal DC"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 25\u201350 mm\u00b2 — troncal DC de gran secci\u00f3n"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable de potencia MT para interconexi\u00f3n inversor-transformador"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ingenier\u00eda de dimensionamiento de cable fotovoltaico"}}
+          ]
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"\u00bfQu\u00e9 secci\u00f3n de cable debo usar en mi parque solar?",
+            "acceptedAnswer":{"@type":"Answer","text":"Depende de la longitud del string, la corriente de cortocircuito del m\u00f3dulo (Isc) y los l\u00edmites de ca\u00edda de tensi\u00f3n del proyecto. Para strings est\u00e1ndar: 4\u20136 mm\u00b2. Para strings largos o alta corriente: 10\u201316 mm\u00b2. Para troncales DC: 25\u201350 mm\u00b2. VMS hace el dimensionamiento si compartes el dise\u00f1o el\u00e9ctrico."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfEl cable PV1-F sirve para instalaci\u00f3n enterrada?",
+            "acceptedAnswer":{"@type":"Answer","text":"El PV1-F est\u00e1ndar no est\u00e1 dise\u00f1ado para instalaci\u00f3n directamente enterrada. Para tramos subterr\u00e1neos en un parque solar, se requiere cable con cubierta adicional (doble aislamiento o tuber\u00eda de protecci\u00f3n). VMS puede especificar la soluci\u00f3n correcta para cada tramo."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfCu\u00e1nto tiempo duran los cables fotovoltaicos KEI?",
+            "acceptedAnswer":{"@type":"Answer","text":"El cable PV1-F KEI tiene vida \u00fatil estimada de 30 a\u00f1os bajo condiciones de operaci\u00f3n est\u00e1ndar, con resistencia a rayos UV, ozono y ciclos t\u00e9rmicos. Es compatible con la vida \u00fatil t\u00edpica de un parque solar industrial."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfPueden suministrar el cable junto con el EPC solar?",
+            "acceptedAnswer":{"@type":"Answer","text":"S\u00ed. VMS Energy ejecuta proyectos EPC solar llave en mano. El suministro de cable fotovoltaico forma parte del alcance EPC: lo especificamos, lo procuramos y lo instalamos. No necesitas coordinar con un proveedor separado."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfManejan cable de CA (AC) para la salida del inversor?",
+            "acceptedAnswer":{"@type":"Answer","text":"S\u00ed. Adem\u00e1s del cable DC fotovoltaico, suministramos cable de potencia MT para la interconexi\u00f3n del inversor/transformador elevador con la subestaci\u00f3n de interconexi\u00f3n. Toda la infraestructura de cable del parque puede gestionarse con VMS."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfQu\u00e9 norma requiere CFE para interconexi\u00f3n de parques solares?",
+            "acceptedAnswer":{"@type":"Answer","text":"CFE revisa el dise\u00f1o el\u00e9ctrico a trav\u00e9s del dictamen de interconexi\u00f3n (CENACE/CFE). Los cables en el lado AC deben cumplir especificaciones LAPEM para el nivel de tensi\u00f3n de interconexi\u00f3n. VMS acompa\u00f1a el proceso desde la ingenier\u00eda b\u00e1sica hasta la aprobaci\u00f3n del dictamen."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
     <div class="announcement">
@@ -309,16 +375,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -328,13 +399,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -343,15 +431,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -367,6 +468,7 @@
                   <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
                   <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                  <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
                 </ul>
               </div>
             </div>
@@ -398,6 +500,59 @@
             <a class="btn btn--secondary" href="procura.html#solicitud">Ver proceso de suministro</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- BLOQUE A: Multi-proveedor estrat&eacute;gico -->
+    <section style="background:var(--soft,#f4f8ff);padding:36px 0">
+      <div class="container">
+        <div class="notes-panel">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">Portafolio de fabricantes</span>
+            <h3 class="notes-panel__title">No llegamos con un solo cat&aacute;logo. Llegamos con la especificaci&oacute;n correcta para tu proyecto.</h3>
+          </div>
+          <p class="notes-panel__sub">VMS Energy selecciona el fabricante &oacute;ptimo seg&uacute;n el nivel de tensi&oacute;n, sector, norma aplicable, disponibilidad y cronograma de tu proyecto. KEI Wires &amp; Cables es nuestro partner estrat&eacute;gico principal, pero trabajamos con los mejores fabricantes del mundo cuando el proyecto lo requiere.</p>
+          <div class="notes-grid" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
+            <div class="notes-card">
+              <h4 class="notes-card__title">KEI Wires &amp; Cables</h4>
+              <p class="notes-card__text">Representante exclusivo para M&eacute;xico. Potencia MT/AT/EHV, cables ESP para Oil &amp; Gas, fotovoltaicos, instrumentaci&oacute;n y control. Primera opci&oacute;n para la mayor&iacute;a de proyectos industriales en M&eacute;xico.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">S&uuml;dkabel</h4>
+              <p class="notes-card__text">Especialidad en cables EHV de alta ingenier&iacute;a (fabricaci&oacute;n alemana). Ideal cuando el proyecto requiere est&aacute;ndares europeos, certificaciones VDE o construcciones especiales para transmisi&oacute;n de extra alta tensi&oacute;n.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Helukabel</h4>
+              <p class="notes-card__text">Soluciones para control, instrumentaci&oacute;n y aplicaciones especiales: LSZH para espacios confinados, EMC blindados, alta temperatura (silicona), cables para industria alimentaria y rob&oacute;tica.</p>
+            </div>
+            <div class="notes-card">
+              <h4 class="notes-card__title">Condumex / Viakon</h4>
+              <p class="notes-card__text">Fabricaci&oacute;n nacional bajo NMX-J. Baja tensi&oacute;n y control con tiempos de entrega cortos. Ideal para proyectos con componente nacional requerida o urgencias en campo. Cumplimiento NOM-001-SEDE.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE B: Conexi&oacute;n EPC Turnkey -->
+    <section style="padding:36px 0 28px">
+      <div class="container">
+        <div class="notes-panel" style="border-left:4px solid var(--cobalt,#0F4C81)">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">EPC Integrado</span>
+            <h3 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h3>
+          </div>
+          <p class="notes-panel__sub">El suministro a trav&eacute;s de VMShop no es una compra de producto. Es la etapa de procura dentro de un proyecto EPC que VMS ingenia, construye y pone en marcha.</p>
+          <ul class="note-list">
+            <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
+            <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
+            <li><strong>Log&iacute;stica por hitos:</strong> Entregamos cable cuando la obra lo necesita, en la cantidad correcta y con trazabilidad completa por bobina.</li>
+            <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
+          </ul>
+          <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
+            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -478,13 +633,81 @@
                 <h4 class="notes-card__title">Protecci&oacute;n &amp; seguridad</h4>
                 <p class="notes-card__text">Coordinar fusibles, seccionamiento y puesta a tierra seg&uacute;n topolog&iacute;a e inversores.</p>
               </div>
+              <div class="notes-card">
+                <h4 class="notes-card__title">Temperatura y derating</h4>
+                <p class="notes-card__text">En instalaciones sobre techo o en campo abierto, la temperatura real del cable puede superar 60 &deg;C. Aplicar factores de correcci&oacute;n de ampacidad por temperatura ambiente real del sitio para evitar degradaci&oacute;n prematura del aislamiento.</p>
+              </div>
+              <div class="notes-card">
+                <h4 class="notes-card__title">Norma y certificaci&oacute;n</h4>
+                <p class="notes-card__text">El cable PV1-F KEI cumple BS EN 50618, 2Pfg 1169/08.2007 e IEC 60228 Clase 5. Para proyectos con CFE (interconexi&oacute;n), verificar que la especificaci&oacute;n del parque incluya el est&aacute;ndar requerido por el dictamen de interconexi&oacute;n.</p>
+              </div>
             </div>
             <div class="notes-badges">
               <span class="notes-badge">Resistencia DC @20 C</span>
               <span class="notes-badge">Factores de correcci&oacute;n</span>
               <span class="notes-badge">Verificaci&oacute;n por circuito</span>
+              <span class="notes-badge">BS EN 50618</span>
+              <span class="notes-badge">T&Uuml;V Rheinland</span>
+              <span class="notes-badge">CFE Interconexi&oacute;n</span>
             </div>
+            <p style="margin:14px 0 0;padding:12px 14px;background:rgba(15,76,129,.06);border-radius:10px;font-size:.92rem;color:var(--muted,#4E6782)">
+              &iquest;T&eacute;rminos como Clase 5, ampacidad, BS EN 50618 o LSZH? Cons&uacute;ltalos en el <a href="glosario-cable-electrico.html" style="color:var(--cobalt,#0F4C81);font-weight:700;text-decoration:none">glosario t&eacute;cnico de cable &rarr;</a>
+            </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2 class="catalog__title">Preguntas frecuentes &mdash; Cables fotovoltaicos</h2>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3>&iquest;Qu&eacute; secci&oacute;n de cable debo usar en mi parque solar?</h3>
+            <p>Depende de la longitud del string, la corriente de cortocircuito del m&oacute;dulo (Isc) y los l&iacute;mites de ca&iacute;da de tensi&oacute;n del proyecto. Para strings est&aacute;ndar: 4&ndash;6 mm&sup2;. Para strings largos o alta corriente: 10&ndash;16 mm&sup2;. Para troncales DC: 25&ndash;50 mm&sup2;. VMS hace el dimensionamiento si compartes el dise&ntilde;o el&eacute;ctrico.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;El cable PV1-F sirve para instalaci&oacute;n enterrada?</h3>
+            <p>El PV1-F est&aacute;ndar no est&aacute; dise&ntilde;ado para instalaci&oacute;n directamente enterrada. Para tramos subterr&aacute;neos en un parque solar, se requiere cable con cubierta adicional (doble aislamiento o tuber&iacute;a de protecci&oacute;n). VMS puede especificar la soluci&oacute;n correcta para cada tramo.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Cu&aacute;nto tiempo duran estos cables?</h3>
+            <p>El cable PV1-F KEI tiene vida &uacute;til estimada de 30 a&ntilde;os bajo condiciones de operaci&oacute;n est&aacute;ndar, con resistencia a rayos UV, ozono y ciclos t&eacute;rmicos. Es compatible con la vida &uacute;til t&iacute;pica de un parque solar industrial.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Pueden suministrar el cable junto con el EPC solar?</h3>
+            <p>S&iacute;. VMS Energy ejecuta proyectos EPC solar llave en mano. El suministro de cable fotovoltaico forma parte del alcance EPC: lo especificamos, lo procuramos y lo instalamos. No necesitas coordinar con un proveedor separado.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Manejan cable de CA (AC) para la salida del inversor?</h3>
+            <p>S&iacute;. Adem&aacute;s del cable DC fotovoltaico, suministramos cable de potencia MT para la interconexi&oacute;n del inversor/transformador elevador con la subestaci&oacute;n de interconexi&oacute;n. Toda la infraestructura de cable del parque puede gestionarse con VMS.</p>
+          </article>
+          <article class="card">
+            <h3>&iquest;Qu&eacute; norma requiere CFE para interconexi&oacute;n de parques solares?</h3>
+            <p>CFE revisa el dise&ntilde;o el&eacute;ctrico a trav&eacute;s del dictamen de interconexi&oacute;n (CENACE/CFE). Los cables en el lado AC deben cumplir especificaciones LAPEM para el nivel de tensi&oacute;n de interconexi&oacute;n. VMS acompa&ntilde;a el proceso desde la ingenier&iacute;a b&aacute;sica hasta la aprobaci&oacute;n del dictamen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Casos de uso -->
+    <section style="padding:36px 0;background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%)">
+      <div class="container">
+        <h2 style="margin:0 0 6px;color:var(--cobalt,#0F4C81)">Proyectos donde este cable fue clave</h2>
+        <p style="margin:0 0 20px;color:var(--muted,#4E6782)">Casos reales de suministro integrado al alcance EPC. Datos t&eacute;cnicos y log&iacute;sticos &mdash; sin revelar informaci&oacute;n confidencial del cliente.</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Parque solar 8 MW &mdash; Jalisco</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Suministro de 1,200 carretes PV1-F en 2 fases de entrega coordinadas con el cronograma de instalaci&oacute;n de m&oacute;dulos. Documentaci&oacute;n completa para el dictamen de interconexi&oacute;n CENACE.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Planta solar rooftop 1.2 MW &mdash; planta industrial</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Dimensionamiento de calibres por string y troncal DC seg&uacute;n geometr&iacute;a del techo y l&iacute;mites de ca&iacute;da de tensi&oacute;n. Coordinaci&oacute;n con el inversor central elegido por el cliente.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Ampliaci&oacute;n 3 MW en parque existente</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Suministro coordinado con inversor de nueva marca. Compatibilidad t&eacute;cnica verificada, integraci&oacute;n con la red AC existente y cumplimiento de la especificaci&oacute;n del parque original.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -539,6 +762,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -546,6 +771,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -572,6 +798,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

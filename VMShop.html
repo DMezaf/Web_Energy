@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="eshop">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -21,16 +21,18 @@
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/common/hero-suministro-vms-energy.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/VMShop.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/VMShop.html" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="eshop-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--ink:#10233D;--muted:#4B647F;--line:rgba(23,44,81,.14);--soft:#F4F8FF;--ok:#0B8E57}
+    :root{--navy:#172C51;--cobalt:var(--concept-primary);--ink:#10233D;--muted:#4B647F;--line:rgba(23,44,81,.14);--soft:#F4F8FF;--ok:#0B8E57}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    .announcement{background:linear-gradient(90deg,#0f4c81,#0c3e69);color:#fff;font-size:.92rem}
+    .announcement{background:linear-gradient(90deg,var(--concept-primary),#0c3e69);color:#fff;font-size:.92rem}
     .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 
     header{position:sticky;top:0;z-index:90;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
@@ -45,7 +47,7 @@
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
     .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
@@ -79,7 +81,7 @@
 
     .shop-toolbar{padding:14px 0 4px}
     .chip-row{display:flex;gap:10px;flex-wrap:wrap}
-    .chip{display:inline-flex;align-items:center;padding:.35rem .72rem;border-radius:999px;border:1px solid rgba(15,76,129,.18);background:#f5f9ff;color:#0f4c81;font-weight:700;font-size:.86rem;text-decoration:none}
+    .chip{display:inline-flex;align-items:center;padding:.35rem .72rem;border-radius:999px;border:1px solid rgba(15,76,129,.18);background:#f5f9ff;color:var(--concept-primary);font-weight:700;font-size:.86rem;text-decoration:none}
 
     .line-lp{padding:10px 0 20px}
     .line-lp__wrap{background:linear-gradient(180deg,#f7fbff,#eef6ff);border:1px solid var(--line);border-radius:18px;padding:18px}
@@ -100,7 +102,7 @@
     .product-card p{margin:0;color:var(--muted);min-height:38px}
     .catalog-grid--campaigns{margin-top:14px}
     .product-card--campaign img{height:160px;object-fit:cover}
-    .badge-stock--campaign{background:#eef4ff;color:#0f4c81;border:1px solid #c9daf3}
+    .badge-stock--campaign{background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3}
     .catalog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 14px}
     .carousel-controls{display:flex;gap:8px}
     .carousel-btn{width:36px;height:36px;border-radius:999px;border:1px solid var(--line);background:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#103961;box-shadow:0 6px 14px rgba(9,32,58,.12);cursor:pointer}
@@ -111,7 +113,7 @@
     .catalog-track::-webkit-scrollbar-thumb{background:#cfe0f4;border-radius:999px}
     .catalog-track > .product-card{scroll-snap-align:start}
     .price-row{display:flex;align-items:baseline;gap:8px;margin:10px 0}
-    .price{font-weight:700;color:#0f4c81;font-size:1.05rem}
+    .price{font-weight:700;color:var(--concept-primary);font-size:1.05rem}
     .price-old{font-size:.86rem;color:#6b7f96;text-decoration:line-through}
     .badge-stock{display:inline-flex;padding:.2rem .56rem;border-radius:999px;background:#ecfdf3;color:var(--ok);font-weight:700;font-size:.78rem;border:1px solid rgba(11,142,87,.25)}
     .card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
@@ -160,7 +162,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -191,6 +193,7 @@
     @media (max-width:1080px){.line-lp__grid{grid-template-columns:1fr 1fr}.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.trust-box{grid-template-columns:1fr 1fr}}
     @media (max-width:860px){.catalog-track{grid-auto-columns:minmax(220px,1fr)}.hero-shop__frame{min-height:460px}.hero-shop__content{max-width:500px;padding:34px 24px}.catalog-grid{grid-template-columns:1fr 1fr}}
     @media (max-width:680px){.carousel-btn{width:32px;height:32px}nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.hero-shop{padding:16px 0 22px}.hero-shop__frame{min-height:380px;border-radius:18px}.hero-shop__content{padding:22px 16px 20px}.hero-shop h1{font-size:clamp(28px,9vw,36px)}.hero-shop p{font-size:1.14rem}.hero-shop__arrow{width:36px;height:36px}.line-lp__grid{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.trust-box{grid-template-columns:1fr}}
+  .submenu--mega{min-width:500px;display:flex;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
@@ -202,9 +205,9 @@
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -245,16 +248,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -264,13 +272,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -279,15 +304,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -303,6 +341,7 @@
                   <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
                   <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
                   <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                  <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
                 </ul>
               </div>
             </div>
@@ -366,16 +405,17 @@
         <a class="chip" href="lp-cables-fotovoltaicos.html?utm_source=vmshop&utm_medium=internal&utm_campaign=lineas_catalogo&utm_content=chip_fv">FV</a>
         <a class="chip" href="#">Protecciones</a>
         <a class="chip" href="#">Instrumentaci&oacute;n</a>
+        <a class="chip" href="glosario-cable-electrico.html?utm_source=vmshop&amp;utm_medium=internal&amp;utm_campaign=recursos&amp;utm_content=chip_glosario" style="border-style:dashed;background:#fff;color:#0f4c81">Glosario t&eacute;cnico</a>
       </div>
     </section>
 
     <section class="line-lp" aria-label="Landings por l&iacute;nea de producto">
       <div class="container line-lp__wrap">
         <h2>Catálogo de productos VMS Energy</h2>
-        <p>Líneas exclusivas</p>
+        <p>Líneas estratégicas</p>
                 <div class="catalog-grid catalog-grid--campaigns">
           <article class="product-card product-card--campaign">
-            <img src="assets/img/landings/vmshop/triol-distribucion-exclusiva.webp" alt="Variadores Triol">
+            <img src="assets/img/landings/vmshop/triol-distribucion-autorizada.webp" alt="Variadores Triol">
             <div class="product-card__body">
               <span class="badge-stock badge-stock--campaign">Campa&ntilde;a</span>
               <h3>Variadores Triol</h3>
@@ -446,6 +486,18 @@
               </div>
             </div>
           </article>
+          <article class="product-card product-card--campaign" style="border:1px dashed rgba(15,76,129,.35);background:linear-gradient(135deg,#f4f8ff 0%,#ffffff 60%)">
+            <div style="height:160px;display:grid;place-items:center;background:linear-gradient(135deg,#0f4c81 0%,#172C51 100%);color:#fff;font-size:3rem;font-weight:700;letter-spacing:.04em">A&ndash;Z</div>
+            <div class="product-card__body">
+              <span class="badge-stock badge-stock--campaign" style="background:#fff5e8;color:#b85a00;border-color:#f4d4ad">Recurso</span>
+              <h3>Glosario t&eacute;cnico de cable</h3>
+              <p>XLPE, EPR, LSZH, ESP, EHV, BHT, LAPEM&hellip; T&eacute;rminos clave para especificar cable industrial.</p>
+              <div class="card-actions">
+                <a class="btn btn--primary" href="glosario-cable-electrico.html?utm_source=vmshop&amp;utm_medium=internal&amp;utm_campaign=recursos&amp;utm_content=card_glosario">Ver glosario</a>
+                <a class="btn btn--secondary" href="contacto.html#inicio">Hablar con asesor</a>
+              </div>
+            </div>
+          </article>
         </div>      </div>
     </section>
 
@@ -462,7 +514,7 @@
           <div class="catalog-track" id="featuredTrack">
 
           <article class="product-card">
-            <img src="assets/img/landings/vmshop/triol-distribucion-exclusiva.webp" alt="Variadores Triol">
+            <img src="assets/img/landings/vmshop/triol-distribucion-autorizada.webp" alt="Variadores Triol">
             <div class="product-card__body">
               <span class="badge-stock">Disponible</span>
               <h3>VFD Triol Serie Industrial</h3>
@@ -532,6 +584,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -539,6 +593,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -565,6 +620,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

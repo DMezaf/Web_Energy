@@ -1,0 +1,399 @@
+/*
+ * ============================================================
+ *  sectorial-base.css — Estilos compartidos de páginas Sectoriales
+ *  VMS Energy · v1.0 · Mayo 2026
+ * ============================================================
+ *
+ *  REQUISITO: cargar tokens.css ANTES que este archivo.
+ *  Uso: <link rel="stylesheet" href="tokens.css">
+ *       <link rel="stylesheet" href="sectorial-base.css">
+ *
+ *  Cada página sectorial agrega un bloque <style> mínimo con:
+ *  — Timeline dots (colores únicos por sector)
+ *  — Hero framed (solo minería)
+ *  — Cualquier clase exclusiva de esa página
+ * ============================================================
+ */
+
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+html { scroll-behavior: smooth }
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: #fff;
+  line-height: 1.6;
+}
+h1, h2, h3, h4 { font-family: var(--font-body); margin: 0 }
+p { margin: 0 }
+img { max-width: 100%; display: block }
+a { text-decoration: none; color: inherit }
+
+
+/* ── Layout ── */
+.container { max-width: 1180px; margin: 0 auto; padding: 0 20px }
+header .container { max-width: 1200px }
+
+
+/* ── Header / Nav ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #fff;
+  border-bottom: 1px solid rgba(23,44,81,.08);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 }
+.brand { display: flex; align-items: center; gap: 0 }
+.brand__logo {
+  width: clamp(168px,18vw,210px);
+  height: clamp(54px,6vw,66px);
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(23,44,81,.14);
+}
+.brand__logo img { max-width: 94%; max-height: 88%; width: auto; height: auto; object-fit: contain; display: block }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; align-items: center }
+nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spacing: .2px }
+.cta-header { padding: .6rem 1rem; background: var(--cobalt); color: #fff !important; border-radius: 999px }
+.menu-toggle { display: none; border: 1px solid rgba(23,44,81,.2); border-radius: 10px; padding: .5rem .7rem; background: #fff; cursor: pointer; font-weight: 700; color: var(--navy); font-family: var(--font-body) }
+.nav-item--has-submenu { position: relative }
+.nav-item--has-submenu::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px }
+.submenu {
+  margin: 0;
+  padding: 10px 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  background: #fff;
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-nav);
+  display: none;
+  z-index: 60;
+}
+.nav-item--has-submenu:hover .submenu,
+.nav-item--has-submenu:has(:focus-visible) .submenu { display: block }
+@media (min-width: 681px) {
+  .nav-item--has-submenu:has(~ .nav-item--has-submenu:hover) .submenu,
+  .nav-item--has-submenu:has(~ .nav-item--has-submenu :focus-visible) .submenu { display: none }
+}
+.submenu__group + .submenu__group { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(23,44,81,.1) }
+.submenu__title { display: block; color: #0f4c81; font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; text-decoration: none }
+.submenu__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.submenu__list a { display: block; color: #12365f; font-weight: 600; font-size: .9rem; line-height: 1.25; padding: 3px 0 }
+.submenu--mega { min-width: 500px; display: flex; gap: 0 }
+.submenu--mega .submenu__group { flex: 1; min-width: 0 }
+.submenu--mega .submenu__group + .submenu__group { margin-top: 0; padding-top: 0; border-top: none; padding-left: 14px; border-left: 1px solid rgba(23,44,81,.1) }
+
+
+/* ── Botones ── */
+.btn {
+  display: inline-block;
+  padding: .65rem 1.4rem;
+  border-radius: 7px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: .95rem;
+  transition: opacity .2s;
+  font-family: var(--font-body);
+}
+.btn--primary { background: var(--concept-btn-primary); color: var(--concept-btn-text) }
+.btn--primary:hover { opacity: .88 }
+.btn--ghost { border: 2px solid rgba(255,255,255,.35); color: #fff }
+.btn--ghost:hover { background: rgba(255,255,255,.08) }
+
+
+/* ── Hero (plantilla plana — agroindustria/alimentos-bebidas) ── */
+.hero {
+  background: var(--concept-hero-gradient);
+  color: #fff;
+  padding: 72px 0 64px;
+}
+.hero-eyebrow {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--concept-accent);
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+.hero h1 em { font-style: normal; color: var(--concept-accent) }
+.hero p {
+  font-size: 1.08rem;
+  color: rgba(255,255,255,.88);
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px }
+.hero-stats { display: flex; gap: 10px; flex-wrap: wrap }
+.hero-stat {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px;
+  padding: .3rem .9rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.88);
+}
+
+
+/* ── KPI Strip ── */
+/* Nota: estilos scoped en .kpi-strip para no colisionar con .kpi card de minería */
+.kpi-strip { background: var(--concept-kpi-bg); padding: 20px 0 }
+.kpi-strip .container { display: flex; gap: 0; justify-content: space-around; flex-wrap: wrap }
+.kpi-strip .kpi { text-align: center; padding: 12px 18px }
+.kpi-strip .kpi__val { font-size: 1.6rem; font-weight: 900; color: var(--concept-kpi-val); line-height: 1 }
+.kpi-strip .kpi__lbl { font-size: .72rem; color: var(--concept-kpi-lbl); margin-top: 4px; text-transform: uppercase; letter-spacing: .06em }
+
+
+/* ── Secciones ── */
+.section { padding: 64px 0 }
+.section--alt { background: var(--concept-section-alt) }
+.section--dark { background: var(--concept-section-dark, #172C51); color: #fff }
+
+.sec-label {
+  display: inline-block;
+  background: var(--concept-accent-light);
+  color: var(--concept-accent-text);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.sec-label--light { background: rgba(255,255,255,.15); color: #fff }
+.sec-h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--navy); margin-bottom: 10px }
+.sec-h2--white { color: #fff }
+.sec-lead { color: #475569; max-width: 680px; margin-bottom: 36px }
+.sec-lead--light { color: #94a3b8 }
+
+
+/* ── Service Grid ── */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px }
+.svc-card {
+  border: 1px solid var(--border-line);
+  border-radius: 14px;
+  padding: 24px;
+  background: #fff;
+  transition: box-shadow .2s;
+}
+.svc-card:hover { box-shadow: var(--shadow-hover) }
+.svc-card__icon { font-size: 2rem; margin-bottom: 10px }
+.svc-card__title { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 8px }
+.svc-card__desc { font-size: .88rem; color: #475569; line-height: 1.55 }
+.svc-card__norm { font-size: .75rem; color: var(--concept-primary); font-weight: 700; margin-top: 8px }
+
+
+/* ── Timeline (ciclo / zafra) ── */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative }
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 12%;
+  right: 12%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--concept-primary), var(--concept-dark));
+}
+.tl-item { text-align: center; padding: 0 12px; position: relative }
+.tl-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 2;
+}
+.tl-label { font-weight: 800; color: var(--navy); font-size: .9rem; margin-bottom: 4px }
+.tl-sub { font-size: .72rem; font-weight: 700; color: var(--concept-primary); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .05em }
+.tl-desc { font-size: .8rem; color: #64748b; line-height: 1.4 }
+
+
+/* ── Ref Grid (proyectos de referencia) ── */
+.ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px }
+.ref-card {
+  border-left: 3px solid var(--concept-primary);
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(9,32,58,.06);
+}
+.ref-card__cliente { font-weight: 800; color: var(--navy); font-size: .92rem; margin-bottom: 4px }
+.ref-card__lugar { font-size: .78rem; color: #64748b; margin-bottom: 8px }
+.ref-card__desc { font-size: .84rem; color: #475569; line-height: 1.5 }
+
+
+/* ── Chip Grid (etiquetas de servicio) ── */
+.chip-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px }
+.chip {
+  background: var(--concept-accent-light);
+  color: var(--concept-accent-text);
+  border-radius: 999px;
+  padding: .3rem .8rem;
+  font-size: .82rem;
+  font-weight: 700;
+}
+.chip--blue { background: #dbeafe; color: #1e40af }
+
+
+/* ── FAQ Block ── */
+.faq-block { display: grid; gap: 10px; margin-top: 24px }
+.faq-item { border: 1px solid var(--border-line); border-radius: 10px; overflow: hidden }
+.faq-q {
+  width: 100%;
+  background: #fff;
+  border: none;
+  text-align: left;
+  padding: 15px 18px;
+  font-weight: 700;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: .94rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+}
+.faq-q::after { content: "＋"; font-size: 1.1rem; color: var(--concept-primary); flex-shrink: 0 }
+.faq-q[aria-expanded="true"]::after { content: "－" }
+.faq-a {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+  font-size: .9rem;
+  color: #4b5563;
+  line-height: 1.65;
+}
+.faq-a.is-open { max-height: 400px; padding: 0 18px 16px }
+
+
+/* ── Normatividad table ── */
+.norm-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: .88rem }
+.norm-table th { background: var(--concept-dark); color: #fff; padding: 10px 14px; text-align: left; font-weight: 700 }
+.norm-table td { padding: 9px 14px; border-bottom: 1px solid var(--border-line); color: #374151 }
+.norm-table tr:last-child td { border-bottom: none }
+.norm-table tr:nth-child(even) td { background: var(--concept-section-alt) }
+.norm-badge {
+  display: inline-block;
+  background: var(--concept-accent-light);
+  color: var(--concept-accent-text);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .1rem .5rem;
+  border-radius: 4px;
+}
+
+
+/* ── Sticky buttons ── */
+.sticky-wa { position: fixed; bottom: 80px; right: 20px; z-index: 200 }
+.sticky-wa a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+}
+.sticky-wa svg { width: 26px; height: 26px; fill: #fff }
+.sticky-cta { position: fixed; bottom: 20px; right: 20px; z-index: 200 }
+.sticky-cta a {
+  background: var(--cobalt);
+  color: #fff;
+  padding: .55rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .85rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(9,32,58,.3);
+}
+
+
+/* ── Footer ── */
+.foot { background: #0f172a; color: #94a3b8; padding: 0; font-family: var(--font-body) }
+.foot-link { color: #94a3b8; text-decoration: none }
+.foot-link:hover { color: #fff }
+#footer h4 { margin: 0 0 10px; font-size: 1rem; color: #fff }
+#footer ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.7 }
+#footer a { word-break: break-word }
+#footer .foot-link { color: #94a3b8 }
+#footer .foot-link:hover, #footer .foot-link:focus-visible { color: #fff }
+#footer .foot-link--accent { color: #4aa3ff; font-weight: 700 }
+#footer .foot-link--accent:hover { color: #7cc1ff }
+#footer .foot-link--strong { color: #fff; font-weight: 700 }
+#footer .container {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr;
+  gap: 18px;
+  padding: 40px 0;
+  align-items: start;
+}
+.foot-social__link { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: rgba(255,255,255,.08); border-radius: 50% }
+.foot-social__link svg { width: 16px; height: 16px; fill: #94a3b8; transition: fill .3s ease }
+.foot-social__link:hover svg, .foot-social__link:focus-visible svg { fill: #fff }
+.foot-note { border-top: 1px solid rgba(255,255,255,.12); text-align: center; padding: 12px 0; color: #94a3b8; font-size: 13px }
+
+
+/* ── Reveal animation ── */
+.reveal { opacity: 0; transform: translateY(18px); animation: fadeUp .6s ease forwards }
+.delay-1 { animation-delay: .12s }
+.delay-2 { animation-delay: .24s }
+.delay-3 { animation-delay: .36s }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0) } }
+
+
+/* ── Responsive ── */
+@media (max-width: 980px) {
+  .svc-grid { grid-template-columns: 1fr 1fr }
+  .timeline { grid-template-columns: 1fr 1fr; gap: 20px }
+  .timeline::before { display: none }
+  .ref-grid { grid-template-columns: 1fr 1fr }
+  #footer .container { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; padding: 34px 0 }
+}
+@media (max-width: 760px) {
+  .svc-grid { grid-template-columns: 1fr }
+  .ref-grid { grid-template-columns: 1fr }
+  .timeline { grid-template-columns: 1fr }
+  #footer .container { grid-template-columns: 1fr; gap: 16px; padding: 24px 0 }
+}
+@media (max-width: 680px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 92px;
+    background: #fff;
+    border: 1px solid var(--border-line);
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 0;
+    width: min(290px, calc(100vw - 40px));
+    box-shadow: var(--shadow-nav);
+  }
+  nav ul.is-open { display: grid; gap: 10px }
+  .menu-toggle { display: inline-flex }
+  .submenu { position: static; display: none; min-width: 0; border: 0; box-shadow: none; padding: 8px 0 0 12px }
+  .nav-item--has-submenu.is-open .submenu { display: block }
+}

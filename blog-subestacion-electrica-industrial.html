@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es">
+﻿<!doctype html>
+<html lang="es" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta name="theme-color" content="#0F4C81">
@@ -11,6 +11,8 @@
 <meta property="og:type" content="article" />
 
 
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <style data-critical>
 /*
   VMS Energy – Clean CSS (deduplicated & formatted)
@@ -25,7 +27,7 @@
   --line:#e5e8ef;
   --soft:#f1f3f8;
   --accent:#172C51;   /* VMS navy */
-  --accent2:#0F4C81;  /* VMS cobalt */
+  --accent2:var(--concept-primary);  /* VMS cobalt */
   --accent3:#3A6FA5;  /* VMS technical blue */
   --ok:#1a7f37;
   --warn:#b54708;
@@ -473,31 +475,6 @@ tr:last-child td{border-bottom:none}
 .btn:hover{opacity:.92; transform: translateY(-1px)}
 
 .btn:active{transform: translateY(0px)}
-
-.foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -514,7 +491,7 @@ tr:last-child td{border-bottom:none}
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -2711,7 +2688,7 @@ Columna derecha (diagram + CTA)
   stroke-width: 14;               /* igual que el track */
   opacity: .32;                   /* sutil, no compite con el fill */
 }
-.gauge-zone.zone-low{  stroke: #0F4C81; } /* azul */
+.gauge-zone.zone-low{  stroke: var(--concept-primary); } /* azul */
 .gauge-zone.zone-med{  stroke: #FACC15; } /* amarillo */
 .gauge-zone.zone-high{ stroke: #FB923C; } /* naranja */
 .gauge-zone.zone-crit{ stroke: #DC2626; } /* rojo */
@@ -2747,7 +2724,7 @@ Columna derecha (diagram + CTA)
 }
 
 /* Gauge: reactividad por zona (fill + aguja + hub) */
-#autodiagnostico[data-tier="low"]  .gauge-fill{ stroke:#0F4C81; }
+#autodiagnostico[data-tier="low"]  .gauge-fill{ stroke:var(--concept-primary); }
 #autodiagnostico[data-tier="med"]  .gauge-fill{ stroke:#FACC15; }
 #autodiagnostico[data-tier="high"] .gauge-fill{ stroke:#FB923C; }
 #autodiagnostico[data-tier="crit"] .gauge-fill{ stroke:#DC2626; }
@@ -3666,7 +3643,7 @@ img{
 
 /* Ecosystem shell fix (header/footer from index.html inside blog template) */
 header[aria-label="Barra de navegación"]{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
-header[aria-label="Barra de navegación"] .container{max-width:1200px;margin-inline:auto;padding:0 20px}
+header[aria-label="Barra de navegación"]
 header[aria-label="Barra de navegación"] .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0;position:static;z-index:auto;background:transparent;backdrop-filter:none;border-bottom:0}
 header[aria-label="Barra de navegación"] .brand{display:flex;align-items:center;gap:0;font-weight:400;letter-spacing:0}
 header[aria-label="Barra de navegación"] .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
@@ -3677,35 +3654,11 @@ header[aria-label="Barra de navegación"] .menu-toggle{display:none;border:1px s
 header[aria-label="Barra de navegación"] .nav-item--has-submenu{position:relative}
 header[aria-label="Barra de navegación"] .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
 header[aria-label="Barra de navegación"] .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-header[aria-label="Barra de navegación"] .nav-item--has-submenu:hover .submenu,header[aria-label="Barra de navegación"] .nav-item--has-submenu:focus-within .submenu{display:block}
+header[aria-label="Barra de navegación"] .nav-item--has-submenu:hover .submenu,header[aria-label="Barra de navegación"] .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
 header[aria-label="Barra de navegación"] .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-header[aria-label="Barra de navegación"] .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+header[aria-label="Barra de navegación"] .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
 header[aria-label="Barra de navegación"] .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-.foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -3722,7 +3675,7 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -3747,9 +3700,9 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
       }
     }\n.foot a{color:#cbd5e1}
 .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-.foot-social__link svg{width:18px;height:18px;fill:currentColor}
-@media (max-width:980px){header[aria-label="Barra de navegación"] nav ul{gap:14px}header[aria-label="Barra de navegación"] .submenu{min-width:280px}}
-@media (max-width:680px){header[aria-label="Barra de navegación"] nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}header[aria-label="Barra de navegación"] nav ul.is-open{display:grid;gap:10px}header[aria-label="Barra de navegación"] .menu-toggle{display:inline-flex}header[aria-label="Barra de navegación"] .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}header[aria-label="Barra de navegación"] .nav-item--has-submenu.is-open .submenu{display:block}}</style>
+.foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+@media (max-width:680px){header[aria-label="Barra de navegación"] nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}header[aria-label="Barra de navegación"] nav ul.is-open{display:grid;gap:10px}header[aria-label="Barra de navegación"] .menu-toggle{display:inline-flex}header[aria-label="Barra de navegación"] .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}header[aria-label="Barra de navegación"] .nav-item--has-submenu.is-open .submenu{display:block}}
+  </style>
 
 <script type="application/ld+json" id="schema-vms-autodiagnostico">
 {
@@ -3814,16 +3767,21 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -3833,13 +3791,30 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -3848,15 +3823,28 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -5478,11 +5466,13 @@ badge.textContent = c.title + ' (' + c.p + '%)';
   <a
   id="descargar-checklist"
   class="btn btn-secondary"
-  href="/assets/Checklist_Subestaciones_VMS.pdf"
+  href="checklist-anual-subestaciones-at-mt-bt.html"
   data-cta="checklist-q5"
+  target="_blank"
+  rel="noopener"
   onclick="trackCTA('checklist_quinta_capa')"
 >
-  Descargar checklist ejecutivo
+  Ver checklist ejecutivo (versi&oacute;n imprimible)
 </a>
 
 </section>
@@ -5736,64 +5726,64 @@ badge.textContent = c.title + ' (' + c.p + '%)';
 
   const DATA = {
     power: {
-      kicker: '01 &middot; Power Layer',
-      title: 'Power Layer &middot; Capa de Potencia del Sistema',
-      desc: 'Est&aacute;s explorando el detalle t&eacute;cnico de esta capa.',
+      kicker: '01 · Power Layer',
+      title: 'Power Layer · Capa de Potencia del Sistema',
+      desc: 'Estás explorando el detalle técnico de esta capa.',
       bullets: [
-        'Transformaci&oacute;n de tensi&oacute;n (transformaci&oacute;n y acoplamientos)',
+        'Transformación de tensión (transformación y acoplamientos)',
         'Maniobra y seccionamiento (interruptores, seccionadores)',
-        'Barras y conducci&oacute;n (buses, conexiones, canalizaciones)',
-        'Medici&oacute;n primaria (instrumentaci&oacute;n de potencia)',
+        'Barras y conducción (buses, conexiones, canalizaciones)',
+        'Medición primaria (instrumentación de potencia)',
         'Puesta a tierra (malla, conexiones equipotenciales)',
         'Estructuras y fundaciones (soportes, obra civil)'
       ],
       target: '#power-layer',
-      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama &middot; Power</span>'
+      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama · Power</span>'
     },
     protection: {
-      kicker: '02 &middot; Protection Layer',
-      title: 'Protection Layer &middot; Capa de Protecci&oacute;n',
-      desc: 'Est&aacute;s explorando el detalle t&eacute;cnico de esta capa.',
+      kicker: '02 · Protection Layer',
+      title: 'Protection Layer · Capa de Protección',
+      desc: 'Estás explorando el detalle técnico de esta capa.',
       bullets: [
         'Transformadores de instrumento (TC/TP)',
-        'Circuitos de disparo y actuaci&oacute;n (trip)',
-        'Interconexi&oacute;n de se&ntilde;ales (marshalling / bornes)',
-        'L&oacute;gicas de selectividad y respaldo (arquitectura)',
-        'Alimentaci&oacute;n auxiliar para protecci&oacute;n',
-        'Canalizaciones y cableado de protecci&oacute;n'
+        'Circuitos de disparo y actuación (trip)',
+        'Interconexión de señales (marshalling / bornes)',
+        'Lógicas de selectividad y respaldo (arquitectura)',
+        'Alimentación auxiliar para protección',
+        'Canalizaciones y cableado de protección'
       ],
       target: '#protection-layer',
-      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama &middot; Protection</span>'
+      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama · Protection</span>'
     },
     control: {
-      kicker: '03 &middot; Control Layer',
-      title: 'Control Layer &middot; Capa de Control',
-      desc: 'Est&aacute;s explorando el detalle t&eacute;cnico de esta capa.',
+      kicker: '03 · Control Layer',
+      title: 'Control Layer · Capa de Control',
+      desc: 'Estás explorando el detalle técnico de esta capa.',
       bullets: [
-        'Tableros de control y automatizaci&oacute;n',
+        'Tableros de control y automatización',
         'Servicios auxiliares AC/DC (cargadores, respaldo)',
-        'L&oacute;gicas y enclavamientos (interlocks)',
-        'Interfaces de operaci&oacute;n (local/HMI)',
-        'Se&ntilde;alizaci&oacute;n y cableado de control',
+        'Lógicas y enclavamientos (interlocks)',
+        'Interfaces de operación (local/HMI)',
+        'Señalización y cableado de control',
         'Alarmas y eventos operativos'
       ],
       target: '#control-layer',
-      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama &middot; Control</span>'
+      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama · Control</span>'
     },
     comms: {
-      kicker: '04 &middot; Communication Layer',
-      title: 'Communication Layer &middot; Capa de Comunicaciones',
-      desc: 'Est&aacute;s explorando el detalle t&eacute;cnico de esta capa.',
+      kicker: '04 · Communication Layer',
+      title: 'Communication Layer · Capa de Comunicaciones',
+      desc: 'Estás explorando el detalle técnico de esta capa.',
       bullets: [
         'Infraestructura de red industrial (switches/ruteo)',
-        'Medios f&iacute;sicos (FO/cobre) y patching',
-        'Sincronizaci&oacute;n de tiempo (time sync)',
-        'Sistemas de supervisi&oacute;n y registro (SCADA/Hist&oacute;rico)',
+        'Medios físicos (FO/cobre) y patching',
+        'Sincronización de tiempo (time sync)',
+        'Sistemas de supervisión y registro (SCADA/Histórico)',
         'Canalizaciones y cableado de comunicaciones',
         'Interfaz con sistemas externos (integraciones)'
       ],
       target: '#comms-layer',
-      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama &middot; Comms</span>'
+      diagramHTML: '<span style="font-family:var(--mono);font-size:12px;opacity:.85;">Diagrama · Comms</span>'
     }
   };
 
@@ -5888,56 +5878,56 @@ badge.textContent = c.title + ' (' + c.p + '%)';
   // ====== Datos (edita textos si quieres) ======
   const DATA = {
     power: {
-      kicker: '01 &middot; Power Layer',
-      title: 'Power Layer &middot; Capa de Potencia del Sistema',
-      desc: 'Arquitectura F&iacute;sica de una subestaci&oacute;n el&eacute;ctrica industrial.',
+      kicker: '01 · Power Layer',
+      title: 'Power Layer · Capa de Potencia del Sistema',
+      desc: 'Arquitectura Física de una subestación eléctrica industrial.',
       bullets: [
-        'Transformaci&oacute;n de niveles de tensi&oacute;n (equipos de potencia asociados)',
-        'Maniobra y seccionamiento (operaci&oacute;n y aislamiento)',
-        'Barras y conducci&oacute;n (conexiones y distribuci&oacute;n)',
-        'Medici&oacute;n primaria (instrumentaci&oacute;n asociada)',
+        'Transformación de niveles de tensión (equipos de potencia asociados)',
+        'Maniobra y seccionamiento (operación y aislamiento)',
+        'Barras y conducción (conexiones y distribución)',
+        'Medición primaria (instrumentación asociada)',
         'Puesta a tierra (malla y equipotencialidad)',
         'Estructuras y fundaciones (obra civil de soporte)'
       ],
       target: '#power-layer'
     },
     protection: {
-      kicker: '02 &middot; Protection Layer',
-      title: 'Protection Layer &middot; Capa de Protecci&oacute;n',
-      desc: 'Detecta condiciones anormales y a&iacute;sla fallas de forma selectiva, limitando su alcance e impacto operativo.',
+      kicker: '02 · Protection Layer',
+      title: 'Protection Layer · Capa de Protección',
+      desc: 'Detecta condiciones anormales y aísla fallas de forma selectiva, limitando su alcance e impacto operativo.',
       bullets: [
         'Transformadores de instrumento (TC/TP)',
-        'Rel&eacute;s / l&oacute;gica de protecci&oacute;n (funciones y criterios)',
-        'Circuitos de disparo y actuaci&oacute;n (trip)',
-        'Selectividad, respaldo y coordinaci&oacute;n',
-        'Alimentaci&oacute;n auxiliar (AC/DC asociada)',
-        'Cableado y canalizaciones de protecci&oacute;n'
+        'Relés / lógica de protección (funciones y criterios)',
+        'Circuitos de disparo y actuación (trip)',
+        'Selectividad, respaldo y coordinación',
+        'Alimentación auxiliar (AC/DC asociada)',
+        'Cableado y canalizaciones de protección'
       ],
       target: '#protection-layer'
     },
     control: {
-      kicker: '03 &middot; Control Layer',
-      title: 'Control Layer &middot; Capa de Control',
-      desc: 'Habilita operaci&oacute;n ordenada y segura: secuencias, enclavamientos, servicios auxiliares e interfaces de operaci&oacute;n.',
+      kicker: '03 · Control Layer',
+      title: 'Control Layer · Capa de Control',
+      desc: 'Habilita operación ordenada y segura: secuencias, enclavamientos, servicios auxiliares e interfaces de operación.',
       bullets: [
-        'Tableros de control / automatizaci&oacute;n',
+        'Tableros de control / automatización',
         'Servicios auxiliares AC/DC (respaldo y continuidad)',
         'Enclavamientos (interlocks) y secuencias',
         'Mandos locales / HMI / interfaces',
-        'Se&ntilde;alizaci&oacute;n, alarmas y eventos',
-        'Cableado de control y se&ntilde;alizaci&oacute;n'
+        'Señalización, alarmas y eventos',
+        'Cableado de control y señalización'
       ],
       target: '#control-layer'
     },
     comms: {
-      kicker: '04 &middot; Communication Layer',
-      title: 'Communication Layer &middot; Capa de Comunicaciones',
-      desc: 'Conecta supervisi&oacute;n, registro y an&aacute;lisis: redes industriales, trazabilidad de eventos y datos para decisi&oacute;n.',
+      kicker: '04 · Communication Layer',
+      title: 'Communication Layer · Capa de Comunicaciones',
+      desc: 'Conecta supervisión, registro y análisis: redes industriales, trazabilidad de eventos y datos para decisión.',
       bullets: [
         'Infraestructura de red industrial',
-        'Medios f&iacute;sicos (FO/cobre) y patching',
-        'Sincronizaci&oacute;n de tiempo (time sync)',
-        'Supervisi&oacute;n/registro (SCADA/hist&oacute;rico)',
+        'Medios físicos (FO/cobre) y patching',
+        'Sincronización de tiempo (time sync)',
+        'Supervisión/registro (SCADA/histórico)',
         'Canalizaciones y cableado de comunicaciones',
         'Interfaces con sistemas externos'
       ],
@@ -6251,6 +6241,8 @@ badge.textContent = c.title + ' (' + c.p + '%)';
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -6258,6 +6250,7 @@ badge.textContent = c.title + ' (' + c.p + '%)';
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -6284,6 +6277,7 @@ badge.textContent = c.title + ' (' + c.p + '%)';
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

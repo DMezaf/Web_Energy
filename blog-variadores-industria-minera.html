@@ -1,11 +1,11 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Variadores en la Industria Minera | VMS Energy</title>
-  <meta name="description" content="Guia tecnica sobre variadores en mineria: aplicaciones, desafios, criterios de seleccion y recomendaciones para mejorar eficiencia y continuidad operativa." />
+  <meta name="description" content="Gu&iacute;a t&eacute;cnica sobre variadores en miner&iacute;a: aplicaciones, desaf&iacute;os, criterios de selecci&oacute;n y recomendaciones para mejorar eficiencia y continuidad operativa." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/blog-variadores-industria-minera.html" />
   <meta property="og:type" content="website" />
@@ -19,15 +19,14 @@
   <meta name="twitter:title" content="Variadores en la Industria Minera | VMS Energy" />
   <meta name="twitter:description" content="Aplicaciones de variadores de frecuencia para control eficiente de motores en industria minera." />
   <meta name="twitter:image" content="https://vmsenergy.com/wp-content/uploads/2024/05/MINERO-MAIN.jpg" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--line:rgba(23,44,81,.14)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-    .container{max-width:1200px;margin-inline:auto;padding:0 20px}
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp');
+    }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
@@ -40,25 +39,11 @@
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-    .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    .privacy-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden}
-    .privacy-hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(100deg,rgba(8,24,48,.9) 0%,rgba(10,32,62,.78) 54%,rgba(15,76,129,.62) 100%),
-        url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp') center/cover no-repeat;
-      z-index:-1;
-    }
-    .privacy-hero .container{padding:88px 20px 80px}
-    .privacy-hero__eyebrow{display:inline-block;padding:.28rem .64rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 14px}
-    .privacy-hero h1{margin:0 0 10px;font-size:clamp(30px,4.6vw,52px);line-height:1.05}
-    .privacy-hero p{margin:0;max-width:900px;font-size:clamp(16px,2vw,20px);color:#e2ecf9}
     .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
     .btn--primary{background:var(--cobalt);color:#fff}
@@ -74,35 +59,11 @@
     .ethics-media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(8,28,54,.1)}
     .ethics-media img{display:block;width:100%;height:auto;max-height:min(68vh,840px);object-fit:contain;background:#f1f5f9}
     .ethics-tab{background:#fff;border:1px solid rgba(15,76,129,.24);border-radius:16px;padding:22px 20px;box-shadow:0 14px 28px rgba(8,28,54,.12);max-width:390px}
-    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:#0f4c81}
+    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:var(--concept-primary)}
     .ethics-tab p{margin:0 0 16px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#203754}
     .privacy-doc__btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:12px;border:1px solid rgba(23,44,81,.16);font-weight:700;background:#fff;color:#12365f}
-    .privacy-doc__btn--primary{background:#0f4c81;border-color:#0f4c81;color:#fff}
+    .privacy-doc__btn--primary{background:var(--concept-primary);border-color:var(--concept-primary);color:#fff}
     .privacy-doc__btn--outline{background:#fff;border:2px solid #0ea5e9;color:#0284c7;padding:12px 24px;border-radius:12px;letter-spacing:.02em}
-    .foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -119,7 +80,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -144,15 +105,9 @@
       }
     }\n.foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
-    @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
     @media (max-width:900px){.ethics-showcase{grid-template-columns:1fr}.ethics-tab{max-width:100%}.ethics-tab h3{font-size:clamp(30px,6vw,40px)}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}}
-      .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),var(--article-image, url('assets/img/Especialidades_servicios.png')) center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:820px;padding:86px 0 72px}
-    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
-    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
     .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
@@ -164,14 +119,14 @@
     .blog-card__body{padding:16px}
     .blog-card h3{margin:0 0 10px;font-size:1.1rem;line-height:1.25;color:#103961}
     .blog-card p{margin:0 0 14px;color:#4b647f}
-    .blog-card a{text-decoration:none;color:#0f4c81;font-weight:700}
+    .blog-card a{text-decoration:none;color:var(--concept-primary);font-weight:700}
     .blog-card a:hover{text-decoration:underline}
     .blog-card a.btn--primary{color:#fff}
     .blog-card a.btn--secondary{color:#fff}
     .blog-card a.btn--primary:hover,
     .blog-card a.btn--secondary:hover{text-decoration:none}
     .section-title{font-size:clamp(24px,2.8vw,34px);line-height:1.1;margin:0 0 12px;color:#103961}
-    .section-title::after{content:"";display:block;width:76px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,#0f4c81,rgba(142,215,255,.35))}
+    .section-title::after{content:"";display:block;width:76px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,var(--concept-primary),rgba(142,215,255,.35))}
     .article-section{padding:22px 0}
     .article-section p{margin:0 0 12px;color:#4b647f}
     .section-figure{margin:10px 0 14px;border:1px solid rgba(23,44,81,.14);border-radius:12px;overflow:hidden;background:#fff}
@@ -180,15 +135,15 @@
     .article-list{margin:0 0 10px 20px;color:#4b647f}
     .article-list li{margin:0 0 8px}
     .breadcrumbs{margin:0 0 14px;font-size:.92rem;color:#5a718d}
-    .breadcrumbs a{color:#0f4c81;text-decoration:none}
+    .breadcrumbs a{color:var(--concept-primary);text-decoration:none}
     .toc{background:#f8fbff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;margin:0 0 12px}
     .toc h2{margin:0 0 8px;color:#103961;font-size:1.06rem}
     .toc ol{margin:0;padding-left:20px}
-    .toc a{color:#0f4c81;text-decoration:none;font-weight:700}
+    .toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
     .toc a:hover{text-decoration:underline}
     .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}
     .kpi-card{background:#f4f9ff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:12px}
-    .kpi-card strong{display:block;color:#0f4c81;font-size:1.3rem;line-height:1}
+    .kpi-card strong{display:block;color:var(--concept-primary);font-size:1.3rem;line-height:1}
     .kpi-card span{color:#36526f;font-size:.94rem}
     .architecture-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:8px}
     .architecture-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px}
@@ -208,7 +163,7 @@
     .faq details{border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:12px;background:#fff}
     .faq details+details{margin-top:10px}
     .faq summary{cursor:pointer;font-weight:700;color:#103961}
-    .cta-panel{margin-top:16px;background:linear-gradient(140deg,#0f4c81,#123f69);border-radius:14px;padding:18px;color:#fff}
+    .cta-panel{margin-top:16px;background:linear-gradient(140deg,var(--concept-primary),#123f69);border-radius:14px;padding:18px;color:#fff}
     .cta-panel p{color:#dbeafe;margin:0 0 12px}
     .cta-panel .btn--secondary{border-color:rgba(255,255,255,.5);color:#fff}
     @media (max-width:980px){.blog-grid{grid-template-columns:1fr 1fr}.kpi-grid{grid-template-columns:1fr}.audit-grid{grid-template-columns:1fr}.architecture-grid{grid-template-columns:1fr 1fr}}
@@ -220,7 +175,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Variadores en la Industria Minera",
-    "description": "Guia tecnica sobre variadores en mineria: aplicaciones, desafios, criterios de seleccion y recomendaciones para mejorar eficiencia y continuidad operativa.",
+    "description": "Gu&iacute;a t&eacute;cnica sobre variadores en miner&iacute;a: aplicaciones, desaf&iacute;os, criterios de selecci&oacute;n y recomendaciones para mejorar eficiencia y continuidad operativa.",
     "author": {
       "@type": "Organization",
       "name": "VMS Energy"
@@ -266,16 +221,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -285,13 +245,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -300,15 +277,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -347,12 +337,12 @@
   <main>
     <section id="inicio" class="hero" aria-labelledby="articleTitle" style="--article-image:url('assets/img/hero_blog_aplicaciones_mineras.webp')">
       <div class="container hero__content">
-        <span class="eyebrow">VMS Energy &middot; Blog Tecnico</span>
+        <span class="eyebrow">VMS Energy &middot; Blog T&eacute;cnico</span>
         <h1 id="articleTitle">Variadores en la Industria Minera</h1>
-        <p>Guia tecnica para seleccionar, dimensionar y operar variadores de frecuencia en mineria con foco en continuidad, seguridad y eficiencia energetica.</p>
+        <p>Gu&iacute;a t&eacute;cnica para seleccionar, dimensionar y operar variadores de frecuencia en miner&iacute;a con foco en continuidad, seguridad y eficiencia energ&eacute;tica.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar evaluacion tecnica</a>
-          <a class="btn btn--secondary" href="https://vmsenergy.com/variadores-industria-minera/" target="_blank" rel="noopener noreferrer">Ver articulo original</a>
+          <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar evaluaci&oacute;n t&eacute;cnica</a>
+          <a class="btn btn--secondary" href="https://vmsenergy.com/variadores-industria-minera/" target="_blank" rel="noopener noreferrer">Ver art&iacute;culo original</a>
         </div>
       </div>
     </section>
@@ -364,81 +354,81 @@
         </nav>
         <article class="blog-card" style="max-width:980px;margin:0 auto;">
           <a class="blog-card__media" href="https://vmsenergy.com/variadores-industria-minera/" target="_blank" rel="noopener noreferrer" style="height:360px;">
-            <img src="assets/img/ingenieria_basada_evidencia_blog_aplicaciones_mineras.webp" alt="Ingenieria basada en evidencia para variadores en mineria" loading="lazy" decoding="async">
+            <img src="assets/img/ingenieria_basada_evidencia_blog_aplicaciones_mineras.webp" alt="Ingenier&iacute;a basada en evidencia para variadores en miner&iacute;a" loading="lazy" decoding="async">
           </a>
           <div class="blog-card__body">
             <section class="toc" aria-labelledby="tocTitle">
-              <h2 id="tocTitle">Indice del articulo</h2>
+              <h2 id="tocTitle">&Iacute;ndice del art&iacute;culo</h2>
               <ol>
                 <li><a href="#resumenTitle">Resumen Ejecutivo</a></li>
                 <li><a href="#aplicacionesTitle">Aplicaciones Mineras Donde el VFD Genera Mayor Valor</a></li>
-                <li><a href="#criteriosTitle">Criterios de Seleccion de Variadores para Mineria</a></li>
-                <li><a href="#seleccionTitle">Como seleccionar un variador para mineria</a></li>
-                <li><a href="#arquitecturaTitle">Arquitectura Tipica de Drives en Mineria</a></li>
-                <li><a href="#desafiosTitle">Desafios Tecnicos Clave</a></li>
-                <li><a href="#erroresTitle">Errores Comunes y Como Evitarlos</a></li>
+                <li><a href="#criteriosTitle">Criterios de Selecci&oacute;n de Variadores para Miner&iacute;a</a></li>
+                <li><a href="#seleccionTitle">C&oacute;mo seleccionar un variador para miner&iacute;a</a></li>
+                <li><a href="#arquitecturaTitle">Arquitectura T&iacute;pica de Drives en Miner&iacute;a</a></li>
+                <li><a href="#desafiosTitle">Desaf&iacute;os T&eacute;cnicos Clave</a></li>
+                <li><a href="#erroresTitle">Errores Comunes y C&oacute;mo Evitarlos</a></li>
                 <li><a href="#casoTitle">Mini Caso de Referencia</a></li>
-                <li><a href="#auditTitle">Hallazgos SEO y Conversion</a></li>
-                <li><a href="#faqTitle">FAQ Tecnica</a></li>
+                <li><a href="#auditTitle">Hallazgos SEO y Conversi&oacute;n</a></li>
+                <li><a href="#faqTitle">FAQ T&eacute;cnica</a></li>
               </ol>
             </section>
 
             <section class="article-section" aria-labelledby="resumenTitle">
               <h2 id="resumenTitle" class="section-title">Resumen Ejecutivo</h2>
-              <p>Los <strong>variadores de frecuencia en mineria</strong> (VFD mineria o drives mineria) se han convertido en una de las palancas tecnicas con mayor impacto en continuidad operativa, eficiencia energetica y control de proceso. En operaciones de extraccion, trituracion, molienda, bombeo y ventilacion, controlar velocidad, par y rampa de arranque puede significar la diferencia entre una l&iacute;nea estable y una planta con paros frecuentes.</p>
-              <p>Cuando se evalua un proyecto de <strong>control de motores en mineria</strong>, el variador no debe verse como un equipo aislado. Debe analizarse como parte de una arquitectura electrica completa: motor, carga mecanica, red, protecciones, ambiente, estrategia de control y mantenimiento. Esta vision integral es clave para evitar sobredimensionamientos costosos o subdimensionamientos que comprometan confiabilidad.</p>
-              <p>En mineria, la exigencia operativa es particularmente alta: cargas de par constante, picos de sobrecarga, redes electricas exigidas, polvo, vibracion y ubicaciones a gran altitud. Por eso, los <strong>variadores para bandas transportadoras</strong>, bombas, ventiladores y molinos requieren criterios tecnicos de especificacion mucho mas robustos que en aplicaciones industriales convencionales.</p>
-              <p>Este articulo resume como seleccionar y aplicar <strong>VFD en mineria</strong> con un enfoque practico: donde generan mayor valor, que criterios usar para elegirlos, que arquitectura tipica conviene, cuales son los errores mas comunes y como estructurar una ruta de implementacion que mejore disponibilidad y reduzca costo total de operacion.</p>
+              <p>Los <strong>variadores de frecuencia en miner&iacute;a</strong> (VFD miner&iacute;a o drives miner&iacute;a) se han convertido en una de las palancas t&eacute;cnicas con mayor impacto en continuidad operativa, eficiencia energ&eacute;tica y control de proceso. En operaciones de extracci&oacute;n, trituraci&oacute;n, molienda, bombeo y ventilaci&oacute;n, controlar velocidad, par y rampa de arranque puede significar la diferencia entre una l&iacute;nea estable y una planta con paros frecuentes.</p>
+              <p>Cuando se eval&uacute;a un proyecto de <strong>control de motores en miner&iacute;a</strong>, el variador no debe verse como un equipo aislado. Debe analizarse como parte de una arquitectura el&eacute;ctrica completa: motor, carga mec&aacute;nica, red, protecciones, ambiente, estrategia de control y mantenimiento. Esta visi&oacute;n integral es clave para evitar sobredimensionamientos costosos o subdimensionamientos que comprometan confiabilidad.</p>
+              <p>En miner&iacute;a, la exigencia operativa es particularmente alta: cargas de par constante, picos de sobrecarga, redes el&eacute;ctricas exigidas, polvo, vibraci&oacute;n y ubicaciones a gran altitud. Por eso, los <strong>variadores para bandas transportadoras</strong>, bombas, ventiladores y molinos requieren criterios t&eacute;cnicos de especificaci&oacute;n mucho m&aacute;s robustos que en aplicaciones industriales convencionales.</p>
+              <p>Este art&iacute;culo resume c&oacute;mo seleccionar y aplicar <strong>VFD en miner&iacute;a</strong> con un enfoque pr&aacute;ctico: d&oacute;nde generan mayor valor, qu&eacute; criterios usar para elegirlos, qu&eacute; arquitectura t&iacute;pica conviene, cu&aacute;les son los errores m&aacute;s comunes y c&oacute;mo estructurar una ruta de implementaci&oacute;n que mejore disponibilidad y reduzca costo total de operaci&oacute;n.</p>
             </section>
 
             <section class="article-section" aria-labelledby="aplicacionesTitle">
               <h2 id="aplicacionesTitle" class="section-title">Aplicaciones Mineras Donde el VFD Genera Mayor Valor</h2>
               <figure class="section-figure">
                 <img src="assets/img/aplicaciones_mineras_blog_VMS.webp" alt="Aplicaciones mineras donde los variadores de frecuencia generan valor">
-                <figcaption>Aplicaciones de VFD en bandas, bombeo, ventilacion y proceso minero.</figcaption>
+                <figcaption>Aplicaciones de VFD en bandas, bombeo, ventilaci&oacute;n y proceso minero.</figcaption>
               </figure>
-              <p>Los variadores de frecuencia tienen su mayor retorno cuando se aplican en cargas con variabilidad, rampas controladas y requerimientos altos de disponibilidad. En la practica, las aplicaciones con mejor potencial tecnico y economico suelen ser:</p>
+              <p>Los variadores de frecuencia tienen su mayor retorno cuando se aplican en cargas con variabilidad, rampas controladas y requerimientos altos de disponibilidad. En la pr&aacute;ctica, las aplicaciones con mejor potencial t&eacute;cnico y econ&oacute;mico suelen ser:</p>
               <ul class="article-list">
-                <li><strong>Bandas transportadoras:</strong> los variadores para bandas transportadoras reducen esfuerzos mecanicos en arranque, minimizan deslizamientos y mejoran sincronizacion de tramos.</li>
-                <li><strong>Bombas de proceso y desague:</strong> permiten ajustar caudal y presion segun demanda real, recortando consumo y golpes hidraulicos.</li>
-                <li><strong>Ventilacion principal y auxiliar:</strong> habilitan control fino de flujo de aire, fundamental para seguridad y cumplimiento de condiciones de trabajo.</li>
-                <li><strong>Molinos y trituracion:</strong> mejoran control de par a baja velocidad, especialmente en secuencias de arranque y operacion transitoria.</li>
-                <li><strong>Sistemas auxiliares criticos:</strong> como agitadores, filtracion o bombeo de relaves, donde el control dinamico protege equipos y mantiene calidad de proceso.</li>
+                <li><strong>Bandas transportadoras:</strong> los variadores para bandas transportadoras reducen esfuerzos mec&aacute;nicos en arranque, minimizan deslizamientos y mejoran sincronizaci&oacute;n de tramos.</li>
+                <li><strong>Bombas de proceso y desag&uuml;e:</strong> permiten ajustar caudal y presi&oacute;n seg&uacute;n demanda real, recortando consumo y golpes hidr&aacute;ulicos.</li>
+                <li><strong>Ventilaci&oacute;n principal y auxiliar:</strong> habilitan control fino de flujo de aire, fundamental para seguridad y cumplimiento de condiciones de trabajo.</li>
+                <li><strong>Molinos y trituraci&oacute;n:</strong> mejoran control de par a baja velocidad, especialmente en secuencias de arranque y operaci&oacute;n transitoria.</li>
+                <li><strong>Sistemas auxiliares cr&iacute;ticos:</strong> como agitadores, filtraci&oacute;n o bombeo de relaves, donde el control din&aacute;mico protege equipos y mantiene calidad de proceso.</li>
               </ul>
-              <p>En todos estos casos, un enfoque correcto de <strong>drives mineria</strong> ayuda a reducir picos de corriente, estabilizar la red interna de planta y proteger activos mecanicos. El resultado no es solo ahorro energetico: tambien mejora de confiabilidad, menos mantenimiento correctivo y mayor predictibilidad operativa.</p>
+              <p>En todos estos casos, un enfoque correcto de <strong>drives miner&iacute;a</strong> ayuda a reducir picos de corriente, estabilizar la red interna de planta y proteger activos mec&aacute;nicos. El resultado no es solo ahorro energ&eacute;tico: tambi&eacute;n mejora de confiabilidad, menos mantenimiento correctivo y mayor predictibilidad operativa.</p>
             </section>
 
             <section class="article-section" aria-labelledby="criteriosTitle">
-              <h2 id="criteriosTitle" class="section-title">Criterios de Seleccion de Variadores para Mineria</h2>
-              <p>Elegir correctamente un variador en industria minera requiere una matriz de decision tecnica y no solo comparar potencia nominal. Los criterios recomendados son:</p>
+              <h2 id="criteriosTitle" class="section-title">Criterios de Selecci&oacute;n de Variadores para Miner&iacute;a</h2>
+              <p>Elegir correctamente un variador en industria minera requiere una matriz de decisi&oacute;n t&eacute;cnica y no solo comparar potencia nominal. Los criterios recomendados son:</p>
               <ul class="article-list">
                 <li><strong>Perfil de carga real:</strong> par constante, variable o mixto; ciclos de arranque/parada; tiempo en sobrecarga.</li>
-                <li><strong>Capacidad de sobrecarga del VFD:</strong> especialmente critica en molinos y transportadores con inercia alta.</li>
-                <li><strong>Estrategia de control:</strong> escalar, vectorial o control avanzado, segun precision y dinamica requerida.</li>
-                <li><strong>Condiciones ambientales:</strong> polvo, temperatura, humedad, vibracion y nivel de contaminacion.</li>
+                <li><strong>Capacidad de sobrecarga del VFD:</strong> especialmente cr&iacute;tica en molinos y transportadores con inercia alta.</li>
+                <li><strong>Estrategia de control:</strong> escalar, vectorial o control avanzado, seg&uacute;n precisi&oacute;n y din&aacute;mica requerida.</li>
+                <li><strong>Condiciones ambientales:</strong> polvo, temperatura, humedad, vibraci&oacute;n y nivel de contaminaci&oacute;n.</li>
                 <li><strong>Altitud del sitio:</strong> considerar derating, enfriamiento y aislamiento para operaciones por encima de 2,000-4,000 msnm.</li>
-                <li><strong>Calidad de energia:</strong> armonicos, factor de potencia, filtros, compatibilidad con red y transformador.</li>
-                <li><strong>Mantenibilidad:</strong> acceso a repuestos, diagnostico remoto, parametrizacion y soporte de campo.</li>
+                <li><strong>Calidad de energ&iacute;a:</strong> arm&oacute;nicos, factor de potencia, filtros, compatibilidad con red y transformador.</li>
+                <li><strong>Mantenibilidad:</strong> acceso a repuestos, diagn&oacute;stico remoto, parametrizaci&oacute;n y soporte de campo.</li>
               </ul>
-              <p>Desde una perspectiva de <strong>eficiencia energetica mineria</strong>, los mejores proyectos son los que integran seleccion de equipo, estrategia de control y comisionamiento en una sola hoja de ruta. Sin esta integracion, es comun que el rendimiento esperado no se materialice en operacion real.</p>
+              <p>Desde una perspectiva de <strong>eficiencia energ&eacute;tica miner&iacute;a</strong>, los mejores proyectos son los que integran selecci&oacute;n de equipo, estrategia de control y comisionamiento en una sola hoja de ruta. Sin esta integraci&oacute;n, es com&uacute;n que el rendimiento esperado no se materialice en operaci&oacute;n real.</p>
             </section>
 
             <section class="article-section" aria-labelledby="seleccionTitle">
-              <h2 id="seleccionTitle" class="section-title">Como seleccionar un variador para mineria</h2>
-              <p>Para seleccionar correctamente un variador de frecuencia en mineria, conviene seguir una secuencia tecnica que reduzca errores de especificacion y acelere la puesta en marcha:</p>
+              <h2 id="seleccionTitle" class="section-title">C&oacute;mo seleccionar un variador para miner&iacute;a</h2>
+              <p>Para seleccionar correctamente un variador de frecuencia en miner&iacute;a, conviene seguir una secuencia t&eacute;cnica que reduzca errores de especificaci&oacute;n y acelere la puesta en marcha:</p>
               <ol class="article-list">
                 <li><strong>Definir la carga y el proceso:</strong> potencia de motor, tipo de carga (par constante/variable), arranques por hora y condiciones transitorias reales.</li>
                 <li><strong>Clasificar criticidad operacional:</strong> identificar si el equipo es cuello de botella del proceso para fijar niveles de redundancia y disponibilidad.</li>
-                <li><strong>Validar entorno del sitio:</strong> altitud, temperatura, polvo, vibracion y clase de gabinete requerida (IP/NEMA) para confiabilidad en campo.</li>
-                <li><strong>Dimensionar con margen tecnico:</strong> considerar sobrecarga, derating por altitud/temperatura, armonicos, filtros y compatibilidad con transformador/red.</li>
-                <li><strong>Seleccionar estrategia de control:</strong> escalar o vectorial segun precision de velocidad/par, estabilidad de proceso e integracion con PLC/SCADA.</li>
-                <li><strong>Planear comisionamiento y soporte:</strong> pruebas FAT/SAT, parametros base documentados, repuestos criticos y protocolo de mantenimiento.</li>
+                <li><strong>Validar entorno del sitio:</strong> altitud, temperatura, polvo, vibraci&oacute;n y clase de gabinete requerida (IP/NEMA) para confiabilidad en campo.</li>
+                <li><strong>Dimensionar con margen t&eacute;cnico:</strong> considerar sobrecarga, derating por altitud/temperatura, arm&oacute;nicos, filtros y compatibilidad con transformador/red.</li>
+                <li><strong>Seleccionar estrategia de control:</strong> escalar o vectorial seg&uacute;n precisi&oacute;n de velocidad/par, estabilidad de proceso e integraci&oacute;n con PLC/SCADA.</li>
+                <li><strong>Planear comisionamiento y soporte:</strong> pruebas FAT/SAT, par&aacute;metros base documentados, repuestos cr&iacute;ticos y protocolo de mantenimiento.</li>
               </ol>
-              <div class="selection-matrix" aria-label="Matriz de seleccion de VFD para mineria">
+              <div class="selection-matrix" aria-label="Matriz de selecci&oacute;n de VFD para miner&iacute;a">
                 <table>
                   <thead>
                     <tr>
-                      <th>Aplicacion</th>
+                      <th>Aplicaci&oacute;n</th>
                       <th>Tipo de carga</th>
                       <th>Control recomendado</th>
                     </tr>
@@ -450,96 +440,96 @@
                       <td>Vectorial con control de par y rampas suavizadas</td>
                     </tr>
                     <tr>
-                      <td>Bomba de proceso / desague</td>
+                      <td>Bomba de proceso / desag&uuml;e</td>
                       <td>Par variable</td>
-                      <td>Escalar o vectorial ligero con PID de presion/caudal</td>
+                      <td>Escalar o vectorial ligero con PID de presi&oacute;n/caudal</td>
                     </tr>
                     <tr>
                       <td>Ventilador principal mina</td>
                       <td>Par variable</td>
-                      <td>Escalar con control PID y gestion de eficiencia energetica</td>
+                      <td>Escalar con control PID y gesti&oacute;n de eficiencia energ&eacute;tica</td>
                     </tr>
                     <tr>
                       <td>Molino (SAG / bolas)</td>
                       <td>Par constante, picos de sobrecarga</td>
-                      <td>Vectorial de alto desempeno con limites dinamicos de par</td>
+                      <td>Vectorial de alto desempe&ntilde;o con l&iacute;mites din&aacute;micos de par</td>
                     </tr>
                     <tr>
                       <td>Trituradora</td>
-                      <td>Impacto mecanico, carga fluctuante</td>
-                      <td>Vectorial robusto con respuesta rapida y protecciones avanzadas</td>
+                      <td>Impacto mec&aacute;nico, carga fluctuante</td>
+                      <td>Vectorial robusto con respuesta r&aacute;pida y protecciones avanzadas</td>
                     </tr>
                     <tr>
                       <td>Sistema de relaves</td>
-                      <td>Par variable con continuidad critica</td>
+                      <td>Par variable con continuidad cr&iacute;tica</td>
                       <td>Escalar/vectorial con redundancia y monitoreo remoto</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p>Este enfoque ayuda a tomar decisiones con trazabilidad tecnica y evita escoger el variador solo por precio inicial, que es una de las causas mas comunes de bajo desempeno en mineria.</p>
+              <p>Este enfoque ayuda a tomar decisiones con trazabilidad t&eacute;cnica y evita escoger el variador solo por precio inicial, que es una de las causas m&aacute;s comunes de bajo desempe&ntilde;o en miner&iacute;a.</p>
               <div class="mid-cta">
-                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar matriz de seleccion VFD</a>
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar matriz de selecci&oacute;n VFD</a>
               </div>
             </section>
 
             <section class="article-section" aria-labelledby="arquitecturaTitle">
-              <h2 id="arquitecturaTitle" class="section-title">Arquitectura Tipica de Drives en Mineria</h2>
+              <h2 id="arquitecturaTitle" class="section-title">Arquitectura T&iacute;pica de Drives en Miner&iacute;a</h2>
               <figure class="section-figure">
-                <img src="assets/img/Arquitectura_tecnica_sistema_VFD.webp" alt="Arquitectura tecnica tipica de un sistema VFD en mineria">
-                <figcaption>Vista de referencia para arquitectura electrica, control y gestion de drives mineria.</figcaption>
+                <img src="assets/img/Arquitectura_tecnica_sistema_VFD.webp" alt="Arquitectura t&eacute;cnica t&iacute;pica de un sistema VFD en miner&iacute;a">
+                <figcaption>Vista de referencia para arquitectura el&eacute;ctrica, control y gesti&oacute;n de drives miner&iacute;a.</figcaption>
               </figure>
-              <p>Una arquitectura tipica de control de motores para mineria suele organizarse en cuatro capas tecnicas:</p>
+              <p>Una arquitectura t&iacute;pica de control de motores para miner&iacute;a suele organizarse en cuatro capas t&eacute;cnicas:</p>
               <div class="architecture-grid">
                 <article class="architecture-card">
                   <h3>Capa de Potencia</h3>
-                  <p>Alimentacion MT/BT, transformacion, protecciones y calidad de energia.</p>
+                  <p>Alimentaci&oacute;n MT/BT, transformaci&oacute;n, protecciones y calidad de energ&iacute;a.</p>
                 </article>
                 <article class="architecture-card">
                   <h3>Capa de Accionamiento</h3>
-                  <p>VFD, parametrizacion de control, protecciones de motor y comunicaciones.</p>
+                  <p>VFD, parametrizaci&oacute;n de control, protecciones de motor y comunicaciones.</p>
                 </article>
                 <article class="architecture-card">
                   <h3>Capa de Proceso</h3>
-                  <p>Sensores, lazos de control, secuencias operativas y logica de interlocks.</p>
+                  <p>Sensores, lazos de control, secuencias operativas y l&oacute;gica de interlocks.</p>
                 </article>
                 <article class="architecture-card">
-                  <h3>Capa de Gestion</h3>
-                  <p>SCADA, historicos, alarmas, indicadores de eficiencia y mantenimiento.</p>
+                  <h3>Capa de Gesti&oacute;n</h3>
+                  <p>SCADA, hist&oacute;ricos, alarmas, indicadores de eficiencia y mantenimiento.</p>
                 </article>
               </div>
-              <p>Esta arquitectura permite escalar desde proyectos puntuales hasta modernizaciones por etapas, con trazabilidad tecnica y menor riesgo de interrupciones en planta.</p>
+              <p>Esta arquitectura permite escalar desde proyectos puntuales hasta modernizaciones por etapas, con trazabilidad t&eacute;cnica y menor riesgo de interrupciones en planta.</p>
 
               <div class="mid-cta">
-                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar evaluacion de arquitectura</a>
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar evaluaci&oacute;n de arquitectura</a>
               </div>
             </section>
 
             <section class="article-section" aria-labelledby="desafiosTitle">
-              <h2 id="desafiosTitle" class="section-title">Desafios Tecnicos Clave</h2>
+              <h2 id="desafiosTitle" class="section-title">Desaf&iacute;os T&eacute;cnicos Clave</h2>
               <figure class="section-figure">
-                <img src="assets/img/Desafios_tecnicos_mineria_blog_aplicaciones_mineras.webp" alt="Desafios tecnicos en implementacion de variadores de frecuencia mineria">
-                <figcaption>Factores criticos de diseno y operacion para VFD en ambientes mineros exigentes.</figcaption>
+                <img src="assets/img/Desafios_tecnicos_mineria_blog_aplicaciones_mineras.webp" alt="Desaf&iacute;os t&eacute;cnicos en implementaci&oacute;n de variadores de frecuencia miner&iacute;a">
+                <figcaption>Factores cr&iacute;ticos de dise&ntilde;o y operaci&oacute;n para VFD en ambientes mineros exigentes.</figcaption>
               </figure>
-              <p>La industria minera presenta condiciones de operacion donde los margenes tecnicos son estrechos. Estos son los desafios mas frecuentes en proyectos de variadores de frecuencia mineria:</p>
+              <p>La industria minera presenta condiciones de operaci&oacute;n donde los m&aacute;rgenes t&eacute;cnicos son estrechos. Estos son los desaf&iacute;os m&aacute;s frecuentes en proyectos de variadores de frecuencia miner&iacute;a:</p>
               <ul class="article-list">
                 <li><strong>Par elevado a baja velocidad:</strong> exige control estable y reserva de corriente durante transitorios.</li>
                 <li><strong>Arranques exigentes:</strong> picos de par y corriente pueden desestabilizar la red interna si no se dise&ntilde;a bien la estrategia de rampa.</li>
                 <li><strong>Altitud y derating:</strong> menor densidad de aire reduce enfriamiento y afecta performance del sistema.</li>
-                <li><strong>Ambiente agresivo:</strong> polvo conductor y vibracion aceleran fallas si no existe proteccion y mantenimiento adecuados.</li>
-                <li><strong>Integracion de automatizacion:</strong> sin una buena coordinacion entre drive, PLC y protecciones aparecen trips y paros no deseados.</li>
+                <li><strong>Ambiente agresivo:</strong> polvo conductor y vibraci&oacute;n aceleran fallas si no existe protecci&oacute;n y mantenimiento adecuados.</li>
+                <li><strong>Integraci&oacute;n de automatizaci&oacute;n:</strong> sin una buena coordinaci&oacute;n entre drive, PLC y protecciones aparecen trips y paros no deseados.</li>
               </ul>
-              <p>La forma mas efectiva de mitigar estos riesgos es realizar una ingenieria de aplicacion previa, pruebas de integracion y comisionamiento con criterios de desempeno definidos desde el inicio.</p>
+              <p>La forma m&aacute;s efectiva de mitigar estos riesgos es realizar una ingenier&iacute;a de aplicaci&oacute;n previa, pruebas de integraci&oacute;n y comisionamiento con criterios de desempe&ntilde;o definidos desde el inicio.</p>
             </section>
 
             <section class="article-section" aria-labelledby="erroresTitle">
-              <h2 id="erroresTitle" class="section-title">Errores Comunes y Como Evitarlos</h2>
+              <h2 id="erroresTitle" class="section-title">Errores Comunes y C&oacute;mo Evitarlos</h2>
               <ul class="article-list">
-                <li><strong>Seleccionar por potencia nominal y no por perfil de carga:</strong> provoca desempeno inestable y sobrecalentamiento.</li>
+                <li><strong>Seleccionar por potencia nominal y no por perfil de carga:</strong> provoca desempe&ntilde;o inestable y sobrecalentamiento.</li>
                 <li><strong>Ignorar altitud del sitio:</strong> lleva a dimensionamientos insuficientes en enfriamiento y aislamiento.</li>
-                <li><strong>No considerar armonicos ni calidad de energia:</strong> afecta protecciones y equipos aguas arriba/abajo.</li>
-                <li><strong>Comisionamiento superficial:</strong> parametros mal ajustados generan trips frecuentes.</li>
-                <li><strong>Sin plan de mantenimiento y repuestos:</strong> incrementa tiempos de recuperacion ante falla.</li>
+                <li><strong>No considerar arm&oacute;nicos ni calidad de energ&iacute;a:</strong> afecta protecciones y equipos aguas arriba/abajo.</li>
+                <li><strong>Comisionamiento superficial:</strong> par&aacute;metros mal ajustados generan trips frecuentes.</li>
+                <li><strong>Sin plan de mantenimiento y repuestos:</strong> incrementa tiempos de recuperaci&oacute;n ante falla.</li>
               </ul>
               <p>Evitar estos puntos en la fase de dise&ntilde;o reduce significativamente el costo de no calidad en etapa operativa.</p>
             </section>
@@ -547,46 +537,46 @@
             <section class="article-section" aria-labelledby="casoTitle">
               <h2 id="casoTitle" class="section-title">Mini Caso de Referencia</h2>
               <figure class="section-figure">
-                <img src="assets/img/impacto_operativo_blog_aplicaciones_mineras.webp" alt="Impacto operativo de modernizar variadores de frecuencia en mineria">
-                <figcaption>Impacto operativo esperado al optimizar accionamientos con enfoque de ingenieria.</figcaption>
+                <img src="assets/img/impacto_operativo_blog_aplicaciones_mineras.webp" alt="Impacto operativo de modernizar variadores de frecuencia en miner&iacute;a">
+                <figcaption>Impacto operativo esperado al optimizar accionamientos con enfoque de ingenier&iacute;a.</figcaption>
               </figure>
-              <p>Escenario tipico de optimizacion de accionamientos en proceso minero, aplicando criterios de seleccion y comisionamiento estructurado:</p>
+              <p>Escenario t&iacute;pico de optimizaci&oacute;n de accionamientos en proceso minero, aplicando criterios de selecci&oacute;n y comisionamiento estructurado:</p>
               <div class="kpi-grid">
-                <div class="kpi-card"><strong>12-18%</strong><span>Reduccion estimada de consumo energetico en cargas variables.</span></div>
-                <div class="kpi-card"><strong>25-35%</strong><span>Disminucion de eventos mecanicos por arranques bruscos.</span></div>
-                <div class="kpi-card"><strong>+Disponibilidad</strong><span>Mayor continuidad por control de proceso mas estable.</span></div>
+                <div class="kpi-card"><strong>12-18%</strong><span>Reducci&oacute;n estimada de consumo energ&eacute;tico en cargas variables.</span></div>
+                <div class="kpi-card"><strong>25-35%</strong><span>Disminuci&oacute;n de eventos mec&aacute;nicos por arranques bruscos.</span></div>
+                <div class="kpi-card"><strong>+Disponibilidad</strong><span>Mayor continuidad por control de proceso m&aacute;s estable.</span></div>
               </div>
-              <p>Estas mejoras se observan con mayor consistencia cuando la modernizacion de drives se acompana de estandares de arranque, protecciones coordinadas, instrumentacion confiable y acompanamiento de especialistas durante puesta en marcha.</p>
+              <p>Estas mejoras se observan con mayor consistencia cuando la modernizaci&oacute;n de drives se acompa&ntilde;a de est&aacute;ndares de arranque, protecciones coordinadas, instrumentaci&oacute;n confiable y acompa&ntilde;amiento de especialistas durante puesta en marcha.</p>
             </section>
 
             <section class="article-section" aria-labelledby="faqTitle">
               <span id="auditTitle" style="position:relative;left:-9999px"></span>
-              <h2 id="faqTitle" class="section-title">FAQ Tecnica</h2>
+              <h2 id="faqTitle" class="section-title">FAQ T&eacute;cnica</h2>
               <div class="faq">
                 <details>
-                  <summary>Como seleccionar un variador para mineria de alta demanda?</summary>
+                  <summary>&iquest;C&oacute;mo seleccionar un variador para miner&iacute;a de alta demanda?</summary>
                   <p>Debe evaluarse perfil de carga, par de arranque, condiciones ambientales, altitud, estrategia de control y margen de sobrecarga del sistema completo.</p>
                 </details>
                 <details>
-                  <summary>La altitud afecta el desempeno del variador?</summary>
-                  <p>Si. A mayor altitud disminuye la capacidad de enfriamiento del aire y puede requerirse derating, ajustes de gabinete y validacion de aislamiento.</p>
+                  <summary>&iquest;La altitud afecta el desempe&ntilde;o del variador?</summary>
+                  <p>S&iacute;. A mayor altitud disminuye la capacidad de enfriamiento del aire y puede requerirse derating, ajustes de gabinete y validaci&oacute;n de aislamiento.</p>
                 </details>
                 <details>
-                  <summary>Que beneficio principal entrega un VFD bien implementado?</summary>
-                  <p>Mejora estabilidad operativa, reduce consumo energetico en aplicaciones variables y protege equipos por arranques/paradas controlados.</p>
+                  <summary>&iquest;Qu&eacute; beneficio principal entrega un VFD bien implementado?</summary>
+                  <p>Mejora estabilidad operativa, reduce consumo energ&eacute;tico en aplicaciones variables y protege equipos por arranques/paradas controlados.</p>
                 </details>
                 <details>
-                  <summary>Cuando conviene una evaluacion tecnica previa?</summary>
-                  <p>Siempre que existan cargas criticas, historial de paros, consumo elevado o planes de modernizacion de accionamientos en planta.</p>
+                  <summary>&iquest;Cu&aacute;ndo conviene una evaluaci&oacute;n t&eacute;cnica previa?</summary>
+                  <p>Siempre que existan cargas cr&iacute;ticas, historial de paros, consumo elevado o planes de modernizaci&oacute;n de accionamientos en planta.</p>
                 </details>
               </div>
             </section>
 
-            <section class="cta-panel" aria-label="Llamado a la accion">
-              <h2 style="margin:0 0 8px;">Quieres evaluar tus variadores para mineria?</h2>
-              <p>Te ayudamos a definir arquitectura, especificacion y ruta de implementacion para mejorar continuidad y eficiencia de tu operacion.</p>
+            <section class="cta-panel" aria-label="Llamado a la acci&oacute;n">
+              <h2 style="margin:0 0 8px;">&iquest;Quieres evaluar tus variadores para miner&iacute;a?</h2>
+              <p>Te ayudamos a definir arquitectura, especificaci&oacute;n y ruta de implementaci&oacute;n para mejorar continuidad y eficiencia de tu operaci&oacute;n.</p>
               <div class="hero__actions" style="margin-top:0;">
-                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar diagnostico tecnico</a>
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar diagn&oacute;stico t&eacute;cnico</a>
                 <a class="btn btn--secondary" href="blog.html">Volver al blog</a>
               </div>
             </section>
@@ -645,6 +635,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -652,6 +644,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -678,6 +671,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>
@@ -705,23 +699,23 @@
   "mainEntity":[
     {
       "@type":"Question",
-      "name":"Como seleccionar un variador para mineria de alta demanda?",
+      "name":"&iquest;C&oacute;mo seleccionar un variador para miner&iacute;a de alta demanda?",
       "acceptedAnswer":{"@type":"Answer","text":"Debe evaluarse perfil de carga, par de arranque, condiciones ambientales, altitud, estrategia de control y margen de sobrecarga del sistema completo."}
     },
     {
       "@type":"Question",
-      "name":"La altitud afecta el desempeno del variador?",
-      "acceptedAnswer":{"@type":"Answer","text":"Si. A mayor altitud disminuye la capacidad de enfriamiento del aire y puede requerirse derating, ajustes de gabinete y validacion de aislamiento."}
+      "name":"&iquest;La altitud afecta el desempe&ntilde;o del variador?",
+      "acceptedAnswer":{"@type":"Answer","text":"S&iacute;. A mayor altitud disminuye la capacidad de enfriamiento del aire y puede requerirse derating, ajustes de gabinete y validaci&oacute;n de aislamiento."}
     },
     {
       "@type":"Question",
-      "name":"Que beneficio principal entrega un VFD bien implementado?",
-      "acceptedAnswer":{"@type":"Answer","text":"Mejora estabilidad operativa, reduce consumo energetico en aplicaciones variables y protege equipos por arranques y paradas controlados."}
+      "name":"&iquest;Qu&eacute; beneficio principal entrega un VFD bien implementado?",
+      "acceptedAnswer":{"@type":"Answer","text":"Mejora estabilidad operativa, reduce consumo energ&eacute;tico en aplicaciones variables y protege equipos por arranques y paradas controlados."}
     },
     {
       "@type":"Question",
-      "name":"Cuando conviene una evaluacion tecnica previa?",
-      "acceptedAnswer":{"@type":"Answer","text":"Siempre que existan cargas criticas, historial de paros, consumo elevado o planes de modernizacion de accionamientos en planta."}
+      "name":"&iquest;Cu&aacute;ndo conviene una evaluaci&oacute;n t&eacute;cnica previa?",
+      "acceptedAnswer":{"@type":"Answer","text":"Siempre que existan cargas cr&iacute;ticas, historial de paros, consumo elevado o planes de modernizaci&oacute;n de accionamientos en planta."}
     }
   ]
 }

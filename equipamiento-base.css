@@ -1,0 +1,338 @@
+/*
+ * ============================================================
+ *  equipamiento-base.css — Estilos compartidos Concepto Equipamiento
+ *  VMS Energy · v1.0 · Mayo 2026
+ * ============================================================
+ *
+ *  REQUISITO: cargar tokens.css ANTES que este archivo.
+ *  Uso: <html data-concept="equipamiento">
+ *       <link rel="stylesheet" href="tokens.css">
+ *       <link rel="stylesheet" href="equipamiento-base.css">
+ *
+ *  Identidad: slate técnico — transmite precisión, confiabilidad,
+ *  especificación rigurosa. Primario #334155, acento cobre #D97706.
+ *
+ *  Cada página agrega <style> con sus componentes técnicos únicos
+ *  (tablas de especificaciones, topologías, curvas, etc.)
+ * ============================================================
+ */
+
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+html { scroll-behavior: smooth }
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: #fff;
+  line-height: 1.6;
+}
+h1, h2, h3, h4 { font-family: var(--font-body); margin: 0 }
+p { margin: 0 }
+img { max-width: 100%; display: block }
+a { text-decoration: none; color: inherit }
+
+
+/* ── Layout ── */
+.container { max-width: 1200px; margin-inline: auto; padding: 0 20px }
+
+
+/* ── Header / Nav (idéntico al resto del sitio) ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #fff;
+  border-bottom: 1px solid rgba(23,44,81,.08);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 }
+.brand__logo {
+  width: clamp(168px,18vw,210px);
+  height: clamp(54px,6vw,66px);
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(23,44,81,.14);
+}
+.brand__logo img { max-width: 94%; max-height: 88%; width: auto; height: auto; object-fit: contain; display: block }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; align-items: center }
+nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spacing: .2px }
+.cta-header { padding: .6rem 1rem; background: var(--cobalt); color: #fff !important; border-radius: 999px }
+.menu-toggle { display: none; border: 1px solid rgba(23,44,81,.2); border-radius: 10px; padding: .5rem .7rem; background: #fff; cursor: pointer; font-weight: 700; color: var(--navy); font-family: var(--font-body) }
+.nav-item--has-submenu { position: relative }
+.nav-item--has-submenu::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px }
+.submenu {
+  margin: 0; padding: 10px 12px;
+  position: absolute; top: 100%; left: 0;
+  min-width: 320px;
+  background: #fff;
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  box-shadow: var(--shadow-nav);
+  display: none;
+  z-index: 60;
+}
+.nav-item--has-submenu:hover .submenu,
+.nav-item--has-submenu:has(:focus-visible) .submenu { display: block }
+/* Un solo submenu visible a la vez: si un ítem siguiente está activo, ocultar el submenu del ítem previo */
+@media (min-width: 681px) {
+  .nav-item--has-submenu:has(~ .nav-item--has-submenu:hover) .submenu,
+  .nav-item--has-submenu:has(~ .nav-item--has-submenu :focus-visible) .submenu { display: none }
+}
+.submenu__group + .submenu__group { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(23,44,81,.1) }
+.submenu__title { display: block; color: #0f4c81; font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; text-decoration: none }
+.submenu__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px }
+.submenu__list a { display: block; color: #12365f; font-weight: 600; font-size: .9rem; line-height: 1.25; padding: 3px 0 }
+.submenu--mega { min-width: 500px; display: flex; gap: 0 }
+.submenu--mega .submenu__group { flex: 1; min-width: 0 }
+.submenu--mega .submenu__group + .submenu__group { margin-top: 0; padding-top: 0; border-top: none; padding-left: 14px; border-left: 1px solid rgba(23,44,81,.1) }
+
+
+/* ── Botones ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 11px 20px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-size: .97rem;
+  font-family: var(--font-body);
+  transition: opacity .18s, transform .18s;
+}
+.btn:hover { opacity: .88; transform: translateY(-1px) }
+.btn--primary { background: var(--concept-primary); color: #fff }
+.btn--ghost { background: transparent; border-color: rgba(255,255,255,.38); color: #fff }
+.btn--outline { background: transparent; border-color: var(--concept-primary); color: var(--concept-primary) }
+
+
+/* ── Hero Equipamiento — dark slate overlay ── */
+/* La imagen de fondo es específica de cada página — se define en el <style> local */
+.hero {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--equip-hero-overlay,
+    linear-gradient(100deg, rgba(8,20,40,.94) 0%, rgba(30,41,59,.88) 50%, rgba(51,65,85,.72) 100%)),
+    var(--equip-hero-img, url('assets/img/hero_que_hacemos_VMS_Energy.png')) center/cover no-repeat;
+  z-index: -1;
+}
+.hero .container { padding: 80px 20px 72px }
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: .28rem .72rem;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 999px;
+  font-size: .8rem;
+  margin: 0 0 16px;
+}
+.hero h1 { margin: 0 0 12px; font-size: clamp(28px,4.4vw,50px); line-height: 1.06 }
+.hero h1 em { font-style: normal; color: var(--concept-kpi-val) } /* slate-400 */
+.hero p { margin: 0 0 24px; max-width: 740px; font-size: clamp(15px,1.8vw,19px); color: #e2ecf9 }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 26px }
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: .3rem .8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  font-size: .82rem;
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+
+/* ── Secciones ── */
+.section { padding: 56px 0 }
+.section--alt { background: var(--concept-section-alt) }
+.section--dark { background: var(--concept-section-dark); color: #fff }
+.section--spec { background: var(--bg-soft) } /* para tablas de especificaciones */
+.sec-label {
+  display: inline-block;
+  color: var(--concept-primary);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.sec-h2 { margin: 0 0 8px; font-size: clamp(22px,3vw,36px); line-height: 1.1; color: #0f172a }
+.sec-lead { margin: 0 0 32px; font-size: clamp(14px,1.5vw,17px); color: #374151; max-width: 680px }
+
+
+/* ── Tabla de parámetros / especificaciones (compartida) ── */
+.param-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: .9rem }
+.param-table th {
+  background: var(--concept-primary);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.param-table td { padding: 10px 14px; border-bottom: 1px solid var(--border-line); color: #374151; vertical-align: top }
+.param-table tr:nth-child(even) td { background: var(--concept-section-alt) }
+.param-table tr:last-child td { border-bottom: none }
+/* Valor destacado de spec (acento cobre) */
+.param-table .spec-val { font-weight: 800; color: var(--spec-accent) }
+
+
+/* ── Normas / Certificaciones (compartida) ── */
+.normas-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 20px }
+.norma-card {
+  background: #fff;
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.norma-card__code {
+  font-size: .8rem;
+  font-weight: 800;
+  font-family: monospace;
+  color: var(--spec-badge-norm); /* cobalt — normas siempre en azul corporativo */
+  white-space: nowrap;
+  background: var(--spec-accent-light);
+  padding: .2rem .5rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.norma-card__text { font-size: .85rem; color: #374151; line-height: 1.4 }
+
+
+/* ── CTA Band (compartida) ── */
+.cta-band {
+  background: linear-gradient(135deg, var(--concept-darker), var(--concept-primary));
+  padding: 52px 0;
+  text-align: center;
+  color: #fff;
+}
+.cta-band h2 { margin: 0 0 10px; font-size: clamp(22px,3vw,34px) }
+.cta-band p { margin: 0 0 24px; color: var(--concept-kpi-val); font-size: clamp(14px,1.5vw,17px) }
+.cta-band-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
+
+
+/* ── FAQ (con <details> nativo — estilo Equipamiento) ── */
+.faq-list { max-width: 760px; margin: 24px auto 0 }
+details.faq {
+  border: 1px solid var(--border-line);
+  border-radius: 12px;
+  margin-bottom: 9px;
+  background: #fff;
+  overflow: hidden;
+}
+details.faq[open] { border-color: rgba(51,65,85,.3) }
+details.faq summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: .95rem;
+  color: #12365f;
+  list-style: none;
+  gap: 12px;
+  font-family: var(--font-body);
+}
+details.faq summary::-webkit-details-marker { display: none }
+details.faq summary::after { content: "+"; font-size: 1.3rem; font-weight: 400; color: var(--concept-primary); flex-shrink: 0 }
+details.faq[open] summary::after { content: "−" }
+.faq-body { padding: 0 18px 16px; color: #374151; font-size: .91rem; line-height: 1.6 }
+/* También soporta el patrón aria de las páginas sectoriales */
+.faq-block { display: grid; gap: 10px; margin-top: 24px }
+.faq-item { border: 1px solid var(--border-line); border-radius: 10px; overflow: hidden }
+.faq-q {
+  width: 100%; background: #fff; border: none; text-align: left;
+  padding: 15px 18px; font-weight: 700; color: var(--navy); cursor: pointer;
+  font-size: .94rem; display: flex; justify-content: space-between; align-items: center;
+  gap: 10px; font-family: var(--font-body);
+}
+.faq-q::after { content: "＋"; font-size: 1.1rem; color: var(--concept-primary); flex-shrink: 0 }
+.faq-q[aria-expanded="true"]::after { content: "－" }
+.faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: .9rem; color: #4b5563; line-height: 1.65 }
+.faq-a.is-open { max-height: 400px; padding: 0 18px 16px }
+
+
+/* ── Sticky buttons ── */
+.sticky-wa { position: fixed; bottom: 22px; left: 18px; z-index: 99 }
+.sticky-wa a { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 999px; background: #25d366; box-shadow: 0 4px 14px rgba(37,211,102,.35); text-decoration: none }
+.sticky-wa a svg { width: 26px; height: 26px; fill: #fff }
+.sticky-cta { position: fixed; bottom: 22px; right: 18px; z-index: 99 }
+.sticky-cta a { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; background: var(--concept-primary); color: #fff; border-radius: 999px; font-weight: 700; font-size: .9rem; text-decoration: none; box-shadow: 0 4px 14px rgba(51,65,85,.35); font-family: var(--font-body) }
+
+
+/* ── Footer ── */
+.foot { background: #0b1428; color: #cbd5e1; font-family: var(--font-body) }
+#footer .container { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr; gap: 18px; padding: 40px 0; align-items: start }
+#footer h4 { margin: 0 0 10px; font-size: 1rem; color: #fff }
+#footer ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.7 }
+#footer a { word-break: break-word }
+.foot-link { color: #cbd5e1; text-decoration: none }
+.foot-link:hover { color: #fff }
+.foot-social__link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 999px; border: 1px solid rgba(203,213,225,.35); color: #cbd5e1 }
+.foot-social__link svg { width: 18px; height: 18px; fill: currentColor }
+.foot-note { border-top: 1px solid rgba(255,255,255,.12); text-align: center; padding: 12px 0; color: #94a3b8; font-size: 13px }
+
+
+/* ── Reveal animation ── */
+.reveal { opacity: 0; transform: translateY(18px); animation: fadeUp .6s ease forwards }
+.delay-1 { animation-delay: .12s }
+.delay-2 { animation-delay: .24s }
+.delay-3 { animation-delay: .36s }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0) } }
+
+
+/* ── Responsive ── */
+@media (max-width: 1300px) {
+  #footer .container { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; padding: 34px 0 }
+}
+@media (max-width: 980px) {
+  #footer .container { grid-template-columns: repeat(2,minmax(0,1fr)) }
+  nav ul { gap: 14px }
+  .submenu { min-width: 280px }
+  .normas-grid { grid-template-columns: 1fr 1fr }
+}
+@media (max-width: 700px) {
+  #footer .container { grid-template-columns: 1fr; gap: 16px; padding: 24px 0 }
+  .normas-grid { grid-template-columns: 1fr }
+}
+@media (max-width: 680px) {
+  nav ul {
+    display: none;
+    position: absolute; right: 20px; top: 92px;
+    background: #fff;
+    border: 1px solid var(--border-line);
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 0;
+    width: min(290px, calc(100vw - 40px));
+    box-shadow: var(--shadow-nav);
+  }
+  nav ul.is-open { display: grid; gap: 10px }
+  .menu-toggle { display: inline-flex }
+  .submenu { position: static; display: none; min-width: 0; border: 0; box-shadow: none; padding: 8px 0 0 12px }
+  .nav-item--has-submenu.is-open .submenu { display: block }
+}

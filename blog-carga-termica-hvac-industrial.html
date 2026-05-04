@@ -1,0 +1,1009 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo Calcular la Carga Térmica para HVAC Industrial: Metodología ASHRAE y Errores Comunes en Proyectos EPC | VMS Energy</title>
+  <meta name="description" content="Guía técnica completa para el cálculo de carga térmica en plantas industriales: método CLTD/CLF de ASHRAE, condiciones de diseño por ciudad, psicrometría, errores frecuentes y caso real de planta farmacéutica en Jalisco." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-carga-termica-hvac-industrial.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Cómo Calcular la Carga Térmica para HVAC Industrial: Metodología ASHRAE | VMS Energy" />
+  <meta property="og:description" content="Del método CLTD/CLF a la selección de chillers en N+1: cómo VMS Energy desarrolla la ingeniería de carga térmica en proyectos EPC industriales en México." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-carga-termica-hvac-industrial.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/hvac/og-carga-termica-hvac.webp" />
+  <meta property="article:published_time" content="2026-07-10" />
+  <meta property="article:modified_time" content="2026-07-10" />
+  <meta property="article:section" content="HVAC Industrial" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carga Térmica HVAC Industrial: Metodología ASHRAE y Errores Comunes | VMS Energy" />
+  <meta name="twitter:description" content="Guía técnica: método CLTD/CLF, condiciones ASHRAE 0.4% por ciudad, derating por altitud y caso real de planta farmacéutica 62 TR en Jalisco." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/hvac/og-carga-termica-hvac.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.png');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn--primary{background:var(--cobalt);color:#fff}
+    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#991b1b;background:linear-gradient(135deg,rgba(153,27,27,.07),rgba(239,68,68,.07));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:580px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.92rem;letter-spacing:.02em}
+    .article-table td{color:#314a67;font-size:.97rem}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table .good{color:#166534}
+    .article-table .mid{color:#92400e}
+    .article-table .hi{color:#991b1b;font-weight:700}
+    .article-table .na{color:#64748b;font-style:italic}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+
+    /* Fórmula highlight */
+    .formula-box{margin:18px 0;padding:16px 20px;background:#f0f6ff;border:1px solid rgba(15,76,129,.18);border-radius:14px;font-family:monospace,monospace;font-size:1.02rem;color:#12365f;overflow-x:auto}
+    .formula-box .formula-label{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--concept-primary);margin-bottom:6px}
+    .formula-box .formula-note{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.88rem;color:#4a5f79;margin-top:8px;font-style:italic}
+
+    /* Barra de carga térmica por componente */
+    .load-bar{margin:22px 0}
+    .load-bar__row{display:grid;grid-template-columns:160px 1fr 64px;gap:10px;align-items:center;margin-bottom:9px}
+    .load-bar__label{font-size:.9rem;font-weight:700;color:#12365f}
+    .load-bar__track{height:18px;border-radius:999px;background:#e8f0fb;overflow:hidden}
+    .load-bar__fill{height:100%;border-radius:999px;transition:width .6s ease}
+    .load-bar__fill--process{background:linear-gradient(90deg,var(--concept-primary),#3a6fa5)}
+    .load-bar__fill--envelope{background:linear-gradient(90deg,#166534,#22c55e)}
+    .load-bar__fill--lighting{background:linear-gradient(90deg,#92400e,#f59e0b)}
+    .load-bar__fill--solar{background:linear-gradient(90deg,#6d28d9,#a78bfa)}
+    .load-bar__fill--people{background:linear-gradient(90deg,#0e7490,#22d3ee)}
+    .load-bar__fill--vent{background:linear-gradient(90deg,#be185d,#f472b6)}
+    .load-bar__pct{font-size:.88rem;font-weight:800;color:#12365f;text-align:right}
+
+    /* Error cards */
+    .error-list{margin:22px 0;display:grid;gap:12px}
+    .error-card{padding:16px 18px;border-radius:16px;border:1px solid rgba(153,27,27,.18);background:linear-gradient(135deg,rgba(153,27,27,.05),rgba(239,68,68,.04))}
+    .error-card__num{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.08em;color:#991b1b;text-transform:uppercase;margin-bottom:4px}
+    .error-card h3{margin:0 0 6px;font-size:1.05rem;color:#7f1d1d}
+    .error-card p{margin:0;color:#314a67;font-size:.97rem}
+    .error-card .fix{margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(22,101,52,.08);border:1px solid rgba(22,101,52,.14);color:#166534;font-size:.93rem}
+    .error-card .fix strong{color:#14532d}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.article-grid--4,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.load-bar__row{grid-template-columns:1fr 80px}.load-bar__label{font-size:.82rem}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"HVAC Industrial","item":"https://vmsenergy.com/soluciones_hvac_industrial.html"},{"@type":"ListItem","position":4,"name":"Carga térmica HVAC industrial","item":"https://vmsenergy.com/blog-carga-termica-hvac-industrial.html"}]},{"@type":"BlogPosting","headline":"Cómo calcular la carga térmica para HVAC industrial: metodología ASHRAE y errores comunes en proyectos EPC","description":"Guía técnica completa para el cálculo de carga térmica en plantas industriales: método CLTD/CLF de ASHRAE, condiciones de diseño por ciudad, psicrometría, errores frecuentes y caso real de planta farmacéutica en Jalisco.","image":"https://vmsenergy.com/assets/img/blog/hvac/og-carga-termica-hvac.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-07-10","dateModified":"2026-07-10","mainEntityOfPage":"https://vmsenergy.com/blog-carga-termica-hvac-industrial.html","articleSection":"HVAC Industrial","keywords":"carga térmica HVAC industrial, método CLTD ASHRAE, cálculo toneladas refrigeración, condiciones diseño ASHRAE México, psicrometría industrial, derating altitud HVAC, selección chiller industrial, EPC HVAC México, NOM-023-ENER-2010"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es una tonelada de refrigeración y cuántos kW equivale?","acceptedAnswer":{"@type":"Answer","text":"Una tonelada de refrigeración (TR) es la capacidad necesaria para fundir 1 tonelada corta de hielo en 24 horas. Equivale a 12 000 BTU/h o 3.517 kW. Es la unidad de referencia en el dimensionamiento de chillers, equipos de precisión y sistemas de proceso en HVAC industrial."}},{"@type":"Question","name":"¿Qué método de cálculo de carga térmica utiliza VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"VMS Energy aplica el método CLTD/CLF (Cooling Load Temperature Difference / Cooling Load Factor) del manual ASHRAE. Este método calcula por separado: transmisión por envolvente (U×A×CLTD), radiación solar en ventanas (SC×A×SHGF×CLF), calor de iluminación, calor de ocupantes (≈70 W sensible + 45 W latente/persona), calor de equipos de proceso (P×FUM×FLM) y carga de ventilación e infiltraciones. La suma de componentes sensibles y latentes da la carga total en BTU/h o TR."}},{"@type":"Question","name":"¿Cuáles son las condiciones de diseño ASHRAE 0.4% para las principales ciudades industriales de México?","acceptedAnswer":{"@type":"Answer","text":"Las condiciones de diseño ASHRAE 0.4% (temperatura de bulbo seco que se supera solo el 0.4% de las horas del año) para ciudades clave son: Guadalajara 33 °C Tbs / 19 °C Tbh, Monterrey 40 °C Tbs / 22 °C Tbh, Ciudad de México 27 °C Tbs (a 2 240 m de altitud), Ciudad del Carmen 35 °C Tbs / 27 °C Tbh, Querétaro 32 °C Tbs / 18 °C Tbh. Estas condiciones son la base para el cálculo de carga máxima de verano en proyectos EPC."}},{"@type":"Question","name":"¿Cómo afecta la altitud a la capacidad de los equipos HVAC?","acceptedAnswer":{"@type":"Answer","text":"A mayor altitud, la densidad del aire disminuye y los equipos entregan menos capacidad. La regla estándar es aproximadamente 1% de pérdida de capacidad por cada 300 m sobre el nivel del mar. En Ciudad de México (2 240 m), un chiller de 100 TR nominales entrega alrededor de 92.5 TR reales. VMS Energy aplica factores de corrección de altitud de los fabricantes y tablas ASHRAE para garantizar que el equipo seleccionado cubra la carga calculada en el sitio real del proyecto."}},{"@type":"Question","name":"¿Qué es la carga sensible y la carga latente en HVAC?","acceptedAnswer":{"@type":"Answer","text":"La carga sensible es el calor que cambia la temperatura del aire sin cambiar su contenido de humedad (se mide en °C o °F). La carga latente es el calor asociado al cambio de estado del agua — evaporación de sudor, humedad de procesos industriales, infiltraciones de aire húmedo — que no cambia la temperatura pero sí la humedad relativa. La relación entre carga sensible y carga total se llama Sensible Heat Ratio (SHR). En zonas costeras como Ciudad del Carmen, la carga latente puede representar el 35–40% de la carga total, lo que influye directamente en la selección del tipo de equipo."}},{"@type":"Question","name":"¿Cuáles son los errores más comunes en el cálculo de carga térmica para HVAC industrial?","acceptedAnswer":{"@type":"Answer","text":"Los cinco errores más frecuentes en proyectos EPC industriales son: (1) usar condiciones climáticas incorrectas o sin ajuste de altitud; (2) omitir o subestimar la carga de equipos de proceso que generan calor en régimen de producción plena; (3) ignorar la carga latente en zonas húmedas o con procesos con vapor; (4) no aplicar derating de capacidad por altitud al seleccionar el equipo; y (5) no prever la redundancia N+1 en equipos críticos, lo que puede detener la producción ante una falla."}},{"@type":"Question","name":"¿Por qué se especifican dos chillers en N+1 en lugar de uno solo de mayor capacidad?","acceptedAnswer":{"@type":"Answer","text":"La configuración N+1 (dos unidades de 50–60% de la carga total cada una) ofrece tres ventajas en plantas industriales: (1) redundancia operativa — si un chiller falla, el segundo mantiene entre el 50 y 80% de la capacidad de enfriamiento, evitando un paro de producción total; (2) eficiencia a carga parcial — dos unidades operando al 60–70% de su COP óptimo son más eficientes que una unidad al 100%; (3) flexibilidad de mantenimiento — se puede dar mantenimiento preventivo a un equipo sin detener el proceso. Es la práctica estándar en industria farmacéutica, alimentaria y de semiconductores."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-carga-termica-hvac-industrial.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-carga-termica-hvac-industrial.html" />
+</head>
+<body>
+  <header aria-label="Barra de navegación">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="carreras.html">Carreras</a></li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="--article-image:url('assets/img/Especialidades_servicios.png')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; HVAC Industrial &middot; Serie #1</span>
+        <h1 id="hero-title">Cómo calcular la carga térmica para HVAC industrial: metodología ASHRAE y errores comunes en proyectos EPC</h1>
+        <p>El número que define el tamaño de todo el sistema — y donde un error del 20% en el cálculo se convierte en un equipo sobredimensionado, un consumo energético excesivo o peor: un proceso sin enfriamiento suficiente.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#articulo">Leer artículo</a>
+          <a class="btn btn--secondary" href="soluciones_hvac_industrial.html">Ver HVAC Industrial</a>
+        </div>
+        <div class="hero__meta">
+          <span>&#128197; 10 julio 2026</span>
+          <span>&#9201; 13 min de lectura</span>
+          <span>&#128218; HVAC Industrial &middot; Método CLTD/CLF ASHRAE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <article class="blog-article" aria-label="Artículo: Carga térmica HVAC industrial">
+
+          <nav class="article-toc" aria-label="Tabla de contenidos">
+            <h3>Contenido del artículo</h3>
+            <ol>
+              <li><a href="#fundamentos">La tonelada de refrigeración: la unidad que define todo</a></li>
+              <li><a href="#metodologia">Método CLTD/CLF de ASHRAE: los seis componentes</a></li>
+              <li><a href="#condiciones">Condiciones de diseño ASHRAE 0.4% para México</a></li>
+              <li><a href="#psicrometria">Psicrometría básica: carga sensible y carga latente</a></li>
+              <li><a href="#altitud">Efecto de la altitud sobre la capacidad del equipo</a></li>
+              <li><a href="#errores">Los 5 errores más frecuentes en proyectos EPC</a></li>
+              <li><a href="#caso">Caso: planta farmacéutica en Jalisco — de 1 200 m² a 2×35 TR N+1</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <p class="article-lead">En un proyecto EPC de HVAC industrial, la memoria de cálculo de carga térmica es el primer documento que se elabora y el que condiciona todas las decisiones subsecuentes: qué equipo se compra, cuánta energía consume la planta, qué tan robusta es la instalación. Y sin embargo es también el documento donde se cometen los errores con mayor frecuencia — errores que solo se descubren cuando el proceso industrial ya no llega a temperatura, o cuando el chiller opera al 40% de su capacidad nominal porque el edificio nunca necesitó lo que se calculó.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Fundamentos -->
+          <h2 id="fundamentos">1. La tonelada de refrigeración: la unidad que define todo</h2>
+
+          <p>Antes de calcular cualquier carga térmica es necesario tener clara la unidad de referencia del sistema de refrigeración industrial.</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Equivalencia fundamental</span>
+            1 TR (tonelada de refrigeración) = 12 000 BTU/h = 3.517 kW
+            <span class="formula-note">Origen histórico: calor necesario para fundir 1 tonelada corta (907 kg) de hielo en 24 horas a 0 °C.</span>
+          </div>
+
+          <p>Esta equivalencia es el puente entre el cálculo térmico (en BTU/h) y la selección de equipos eléctricos. Un chiller de 100 TR consume en promedio entre 90 y 120 kW eléctricos según su COP (Coeficiente de Desempeño) — un dato crítico para la ingeniería eléctrica del proyecto EPC.</p>
+
+          <div class="article-grid article-grid--3">
+            <div class="article-mini-card">
+              <span class="tag">Edificios industriales</span>
+              <h3>50 – 500 TR</h3>
+              <p>Rango típico para naves industriales, salas de producción y almacenes de temperatura controlada.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Cuartos limpios / Farmacéutico</span>
+              <h3>20 – 150 TR</h3>
+              <p>Alta carga interna por equipos de proceso. Requisitos estrictos de temperatura y humedad relativa (±1 °C, ±5% HR).</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Data centers industriales</span>
+              <h3>100 – 2 000 TR</h3>
+              <p>Carga casi exclusivamente eléctrica (servidores, UPS). PUE como métrica de eficiencia energética del diseño.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Metodología -->
+          <h2 id="metodologia">2. Método CLTD/CLF de ASHRAE: los seis componentes de la carga térmica</h2>
+
+          <p>El método CLTD (Cooling Load Temperature Difference) / CLF (Cooling Load Factor) del Manual de Fundamentos ASHRAE es el estándar de la industria para el cálculo de carga de enfriamiento en edificios industriales. Descompone la carga total en seis fuentes de calor que se calculan por separado y se suman para obtener la carga de diseño.</p>
+
+          <h3>Componente 1 — Transmisión por envolvente</h3>
+          <p>Calor que entra al espacio a través de muros, techos y pisos por diferencia de temperatura entre exterior e interior.</p>
+          <div class="formula-box">
+            <span class="formula-label">Ganancia por transmisión</span>
+            Q_env = U × A × CLTD
+            <span class="formula-note">U = transmitancia térmica del muro o techo [BTU/(h·ft²·°F)] | A = área [ft²] | CLTD = diferencia de temperatura de carga de enfriamiento ajustada por latitud, mes, hora, color superficial y diferencia interior-exterior.</span>
+          </div>
+          <p>El CLTD es una versión corregida de la diferencia de temperatura que incorpora el efecto del almacenamiento térmico de la masa del muro — un muro de concreto de 20 cm no transmite el calor del mediodía de manera instantánea: lo hace con un retraso de varias horas. Para una bodega industrial de techo metálico en Monterrey, la ganancia por techo puede ser el componente dominante.</p>
+
+          <h3>Componente 2 — Radiación solar a través de ventanas y lucernarios</h3>
+          <div class="formula-box">
+            <span class="formula-label">Ganancia solar por ventanas</span>
+            Q_solar = SC × A_vidrio × SHGF × CLF
+            <span class="formula-note">SC = Coeficiente de Sombra del vidrio (1.0 = vidrio claro, 0.4–0.6 = vidrio reflectivo) | SHGF = factor de ganancia solar máxima por orientación y latitud [BTU/(h·ft²)] | CLF = fracción de hora del día.</span>
+          </div>
+          <p>En naves industriales con lucernarios o ventanas orientadas al poniente, este componente puede representar el 15–25% de la carga total en las horas pico (14:00–17:00 h).</p>
+
+          <h3>Componente 3 — Calor de iluminación</h3>
+          <div class="formula-box">
+            <span class="formula-label">Ganancia por iluminación</span>
+            Q_ilum = W_ilum × FUT × FES × CLF
+            <span class="formula-note">W_ilum = potencia instalada de luminarias [W] | FUT = factor de uso (fracción de luminarias encendidas) | FES = factor de especificación (0.82 para luminarias empotradas con difusor, 1.0 para luminarias abiertas) | CLF = factor de almacenamiento por tipo de construcción.</span>
+          </div>
+
+          <h3>Componente 4 — Calor de ocupantes</h3>
+          <p>Cada persona en un espacio industrial a temperatura de confort (22–26 °C) genera:</p>
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Calor sensible</span>
+              <h3>≈ 70 W / persona</h3>
+              <p>Convección y conducción hacia el aire. Varía con el nivel de actividad: 50 W en reposo, 120 W en actividad moderada (trabajo en línea de producción).</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Calor latente</span>
+              <h3>≈ 45 W / persona</h3>
+              <p>Evaporación de sudor y respiración. Aumenta significativamente con la temperatura del espacio y el nivel de actividad física.</p>
+            </div>
+          </div>
+
+          <h3>Componente 5 — Calor de equipos de proceso (el más crítico en industria)</h3>
+          <div class="formula-box">
+            <span class="formula-label">Ganancia por equipos de proceso</span>
+            Q_equipo = P_nominal × FUM × FLM
+            <span class="formula-note">P_nominal = potencia nominal del equipo [W] | FUM = factor de uso en el tiempo (fracción de horas operando) | FLM = factor de carga en el motor (fracción de la potencia nominal consumida en operación real). Para motores eléctricos: FUM típico 0.75–0.85, FLM 0.65–0.80.</span>
+          </div>
+
+          <div class="article-callout article-callout--warning">
+            <strong>El error más costoso:</strong> en plantas industriales, los equipos de proceso son frecuentemente el componente de mayor carga térmica — superando en muchos casos la suma de envolvente + iluminación + personas. Omitirlos o subestimarlos produce un sistema de HVAC completamente subdimensionado. VMS Energy realiza un levantamiento de toda la maquinaria instalada (o prevista) con su potencia nominal y ciclos de operación antes de iniciar el cálculo.
+          </div>
+
+          <h3>Componente 6 — Ventilación e infiltraciones</h3>
+          <p>El aire exterior de ventilación (requerido por ASHRAE 62.1 — Ventilation for Acceptable Indoor Air Quality) entra a una temperatura y humedad diferentes a las del espacio interior. Este componente incluye tanto el calor sensible como el calor latente del aire exterior:</p>
+          <div class="formula-box">
+            <span class="formula-label">Carga de ventilación (simplificada)</span>
+            Q_sens_vent = 1.1 × CFM × ΔT   |   Q_lat_vent = 0.68 × CFM × ΔW
+            <span class="formula-note">CFM = flujo de aire exterior [ft³/min] | ΔT = diferencia de temperatura entre exterior e interior [°F] | ΔW = diferencia de humedad específica [gr/lb de aire seco]. Las constantes 1.1 y 0.68 son para condiciones estándar de densidad del aire al nivel del mar.</span>
+          </div>
+
+          <p>La carga total de diseño es la suma de los seis componentes, evaluada en la hora y condiciones en que se presenta el máximo simultáneo:</p>
+          <div class="formula-box">
+            <span class="formula-label">Carga total de enfriamiento</span>
+            Q_total = Q_env + Q_solar + Q_ilum + Q_ocupantes + Q_equipos + Q_ventilación
+            <span class="formula-note">Se convierte a TR dividiendo entre 12 000 [BTU/h]. VMS Energy añade un factor de seguridad del 5–10% sobre la suma total según la criticidad del proceso.</span>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Condiciones de diseño -->
+          <h2 id="condiciones">3. Condiciones de diseño ASHRAE 0.4% para las principales ciudades industriales de México</h2>
+
+          <p>Las condiciones de diseño ASHRAE 0.4% representan la temperatura de bulbo seco (Tbs) que se <em>supera solo el 0.4% de las horas del año</em> — equivalente a aproximadamente 35 horas anuales. Es el criterio estándar para el cálculo de carga máxima de verano en instalaciones industriales donde la interrupción del proceso tiene costo elevado.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Ciudad</th>
+                  <th>Tbs ASHRAE 0.4% (°C)</th>
+                  <th>Tbh coincidente (°C)</th>
+                  <th>Altitud (m)</th>
+                  <th>Factor de altitud</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Monterrey, NL</strong></td>
+                  <td class="hi">40</td>
+                  <td>22</td>
+                  <td>538</td>
+                  <td>0.980</td>
+                </tr>
+                <tr>
+                  <td><strong>Ciudad del Carmen, Camp.</strong></td>
+                  <td class="hi">35</td>
+                  <td>27</td>
+                  <td>2</td>
+                  <td>1.000</td>
+                </tr>
+                <tr>
+                  <td><strong>Guadalajara, Jal.</strong></td>
+                  <td class="mid">33</td>
+                  <td>19</td>
+                  <td>1 552</td>
+                  <td>0.948</td>
+                </tr>
+                <tr>
+                  <td><strong>Querétaro, Qro.</strong></td>
+                  <td class="mid">32</td>
+                  <td>18</td>
+                  <td>1 826</td>
+                  <td>0.939</td>
+                </tr>
+                <tr>
+                  <td><strong>Cd. de México, CDMX</strong></td>
+                  <td>27</td>
+                  <td>14</td>
+                  <td>2 240</td>
+                  <td>0.925</td>
+                </tr>
+                <tr>
+                  <td><strong>San Luis Potosí, SLP</strong></td>
+                  <td>33</td>
+                  <td>17</td>
+                  <td>1 872</td>
+                  <td>0.938</td>
+                </tr>
+                <tr>
+                  <td><strong>Hermosillo, Son.</strong></td>
+                  <td class="hi">43</td>
+                  <td>21</td>
+                  <td>215</td>
+                  <td>0.993</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Importante:</strong> La temperatura de bulbo húmedo coincidente (Tbh) no es la máxima del año — es la que típicamente ocurre cuando se presenta la Tbs máxima. Para el cálculo de la carga latente se requiere la Tbh de diseño. En Ciudad del Carmen (zona costera), la Tbh de 27 °C genera una carga latente muy alta que domina la selección del tipo de equipo.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Psicrometría -->
+          <h2 id="psicrometria">4. Psicrometría básica: carga sensible y carga latente</h2>
+
+          <p>La psicrometría es el estudio de las propiedades del aire húmedo. Es la base conceptual para entender qué parte de la carga térmica eleva la temperatura del aire (calor sensible) y qué parte cambia su contenido de humedad (calor latente).</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Calor sensible</span>
+              <h3>Cambia temperatura, no humedad</h3>
+              <p>Conducción a través de muros, calor de equipos eléctricos, radiación solar. Se mide en °C. El equipo de HVAC lo maneja enfriando el aire por debajo de su temperatura interior de diseño.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Calor latente</span>
+              <h3>Cambia humedad, no temperatura</h3>
+              <p>Evaporación de sudor, procesos con vapor o agua, infiltración de aire exterior húmedo. Se mide en gr/kg de aire seco. El equipo lo retira condensando la humedad en el serpentín frío.</p>
+            </div>
+          </div>
+
+          <p>La relación entre ambos define el <strong>Sensible Heat Ratio (SHR)</strong>:</p>
+          <div class="formula-box">
+            <span class="formula-label">Sensible Heat Ratio</span>
+            SHR = Q_sensible / (Q_sensible + Q_latente)
+            <span class="formula-note">SHR típico: 0.75–0.85 en naves industriales secas. 0.60–0.70 en zonas costeras o procesos húmedos. &lt;0.60 en cuartos limpios con procesos de inyección de vapor.</span>
+          </div>
+
+          <p>El SHR define la <strong>pendiente de la línea de proceso del aire</strong> en la carta psicrométrica y, por lo tanto, qué temperatura de suministro y qué temperatura de serpentín de enfriamiento (ADP — Apparatus Dew Point) requiere el equipo. Un equipo seleccionado solo por capacidad (TR) sin considerar el SHR puede no poder controlar la humedad relativa dentro de los rangos del proceso.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Altitud -->
+          <h2 id="altitud">5. Efecto de la altitud sobre la capacidad del equipo HVAC</h2>
+
+          <p>Este factor es crítico en México, donde ciudades industriales clave como Guadalajara (1 552 m), Querétaro (1 826 m) y Ciudad de México (2 240 m) se encuentran a altitudes significativas. A mayor altitud, la presión atmosférica disminuye, lo que reduce la densidad del aire y el flujo másico de los sistemas de distribución — y por ende la capacidad de enfriamiento.</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Factor de corrección por altitud (aproximado)</span>
+            F_alt = 1 - (altitud_m / 300) × 0.01
+            <span class="formula-note">Regla general: ~1% de pérdida de capacidad por cada 300 m de altitud sobre el nivel del mar. Para valores exactos, usar tablas del fabricante o software ASHRAE.</span>
+          </div>
+
+          <p>Ejemplo práctico para un proyecto en Guadalajara (1 552 m):</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Parámetro</th>
+                  <th>A nivel del mar</th>
+                  <th>Guadalajara (1 552 m)</th>
+                  <th>CDMX (2 240 m)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Factor de altitud</td>
+                  <td>1.000</td>
+                  <td>0.948</td>
+                  <td>0.925</td>
+                </tr>
+                <tr>
+                  <td>Capacidad real de un chiller de 100 TR nominales</td>
+                  <td>100.0 TR</td>
+                  <td class="mid">94.8 TR</td>
+                  <td class="hi">92.5 TR</td>
+                </tr>
+                <tr>
+                  <td>Capacidad real de un chiller de 35 TR nominales</td>
+                  <td>35.0 TR</td>
+                  <td class="mid">33.2 TR</td>
+                  <td class="hi">32.4 TR</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout article-callout--warning">
+            <strong>Error frecuente:</strong> cotizar un chiller con la capacidad nominal del catálogo sin solicitar al fabricante la curva de desempeño a la altitud del sitio. VMS Energy siempre solicita la hoja de datos de desempeño corregida a la altitud, temperatura de entrada de agua caliente y temperatura de agua helada de diseño del proyecto específico.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Errores -->
+          <h2 id="errores">6. Los 5 errores más frecuentes en el cálculo de carga térmica industrial</h2>
+
+          <p>En la revisión de proyectos industriales de HVAC, VMS Energy identifica de manera recurrente los siguientes errores de ingeniería:</p>
+
+          <div class="error-list">
+
+            <div class="error-card">
+              <span class="error-card__num">Error #1</span>
+              <h3>Condiciones climáticas incorrectas o datos genéricos</h3>
+              <p>Usar condiciones climáticas de una ciudad diferente, datos meteorológicos de bases de datos no actualizadas, o aplicar condiciones de nivel del mar en proyectos en altitud. También es frecuente usar el promedio anual de temperatura en lugar de las condiciones de diseño ASHRAE 0.4%.</p>
+              <div class="fix"><strong>Corrección:</strong> Usar siempre el ASHRAE Handbook — Fundamentals, tabla de Climatic Design Conditions para el sitio exacto del proyecto. Para sitios sin datos ASHRAE, interpolar o usar datos de la estación meteorológica más cercana del SMN.</div>
+            </div>
+
+            <div class="error-card">
+              <span class="error-card__num">Error #2</span>
+              <h3>Subestimar o ignorar la carga de equipos de proceso</h3>
+              <p>Calcular la carga con las especificaciones del proceso en condiciones normales y olvidar los picos de producción, el arranque simultáneo de varios equipos o la carga de equipos auxiliares (compresores de aire, UPS, transformadores). En una línea farmacéutica, los equipos de proceso pueden ser el 50–65% de la carga total.</p>
+              <div class="fix"><strong>Corrección:</strong> Levantar en campo (o con el proveedor de maquinaria) la potencia real instalada de cada equipo, su FLM y FUM en condiciones de producción plena. Incluir todos los transformadores y UPS dentro del espacio climatizado.</div>
+            </div>
+
+            <div class="error-card">
+              <span class="error-card__num">Error #3</span>
+              <h3>Ignorar la carga latente en zonas costeras o procesos húmedos</h3>
+              <p>Seleccionar el equipo solo en función de las TR totales sin verificar el SHR. En regiones con Tbh de diseño superior a 24 °C (Ciudad del Carmen, Veracruz, Tampico, Manzanillo), la carga latente puede representar el 30–40% de la carga total. Un equipo sin capacidad latente suficiente no puede mantener la humedad relativa del proceso dentro de especificación aunque controle la temperatura.</p>
+              <div class="fix"><strong>Corrección:</strong> Calcular el SHR del espacio y verificar que el equipo seleccionado pueda operar en ese SHR a las condiciones del sitio. Considerar deshumidificación dedicada (rueda desecante) en procesos con SHR &lt; 0.65.</div>
+            </div>
+
+            <div class="error-card">
+              <span class="error-card__num">Error #4</span>
+              <h3>No aplicar derating de capacidad por altitud</h3>
+              <p>Especificar el equipo con la capacidad nominal del catálogo (a nivel del mar) sin solicitar al fabricante los datos de desempeño a la altitud real del proyecto. En Querétaro (1 826 m), un equipo de 100 TR nominales entrega aproximadamente 93.9 TR reales — un déficit del 6.1% que puede ser la diferencia entre controlar el proceso o no.</p>
+              <div class="fix"><strong>Corrección:</strong> Siempre solicitar la hoja de datos del fabricante con la capacidad corregida a: altitud del sitio, temperatura de entrada de agua (condensación o evaporación), temperatura de agua helada de diseño, y flujo másico de diseño.</div>
+            </div>
+
+            <div class="error-card">
+              <span class="error-card__num">Error #5</span>
+              <h3>No prever redundancia N+1 en aplicaciones críticas</h3>
+              <p>Instalar un solo chiller o unidad manejadora de aire para toda la carga del proceso. Si el equipo falla — una eventualidad con probabilidad no despreciable en equipos que operan 24/7 — se detiene toda la producción. En industria farmacéutica, alimentaria y de semiconductores, una parada de línea por HVAC puede costar decenas de veces el costo del equipo redundante.</p>
+              <div class="fix"><strong>Corrección:</strong> Diseñar con configuración N+1: dos unidades de 60–65% de la carga total cada una. La unidad de respaldo puede operar a carga parcial sosteniendo el proceso hasta la reparación o reemplazo del equipo averiado. Evaluar el costo de la redundancia vs. el costo de una parada de producción.</div>
+            </div>
+
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Caso -->
+          <h2 id="caso">7. Caso: planta farmacéutica en Jalisco — de 1 200 m² a 2×35 TR N+1</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Caso EPC documentado</span>
+              <h3>Laboratorio de producción farmacéutica — Guadalajara, Jalisco (1 552 m)</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Descripción:</strong> Sala de producción de sólidos orales (tabletas y cápsulas), área acondicionada de 1 200 m². Clasificación ISO 8 (área de llenado) / ISO 7 (sala de pesado). Temperatura de diseño 22 ±1 °C, HR 45 ±5%.</p>
+
+              <p><strong>Datos del levantamiento de proceso:</strong></p>
+              <ul>
+                <li>Tableteadoras (3 equipos): 15 kW nominales c/u, FLM 0.75, FUM 0.85</li>
+                <li>Granuladoras (2 equipos): 22 kW nominales c/u, FLM 0.70, FUM 0.80</li>
+                <li>Liofilizadores (1 equipo): 45 kW nominales, FLM 0.90, FUM 0.70</li>
+                <li>Iluminación LED: 28 W/m² × 1 200 m² = 33.6 kW total, FES 0.82</li>
+                <li>Ocupantes: 35 personas en turno pico, actividad moderada (100 W sensible + 55 W latente)</li>
+                <li>Ventilación ASHRAE 62.1: 8 renovaciones/hora = 8 × 1 200 m² × 3.5 m = 33 600 m³/h</li>
+              </ul>
+
+              <p><strong>Resumen del cálculo de carga (condiciones de diseño Guadalajara ASHRAE 0.4%):</strong></p>
+
+              <!-- Load bars -->
+              <div class="load-bar" aria-label="Distribución de carga térmica por componente">
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Equipos de proceso</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--process" style="width:47%"></div></div>
+                  <span class="load-bar__pct">47%</span>
+                </div>
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Ventilación</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--vent" style="width:21%"></div></div>
+                  <span class="load-bar__pct">21%</span>
+                </div>
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Iluminación</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--lighting" style="width:14%"></div></div>
+                  <span class="load-bar__pct">14%</span>
+                </div>
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Ocupantes</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--people" style="width:10%"></div></div>
+                  <span class="load-bar__pct">10%</span>
+                </div>
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Envolvente</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--envelope" style="width:6%"></div></div>
+                  <span class="load-bar__pct">6%</span>
+                </div>
+                <div class="load-bar__row">
+                  <span class="load-bar__label">Solar</span>
+                  <div class="load-bar__track"><div class="load-bar__fill load-bar__fill--solar" style="width:2%"></div></div>
+                  <span class="load-bar__pct">2%</span>
+                </div>
+              </div>
+
+              <p><strong>Resultado del cálculo:</strong></p>
+              <ul>
+                <li>Carga sensible total: 176 400 BTU/h</li>
+                <li>Carga latente total: 62 100 BTU/h (SHR = 0.74)</li>
+                <li>Carga total bruta: 238 500 BTU/h = <strong>19.9 TR</strong></li>
+                <li>Factor de seguridad aplicado (10%): +2.0 TR</li>
+                <li><strong>Carga de diseño: 21.9 TR (a nivel de mar)</strong></li>
+              </ul>
+
+              <p><strong>Corrección por altitud Guadalajara (1 552 m, factor 0.948):</strong></p>
+              <ul>
+                <li>Carga de diseño corregida: 21.9 TR / 0.948 = <strong>23.1 TR de capacidad de equipo requerida a nivel del mar</strong></li>
+                <li>Sin embargo, esto es solo la sala de producción. El sistema HVAC del edificio completo (zonas de almacén, pasillos, oficinas de QA) suma una carga adicional de 38.9 TR</li>
+                <li><strong>Carga total del sistema: 62.0 TR</strong></li>
+              </ul>
+
+              <p><strong>Solución seleccionada — Configuración N+1:</strong></p>
+              <ul>
+                <li>2 × Chiller de tornillo de 35 TR nominales (capacidad real en Guadalajara: 33.2 TR cada uno)</li>
+                <li>Operación normal: 1 chiller al 94% de carga (62 TR total / 2 = 31 TR cada uno de 33.2 TR disponibles)</li>
+                <li>Falla de un chiller: 1 chiller al 100% = 33.2 TR → mantiene ≈54% de la capacidad de diseño — suficiente para sostener temperatura en la sala crítica ISO 7/8 durante el tiempo de respuesta de mantenimiento</li>
+                <li>Refrigerante: R-454B (GWP 466) — cumplimiento anticipado de la Enmienda de Kigali</li>
+                <li>COP nominal fabricante: 4.2 a condiciones de diseño → consumo eléctrico: 2 × (35 TR × 3.517 kW/TR) / 4.2 = <strong>58.6 kW en operación normal</strong></li>
+                <li>Integración BMS: BACnet IP, puntos: Tchw_supply, Tchw_return, Tcond, kW, alarmas compresor</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="article-callout">
+            <strong>Lección del caso:</strong> La sala farmacéutica de 1 200 m² no es un proyecto de HVAC comercial escaleado. El 47% de la carga viene de los equipos de proceso — dato que solo surge de un levantamiento en campo con el equipo de producción. Sin ese levantamiento, la carga hubiera podido calcularse en 9–12 TR solo con el método de área (W/m²), y el sistema resultante hubiera sido radicalmente insuficiente.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. FAQ -->
+          <h2 id="faq">8. Preguntas frecuentes</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>¿Qué es una tonelada de refrigeración y cuántos kW equivale?</summary>
+              <p>Una tonelada de refrigeración (TR) equivale a <strong>12 000 BTU/h = 3.517 kW</strong>. Es la unidad de referencia estándar para el dimensionamiento de chillers, equipos de precisión y sistemas de proceso. La conversión a kW es clave para integrar el balance de cargas de HVAC con la ingeniería eléctrica del proyecto EPC.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué método de cálculo de carga térmica utiliza VMS Energy?</summary>
+              <p>VMS Energy aplica el método <strong>CLTD/CLF</strong> del Manual de Fundamentos ASHRAE. Este método calcula por separado: transmisión por envolvente (U×A×CLTD), radiación solar (SC×A×SHGF×CLF), iluminación, ocupantes (≈70 W sensible + 45 W latente/persona), equipos de proceso (P×FUM×FLM) y ventilación/infiltraciones. La suma de los seis componentes da la carga total de diseño en BTU/h o TR.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuáles son las condiciones de diseño ASHRAE 0.4% para las ciudades industriales de México?</summary>
+              <p>Las condiciones de diseño más relevantes son: <strong>Monterrey 40 °C / 22 °C Tbh</strong>, Ciudad del Carmen 35 °C / 27 °C Tbh, Guadalajara 33 °C / 19 °C Tbh, Querétaro 32 °C / 18 °C Tbh, <strong>CDMX 27 °C</strong> (a 2 240 m de altitud). Hermosillo registra la condición más extrema de México: 43 °C Tbs. Estas condiciones son la base del cálculo de carga máxima de verano.</p>
+            </details>
+
+            <details>
+              <summary>¿Cómo afecta la altitud a la capacidad de los equipos HVAC?</summary>
+              <p>La regla estándar es aproximadamente <strong>1% de pérdida de capacidad por cada 300 m</strong> sobre el nivel del mar. En Guadalajara (1 552 m): factor 0.948. En CDMX (2 240 m): factor 0.925. VMS Energy siempre solicita la hoja de datos corregida por altitud al fabricante antes de especificar el equipo — el catálogo estándar reporta capacidades a nivel del mar.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué es la carga sensible y la carga latente en HVAC?</summary>
+              <p>La <strong>carga sensible</strong> es el calor que cambia la temperatura del aire sin modificar su contenido de humedad (conducción por muros, equipos eléctricos, radiación). La <strong>carga latente</strong> es el calor asociado al cambio de humedad del aire (evaporación de sudor, procesos con vapor, infiltración de aire húmedo). El <strong>Sensible Heat Ratio (SHR)</strong> es la fracción de carga sensible sobre la carga total — define el tipo de equipo requerido y su capacidad de deshumidificación.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuáles son los errores más comunes en el cálculo de carga térmica industrial?</summary>
+              <p>Los cinco errores más frecuentes: (1) usar condiciones climáticas incorrectas o sin ajuste de altitud; (2) omitir o subestimar la carga de equipos de proceso; (3) ignorar la carga latente en zonas costeras o procesos húmedos; (4) no aplicar derating de capacidad por altitud al seleccionar el equipo; y (5) no prever redundancia N+1 en aplicaciones de proceso crítico. Cada uno de estos errores puede resultar en un sistema subdimensionado o en un gasto energético innecesario de por vida.</p>
+            </details>
+
+            <details>
+              <summary>¿Por qué se especifican dos chillers en N+1 en lugar de uno de mayor capacidad?</summary>
+              <p>La configuración <strong>N+1</strong> ofrece tres ventajas en plantas industriales: (1) <strong>redundancia operativa</strong> — si un chiller falla, el segundo mantiene entre 50 y 80% de la capacidad, evitando un paro total de producción; (2) <strong>eficiencia a carga parcial</strong> — dos unidades al 60–70% de su COP óptimo son más eficientes que una al 100%; (3) <strong>flexibilidad de mantenimiento</strong> — se puede dar mantenimiento preventivo sin parar el proceso. Es la práctica estándar en farmacéutica, alimentaria, semiconductores y centros de datos industriales.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>¿Necesita una memoria de cálculo de carga térmica para su proyecto HVAC?</h3>
+            <p>VMS Energy desarrolla el cálculo ASHRAE completo, selección de equipo con derating por altitud y diseño del sistema N+1. Ingeniería EPC de HVAC para plantas industriales, farmacéuticas y de alimentos en todo México.</p>
+            <div class="article-actions">
+              <a class="btn btn--primary" href="soluciones_hvac_industrial.html">Ver HVAC Industrial</a>
+              <a class="btn btn--secondary" href="contacto_cta.html?servicio=hvac-industrial">Solicitar ingeniería</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>HVAC Industrial EPC</h3>
+            <p>Ingeniería de carga térmica ASHRAE, selección de equipo con derating y puesta en marcha. Para plantas industriales en todo México.</p>
+            <a class="btn" href="soluciones_hvac_industrial.html">Ver solución HVAC</a>
+          </div>
+
+          <!-- Referencia rápida -->
+          <div class="sidebar-card">
+            <h3>Referencia rápida HVAC</h3>
+            <ul>
+              <li><strong>1 TR</strong> = 12 000 BTU/h = 3.517 kW</li>
+              <li><strong>ASHRAE 0.4%</strong> = condición de diseño verano</li>
+              <li><strong>SHR</strong> = Q_sens / Q_total (0.65–0.85 industrial)</li>
+              <li><strong>Derating altitud</strong> ≈ 1% / 300 m SNM</li>
+              <li><strong>N+1</strong> = 2 equipos de 60–65% c/u</li>
+              <li><strong>BACnet ASHRAE 135</strong> = protocolo BMS</li>
+            </ul>
+          </div>
+
+          <!-- Condiciones de diseño -->
+          <div class="sidebar-card">
+            <h3>Condiciones ASHRAE 0.4% México</h3>
+            <ul>
+              <li><strong>Monterrey</strong> &mdash; 40 °C / 22 °C Tbh</li>
+              <li><strong>Hermosillo</strong> &mdash; 43 °C / 21 °C Tbh</li>
+              <li><strong>Cd. del Carmen</strong> &mdash; 35 °C / 27 °C Tbh</li>
+              <li><strong>Guadalajara</strong> &mdash; 33 °C / 19 °C Tbh</li>
+              <li><strong>Querétaro</strong> &mdash; 32 °C / 18 °C Tbh</li>
+              <li><strong>CDMX</strong> &mdash; 27 °C / 14 °C Tbh (2 240 m)</li>
+            </ul>
+          </div>
+
+          <!-- Normas de referencia -->
+          <div class="sidebar-card">
+            <h3>Normas de referencia HVAC</h3>
+            <ul>
+              <li><strong>ASHRAE 62.1</strong> &mdash; calidad de aire interior</li>
+              <li><strong>ASHRAE 15</strong> &mdash; seguridad en sistemas de refrigeración</li>
+              <li><strong>ASHRAE 34</strong> &mdash; designación de refrigerantes</li>
+              <li><strong>ASHRAE 135</strong> &mdash; protocolo BACnet</li>
+              <li><strong>NOM-023-ENER-2010</strong> &mdash; eficiencia energética HVAC</li>
+              <li><strong>NOM-031-STPS</strong> &mdash; condiciones de confort laboral</li>
+              <li><strong>ISO 50001</strong> &mdash; gestión de energía</li>
+            </ul>
+          </div>
+
+          <!-- Serie HVAC -->
+          <div class="sidebar-card">
+            <h3>Serie: HVAC Industrial</h3>
+            <ul>
+              <li><strong>&#8594; #1 Carga térmica ASHRAE (este artículo)</strong></li>
+            </ul>
+            <br>
+            <a class="sidebar-link" href="blog.html">&#8594; Ver todos los blogs técnicos</a>
+          </div>
+
+          <!-- Blog Transformadores -->
+          <div class="sidebar-card">
+            <h3>Serie: Transformadores Industriales</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">&#8594; #1 Selección técnica</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">&#8594; #2 Pruebas FAT y SAT</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-transformadores-operacion.html">&#8594; #3 Mantenimiento predictivo</a></li>
+              <li><a class="sidebar-link" href="blog-instalacion-comisionamiento-transformadores-epc.html">&#8594; #4 Instalación EPC</a></li>
+              <li><a class="sidebar-link" href="blog-guia-fabricantes-transformadores-industriales.html">&#8594; #5 Guía de fabricantes</a></li>
+              <li><a class="sidebar-link" href="blog-ingenieria-detalle-epc-electrico.html">&#8594; #6 Ingeniería de detalle</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Contacto técnico HVAC</h3>
+            <p>Hable con un especialista en ingeniería de HVAC industrial.</p>
+            <p><strong>&#128222;</strong> <a href="tel:+526141234567">+52 614 XXX XXXX</a></p>
+            <p><strong>&#9993;</strong> <a href="mailto:hvac@vmsenergy.com">hvac@vmsenergy.com</a></p>
+          </div>
+
+        </aside>
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+      </div>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
+        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
+        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <div class="mobile-phone-sticky">
+    <a href="tel:+526141234567" aria-label="Llamar a VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('menuList');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if (window.innerWidth <= 680) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

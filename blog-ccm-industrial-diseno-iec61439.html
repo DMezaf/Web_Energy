@@ -1,0 +1,905 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cómo Diseñar un CCM Industrial: IEC 61439, Arrancadores y Protocolos | VMS Energy Blog</title>
+  <meta name="description" content="Guía técnica completa para diseñar un Centro de Control de Motores industrial: formas de separación IEC 61439 (Form 1 a 4b), selección de arrancadores DOL/Y-Δ/soft-starter/VFD, protocolos Modbus/Profibus/EtherNet/IP y caso real CTG Chankanaab."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <link rel="canonical" href="https://vmsenergy.com/blog-ccm-industrial-diseno-iec61439.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="es_MX"/>
+  <meta property="og:site_name" content="VMS Energy"/>
+  <meta property="og:title" content="Cómo Diseñar un CCM Industrial: IEC 61439, Arrancadores y Protocolos | VMS Energy"/>
+  <meta property="og:description" content="Formas de separación Form 1 a 4b, DOL vs VFD, Modbus vs PROFINET y análisis de arco eléctrico NFPA 70E. Metodología de ingeniería EPC con caso real Oil & Gas."/>
+  <meta property="og:url" content="https://vmsenergy.com/blog-ccm-industrial-diseno-iec61439.html"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/ccm/og-ccm-industrial-diseno-iec61439.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Cómo Diseñar un CCM Industrial: IEC 61439, Arrancadores y Protocolos"/>
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/ccm/og-ccm-industrial-diseno-iec61439.webp"/>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-ccm-industrial-diseno-iec61439.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-ccm-industrial-diseno-iec61439.html"/>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{}
+    .prose{max-width:800px;margin:0 auto}
+
+    /* NAV */
+    header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
+    nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700}
+    .cta-header{padding:.62rem 1rem;border-radius:999px;background:linear-gradient(180deg,var(--cobalt),#0b3c67);color:#fff;border:1px solid rgba(8,53,92,.55)}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:280px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group+.submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+    .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+
+    /* HERO */
+    .blog-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden;min-height:360px;display:grid;align-items:end}
+    .blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,38,.55) 0%,rgba(8,28,58,.88) 100%),url('assets/img/blog/ccm/og-ccm-industrial-diseno-iec61439.webp') center/cover no-repeat;z-index:-1}
+    .blog-hero__content{padding:60px 0 44px;max-width:860px}
+    .blog-hero__eyebrow{display:inline-flex;gap:8px;align-items:center;padding:.26rem .7rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 14px}
+    .blog-hero h1{margin:0 0 14px;font-size:clamp(28px,4.4vw,50px);line-height:1.05}
+    .blog-hero__meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;color:#c8ddf4}
+    .blog-hero__meta span{display:flex;align-items:center;gap:5px}
+
+    /* ARTICLE BODY */
+    .article-wrap{padding:48px 0 64px;background:#fff}
+    .prose h2{font-size:clamp(24px,3vw,32px);color:#103961;margin:44px 0 12px;line-height:1.1}
+    .prose h2::after{content:"";display:block;width:56px;height:3px;margin-top:8px;border-radius:999px;background:linear-gradient(90deg,var(--cobalt),rgba(142,215,255,.35))}
+    .prose h3{font-size:clamp(18px,2.2vw,22px);color:#103961;margin:28px 0 10px}
+    .prose p{margin:0 0 16px;color:#23486f;line-height:1.7;font-size:1.04rem}
+    .prose ul,.prose ol{margin:0 0 16px;padding-left:20px;color:#23486f;line-height:1.75}
+    .prose li+li{margin-top:6px}
+    .prose strong{color:#103961}
+    .prose a{color:var(--cobalt);font-weight:700}
+
+    /* CALLOUT */
+    .callout-box{background:linear-gradient(135deg,#0b2344,#0a1c35);border:1px solid rgba(127,183,255,.22);border-radius:16px;padding:20px 22px;color:#eaf2ff;margin:24px 0;line-height:1.6}
+    .callout-box strong{color:#8fd7ff}
+    .callout-box .cb-label{display:block;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8fd7ff;margin:0 0 8px}
+
+    /* FORM CARDS GRID */
+    .form-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+    .form-chip{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff}
+    .form-chip--hi{border-color:rgba(15,76,129,.3);background:#f0f6ff}
+    .form-chip__badge{display:inline-block;padding:.18rem .52rem;border-radius:999px;background:linear-gradient(180deg,var(--concept-primary),#0b3c67);color:#fff;font-size:.76rem;font-weight:800;margin:0 0 8px}
+    .form-chip h4{margin:0 0 6px;font-size:.96rem;color:#103961}
+    .form-chip p{margin:0;font-size:.86rem;color:var(--muted);line-height:1.45}
+    .form-chip__use{display:block;font-size:.8rem;color:var(--concept-primary);font-weight:700;margin-top:8px;border-top:1px solid var(--line);padding-top:6px}
+
+    /* STARTER COMPARE */
+    .starter-compare{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+    .sc-card{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff;display:flex;flex-direction:column}
+    .sc-card--vfd{border-color:rgba(15,76,129,.3);background:#f0f6ff}
+    .sc-card__tag{font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--concept-primary);margin:0 0 6px}
+    .sc-card h4{margin:0 0 8px;font-size:1rem;color:#103961}
+    .sc-card dl{margin:0;display:grid;gap:3px;font-size:.86rem}
+    .sc-card dt{color:var(--concept-primary);font-weight:700;margin:0}
+    .sc-card dd{margin:0 0 4px;color:#23486f}
+
+    /* TABLES */
+    .t-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:20px 0}
+    .t-std{width:100%;border-collapse:collapse;min-width:520px;font-size:.95rem}
+    .t-std th{background:#172C51;color:#fff;padding:10px 13px;text-align:left;font-weight:700}
+    .t-std td{padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top;color:#23486f}
+    .t-std tr:last-child td{border-bottom:0}
+    .t-std tr:nth-child(even) td{background:#f7fbff}
+    .t-std .ok{color:#166534;font-weight:700}
+    .t-std .no{color:#991b1b;font-weight:700}
+
+    /* PROTO SPECS */
+    .proto-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+    .proto-card{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff}
+    .proto-card__tag{display:inline-block;padding:.18rem .56rem;border-radius:8px;background:#eef5ff;color:var(--concept-primary);font-weight:800;font-size:.82rem;margin:0 0 8px;letter-spacing:.04em}
+    .proto-card h4{margin:0 0 6px;font-size:1rem;color:#103961}
+    .proto-card p{margin:0 0 8px;font-size:.9rem;color:var(--muted);line-height:1.5}
+    .proto-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+    .proto-spec{background:#f7fbff;border-radius:8px;padding:6px 8px;text-align:center}
+    .proto-spec__val{display:block;font-weight:800;color:var(--concept-primary);font-size:.96rem}
+    .proto-spec__lbl{display:block;font-size:.74rem;color:var(--muted)}
+
+    /* ERROR CARDS */
+    .error-cards{display:grid;gap:12px;margin:20px 0}
+    .error-card{padding:16px 18px;border-radius:16px;border:1px solid rgba(153,27,27,.18);background:linear-gradient(135deg,rgba(153,27,27,.05),rgba(239,68,68,.04))}
+    .error-card__label{font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#991b1b;display:block;margin:0 0 6px}
+    .error-card p{margin:0 0 8px;color:#7f1d1d;line-height:1.55;font-size:.96rem}
+    .error-card .fix{margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(22,101,52,.08);border:1px solid rgba(22,101,52,.14);color:#166534;font-size:.92rem;line-height:1.5}
+    .error-card .fix strong{color:#14532d}
+
+    /* CASE */
+    .case-block{background:linear-gradient(180deg,#f7fbff,#fff);border:1px solid var(--line);border-radius:18px;padding:24px;margin:28px 0}
+    .case-block__eyebrow{display:inline-flex;padding:.2rem .6rem;border-radius:999px;background:#eef5ff;color:var(--concept-primary);font-size:.82rem;font-weight:700;margin:0 0 10px}
+    .case-block h3{margin:0 0 12px;color:#103961;font-size:clamp(20px,2.4vw,26px)}
+    .case-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+    .case-kpi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;box-shadow:0 4px 12px rgba(9,32,58,.05)}
+    .case-kpi__val{display:block;font-size:clamp(22px,2.8vw,30px);font-weight:800;color:var(--concept-primary);line-height:1}
+    .case-kpi__lbl{display:block;font-size:.78rem;color:var(--muted);margin-top:4px}
+
+    /* NORMAS */
+    .norma-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+    .norma-chip{background:#f0f6ff;border:1px solid rgba(15,76,129,.18);border-radius:12px;padding:12px 14px}
+    .norma-chip__code{display:block;font-weight:800;color:var(--concept-primary);font-size:.96rem;margin:0 0 4px}
+    .norma-chip__desc{display:block;font-size:.84rem;color:#23486f;line-height:1.4}
+
+    /* FAQ */
+    .faq-section{margin:40px 0 0}
+    .faq-section h2{font-size:clamp(22px,2.8vw,30px);color:#103961;margin:0 0 10px}
+    .faq-section h2::after{content:"";display:block;width:56px;height:3px;margin-top:8px;border-radius:999px;background:linear-gradient(90deg,var(--cobalt),rgba(142,215,255,.35))}
+    details{border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0;background:#fff}
+    details[open]{background:#f7fbff;border-color:rgba(15,76,129,.22)}
+    summary{font-weight:700;color:#103961;cursor:pointer;font-size:1.04rem;line-height:1.4;list-style:none;display:flex;justify-content:space-between;align-items:start;gap:10px}
+    summary::after{content:"＋";flex-shrink:0;font-size:1.2rem;color:var(--concept-primary);transition:transform .2s}
+    details[open] summary::after{content:"－"}
+    details p{margin:12px 0 0;color:#23486f;line-height:1.65;font-size:.98rem}
+
+    /* FOOT */
+
+    /* STICKY */
+    .sticky-actions{position:fixed;left:0;right:0;bottom:14px;z-index:9999;pointer-events:none}
+    .sticky-actions__btn{position:absolute;bottom:0;pointer-events:auto;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.2)}
+    .sticky-actions__btn--left{left:14px;background:#25D366}
+    .sticky-actions__btn--right{right:14px;background:#172C51}
+    .sticky-actions__icon{width:18px;height:18px;display:block;flex:0 0 18px}
+
+    @media(max-width:980px){
+      .form-compare,.starter-compare{grid-template-columns:1fr 1fr}
+      .proto-grid{grid-template-columns:1fr}
+      .case-kpis{grid-template-columns:1fr 1fr}
+      .norma-grid{grid-template-columns:1fr 1fr}
+      #footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+    }
+    @media(max-width:680px){
+      .form-compare,.starter-compare,.norma-grid{grid-template-columns:1fr}
+      .proto-specs{grid-template-columns:1fr 1fr}
+      #footer .container{grid-template-columns:1fr 1fr !important;gap:14px !important}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Article",
+        "headline":"Cómo Diseñar un CCM Industrial: IEC 61439, Arrancadores y Protocolos de Comunicación",
+        "description":"Guía técnica completa de ingeniería para centros de control de motores industriales: formas de separación IEC 61439-2 (Form 1 a 4b), selección de arrancadores DOL/Y-Δ/soft-starter/VFD, protecciones coordinadas Tipo 2, protocolos Modbus/Profibus/EtherNet/IP/PROFINET y análisis de arco eléctrico NFPA 70E.",
+        "datePublished":"2026-09-04",
+        "dateModified":"2026-09-04",
+        "author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
+        "publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/brand/vms_logo_blue.png"}},
+        "image":"https://vmsenergy.com/assets/img/blog/ccm/og-ccm-industrial-diseno-iec61439.webp",
+        "url":"https://vmsenergy.com/blog-ccm-industrial-diseno-iec61439.html",
+        "inLanguage":"es-MX",
+        "about":{"@type":"Thing","name":"Centro de Control de Motores Industrial"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"¿Por qué se especifica Form 4b y no Form 3b para un CCM en planta Oil & Gas?",
+            "acceptedAnswer":{"@type":"Answer","text":"La diferencia clave está en la capacidad de acceder a los terminales de cable sin exponer las barras de distribución ni las unidades funcionales adyacentes. En Form 3b los terminales de cable comparten compartimento con la unidad funcional — al abrir el cubículo para revisar un terminal, el técnico queda expuesto a las partes bajo tensión de esa UF. En Form 4b los terminales están en un compartimento completamente separado, de modo que se puede revisar una conexión de cable sin riesgo de contacto con la UF activa. En Oil & Gas, donde la continuidad de proceso es crítica y el CCM puede estar bajo tensión durante el mantenimiento de terminales, Form 4b es el mínimo aceptable. El sobrecosto respecto a Form 3b es del 15–25%, compensado ampliamente por la eliminación de paros de planta para mantenimiento eléctrico."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Cuándo un soft-starter es mejor que un VFD, si el VFD controla mejor la corriente de arranque?",
+            "acceptedAnswer":{"@type":"Answer","text":"El VFD controla mejor el arranque y además ofrece velocidad variable, pero tiene tres desventajas que justifican el soft-starter en ciertos casos: costo (un soft-starter cuesta 40–60% menos que un VFD equivalente para la misma potencia), generación de armónicos (un VFD genera THDi del 30–80% sin filtro, requiriendo filtros LCL o traps; el soft-starter genera armónicos solo durante el arranque, que dura segundos), y complejidad de mantenimiento (el VFD tiene tarjetas electrónicas sensibles a temperatura y vibración; el soft-starter solo contiene tiristores y un circuito de disparo). El soft-starter es la elección óptima cuando el motor arranca a carga ligera o en vacío, el proceso no requiere velocidad variable una vez en régimen (bombas centrífugas a caudal fijo, compresores reciprocantes, molinos), y la planta ya tiene armónicos elevados donde agregar VFDs empeoraría la calidad de energía sin filtros adicionales."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Qué es la coordinación Tipo 2 de protecciones en un CCM y por qué importa?",
+            "acceptedAnswer":{"@type":"Answer","text":"La coordinación Tipo 2 según IEC 60947-4-1 exige que tras una falla de cortocircuito, el contactor y el relé de sobrecarga no sufran daños que impidan su reutilización — solo puede haber soldadura leve de los contactos del contactor, siempre que sean fácilmente separables. En la práctica, esto significa que el MCCB o fusible asociado debe interrumpir la corriente de cortocircuito antes de que la energía I²t destruya el contactor. La alternativa, coordinación Tipo 1, solo exige que no haya riesgo para personas — el contactor puede quedar dañado y requerir sustitución. En instalaciones industriales se especifica siempre Tipo 2 porque un contactor dañado implica tiempo de paro para conseguir el repuesto; con Tipo 2, tras separar los contactos el arrancador vuelve a funcionar. VMS Energy verifica la coordinación Tipo 2 durante la ingeniería de detalle con las tablas de coordinación del fabricante para cada combinación MCCB-contactor-relé."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Cómo se determina la categoría de EPP de arco eléctrico para un CCM?",
+            "acceptedAnswer":{"@type":"Answer","text":"El análisis de arco eléctrico (Arc Flash) según NFPA 70E calcula la energía incidente en cal/cm² a la distancia de trabajo para cada cubículo del CCM. El proceso: (1) Modelo de red eléctrica con los datos de cortocircuito en el bus del CCM. (2) Cálculo de la corriente de arco según el método de Lee o IEEE 1584-2018 (este último más preciso para cabinetes de BT). (3) Determinación del tiempo de despeje del arco: cuánto tarda la protección aguas arriba (MCCB o fusible) en interrumpir la falla. (4) Cálculo de energía incidente = f(Iarc², t_despeje, distancia). El resultado clasifica cada cubículo en PPE Category 1 (≤4 cal/cm²: careta 4 cal), Category 2 (≤8 cal/cm²), Category 3 (≤25 cal/cm²) o Category 4 (≤40 cal/cm²). Cubículos con energía incidente superior a 40 cal/cm² se clasifican como zona de peligro y requieren rediseño de la protección para reducir el tiempo de despeje."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Se puede agregar un VFD o soft-starter a un CCM tipo fijo existente sin reemplazar el tablero completo?",
+            "acceptedAnswer":{"@type":"Answer","text":"Depende de dos factores: el espacio disponible en el cubículo y la capacidad térmica del tablero. Un VFD genera calor significativo (pérdidas típicas del 2–3% de la potencia nominal); un gabinete de CCM fijo que no fue diseñado para disipar ese calor puede superar los límites térmicos de IEC 61439, lo que invalida la verificación original y puede causar fallas prematuras. Además, si el VFD genera armónicos que elevan la corriente de neutro, el cableado interno puede sobrecalentarse. El procedimiento correcto: verificar la capacidad térmica del cubículo con el nuevo disipador de calor del VFD, comprobar que el MCCB de protección sigue siendo apto para la coordinación Tipo 2 con el VFD (algunos VFDs requieren fusibles semiconductor en lugar de MCCB), y actualizar el plano unifilar y el estudio de arco eléctrico. Si las condiciones no se cumplen, es más seguro y económico a largo plazo reemplazar el cubículo afectado en lugar del tablero completo."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Cuál es la diferencia práctica entre Profibus DP y PROFINET en un proyecto de CCM nuevo?",
+            "acceptedAnswer":{"@type":"Answer","text":"Profibus DP es el protocolo de campo maduro de Siemens (IEC 61158), determinista, probado durante décadas y con cobertura de repuestos garantizada por Siemens hasta 2030+. Requiere cable par trenzado apantallado específico (cable tipo A: 150 Ω), conectores DB9 y terminadores activos en cada extremo del segmento. PROFINET es el sucesor sobre Ethernet estándar Cat6 con topología estrella (switch gestionado PROFINET). PROFINET elimina las restricciones de longitud de segmento y nodos de Profibus, permite diagnóstico remoto integrado desde TIA Portal, y con IRT (Isochronous Real Time) logra ciclos deterministas de 1 ms. Para un CCM nuevo en un proyecto Siemens, PROFINET es la elección si el PLC es S7-1500/1200 (TIA Portal) y si la planta tiene infraestructura Ethernet existente. Si hay PLC S7-300/400 heredado, Profibus DP es más sencillo de integrar sin agregar switches PROFINET y sin actualizar el firmware del PLC maestro."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Qué entregables técnicos debe incluir el dossier de un CCM industrial al finalizar el proyecto?",
+            "acceptedAnswer":{"@type":"Answer","text":"El dossier técnico completo de un CCM bajo IEC 61439 debe incluir: (1) Planos eléctricos as-built: unifilar actualizado, diagrama de control punto a punto, layout de cubículos con identificación de cada UF. (2) Memoria de cálculo: corriente de cortocircuito en cada bus, selección de protecciones con coordinación Tipo 2, verificación de ampacidad de barras. (3) Informe de pruebas FAT: prueba dieléctrica (tensión de ensayo 2U₀+1 000 V durante 1 min), medición de resistencia de aislamiento (>1 MΩ), verificación de secuencias de control con simulador. (4) Informe de pruebas SAT en sitio. (5) Estudio de arco eléctrico NFPA 70E con etiquetas de advertencia instaladas en cada cubículo. (6) Configuración y parámetros de arrancadores y VFDs: archivo de proyecto guardado. (7) Plan de mantenimiento preventivo: torque de conexiones, calibración de relés, inspección termográfica. (8) Listado de refacciones críticas recomendadas con número de parte del fabricante."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header aria-label="Barra de navegación">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="carreras.html">Carreras</a></li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="blog-hero" aria-labelledby="blogTitle">
+      <div class="container blog-hero__content">
+        <div class="blog-hero__eyebrow">
+          <span>📋</span>
+          <span>Ingeniería Eléctrica Industrial &mdash; CCM</span>
+        </div>
+        <h1 id="blogTitle">Cómo Diseñar un Centro de Control de Motores Industrial: IEC&nbsp;61439, Arrancadores y Protocolos de Comunicación</h1>
+        <div class="blog-hero__meta">
+          <span>📅 4 de septiembre de 2026</span>
+          <span>⏱ 16 min de lectura</span>
+          <span>✍ Ingeniería VMS Energy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <div class="article-wrap">
+      <div class="container">
+        <div class="prose">
+
+          <p>Un Centro de Control de Motores (CCM) no es un tablero más. Es el sistema nervioso del proceso industrial: concentra el arranque, la protección, el monitoreo y el control de cada motor de la planta en un solo ensamble diseñado, fabricado y probado bajo la norma IEC&nbsp;61439. Una especificación incorrecta —el tipo constructivo equivocado, la forma de separación insuficiente, un arrancador sobredimensionado o un protocolo incompatible con el PLC— puede resultar en paros no planificados, riesgo de arco eléctrico para el personal o equipos que nunca alcanzan su potencial de eficiencia energética.</p>
+          <p>Esta guía recorre el proceso de ingeniería completo: desde la definición del tipo constructivo y la forma de separación IEC&nbsp;61439-2, hasta la selección del arrancador, la coordinación de protecciones Tipo&nbsp;2 y la elección del protocolo de comunicación industrial. Al final encontrarás el caso real del proyecto CTG&nbsp;Chankanaab y las preguntas técnicas más frecuentes del proceso de especificación.</p>
+
+          <!-- SECCION 1: TIPOS CONSTRUCTIVOS -->
+          <h2>1. Tipo constructivo: fijo, enchufable o drawout</h2>
+          <p>La primera decisión de diseño define el mecanismo de acceso al mantenimiento y el costo de ciclo de vida del CCM. Hay tres arquitecturas fundamentales:</p>
+
+          <div class="t-wrap">
+            <table class="t-std">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Mecanismo de retiro</th>
+                  <th>Bus bajo tensión durante mantenimiento</th>
+                  <th>Forms IEC 61439 disponibles</th>
+                  <th>Ventaja clave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Fijo</strong></td>
+                  <td>Requiere cortar alimentación</td>
+                  <td class="no">No — paro total</td>
+                  <td>Form 1, 2a/2b, 3a/3b</td>
+                  <td>Menor costo inicial</td>
+                </tr>
+                <tr>
+                  <td><strong>Enchufable (plug-in)</strong></td>
+                  <td>Sin herramientas, contactos se desconectan al extraer</td>
+                  <td class="ok">Sí — cubículo energizado</td>
+                  <td>Form 2b, 3a/3b, 4a</td>
+                  <td>Cambio rápido de módulo de repuesto</td>
+                </tr>
+                <tr>
+                  <td><strong>Drawout (extraíble)</strong></td>
+                  <td>Carro en 3 posiciones: conectado / prueba / desconectado</td>
+                  <td class="ok">Sí — resto del CCM activo</td>
+                  <td>Form 4b exclusivamente</td>
+                  <td>Mantenimiento en caliente, posición de prueba</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <span class="cb-label">Regla de ingeniería VMS</span>
+            En proyectos con más de 12 motores de proceso y donde el paro de producción supera los <strong>$50&nbsp;000/hora</strong>, el tipo drawout se amortiza en menos de 18 meses respecto al enchufable. En Oil &amp; Gas y generación de energía, el drawout Form 4b es el estándar de especificación.
+          </div>
+
+          <!-- SECCION 2: FORMAS DE SEPARACIÓN -->
+          <h2>2. Formas de separación IEC 61439-2: Form 1 a Form 4b</h2>
+          <p>Las formas de separación definen el nivel de aislamiento físico entre las partes internas del CCM: barras de distribución, unidades funcionales (UF) y terminales de cable externo. A mayor numeración, mayor seguridad durante el mantenimiento y mayor costo de fabricación.</p>
+
+          <div class="form-compare">
+            <div class="form-chip">
+              <span class="form-chip__badge">Form 1</span>
+              <h4>Sin separación interna</h4>
+              <p>Todo en un compartimento común: barras, UF y terminales accesibles al abrir la puerta. Prohibido en aplicaciones con mantenimiento frecuente bajo tensión.</p>
+              <span class="form-chip__use">Auxiliares no críticos de baja frecuencia de mantenimiento.</span>
+            </div>
+            <div class="form-chip">
+              <span class="form-chip__badge">Form 2a / 2b</span>
+              <h4>Barras separadas de las UF</h4>
+              <p>Barrera física entre barras y UF. Form 2a: UF adyacentes comparten compartimento. Form 2b: cada UF en compartimento propio.</p>
+              <span class="form-chip__use">Alimentos &amp; Bebidas, HVAC, plantas de tratamiento.</span>
+            </div>
+            <div class="form-chip form-chip--hi">
+              <span class="form-chip__badge">Form 3a / 3b</span>
+              <h4>Terminales separados de barras</h4>
+              <p>Añade separación entre terminales externos y barras. En 3b también hay separación entre UF adyacentes. Estándar en manufactura media.</p>
+              <span class="form-chip__use">Automotriz, minería, subestaciones de distribución industrial.</span>
+            </div>
+            <div class="form-chip form-chip--hi">
+              <span class="form-chip__badge">Form 4a / 4b</span>
+              <h4>Separación total</h4>
+              <p>Barras, UF y terminales en compartimentos 100% independientes. Form 4b: terminales separados de la UF — permite retiro en caliente (drawout).</p>
+              <span class="form-chip__use">Oil &amp; Gas, generación, petroquímica — mantenimiento sin paro.</span>
+            </div>
+          </div>
+
+          <h3>La diferencia crítica entre Form 3b y Form 4b</h3>
+          <p>En Form&nbsp;3b el compartimento de terminales de cable está separado de las barras, pero los terminales comparten espacio con la unidad funcional. Cuando el técnico abre ese cubículo para revisar una conexión de cable, queda expuesto a las partes bajo tensión de la UF activa. En Form&nbsp;4b los terminales tienen su propio compartimento independiente de la UF: se puede acceder al terminal de cable sin riesgo de contacto con el contactor, el relé o el VFD que sigue operando. Esta diferencia es la razón por la que Oil &amp; Gas especifica Form&nbsp;4b como mínimo, no Form&nbsp;3b.</p>
+
+          <!-- SECCION 3: ARRANCADORES -->
+          <h2>3. Selección del arrancador de motor: DOL, Y-Δ, soft-starter y VFD</h2>
+          <p>La elección del arrancador impacta la corriente de inrush, el par de arranque, la calidad de energía de la red, la eficiencia energética en régimen y el costo del cubículo. Las cuatro tecnologías tienen nichos de aplicación bien definidos.</p>
+
+          <div class="starter-compare">
+            <div class="sc-card">
+              <span class="sc-card__tag">DOL</span>
+              <h4>Arranque directo a línea</h4>
+              <dl>
+                <dt>I arranque</dt><dd>6–8 × In</dd>
+                <dt>Par arranque</dt><dd>100% nominal</dd>
+                <dt>Potencia típica</dt><dd>≤ 22 kW (480 V)</dd>
+                <dt>Ventaja</dt><dd>Simplicidad, costo mínimo</dd>
+                <dt>Limitación</dt><dd>Mayor impacto en la red; caída de tensión en arranques frecuentes</dd>
+              </dl>
+            </div>
+            <div class="sc-card">
+              <span class="sc-card__tag">Y-Δ</span>
+              <h4>Estrella-triángulo</h4>
+              <dl>
+                <dt>I arranque</dt><dd>2–2.7 × In</dd>
+                <dt>Par arranque</dt><dd>33% del motor</dd>
+                <dt>Potencia típica</dt><dd>15–200 kW</dd>
+                <dt>Condición</dt><dd>Arranque obligatoriamente sin carga</dd>
+                <dt>Limitación</dt><dd>Transitorio de conmutación Y→Δ puede superar DOL si hay carga</dd>
+              </dl>
+            </div>
+            <div class="sc-card">
+              <span class="sc-card__tag">Soft-starter</span>
+              <h4>Arrancador suave</h4>
+              <dl>
+                <dt>I arranque</dt><dd>2–4 × In (configurable)</dd>
+                <dt>Par arranque</dt><dd>Rampa progresiva</dd>
+                <dt>Potencia típica</dt><dd>7.5–630 kW</dd>
+                <dt>Ventaja</dt><dd>Protecciones integradas; sin transitorio de conmutación</dd>
+                <dt>Limitación</dt><dd>Genera armónicos durante el arranque; sin velocidad variable en régimen</dd>
+              </dl>
+            </div>
+            <div class="sc-card sc-card--vfd">
+              <span class="sc-card__tag">VFD</span>
+              <h4>Variador de frecuencia</h4>
+              <dl>
+                <dt>I arranque</dt><dd>≤ 150% de In</dd>
+                <dt>Ahorro energético</dt><dd>20–50% en bombas (ley P∝n³)</dd>
+                <dt>Potencia típica</dt><dd>0.37–2 500 kW</dd>
+                <dt>Ventaja</dt><dd>Velocidad variable, eficiencia máxima, protecciones avanzadas</dd>
+                <dt>Limitación</dt><dd>Mayor costo; armónicos THDi 30–80% sin filtro LCL</dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3>Criterio de decisión práctica</h3>
+          <p>El árbol de decisión simplificado: si el proceso requiere <strong>velocidad variable</strong> → VFD obligatorio. Si el proceso es velocidad fija y la potencia es <strong>mayor a 75 kW</strong> con arranque sin carga → Y-Δ o soft-starter. Si la carga tiene <strong>impacto mecánico al arranque</strong> (bombas con columna de agua, cintas con carga) → soft-starter. Si la potencia es <strong>menor a 22 kW</strong> y la red lo tolera → DOL. Ante la duda entre soft-starter y VFD, el VFD siempre produce más valor a largo plazo; el soft-starter se justifica principalmente por costo y menor generación de armónicos en régimen.</p>
+
+          <!-- SECCION 4: PROTECCIONES -->
+          <h2>4. Protecciones integradas y coordinación Tipo 2</h2>
+          <p>Cada unidad funcional del CCM combina una cadena de dispositivos de protección. La norma IEC&nbsp;60947-4-1 establece dos niveles de coordinación entre el dispositivo de cortocircuito y el contactor/relé de sobrecarga:</p>
+
+          <div class="t-wrap">
+            <table class="t-std">
+              <thead>
+                <tr><th>Dispositivo</th><th>Función</th><th>Configuración típica</th><th>Norma</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>MCCB</strong></td>
+                  <td>Protección contra cortocircuito y sobrecorriente de larga duración</td>
+                  <td>Ir = 1.0–1.25 × In del motor; Im = 10–15 × In</td>
+                  <td>IEC 60947-2</td>
+                </tr>
+                <tr>
+                  <td><strong>Contactor</strong></td>
+                  <td>Maniobra de apertura y cierre; no interrumpe cortocircuito</td>
+                  <td>Categoría AC-3 (motores de jaula de ardilla)</td>
+                  <td>IEC 60947-4-1</td>
+                </tr>
+                <tr>
+                  <td><strong>Relé térmico</strong></td>
+                  <td>Protección contra sobrecarga continua (clase 10/20/30)</td>
+                  <td>Ajuste = 1.0–1.15 × In; clase 10 para arranque corto</td>
+                  <td>IEC 60947-4-1</td>
+                </tr>
+                <tr>
+                  <td><strong>Guardamotor (PKZ/MS)</strong></td>
+                  <td>Combina MCCB + relé térmico en un solo dispositivo</td>
+                  <td>Ajuste directo de corriente; coordinación Tipo 2 garantizada por fábrica</td>
+                  <td>IEC 60947-4-1</td>
+                </tr>
+                <tr>
+                  <td><strong>Relé programable (ANSI 49/51/46)</strong></td>
+                  <td>Protección diferencial de motor, desequilibrio de fases, rotor bloqueado</td>
+                  <td>Para motores &gt; 75 kW o motores críticos de proceso</td>
+                  <td>IEEE C37.96</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box">
+            <span class="cb-label">Coordinación Tipo 2 vs Tipo 1 — lo que realmente importa en producción</span>
+            <strong>Tipo 1:</strong> tras un cortocircuito, el contactor puede quedar destruido. El CCM puede quedar fuera de servicio hasta conseguir el repuesto (horas o días). <strong>Tipo 2:</strong> el MCCB interrumpe antes de que la energía I²t destruya el contactor. Los contactos pueden tener soldadura leve, pero son separables manualmente — el arrancador vuelve a operar en minutos. VMS Energy verifica Tipo 2 en ingeniería de detalle usando las tablas de coordinación publicadas por el fabricante para cada combinación MCCB-contactor-relé.
+          </div>
+
+          <!-- SECCION 5: PROTOCOLOS -->
+          <h2>5. Protocolos de comunicación industrial</h2>
+          <p>La integración del CCM con el sistema de control de la planta (PLC/SCADA) determina la visibilidad en tiempo real del estado de cada motor: corriente, tensión, estado de protecciones, conteo de arranques y temperatura del bobinado. La elección del protocolo depende de la plataforma PLC existente, el número de nodos y los requerimientos de determinismo.</p>
+
+          <div class="proto-grid">
+            <div class="proto-card">
+              <span class="proto-card__tag">Modbus RTU / TCP</span>
+              <h4>El estándar universal</h4>
+              <p>Modbus RTU sobre RS-485 es compatible con la totalidad de PLCs del mercado. Simple, robusto, sin licencias. Modbus TCP traslada el mismo protocolo sobre Ethernet estándar, eliminando la pasarela RS-485/Ethernet. Ideal para sistemas heredados o cuando el presupuesto limita el uso de protocolos más avanzados.</p>
+              <div class="proto-specs">
+                <div class="proto-spec"><span class="proto-spec__val">32</span><span class="proto-spec__lbl">nodos RTU</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">115.2 kbps</span><span class="proto-spec__lbl">velocidad RTU</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">Puerto 502</span><span class="proto-spec__lbl">Modbus TCP</span></div>
+              </div>
+            </div>
+            <div class="proto-card">
+              <span class="proto-card__tag">Profibus DP</span>
+              <h4>Determinismo en ecosistema Siemens</h4>
+              <p>Estándar IEC&nbsp;61158 para redes de campo industriales. Determinista, hasta 126 nodos por segmento y 12&nbsp;Mbps. Nativo en S7-300/400. Cada arrancador o VFD del CCM actúa como DP-Slave que reporta corriente, estado y defectos al PLC maestro en cada ciclo de bus.</p>
+              <div class="proto-specs">
+                <div class="proto-spec"><span class="proto-spec__val">126</span><span class="proto-spec__lbl">nodos</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">12 Mbps</span><span class="proto-spec__lbl">velocidad máx.</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">IEC 61158</span><span class="proto-spec__lbl">norma</span></div>
+              </div>
+            </div>
+            <div class="proto-card">
+              <span class="proto-card__tag">EtherNet/IP</span>
+              <h4>Ecosistema Rockwell / Allen-Bradley</h4>
+              <p>CIP (Common Industrial Protocol) sobre TCP/IP. Permite compartir infraestructura de red con TI. Los dispositivos son accesibles desde ControlLogix/CompactLogix y Studio&nbsp;5000 de forma nativa, sin pasarelas adicionales. Soporta mensajería explícita e implícita (I/O en tiempo real).</p>
+              <div class="proto-specs">
+                <div class="proto-spec"><span class="proto-spec__val">100 Mbps</span><span class="proto-spec__lbl">mínimo</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">CIP</span><span class="proto-spec__lbl">protocolo app.</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">ODVA</span><span class="proto-spec__lbl">organismo</span></div>
+              </div>
+            </div>
+            <div class="proto-card">
+              <span class="proto-card__tag">PROFINET</span>
+              <h4>Industrial Ethernet de alta velocidad</h4>
+              <p>Evolución de Profibus sobre Ethernet estándar (IEC&nbsp;61158). Con IRT (Isochronous Real Time) alcanza ciclos deterministas de 1&nbsp;ms. Integración nativa con TIA&nbsp;Portal y SINAMICS. Para CCM nuevos con S7-1500/1200, es la elección natural si la planta tiene infraestructura Ethernet Cat6 disponible.</p>
+              <div class="proto-specs">
+                <div class="proto-spec"><span class="proto-spec__val">1 ms</span><span class="proto-spec__lbl">ciclo IRT</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">1 Gbps</span><span class="proto-spec__lbl">velocidad máx.</span></div>
+                <div class="proto-spec"><span class="proto-spec__val">IEC 61158</span><span class="proto-spec__lbl">norma</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECCION 6: ARC FLASH -->
+          <h2>6. Análisis de arco eléctrico NFPA 70E</h2>
+          <p>El análisis de arco eléctrico determina la energía incidente (cal/cm²) a la que queda expuesto el técnico cuando trabaja en un cubículo del CCM bajo tensión. Es un requisito de seguridad — no una opción — para cualquier instalación donde el personal realice tareas de mantenimiento eléctrico en equipos energizados.</p>
+
+          <h3>Metodología IEEE 1584-2018</h3>
+          <p>El modelo IEEE&nbsp;1584-2018 es el estándar de facto para cálculo de arco en BT (&lt;15 kV). Los parámetros de entrada son: tensión del sistema, corriente de cortocircuito en el bus del CCM (kA simétricos), tipo de electrodo (VCB, VCBB, HCB, HOA), dimensiones del gabinete, distancia de trabajo, y tiempo de despeje del arco (tiempo que tarda la protección aguas arriba en interrumpir la falla).</p>
+
+          <div class="t-wrap">
+            <table class="t-std">
+              <thead><tr><th>Categoría PPE (NFPA 70E)</th><th>Energía incidente</th><th>Equipo de protección mínimo</th></tr></thead>
+              <tbody>
+                <tr><td><strong>PPE Category 1</strong></td><td>≤ 4 cal/cm²</td><td>Careta 4 cal, ropa FR, guantes clase 00</td></tr>
+                <tr><td><strong>PPE Category 2</strong></td><td>≤ 8 cal/cm²</td><td>Careta 8 cal, overol FR doble capa, guantes clase 0</td></tr>
+                <tr><td><strong>PPE Category 3</strong></td><td>≤ 25 cal/cm²</td><td>Careta 25 cal, traje Flash, guantes clase 1</td></tr>
+                <tr><td><strong>PPE Category 4</strong></td><td>≤ 40 cal/cm²</td><td>Careta 40 cal, traje Flash de alta protección, guantes clase 2</td></tr>
+                <tr><td><strong>Peligro extremo</strong></td><td>&gt; 40 cal/cm²</td><td>Requiere rediseño de protección para reducir tiempo de despeje</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>El parámetro que el ingeniero eléctrico puede controlar para reducir la energía incidente es el <strong>tiempo de despeje del arco</strong>: si se agrega un relé de protección de zona de bus (Bus Zone Protection) o se reducen los tiempos de disparo de los MCCB aguas arriba, la protección interrumpe el arco en milisegundos — reduciendo la energía incidente en órdenes de magnitud. En instalaciones existentes, agregar un relé de bus zone es la forma más económica de bajar la categoría de PPE sin reemplazar el CCM.</p>
+
+          <!-- SECCION 7: NORMAS -->
+          <h2>7. Marco normativo del CCM industrial</h2>
+          <div class="norma-grid">
+            <div class="norma-chip">
+              <span class="norma-chip__code">IEC 61439-1</span>
+              <span class="norma-chip__desc">Conjuntos de aparamenta BT — Requisitos generales: ensayos de diseño y rutinarios, límites de temperatura, verificación de la forma de separación.</span>
+            </div>
+            <div class="norma-chip">
+              <span class="norma-chip__code">IEC 61439-2</span>
+              <span class="norma-chip__desc">Conjuntos de potencia — extensión específica para CCM. Define cubículos, Forms 1 a 4b y requisitos de acceso al mantenimiento.</span>
+            </div>
+            <div class="norma-chip">
+              <span class="norma-chip__code">IEC 60947-4-1</span>
+              <span class="norma-chip__desc">Arrancadores de motor CA. Categorías de empleo, coordinación Tipo 1 y Tipo 2, corriente mínima de cortocircuito, ciclo de vida operativo del contactor.</span>
+            </div>
+            <div class="norma-chip">
+              <span class="norma-chip__code">NOM-001-SEDE-2012</span>
+              <span class="norma-chip__desc">Artículo 430 (motores): protección contra sobrecorriente, dimensionamiento de conductores de alimentación y protección de circuitos ramales.</span>
+            </div>
+            <div class="norma-chip">
+              <span class="norma-chip__code">NFPA 70E</span>
+              <span class="norma-chip__desc">Seguridad eléctrica. Estudio de arco eléctrico, categorías de PPE y etiquetas de advertencia obligatorias en cada cubículo del CCM.</span>
+            </div>
+            <div class="norma-chip">
+              <span class="norma-chip__code">UL 508A</span>
+              <span class="norma-chip__desc">Tableros de control industrial. Requerida para exportación a EE.UU. o cuando el cliente especifica certificación UL para el ensamble completo.</span>
+            </div>
+          </div>
+
+          <!-- SECCION 8: ERRORES COMUNES -->
+          <h2>8. Errores frecuentes en la especificación de un CCM</h2>
+          <div class="error-cards">
+            <div class="error-card">
+              <span class="error-card__label">Error 1 — Especificar Form 3b cuando el proceso requiere Form 4b</span>
+              <p>El ingeniero elige Form 3b para reducir costo. En mantenimiento, el técnico abre el cubículo de terminales y queda expuesto a la UF activa. Primera intervención bajo tensión resulta en incidente de arco eléctrico.</p>
+              <div class="fix"><strong>Corrección:</strong> Definir la forma de separación en función del requerimiento de continuidad de proceso — si el CCM debe permanecer bajo tensión durante el mantenimiento de terminales, la especificación mínima es Form 4b. El sobrecosto respecto a Form 3b raramente supera el 20% del tablero.</div>
+            </div>
+            <div class="error-card">
+              <span class="error-card__label">Error 2 — Seleccionar Y-Δ para una bomba con columna de agua</span>
+              <p>El CCM arranca el motor de bomba en estrella. Al conmutar a triángulo la bomba ya tiene presión en la línea. El transitorio de conmutación genera un pico de corriente que supera al DOL y el contactor de estrella se destruye al primer arranque en carga.</p>
+              <div class="fix"><strong>Corrección:</strong> Para bombas centrífugas con contrapresión o cualquier carga con par resistente al arranque, especificar soft-starter con rampa de aceleración ajustada. El Y-Δ solo es adecuado cuando se garantiza arranque mecánicamente en vacío.</div>
+            </div>
+            <div class="error-card">
+              <span class="error-card__label">Error 3 — VFD instalado sin filtro LCL en red con alta sensibilidad a armónicos</span>
+              <p>Se instalan 8 VFDs de 75 kW en el CCM sin filtros de entrada. El THDi asciende al 42% en el bus principal. Los relés de protección de otros equipos comienzan a disparar por falsos positivos. La subestación registra sobrecalentamiento del transformador.</p>
+              <div class="fix"><strong>Corrección:</strong> Realizar el estudio de armónicos antes de especificar los VFDs. Si la suma de potencias de VFDs supera el 20% de la capacidad del transformador, especificar filtros LCL o reactancias de línea para limitar THDi &lt; 5% conforme a IEEE 519.</div>
+            </div>
+            <div class="error-card">
+              <span class="error-card__label">Error 4 — Olvidar el derating por altitud en instalaciones sobre 1 000 m.s.n.m.</span>
+              <p>El CCM se instala en Durango a 1 890 m.s.n.m. La ampacidad de barras y la capacidad de disipación térmica de VFDs y soft-starters no se corregen. A los 6 meses, los VFDs empiezan a disparar por sobretemperatura.</p>
+              <div class="fix"><strong>Corrección:</strong> IEC 61439 requiere derating para altitudes superiores a 1 000 m: la corriente nominal del ensamble se reduce aproximadamente un 0.5% por cada 100 m adicionales. Especificar VFDs y soft-starters con factor de servicio corregido para la altitud del sitio.</div>
+            </div>
+            <div class="error-card">
+              <span class="error-card__label">Error 5 — Protocolo de comunicación incompatible con el PLC existente</span>
+              <p>El CCM se fabrica con dispositivos que solo soportan Profibus DP. El cliente tiene un PLC Allen-Bradley ControlLogix. El integrador instala una pasarela Profibus/EtherNet/IP que agrega 400 ms de latencia. El SCADA no puede monitorear en tiempo real los arranques de emergencia.</p>
+              <div class="fix"><strong>Corrección:</strong> Definir el protocolo de comunicación en la fase de ingeniería básica, antes de la especificación de los dispositivos del CCM. Verificar la compatibilidad nativa de cada arrancador/VFD seleccionado con el protocolo requerido — no asumir compatibilidad por firmware adicional.</div>
+            </div>
+          </div>
+
+          <!-- SECCION 9: CASO REAL -->
+          <h2>9. Caso real: CCM drawout Form 4b para CTG Chankanaab</h2>
+          <div class="case-block">
+            <span class="case-block__eyebrow">🛢 Oil &amp; Gas / Generación de Energía — Playa del Carmen, Quintana Roo</span>
+            <h3>Control de motores auxiliares de turbogeneradores industriales</h3>
+            <p>El proyecto CTG&nbsp;Chankanaab requería el control y protección de los motores auxiliares de un sistema de turbogeneradores: bombas de lubricación, bombas de enfriamiento de aceite, ventiladores de sala y motores de actuadores de válvulas de control. La restricción más crítica del proyecto: los generadores de respaldo no podían detenerse durante el comisionamiento ni el mantenimiento del CCM.</p>
+            <p>VMS Energy diseñó un CCM tipo drawout Form&nbsp;4b con 24 carros extraíbles. Los soft-starters ABB PSR de las bombas de lubricación se configuraron con una rampa de aceleración de 8 segundos para eliminar los golpes de ariete en el sistema de aceite. La comunicación se implementó en Profibus&nbsp;DP con gateway Modbus&nbsp;TCP hacia el SCADA de control de planta, permitiendo monitoreo de corriente, temperatura y estado de cada motor desde la sala de control sin necesidad de personal en el cuarto eléctrico.</p>
+            <p>La posición de <strong>prueba</strong> del carro drawout fue determinante: permitió verificar las secuencias de arranque automático, los interlocks de seguridad y las señales de instrumentación con el PLC activo — sin energizar los motores — reduciendo el tiempo de comisionamiento en un 40% respecto al plan original.</p>
+            <div class="case-kpis">
+              <div class="case-kpi"><span class="case-kpi__val">24</span><span class="case-kpi__lbl">carros drawout Form 4b</span></div>
+              <div class="case-kpi"><span class="case-kpi__val">Profibus DP</span><span class="case-kpi__lbl">+ gateway Modbus TCP</span></div>
+              <div class="case-kpi"><span class="case-kpi__val">−40%</span><span class="case-kpi__lbl">tiempo de comisionamiento</span></div>
+              <div class="case-kpi"><span class="case-kpi__val">0 paros</span><span class="case-kpi__lbl">de generadores durante mantenimiento</span></div>
+            </div>
+            <p style="margin:14px 0 0"><strong>Entregables:</strong> Dossier FAT/SAT completo, estudio de arco eléctrico NFPA 70E con etiquetas por cubículo, planos as-built en AutoCAD Electrical, parámetros de VFDs y soft-starters archivados, y plan de mantenimiento preventivo con intervalos de torque y termografía.</p>
+          </div>
+
+          <!-- SECCION 10: FAQ -->
+          <div class="faq-section">
+            <h2>Preguntas técnicas frecuentes</h2>
+
+            <details>
+              <summary>¿Por qué se especifica Form 4b y no Form 3b para un CCM en planta Oil & Gas?</summary>
+              <p>La diferencia clave está en qué queda expuesto cuando se accede a los terminales de cable. En Form 3b, los terminales comparten compartimento con la unidad funcional: al abrir el cubículo para revisar una conexión, el técnico queda expuesto a las partes bajo tensión del contactor o VFD activo. En Form 4b, los terminales tienen su propio compartimento completamente independiente de la UF — se puede revisar o reconectar un cable sin riesgo de contacto con la UF que sigue operando. En Oil &amp; Gas, donde el paro de producción tiene costo elevadísimo y el CCM debe permanecer bajo tensión durante el mantenimiento de terminales, Form 4b es el mínimo aceptable. El sobrecosto respecto a Form 3b es del 15–25%, compensado ampliamente por la eliminación de paros de planta.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuándo un soft-starter es mejor que un VFD, si el VFD controla mejor la corriente de arranque?</summary>
+              <p>El soft-starter se justifica sobre el VFD en tres escenarios: (1) <strong>Costo:</strong> un soft-starter para la misma potencia cuesta 40–60% menos que un VFD equivalente. (2) <strong>Armónicos en régimen:</strong> el VFD genera THDi del 30–80% de forma continua; el soft-starter solo genera armónicos durante los segundos del arranque — si la red ya tiene alta distorsión armónica, agregar VFDs sin filtros empeora la calidad de energía de toda la planta. (3) <strong>Simplicidad de mantenimiento:</strong> el VFD tiene tarjetas electrónicas sensibles a temperatura, vibración y humedad; el soft-starter es más robusto en ambientes industriales agresivos. El soft-starter es la elección óptima cuando el proceso no requiere velocidad variable en régimen: bombas centrífugas a caudal fijo, compresores reciprocantes, molinos de velocidad constante.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué es la coordinación Tipo 2 y por qué importa en producción?</summary>
+              <p>La coordinación Tipo 2 según IEC 60947-4-1 exige que tras un cortocircuito, el contactor y el relé de sobrecarga no sufran daños que impidan su reutilización — solo puede haber soldadura leve de los contactos del contactor, siempre que sean separables manualmente. En la práctica: el MCCB o fusible asociado debe interrumpir la corriente de cortocircuito antes de que la energía I²t destruya el contactor. La alternativa, coordinación Tipo 1, solo exige que no haya riesgo para personas — el contactor puede quedar destruido. En producción industrial, un contactor destruido implica paro hasta conseguir el repuesto (horas o días en regiones remotas). Con Tipo 2, el técnico separa los contactos y el arrancador vuelve a funcionar en minutos. VMS Energy verifica Tipo 2 en ingeniería de detalle con las tablas de coordinación del fabricante.</p>
+            </details>
+
+            <details>
+              <summary>¿Cómo se determina la categoría de PPE de arco eléctrico para un CCM?</summary>
+              <p>El análisis de arco eléctrico según NFPA 70E y el modelo IEEE 1584-2018 calcula la energía incidente en cal/cm² en la distancia de trabajo para cada cubículo. El proceso: (1) Modelo de red con los datos de cortocircuito en el bus. (2) Cálculo de la corriente de arco. (3) Tiempo de despeje: cuánto tarda la protección aguas arriba en interrumpir la falla. (4) Energía incidente = f(I²arc × t_despeje, distancia). El resultado clasifica cada cubículo en PPE Category 1 (≤4 cal/cm²) a Category 4 (≤40 cal/cm²). Cubículos con más de 40 cal/cm² requieren rediseño de la protección — típicamente agregando un relé de bus zone que reduce el tiempo de despeje de segundos a milisegundos, bajando la energía incidente a Category 1 o 2.</p>
+            </details>
+
+            <details>
+              <summary>¿Se puede agregar un VFD a un CCM tipo fijo existente sin reemplazar el tablero?</summary>
+              <p>Depende de dos factores: espacio disponible y capacidad térmica del gabinete. Un VFD genera calor significativo (pérdidas del 2–3% de la potencia nominal); un gabinete que no fue diseñado para esa disipación puede superar los límites térmicos de IEC 61439. Además, el MCCB de protección original puede no ser apto para la coordinación Tipo 2 con el VFD — algunos VFDs requieren fusibles semiconductor en lugar de MCCB. El procedimiento correcto: verificar la capacidad térmica del cubículo con el nuevo disipador de calor del VFD, confirmar la coordinación Tipo 2 con el fabricante, y actualizar el estudio de arco eléctrico, ya que el VFD cambia la corriente de cortocircuito disponible. Si las condiciones no se cumplen, es más seguro reemplazar el cubículo afectado en lugar del tablero completo.</p>
+            </details>
+
+            <details>
+              <summary>¿Cuál es la diferencia práctica entre Profibus DP y PROFINET para un proyecto de CCM nuevo?</summary>
+              <p>Profibus DP es el protocolo maduro de Siemens (IEC 61158): determinista, probado durante décadas, con repuestos garantizados. Requiere cable par trenzado apantallado específico (150 Ω) y terminadores activos en cada extremo del segmento. PROFINET es el sucesor sobre Ethernet estándar Cat6 con topología estrella (switch gestionado PROFINET). PROFINET elimina las restricciones de longitud y nodos de Profibus, permite diagnóstico remoto integrado desde TIA Portal, y con IRT logra ciclos deterministas de 1 ms. Para un CCM nuevo en proyecto Siemens con S7-1500/1200 (TIA Portal): PROFINET si la planta tiene infraestructura Ethernet existente. Si hay PLC S7-300/400 heredado: Profibus DP es más sencillo de integrar sin actualizar firmware ni agregar switches PROFINET.</p>
+            </details>
+
+            <details>
+              <summary>¿Qué entregables técnicos debe incluir el dossier completo de un CCM industrial?</summary>
+              <p>El dossier técnico completo bajo IEC 61439 debe incluir: (1) Planos eléctricos as-built: unifilar actualizado, diagrama de control punto a punto, layout de cubículos con ID de cada UF. (2) Memoria de cálculo: corriente de cortocircuito en cada bus, selección de protecciones con coordinación Tipo 2, verificación de ampacidad de barras. (3) Informe FAT: prueba dieléctrica (2U₀+1 000 V durante 1 min), medición de resistencia de aislamiento (&gt;1 MΩ), verificación de secuencias con simulador. (4) Informe SAT en sitio. (5) Estudio de arco eléctrico NFPA 70E con etiquetas instaladas. (6) Configuración archivada de arrancadores y VFDs (archivo de proyecto del fabricante). (7) Plan de mantenimiento preventivo: torque de conexiones, calibración de relés, termografía semestral. (8) Listado de refacciones críticas recomendadas con número de parte.</p>
+            </details>
+          </div>
+
+          <!-- CTA INTERNO -->
+          <div class="callout-box" style="margin-top:40px">
+            <span class="cb-label">¿Necesita especificar un CCM para su proyecto?</span>
+            VMS Energy diseña CCM industriales desde la ingeniería de detalle hasta el comisionamiento y las pruebas FAT/SAT. Compártanos su lista de motores y las condiciones del sitio — en 7–12 días hábiles le presentamos la especificación técnica y la propuesta técnico-económica.
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+              <a href="contacto_cta.html#ctaForm" style="display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:12px;background:linear-gradient(180deg,#0f4c81,#0b3c67);color:#fff;font-weight:700;text-decoration:none;font-size:.96rem">Iniciar ingeniería de CCM</a>
+              <a href="soluciones-ccm-industrial.html#inicio" style="display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#eaf2ff;font-weight:700;text-decoration:none;font-size:.96rem">Ver landing page CCM completa</a>
+            </div>
+          </div>
+
+          <!-- ARTÍCULOS RELACIONADOS -->
+          <div style="margin-top:48px;padding-top:28px;border-top:1px solid var(--line)">
+            <h2 style="font-size:clamp(20px,2.4vw,26px);color:#103961;margin:0 0 16px">Artículos relacionados</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+              <a href="blog-seleccion-cable-electrico-industrial.html" style="display:block;padding:14px 16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;background:#f7fbff;color:#103961;font-weight:700;line-height:1.3">Selección de Cable Eléctrico Industrial: Ampacidad IEC 60287, XLPE vs EPR <span style="display:block;color:var(--muted);font-weight:400;font-size:.9rem;margin-top:4px">Cable eléctrico · 14 min</span></a>
+              <a href="blog-dimensionamiento-ups-industrial.html" style="display:block;padding:14px 16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;background:#f7fbff;color:#103961;font-weight:700;line-height:1.3">Cómo Dimensionar un UPS Industrial: IEC 62040-3 y Banco de Baterías <span style="display:block;color:var(--muted);font-weight:400;font-size:.9rem;margin-top:4px">UPS/BESS · 13 min</span></a>
+              <a href="blog-ingenieria-detalle-epc-electrico.html" style="display:block;padding:14px 16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;background:#f7fbff;color:#103961;font-weight:700;line-height:1.3">Ingeniería de Detalle en Proyectos EPC Eléctricos Industriales <span style="display:block;color:var(--muted);font-weight:400;font-size:.9rem;margin-top:4px">Ingeniería EPC · 15 min</span></a>
+            </div>
+          </div>
+
+        </div><!-- /prose -->
+      </div>
+    </div><!-- /article-wrap -->
+  </main>
+
+  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+      </div>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
+        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
+        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
+    Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
+  </div>
+
+  <script>
+    (function(){
+      var toggle=document.getElementById('menuToggle');
+      var list=document.getElementById('menuList');
+      if(!toggle||!list)return;
+      toggle.addEventListener('click',function(){
+        var open=list.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded',open?'true':'false');
+      });
+      document.addEventListener('click',function(e){
+        if(window.innerWidth>680)return;
+        if(!list.contains(e.target)&&!toggle.contains(e.target)){
+          list.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+  </script>
+
+  <div class="sticky-actions" aria-label="Acciones rápidas">
+    <a class="sticky-actions__btn sticky-actions__btn--left" href="https://wa.me/523332582234" target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">
+      <svg class="sticky-actions__icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+        <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
+      </svg>
+      Contáctanos
+    </a>
+    <a class="sticky-actions__btn sticky-actions__btn--right" href="contacto_cta.html#ctaForm" data-cta="sticky-ccm-cta">
+      <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#fff" d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.75-.75a.75.75 0 0 0-.75.75v.2l8 4.8 8-4.8v-.2a.75.75 0 0 0-.75-.75H4.75zm15.25 3.28-7.48 4.49a1 1 0 0 1-1.04 0L4 9.28v7.97c0 .41.34.75.75.75h14.5c.41 0 .75-.34.75-.75V9.28z"/>
+      </svg>
+      Solicitar CCM
+    </a>
+  </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="servicios-especializados">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,11 +23,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
-<style>
+<link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="servicios-base.css">
+  <style>
     :root{
       --night:#0b1220;
       --navy:#172C51;
-      --cobalt:#0F4C81;
+      --cobalt:var(--concept-primary);
       --ocean:#0f3d5e;
       --azure:#1a6fa3;
       --lime:#9ce37b;
@@ -88,13 +90,13 @@
     .map{background:radial-gradient(circle at 20% 20%,rgba(26,111,163,.2),transparent 55%),#ffffff;border-radius:22px;border:1px solid var(--line);padding:18px;display:grid;gap:14px}
     .map__zones{display:grid;gap:10px}
     .zone{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--soft);border:1px solid #dbe6f4;font-weight:600;color:#1a3d60}
-    .zone span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:12px;background:#e5f2ff;color:#0f4c81;font-weight:800}
+    .zone span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:12px;background:#e5f2ff;color:var(--concept-primary);font-weight:800}
     .timeline{display:grid;gap:12px;margin-top:16px}
     .step{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:#fff}
-    .step__num{width:38px;height:38px;border-radius:14px;background:#e8f2ff;color:#0f4c81;font-weight:800;display:flex;align-items:center;justify-content:center}
+    .step__num{width:38px;height:38px;border-radius:14px;background:#e8f2ff;color:var(--concept-primary);font-weight:800;display:flex;align-items:center;justify-content:center}
     .step p{color:var(--muted);line-height:1.6}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:.28rem .7rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-weight:700;font-size:.85rem}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:.28rem .7rem;border-radius:999px;background:#eef5ff;color:var(--concept-primary);font-weight:700;font-size:.85rem}
     .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
     #footer .container{
       max-width:1200px;
@@ -137,7 +139,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -195,20 +197,21 @@
       .foot__grid{grid-template-columns:1fr}
     }
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+.submenu--mega{min-width:500px;display:flex;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
   .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
   .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
@@ -221,6 +224,67 @@
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Service",
+        "name":"Mantenimiento Oil \u0026 Gas",
+        "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
+        "areaServed":["M\u00e9xico","Am\u00e9rica Latina"],
+        "serviceType":"Mantenimiento industrial especializado Oil \u0026 Gas",
+        "description":"Mantenimiento mec\u00e1nico, el\u00e9ctrico y de instrumentaci\u00f3n para activos oil \u0026 gas: plataformas offshore, FPSO, terminales, refiner\u00edas, gasoductos, estaciones de compresi\u00f3n y campos maduros. Cobertura regional 24/7 con cuadrillas especializadas.",
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"Servicios de Mantenimiento Oil \u0026 Gas VMS Energy",
+          "itemListElement":[
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mantenimiento mec\u00e1nico — equipos rotativos, sellos, compresores, bombas"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mantenimiento el\u00e9ctrico y de potencia — sistemas de distribuci\u00f3n HV/MV"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Instrumentaci\u00f3n y control — SCADA, PLC, sistemas de detecci\u00f3n"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagn\u00f3stico cr\u00edtico — levantamiento t\u00e9cnico, criticidad y matriz de riesgo"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mantenimiento predictivo — vibraci\u00f3n, termograf\u00eda, an\u00e1lisis de aceite"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Soporte de emergencia 24/7 — respuesta a contingencias y control de paros"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gesti\u00f3n de refacciones cr\u00edticas y mantenimiento de inventario"}}
+          ]
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"\u00bfQu\u00e9 tipos de activos oil \u0026 gas puede mantener VMS Energy?",
+            "acceptedAnswer":{"@type":"Answer","text":"VMS Energy atiende plataformas offshore y FPSO, terminales, refiner\u00edas y petroqu\u00edmica, gasoductos, estaciones de compresi\u00f3n y tanques, y campos onshore maduros. El alcance cubre mantenimiento mec\u00e1nico de equipos rotativos, sistemas el\u00e9ctricos de potencia media y alta, instrumentaci\u00f3n, control y SCADA."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfEn qu\u00e9 regiones opera VMS Energy para mantenimiento oil \u0026 gas?",
+            "acceptedAnswer":{"@type":"Answer","text":"VMS Energy opera con equipos coordinados en M\u00e9xico —incluyendo Campeche offshore, Tampico, Veracruz, Ciudad del Carmen y Nuevo Le\u00f3n— y ofrece cobertura en Am\u00e9rica Latina a trav\u00e9s de cuadrillas multirregi\u00f3n con gesti\u00f3n centralizada de KPIs y refacciones."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfC\u00f3mo gestiona VMS Energy el mantenimiento predictivo en activos oil \u0026 gas?",
+            "acceptedAnswer":{"@type":"Answer","text":"Utilizamos an\u00e1lisis de vibraci\u00f3n en equipos rotativos, termograf\u00eda infrarroja en tableros y conexiones el\u00e9ctricas, y an\u00e1lisis de aceite en compresores y reductores. Los resultados alimentan un plan de mantenimiento con KPIs acordados y un roadmap de mejora continua para reducir paros no planificados."}
+          },
+          {
+            "@type":"Question",
+            "name":"\u00bfQu\u00e9 normas de seguridad aplica VMS Energy en ambientes ATEX / Zona clasificada?",
+            "acceptedAnswer":{"@type":"Answer","text":"En zonas ATEX y \u00e1reas clasificadas (Zona 1/2/21/22), VMS Energy aplica NOM-022-STPS y API RP 500/505 para clasificaci\u00f3n de \u00e1reas, utiliza herramientas certificadas Ex y equipos antichispa, y exige permiso de trabajo caliente (hot work permit), lock-out tag-out (LOTO) y gas-free verification antes de cada intervenci\u00f3n."}
+          }
+        ]
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},
+          {"@type":"ListItem","position":2,"name":"Servicios Especializados","item":"https://vmsenergy.com/especialidades.html"},
+          {"@type":"ListItem","position":3,"name":"Mantenimiento Oil \u0026 Gas","item":"https://vmsenergy.com/lp-mantenimiento-oil-gas.html"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header aria-label="Barra de navegaci&oacute;n">
@@ -241,16 +305,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -260,13 +329,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -275,15 +361,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -529,6 +628,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -536,6 +637,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -562,6 +664,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

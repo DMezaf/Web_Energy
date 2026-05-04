@@ -1,35 +1,34 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog T&eacute;cnico EPC e Ingenier&iacute;a El&eacute;ctrica | VMS Energy</title>
-  <meta name="description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial. Publicaci&oacute;n mensual." />
+  <title>Blog T&eacute;cnico EPC, Ingenier&iacute;a El&eacute;ctrica, HVAC y UPS/BESS | VMS Energy</title>
+  <meta name="description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, UPS y BESS, HVAC industrial, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial. Publicaci&oacute;n mensual." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/blog.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="Blog T&eacute;cnico EPC e Ingenier&iacute;a El&eacute;ctrica | VMS Energy" />
-  <meta property="og:description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial. Publicaci&oacute;n mensual." />
+  <meta property="og:title" content="Blog T&eacute;cnico EPC, Ingenier&iacute;a El&eacute;ctrica, HVAC y UPS/BESS | VMS Energy" />
+  <meta property="og:description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, UPS y BESS, HVAC industrial, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial." />
   <meta property="og:url" content="https://vmsenergy.com/blog.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/Especialidades_servicios.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog T&eacute;cnico EPC e Ingenier&iacute;a El&eacute;ctrica | VMS Energy" />
-  <meta name="twitter:description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial. Publicaci&oacute;n mensual." />
+  <meta name="twitter:title" content="Blog T&eacute;cnico EPC, Ingenier&iacute;a El&eacute;ctrica, HVAC y UPS/BESS | VMS Energy" />
+  <meta name="twitter:description" content="Art&iacute;culos t&eacute;cnicos sobre EPC el&eacute;ctrico, subestaciones, UPS y BESS, HVAC industrial, variadores, casos de &eacute;xito y tendencias en ingenier&iacute;a industrial." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/Especialidades_servicios.png" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog.html" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--navy:#172C51;--cobalt:#0F4C81;--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--line:rgba(23,44,81,.14)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-    .container{max-width:1200px;margin-inline:auto;padding:0 20px}
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp');
+    }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:0}
@@ -42,25 +41,11 @@
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:focus-within .submenu{display:block}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-    .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    .privacy-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden}
-    .privacy-hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(100deg,rgba(8,24,48,.9) 0%,rgba(10,32,62,.78) 54%,rgba(15,76,129,.62) 100%),
-        url('assets/img/hero_codigo_etica_conducta_vms_mejorada.webp') center/cover no-repeat;
-      z-index:-1;
-    }
-    .privacy-hero .container{padding:88px 20px 80px}
-    .privacy-hero__eyebrow{display:inline-block;padding:.28rem .64rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 14px}
-    .privacy-hero h1{margin:0 0 10px;font-size:clamp(30px,4.6vw,52px);line-height:1.05}
-    .privacy-hero p{margin:0;max-width:900px;font-size:clamp(16px,2vw,20px);color:#e2ecf9}
     .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
     .btn--primary{background:var(--cobalt);color:#fff}
@@ -76,35 +61,11 @@
     .ethics-media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(8,28,54,.1)}
     .ethics-media img{display:block;width:100%;height:auto;max-height:min(68vh,840px);object-fit:contain;background:#f1f5f9}
     .ethics-tab{background:#fff;border:1px solid rgba(15,76,129,.24);border-radius:16px;padding:22px 20px;box-shadow:0 14px 28px rgba(8,28,54,.12);max-width:390px}
-    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:#0f4c81}
+    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:var(--concept-primary)}
     .ethics-tab p{margin:0 0 16px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#203754}
     .privacy-doc__btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:12px;border:1px solid rgba(23,44,81,.16);font-weight:700;background:#fff;color:#12365f}
-    .privacy-doc__btn--primary{background:#0f4c81;border-color:#0f4c81;color:#fff}
+    .privacy-doc__btn--primary{background:var(--concept-primary);border-color:var(--concept-primary);color:#fff}
     .privacy-doc__btn--outline{background:#fff;border:2px solid #0ea5e9;color:#0284c7;padding:12px 24px;border-radius:12px;letter-spacing:.02em}
-    .foot{background:#0b1428;color:#cbd5e1}
-    #footer .container{
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
@@ -121,7 +82,7 @@
     }
     .foot-social__link:hover svg,
     .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
+      fill:var(--concept-primary);
     }
     @media (max-width:1300px){
       #footer .container{
@@ -146,15 +107,9 @@
       }
     }\n.foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
-    @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
     @media (max-width:900px){.ethics-showcase{grid-template-columns:1fr}.ethics-tab{max-width:100%}.ethics-tab h3{font-size:clamp(30px,6vw,40px)}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}}
-      .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/Especialidades_servicios.png') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:820px;padding:86px 0 72px}
-    .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
-    .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
     .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
@@ -166,7 +121,7 @@
     .blog-card__body{padding:16px}
     .blog-card h3{margin:0 0 10px;font-size:1.1rem;line-height:1.25;color:#103961}
     .blog-card p{margin:0 0 14px;color:#4b647f}
-    .blog-card a{text-decoration:none;color:#0f4c81;font-weight:700}
+    .blog-card a{text-decoration:none;color:var(--concept-primary);font-weight:700}
     .blog-card a:hover{text-decoration:underline}
     @media (max-width:980px){.blog-grid{grid-template-columns:1fr 1fr}}
     @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-grid{grid-template-columns:1fr}}
@@ -191,16 +146,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -210,13 +170,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
                   <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -225,15 +202,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -274,7 +264,7 @@
       <div class="container hero__content">
         <span class="eyebrow">VMS Energy &middot; Blog</span>
         <h1 id="blogTitle">Nuestro Blog</h1>
-        <p>Conoce historias de exito, tendencias tecnicas y mejores practicas para proyectos electricos, mantenimiento y operacion industrial.</p>
+        <p>Conoce historias de &eacute;xito, tendencias t&eacute;cnicas y mejores pr&aacute;cticas para proyectos el&eacute;ctricos, mantenimiento y operaci&oacute;n industrial.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="contacto.html">Hablar con un especialista</a>
           <a class="btn btn--secondary" href="https://vmsenergy.com/blog/" >Ver blog oficial</a>
@@ -284,62 +274,173 @@
 
     <section class="blog-wrap" aria-labelledby="blogListTitle">
       <div class="container">
-        <h2 id="blogListTitle" class="section-title">Articulos recientes</h2>
-        <p class="blog-intro"><strong>VMS Energy</strong> desde hace mas de <strong>16 anos</strong> provee soluciones de ingenieria electrica con personal especializado, capacitado y certificado. Explora nuestros contenidos y casos relevantes.</p>
+        <h2 id="blogListTitle" class="section-title">Art&iacute;culos recientes</h2>
+        <p class="blog-intro"><strong>VMS Energy</strong> desde hace m&aacute;s de <strong>16 a&ntilde;os</strong> provee soluciones de ingenier&iacute;a el&eacute;ctrica con personal especializado, capacitado y certificado. Explora nuestros contenidos y casos relevantes.</p>
 
         <div class="blog-grid">
+
           <article class="blog-card">
-            <a class="blog-card__media" href="blog-subestacion-electrica-industrial.html" >
-              <img src="https://vmsenergy.com/wp-content/uploads/2026/01/Gemini_Generated_Image_2253z92253z92253-1.png" alt="Subestacion Electrica Industrial" loading="lazy" decoding="async">
+            <a class="blog-card__media" href="blog-ccm-industrial-diseno-iec61439.html">
+              <img src="https://vmsenergy.com/assets/img/blog/ccm/og-ccm-industrial-diseno-iec61439.webp" alt="Cómo diseñar un CCM industrial: IEC 61439, arrancadores y protocolos de comunicación" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
             </a>
             <div class="blog-card__body">
-              <h3>Subestacion Electrica Industrial</h3>
-              <p>Guia para evaluar y modernizar subestaciones con enfoque integral en continuidad operativa, riesgo tecnico y desempeno del activo.</p>
-              <a href="blog-subestacion-electrica-industrial.html" >Leer mas</a>
+              <h3>C&oacute;mo Dise&ntilde;ar un CCM Industrial: IEC&nbsp;61439, Arrancadores DOL/VFD y Protocolos Modbus/PROFINET</h3>
+              <p>Forms 1 a 4b, coordinaci&oacute;n Tipo&nbsp;2 de protecciones, selecci&oacute;n de arrancador por tipo de carga, an&aacute;lisis de arco el&eacute;ctrico NFPA&nbsp;70E y caso real CTG&nbsp;Chankanaab con 24 carros drawout.</p>
+              <a href="blog-ccm-industrial-diseno-iec61439.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-seleccion-cable-electrico-industrial.html">
+              <img src="https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp" alt="Selecci&oacute;n de cable el&eacute;ctrico industrial: ampacidad, ca&iacute;da de tensi&oacute;n y cortocircuito IEC 60502" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
+            </a>
+            <div class="blog-card__body">
+              <h3>Selecci&oacute;n de Cable El&eacute;ctrico Industrial: Ampacidad IEC 60287, XLPE vs EPR y NMX-J-010-ANCE</h3>
+              <p>Los tres criterios simult&aacute;neos: ampacidad con factores k_T, k_A y k_&rho;; ca&iacute;da de tensi&oacute;n NOM-001; cortocircuito IEC 60949. Caso real 150 mm&sup2; Cu 13.8 kV en planta automotriz Jalisco.</p>
+              <a href="blog-seleccion-cable-electrico-industrial.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-dimensionamiento-ups-industrial.html">
+              <img src="https://vmsenergy.com/assets/img/blog/ups-bess/og-dimensionamiento-ups-industrial.webp" alt="C&oacute;mo dimensionar un UPS industrial: topolog&iacute;as IEC 62040-3 y banco de bater&iacute;as" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
+            </a>
+            <div class="blog-card__body">
+              <h3>C&oacute;mo Dimensionar un UPS Industrial: Topolog&iacute;as IEC 62040-3 y Banco de Bater&iacute;as</h3>
+              <p>Del inventario de cargas cr&iacute;ticas al paquete IFC: metodolog&iacute;a VFI/VI/VFD, c&aacute;lculo de autonom&iacute;a, LFP vs VRLA y caso Oil &amp; Gas en Tabasco.</p>
+              <a href="blog-dimensionamiento-ups-industrial.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-carga-termica-hvac-industrial.html">
+              <img src="https://vmsenergy.com/assets/img/blog/hvac/og-carga-termica-hvac.webp" alt="C&oacute;mo calcular la carga t&eacute;rmica para HVAC industrial: metodolog&iacute;a ASHRAE" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
+            </a>
+            <div class="blog-card__body">
+              <h3>C&oacute;mo Calcular la Carga T&eacute;rmica para HVAC Industrial: Metodolog&iacute;a ASHRAE</h3>
+              <p>M&eacute;todo CLTD/CLF, condiciones de dise&ntilde;o ASHRAE 0.4% por ciudad, derating por altitud y caso real planta farmac&eacute;utica 62 TR en Jalisco.</p>
+              <a href="blog-carga-termica-hvac-industrial.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-ingenieria-detalle-epc-electrico.html">
+              <img src="https://vmsenergy.com/assets/img/blog/ingenieria-detalle/og-ingenieria-detalle-epc.webp" alt="Ingenier&iacute;a de detalle en proyectos EPC el&eacute;ctricos: unifilar, memorias de c&aacute;lculo y planos IFC" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
+            </a>
+            <div class="blog-card__body">
+              <h3>Ingenier&iacute;a de Detalle en Proyectos EPC El&eacute;ctricos: Unifilar, C&aacute;lculos y Planos IFC</h3>
+              <p>Del diagrama unifilar y las memorias de c&aacute;lculo de cortocircuito y ca&iacute;da de tensi&oacute;n hasta el paquete IFC completo para construcci&oacute;n.</p>
+              <a href="blog-ingenieria-detalle-epc-electrico.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-guia-fabricantes-transformadores-industriales.html">
+              <img src="https://vmsenergy.com/assets/img/blog/fabricantes-transformadores/og-guia-fabricantes.webp" alt="DEEMSA vs WEG vs ABB vs Siemens vs Schneider: gu&iacute;a para seleccionar fabricante de transformadores" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;background:#0d2448">
+            </a>
+            <div class="blog-card__body">
+              <h3>DEEMSA vs WEG vs ABB vs Siemens vs Schneider: Gu&iacute;a para Seleccionar Fabricante de Transformadores</h3>
+              <p>Criterios de proyecto, fortalezas de cada marca y tabla comparativa para seleccionar el fabricante correcto en proyectos EPC en M&eacute;xico.</p>
+              <a href="blog-guia-fabricantes-transformadores-industriales.html">Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-instalacion-comisionamiento-transformadores-epc.html" >
+              <img src="https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp" alt="Instalaci&oacute;n y comisionamiento de transformadores en proyectos EPC" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card__body">
+              <h3>Instalaci&oacute;n y comisionamiento de transformadores en proyectos EPC</h3>
+              <p>Del transporte al primer kilovatio: recepci&oacute;n en sitio, izaje, conexionado, pruebas pre-energizaci&oacute;n y entrega operativa conforme a IEC 60076.</p>
+              <a href="blog-instalacion-comisionamiento-transformadores-epc.html" >Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-mantenimiento-transformadores-operacion.html" >
+              <img src="https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp" alt="Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card__body">
+              <h3>Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo</h3>
+              <p>An&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, acidez, DGA), termograf&iacute;a, pruebas Megger y extensi&oacute;n de vida &uacute;til.</p>
+              <a href="blog-mantenimiento-transformadores-operacion.html" >Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-pruebas-aceptacion-transformadores.html" >
+              <img src="https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp" alt="Pruebas FAT y SAT de transformadores industriales" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card__body">
+              <h3>Pruebas FAT y SAT de transformadores industriales</h3>
+              <p>Gu&iacute;a t&eacute;cnica IEC 60076: relaci&oacute;n de transformaci&oacute;n, resistencia de devanados, p&eacute;rdidas en vac&iacute;o y carga, y protocolos de aceptaci&oacute;n.</p>
+              <a href="blog-pruebas-aceptacion-transformadores.html" >Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-seleccion-transformadores-industriales.html" >
+              <img src="https://vmsenergy.com/assets/img/blog/seleccion-transformadores/og-seleccion-transformadores.webp" alt="C&oacute;mo seleccionar transformadores industriales" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card__body">
+              <h3>C&oacute;mo seleccionar transformadores industriales</h3>
+              <p>Criterios t&eacute;cnicos y claves de decisi&oacute;n: potencia, tensi&oacute;n, grupo vectorial, impedancia y tipo de enfriamiento para distribuci&oacute;n y potencia.</p>
+              <a href="blog-seleccion-transformadores-industriales.html" >Leer m&aacute;s</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a class="blog-card__media" href="blog-subestacion-electrica-industrial.html" >
+              <img src="https://vmsenergy.com/wp-content/uploads/2026/01/Gemini_Generated_Image_2253z92253z92253-1.png" alt="Subestaci&oacute;n El&eacute;ctrica Industrial" loading="lazy" decoding="async">
+            </a>
+            <div class="blog-card__body">
+              <h3>Subestaci&oacute;n El&eacute;ctrica Industrial</h3>
+              <p>Gu&iacute;a para evaluar y modernizar subestaciones con enfoque integral en continuidad operativa, riesgo t&eacute;cnico y desempe&ntilde;o del activo.</p>
+              <a href="blog-subestacion-electrica-industrial.html" >Leer m&aacute;s</a>
             </div>
           </article>
 
           <article class="blog-card">
             <a class="blog-card__media" href="blog-caso-exito-ctg-chankanaab.html" >
-              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-CASOEXITOTABLEROS.jpg" alt="Caso de Exito CTG Chankanaab" loading="lazy" decoding="async">
+              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-CASOEXITOTABLEROS.jpg" alt="Caso de &Eacute;xito CTG Chankanaab" loading="lazy" decoding="async">
             </a>
             <div class="blog-card__body">
-              <h3>Caso de Exito: CTG Chankanaab</h3>
-              <p>Diseno y fabricacion de centros de control de motores adaptados a condiciones de sitio, normativa y requerimientos del cliente.</p>
-              <a href="blog-caso-exito-ctg-chankanaab.html" >Leer mas</a>
+              <h3>Caso de &Eacute;xito: CTG Chankanaab</h3>
+              <p>Dise&ntilde;o y fabricaci&oacute;n de centros de control de motores adaptados a condiciones de sitio, normativa y requerimientos del cliente.</p>
+              <a href="blog-caso-exito-ctg-chankanaab.html" >Leer m&aacute;s</a>
             </div>
           </article>
 
           <article class="blog-card">
             <a class="blog-card__media" href="blog-caso-exito-embotelladora-colima-2022.html" >
-              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-CASOEXITOEMBOTELLADORA.jpg" alt="Caso de Exito Embotelladora de Colima" loading="lazy" decoding="async">
+              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-CASOEXITOEMBOTELLADORA.jpg" alt="Caso de &Eacute;xito Embotelladora de Colima" loading="lazy" decoding="async">
             </a>
             <div class="blog-card__body">
-              <h3>Caso de Exito: Embotelladora de Colima, 2022</h3>
-              <p>Implementacion de variador de velocidad con control PID para mejorar el desempeno del equipo y la operacion de proceso.</p>
-              <a href="blog-caso-exito-embotelladora-colima-2022.html" >Leer mas</a>
+              <h3>Caso de &Eacute;xito: Embotelladora de Colima, 2022</h3>
+              <p>Implementaci&oacute;n de variador de velocidad con control PID para mejorar el desempe&ntilde;o del equipo y la operaci&oacute;n de proceso.</p>
+              <a href="blog-caso-exito-embotelladora-colima-2022.html" >Leer m&aacute;s</a>
             </div>
           </article>
 
           <article class="blog-card">
             <a class="blog-card__media" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" >
-              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg" alt="Mantenimiento y Reparacion de Subestaciones Electricas" loading="lazy" decoding="async">
+              <img src="https://vmsenergy.com/wp-content/uploads/2024/10/FOTO-MAIN-BLOGOCT24-1.jpg" alt="Mantenimiento y Reparaci&oacute;n de Subestaciones El&eacute;ctricas" loading="lazy" decoding="async">
             </a>
             <div class="blog-card__body">
-              <h3>Mantenimiento y Reparacion de Subestaciones Electricas AT, MT y BT en Mexico</h3>
-              <p>Buenas practicas para asegurar estabilidad y confiabilidad del sistema electrico en infraestructura critica.</p>
-              <a href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" >Leer mas</a>
+              <h3>Mantenimiento y Reparaci&oacute;n de Subestaciones El&eacute;ctricas AT, MT y BT en M&eacute;xico</h3>
+              <p>Buenas pr&aacute;cticas para asegurar estabilidad y confiabilidad del sistema el&eacute;ctrico en infraestructura cr&iacute;tica.</p>
+              <a href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html" >Leer m&aacute;s</a>
             </div>
           </article>
 
           <article class="blog-card">
             <a class="blog-card__media" href="blog-importancia-tableros-distribucion.html" >
-              <img src="assets/img/portada.webp" alt="Importancia de los tableros de distribucion" loading="lazy" decoding="async">
+              <img src="assets/img/portada.webp" alt="Importancia de los tableros de distribuci&oacute;n" loading="lazy" decoding="async">
             </a>
             <div class="blog-card__body">
-              <h3>La Importancia de los Tableros de Distribucion en los Sistemas Electricos</h3>
-              <p>El papel clave de los tableros para recibir, transformar y distribuir energia en media y baja tension dentro de planta.</p>
-              <a href="blog-importancia-tableros-distribucion.html" >Leer mas</a>
+              <h3>La Importancia de los Tableros de Distribuci&oacute;n en los Sistemas El&eacute;ctricos</h3>
+              <p>El papel clave de los tableros para recibir, transformar y distribuir energ&iacute;a en media y baja tensi&oacute;n dentro de planta.</p>
+              <a href="blog-importancia-tableros-distribucion.html" >Leer m&aacute;s</a>
             </div>
           </article>
 
@@ -350,7 +451,7 @@
             <div class="blog-card__body">
               <h3>Variadores en la Industria Minera</h3>
               <p>Aplicaciones de variadores de frecuencia para control eficiente, preciso y robusto en procesos mineros.</p>
-              <a href="blog-variadores-industria-minera.html" >Leer mas</a>
+              <a href="blog-variadores-industria-minera.html" >Leer m&aacute;s</a>
             </div>
           </article>
         </div>
@@ -407,6 +508,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -414,6 +517,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -440,6 +544,7 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
       </ul>

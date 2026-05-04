@@ -1,0 +1,743 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo Seleccionar Cable Eléctrico para Proyectos Industriales: Ampacidad, XLPE vs EPR, IEC 60502 y NMX-J | VMS Energy</title>
+  <meta name="description" content="Guía técnica completa para seleccionar cable eléctrico en proyectos industriales: cálculo de ampacidad (IEC 60287), caída de tensión (NOM-001-SEDE), corriente de cortocircuito (IEC 60949), diferencias XLPE vs EPR y caso real de subestación 13.8 kV en Jalisco." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Selección de Cable Eléctrico Industrial: Ampacidad, XLPE vs EPR y Normas IEC 60502 | VMS Energy" />
+  <meta property="og:description" content="Del cálculo de ampacidad a la verificación de caída de tensión y cortocircuito: metodología completa para seleccionar cable eléctrico en proyectos EPC industriales en México." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp" />
+  <meta property="article:published_time" content="2026-08-07" />
+  <meta property="article:modified_time" content="2026-08-07" />
+  <meta property="article:section" content="Suministro Técnico EPC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Selección de Cable Eléctrico Industrial: Ampacidad, XLPE vs EPR e IEC 60502 | VMS Energy" />
+  <meta name="twitter:description" content="Guía técnica: ampacidad IEC 60287, caída de tensión NOM-001, cortocircuito IEC 60949, XLPE vs EPR y caso real 13.8 kV Jalisco." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;}
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+
+    /* Hero */
+    .blog-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden;min-height:440px;display:grid;align-items:center}
+    .blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,18,36,.93) 0%,rgba(8,28,56,.78) 54%,rgba(12,48,90,.55) 100%),url('https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp') center/cover no-repeat;z-index:-1}
+    .blog-hero .container{padding:80px 20px 72px}
+    .eyebrow{display:inline-block;padding:.26rem .64rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
+    .blog-hero h1{margin:0 0 14px;font-size:clamp(26px,4vw,48px);line-height:1.08;max-width:860px}
+    .blog-meta{display:flex;gap:18px;flex-wrap:wrap;color:#c8dbf5;font-size:.9rem;margin-top:10px}
+    .blog-meta span::before{content:"·";margin-right:8px;opacity:.5}
+    .blog-meta span:first-child::before{display:none}
+
+    /* Layout */
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;padding:52px 0 64px;align-items:start}
+    .blog-body h2{font-size:clamp(20px,2.4vw,28px);color:#0f3560;margin:36px 0 14px;line-height:1.15}
+    .blog-body h3{font-size:clamp(17px,1.8vw,22px);color:#12365f;margin:26px 0 10px}
+    .blog-body p{margin:0 0 16px;color:#203754;font-size:1.02rem}
+    .blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:#203754}
+    .blog-body li{margin-bottom:7px}
+    .blog-body strong{color:#0f3560}
+    .blog-body a{color:var(--concept-primary);font-weight:700}
+
+    /* Formula box */
+    .formula-box{background:linear-gradient(135deg,#eef4ff,#e0ecff);border:1px solid rgba(15,76,129,.18);border-radius:16px;padding:20px 22px;margin:20px 0;font-family:monospace;font-size:1.05rem;color:#0f3560;line-height:1.8}
+    .formula-box .f-label{font-family:"Roboto Condensed",sans-serif;font-size:.82rem;font-weight:800;color:var(--concept-primary);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:6px}
+    .formula-box .f-note{font-family:"Roboto Condensed",sans-serif;font-size:.88rem;color:#4a5f79;margin-top:8px;display:block}
+
+    /* Insulation compare */
+    .insul-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+    .insul-card{padding:18px 20px;border-radius:16px;border:1px solid rgba(23,44,81,.14)}
+    .insul-card--xlpe{background:#f0f6ff;border-color:rgba(15,76,129,.22)}
+    .insul-card--epr{background:#f0fdf4;border-color:rgba(22,101,52,.22)}
+    .insul-card--xlpe h3{color:var(--concept-primary);margin:0 0 10px;font-size:1.12rem}
+    .insul-card--epr h3{color:#166534;margin:0 0 10px;font-size:1.12rem}
+    .insul-card p{margin:0 0 8px;font-size:.93rem;color:#314a67}
+    .insul-badge{display:inline-block;padding:.16rem .5rem;border-radius:6px;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-right:4px;margin-bottom:4px}
+    .insul-badge--xlpe{background:rgba(15,76,129,.1);color:var(--concept-primary)}
+    .insul-badge--epr{background:rgba(22,101,52,.1);color:#166534}
+
+    /* Factors table */
+    .factor-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.93rem}
+    .factor-table th{background:#172C51;color:#fff;padding:9px 12px;text-align:left;font-weight:700}
+    .factor-table td{padding:8px 12px;border-bottom:1px solid rgba(23,44,81,.1);color:#203754}
+    .factor-table tr:nth-child(even) td{background:#f5f9ff}
+    .factor-table .badge-ok{display:inline-block;padding:.1rem .4rem;border-radius:5px;background:rgba(22,101,52,.12);color:#166534;font-weight:700;font-size:.8rem}
+    .factor-table .badge-warn{display:inline-block;padding:.1rem .4rem;border-radius:5px;background:rgba(180,83,9,.12);color:#92400e;font-weight:700;font-size:.8rem}
+
+    /* Case study */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+    .case-kpi{background:linear-gradient(135deg,#eef4ff,#e4efff);border:1px solid rgba(15,76,129,.16);border-radius:14px;padding:16px;text-align:center}
+    .case-kpi__val{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--concept-primary);line-height:1;display:block}
+    .case-kpi__lbl{font-size:.82rem;color:#4a5f79;margin-top:4px;display:block}
+    .case-result{background:#f0fdf4;border:1px solid rgba(22,101,52,.2);border-radius:14px;padding:16px 18px;margin:14px 0}
+    .case-result h4{margin:0 0 8px;color:#166534;font-size:1rem}
+    .case-result p{margin:0;font-size:.92rem;color:#203754}
+
+    /* Error cards */
+    .error-list{margin:22px 0;display:grid;gap:12px}
+    .error-card{padding:16px 18px;border-radius:16px;border:1px solid rgba(153,27,27,.18);background:linear-gradient(135deg,rgba(153,27,27,.05),rgba(239,68,68,.04))}
+    .error-card h4{margin:0 0 6px;color:#991b1b;font-size:1rem}
+    .error-card p{margin:0;color:#4b3030;font-size:.92rem}
+    .error-card .fix{margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(22,101,52,.08);border:1px solid rgba(22,101,52,.14);color:#166534;font-size:.88rem}
+
+    /* Norms table */
+    .norm-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.91rem}
+    .norm-table th{background:var(--concept-primary);color:#fff;padding:9px 12px;text-align:left;font-weight:700}
+    .norm-table td{padding:8px 12px;border-bottom:1px solid rgba(23,44,81,.1);color:#203754;vertical-align:top}
+    .norm-table tr:nth-child(even) td{background:#f5f9ff}
+
+    /* FAQ */
+    .faq-list{margin:22px 0;display:grid;gap:10px;max-width:860px}
+    .faq-list details{border:1px solid rgba(23,44,81,.14);border-radius:14px;padding:0;overflow:hidden}
+    .faq-list details[open]{border-color:rgba(15,76,129,.3)}
+    .faq-list summary{cursor:pointer;padding:14px 18px;font-weight:700;color:#12365f;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .faq-list summary::after{content:"＋";font-size:1.1rem;color:var(--concept-primary);flex-shrink:0}
+    .faq-list details[open] summary::after{content:"－"}
+    .faq-list details p{margin:0;padding:0 18px 16px;color:#314a67;line-height:1.6}
+
+    /* Sidebar */
+    .sidebar{position:sticky;top:80px}
+    .sidebar-card{background:#f5f9ff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:20px;margin-bottom:18px}
+    .sidebar-card h4{margin:0 0 12px;color:#0f3560;font-size:1rem}
+    .sidebar-card ul{list-style:none;margin:0;padding:0}
+    .sidebar-card li{border-bottom:1px solid rgba(23,44,81,.1);padding:6px 0;font-size:.9rem;color:#314a67}
+    .sidebar-card li:last-child{border-bottom:none}
+    .sidebar-card a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .sidebar-card a:hover{text-decoration:underline}
+    .cta-card{background:linear-gradient(135deg,var(--concept-primary),#172C51);border-radius:16px;padding:22px;color:#fff;margin-bottom:18px}
+    .cta-card h4{margin:0 0 10px;font-size:1.05rem}
+    .cta-card p{margin:0 0 14px;font-size:.88rem;color:#c8dbf5}
+    .cta-card a{display:inline-block;background:#fff;color:var(--concept-primary);font-weight:700;padding:.6rem 1rem;border-radius:999px;text-decoration:none;font-size:.9rem}
+
+    /* Footer */
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover{color:#fff}
+    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    .foot-note{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+
+    @media(max-width:1024px){.blog-layout{grid-template-columns:1fr}.sidebar{position:static}}}
+    @media(max-width:780px){.insul-compare{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr 1fr}#footer .container{grid-template-columns:repeat(2,1fr)!important}}
+    @media(max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.case-grid{grid-template-columns:1fr}#footer .container{grid-template-columns:1fr!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Cómo Seleccionar Cable Eléctrico para Proyectos Industriales: Ampacidad, XLPE vs EPR, IEC 60502 y NMX-J",
+        "description": "Guía técnica completa para seleccionar cable eléctrico en proyectos industriales: cálculo de ampacidad (IEC 60287), caída de tensión (NOM-001-SEDE), cortocircuito (IEC 60949), XLPE vs EPR y caso real 13.8 kV en Jalisco.",
+        "image": "https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp",
+        "datePublished": "2026-08-07",
+        "dateModified": "2026-08-07",
+        "author": { "@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/" },
+        "publisher": { "@type": "Organization", "name": "VMS Energy", "logo": { "@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png" } },
+        "mainEntityOfPage": "https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son los tres criterios para seleccionar un cable eléctrico industrial?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Todo cable industrial debe verificarse contra tres criterios simultáneos: (1) Ampacidad — la corriente de operación no debe superar la capacidad térmica del cable (IEC 60287); (2) Caída de tensión — el ΔV en el extremo receptor no debe superar el 3% en alimentadores ni el 5% total según NOM-001-SEDE-2012; (3) Corriente de cortocircuito — la sección debe soportar la energía térmica del cortocircuito sin daño (IEC 60949). El criterio más restrictivo define la sección final." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué diferencia hay entre aislamiento XLPE y EPR en cables de media tensión?",
+            "acceptedAnswer": { "@type": "Answer", "text": "XLPE (polietileno reticulado) ofrece menor factor de disipación dieléctrica (tan δ < 0.0004), menor capacitancia y mejor comportamiento en líneas largas de media tensión. Es el estándar para subestaciones e instalaciones fijas. EPR (etileno-propileno) es superior en flexibilidad mecánica, resistencia al agua treeing y ambientes con humedad extrema — idóneo para trailing cables en minería y equipos móviles. Ambos soportan 90°C en operación y 250°C en cortocircuito." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se calcula la ampacidad de un cable enterrado según IEC 60287?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Según IEC 60287, la ampacidad de un cable enterrado se calcula partiendo de la capacidad nominal del fabricante y aplicando factores de corrección: temperatura del suelo (referencia 20°C), resistividad térmica del suelo ρ_T (típico 1.0–2.5 K·m/W en México), profundidad de instalación y número de circuitos agrupados. A mayor temperatura del suelo o mayor resistividad, menor ampacidad. VMS Energy elabora la memoria de cálculo de ampacidad como entregable de ingeniería básica." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el límite de caída de tensión según NOM-001-SEDE-2012?",
+            "acceptedAnswer": { "@type": "Answer", "text": "NOM-001-SEDE-2012 establece un máximo de 3% de caída de tensión en alimentadores y 3% en circuitos derivados, con un total acumulado no mayor al 5% desde el tablero principal hasta el punto de utilización más alejado. Para cargas sensibles como variadores de frecuencia o PLC, se recomienda no superar el 2% en el alimentador." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuándo se usa conductor de aluminio en lugar de cobre en proyectos industriales?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El aluminio se usa cuando el costo del conductor es factor decisivo y hay espacio disponible en bandejas y ductos para la mayor sección requerida (aproximadamente 1.5 veces la sección de cobre para igual ampacidad). Es frecuente en alimentadores principales de larga distancia y acometidas de alta potencia. Para control, instrumentación y circuitos de pequeño calibre se mantiene el cobre." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué norma aplica para cables de potencia en proyectos con especificación CFE?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Para proyectos con interconexión o especificación CFE se aplica IEC 60502-2 (cables de 6 kV a 30 kV) e IEC 62067 (cables EHV superiores a 30 kV), junto con los requisitos de documentación CFE-LAPEM: certificado de pruebas tipo e individual, ficha técnica aprobada y procedimiento de instalación. En proyectos de distribución interna sin requisito CFE, NMX-J-ANCE y NOM-001-SEDE son suficientes para baja tensión." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué documentación debe entregar el fabricante de cable con cada bobina?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El paquete documental estándar por bobina incluye: certificado de pruebas de tipo (ensayos en muestra por lote), certificado de pruebas de rutina individuales (resistencia DC del conductor, prueba de tensión), hoja de datos del cable (construcción, materiales, parámetros eléctricos), reporte de longitud medida por bobina y etiqueta de trazabilidad. Para proyectos EPC con cliente PEMEX, CFE o con auditoría ISO, VMS Energy gestiona la documentación adicional requerida." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header aria-label="Barra de navegación">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="carreras.html">Carreras</a></li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero" aria-labelledby="heroTitle">
+      <div class="container">
+        <span class="eyebrow">VMS Energy · Blog Técnico · Suministro EPC</span>
+        <h1 id="heroTitle">Cómo Seleccionar Cable Eléctrico para Proyectos Industriales: Ampacidad, XLPE vs EPR, IEC&nbsp;60502 y NMX-J</h1>
+        <div class="blog-meta">
+          <span>VMS Energy</span>
+          <span>07 agosto 2026</span>
+          <span>14 min de lectura</span>
+          <span>Suministro Técnico EPC</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container blog-layout">
+      <article class="blog-body">
+
+        <p>El cable eléctrico es el componente más subestimado en los proyectos EPC industriales. Representa entre el 8 y el 15% del costo total de la instalación eléctrica, pero es frecuente que su selección se delegue a una tabla de calibres estándar sin validar los tres criterios que la norma exige simultáneamente: <strong>ampacidad</strong>, <strong>caída de tensión</strong> y <strong>corriente de cortocircuito</strong>. Un cable seleccionado solo por corriente nominal puede sobrecalentarse en la instalación final, causar disparos indeseados de protecciones o fallar catastróficamente bajo falla.</p>
+
+        <p>Esta guía presenta la metodología completa que VMS Energy aplica en proyectos EPC industriales en México para la selección de cable de potencia, con foco en media tensión (1–36 kV) y baja tensión crítica, incluyendo el marco normativo IEC 60502, NMX-J y NOM-001-SEDE-2012.</p>
+
+        <h2>1. Los tres criterios de selección simultánea</h2>
+        <p>La norma IEC 60364-5-52 y NOM-001-SEDE-2012 establecen que la sección del conductor debe satisfacer <em>los tres criterios a la vez</em>. El más restrictivo determina la sección final:</p>
+
+        <table class="factor-table">
+          <thead><tr><th>Criterio</th><th>Norma</th><th>Parámetro de control</th><th>Consecuencia de incumplir</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Ampacidad</strong></td><td>IEC 60287 / NOM-001</td><td>I_operación ≤ I_ampacidad × factores</td><td>Sobrecalentamiento, reducción de vida útil, incendio</td></tr>
+            <tr><td><strong>Caída de tensión</strong></td><td>NOM-001-SEDE-2012</td><td>ΔV ≤ 3% alimentador, ≤ 5% total</td><td>Mal funcionamiento de cargas, disparo de variadores</td></tr>
+            <tr><td><strong>Cortocircuito</strong></td><td>IEC 60949</td><td>S ≥ I_cc × √t / k</td><td>Destrucción del conductor bajo falla, riesgo de arco</td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. Ampacidad: capacidad térmica real en campo</h2>
+        <p>La <strong>ampacidad</strong> es la corriente continua máxima que un cable puede conducir sin superar su temperatura máxima de operación. Los fabricantes la publican bajo condiciones de referencia estándar; en campo, deben aplicarse factores de corrección que frecuentemente reducen la capacidad entre un 15 y un 40%.</p>
+
+        <div class="formula-box">
+          <span class="f-label">Ampacidad corregida en campo</span>
+          I_campo = I_tablas × k_T × k_A × k_ρ
+          <span class="f-note">k_T = factor temperatura ambiente | k_A = factor de agrupamiento | k_ρ = factor resistividad térmica del suelo</span>
+        </div>
+
+        <h3>Factores de corrección críticos en México</h3>
+        <table class="factor-table">
+          <thead><tr><th>Factor</th><th>Condición</th><th>Valor típico</th><th>Impacto</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Temperatura ambiente</strong></td><td>Hermosillo, Tabasco (40–43°C)</td><td>k_T = 0.87–0.82</td><td class="badge-warn" style="color:#92400e">−13 a −18%</td></tr>
+            <tr><td><strong>Temperatura ambiente</strong></td><td>Guadalajara, CDMX (25–27°C)</td><td>k_T = 1.02–1.04</td><td class="badge-ok" style="color:#166534">+2 a +4%</td></tr>
+            <tr><td><strong>Agrupamiento bandeja</strong></td><td>3 cables trifásicos juntos</td><td>k_A = 0.82</td><td class="badge-warn" style="color:#92400e">−18%</td></tr>
+            <tr><td><strong>Agrupamiento bandeja</strong></td><td>6 cables trifásicos juntos</td><td>k_A = 0.67</td><td class="badge-warn" style="color:#92400e">−33%</td></tr>
+            <tr><td><strong>Resistividad del suelo</strong></td><td>Suelo húmedo (ρ_T = 0.9 K·m/W)</td><td>k_ρ = 1.05</td><td class="badge-ok" style="color:#166534">+5%</td></tr>
+            <tr><td><strong>Resistividad del suelo</strong></td><td>Suelo seco/arenoso (ρ_T = 2.5 K·m/W)</td><td>k_ρ = 0.78</td><td class="badge-warn" style="color:#92400e">−22%</td></tr>
+          </tbody>
+        </table>
+
+        <p>Para XLPE la temperatura máxima de operación es <strong>90°C</strong> y la temperatura de cortocircuito admisible es <strong>250°C</strong>. Para PVC es 70°C en operación y 160°C en cortocircuito — lo que explica por qué PVC queda excluido de media tensión y de aplicaciones con alta densidad de corriente de cortocircuito.</p>
+
+        <h2>3. XLPE vs EPR: cuándo usar cada aislamiento</h2>
+        <p>En media tensión (1–36 kV) los dos aislamientos dominantes son XLPE y EPR. Ambos soportan 90°C de operación y 250°C de cortocircuito, pero difieren en sus propiedades dieléctricas y mecánicas:</p>
+
+        <div class="insul-compare">
+          <div class="insul-card insul-card--xlpe">
+            <h3>XLPE — Polietileno reticulado</h3>
+            <span class="insul-badge insul-badge--xlpe">tan δ &lt; 0.0004</span>
+            <span class="insul-badge insul-badge--xlpe">Menor capacitancia</span>
+            <span class="insul-badge insul-badge--xlpe">Estándar IEC</span>
+            <p>Mejor comportamiento dieléctrico en líneas largas (menor corriente capacitiva). Menor factor de disipación → menores pérdidas en dieléctrico. Rigidez dieléctrica ~20 kV/mm. Más económico por metro.</p>
+            <p><strong>Aplicaciones:</strong> Subestaciones, alimentadores fijos, líneas de transmisión, interconexión CFE, instalaciones industriales permanentes.</p>
+          </div>
+          <div class="insul-card insul-card--epr">
+            <h3>EPR — Etileno-propileno</h3>
+            <span class="insul-badge insul-badge--epr">Mayor flexibilidad</span>
+            <span class="insul-badge insul-badge--epr">Resistencia al water treeing</span>
+            <span class="insul-badge insul-badge--epr">Minería y oil &amp; gas</span>
+            <p>Superior resistencia mecánica a la flexión repetida. Mejor comportamiento en ambientes húmedos y con riesgo de water treeing. Mayor factor de disipación (tan δ ~0.003–0.005) pero irrelevante en instalaciones cortas.</p>
+            <p><strong>Aplicaciones:</strong> Trailing cables en minería, alimentación de equipos móviles, ambientes con agua en contacto permanente, plataformas marinas.</p>
+          </div>
+        </div>
+
+        <h2>4. Cálculo de caída de tensión</h2>
+        <p>La caída de tensión determina la calidad de la energía en el punto de utilización. Para trifásico equilibrado la fórmula general es:</p>
+
+        <div class="formula-box">
+          <span class="f-label">Caída de tensión trifásica (%)</span>
+          ΔV (%) = [√3 × I × L × (R·cos φ + X·sin φ)] / V_n × 100
+          <span class="f-note">I = corriente de carga (A) · L = longitud del circuito (km) · R = resistencia del conductor a 90°C (Ω/km) · X = reactancia inductiva (Ω/km) · cos φ = factor de potencia · V_n = tensión nominal (V)</span>
+        </div>
+
+        <p>Los valores de resistencia R y reactancia X por kilómetro se obtienen de la hoja de datos del fabricante. Para cable XLPE 150 mm² Cu a 90°C: R ≈ 0.128 Ω/km; X ≈ 0.082 Ω/km a 13.8 kV.</p>
+
+        <p><strong>Límites NOM-001-SEDE-2012:</strong> máximo 3% en alimentadores; máximo 3% en circuitos derivados; máximo 5% acumulado total. Para cargas sensibles (variadores, PLC, SCADA) VMS Energy recomienda no superar 2% en el alimentador.</p>
+
+        <h2>5. Verificación por corriente de cortocircuito</h2>
+        <p>La sección del conductor debe soportar térmicamente la energía del cortocircuito durante el tiempo de actuación de la protección. Según IEC 60949:</p>
+
+        <div class="formula-box">
+          <span class="f-label">Sección mínima por cortocircuito (IEC 60949)</span>
+          S_min (mm²) = I_cc (kA) × √t_cc (s) / k
+          <span class="f-note">k = 143 para XLPE-cobre · k = 94 para XLPE-aluminio · k = 115 para PVC-cobre · t_cc = tiempo de apertura de la protección (segundos)</span>
+        </div>
+
+        <p>Un relevador diferencial que opera en 0.05 s con I_cc = 10 kA requiere S_min = 10,000 × √0.05 / 143 = <strong>15.6 mm²</strong>. Un alimentador MCCB con tiempo de actuación de 0.5 s con el mismo nivel de cortocircuito requiere S_min = <strong>49.4 mm²</strong> — casi cuatro veces más. El tiempo de actuación de la protección es determinante.</p>
+
+        <h2>6. Normas aplicables en proyectos industriales en México</h2>
+        <table class="norm-table">
+          <thead><tr><th>Norma</th><th>Alcance</th><th>Aplicación típica</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IEC 60502-1</strong></td><td>Cables 1–30 kV con aislamiento extruido — construcción y pruebas</td><td>Cable de potencia MT, subestaciones industriales</td></tr>
+            <tr><td><strong>IEC 60502-2</strong></td><td>Cables de potencia 6–30 kV — requisitos adicionales</td><td>Alimentadores 13.8 kV, 23 kV, 34.5 kV</td></tr>
+            <tr><td><strong>IEC 60228</strong></td><td>Conductores: secciones normalizadas 1.5–2,000 mm²</td><td>Referencia de calibres en todos los proyectos IEC</td></tr>
+            <tr><td><strong>IEC 60287</strong></td><td>Cálculo de ampacidad en condiciones de estado estacionario</td><td>Memoria de cálculo de ampacidad EPC</td></tr>
+            <tr><td><strong>IEC 60949</strong></td><td>Corriente de cortocircuito admisible por cable</td><td>Verificación sección mínima por cortocircuito</td></tr>
+            <tr><td><strong>NMX-J-010-ANCE</strong></td><td>Conductores de cobre y aluminio — México</td><td>Cable BT nacional: Condumex, Viakon</td></tr>
+            <tr><td><strong>NOM-001-SEDE-2012</strong></td><td>Instalaciones eléctricas en México — seguridad</td><td>Caída de tensión, protecciones, calibres mínimos BT</td></tr>
+            <tr><td><strong>CFE-LAPEM</strong></td><td>Especificaciones técnicas CFE para suministro eléctrico</td><td>Proyectos con interconexión o especificación CFE</td></tr>
+          </tbody>
+        </table>
+
+        <h2>7. Cinco errores frecuentes en selección de cable EPC</h2>
+        <div class="error-list">
+          <div class="error-card">
+            <h4>Error 1 — Dimensionar solo por ampacidad sin verificar caída de tensión</h4>
+            <p>En alimentadores mayores a 200 m la caída de tensión frecuentemente exige una sección mayor que la necesaria por ampacidad. Un cable 70 mm² puede ser térmicamente suficiente para 180 A, pero en 400 m a 480 V y cos φ = 0.85 produce ΔV = 4.2% — violando el límite de 3% de NOM-001.</p>
+            <div class="fix">✔ Verificar siempre los tres criterios. Calcular ΔV antes de confirmar la sección.</div>
+          </div>
+          <div class="error-card">
+            <h4>Error 2 — No aplicar factores de corrección por temperatura y agrupamiento</h4>
+            <p>Usar la ampacidad de tabla del fabricante sin aplicar k_T y k_A puede resultar en un cable subcalibrado. En Monterrey a 40°C con 4 circuitos agrupados, la ampacidad real puede ser hasta 35% menor que la nominal.</p>
+            <div class="fix">✔ Calcular siempre I_campo = I_tablas × k_T × k_A × k_ρ. Documentar en la memoria de cálculo.</div>
+          </div>
+          <div class="error-card">
+            <h4>Error 3 — Especificar XLPE donde se necesita EPR (equipos móviles y zonas húmedas)</h4>
+            <p>XLPE en trailing cables de minería o en ambientes con agua permanente sufre water treeing acelerado. La vida útil prevista de 30 años puede reducirse a 5–8 años, con riesgo de falla parcial y arco en la instalación.</p>
+            <div class="fix">✔ Usar EPR en equipos con flexión repetida, ambientes húmedos y operaciones de minería subterránea.</div>
+          </div>
+          <div class="error-card">
+            <h4>Error 4 — Ignorar el tiempo de actuación de la protección en el cálculo de cortocircuito</h4>
+            <p>La fórmula S_min = I_cc × √t / k muestra que duplicar el tiempo de actuación aumenta la sección mínima en √2. Un relevador de sobrecorriente con curva inversa a 0.5 s requiere secciones significativamente mayores que un diferencial de 0.05 s con el mismo nivel de falla.</p>
+            <div class="fix">✔ Coordinar protecciones y selección de cable simultáneamente en la fase de ingeniería de detalle.</div>
+          </div>
+          <div class="error-card">
+            <h4>Error 5 — Usar NMX-J cuando el proyecto requiere IEC 60502 (CFE/LAPEM)</h4>
+            <p>Los cables nacionales bajo NMX-J están certificados para el mercado interno, pero no tienen el certificado de pruebas tipo IEC 60502-2 que CFE-LAPEM exige para interconexión. Presentar un cable NMX-J en una especificación LAPEM obliga a reemplazarlo, con impacto directo al cronograma.</p>
+            <div class="fix">✔ Verificar la norma del contrato antes de cotizar. Para proyectos CFE, solicitar siempre cable con certificación IEC y pruebas de tipo vigentes.</div>
+          </div>
+        </div>
+
+        <h2>8. Caso real — Subestación 13.8 kV: planta automotriz en Jalisco</h2>
+        <p>Alimentador principal de planta automotriz: potencia instalada 4.8 MW, cos φ = 0.90 inductivo, tensión 13.8 kV, longitud de circuito 3 km, instalación subterránea directamente enterrada a 0.9 m de profundidad. Temperatura del suelo: 25°C. Resistividad térmica: ρ_T = 1.2 K·m/W.</p>
+
+        <div class="case-grid">
+          <div class="case-kpi"><span class="case-kpi__val">150 mm²</span><span class="case-kpi__lbl">Sección conductor Cu XLPE</span></div>
+          <div class="case-kpi"><span class="case-kpi__val">8.7/15 kV</span><span class="case-kpi__lbl">Tensión U₀/U del cable</span></div>
+          <div class="case-kpi"><span class="case-kpi__val">3 km</span><span class="case-kpi__lbl">Longitud de circuito</span></div>
+          <div class="case-kpi"><span class="case-kpi__val">223 A</span><span class="case-kpi__lbl">Corriente de operación</span></div>
+          <div class="case-kpi"><span class="case-kpi__val">340 A</span><span class="case-kpi__lbl">Ampacidad en campo</span></div>
+          <div class="case-kpi"><span class="case-kpi__val">1.8%</span><span class="case-kpi__lbl">Caída de tensión real</span></div>
+        </div>
+
+        <h3>Verificación de los tres criterios</h3>
+        <p><strong>Ampacidad:</strong> I_nominal fabricante = 370 A. Factor k_T (25°C) = 1.00; factor k_A (1 circuito) = 1.00; factor k_ρ (1.2 K·m/W) = 0.92. I_campo = 370 × 1.00 × 1.00 × 0.92 = <strong>340 A</strong>. Corriente de operación = P / (√3 × V × cos φ) = 4,800,000 / (√3 × 13,800 × 0.90) = <strong>223 A</strong> → 65.6% de la ampacidad corregida → <strong>✔ OK</strong>.</p>
+        <p><strong>Caída de tensión:</strong> R = 0.128 Ω/km, X = 0.082 Ω/km. ΔV = [√3 × 223 × 3 × (0.128 × 0.90 + 0.082 × 0.436)] / 13,800 × 100 = <strong>1.8%</strong> → inferior al 3% de NOM-001 → <strong>✔ OK</strong>.</p>
+        <p><strong>Cortocircuito:</strong> I_cc en barra remota = 8.5 kA; tiempo de apertura relevador diferencial = 0.05 s. S_min = 8,500 × √0.05 / 143 = <strong>13.3 mm²</strong> → 150 mm² ≫ 13.3 mm² → <strong>✔ OK</strong>.</p>
+
+        <div class="case-result">
+          <h4>Conclusión del caso</h4>
+          <p>El cable XLPE 150 mm² Cu 8.7/15 kV con armadura, instalado directamente enterrado a 0.9 m, cumple los tres criterios simultáneamente con margen positivo en todos. El criterio más restrictivo en este caso fue la <strong>caída de tensión</strong> — una sección de 95 mm² habría sido suficiente por ampacidad y cortocircuito, pero habría producido ΔV = 2.8% (válido) vs los 1.8% que aporta el 150 mm². VMS Energy eligió 150 mm² por el margen de expansión de carga del 30% previsto por el cliente para la segunda fase.</p>
+        </div>
+
+        <h2>9. Preguntas frecuentes</h2>
+        <div class="faq-list" aria-label="Preguntas frecuentes sobre selección de cable eléctrico">
+          <details>
+            <summary>¿Cuáles son los tres criterios para seleccionar un cable eléctrico industrial?</summary>
+            <p>Todo cable industrial debe verificarse contra tres criterios simultáneos: (1) <strong>Ampacidad</strong> — la corriente de operación no debe superar la capacidad térmica corregida del cable (IEC 60287); (2) <strong>Caída de tensión</strong> — el ΔV en el extremo receptor no debe superar el 3% en alimentadores ni el 5% total (NOM-001-SEDE-2012); (3) <strong>Corriente de cortocircuito</strong> — la sección debe soportar la energía térmica del cortocircuito sin daño (IEC 60949). El criterio más restrictivo determina la sección final.</p>
+          </details>
+          <details>
+            <summary>¿Qué diferencia hay entre aislamiento XLPE y EPR en media tensión?</summary>
+            <p>XLPE ofrece menor factor de disipación dieléctrica (tan δ &lt; 0.0004), menor capacitancia y mejor comportamiento en líneas largas. Es el estándar para subestaciones e instalaciones fijas. EPR es superior en flexibilidad mecánica, resistencia al water treeing y ambientes con humedad extrema — idóneo para trailing cables en minería y equipos móviles. Ambos soportan 90°C en operación y 250°C en cortocircuito.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se calcula la ampacidad de un cable enterrado según IEC 60287?</summary>
+            <p>Se parte de la ampacidad nominal del fabricante y se aplican tres factores de corrección: k_T (temperatura ambiente del suelo), k_A (agrupamiento de circuitos) y k_ρ (resistividad térmica del suelo). En México, las condiciones en zonas calurosas o con suelo arenoso seco pueden reducir la ampacidad hasta un 35% respecto al valor de tabla. VMS Energy elabora la memoria de cálculo de ampacidad como entregable de ingeniería básica.</p>
+          </details>
+          <details>
+            <summary>¿Cuál es el límite de caída de tensión según NOM-001-SEDE-2012?</summary>
+            <p>NOM-001-SEDE-2012 establece un máximo de 3% de caída de tensión en alimentadores y 3% en circuitos derivados, con un total acumulado no mayor al 5% desde el tablero principal hasta el punto de utilización más alejado. Para cargas sensibles como variadores de frecuencia, PLC o instrumentación analítica, VMS Energy recomienda no superar el 2% en el alimentador.</p>
+          </details>
+          <details>
+            <summary>¿Cuándo se usa conductor de aluminio en lugar de cobre en proyectos industriales?</summary>
+            <p>El aluminio se usa cuando el costo del conductor es factor decisivo y hay espacio disponible en bandejas y ductos para la mayor sección requerida (aproximadamente 1.5 veces la sección de cobre para igual ampacidad, según IEC 60228). Es frecuente en alimentadores principales de larga distancia y acometidas de alta potencia. Para control, instrumentación y circuitos de pequeño calibre se mantiene siempre el cobre.</p>
+          </details>
+          <details>
+            <summary>¿Qué norma aplica para cables de potencia en proyectos con especificación CFE?</summary>
+            <p>Para proyectos con interconexión o especificación CFE se aplica IEC 60502-2 (cables de 6 kV a 30 kV) e IEC 62067 (cables EHV superiores a 30 kV), junto con los requisitos de documentación CFE-LAPEM: certificado de pruebas tipo e individual, ficha técnica aprobada y procedimiento de instalación validado. En proyectos de distribución interna sin requisito CFE, NMX-J y NOM-001-SEDE son suficientes para baja tensión.</p>
+          </details>
+          <details>
+            <summary>¿Qué documentación debe entregar el fabricante con cada bobina de cable?</summary>
+            <p>El paquete documental estándar incluye: certificado de pruebas de tipo (ensayos en muestra por lote: tensión soportada, descargas parciales, doblado), certificado de pruebas de rutina individuales (resistencia DC del conductor, prueba de tensión aplicada), hoja de datos del cable (construcción, materiales, parámetros eléctricos), reporte de longitud medida por bobina y etiqueta de trazabilidad. Para proyectos EPC con PEMEX, CFE o auditoría ISO, VMS Energy gestiona la documentación adicional requerida.</p>
+          </details>
+        </div>
+
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h4>Referencia rápida de calibres</h4>
+          <ul>
+            <li><strong>16 mm² Cu</strong> — hasta 87 A en bandeja (1 cto.)</li>
+            <li><strong>35 mm² Cu</strong> — hasta 130 A en bandeja</li>
+            <li><strong>70 mm² Cu</strong> — hasta 185 A en bandeja</li>
+            <li><strong>150 mm² Cu</strong> — hasta 300 A en bandeja</li>
+            <li><strong>240 mm² Cu</strong> — hasta 390 A en bandeja</li>
+            <li><strong>k XLPE-Cu</strong> = 143 (IEC 60949)</li>
+            <li><strong>k XLPE-Al</strong> = 94 (IEC 60949)</li>
+            <li><strong>ΔV máx.</strong> 3% alimentadores (NOM-001)</li>
+          </ul>
+        </div>
+
+        <div class="cta-card">
+          <h4>¿Necesitas la memoria de cálculo de tu cable?</h4>
+          <p>VMS Energy desarrolla el cálculo de ampacidad, caída de tensión y cortocircuito como entregable EPC.</p>
+          <a href="contacto.html#inicio">Solicitar asesoría técnica →</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Catálogo de cable VMS Energy</h4>
+          <ul>
+            <li><a href="lp-cable-de-potencia-kei.html">Cable potencia MT/AT (KEI)</a></li>
+            <li><a href="lp-cables-alta-tension.html">Cables alta tensión 6–66 kV</a></li>
+            <li><a href="lp-cables-extra-alta-tension.html">Cables EHV 66–400 kV</a></li>
+            <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+            <li><a href="lp-cables-especiales.html">Cables ESP (Oil &amp; Gas)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Normas de referencia</h4>
+          <ul>
+            <li>IEC 60502-1/-2 (MT cables)</li>
+            <li>IEC 60228 (conductores)</li>
+            <li>IEC 60287 (ampacidad)</li>
+            <li>IEC 60949 (cortocircuito)</li>
+            <li>IEC 62067 (EHV &gt;30 kV)</li>
+            <li>NMX-J-010-ANCE</li>
+            <li>NOM-001-SEDE-2012</li>
+            <li>CFE-LAPEM</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Blog Técnico VMS Energy</h4>
+          <ul>
+            <li><a href="blog-dimensionamiento-ups-industrial.html">Dimensionamiento UPS Industrial</a></li>
+            <li><a href="blog-carga-termica-hvac-industrial.html">Carga Térmica HVAC Industrial</a></li>
+            <li><a href="blog-ingenieria-detalle-epc-electrico.html">Ingeniería de Detalle EPC</a></li>
+            <li><a href="blog-seleccion-transformadores-industriales.html">Selección de Transformadores</a></li>
+            <li><a href="blog.html">Ver todos →</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Contacto directo</h4>
+          <ul>
+            <li><a href="tel:+523338130739">+52 33 3813 0739</a> Guadalajara</li>
+            <li><a href="tel:+529383814824">+52 938 381 4824</a> Cd. del Carmen</li>
+            <li><a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <div class="container">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+      </div>
+      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
+        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
+        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
+        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
+        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
+        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
+      </ul>
+      <div style="margin-top:14px">
+        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
+        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
+          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
+        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
+        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
+        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
+        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
+        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
+        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
+      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
+        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
+        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
+        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
+        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
+        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
+        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var list = document.getElementById('menuList');
+    if(toggle && list){
+      toggle.addEventListener('click', function(e){
+        e.preventDefault();
+        var open = list.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var nav = document.querySelector('header nav');
+    if(!nav) return;
+    var media = window.matchMedia('(max-width: 680px)');
+    var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
+    function syncSubmenus(){
+      var mobile = media.matches;
+      parents.forEach(function(parent){
+        var trigger = parent.querySelector(':scope > a');
+        var submenu = parent.querySelector(':scope > .submenu');
+        if(!trigger || !submenu) return;
+        if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
+        else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
+        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
+      });
+    }
+    parents.forEach(function(parent){
+      var trigger = parent.querySelector(':scope > a');
+      var submenu = parent.querySelector(':scope > .submenu');
+      if(!trigger || !submenu) return;
+      trigger.addEventListener('click', function(e){
+        if(!media.matches) return;
+        e.preventDefault();
+        var open = parent.classList.toggle('is-open');
+        submenu.style.display = open ? 'block' : 'none';
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    syncSubmenus();
+    if(media.addEventListener) media.addEventListener('change', syncSubmenus);
+    else if(media.addListener) media.addListener(syncSubmenus);
+  })();
+  </script>
+</body>
+</html>

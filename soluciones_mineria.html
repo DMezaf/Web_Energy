@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es-MX" data-concept="sectorial" data-sector="mineria">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -21,43 +21,78 @@
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/mineria_sectorial.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_mineria.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_mineria.html" />
+    <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="sectorial-base.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-    :root{
-      --night:#0b1220;
-      --navy:#172C51;
-      --cobalt:#0F4C81;
-      --ocean:#0f3d5e;
-      --azure:#1a6fa3;
-      --lime:#9ce37b;
-      --sun:#f0b429;
-      --ink:#13233c;
-      --muted:#5e6f86;
-      --line:rgba(19,35,60,.14);
-      --soft:#f5f8fc;
+
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Ingeniería Eléctrica EPC para Minería",
+  "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com"},
+  "areaServed":{"@type":"Country","name":"México"},
+  "description":"EPC eléctrico para planta minera: subestaciones MT/AT, variadores para molinos SAG y bombas de pulpa, automatización PLC/SCADA y mantenimiento en sitios remotos. Distribuidor exclusivo KEI y autorizado Triol en México.",
+  "serviceType":"Mining Electrical Engineering EPC"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"¿Pueden trabajar en minas a cielo abierto y en socavón?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sí. Hemos ejecutado proyectos en ambos tipos de operación. En minas subterráneas aplicamos normas de clasificación de áreas eléctricas (NFPA 70 / NOM-001-SEDE) para zonas con atmósferas potencialmente explosivas. En cielo abierto nos especializamos en alimentadores de larga distancia, bombas de achique y variadores para fajas transportadoras."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Qué tipo de variadores de velocidad utilizan para molinos SAG y bombas de pulpa?",
+      "acceptedAnswer":{"@type":"Answer","text":"Trabajamos principalmente con variadores TRIOL (distribuidor autorizado en México con inventario local) para aplicaciones de alta potencia en molinos SAG, molinos de bolas y bombas de pulpa. Para aplicaciones de media tensión (2.4 kV, 4.16 kV, 6.6 kV) seleccionamos las series AT y AV de TRIOL. Para baja tensión utilizamos ABB ACS880, Schneider Altivar 980 y Siemens SINAMICS según la aplicación."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Suministran cable especializado para aplicaciones mineras?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sí. Somos distribuidores exclusivos de KEI Wires & Cables en México con inventario disponible. Para minería suministramos cable trailing (flexible, resistente a abrasión y aceites para equipo móvil), cable de potencia media tensión para alimentadores principales y cable de control multipolar para instrumentación. Cada familia tiene la especificación técnica correcta para su aplicación."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Qué tan lejos pueden desplazarse para mantenimiento o emergencias en sitios remotos?",
+      "acceptedAnswer":{"@type":"Answer","text":"Contamos con cuadrillas de técnicos especializados con capacidad de despliegue en cualquier estado de México en menos de 48 horas. Hemos ejecutado proyectos en Durango, Jalisco, Zacatecas, Chihuahua y Sonora. Para contratos de mantenimiento con presencia permanente, dimensionamos el equipo en sitio según los requerimientos de la operación."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Cómo manejan la coordinación de protecciones en sistemas eléctricos de mina?",
+      "acceptedAnswer":{"@type":"Answer","text":"Realizamos el estudio de coordinación de protecciones como parte de la ingeniería de detalle: análisis de cortocircuito, curvas tiempo-corriente, ajuste de relés de protección (sobrecorriente, diferencial, tierra restringida) y verificación de selectividad. Utilizamos software SKM PowerTools y ETAP para los estudios eléctricos."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Qué certificaciones avalan su trabajo en proyectos mineros?",
+      "acceptedAnswer":{"@type":"Answer","text":"VMS Energy cuenta con Sistema de Gestión Integral certificado: ISO 9001 (calidad), ISO 14001 (medio ambiente), ISO 45001 (seguridad y salud), ISO 37001 (anticorrupción) e ISO 50001 (energía). Estas certificaciones son requisito en muchos contratos con mineras de capital internacional como IMERYS, Cemex, Holcim y Cruz Azul."}
+    },
+    {
+      "@type":"Question",
+      "name":"¿Realizan estudios eléctricos previos al proyecto (flujos de carga, cortocircuito, arco eléctrico)?",
+      "acceptedAnswer":{"@type":"Answer","text":"Sí. Ofrecemos estudios eléctricos completos: flujo de carga y caída de tensión, análisis de cortocircuito (ANSI/IEC), coordinación de protecciones, análisis de arco eléctrico (IEEE 1584) y calidad de energía (armónicos, factor de potencia). Estos estudios son la base de la ingeniería de detalle y definen el dimensionamiento correcto de todos los equipos."}
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-    h1,h2,h3{font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0}
-    p{margin:0}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header .container{max-width:1200px}
-    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px);font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:0}
-    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
-    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
-    .brand__name{font-weight:700;font-size:18px;color:var(--navy)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:.6rem 1rem;font-weight:700;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(13,40,70,.18)}
-    .btn--primary{background:linear-gradient(120deg,#0f5f8f,#1a7db7);color:#fff}
-    .btn--ghost{background:#fff;border-color:var(--line);color:var(--ocean)}
-    .hero{padding:46px 0 32px}
-    .hero__frame{background:linear-gradient(115deg,rgba(7,14,26,.88),rgba(14,58,90,.75)),url("assets/img/mineria_sectorial.webp") center/cover no-repeat;border-radius:24px;overflow:hidden;position:relative}
+  ]
+}
+</script>
+<style>
+    /* ─── VARIABLES MINERÍA ─── */
+    :root{
+      --night:#0b1220;--navy:#172C51;--cobalt:#0F4C81;--ocean:#0f3d5e;
+      --azure:#1a6fa3;--lime:#9ce37b;--sun:#f0b429;--ink:#13233c;
+      --muted:#5e6f86;--line:rgba(19,35,60,.14);--soft:#f5f8fc;
+    }
+    /* ─── HERO FRAME (dark mining) ─── */
+    .hero{padding:46px 0 32px;background:transparent}
+    .hero__frame{background:linear-gradient(115deg,rgba(7,14,26,.88),rgba(14,58,90,.75)),url("assets/img/mineria_sectorial_.webp") center/cover no-repeat;border-radius:24px;overflow:hidden;position:relative}
     .hero__glow{position:absolute;inset:auto -10% -30% -10%;height:50%;background:radial-gradient(circle at 30% 50%,rgba(156,227,123,.25),transparent 60%)}
     .hero__grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:38px}
     .hero__tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#e8f2ff;padding:.3rem .75rem;border-radius:999px;font-size:.85rem;font-weight:600}
@@ -72,6 +107,10 @@
     .panel__list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
     .panel__list li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:#dbe8f7}
     .panel__icon{width:22px;height:22px;border-radius:8px;background:rgba(156,227,123,.2);display:inline-flex;align-items:center;justify-content:center;color:#b6f4a4;font-weight:700}
+    /* ─── BOTONES (override para estilo minería) ─── */
+    .btn--primary{background:linear-gradient(120deg,#0f5f8f,#1a7db7);color:#fff}
+    .btn--ghost{background:#fff;border-color:var(--line);color:var(--ocean)}
+    /* ─── SECCIONES minería ─── */
     .section{padding:40px 0}
     .section__title{font-size:clamp(22px,3vw,32px);color:var(--ocean)}
     .section__intro{margin-top:8px;color:var(--muted);line-height:1.6}
@@ -82,7 +121,6 @@
     .card h3{font-size:1.05rem;color:var(--ocean);margin-bottom:8px}
     .card p{color:var(--muted);line-height:1.6}
     .card a.card__link{color:var(--cobalt);font-weight:700;display:inline-block;margin-top:8px}
-    .card a.card__link:hover{text-decoration:underline}
     .band{background:linear-gradient(120deg,#0d2a43,#124e7a 55%,#0d2a43);color:#fff;border-radius:22px;padding:28px;display:grid;gap:18px}
     .band__title{font-size:clamp(22px,3vw,30px)}
     .band__copy{color:rgba(231,242,255,.9);line-height:1.6}
@@ -92,137 +130,37 @@
     .map__zones{display:grid;gap:10px}
     .zone{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--soft);border:1px solid #dbe6f4;font-weight:600;color:#1a3d60}
     .zone span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:12px;background:#e5f2ff;color:#0f4c81;font-weight:800}
+    /* ─── TIMELINE STEPS (mining) ─── */
     .timeline{display:grid;gap:12px;margin-top:16px}
     .step{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:#fff}
     .step__num{width:38px;height:38px;border-radius:14px;background:#e8f2ff;color:#0f4c81;font-weight:800;display:flex;align-items:center;justify-content:center}
     .step p{color:var(--muted);line-height:1.6}
-    .cta{display:flex;gap:10px;flex-wrap:wrap}
     .pill{display:inline-flex;align-items:center;gap:8px;padding:.28rem .7rem;border-radius:999px;background:#eef5ff;color:#0f4c81;font-weight:700;font-size:.85rem}
-    .foot{background:#0b1428;color:#cbd5e1;font-size:14px;line-height:1.6;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    #footer .container{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    #footer h4{
-      margin:0 0 10px !important;
-      font-size:1rem;
-      line-height:1.2;
-    }
-    #footer ul{
-      margin:0 !important;
-      padding:0 !important;
-      list-style:none;
-      font-size:14px;
-      line-height:1.7;
-    }
-    #footer li{
-      margin:0 0 4px;
-    }
-    #footer a{word-break:break-word}
-    #footer .foot-link{color:#cbd5e1;text-decoration:none}
-    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
-    #footer .foot-link--strong{color:#fff;font-weight:700}
-    .foot-social__link{
-      display:inline-flex;
-      width:26px;
-      height:26px;
-    }
-    .foot-social__link svg{
-      fill:#fff;
-      transition:fill .3s ease;
-    }
-    .foot-social__link:hover svg,
-    .foot-social__link:focus-visible svg{
-      fill:#0F4C81;
-    }
-    @media (max-width:1300px){
-      #footer .container{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    }
-    @media (max-width:980px){
-      #footer .container{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-    }
-    @media (max-width:700px){
-      #footer .container{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid !important;
-      grid-template-columns:1.25fr 1fr 1fr 1fr 1fr !important;
-      gap:18px !important;
-      padding:40px 0 !important;
-      align-items:start;
-    }
-      #footer ul{
-        line-height:1.6;
-      }
-    }n.foot__grid{display:grid;grid-template-columns:1.1fr repeat(3,minmax(140px,1fr));gap:20px;padding:30px 0}
-    .foot h4{color:#fff;margin:0 0 10px;font-size:1rem}
-    .foot p{margin:0;color:#cbd5e1;line-height:1.6;font-size:14px}
-    .foot__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-    .foot__list a{color:#cbd5e1;font-size:14px}
-    .foot__list a:hover{color:#fff}
-    .reveal{opacity:0;transform:translateY(18px);animation:fadeUp .6s ease forwards}
-    .delay-1{animation-delay:.12s}
-    .delay-2{animation-delay:.24s}
-    .delay-3{animation-delay:.36s}
-    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-    @media (max-width:960px){
-      .hero__grid{grid-template-columns:1fr}
-      .grid--3{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width:760px){
-      .grid--3,.grid--2{grid-template-columns:1fr}
-      .hero__grid{padding:26px}
-      .foot__grid{grid-template-columns:1fr}
-    }
-      .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
-<style id="nav-submenu-styles-vms">
-  nav{position:relative}
-  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-  nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
-  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
-  .nav-item--has-submenu{position:relative}
-  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
-  .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
-  .nav-item--has-submenu:hover .submenu,
-  .nav-item--has-submenu:focus-within .submenu{display:block}
-  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
-  .submenu__title{display:block;color:#0f4c81;font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-  @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
-  @media (max-width:760px){
-    nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
-    nav ul.is-open{display:grid;gap:10px}
-    .menu-toggle{display:inline-flex}
-    .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
-    .nav-item--has-submenu.is-open .submenu{display:block}
-  }
-    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    /* ─── SVC CARDS con media (minería) ─── */
+    .svc-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin:32px 0 20px;flex-wrap:wrap}
+    .svc-intro>div{flex:1}
+    .svc-intro h2{font-size:clamp(20px,2.8vw,30px);color:var(--ocean)}
+    .svc-intro p{margin-top:8px;color:var(--muted);line-height:1.6;max-width:600px}
+    .btn--secondary{background:#fff;border-color:var(--cobalt);color:var(--cobalt);white-space:nowrap;align-self:flex-start;margin-top:4px}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:24px}
+    .svc-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 24px rgba(12,30,52,.06)}
+    .svc-card__media{height:180px;overflow:hidden;background:#0d2448}
+    .svc-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+    .svc-card__body{padding:16px}
+    .svc-card__tag{display:inline-flex;background:#eef5ff;color:#0f4c81;font-weight:700;font-size:.78rem;padding:.2rem .6rem;border-radius:999px}
+    .svc-card__body h3{font-size:1rem;color:var(--ocean);margin:8px 0 6px}
+    .svc-card__body p{color:var(--muted);font-size:.9rem;line-height:1.5}
+    /* ─── KPI CARDS (section, diferente del kpi-strip) ─── */
+    .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+    .kpi{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:#f8fbff}
+    .kpi__badge{width:56px;height:56px;object-fit:contain;flex-shrink:0}
+    .kpi__body{font-size:.88rem;color:var(--ink);line-height:1.5}
+    /* ─── REF CARD override (minería usa azure + bg diferente) ─── */
+    .ref-card{border-left:4px solid var(--azure);background:#f5f8fc;border-radius:0 10px 10px 0;padding:16px 18px}
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:960px){.hero__grid{grid-template-columns:1fr}.grid--3{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){.grid--3,.grid--2{grid-template-columns:1fr}.hero__grid{padding:26px}.svc-grid{grid-template-columns:1fr}.svc-intro{flex-direction:column}.kpis{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -244,16 +182,21 @@
                 <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
                 <ul class="submenu__list">
                   <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
                   <li><a href="blog.html">Blog</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true" aria-expanded="false">Soluciones</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de soluciones">
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
               <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Soluciones EPC</a>
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
                 <ul class="submenu__list">
                   <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
                   <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
@@ -263,13 +206,30 @@
                   <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
                   <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
                   <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
                 </ul>
               </div>
               <div class="submenu__group">
-                <span class="submenu__title">Sectores</span>
+                <span class="submenu__title">Por Sector</span>
                 <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_mineria.html#inicio" style="color:#16a34a;font-weight:900">✓ Miner&iacute;a</a></li>
                   <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
                 </ul>
               </div>
             </div>
@@ -278,15 +238,28 @@
             <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
             <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
               <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Especialidades</a>
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
                 <ul class="submenu__list">
                   <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
                   <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
                   <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                  <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                  <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                  <li><a href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
                 </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
               </div>
             </div>
           </li>
@@ -307,7 +280,7 @@
             </div>
           </li>
           <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+          <li><a class="cta-header" href="contactar.html#inicio">Contactar</a></li>
         </ul>
       </nav>
     </div>
@@ -338,7 +311,7 @@
                 </div>
                 <div class="stat reveal delay-2">
                   <span class="stat__dot"></span>
-                  <div>Representaci&oacute;n exclusiva KEI Wires &amp; Cables y Triol en M&eacute;xico.</div>
+                  <div>Representaci&oacute;n exclusiva KEI Wires &amp; Cables y distribuci&oacute;n autorizada Triol con inventario en M&eacute;xico.</div>
                 </div>
               </div>
             </div>
@@ -356,20 +329,100 @@
       </div>
     </section>
 
+    <section aria-labelledby="valorMineriaTitle">
+      <div class="container">
+        <div class="svc-intro">
+          <div>
+            <h2 id="valorMineriaTitle">Qué resolvemos en minería</h2>
+            <p>Ingeniería, procura y construcción de los sistemas eléctricos críticos
+            que sostienen la planta minera: desde subestaciones hasta variadores para
+            molinos, con responsabilidad única y 5 certificaciones ISO activas.</p>
+          </div>
+          <a class="btn btn--secondary" href="soluciones.html#inicio">Ver otras soluciones</a>
+        </div>
+        <div class="svc-grid">
+          <article class="svc-card">
+            <div class="svc-card__media">
+              <img src="assets/img/Desafios_tecnicos_mineria_blog_aplicaciones_mineras.webp"
+                   alt="Desafíos técnicos eléctricos en planta minera"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="svc-card__body">
+              <span class="svc-card__tag">Diagnóstico</span>
+              <h3>Diagnóstico y levantamiento eléctrico</h3>
+              <p>Evaluación de criticidad, matriz de riesgos operativos y plan de
+              intervención para sistemas eléctricos en mina y planta de beneficio.</p>
+            </div>
+          </article>
+          <article class="svc-card">
+            <div class="svc-card__media">
+              <img src="assets/img/Proyecto_Minero_VFD_Altivar_980_700_HP_para_Bombeo_Profundo.webp"
+                   alt="Variadores de velocidad para bombeo profundo en minería"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="svc-card__body">
+              <span class="svc-card__tag">Construcción EPC</span>
+              <h3>Subestaciones, variadores y electromecánica</h3>
+              <p>Subestaciones MT/AT, variadores Triol para molinos SAG y bombas de
+              pulpa, electromecánica de planta con QA/QC documentado.</p>
+            </div>
+          </article>
+          <article class="svc-card">
+            <div class="svc-card__media">
+              <img src="assets/img/mineria_sectorial_.webp"
+                   alt="Operación de planta minera con sistemas eléctricos VMS Energy"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="svc-card__body">
+              <span class="svc-card__tag">Puesta en marcha</span>
+              <h3>Comisionamiento y soporte en sitio remoto</h3>
+              <p>Pruebas SAT, energización y entrega operativa con cuadrillas
+              especializadas para operaciones remotas en México y Latinoamérica.</p>
+            </div>
+          </article>
+        </div>
+        <div class="kpis" aria-label="Indicadores VMS Energy Minería">
+          <div class="kpi">
+            <img class="kpi__badge" src="assets/img/20_anos_VMS_Energy_badge_EPC.webp"
+                 alt="Badge más de 17 años VMS Energy EPC" loading="lazy" decoding="async">
+            <div class="kpi__body"><strong>Más de 17 años</strong> ejecutando proyectos EPC en industria pesada</div>
+          </div>
+          <div class="kpi">
+            <a href="certificaciones.html" aria-label="Ver certificaciones ISO de VMS Energy"
+               style="text-decoration:none;color:inherit;display:contents">
+              <img class="kpi__badge" src="assets/img/Sistema_gestion_integral.webp"
+                   alt="Badge Sistema de Gestión Integral ISO" loading="lazy" decoding="async">
+              <div class="kpi__body"><strong>Sistema de Gestión Integral</strong>
+              ISO 9001, 14001, 45001, 37001 y 50001 —
+              <span style="color:#0f4c81;font-weight:700;text-decoration:underline">ver certificaciones</span></div>
+            </a>
+          </div>
+          <div class="kpi">
+            <img class="kpi__badge" src="assets/img/Exclusividad_distribucion_KEI_.webp"
+                 alt="Badge distribución exclusiva KEI Wires México" loading="lazy" decoding="async">
+            <div class="kpi__body"><strong>Distribución exclusiva KEI</strong>
+            en México — cables de potencia y mineros con respaldo de fabricante</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="retos">
       <div class="container">
         <h2 class="section__title">Retos el&eacute;ctricos del sector minero</h2>
         <p class="section__intro">La operaci&oacute;n minera depende de sistemas el&eacute;ctricos confiables que soporten ambientes severos, distancias extensas y cargas variables. Cada hora de paro impacta directo en la producci&oacute;n.</p>
         <div class="grid grid--3">
           <article class="card reveal">
+            <img src="assets/img/icon_disponibilidad_operativa.svg" alt="" aria-hidden="true" width="40" height="40" style="margin-bottom:10px">
             <h3>Disponibilidad operativa</h3>
             <p>Sistemas redundantes y mantenimiento predictivo para reducir paros no planificados en concentradoras, chancado y bombeo.</p>
           </article>
           <article class="card reveal delay-1">
+            <img src="assets/img/icon_ambientes_severos.svg" alt="" aria-hidden="true" width="40" height="40" style="margin-bottom:10px">
             <h3>Ambientes severos</h3>
             <p>Equipos especificados para polvo, humedad, vibraci&oacute;n y altitud, con materiales y certificaciones acordes a la operaci&oacute;n.</p>
           </article>
           <article class="card reveal delay-2">
+            <img src="assets/img/icon_eficiencia_energetica.svg" alt="" aria-hidden="true" width="40" height="40" style="margin-bottom:10px">
             <h3>Eficiencia energ&eacute;tica</h3>
             <p>Variadores, calidad de energ&iacute;a y monitoreo SCADA para reducir consumo y proteger los activos cr&iacute;ticos del proceso.</p>
           </article>
@@ -383,16 +436,34 @@
         <p class="section__intro">Dise&ntilde;amos, suministramos y construimos los sistemas el&eacute;ctricos y de control que sostienen la planta minera. Trabajamos con est&aacute;ndares internacionales y bajo nuestro sistema integrado ISO.</p>
         <div class="grid grid--3">
           <article class="card reveal">
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/substation.webp"
+                   alt="Subestación eléctrica MT/AT en planta minera"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
             <h3>Subestaciones MT/AT</h3>
             <p>Subestaciones el&eacute;ctricas industriales encapsuladas e intemperie, tableros, protecciones y plantas de fuerza para mina y planta.</p>
             <a class="card__link" href="soluciones_infraestructura_energetica.html#inicio">Conocer m&aacute;s &rarr;</a>
           </article>
           <article class="card reveal delay-1">
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/Arquitectura_control.webp"
+                   alt="Automatización PLC/SCADA para procesos mineros"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
             <h3>Automatizaci&oacute;n PLC/SCADA</h3>
             <p>Control de procesos para chancado, molienda, flotaci&oacute;n y manejo de pulpa. Integraci&oacute;n con sistemas existentes y reportes operativos.</p>
             <a class="card__link" href="soluciones_automatizacion_control.html#inicio">Conocer m&aacute;s &rarr;</a>
           </article>
           <article class="card reveal delay-2">
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/montaje_electromecanico.webp"
+                   alt="Montaje electromecánico en planta industrial"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
             <h3>Electromec&aacute;nica de planta</h3>
             <p>Montaje de equipos, ductos, charolas, canalizaciones, puesta a tierra y aterrizaje de cargas cr&iacute;ticas con trazabilidad QA/QC.</p>
             <a class="card__link" href="soluciones_electromecanicas.html#inicio">Conocer m&aacute;s &rarr;</a>
@@ -400,16 +471,34 @@
         </div>
         <div class="grid grid--3">
           <article class="card reveal">
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/landings/kei/hero-cable-kei-mineria-vms-energy.webp"
+                   alt="Cable KEI de media y alta tensión para minería"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
             <h3>Cables KEI media y alta tensi&oacute;n</h3>
             <p>Suministro directo de cable de potencia, MT, AT y EAT bajo representaci&oacute;n exclusiva KEI en M&eacute;xico, con respaldo de fabricante.</p>
             <a class="card__link" href="lp-cable-de-potencia-kei.html">Ver cat&aacute;logo &rarr;</a>
           </article>
           <article class="card reveal delay-1">
-            <h3>Variadores Triol para molinos y bombas</h3>
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/hero_triol_mineria_.webp"
+                   alt="Variadores Triol para molinos y fajas en planta minera"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
+            <h3>Variadores para aplicaciones cr&iacute;ticas</h3>
             <p>Variadores de velocidad para cargas mineras: molinos SAG, bolas, bombas de pulpa, fajas transportadoras y ventiladores.</p>
             <a class="card__link" href="blog-variadores-industria-minera.html">Caso minero &rarr;</a>
           </article>
           <article class="card reveal delay-2">
+            <div style="height:130px;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#0d2448">
+              <img src="assets/img/lp-deteccion-control-supresion-fuego.webp"
+                   alt="Sistema de detección y supresión de fuego en instalación industrial"
+                   loading="lazy" decoding="async"
+                   style="width:100%;height:100%;object-fit:cover;opacity:.9">
+            </div>
             <h3>Iluminaci&oacute;n y contra incendio</h3>
             <p>Iluminaci&oacute;n industrial de alta intensidad y sistemas de detecci&oacute;n, control y supresi&oacute;n de fuego para naves y subestaciones.</p>
             <a class="card__link" href="lp-deteccion-control-supresion-fuego.html">Conocer m&aacute;s &rarr;</a>
@@ -434,15 +523,96 @@
           <div class="map">
             <div class="pill">Frentes de operaci&oacute;n</div>
             <div class="map__zones">
-              <div class="zone"><span>01</span>Concentradoras y plantas de beneficio</div>
-              <div class="zone"><span>02</span>Tajo abierto y miner&iacute;a subterr&aacute;nea</div>
-              <div class="zone"><span>03</span>Bombeo y manejo de pulpa</div>
-              <div class="zone"><span>04</span>Chancado, molienda y fajas transportadoras</div>
+              <div class="zone"><span>01</span>Tajo abierto y miner&iacute;a subterr&aacute;nea</div>
+              <div class="zone"><span>02</span>Chancado, molienda y fajas transportadoras</div>
+              <div class="zone"><span>03</span>Concentradoras y plantas de beneficio</div>
+              <div class="zone"><span>04</span>Bombeo y transporte hidr&aacute;ulico</div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+<style>
+.proc-strip{background:#172C51;padding:52px 0;color:#fff}
+.proc-strip__header{text-align:center;margin:0 0 36px}
+.proc-strip__title{font-size:clamp(20px,2.4vw,26px);font-weight:700;margin:0 0 8px;color:#fff}
+.proc-strip__sub{font-size:clamp(14px,1.3vw,16px);opacity:.75;margin:0}
+.proc-strip__flow{display:flex;align-items:flex-start;gap:8px}
+.proc-node{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px 16px}
+.proc-node__head{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.proc-node__num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#8ed7ff;color:#172C51;font-weight:800;font-size:.9rem;flex-shrink:0}
+.proc-node__name{font-size:.95rem;font-weight:700;color:#fff;line-height:1.2}
+.proc-node__tags{display:flex;flex-wrap:wrap;gap:6px}
+.proc-tag{font-size:.73rem;padding:.25rem .55rem;border-radius:999px;background:rgba(142,215,255,.12);border:1px solid rgba(142,215,255,.28);color:#8ed7ff;line-height:1.3}
+.proc-arrow{color:#8ed7ff;font-size:1.6rem;flex-shrink:0;padding-top:20px;opacity:.6}
+@media(max-width:860px){
+  .proc-strip__flow{flex-direction:column;align-items:stretch}
+  .proc-node{width:100%;box-sizing:border-box}
+  .proc-arrow{text-align:center;padding:0;transform:rotate(90deg)}
+}
+</style>
+<section class="proc-strip" aria-label="Flujo del proceso minero">
+  <div class="container">
+    <div class="proc-strip__header">
+      <h3 class="proc-strip__title">Flujo del proceso minero</h3>
+      <p class="proc-strip__sub">Presencia el&eacute;ctrica EPC en cada etapa cr&iacute;tica de la operaci&oacute;n</p>
+    </div>
+    <div class="proc-strip__flow">
+      <div class="proc-node">
+        <div class="proc-node__head">
+          <span class="proc-node__num">01</span>
+          <strong class="proc-node__name">Extracci&oacute;n</strong>
+        </div>
+        <div class="proc-node__tags">
+          <span class="proc-tag">Perforaci&oacute;n y voladura</span>
+          <span class="proc-tag">Cargu&iacute;o y acarreo</span>
+          <span class="proc-tag">Ventilaci&oacute;n de t&uacute;neles</span>
+          <span class="proc-tag">Drenaje de mina</span>
+        </div>
+      </div>
+      <div class="proc-arrow" aria-hidden="true">&#8594;</div>
+      <div class="proc-node">
+        <div class="proc-node__head">
+          <span class="proc-node__num">02</span>
+          <strong class="proc-node__name">Reducci&oacute;n de mineral</strong>
+        </div>
+        <div class="proc-node__tags">
+          <span class="proc-tag">Chancado primario</span>
+          <span class="proc-tag">Molienda SAG</span>
+          <span class="proc-tag">Pulverizaci&oacute;n en bolas</span>
+          <span class="proc-tag">Fajas transportadoras</span>
+        </div>
+      </div>
+      <div class="proc-arrow" aria-hidden="true">&#8594;</div>
+      <div class="proc-node">
+        <div class="proc-node__head">
+          <span class="proc-node__num">03</span>
+          <strong class="proc-node__name">Procesamiento</strong>
+        </div>
+        <div class="proc-node__tags">
+          <span class="proc-tag">Flotaci&oacute;n</span>
+          <span class="proc-tag">Separaci&oacute;n magn&eacute;tica</span>
+          <span class="proc-tag">Espesamiento y filtraci&oacute;n</span>
+          <span class="proc-tag">Lixiviaci&oacute;n</span>
+        </div>
+      </div>
+      <div class="proc-arrow" aria-hidden="true">&#8594;</div>
+      <div class="proc-node">
+        <div class="proc-node__head">
+          <span class="proc-node__num">04</span>
+          <strong class="proc-node__name">Transporte hidr&aacute;ulico</strong>
+        </div>
+        <div class="proc-node__tags">
+          <span class="proc-tag">Bombeo de concentrado</span>
+          <span class="proc-tag">Manejo de scrap</span>
+          <span class="proc-tag">Gesti&oacute;n de relaves</span>
+          <span class="proc-tag">Distribuci&oacute;n de agua industrial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="section">
       <div class="container">
@@ -485,10 +655,20 @@
       <div class="container">
         <h2 class="section__title">Diferenciales VMS Energy</h2>
         <p class="section__intro">Combinamos representaci&oacute;n directa de fabricantes, capacidad EPC propia y un sistema de gesti&oacute;n certificado para entregar resultados medibles a la mina.</p>
+        <figure style="margin:0 0 24px;border-radius:14px;overflow:hidden;max-height:280px">
+          <img src="assets/img/clientes_mineria_.webp"
+               alt="Clientes del sector minero — Cemex, IMERYS, Cruz Azul, Holcim"
+               loading="lazy" decoding="async"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <figcaption style="padding:10px 16px;background:#f4f8ff;font-size:.88rem;
+                             color:#4B647F;border-top:1px solid rgba(15,76,129,.12)">
+            Clientes del sector minero: Cemento Cruz Azul, CEMEX, Holcim, IMERYS
+          </figcaption>
+        </figure>
         <div class="grid grid--2">
           <article class="card reveal">
-            <h3>Representaci&oacute;n KEI y Triol</h3>
-            <p>&Uacute;nicos representantes en M&eacute;xico de KEI Wires &amp; Cables y Triol: cables de potencia y variadores con respaldo directo de f&aacute;brica.</p>
+            <h3>Aliados estrat&eacute;gicos</h3>
+            <p>Representaci&oacute;n exclusiva KEI Wires &amp; Cables en M&eacute;xico para cables de potencia e inventario variadores Triol disponible para respuesta r&aacute;pida.</p>
           </article>
           <article class="card reveal delay-1">
             <h3>5 certificaciones ISO activas</h3>
@@ -496,13 +676,77 @@
             <a class="card__link" href="certificaciones.html">Ver certificaciones &rarr;</a>
           </article>
           <article class="card reveal delay-2">
-            <h3>20 a&ntilde;os en EPC industrial</h3>
+            <h3>+17 a&ntilde;os en EPC industrial</h3>
             <p>Trayectoria comprobada en proyectos el&eacute;ctricos cr&iacute;ticos para industria pesada, energ&iacute;a y procesos.</p>
           </article>
           <article class="card reveal delay-3">
             <h3>Equipos para sitios remotos</h3>
             <p>Capacidad de despliegue multirregi&oacute;n con cuadrillas especializadas, log&iacute;stica y refacciones para operaciones mineras.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- M&oacute;dulo: Suministro de cable especializado para miner&iacute;a -->
+    <section class="section" id="cable-mineria">
+      <div class="container">
+        <h2 class="section__title">Suministro de cable especializado para miner&iacute;a</h2>
+        <p class="section__intro">Cada frente de la mina exige una construcci&oacute;n de cable distinta. No es la misma especificaci&oacute;n para una pala de cable que para un alimentador de subestaci&oacute;n. Estas son las tres familias de cable KEI con las que cubrimos la operaci&oacute;n minera completa, integradas al alcance EPC de VMS Energy.</p>
+
+        <figure style="margin:0 0 24px;border-radius:14px;overflow:hidden;max-height:260px">
+          <img src="assets/img/hero_KEI-mineria_.webp"
+               alt="Cable de potencia KEI para minería — trailing y potencia"
+               loading="lazy" decoding="async"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+        </figure>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <h3>Equipos m&oacute;viles &mdash; Trailing cables EPR</h3>
+            <p>Conductor flexible Clase 5 con aislamiento EPR para aplicaciones que enrollan y desenrollan cable de forma continua. Tensiones t&iacute;picas 1.1&ndash;6.6 kV. Aplicaciones: palas el&eacute;ctricas, perforadoras m&oacute;viles, equipos de acarreo, transportadores m&oacute;viles. Resistente a abrasi&oacute;n, impactos y ciclos t&eacute;rmicos.</p>
+            <a class="card__link" href="glosario-cable-electrico.html#trailing-cable">&iquest;Qu&eacute; es un trailing cable? &rarr;</a>
+          </article>
+          <article class="card reveal delay-1">
+            <h3>Instalaci&oacute;n fija &mdash; Cable de potencia XLPE</h3>
+            <p>Aislamiento XLPE para instalaciones fijas: subestaciones internas, alimentadores principales, l&iacute;neas a chancado y molinos. Tensiones 6.6&ndash;22 kV (hasta 33 kV en proyectos grandes). Construcciones con armadura de acero para tramos enterrados o ductos con riesgo mec&aacute;nico.</p>
+            <a class="card__link" href="lp-cable-de-potencia-kei.html">Ver cat&aacute;logo MT/AT &rarr;</a>
+          </article>
+          <article class="card reveal delay-2">
+            <h3>Iluminaci&oacute;n, control e instrumentaci&oacute;n</h3>
+            <p>Cables LSZH (low smoke, zero halogen) para t&uacute;neles y espacios confinados, control multiconductor con pantalla EMC para PLC/SCADA, e instrumentaci&oacute;n apantallada para se&ntilde;ales anal&oacute;gicas. Cumplimiento NOM-001-SEDE y normas internacionales.</p>
+            <a class="card__link" href="glosario-cable-electrico.html#lszh">&iquest;Qu&eacute; es LSZH? &rarr;</a>
+          </article>
+        </div>
+
+        <div style="margin-top:24px;padding:22px;border:1px solid rgba(15,76,129,.18);border-radius:14px;background:linear-gradient(135deg,#f4f8ff 0%,#ffffff 70%)">
+          <h3 style="margin:0 0 10px;color:#113960;font-size:1.18rem">Comparativa r&aacute;pida EPR vs XLPE para minera</h3>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:.92rem;min-width:520px">
+              <thead>
+                <tr style="background:#0F4C81;color:#fff">
+                  <th style="padding:10px 12px;text-align:left;border-radius:8px 0 0 0">Criterio</th>
+                  <th style="padding:10px 12px;text-align:center">EPR (m&oacute;viles)</th>
+                  <th style="padding:10px 12px;text-align:center;border-radius:0 8px 0 0">XLPE (fijos)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #dbe6f4"><td style="padding:9px 12px;font-weight:600">Flexibilidad</td><td style="padding:9px 12px;text-align:center">Superior</td><td style="padding:9px 12px;text-align:center">Menor</td></tr>
+                <tr style="border-bottom:1px solid #dbe6f4;background:#f9fbff"><td style="padding:9px 12px;font-weight:600">Trailing / equipos m&oacute;viles</td><td style="padding:9px 12px;text-align:center">Ideal</td><td style="padding:9px 12px;text-align:center">No recomendado</td></tr>
+                <tr style="border-bottom:1px solid #dbe6f4"><td style="padding:9px 12px;font-weight:600">Subestaci&oacute;n / alimentador fijo</td><td style="padding:9px 12px;text-align:center">Compatible</td><td style="padding:9px 12px;text-align:center">Ideal</td></tr>
+                <tr style="border-bottom:1px solid #dbe6f4;background:#f9fbff"><td style="padding:9px 12px;font-weight:600">Humedad severa</td><td style="padding:9px 12px;text-align:center">Mejor</td><td style="padding:9px 12px;text-align:center">Bueno</td></tr>
+                <tr><td style="padding:9px 12px;font-weight:600">Rigidez diel&eacute;ctrica</td><td style="padding:9px 12px;text-align:center">Buena</td><td style="padding:9px 12px;text-align:center">Superior</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin:12px 0 0;font-size:.9rem;color:#4B647F">Ambos aislamientos operan a 90 &deg;C en r&eacute;gimen normal y 250 &deg;C en cortocircuito. La decisi&oacute;n se basa en el tipo de instalaci&oacute;n, no en la tensi&oacute;n.</p>
+        </div>
+
+        <div style="margin-top:22px;padding:18px 20px;border-left:4px solid #0F4C81;background:rgba(15,76,129,.06);border-radius:0 12px 12px 0">
+          <p style="margin:0;color:#10233D;line-height:1.55"><strong>Lo que aporta VMS Energy:</strong> No solo suministramos el cable correcto para cada frente. Especificamos, suministramos, instalamos y probamos como parte del alcance EPC del proyecto minero &mdash; con una sola responsabilidad t&eacute;cnica y log&iacute;stica.</p>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px">
+            <a class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=sector-mineria-cable#ctaForm">Cotizar suministro para mi mina</a>
+            <a class="btn btn--ghost" href="lp-cable-de-potencia-kei.html">Ver cat&aacute;logo de cable</a>
+            <a class="btn btn--ghost" href="glosario-cable-electrico.html">Glosario t&eacute;cnico</a>
+          </div>
         </div>
       </div>
     </section>
@@ -516,11 +760,90 @@
           </div>
           <div class="cta">
             <a class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=sector-mineria#ctaForm">Quiero diagn&oacute;stico</a>
-            <a class="btn btn--ghost" href="contacto.html">Hablar con un especialista</a>
+            <a class="btn btn--ghost" href="contactar.html">Hablar con un especialista</a>
           </div>
         </div>
       </div>
     </section>
+
+  <!-- ===== PROYECTOS DE REFERENCIA ===== -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle" style="background:#f5f8fc">
+    <div class="container">
+      <h2 class="section__title" id="refTitle">Clientes en la industria minera y minerales</h2>
+      <p class="section__intro">Proyectos ejecutados en minería metálica, no metálica y minerales industriales con infraestructura eléctrica crítica.</p>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ref-card__cliente">Era Minerals</div>
+          <div class="ref-card__lugar">📍 Jalisco, México</div>
+          <div class="ref-card__desc">Diseño, suministro, construcción, instalación y puesta en marcha de tablero tipo CCM (BT) para industria minera. Ingeniería de detalle, fabricación y pruebas FAT en planta.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card__cliente">Operación Minera</div>
+          <div class="ref-card__lugar">📍 Durango, México</div>
+          <div class="ref-card__desc">Suministro y comisionamiento de variador de frecuencia Altivar 980 Schneider Electric de 700 HP para desplazar columna de agua 900 m en mina de cielo cerrado. Integración con sistema de bombeo profundo.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card__cliente">IMERYS</div>
+          <div class="ref-card__lugar">📍 México</div>
+          <div class="ref-card__desc">Servicios eléctricos EPC para planta de minerales industriales. Mantenimiento a sistemas de distribución eléctrica y variadores de proceso bajo estándares internacionales de calidad.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card__cliente">Cemento Cruz Azul</div>
+          <div class="ref-card__lugar">📍 México</div>
+          <div class="ref-card__desc">Proyectos de ingeniería eléctrica para proceso de extracción y molienda. Suministro de cable de potencia KEI y servicios de mantenimiento predictivo a equipos críticos.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card__cliente">CEMEX</div>
+          <div class="ref-card__lugar">📍 México</div>
+          <div class="ref-card__desc">Soluciones eléctricas para operaciones de cantera y planta cementera. Integración de variadores de velocidad para molinos y bandas transportadoras con automatización PLC.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-card__cliente">Holcim México</div>
+          <div class="ref-card__lugar">📍 México</div>
+          <div class="ref-card__desc">Servicios de mantenimiento eléctrico especializado y suministro técnico de equipos para operaciones de extracción y proceso de materiales. Atención bajo protocolos de seguridad ISO 45001.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <h2 class="section__title" id="faqTitle">Preguntas frecuentes — Sector minero</h2>
+      <p class="section__intro">Respuestas técnicas directas a las dudas más comunes del equipo de ingeniería y operaciones.</p>
+      <div class="faq-block">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Pueden trabajar en minas a cielo abierto y en socavón?</button>
+          <div class="faq-a">Sí. Hemos ejecutado proyectos en ambos tipos de operación. En minas subterráneas aplicamos clasificación de áreas eléctricas (NFPA 70 / NOM-001-SEDE) para zonas con atmósferas potencialmente explosivas. En cielo abierto nos especializamos en alimentadores de larga distancia, bombas de achique y variadores para fajas transportadoras.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Qué variadores utilizan para molinos SAG y bombas de pulpa?</button>
+          <div class="faq-a">Trabajamos principalmente con variadores TRIOL (distribuidor autorizado en México con inventario local) para alta potencia en molinos SAG, molinos de bolas y bombas de pulpa. Para media tensión (2.4–6.6 kV) usamos las series AT y AV de TRIOL. Para baja tensión: ABB ACS880, Schneider Altivar 980 y Siemens SINAMICS según la aplicación.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Suministran cable especializado para aplicaciones mineras?</button>
+          <div class="faq-a">Sí. Somos distribuidores exclusivos de KEI Wires & Cables en México con inventario disponible. Para minería suministramos: cable trailing (equipo móvil), cable de potencia MT para alimentadores principales y cable de control multipolar para instrumentación. Cada familia tiene la especificación correcta para su aplicación.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Qué tan rápido pueden llegar a un sitio remoto para emergencias?</button>
+          <div class="faq-a">Cuadrillas especializadas con capacidad de despliegue en cualquier estado de México en menos de 48 horas. Hemos ejecutado proyectos en Durango, Jalisco, Zacatecas, Chihuahua y Sonora. Para contratos de mantenimiento con presencia permanente, dimensionamos el equipo en sitio según los requerimientos de la operación.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Cómo manejan la coordinación de protecciones en sistemas eléctricos de mina?</button>
+          <div class="faq-a">Realizamos el estudio como parte de la ingeniería de detalle: análisis de cortocircuito, curvas tiempo-corriente, ajuste de relés (sobrecorriente, diferencial, tierra restringida) y verificación de selectividad. Utilizamos software SKM PowerTools y ETAP para los estudios eléctricos.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Realizan estudios eléctricos previos al proyecto?</button>
+          <div class="faq-a">Sí. Ofrecemos estudios completos: flujo de carga y caída de tensión, análisis de cortocircuito (ANSI/IEC), coordinación de protecciones, análisis de arco eléctrico (IEEE 1584) y calidad de energía. Estos estudios definen el dimensionamiento correcto de todos los equipos del sistema.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Qué certificaciones avalan su trabajo en proyectos mineros?</button>
+          <div class="faq-a">VMS Energy cuenta con Sistema de Gestión Integral certificado: ISO 9001 (calidad), ISO 14001 (medio ambiente), ISO 45001 (seguridad y salud), ISO 37001 (anticorrupción) e ISO 50001 (energía). Estas certificaciones son requisito en contratos con mineras de capital internacional como IMERYS, Cemex, Holcim y Cruz Azul.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </main>
 
   <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
@@ -573,6 +896,8 @@
         <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
         <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
         <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
+        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
+
         <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
       </ul>
       <div style="margin-top:14px">
@@ -580,6 +905,7 @@
         <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
           <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
           <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
+            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
         </ul>
       </div>
     </div>
@@ -606,8 +932,13 @@
         <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
         <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
         <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
+        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
         <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
         <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+        <li><a href="lp-subestaciones-electricas.html#inicio" style="color:#cbd5e1;text-decoration:none">Subestaciones El&eacute;ctricas MT/AT</a></li>
+        <li><a href="lp-estudios-electricos-industriales.html#inicio" style="color:#cbd5e1;text-decoration:none">Estudios El&eacute;ctricos</a></li>
+        <li><a href="lp-turbogeneradores-woodward.html#inicio" style="color:#cbd5e1;text-decoration:none">Turbogeneradores Woodward</a></li>
+        <li><a href="lp-mantenimiento-predictivo.html#inicio" style="color:#cbd5e1;text-decoration:none">Mantenimiento Predictivo</a></li>
       </ul>
     </div>
   </div>
@@ -615,6 +946,11 @@
 
 
   <script>
+    (function(){
+      var toggle = document.getElementById('menuToggle'); var list = document.getElementById('menuList');
+      if(toggle && list){ toggle.addEventListener('click', function(){ var open=list.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', open ? 'true':'false'); }); }
+      document.addEventListener('click', function(e){ if(!toggle || !list || window.innerWidth>680) return; if(!list.contains(e.target) && !toggle.contains(e.target)){ list.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); } });
+    })();
     (function(){
       var links = document.querySelectorAll('[data-preserve-query]');
       if(!links.length) return;
@@ -632,5 +968,23 @@
       });
     })();
   </script>
+
+  // FAQ accordion
+  (function(){
+    document.querySelectorAll('.faq-q').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-q').forEach(function(b){
+          b.setAttribute('aria-expanded','false');
+          b.nextElementSibling.classList.remove('is-open');
+        });
+        if(!expanded){
+          btn.setAttribute('aria-expanded','true');
+          btn.nextElementSibling.classList.add('is-open');
+        }
+      });
+    });
+  })();
+
 </body>
 </html>

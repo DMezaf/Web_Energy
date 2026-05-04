@@ -1,0 +1,972 @@
+﻿<!doctype html>
+<html lang="es-MX" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mantenimiento de Transformadores en Operaci&oacute;n: Diagn&oacute;stico Predictivo | VMS Energy</title>
+  <meta name="description" content="Gu&iacute;a de mantenimiento predictivo para transformadores industriales: an&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, acidez, DGA), termograf&iacute;a IR, Megger, tangente delta, criterios de rehabilitaci&oacute;n vs. reemplazo y programa anual." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Mantenimiento Predictivo de Transformadores: Aceite, Termograf&iacute;a y Megger | VMS Energy" />
+  <meta property="og:description" content="C&oacute;mo extender la vida &uacute;til de transformadores industriales con diagn&oacute;stico predictivo: an&aacute;lisis DGA, rigidez diel&eacute;ctrica, termograf&iacute;a infrarroja y pruebas Megger conforme IEC 60422 e IEEE C57.104." />
+  <meta property="og:url" content="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp" />
+  <meta property="article:published_time" content="2026-05-15" />
+  <meta property="article:modified_time" content="2026-05-15" />
+  <meta property="article:section" content="Mantenimiento el&eacute;ctrico" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mantenimiento Predictivo de Transformadores | VMS Energy" />
+  <meta name="twitter:description" content="An&aacute;lisis de aceite diel&eacute;ctrico, termograf&iacute;a IR y Megger para extender la vida &uacute;til de transformadores industriales." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp" />
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.png');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .btn--primary{background:var(--cobalt);color:#fff}
+    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
+    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
+    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#dc2626;background:linear-gradient(135deg,rgba(220,38,38,.07),rgba(248,113,113,.05));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:540px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.93rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table td.ok{color:#166534;font-weight:700}
+    .article-table td.warn{color:#92400e;font-weight:700}
+    .article-table td.bad{color:#991b1b;font-weight:700}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .formula-box{margin:22px 0;padding:20px 22px;border-radius:16px;background:#eef5ff;border:1px solid rgba(15,76,129,.2);font-family:monospace}
+    .formula-box p{margin:0 0 8px;color:var(--concept-primary);font-size:1.02rem}
+    .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
+    .life-bar{margin:22px 0;border:1px solid rgba(23,44,81,.12);border-radius:16px;overflow:hidden;background:#f9fbfe}
+    .life-bar__header{padding:12px 16px;background:#12365f;color:#fff;font-weight:700;font-size:.95rem}
+    .life-bar__body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .life-bar__stage{padding:14px 16px;border-right:1px solid rgba(23,44,81,.1)}
+    .life-bar__stage:last-child{border-right:0}
+    .life-bar__label{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+    .life-bar__label--green{color:#166534}
+    .life-bar__label--yellow{color:#92400e}
+    .life-bar__label--red{color:#991b1b}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}.life-bar__body{grid-template-columns:1fr}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.life-bar__stage{border-right:0;border-bottom:1px solid rgba(23,44,81,.1)}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento de transformadores en operaci&oacute;n","item":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html"}]},{"@type":"BlogPosting","headline":"Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo y extensi&oacute;n de vida &uacute;til","description":"C&oacute;mo extender la vida &uacute;til de transformadores industriales con mantenimiento predictivo: an&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, acidez, DGA), termograf&iacute;a infrarroja, pruebas Megger y criterios de rehabilitaci&oacute;n vs. reemplazo conforme IEC 60422 e IEEE C57.104.","image":"https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-05-15","dateModified":"2026-05-15","mainEntityOfPage":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html","articleSection":"Mantenimiento el&eacute;ctrico","keywords":"mantenimiento transformadores, an&aacute;lisis aceite diel&eacute;ctrico, DGA transformadores, rigidez diel&eacute;ctrica, termograf&iacute;a transformadores, Megger, &iacute;ndice polarizaci&oacute;n, tangente delta, rehabilitaci&oacute;n transformadores, IEC 60422, IEEE C57.104, mantenimiento predictivo el&eacute;ctrico M&eacute;xico"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Con qu&eacute; frecuencia se debe analizar el aceite de un transformador?","acceptedAnswer":{"@type":"Answer","text":"La frecuencia depende de la criticidad del equipo y su edad. Como regla general conforme a IEC 60422: transformadores nuevos en los primeros dos a&ntilde;os de operaci&oacute;n, una vez al a&ntilde;o. Transformadores en servicio continuo sin historial de problemas: cada 12&ndash;24 meses. Transformadores con historial de anomal&iacute;as, carga elevada o ambiente agresivo: cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave: frecuencia mensual hasta estabilizar o identificar la falla. En proyectos EPC, VMS Energy recomienda establecer el primer an&aacute;lisis dentro de los 90 d&iacute;as de operaci&oacute;n como valor basal."}},{"@type":"Question","name":"&iquest;Qu&eacute; diferencia hay entre la prueba Megger y el &iacute;ndice de polarizaci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"La prueba Megger mide la resistencia de aislamiento (en M&Omega; o G&Omega;) aplicando una tensi&oacute;n DC al aislamiento durante 60 segundos. El &iacute;ndice de polarizaci&oacute;n (PI) es la raz&oacute;n entre la lectura a 10 minutos y la lectura a 1 minuto (R10/R1). El PI elimina el efecto de la temperatura y da una imagen del estado del aislamiento: PI &lt; 1.0 indica aislamiento degradado o h&uacute;medo; PI 1.0&ndash;2.0 es marginal; PI &gt; 2.0 es aceptable; PI &gt; 4.0 indica aislamiento en excelente estado. La prueba Megger puntual puede tener un valor alto a&uacute;n con aislamiento da&ntilde;ado si la temperatura es baja; por eso el PI es m&aacute;s confiable."}},{"@type":"Question","name":"&iquest;Cu&aacute;ndo conviene rehabilitar un transformador en lugar de reemplazarlo?","acceptedAnswer":{"@type":"Answer","text":"La rehabilitaci&oacute;n es econ&oacute;micamente justificable cuando el costo del proceso no supera el 60&ndash;70% del precio de un equipo nuevo equivalente, y cuando el diagn&oacute;stico indica que la causa de degradaci&oacute;n es el aceite (no el papel). Si el papel aislante tiene grado de polimerizaci&oacute;n (DP) menor a 200 (que corresponde a &lt;50% de vida &uacute;til restante), la rehabilitaci&oacute;n del aceite no solucionar&aacute; el problema de fondo. El costo de un fallo cat&aacute;strofico no planificado &mdash;paro de producci&oacute;n, da&ntilde;os colaterales, tiempo de reemplazo de emergencia&mdash; tambi&eacute;n debe entrar en el c&aacute;lculo. VMS Energy recomienda el an&aacute;lisis de Costo Total de Propiedad (TCO) como marco de decisi&oacute;n."}},{"@type":"Question","name":"&iquest;Qu&eacute; tan confiable es la termograf&iacute;a para detectar problemas en transformadores?","acceptedAnswer":{"@type":"Answer","text":"La termograf&iacute;a infrarroja es altamente confiable para detectar problemas en elementos externos accesibles: borneras, conexiones de AT y BT, pasatapas (bushings), cambiador de taps, radiadores y conexiones de tierra. Es especialmente &uacute;til porque detecta puntos calientes antes de que produzcan una falla visible. Sin embargo, no puede detectar fallas internas en el n&uacute;cleo o devanados que a&uacute;n no han producido calor suficiente para manifestarse en la superficie. Por eso la termograf&iacute;a es complementaria &mdash;no sustituta&mdash; del DGA y las pruebas el&eacute;ctricas. Combinadas, las tres t&eacute;cnicas cubren la mayor parte del espectro de fallas potenciales."}},{"@type":"Question","name":"&iquest;Qu&eacute; es el grado de polimerizaci&oacute;n (DP) del papel y por qu&eacute; importa?","acceptedAnswer":{"@type":"Answer","text":"El grado de polimerizaci&oacute;n (DP) es el n&uacute;mero promedio de unidades de glucosa en las cadenas de celulosa del papel aislante. El papel nuevo tiene DP entre 1,000 y 1,200. Con el envejecimiento t&eacute;rmico e h&iacute;drico, las cadenas se rompen y el DP disminuye irreversiblemente. A DP = 200 el papel ha perdido aproximadamente el 50% de su resistencia mec&aacute;nica y se considera en estado criti&shy;co; a DP &lt; 150 existe riesgo inminente de ruptura bajo esfuerzos de cortocircuito. El DP no puede recuperarse con ninguna t&eacute;cnica de rehabilitaci&oacute;n; por eso cuando el papel est&aacute; degradado, el &uacute;nico camino real es el reemplazo de la unidad."}},{"@type":"Question","name":"&iquest;Qu&eacute; nivel de rigidez diel&eacute;ctrica del aceite es inaceptable?","acceptedAnswer":{"@type":"Answer","text":"Seg&uacute;n IEC 60422, el valor m&iacute;nimo de rigidez diel&eacute;ctrica (BDV) para aceite en servicio depende del nivel de tensi&oacute;n del transformador. Para equipos de MT (hasta 36 kV): m&iacute;nimo 30 kV/mm para continuar operando, con 40 kV/mm como valor objetivo deseable. Para equipos de AT (72.5 kV y arriba): m&iacute;nimo 50 kV/mm. Si el aceite est&aacute; por debajo de estos l&iacute;mites, debe filtrarse, secarse o reemplazarse antes de que el transformador contin&uacute;e en operaci&oacute;n. Un evento de rigidez &lt; 20 kV/mm es una emergencia que requiere acci&oacute;n inmediata."}},{"@type":"Question","name":"&iquest;Qu&eacute; incluye un programa completo de mantenimiento predictivo para transformadores?","acceptedAnswer":{"@type":"Answer","text":"Un programa integral debe incluir tres niveles: (1) Monitoreo continuo: temperatura del aceite y devanados, nivel de aceite, presi&oacute;n del gas en el conservador y alarma del rel&eacute; Buchholz. (2) Inspecci&oacute;n peri&oacute;dica (semestral/anual): termograf&iacute;a infrarroja en partes externas, prueba Megger e &iacute;ndice de polarizaci&oacute;n, an&aacute;lisis f&iacute;sicoqu&iacute;mico del aceite (rigidez, humedad, acidez, color, tensi&oacute;n interfacial), y an&aacute;lisis DGA. (3) Diagn&oacute;stico profundo (cada 3&ndash;5 a&ntilde;os o ante anomal&iacute;as): tangente delta, respuesta en frecuencia (FRA) para detectar deformaci&oacute;n de devanados, y grado de polimerizaci&oacute;n del papel (DP) por muestreo."}}]}]}</script>
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
+</head>
+<body>
+  <header aria-label="Barra de navegaci&oacute;n">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
+              <div class="submenu__group">
+                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
+                <ul class="submenu__list">
+                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+
+                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+
+
+                  <li><a href="proyectos-vms.html">Proyectos</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+                    <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
+              <div class="submenu__group">
+                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
+                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
+                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
+                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
+                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
+                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
+                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
+                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Por Sector</span>
+                <ul class="submenu__list">
+                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
+                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
+                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
+              <div class="submenu__group">
+                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
+                <ul class="submenu__list">
+                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
+                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
+                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
+                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
+              <div class="submenu__group">
+              <span class="submenu__title">Servicios Especializados</span>
+              <ul class="submenu__list">
+                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
+                <ul class="submenu__list">
+                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
+                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
+              <div class="submenu__group">
+                <ul class="submenu__list">
+                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
+                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
+                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="cta-header" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" style="--article-image:url('assets/img/Especialidades_mantenimiento.png')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy &middot; Blog &middot; Mantenimiento el&eacute;ctrico</span>
+        <h1 id="hero-title">Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo y extensi&oacute;n de vida &uacute;til</h1>
+        <p>C&oacute;mo leer el estado real de un transformador mediante aceite, termograf&iacute;a y pruebas el&eacute;ctricas &mdash;antes de que falle.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=diagnostico-transformadores">Solicitar diagn&oacute;stico</a>
+        </div>
+        <div class="hero__meta">
+          <span>&#128197; 15 mayo 2026</span>
+          <span>&#9201; 14 min de lectura</span>
+          <span>&#128218; IEC 60422 &middot; IEEE C57.104 &middot; ASTM D974</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENIDO ═══════════════ -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── ARTÍCULO ── -->
+        <article class="blog-article" aria-label="Art&iacute;culo: Mantenimiento predictivo de transformadores">
+
+          <!-- Tabla de contenidos -->
+          <nav class="article-toc" aria-label="Tabla de contenidos">
+            <h3>Contenido del art&iacute;culo</h3>
+            <ol>
+              <li><a href="#estrategias">Estrategias de mantenimiento: correctivo, preventivo y predictivo</a></li>
+              <li><a href="#aceite">An&aacute;lisis de aceite diel&eacute;ctrico &mdash; las cuatro pruebas clave</a></li>
+              <li><a href="#dga-campo">DGA en campo: interpretaci&oacute;n y tendencias</a></li>
+              <li><a href="#termografia">Termograf&iacute;a infrarroja en transformadores</a></li>
+              <li><a href="#megger">Pruebas Megger e &iacute;ndice de polarizaci&oacute;n</a></li>
+              <li><a href="#papel">El papel aislante: el l&iacute;mite que el aceite no puede superar</a></li>
+              <li><a href="#rehab">Rehabilitaci&oacute;n vs. reemplazo: criterios de decisi&oacute;n</a></li>
+              <li><a href="#programa">Programa anual de mantenimiento predictivo</a></li>
+              <li><a href="#caso">Caso de estudio: transformador 1&thinsp;000 kVA con aceite severamente degradado</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <!-- Intro -->
+          <p class="article-lead">Un transformador en servicio continuo es una m&aacute;quina que no puede detenerse f&aacute;cilmente para inspecci&oacute;n. Lo que ocurre dentro de su tanque &mdash;en el aceite, el papel, el n&uacute;cleo y los devanados&mdash; solo es accesible mediante t&eacute;cnicas de diagn&oacute;stico no invasivo. La diferencia entre un transformador que llega a sus 30 a&ntilde;os de vida &uacute;til y uno que falla catastr&oacute;ficamente a los 12 es, en la mayor&iacute;a de los casos, la existencia &mdash;o la ausencia&mdash; de un programa de mantenimiento predictivo.</p>
+
+          <p>Este art&iacute;culo documenta las t&eacute;cnicas de diagn&oacute;stico que VMS Energy aplica en sus contratos de mantenimiento, sus criterios de interpretaci&oacute;n y el marco de decisi&oacute;n para determinar cu&aacute;ndo rehabilitar y cu&aacute;ndo reemplazar.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Estrategias -->
+          <h2 id="estrategias">1. Estrategias de mantenimiento: correctivo, preventivo y predictivo</h2>
+
+          <div class="article-grid--3 article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Correctivo</span>
+              <h3>Reparar despu&eacute;s de la falla</h3>
+              <p>Intervenci&oacute;n solo cuando el equipo falla. M&iacute;nimo costo inicial, m&aacute;ximo costo total: paro no programado, da&ntilde;os colaterales, tiempo de reemplazo de emergencia.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Preventivo</span>
+              <h3>Intervenci&oacute;n por calendario</h3>
+              <p>Cambio de aceite, limpieza y ajuste seg&uacute;n intervalos fijos. M&aacute;s ordenado que el correctivo, pero puede generar intervenciones innecesarias o pasar por alto problemas entre ciclos.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag" style="color:#166534">Predictivo</span>
+              <h3>Actuar seg&uacute;n condici&oacute;n real</h3>
+              <p>Monitoreo continuo del estado del equipo mediante DGA, termograf&iacute;a, Megger y aceite. Intervenir solo cuando los datos lo indican. Mayor vida &uacute;til, menor costo total.</p>
+            </div>
+          </div>
+
+          <p>El enfoque predictivo no elimina el preventivo: la revisi&oacute;n visual peri&oacute;dica, la verificaci&oacute;n de niveles y la limpieza exterior siguen siendo necesarias. Lo que a&ntilde;ade el predictivo es la capacidad de ver el estado real del aislamiento y detectar fallas incipientes antes de que escalen.</p>
+
+          <div class="article-callout">
+            <strong>Referencia estad&iacute;stica:</strong> Seg&uacute;n estudios de confiabilidad en transformadores industriales (CIGRE WG A2.37), el 74% de las fallas catastr&oacute;ficas en transformadores de distribuci&oacute;n hab&iacute;an generado se&ntilde;ales detectables en el DGA con al menos 6 meses de anticipaci&oacute;n. El programa predictivo convierte esas se&ntilde;ales en tiempo para actuar.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Análisis de aceite -->
+          <h2 id="aceite">2. An&aacute;lisis de aceite diel&eacute;ctrico &mdash; las cuatro pruebas clave</h2>
+
+          <p>El aceite mineral diel&eacute;ctrico cumple tres funciones simult&aacute;neas: aislar (soporte el&eacute;ctrico), refrigerar (disipaci&oacute;n de calor) e impregnar el papel (protecci&oacute;n mec&aacute;nica). Con el tiempo y la operaci&oacute;n, sus propiedades se degradan. Cuatro par&aacute;metros son los m&aacute;s informativos:</p>
+
+          <h3>2.1 Rigidez diel&eacute;ctrica (BDV) &mdash; IEC 60156</h3>
+          <p>La tensi&oacute;n de ruptura del aceite (Breakdown Voltage) mide la tensi&oacute;n m&iacute;nima a la que el aceite falla como aislante en un electrodo normalizado. La humedad y las part&iacute;culas s&oacute;lidas en suspensi&oacute;n son los principales factores que la reducen. Se mide con un equipo de rigidez diel&eacute;ctrica (cup test) aplicando tensi&oacute;n creciente hasta la ruptura, promediando 5 o 6 mediciones en la misma muestra.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table" aria-label="Valores de rigidez diel&eacute;ctrica por nivel de tensi&oacute;n">
+              <thead>
+                <tr>
+                  <th>Rigidez BDV (kV/mm)</th>
+                  <th>Hasta 36 kV (MT)</th>
+                  <th>72.5 kV &ndash; 145 kV (AT)</th>
+                  <th>Acci&oacute;n</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ok">&ge; 50</td>
+                  <td>Excelente</td>
+                  <td>Excelente</td>
+                  <td>Continuar operaci&oacute;n normal</td>
+                </tr>
+                <tr>
+                  <td>40 &ndash; 49</td>
+                  <td>Bueno</td>
+                  <td>Aceptable</td>
+                  <td>Monitoreo m&aacute;s frecuente</td>
+                </tr>
+                <tr>
+                  <td class="warn">30 &ndash; 39</td>
+                  <td>L&iacute;mite de alerta</td>
+                  <td class="bad">Inaceptable</td>
+                  <td>MT: programar regeneraci&oacute;n. AT: acci&oacute;n inmediata</td>
+                </tr>
+                <tr>
+                  <td class="bad">&lt; 30</td>
+                  <td class="bad">Inaceptable</td>
+                  <td class="bad">Emergencia</td>
+                  <td>Retirar de servicio. Sustituir o regenerar aceite antes de re-energizar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>2.2 Contenido de humedad (ppm H&#8322;O) &mdash; IEC 60814</h3>
+          <p>El agua en el aceite es particularmente da&ntilde;ina porque no permanece uniformemente distribuida: migra hacia el papel aislante (que tiene mayor afinidad por el agua) y puede concentrarse en la interfaz aceite-papel hasta alcanzar niveles cr&iacute;ticos locales. La humedad del aceite se mide por titulaci&oacute;n Karl Fischer y se expresa en partes por mill&oacute;n (ppm).</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Humedad en aceite (ppm)</th><th>Evaluaci&oacute;n</th><th>Acci&oacute;n recomendada</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="ok">&lt; 10</td><td>Aceite seco &mdash; &oacute;ptimo</td><td>Continuar operaci&oacute;n normal</td></tr>
+                <tr><td>10 &ndash; 20</td><td>Ligeramente h&uacute;medo</td><td>Vigilar tendencia</td></tr>
+                <tr><td class="warn">20 &ndash; 35</td><td>H&uacute;medo &mdash; requiere atenci&oacute;n</td><td>Programar secado (filt. al vac&iacute;o)</td></tr>
+                <tr><td class="bad">&gt; 35</td><td>Saturado &mdash; riesgo alto</td><td>Acci&oacute;n inmediata. Riesgo de descargas parciales</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>2.3 Acidez (n&uacute;mero de neutralizaci&oacute;n, mgKOH/g) &mdash; ASTM D974</h3>
+          <p>Con el envejecimiento, el aceite mineral se oxida y genera &aacute;cidos org&aacute;nicos que atacan qu&iacute;micamente el papel aislante y los metales internos. La acidez se cuantifica por el n&uacute;mero de neutralizaci&oacute;n (NN): la cantidad de hidr&oacute;xido de potasio (en mg) necesaria para neutralizar los &aacute;cidos en 1 gramo de aceite.</p>
+          <ul>
+            <li><strong>NN &lt; 0.1 mgKOH/g:</strong> Aceite nuevo o en excelente estado.</li>
+            <li><strong>NN 0.1 &ndash; 0.2 mgKOH/g:</strong> Envejecimiento normal. Continuar monitoreo.</li>
+            <li><strong>NN 0.2 &ndash; 0.4 mgKOH/g:</strong> Alerta. Programa de regeneraci&oacute;n en pr&oacute;xima parada planificada.</li>
+            <li><strong>NN &gt; 0.4 mgKOH/g:</strong> Aceite agotado. Regeneraci&oacute;n o cambio necesario antes de que el proceso de deterioro sea irreversible en el papel.</li>
+          </ul>
+
+          <h3>2.4 Tensi&oacute;n interfacial (mN/m) &mdash; ASTM D971</h3>
+          <p>La tensi&oacute;n interfacial mide la fuerza en la superficie de contacto aceite-agua. En aceite nuevo es alta (~45 mN/m); los productos de oxidaci&oacute;n y el envejecimiento la reducen. Un valor inferior a 22 mN/m es se&ntilde;al de que el aceite est&aacute; altamente oxidado, incluso si la acidez a&uacute;n parece moderada. Es un indicador de envejecimiento &uacute;til cuando se usa junto con el NN.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. DGA en campo -->
+          <h2 id="dga-campo">3. DGA en campo: interpretaci&oacute;n de tendencias</h2>
+
+          <p>El an&aacute;lisis de gases disueltos (DGA) es la herramienta diagn&oacute;stica de mayor valor predictivo. En el art&iacute;culo sobre pruebas FAT/SAT (<a href="blog-pruebas-aceptacion-transformadores.html">ver Blog #2</a>) describimos los gases y sus or&iacute;genes. En el contexto del mantenimiento en operaci&oacute;n, el elemento clave no es el nivel absoluto de cada gas sino <strong>la tasa de generaci&oacute;n</strong>: cu&aacute;nto creci&oacute; desde la &uacute;ltima muestra.</p>
+
+          <div class="article-callout">
+            <strong>Regla de tendencia (IEEE C57.104):</strong> Una tasa de incremento mayor al 10% mensual en cualquier gas individual, o mayor al 30% mensual en el Total de Gases Combustibles (TDCG), indica una falla activa en progresi&oacute;n. La acci&oacute;n recomendada es aumentar la frecuencia de muestreo a mensual y evaluar la retirada del servicio.
+          </div>
+
+          <h3>Cuatro condiciones TDCG (IEEE C57.104)</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Condici&oacute;n</th><th>TDCG (ppm)</th><th>Significado</th><th>Frecuencia de muestreo</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="ok">1</td><td class="ok">&lt; 720</td><td>Operaci&oacute;n normal</td><td>Anual</td></tr>
+                <tr><td>2</td><td>720 &ndash; 1,920</td><td>Posible anomal&iacute;a</td><td>Semestral</td></tr>
+                <tr><td class="warn">3</td><td>1,920 &ndash; 4,630</td><td>Anomal&iacute;a en progreso</td><td>Trimestral o mensual</td></tr>
+                <tr><td class="bad">4</td><td class="bad">&gt; 4,630</td><td>Falla activa inminente</td><td>Retirar de servicio. Plan de acci&oacute;n inmediato.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Acetileno: la excepci&oacute;n a la regla de condiciones.</strong> Cualquier concentraci&oacute;n de acetileno (C&#8322;H&#8322;) por encima de 1 ppm activa alerta de Condici&oacute;n 4 independientemente del TDCG total, porque es el &uacute;nico gas que solo puede generarse por arco el&eacute;ctrico en el aceite. No existe nivel &ldquo;seguro&rdquo; de acetileno en un transformador sin historial previo de arco conocido.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Termografía -->
+          <h2 id="termografia">4. Termograf&iacute;a infrarroja en transformadores</h2>
+
+          <p>La inspecci&oacute;n termogr&aacute;fica es la &uacute;nica t&eacute;cnica de diagn&oacute;stico que puede realizarse mientras el transformador est&aacute; en plena operaci&oacute;n, sin necesidad de desconectarlo. Utiliza una c&aacute;mara infrarroja para mapear la distribuci&oacute;n de temperatura en la superficie del equipo e identificar puntos calientes anormales.</p>
+
+          <h3>Zonas cr&iacute;ticas de inspecci&oacute;n</h3>
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Borneras y conexiones AT/BT</span>
+              <h3>Alta prioridad</h3>
+              <p>Puntos calientes en borneras indican conexiones flojas u oxidadas. Una diferencia de temperatura mayor a 10&deg;C respecto a la fase sim&eacute;trica es se&ntilde;al de alerta. Mayor a 30&deg;C es acci&oacute;n inmediata.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Pasatapas (Bushings)</span>
+              <h3>Alta prioridad</h3>
+              <p>Los bushings con aislamiento degradado generan calor por p&eacute;rdidas diel&eacute;ctricas. Un bushing que exhibe temperatura significativamente mayor a sus sim&eacute;tricos (sin diferencia de carga) debe ser reemplazado.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Cambiador de taps (OLTC)</span>
+              <h3>Media prioridad</h3>
+              <p>Un selector de taps con contactos desgastados genera calor localizado. El OLTC debe inspeccionarse con carga en la posici&oacute;n de trabajo habitual para que el defecto sea visible.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Radiadores y ventiladores</span>
+              <h3>Media prioridad</h3>
+              <p>Radiadores obstruidos por suciedad o corrosion muestran distribuciones de temperatura no uniformes. Ventiladores con aspas da&ntilde;adas o motores degradados se manifiestan en carga t&eacute;rmica asim&eacute;trica del grupo de enfriamiento.</p>
+            </div>
+          </div>
+
+          <h3>Condiciones para una inspecci&oacute;n v&aacute;lida</h3>
+          <ul>
+            <li><strong>Carga m&iacute;nima:</strong> El transformador debe estar operando a un m&iacute;nimo del 40% de su carga nominal para que los puntos calientes sean termogr&aacute;ficamente detectables.</li>
+            <li><strong>Hora del d&iacute;a:</strong> Evitar pleno sol directo sobre el equipo; el calentamiento solar enmascara variaciones de temperatura. Preferir inspecci&oacute;n en d&iacute;as nublados o en horario vespertino/nocturno.</li>
+            <li><strong>Emisividad:</strong> El tanque metAlico pintado tiene emisividad alta (~0.9). Los conductores de cobre o aluminio sin oxidaci&oacute;n tienen emisividad baja (~0.05); requieren correci&oacute;n de par&aacute;metro en la c&aacute;mara o comparaci&oacute;n con referencia de temperatura de contacto.</li>
+            <li><strong>Distancia y &aacute;ngulo:</strong> Seguir protocolo NFPA 70B: &aacute;ngulo m&aacute;ximo de 45&deg; respecto a la superficie inspeccionada para minimizar reflejos.</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Megger -->
+          <h2 id="megger">5. Pruebas Megger e &iacute;ndice de polarizaci&oacute;n (PI)</h2>
+
+          <p>La prueba Megger mide la resistencia de aislamiento del sistema diel&eacute;ctrico del transformador aplicando una tensi&oacute;n DC y midiendo la corriente de fuga resultante. Es r&aacute;pida, econ&oacute;mica y puede realizarse en campo con el equipo desenergizado. Sin embargo, tiene una limitaci&oacute;n importante: el valor absoluto de resistencia (en M&Omega;) depende fuertemente de la temperatura; dos lecturas tomadas a diferentes temperaturas no son comparables directamente.</p>
+
+          <h3>El &iacute;ndice de polarizaci&oacute;n (PI) supera esta limitaci&oacute;n</h3>
+          <p>El PI compara la resistencia de aislamiento medida a los 10 minutos con la medida a 1 minuto. En un aislamiento sano, la resistencia contin&uacute;a aumentando con el tiempo (el fen&oacute;meno de polarizaci&oacute;n absorbe m&aacute;s corriente al principio). En un aislamiento degradado o h&uacute;medo, la corriente de fuga domina y la raz&oacute;n se aproxima a 1.0.</p>
+
+          <div class="formula-box">
+            <p>PI = R<sub>10min</sub> / R<sub>1min</sub></p>
+            <p class="formula-result">PI &lt; 1.0 &rarr; Rechazo absoluto &nbsp;|&nbsp; PI 1.0&ndash;2.0 &rarr; Cuestionable &nbsp;|&nbsp; PI &gt; 2.0 &rarr; Aceptable &nbsp;|&nbsp; PI &gt; 4.0 &rarr; Excelente</p>
+          </div>
+
+          <h3>Tensiones de prueba recomendadas</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Tensi&oacute;n nominal del devanado</th><th>Tensi&oacute;n de prueba DC</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>&lt; 1 kV</td><td>500 V DC</td></tr>
+                <tr><td>1 kV &ndash; 6.9 kV</td><td>1,000 V DC</td></tr>
+                <tr><td>7 kV &ndash; 34.5 kV</td><td>2,500 V DC</td></tr>
+                <tr><td>&gt; 34.5 kV</td><td>5,000 V DC</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout--warning article-callout">
+            <strong>Precauci&oacute;n:</strong> Los devanados de alta tensi&oacute;n almacenan carga capacitiva durante la prueba Megger. Despu&eacute;s de la medici&oacute;n, <strong>descargar completamente el devanado a tierra durante un tiempo igual al doble del tiempo de prueba</strong> antes de tocar los terminales. No hacerlo puede producir una descarga que lesione al personal o da&ntilde;e los instrumentos.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Papel aislante -->
+          <h2 id="papel">6. El papel aislante: el l&iacute;mite que el aceite no puede superar</h2>
+
+          <p>El aceite puede regenerarse, filtrarse, tratarse o reemplazarse. El papel aislante que impregna los devanados del transformador <strong>no puede regenerarse</strong>. Una vez que la celulosa del papel se degrada t&eacute;rmicamente o por hidrolisis, la p&eacute;rdida es irreversible. Esto hace del estado del papel el factor m&aacute;s cr&iacute;tico para la decisi&oacute;n de rehabilitar vs. reemplazar.</p>
+
+          <div class="life-bar">
+            <div class="life-bar__header">Ciclo de vida del papel aislante &mdash; Grado de Polimerizaci&oacute;n (DP)</div>
+            <div class="life-bar__body">
+              <div class="life-bar__stage">
+                <div class="life-bar__label life-bar__label--green">DP 800 &ndash; 1,200</div>
+                <strong>Papel nuevo</strong>
+                <p style="margin:6px 0 0;color:#46607e;font-size:.95rem">Resistencia mec&aacute;nica completa. Alta tolerancia a esfuerzos de cortocircuito. Vida &uacute;til completa por delante.</p>
+              </div>
+              <div class="life-bar__stage">
+                <div class="life-bar__label life-bar__label--yellow">DP 400 &ndash; 799</div>
+                <strong>Papel envejecido</strong>
+                <p style="margin:6px 0 0;color:#46607e;font-size:.95rem">Ha perdido parte de su flexibilidad. El aceite en buen estado puede ralentizar el proceso. Vigilar CO y CO&#8322; en DGA.</p>
+              </div>
+              <div class="life-bar__stage">
+                <div class="life-bar__label life-bar__label--red">DP &lt; 200</div>
+                <strong>Papel cr&iacute;tico / fin de vida</strong>
+                <p style="margin:6px 0 0;color:#46607e;font-size:.95rem">Resistencia mec&aacute;nica comprometida. Alto riesgo de ruptura bajo pr&oacute;ximo cortocircuito. Evaluar reemplazo de unidad.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>C&oacute;mo estimar el estado del papel sin abrir el transformador</h3>
+          <p>El DP del papel no puede medirse sin tomar una muestra f&iacute;sica, lo que requiere una parada y apertura del equipo. Sin embargo, hay indicadores indirectos accesibles mediante an&aacute;lisis de aceite:</p>
+          <ul>
+            <li><strong>CO y CO&#8322; en DGA:</strong> El papel en degradaci&oacute;n libera mon&oacute;xido y di&oacute;xido de carbono al aceite. La relaci&oacute;n CO&#8322;/CO &gt; 11 con CO &gt; 350 ppm sugiere papel bajo estr&eacute;s t&eacute;rmico activo.</li>
+            <li><strong>2-Furfuraldeh&iacute;do (2-FAL):</strong> Es el marcador m&aacute;s espec&iacute;fico del envejecimiento del papel. Se mide por cromatograf&iacute;a l&iacute;quida. Valores &gt; 1 ppm en aceite corresponden aproximadamente a DP &lt; 400; valores &gt; 10 ppm sugieren DP &lt; 200. Esta prueba, aunque menos com&uacute;n, es la correlaci&oacute;n no invasiva m&aacute;s confiable con el estado real del papel.</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Rehab vs reemplazo -->
+          <h2 id="rehab">7. Rehabilitaci&oacute;n vs. reemplazo: criterios de decisi&oacute;n</h2>
+
+          <p>La pregunta &ldquo;&iquest;rehabilitation o reemplazo?&rdquo; no tiene una respuesta &uacute;nica: depende de la condici&oacute;n del papel, el costo de cada opci&oacute;n y el impacto operativo de una parada no planificada. El marco de decisi&oacute;n que VMS Energy aplica pondera tres factores:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Factor</th><th>Rehabilitaci&oacute;n indicada</th><th>Reemplazo indicado</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Estado del papel (DP)</strong></td>
+                  <td class="ok">DP &gt; 400 &mdash; papel en buen estado</td>
+                  <td class="bad">DP &lt; 200 &mdash; papel en estado cr&iacute;tico</td>
+                </tr>
+                <tr>
+                  <td><strong>Causa de degradaci&oacute;n</strong></td>
+                  <td class="ok">Aceite envejecido, humedad, acidez &mdash; problema en el l&iacute;quido</td>
+                  <td class="bad">Falla el&eacute;ctrica interna, cortocircuito entre espiras, arco</td>
+                </tr>
+                <tr>
+                  <td><strong>Edad del transformador</strong></td>
+                  <td class="ok">&lt; 70% de la vida &uacute;til proyectada (p. ej., &lt; 21 a&ntilde;os en equipo de 30)</td>
+                  <td class="bad">&gt; 25 a&ntilde;os o desconocida</td>
+                </tr>
+                <tr>
+                  <td><strong>Costo de rehabilitaci&oacute;n</strong></td>
+                  <td class="ok">&lt; 60% del precio de unidad nueva equivalente</td>
+                  <td class="bad">&gt; 70% del precio de unidad nueva</td>
+                </tr>
+                <tr>
+                  <td><strong>Disponibilidad de repuesto</strong></td>
+                  <td>Tiempo de entrega de equipo nuevo &gt; 16 semanas</td>
+                  <td>Equipo nuevo disponible en &lt; 8 semanas</td>
+                </tr>
+                <tr>
+                  <td><strong>Eficiencia energ&eacute;tica</strong></td>
+                  <td>P&eacute;rdidas dentro de rangos aceptables para el TCO</td>
+                  <td class="bad">P&eacute;rdidas significativamente mayores a las de un equipo nuevo equivalente</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Rehabilitaci&oacute;n de aceite &mdash; qu&eacute; incluye:</strong> El proceso de regeneraci&oacute;n diel&eacute;ctrica comprende: (1) drenado del aceite degradado, (2) tratamiento o reemplazo del aceite, (3) secado del transformador (circulaci&oacute;n de aceite caliente al vac&iacute;o o corriente de calentamiento en devanados), (4) llenado con aceite nuevo o regenerado deshumidificado, y (5) prueba de rigidez, humedad y DGA basal. El proceso puede extender la vida &uacute;til 10&ndash;15 a&ntilde;os adicionales cuando el papel est&aacute; en buen estado.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. Programa anual -->
+          <h2 id="programa">8. Programa anual de mantenimiento predictivo recomendado</h2>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Actividad</th><th>Frecuencia</th><th>Herramienta / M&eacute;todo</th><th>Norma</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inspecci&oacute;n visual y limpieza exterior</td>
+                  <td>Mensual</td>
+                  <td>Visual, limpieza con aire seco</td>
+                  <td>Programa interno</td>
+                </tr>
+                <tr>
+                  <td>Verificaci&oacute;n nivel de aceite y temperatura</td>
+                  <td>Mensual</td>
+                  <td>Medidores de nivel, term&oacute;metro de tanque</td>
+                  <td>IEC 60076-2</td>
+                </tr>
+                <tr>
+                  <td>Termograf&iacute;a infrarroja</td>
+                  <td>Semestral</td>
+                  <td>C&aacute;mara IR (m&iacute;n. 320&times;240 px, sensibilidad &lt;0.05&deg;C)</td>
+                  <td>NFPA 70B, IEC 60270</td>
+                </tr>
+                <tr>
+                  <td>Rigidez diel&eacute;ctrica del aceite</td>
+                  <td>Semestral</td>
+                  <td>Cup test IEC 60156</td>
+                  <td>IEC 60156</td>
+                </tr>
+                <tr>
+                  <td>Humedad en aceite (Karl Fischer)</td>
+                  <td>Semestral</td>
+                  <td>Titulador Karl Fischer</td>
+                  <td>IEC 60814</td>
+                </tr>
+                <tr>
+                  <td>Acidez (NN) y tensi&oacute;n interfacial</td>
+                  <td>Anual</td>
+                  <td>Titulaci&oacute;n, tensi&oacute;m&eacute;tro</td>
+                  <td>ASTM D974 / D971</td>
+                </tr>
+                <tr>
+                  <td>An&aacute;lisis de gases disueltos (DGA)</td>
+                  <td>Anual (o seg&uacute;n condici&oacute;n)</td>
+                  <td>Cromatograf&iacute;a de gas (GC)</td>
+                  <td>IEC 60599 / IEEE C57.104</td>
+                </tr>
+                <tr>
+                  <td>Megger e &iacute;ndice de polarizaci&oacute;n</td>
+                  <td>Anual</td>
+                  <td>Meg&oacute;hmetro DC (500&ndash;5,000 V seg&uacute;n nivel)</td>
+                  <td>IEEE C57.12.91</td>
+                </tr>
+                <tr>
+                  <td>Relaci&oacute;n de transformaci&oacute;n (TTR)</td>
+                  <td>Cada 2 a&ntilde;os o ante anomal&iacute;a</td>
+                  <td>Instrumento TTR</td>
+                  <td>IEC 60076-1</td>
+                </tr>
+                <tr>
+                  <td>Tangente delta (tan &delta;)</td>
+                  <td>Cada 3&ndash;5 a&ntilde;os o ante anomal&iacute;a</td>
+                  <td>Puente de Schering / equipo Doble Guard</td>
+                  <td>IEC 60250</td>
+                </tr>
+                <tr>
+                  <td>Respuesta en frecuencia (FRA)</td>
+                  <td>Despu&eacute;s de cortocircuito o evento s&iacute;smico</td>
+                  <td>Analizador FRA dedicado</td>
+                  <td>IEC 60076-18</td>
+                </tr>
+                <tr>
+                  <td>Grado de polimerizaci&oacute;n del papel (DP)</td>
+                  <td>Cuando 2-FAL &gt; 1 ppm o edad &gt; 20 a&ntilde;os</td>
+                  <td>Muestra f&iacute;sica de papel + viscosim&eacute;tro</td>
+                  <td>IEC 60450</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Caso de estudio -->
+          <h2 id="caso">9. Caso de estudio: transformador 1&thinsp;000 kVA con aceite severamente degradado</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Caso diagn&oacute;stico &mdash; Planta de bebidas, Chihuahua</span>
+              <h3>Transformador 1&thinsp;000 kVA, 13.8 kV / 480 V, Dyn11, ONAN &mdash; 18 a&ntilde;os en operaci&oacute;n</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Motivo de diagn&oacute;stico:</strong> El transformador nunca hab&iacute;a tenido an&aacute;lisis de aceite. El operador detect&oacute; un color oscuro inusual en el aceite visible a trav&eacute;s del visor de nivel. VMS Energy fue convocada para evaluaci&oacute;n integral.</p>
+
+              <p><strong>Resultados del an&aacute;lisis (en sitio + laboratorio):</strong></p>
+              <ul>
+                <li><strong>Termograf&iacute;a:</strong> Bornera fase B con &Delta;T = 28&deg;C respecto a fases A y C. Radiador norte completamente fr&iacute;o (obstruido por corrosion interna).</li>
+                <li><strong>Rigidez diel&eacute;ctrica:</strong> 24 kV/mm &mdash; <span style="color:#991b1b;font-weight:700">INACEPTABLE</span> para MT</li>
+                <li><strong>Humedad en aceite:</strong> 48 ppm &mdash; <span style="color:#991b1b;font-weight:700">Saturado</span></li>
+                <li><strong>Acidez (NN):</strong> 0.52 mgKOH/g &mdash; <span style="color:#991b1b;font-weight:700">Aceite agotado</span></li>
+                <li><strong>DGA:</strong> H&#8322;: 340 ppm, CH&#8324;: 180 ppm, C&#8322;H&#8326;: 95 ppm, CO: 820 ppm, CO&#8322;: 6,400 ppm &mdash; TDCG: 1,835 ppm (Condici&oacute;n 2&ndash;3). Sin acetileno.</li>
+                <li><strong>2-Furfuraldeh&iacute;do (2-FAL):</strong> 1.8 ppm &mdash; sugiere DP estimado ~350 (papel envejecido pero a&uacute;n funcional)</li>
+                <li><strong>&Iacute;ndice de polarizaci&oacute;n:</strong> PI = 2.4 &mdash; Aceptable con precauci&oacute;n</li>
+              </ul>
+
+              <p><strong>Diagn&oacute;stico:</strong> El aceite est&aacute; severamente degradado (alta humedad, alta acidez, baja rigidez) y ha comenzado a afectar el papel (CO y 2-FAL elevados). Sin embargo, el papel est&aacute; en estado A&uacute;n recuperable (DP estimado ~350, sin acetileno, PI aceptable). La bornera fase B requiere reapriete o reemplazo inmediato; el radiador norte requiere limpieza o sustituci&oacute;n.</p>
+
+              <p><strong>Decisi&oacute;n:</strong> Rehabilitaci&oacute;n indicada. El costo del aceite nuevo, secado al vac&iacute;o, reparaci&oacute;n de bornera y limpieza del radiador represent&oacute; el 22% del precio de un equipo nuevo equivalente. Despu&eacute;s del tratamiento, el BDV subi&oacute; a 58 kV/mm y la humedad baj&oacute; a 7 ppm. Se program&oacute; an&aacute;lisis de seguimiento a los 3 y 6 meses con monitoreo mensual de DGA durante el primer semestre.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Preguntas frecuentes sobre mantenimiento de transformadores</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>&iquest;Con qu&eacute; frecuencia se debe analizar el aceite de un transformador?</summary>
+              <p>Como regla general conforme a IEC 60422: transformadores nuevos en los primeros dos a&ntilde;os, una vez al a&ntilde;o. Equipos en servicio continuo sin anomal&iacute;as: cada 12&ndash;24 meses. Equipos con historial de problemas, alta carga o ambiente agresivo: cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave: frecuencia mensual hasta estabilizar. VMS Energy recomienda el primer an&aacute;lisis dentro de los primeros 90 d&iacute;as de operaci&oacute;n como valor basal.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; diferencia hay entre la prueba Megger y el &iacute;ndice de polarizaci&oacute;n?</summary>
+              <p>La prueba Megger mide la resistencia de aislamiento (M&Omega;/G&Omega;) durante 60 segundos. Es r&aacute;pida pero sensible a la temperatura. El &iacute;ndice de polarizaci&oacute;n (PI) es la raz&oacute;n R<sub>10min</sub>/R<sub>1min</sub>, que elimina el efecto temperatura y revela el estado real del aislamiento: PI &lt; 1.0 indica degradaci&oacute;n o humedad severa; PI &gt; 2.0 es aceptable; PI &gt; 4.0 es excelente.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Cu&aacute;ndo conviene rehabilitar un transformador en lugar de reemplazarlo?</summary>
+              <p>La rehabilitaci&oacute;n es econ&oacute;mica cuando el costo no supera el 60&ndash;70% del equipo nuevo y cuando el papel aislante est&aacute; en buen estado (DP &gt; 400). Si el papel tiene DP &lt; 200, ninguna rehabilitaci&oacute;n del aceite soluciona el problema. El an&aacute;lisis de Costo Total de Propiedad (TCO) es el marco correcto de decisi&oacute;n.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; tan confiable es la termograf&iacute;a para detectar problemas?</summary>
+              <p>Muy confiable para elementos externos: borneras, bushings, cambiadores de taps y radiadores. Puede detectar puntos calientes antes de que produzcan una falla visible. Sin embargo, no detecta fallas internas en n&uacute;cleo o devanados que a&uacute;n no generan calor superficial. La termograf&iacute;a es complementaria al DGA y a las pruebas el&eacute;ctricas, no las reemplaza.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; es el grado de polimerizaci&oacute;n (DP) del papel?</summary>
+              <p>El DP es el n&uacute;mero promedio de unidades de glucosa en las cadenas de celulosa del papel aislante. En papel nuevo: DP 1,000&ndash;1,200. Con envejecimiento, el DP disminuye irreversiblemente. A DP &lt; 200 el papel ha perdido ~50% de resistencia mec&aacute;nica. El 2-furfuraldeh&iacute;do en aceite (2-FAL &gt; 1 ppm) es el indicador no invasivo m&aacute;s correlacionado con DP bajo.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; nivel de rigidez diel&eacute;ctrica es inaceptable?</summary>
+              <p>Seg&uacute;n IEC 60422: para MT (hasta 36 kV) el m&iacute;nimo es 30 kV/mm para continuar operando. Para AT (72.5 kV+) el m&iacute;nimo es 50 kV/mm. Un valor inferior a 20 kV/mm en cualquier nivel de tensi&oacute;n es una emergencia que requiere retiro del servicio y acci&oacute;n inmediata sobre el aceite.</p>
+            </details>
+
+            <details>
+              <summary>&iquest;Qu&eacute; incluye un programa completo de mantenimiento predictivo?</summary>
+              <p>Tres niveles: (1) Monitoreo continuo: temperatura, nivel de aceite, presi&oacute;n del conservador y alarma Buchholz. (2) Inspecci&oacute;n peri&oacute;dica (semestral/anual): termograf&iacute;a IR, Megger + PI, an&aacute;lisis f&iacute;sicoquimico del aceite (rigidez, humedad, acidez) y DGA. (3) Diagn&oacute;stico profundo (cada 3&ndash;5 a&ntilde;os): tangente delta, FRA para detectar deformaci&oacute;n de devanados y DP del papel cuando 2-FAL &gt; 1 ppm.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>&iquest;Necesita un diagn&oacute;stico integral de sus transformadores?</h3>
+            <p>VMS Energy ejecuta programas de mantenimiento predictivo para transformadores de distribuci&oacute;n y potencia: an&aacute;lisis de aceite, termograf&iacute;a, Megger, DGA e interpretaci&oacute;n experta con criterios IEC 60422 e IEEE C57.104. Le entregamos un informe de condici&oacute;n con recomendaci&oacute;n de acci&oacute;n y estimado de vida &uacute;til remanente.</p>
+            <div class="article-actions">
+              <a class="btn btn--primary" href="contacto_cta.html?producto=diagnostico-transformadores">Solicitar diagn&oacute;stico</a>
+              <a class="btn btn--secondary" href="especialidad_mantenimiento.html#inicio">Ver servicios de mantenimiento</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="blog-sidebar" aria-label="Recursos relacionados">
+
+          <!-- CTA accent -->
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>An&aacute;lisis de aceite en sitio</h3>
+            <p>Enviamos a nuestro equipo con equipos de laboratorio port&aacute;tiles para realizar la inspecci&oacute;n completa sin necesidad de sacar muestras para env&iacute;o externo.</p>
+            <a class="btn" href="contacto_cta.html?producto=analisis-aceite-sitio">Agendar visita</a>
+          </div>
+
+          <!-- Checklist diagnóstico -->
+          <div class="sidebar-card">
+            <h3>Checklist de diagn&oacute;stico</h3>
+            <ul>
+              <li>&#10003; Inspecci&oacute;n visual y nivel de aceite</li>
+              <li>&#10003; Termograf&iacute;a infrarroja (con carga)</li>
+              <li>&#10003; Rigidez diel&eacute;ctrica BDV (IEC 60156)</li>
+              <li>&#10003; Humedad en aceite (Karl Fischer)</li>
+              <li>&#10003; Acidez (NN) y tensi&oacute;n interfacial</li>
+              <li>&#10003; DGA completo (7 gases)</li>
+              <li>&#10003; Megger e &iacute;ndice de polarizaci&oacute;n</li>
+              <li>&#10003; 2-Furfuraldeh&iacute;do (2-FAL) si CO &gt; 350 ppm</li>
+              <li>&#10003; Relaci&oacute;n de transformaci&oacute;n (TTR)</li>
+              <li>&#10003; Informe de condici&oacute;n con recomendaci&oacute;n</li>
+            </ul>
+          </div>
+
+          <!-- Señales de alerta -->
+          <div class="sidebar-card">
+            <h3>Se&ntilde;ales de alerta inmediata</h3>
+            <ul>
+              <li>&#9888; Acetileno detectable en DGA</li>
+              <li>&#9888; TDCG &gt; 4,630 ppm</li>
+              <li>&#9888; Rigidez BDV &lt; 20 kV/mm</li>
+              <li>&#9888; PI &lt; 1.0 en cualquier devanado</li>
+              <li>&#9888; &Delta;T &gt; 30&deg;C en termograf&iacute;a</li>
+              <li>&#9888; Aceite con olor quemado o color muy oscuro</li>
+              <li>&#9888; Rel&eacute; Buchholz activado</li>
+            </ul>
+          </div>
+
+          <!-- Artículos relacionados -->
+          <div class="sidebar-card">
+            <h3>Art&iacute;culos relacionados</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">&#8594; Selecci&oacute;n de transformadores industriales</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">&#8594; Pruebas FAT y SAT de transformadores</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">&#8594; Mantenimiento de subestaciones AT/MT/BT</a></li>
+            </ul>
+          </div>
+
+          <!-- Servicios vinculados -->
+          <div class="sidebar-card">
+            <h3>Servicios relacionados</h3>
+            <a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">&#8594; Diagn&oacute;stico y mantenimiento</a><br><br>
+            <a class="sidebar-link" href="especialidad_servicios.html#inicio">&#8594; Instalaci&oacute;n y comisionamiento</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">&#8594; Suministro de transformadores</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Contacto t&eacute;cnico</h3>
+            <p>Hable con un especialista en mantenimiento de transformadores y subestaciones.</p>
+            <p><strong>&#128222;</strong> <a href="tel:+526141234567">+52 614 XXX XXXX</a></p>
+            <p><strong>&#9993;</strong> <a href="mailto:mantenimiento@vmsenergy.com">mantenimiento@vmsenergy.com</a></p>
+          </div>
+
+        </aside><!-- /blog-sidebar -->
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  
+<!-- cross-link: análisis FQ aceite -->
+<div style="margin:24px 0;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+  <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">¿Requieres el servicio de análisis de aceite?</p>
+  <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">VMS Energy realiza campañas de diagnóstico FQ y DGA para flotas de transformadores industriales. Informe con triángulo de Duval, clasificación RAG y programa de seguimiento.</p>
+  <a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">
+    Ver servicio de análisis aceite dieléctrico →
+  </a>
+</div>
+  <footer class="foot" id="footer" aria-label="Pie de p&aacute;gina">
+    <div class="container">
+      <div>
+        <h4>VMS Energy</h4>
+        <ul>
+          <li><a class="foot-link" href="nosotros.html#inicio">Nosotros</a></li>
+          <li><a class="foot-link" href="certificaciones.html#inicio">Certificaciones</a></li>
+          <li><a class="foot-link" href="blog.html">Blog</a></li>
+          <li><a class="foot-link" href="contacto_cta.html">Contacto</a></li>
+        </ul>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="foot-social__link" href="https://www.linkedin.com/company/vmsenergy" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.103v1.561h.046c.434-.821 1.495-1.686 3.076-1.686 3.289 0 3.894 2.165 3.894 4.979v6.598h-.657zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.558 13.019H3.779V9h3.116v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a class="foot-link" href="soluciones_electromecanicas.html#inicio">Electromec&aacute;nica</a></li>
+          <li><a class="foot-link" href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n</a></li>
+          <li><a class="foot-link" href="soluciones_solar_industrial.html#inicio">Solar Industrial</a></li>
+          <li><a class="foot-link" href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
+          <li><a class="foot-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a class="foot-link" href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
+          <li><a class="foot-link" href="especialidad_servicios.html#inicio">Servicios</a></li>
+          <li><a class="foot-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
+          <li><a class="foot-link" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suministro</h4>
+        <ul>
+          <li><a class="foot-link" href="procura.html#inicio">Procura t&eacute;cnica</a></li>
+          <li><a class="foot-link" href="VMShop.html">VMShop</a></li>
+          <li><a class="foot-link" href="lp-cable-de-potencia-kei.html">Cable KEI</a></li>
+          <li><a class="foot-link" href="lp-triol-variadores.html">Variadores Triol</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Blog T&eacute;cnico</h4>
+        <ul>
+          <li><a class="foot-link" href="blog-seleccion-transformadores-industriales.html">Selecci&oacute;n de transformadores</a></li>
+          <li><a class="foot-link" href="blog-pruebas-aceptacion-transformadores.html">Pruebas FAT y SAT</a></li>
+          <li><a class="foot-link" href="blog-mantenimiento-transformadores-operacion.html">Mantenimiento predictivo</a></li>
+          <li><a class="foot-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">Mantenimiento subestaciones</a></li>
+          <li><a class="foot-link" href="blog.html">Ver todos los art&iacute;culos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(203,213,225,.14);padding:18px 0;text-align:center;font-size:.88rem;color:#7b93b3">
+      &copy; 2026 VMS Energy &mdash; Ingenier&iacute;a el&eacute;ctrica EPC &middot; M&eacute;xico
+    </div>
+  </footer>
+
+  <!-- Botón flotante móvil -->
+  <div class="mobile-phone-sticky">
+    <a href="tel:+526141234567" aria-label="Llamar a VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const menu   = document.getElementById('menuList');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
+      a.addEventListener('click', e => {
+        if (window.innerWidth <= 680) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
