@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
@@ -229,7 +229,7 @@
     .catalog-card__head{flex-direction:column}
     .catalog-card__reco{align-self:flex-start}}
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-.submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+.submenu--mega{min-width:500px;gap:0}.nav-item--has-submenu:hover .submenu--mega,.nav-item--has-submenu:has(:focus-visible) .submenu--mega{display:flex}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
@@ -542,7 +542,7 @@
             <span class="notes-panel__tag">EPC Integrado</span>
             <h3 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h3>
           </div>
-          <p class="notes-panel__sub">El suministro a trav&eacute;s de VMShop no es una compra de producto. Es la etapa de procura dentro de un proyecto EPC que VMS ingenia, construye y pone en marcha.</p>
+          <p class="notes-panel__sub">A trav&eacute;s de VMShop puedes solicitar cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC. Si el suministro forma parte de un proyecto EPC que VMS ingenia y construye, el cable queda integrado al MTO con log&iacute;stica por hitos y responsabilidad &uacute;nica. Si solo necesitas el material, tambi&eacute;n te apoyamos con la misma rigurosidad t&eacute;cnica.</p>
           <ul class="note-list">
             <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
             <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
@@ -1286,50 +1286,7 @@
 })();
 </script>
 
-  
-<script id="nav-submenu-script-vms">
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var list = document.getElementById('menuList');
-  if(toggle && list){
-    toggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = list.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  var nav = document.querySelector('header nav');
-  if(!nav) return;
-  var media = window.matchMedia('(max-width: 760px)');
-  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-  function syncSubmenus(){
-    var mobile = media.matches;
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-    });
-  }
-  parents.forEach(function(parent){
-    var trigger = parent.querySelector(':scope > a');
-    var submenu = parent.querySelector(':scope > .submenu');
-    if(!trigger || !submenu) return;
-    trigger.addEventListener('click', function(e){
-      if(!media.matches) return;
-      e.preventDefault();
-      var open = parent.classList.toggle('is-open');
-      submenu.style.display = open ? 'block' : 'none';
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  syncSubmenus();
-  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-  else if(media.addListener) media.addListener(syncSubmenus);
-})();
-</script></body>
+</body>
 </html>
 
 

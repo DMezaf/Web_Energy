@@ -109,6 +109,16 @@
       .afinidad-kpis{grid-template-columns:1fr 1fr}
       .prot-grid{grid-template-columns:1fr}
     }
+  
+    /* VMShop callout */
+    .vmshop-callout{background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border:1px solid rgba(15,76,129,.18);border-radius:18px;padding:24px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+    .vmshop-callout__icon{width:52px;height:52px;border-radius:12px;background:var(--concept-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .vmshop-callout__icon svg{width:28px;height:28px;fill:#fff}
+    .vmshop-callout__body{flex:1;min-width:200px}
+    .vmshop-callout__tag{display:inline-flex;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.18rem .65rem;font-size:11px;font-weight:700;letter-spacing:.03em;margin-bottom:6px}
+    .vmshop-callout__title{margin:0 0 4px;font-size:17px;color:#0f2747}
+    .vmshop-callout__sub{margin:0;font-size:13.5px;color:#35516f;line-height:1.45}
+    .vmshop-callout__cta{flex-shrink:0}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
@@ -599,6 +609,26 @@
           <summary>&#191;VMS Energy instala variadores de cualquier marca?</summary>
           <div class="faq-body">S&iacute;. VMS Energy suministra e instala variadores <strong>multimarca</strong> (ABB ACS, Siemens SINAMICS, Schneider Altivar, Danfoss FC, Triol AT) seg&uacute;n los requerimientos del proceso, el protocolo de comunicaci&oacute;n requerido y el nivel de tensi&oacute;n del sistema. Tambi&eacute;n realizamos comisionamiento, ajuste de par&aacute;metros PID y capacitaci&oacute;n al personal de mantenimiento del cliente.</div>
         </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- cross-link: Triol VMShop -->
+  <section class="section" aria-label="Suministro Triol en VMShop">
+    <div class="container">
+      <div class="vmshop-callout">
+        <div class="vmshop-callout__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="#fff" stroke-width="2" fill="none"/><path d="M16 10a4 4 0 0 1-8 0" stroke="#fff" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="vmshop-callout__body">
+          <span class="vmshop-callout__tag">VMShop</span>
+          <p class="vmshop-callout__title">Variadores Triol AT24 disponibles con cotizaci&oacute;n directa</p>
+          <p class="vmshop-callout__sub">Si tu proyecto requiere un variador Triol, puedes solicitar cotizaci&oacute;n directamente en VMShop — sin licitaci&oacute;n, con validaci&oacute;n t&eacute;cnica incluida y respuesta en menos de 24&nbsp;h.</p>
+        </div>
+        <div class="vmshop-callout__cta">
+          <a class="btn btn--primary" href="lp-triol-variadores.html">Ver cat&aacute;logo Triol</a>
+        </div>
       </div>
     </div>
   </section>

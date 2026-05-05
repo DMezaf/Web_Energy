@@ -50,6 +50,19 @@
     @media(max-width:1100px){.alcance-grid{grid-template-columns:repeat(2,1fr)};.prueba-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:900px){.tension-tabs{grid-template-columns:1fr};.tension-tab:not(:last-child){border-right:0;border-bottom:1px solid rgba(23,44,81,.12)}}
     @media(max-width:700px){.alcance-grid{grid-template-columns:1fr};.prueba-grid{grid-template-columns:1fr};.entregables-grid{grid-template-columns:1fr 1fr}}
+  
+    /* VMShop cable callout */
+    .vmshop-cable-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .vmshop-cable-chip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #d4e3f5;border-radius:12px;padding:12px 14px;text-decoration:none;color:#0f2747;font-size:13.5px;font-weight:600;transition:box-shadow .18s,border-color .18s}
+    .vmshop-cable-chip:hover{border-color:var(--concept-primary);box-shadow:0 4px 14px rgba(15,76,129,.13)}
+    .vmshop-cable-chip__dot{width:8px;height:8px;border-radius:50%;background:var(--concept-primary);flex-shrink:0}
+    @media(max-width:640px){.vmshop-cable-grid{grid-template-columns:1fr 1fr}}
+    .vmshop-callout{background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border:1px solid rgba(15,76,129,.18);border-radius:18px;padding:24px 28px;display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap}
+    .vmshop-callout__icon{width:52px;height:52px;border-radius:12px;background:var(--concept-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px}
+    .vmshop-callout__icon svg{width:28px;height:28px;fill:#fff}
+    .vmshop-callout__tag{display:inline-flex;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.18rem .65rem;font-size:11px;font-weight:700;letter-spacing:.03em;margin-bottom:6px}
+    .vmshop-callout__title{margin:0 0 4px;font-size:17px;color:#0f2747}
+    .vmshop-callout__sub{margin:0;font-size:13.5px;color:#35516f;line-height:1.45}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
@@ -467,6 +480,40 @@
           <summary>¿Realizan el sellado cortafuego de ductos en mamparas y losas?</summary>
           <div class="faq-body">Sí. Instalamos selladores cortafuego en todos los pasos de cables a través de mamparas, losas y muros clasificados conforme a <strong>NOM-002-STPS</strong> y los requisitos de la aseguradora. Usamos sistemas <strong>3M Firestop, Hilti CP y Rockwool</strong>. Entregamos certificado de instalación por punto de sellado para respaldo ante auditorías de seguridad y de aseguradora.</div>
         </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- cross-link: VMShop cable supply -->
+  <section class="section section--alt" aria-label="Suministro de cable en VMShop">
+    <div class="container">
+      <div class="vmshop-callout">
+        <div class="vmshop-callout__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="#fff" stroke-width="2" fill="none"/><path d="M16 10a4 4 0 0 1-8 0" stroke="#fff" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="vmshop-callout__body" style="flex:1">
+          <span class="vmshop-callout__tag">VMShop &mdash; Suministro de cable</span>
+          <p class="vmshop-callout__title">Solicita cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC</p>
+          <p class="vmshop-callout__sub">Selecciona la l&iacute;nea que necesitas y recibe cotizaci&oacute;n con validaci&oacute;n t&eacute;cnica en menos de 24&nbsp;h.</p>
+          <div class="vmshop-cable-grid" style="margin-top:14px">
+            <a class="vmshop-cable-chip" href="lp-cable-de-potencia-kei.html">
+              <span class="vmshop-cable-chip__dot"></span>Cable de potencia MT/AT
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-alta-tension.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables alta tensi&oacute;n
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-extra-alta-tension.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables extra alta tensi&oacute;n
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-fotovoltaicos.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables fotovoltaicos
+            </a>
+            <a class="vmshop-cable-chip" href="lp-cables-especiales.html">
+              <span class="vmshop-cable-chip__dot"></span>Cables especiales / ESP
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

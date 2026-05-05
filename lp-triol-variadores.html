@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX" data-concept="eshop">
 <head>
   <meta charset="utf-8" />
@@ -157,7 +157,10 @@
      @media (max-width:760px){.grid{grid-template-columns:1fr}.foot__grid{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr 1fr}.shop-filters{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr}.cat-hero{grid-template-columns:1fr}.cat-hero__media{order:-1;min-height:160px}.insights__grid{grid-template-columns:1fr 1fr}}
      @media (max-width:520px){.shop-grid{grid-template-columns:1fr}.insights__grid{grid-template-columns:1fr}}
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-.submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+.submenu--mega{min-width:500px;gap:0}.nav-item--has-submenu:hover .submenu--mega,.nav-item--has-submenu:has(:focus-visible) .submenu--mega{display:flex}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  
+    .hero-vmshop-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.25rem .8rem;font-size:11.5px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:.04em}
+    .hero-vmshop-badge svg{width:13px;height:13px;fill:#fff}
   </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
@@ -393,6 +396,10 @@
       <div class="container">
         <article class="hero__box">
           <span class="kicker">L&iacute;nea especializada</span>
+          <span class="hero-vmshop-badge" aria-label="Disponible en VMShop">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="rgba(255,255,255,.7)" stroke-width="2" fill="none"/><path d="M16 10a4 4 0 0 1-8 0" stroke="rgba(255,255,255,.7)" stroke-width="2" fill="none"/></svg>
+            Disponible en VMShop
+          </span>
           <h1>Variadores Triol para operaci&oacute;n cr&iacute;tica</h1>
           <p>Control de velocidad con respaldo de ingenier&iacute;a para miner&iacute;a, bombeo y procesos industriales.</p>
           <div class="cta">

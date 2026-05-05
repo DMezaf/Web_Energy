@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX" data-concept="eshop">
 <head>
   <meta charset="utf-8" />
@@ -193,7 +193,36 @@
     @media (max-width:1080px){.line-lp__grid{grid-template-columns:1fr 1fr}.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.trust-box{grid-template-columns:1fr 1fr}}
     @media (max-width:860px){.catalog-track{grid-auto-columns:minmax(220px,1fr)}.hero-shop__frame{min-height:460px}.hero-shop__content{max-width:500px;padding:34px 24px}.catalog-grid{grid-template-columns:1fr 1fr}}
     @media (max-width:680px){.carousel-btn{width:32px;height:32px}nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.hero-shop{padding:16px 0 22px}.hero-shop__frame{min-height:380px;border-radius:18px}.hero-shop__content{padding:22px 16px 20px}.hero-shop h1{font-size:clamp(28px,9vw,36px)}.hero-shop p{font-size:1.14rem}.hero-shop__arrow{width:36px;height:36px}.line-lp__grid{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.trust-box{grid-template-columns:1fr}}
-  .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  .submenu--mega{min-width:500px;gap:0}.nav-item--has-submenu:hover .submenu--mega,.nav-item--has-submenu:has(:focus-visible) .submenu--mega{display:flex}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
+  
+    /* ── VMSHOP PURPOSE SECTION ─────────────────── */
+    .vmshop-purpose{padding:22px 0 8px}
+    .purpose-wrap{background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border:1px solid rgba(15,76,129,.18);border-radius:20px;padding:28px 28px 22px}
+    .purpose-top{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    .purpose-badge{display:inline-flex;padding:.22rem .64rem;border-radius:999px;background:rgba(15,76,129,.12);color:#0f4c81;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;margin:0 0 10px}
+    .purpose-title{font-size:clamp(20px,2.2vw,26px);color:#0b2a52;margin:0 0 10px;line-height:1.22}
+    .purpose-lead{font-size:.92rem;color:#365476;margin:0;line-height:1.6}
+    .who-cards{display:flex;flex-direction:column;gap:10px}
+    .who-card{display:flex;gap:12px;background:#fff;border:1px solid rgba(15,76,129,.15);border-radius:12px;padding:14px 16px;align-items:flex-start}
+    .who-card--alt{border-color:rgba(15,76,129,.1);background:#f8fbff}
+    .who-icon{width:28px;height:28px;border-radius:50%;background:var(--concept-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;flex-shrink:0;margin-top:2px}
+    .who-card--alt .who-icon{background:#475569}
+    .who-card__body strong{display:block;font-size:.9rem;color:#0b2a52;margin:0 0 4px}
+    .who-card__body p{font-size:.82rem;color:#4b647f;margin:0;line-height:1.5}
+    .who-card__body a{color:#0f4c81;font-weight:700}
+    /* Process */
+    .purpose-process{margin-top:20px;padding-top:18px;border-top:1px solid rgba(15,76,129,.14)}
+    .purpose-process__label{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;margin:0 0 14px}
+    .proc-steps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:0;align-items:start}
+    .proc-step{text-align:center;padding:0 8px}
+    .proc-step__num{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:900;font-size:.88rem;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+    .proc-step h3{font-size:.9rem;color:#0b2a52;margin:0 0 4px}
+    .proc-step p{font-size:.8rem;color:#4b647f;margin:0;line-height:1.45}
+    .proc-arrow{display:flex;align-items:center;justify-content:center;color:rgba(15,76,129,.4);font-size:1.3rem;padding-top:8px}
+    @media(max-width:1000px){.purpose-top{grid-template-columns:1fr}}
+    @media(max-width:760px){.proc-steps{grid-template-columns:1fr 1fr;gap:12px}.proc-arrow{display:none}}
+    @media(max-width:480px){.proc-steps{grid-template-columns:1fr}}
+
   </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
@@ -222,11 +251,11 @@
 <body>
   <div class="announcement">
     <div class="container">
-      <span>Env&iacute;o coordinado para proyectos industriales</span>
+      <span>&#128230; Suministro directo de equipos industriales en cat&aacute;logo</span>
       <span>|</span>
-      <span>Asesor&iacute;a t&eacute;cnica previa a compra</span>
+      <span>&#128203; Cotizaci&oacute;n en &lt; 24 h con validaci&oacute;n t&eacute;cnica</span>
       <span>|</span>
-      <span>VMShop by VMS Energy</span>
+      <span>&#9889; VMShop by VMS Energy</span>
     </div>
   </div>
 
@@ -409,10 +438,73 @@
       </div>
     </section>
 
+    <section class="vmshop-purpose" aria-labelledby="purposeTitle">
+      <div class="container">
+        <div class="purpose-wrap">
+
+          <!-- Propósito + diferenciación -->
+          <div class="purpose-top">
+            <div>
+              <span class="purpose-badge">¿Qué es VMShop?</span>
+              <h2 class="purpose-title" id="purposeTitle">Suministro directo de equipos eléctricos industriales en catálogo</h2>
+              <p class="purpose-lead">VMShop es el canal de <strong>compra directa</strong> de VMS Energy para equipos de línea: cables de potencia, cables especiales ESP, cables fotovoltaicos y variadores de frecuencia Triol. Sin proceso de licitación, sin ingenier&iacute;a personalizada — especificación estándar disponible para entrega inmediata.</p>
+            </div>
+            <div class="who-cards">
+              <div class="who-card">
+                <div class="who-icon">&#10003;</div>
+                <div class="who-card__body">
+                  <strong>VMShop — equipos de cat&aacute;logo</strong>
+                  <p>Reposi&shy;ci&oacute;n de materiales, stock de mantenimiento, proyectos menores o complemento de un EPC en ejecuci&oacute;n donde el material est&aacute; especificado. Para: jefes de mantenimiento, compradores t&eacute;cnicos y coordinadores de proyectos.</p>
+                </div>
+              </div>
+              <div class="who-card who-card--alt">
+                <div class="who-icon">&#8594;</div>
+                <div class="who-card__body">
+                  <strong>Procura t&eacute;cnica formal</strong>
+                  <p>Suministro integrado a proyectos EPC con ingenier&iacute;a de detalle, especificaci&oacute;n t&eacute;cnica y gesti&oacute;n de equipos cr&iacute;ticos a medida (transformadores, tableros, CCM, instrumentaci&oacute;n). <a href="procura.html#inicio">Ver proceso de Procura &rarr;</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proceso de compra -->
+          <div class="purpose-process">
+            <p class="purpose-process__label">¿C&oacute;mo funciona el proceso?</p>
+            <div class="proc-steps">
+              <div class="proc-step">
+                <div class="proc-step__num">01</div>
+                <h3>Selecciona</h3>
+                <p>Explora el cat&aacute;logo por l&iacute;nea de producto. Descarga la ficha t&eacute;cnica y verifica la especificaci&oacute;n para tu aplicaci&oacute;n.</p>
+              </div>
+              <div class="proc-arrow">&rarr;</div>
+              <div class="proc-step">
+                <div class="proc-step__num">02</div>
+                <h3>Solicita cotizaci&oacute;n</h3>
+                <p>Env&iacute;a tu lista de materiales. Un especialista confirma disponibilidad, volumen m&iacute;nimo y plazo de entrega en menos de 24 h.</p>
+              </div>
+              <div class="proc-arrow">&rarr;</div>
+              <div class="proc-step">
+                <div class="proc-step__num">03</div>
+                <h3>Validaci&oacute;n t&eacute;cnica</h3>
+                <p>Opcional pero recomendada: confirma la aplicaci&oacute;n con nuestro equipo de ingenier&iacute;a antes de cerrar el pedido — sin costo adicional.</p>
+              </div>
+              <div class="proc-arrow">&rarr;</div>
+              <div class="proc-step">
+                <div class="proc-step__num">04</div>
+                <h3>Entrega coordinada</h3>
+                <p>Env&iacute;o a bodega del cliente o directamente a sitio de proyecto en M&eacute;xico. Documentaci&oacute;n t&eacute;cnica y certificados incluidos.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <section class="line-lp" aria-label="Landings por l&iacute;nea de producto">
       <div class="container line-lp__wrap">
-        <h2>Catálogo de productos VMS Energy</h2>
-        <p>Líneas estratégicas</p>
+        <h2>L&iacute;neas de producto disponibles</h2>
+        <p>Selecciona la l&iacute;nea que necesitas y solicita cotizaci&oacute;n</p>
                 <div class="catalog-grid catalog-grid--campaigns">
           <article class="product-card product-card--campaign">
             <img src="assets/img/landings/vmshop/triol-distribucion-autorizada.webp" alt="Variadores Triol">
