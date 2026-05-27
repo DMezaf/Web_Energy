@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es" data-concept="corporativo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora BESS Peak-Shaving GDMTH | VMS Energy</title>
+  <meta name="description" content="Calcula el ahorro real con un sistema BESS en tarifa GDMTH: dimensionamiento en kW y kWh, inversión estimada, payback y escenario de integración solar. Herramienta gratuita de VMS Energy.">
+  <link rel="canonical" href="https://vmsenergy.com/calculadora-ahorro-bess-gdmth.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+  <style>
+    :root{
+      --navy:#172C51;
+      --concept-primary:#0E5AA8;
+      --concept-darker:#083568;
+      --ink:#10233D;
+      --muted:#4B647F;
+      --line:rgba(23,44,81,.14);
+      --surface:#fff;
+      --soft:#F3F8FF;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* ── Header ── */
+    header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px);-webkit-backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand__logo{width:clamp(140px,15vw,180px);height:clamp(44px,5vw,56px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
+    nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;font-size:.94rem}
+    nav a.is-active{color:var(--concept-primary)}
+    .cta-header{padding:.55rem .9rem;border-radius:999px;background:linear-gradient(180deg,var(--concept-primary),var(--concept-darker));color:#fff;border:1px solid rgba(8,53,92,.55);font-size:.9rem}
+    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff;cursor:pointer;font-family:inherit;font-weight:700}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.88rem;padding:3px 0}
+
+    /* ── Hero ── */
+    .hero{position:relative;isolation:isolate;padding:64px 0 52px;color:#fff;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,20,40,.92),rgba(10,53,104,.72) 55%,rgba(14,90,168,.48)),url('assets/img/services/infraestructura_electrica.webp') center/cover no-repeat;z-index:-1}
+    .eyebrow{display:inline-block;padding:.24rem .7rem;border:1px solid rgba(255,255,255,.36);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:14px}
+    .hero h1{font-size:clamp(26px,4.2vw,46px);line-height:1.06;margin:0 0 14px}
+    .hero p{font-size:clamp(15px,1.8vw,19px);margin:0;color:#dbeaff;max-width:680px}
+    .hero-badge{display:inline-flex;align-items:center;gap:6px;margin-top:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.4rem .9rem;font-size:.84rem;color:#eaf3ff}
+
+    /* ── Calculator layout ── */
+    .calc-wrap{padding:48px 0 64px;background:var(--soft)}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+    @media(max-width:820px){.calc-grid{grid-template-columns:1fr}}
+
+    /* Steps sidebar */
+    .steps-nav{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+    .step-pill{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:.93rem;color:var(--muted);cursor:pointer;transition:.2s;touch-action:manipulation}
+    .step-pill.is-active{background:var(--concept-primary);color:#fff;border-color:var(--concept-primary)}
+    .step-pill.is-done{background:#e6f0fb;color:var(--concept-primary);border-color:rgba(14,90,168,.2)}
+    .step-num{width:26px;height:26px;border-radius:999px;display:grid;place-items:center;font-size:.82rem;font-weight:800;background:rgba(255,255,255,.25);flex-shrink:0}
+    .step-pill.is-active .step-num{background:rgba(255,255,255,.28)}
+    .step-pill.is-done .step-num{background:var(--concept-primary);color:#fff}
+
+    /* Form card */
+    .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 10px 32px rgba(9,32,58,.07)}
+    .form-card h2{font-size:1.35rem;color:#0d2d52;margin:0 0 6px}
+    .form-card .subtitle{color:var(--muted);font-size:.94rem;margin:0 0 22px}
+    .step-panel{display:none}
+    .step-panel.is-active{display:block}
+
+    /* Form elements */
+    .field{margin-bottom:18px}
+    .field label{display:block;font-weight:700;margin-bottom:6px;color:#0d2d52;font-size:.95rem}
+    .field label span{font-weight:400;color:var(--muted);font-size:.86rem;margin-left:6px}
+    .field input,.field select{width:100%;padding:10px 14px;border:1px solid rgba(23,44,81,.22);border-radius:10px;font-family:inherit;font-size:1rem;color:var(--ink);background:#fff;transition:border-color .2s}
+    .field input:focus,.field select:focus{outline:none;border-color:var(--concept-primary);box-shadow:0 0 0 3px rgba(14,90,168,.12)}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field-hint{font-size:.82rem;color:var(--muted);margin-top:4px}
+    .tariff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
+    .tariff-card{border:2px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;text-align:center;transition:.2s;background:#fff;-webkit-tap-highlight-color:rgba(14,90,168,.12);user-select:none;-webkit-user-select:none;touch-action:manipulation}
+    button.tariff-card{font-family:inherit;font-size:inherit;appearance:none;-webkit-appearance:none;width:100%;outline:none}
+    .tariff-card:hover{border-color:rgba(14,90,168,.4)}
+    .tariff-card.is-selected{border-color:var(--concept-primary);background:#eef5ff}
+    /* Safari fix: children must not capture pointer events so the parent onclick fires */
+    .tariff-card *{pointer-events:none}
+    /* Safari fix: span/svg inside buttons shouldn't intercept clicks */
+    .step-pill *,.btn *{pointer-events:none}
+    .tariff-card__code{font-size:1.1rem;font-weight:800;color:#0d2d52;margin-bottom:2px}
+    .tariff-card__desc{font-size:.78rem;color:var(--muted);line-height:1.3}
+    .tariff-card__rate{font-size:.84rem;font-weight:700;color:var(--concept-primary);margin-top:4px}
+    .toggle-wrap{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+    .toggle-wrap label{font-weight:700;color:#0d2d52;cursor:pointer}
+    input[type=checkbox]{width:18px;height:18px;accent-color:var(--concept-primary);cursor:pointer}
+    .solar-fields{display:none}
+    .solar-fields.is-visible{display:block}
+    .btn-row{display:flex;justify-content:space-between;align-items:center;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:11px 22px;font-weight:700;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:.2s;min-height:44px;touch-action:manipulation}
+    .btn--primary{background:linear-gradient(180deg,var(--concept-primary),var(--concept-darker));border-color:rgba(8,53,92,.6);color:#fff}
+    .btn--primary:hover{opacity:.92}
+    .btn--outline{background:#fff;border-color:rgba(23,44,81,.22);color:var(--ink)}
+    .btn--calc{width:100%;justify-content:center;font-size:1.08rem;padding:14px;border-radius:14px;background:linear-gradient(135deg,#0E5AA8,#083568)}
+    .btn--whatsapp{background:linear-gradient(135deg,#25D366,#128C3E);border-color:rgba(18,140,62,.4);color:#fff;padding:14px 22px;font-size:1.05rem;border-radius:14px;width:100%;justify-content:center}
+    .btn--whatsapp svg{width:22px;height:22px;fill:#fff}
+
+    /* Results */
+    .results-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 10px 32px rgba(9,32,58,.07);display:none}
+    .results-panel.is-visible{display:block}
+    .results-placeholder{background:#fff;border:2px dashed rgba(23,44,81,.15);border-radius:18px;padding:40px 24px;text-align:center;color:var(--muted)}
+    .results-placeholder svg{display:block;margin:0 auto 14px;opacity:.3}
+    .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:22px}
+    .kpi{background:var(--soft);border:1px solid rgba(14,90,168,.14);border-radius:14px;padding:16px}
+    .kpi--accent{background:linear-gradient(160deg,#0b2344,#0a3d70);border-color:transparent;color:#fff}
+    .kpi__label{font-size:.8rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+    .kpi--accent .kpi__label{color:#9fcbff}
+    .kpi__value{font-size:clamp(22px,3vw,32px);font-weight:700;color:#0d2d52;line-height:1}
+    .kpi--accent .kpi__value{color:#8fd7ff}
+    .kpi__sub{font-size:.8rem;color:var(--muted);margin-top:4px}
+    .kpi--accent .kpi__sub{color:#c0d8f0}
+    .solar-bonus-band{background:linear-gradient(90deg,#064e1a,#0a7a2e);border-radius:12px;padding:14px 18px;color:#fff;display:none;margin-bottom:16px;align-items:center;gap:12px}
+    .solar-bonus-band.is-visible{display:flex}
+    .solar-bonus-band__icon{font-size:1.6rem;flex-shrink:0}
+    .solar-bonus-band p{margin:0;font-size:.92rem;line-height:1.4}
+    .solar-bonus-band strong{font-size:1.1rem}
+    .chart-wrap{margin-bottom:22px}
+    .chart-label{font-size:.88rem;font-weight:700;color:#0d2d52;margin-bottom:8px}
+    .chart-canvas-wrap{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
+    canvas{max-height:220px}
+    .disclaimer{font-size:.78rem;color:var(--muted);line-height:1.5;padding:12px;background:rgba(23,44,81,.04);border-radius:10px;margin:16px 0}
+    .results-cta{margin-top:20px}
+
+    /* Progress bar */
+    .progress-bar{height:4px;background:rgba(14,90,168,.12);border-radius:999px;margin-bottom:24px;overflow:hidden}
+    .progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--concept-primary),#5ba8e8);transition:width .4s}
+
+    /* Footer */
+    .foot{background:linear-gradient(180deg,#0b1e38,#07131f);padding:48px 0 28px}
+    .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    @media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;background:rgba(255,255,255,.1)}
+    .foot-social__link svg{width:18px;height:18px;fill:#cbd5e1}
+    .foot-divider{border:none;border-top:1px solid rgba(255,255,255,.08);margin:24px 0 16px}
+    .foot-copy{font-size:.82rem;color:#64748b;text-align:center}
+
+    /* Sticky */
+    .sticky-actions{position:fixed;bottom:18px;right:0;display:flex;flex-direction:column;gap:10px;z-index:70;pointer-events:none}
+    .sticky-actions__btn{pointer-events:auto;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.2);text-decoration:none}
+    .sticky-actions__btn--left{left:14px;background:#25D366;margin-right:14px;border-radius:12px;width:auto;padding:0 12px;font-weight:700;font-size:.88rem;font-family:inherit;color:#fff;display:flex;align-items:center;gap:6px;height:44px}
+    .sticky-actions__btn--right{right:14px;background:#172C51;position:fixed;bottom:18px;right:14px}
+    .sticky-actions__btn svg{width:22px;height:22px;fill:#fff}
+
+    /* ── Advanced period mode ── */
+    .avanzado-fields{display:none;margin-top:14px}
+    .avanzado-fields.is-visible{display:block}
+    .period-table{border:1px solid rgba(14,90,168,.18);border-radius:12px;overflow:hidden;font-size:.9rem}
+    .period-head{display:grid;grid-template-columns:110px 1fr 1fr;gap:0;background:rgba(14,90,168,.07);padding:8px 12px;font-weight:700;font-size:.78rem;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.04em}
+    .period-row{display:grid;grid-template-columns:110px 1fr 1fr;gap:0;padding:10px 12px;border-top:1px solid rgba(14,90,168,.1);align-items:center}
+    .period-row--punta{background:#fff9f9}
+    .period-row--intermedio{background:#fffdf5}
+    .period-row--base{background:#f5fff8}
+    .period-label{font-weight:700;font-size:.86rem;display:flex;align-items:center;gap:6px}
+    .period-row .period-label::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;flex-shrink:0}
+    .period-row--punta .period-label::before{background:#dc2626}
+    .period-row--intermedio .period-label::before{background:#d97706}
+    .period-row--base .period-label::before{background:#16a34a}
+    .period-row input{padding:7px 10px;border:1px solid rgba(23,44,81,.18);border-radius:8px;font-family:inherit;font-size:.92rem;width:calc(100% - 10px);margin-right:10px;color:var(--ink)}
+    .period-row input:focus{outline:none;border-color:var(--concept-primary);box-shadow:0 0 0 2px rgba(14,90,168,.1)}
+    .period-head-4{grid-template-columns:110px 1fr 1fr 80px 80px!important}
+    .period-row-4{grid-template-columns:110px 1fr 1fr 80px 80px!important}
+    .period-row-4 input{margin-right:8px}
+    /* Period breakdown in results */
+    .breakdown-table{width:100%;border-collapse:collapse;font-size:.86rem;margin:14px 0}
+    .breakdown-table th{background:rgba(14,90,168,.07);color:var(--concept-primary);font-weight:700;padding:7px 10px;text-align:left;border-bottom:1px solid rgba(14,90,168,.15)}
+    .breakdown-table td{padding:7px 10px;border-bottom:1px solid var(--line);color:var(--ink)}
+    .breakdown-table tr:last-child td{border-bottom:none}
+    .bd-punta td:first-child{color:#dc2626;font-weight:700}
+    .bd-intermedio td:first-child{color:#d97706;font-weight:700}
+    .bd-base td:first-child{color:#16a34a;font-weight:700}
+    .bd-total td{font-weight:700;color:#0d2d52;border-top:2px solid rgba(14,90,168,.2)!important}
+    .avanzado-badge{display:inline-flex;align-items:center;gap:5px;padding:.2rem .6rem;background:linear-gradient(90deg,#0E5AA8,#083568);color:#fff;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.04em;margin-left:8px;vertical-align:middle}
+
+    /* Responsive */
+    @media(max-width:640px){
+      .kpi-grid{grid-template-columns:1fr}
+      .tariff-grid{grid-template-columns:1fr 1fr}
+      nav ul{display:none;position:absolute;right:20px;top:80px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:200px;box-shadow:0 18px 30px rgba(9,32,58,.12)}
+      nav ul.is-open{display:grid;gap:8px}
+      .menu-toggle{display:inline-flex}
+      .field-row{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      .tariff-grid{grid-template-columns:1fr}
+      .hero{padding:40px 0 36px}
+    }
+
+    /* ── Mejoras móvil: tablas de período y touch targets ── */
+    @media(max-width:600px){
+      /* Tablas de período: scroll horizontal en lugar de overflow oculto */
+      .period-table{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch}
+      .period-head,.period-row{min-width:290px}
+      .period-head-4,.period-row-4{min-width:460px}
+      /* Tabla desglose resultados */
+      #breakdownWrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+      .breakdown-table{min-width:420px}
+      /* KPI values: ajuste proporcional */
+      .kpi__value{font-size:clamp(16px,5.2vw,26px)}
+      .kpi__sub{font-size:.73rem;line-height:1.4;word-break:break-word}
+      /* Touch targets en inputs de tabla */
+      .period-row input{min-height:42px;font-size:16px!important}
+      /* Botones: apilados en pantallas muy estrechas */
+      .btn-row{flex-wrap:wrap;gap:8px}
+      /* Deducción fiscal: texto más compacto */
+      #aplicaDeduccion + label{font-size:.86rem}
+    }
+    /* iOS: prevenir zoom automático al hacer focus en inputs (requiere font-size ≥ 16px) */
+    @media(max-width:768px){
+      .field input,.field select{font-size:16px!important;min-height:44px}
+    }
+    @media(max-width:400px){
+      .form-card{padding:18px 14px}
+      .kpi{padding:12px 10px}
+      .hero h1{font-size:clamp(20px,7.5vw,30px)}
+      .step-pill{padding:8px 10px;font-size:.82rem}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header aria-label="Barra de navegación">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__logo">
+          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menú</button>
+        <ul id="menuList">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li class="nav-item--has-submenu">
+            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
+            <div class="submenu" role="menu">
+              <span class="submenu__title">Equipamiento</span>
+              <ul class="submenu__list">
+                <li><a href="confiabilidad-electrica-industrial.html#inicio">Confiabilidad Eléctrica (UPS/BESS)</a></li>
+                <li><a href="soluciones-ccm-industrial.html#inicio">CCM Industrial</a></li>
+                <li><a href="soluciones_solar_industrial.html#inicio">Energía Solar Industrial</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="lp-estudios-electricos-industriales.html">Estudios Eléctricos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">&#9889; Herramienta gratuita · VMS Energy</span>
+      <h1>Calculadora de Ahorro BESS<br><em style="font-style:normal;color:#8fd7ff">Peak-Shaving GDMTH</em></h1>
+      <p>Estima el dimensionamiento, la inversión y el retorno de tu sistema de almacenamiento de energía para reducir el cargo por demanda en tarifa media tensión horaria.</p>
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Aplica a tarifas GDMTH · GDMTO · GDBT · PDBT
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Calculator ── -->
+  <section class="calc-wrap">
+    <div class="container">
+      <div class="calc-grid">
+
+        <!-- ── Left: Form ── -->
+        <div>
+          <!-- Progress -->
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:33%"></div></div>
+
+          <!-- Step nav pills -->
+          <div class="steps-nav">
+            <button class="step-pill is-active" data-step="1" onclick="goStep(1)">
+              <span class="step-num">1</span> Tarifa CFE &amp; Demanda
+            </button>
+            <button class="step-pill" data-step="2" onclick="goStep(2)">
+              <span class="step-num">2</span> Perfil de Picos
+            </button>
+            <button class="step-pill" data-step="3" onclick="goStep(3)">
+              <span class="step-num">3</span> Solar (opcional)
+            </button>
+          </div>
+
+          <!-- Form card -->
+          <div class="form-card">
+
+            <!-- STEP 1 -->
+            <div class="step-panel is-active" id="step1">
+              <h2>Tarifa CFE &amp; Demanda</h2>
+              <p class="subtitle">Selecciona la tarifa que aparece en tu recibo CFE y captura los datos de demanda.</p>
+
+              <div style="margin-bottom:16px"><div class="field"><label>Tarifa CFE contratada</label></div>
+              <div class="tariff-grid" id="tariffGrid">
+                <button type="button" class="tariff-card is-selected" data-tariff="GDMTH" data-rate="420" onclick="selectTariff(this)">
+                  <div class="tariff-card__code">GDMTH</div>
+                  <div class="tariff-card__desc">Media tensión horaria &gt;100 kW</div>
+                  <div class="tariff-card__rate">~$420/kW·mes</div>
+                </button>
+                <button type="button" class="tariff-card" data-tariff="GDMTO" data-rate="280" onclick="selectTariff(this)">
+                  <div class="tariff-card__code">GDMTO</div>
+                  <div class="tariff-card__desc">Media tensión ordinaria &gt;100 kW</div>
+                  <div class="tariff-card__rate">~$280/kW·mes</div>
+                </button>
+                <button type="button" class="tariff-card" data-tariff="GDBT" data-rate="180" onclick="selectTariff(this)">
+                  <div class="tariff-card__code">GDBT</div>
+                  <div class="tariff-card__desc">General baja tensión &gt;25 kW</div>
+                  <div class="tariff-card__rate">~$180/kW·mes</div>
+                </button>
+                <button type="button" class="tariff-card" data-tariff="PDBT" data-rate="120" onclick="selectTariff(this)">
+                  <div class="tariff-card__code">PDBT</div>
+                  <div class="tariff-card__desc">Pequeña demanda BT</div>
+                  <div class="tariff-card__rate">~$120/kW·mes</div>
+                </button>
+              </div></div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label>Demanda máxima actual <span>(kW)</span></label>
+                  <input type="number" id="demandaMax" value="500" min="50" max="10000" step="10">
+                  <p class="field-hint">Pico registrado en recibo CFE</p>
+                </div>
+                <div class="field">
+                  <label>Demanda objetivo <span>(kW)</span></label>
+                  <input type="number" id="demandaObj" value="380" min="30" max="9000" step="10">
+                  <p class="field-hint">Meta tras peak-shaving con BESS</p>
+                </div>
+              </div>
+
+              <!-- Advanced toggle -->
+              <div class="toggle-wrap" style="margin-top:2px;padding-top:14px;border-top:1px solid var(--line)">
+                <input type="checkbox" id="modoAvanzado">
+                <label for="modoAvanzado" style="color:#0d2d52">
+                  Desglose por período tarifario
+                  <span class="avanzado-badge">GDMTH recomendado</span>
+                </label>
+              </div>
+              <div class="avanzado-fields" id="avanzadoFields">
+                <p class="field-hint" style="margin:0 0 10px">Captura la demanda registrada en cada período de tu recibo CFE (tabla de cargos). El BESS se dimensiona contra el pico de <strong>punta</strong>.</p>
+                <div class="period-table">
+                  <div class="period-head period-head-4">
+                    <span>Período</span><span>Demanda actual (kW)</span><span>Demanda objetivo (kW)</span><span style="text-align:center">Horas/día</span><span style="text-align:center">Días/mes</span>
+                  </div>
+                  <div class="period-row period-row--punta period-row-4">
+                    <span class="period-label">Punta</span>
+                    <input type="number" id="dMaxPunta" value="500" min="0" step="10">
+                    <input type="number" id="dObjPunta" value="380" min="0" step="10">
+                    <input type="number" id="horasPunta" value="4" min="1" max="6" step="0.5">
+                    <input type="number" id="diasPunta" value="22" min="1" max="31" step="1">
+                  </div>
+                  <div class="period-row period-row--intermedio period-row-4">
+                    <span class="period-label">Intermedio</span>
+                    <input type="number" id="dMaxIntermedio" value="450" min="0" step="10">
+                    <input type="number" id="dObjIntermedio" value="380" min="0" step="10">
+                    <input type="number" id="horasIntermedio" value="14" min="1" max="18" step="0.5">
+                    <input type="number" id="diasIntermedio" value="22" min="1" max="31" step="1">
+                  </div>
+                  <div class="period-row period-row--base period-row-4">
+                    <span class="period-label">Base</span>
+                    <input type="number" id="dMaxBase" value="300" min="0" step="10">
+                    <input type="number" id="dObjBase" value="280" min="0" step="10">
+                    <input type="number" id="horasBase" value="6" min="1" max="8" step="0.5">
+                    <input type="number" id="diasBase" value="22" min="1" max="31" step="1">
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-row">
+                <span></span>
+                <button class="btn btn--primary" onclick="nextStep(1)">Siguiente &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-panel" id="step2">
+              <h2>Perfil de Picos</h2>
+              <p class="subtitle">Define cuántas horas al día ocurren los picos de demanda y confirma el cargo tarifario.</p>
+
+              <div class="field-row">
+                <div class="field">
+                  <label>Horas de pico / día <span>(h)</span></label>
+                  <input type="number" id="horasPico" value="4" min="1" max="12" step="0.5">
+                  <p class="field-hint">Típico: 2–6 horas en turno pesado</p>
+                </div>
+                <div class="field">
+                  <label>Días pico / mes <span>(días)</span></label>
+                  <input type="number" id="diasPico" value="22" min="5" max="31" step="1">
+                </div>
+              </div>
+
+              <!-- Simple cargo (modo básico) -->
+              <div class="field" id="cargoSimpleWrap">
+                <label>Cargo por demanda <span>($/kW·mes MXN)</span></label>
+                <input type="number" id="cargoDemanda" value="420" min="50" max="1500" step="10">
+                <p class="field-hint">Pre-llenado según tarifa seleccionada. Ajusta con el valor de tu último recibo CFE.</p>
+              </div>
+              <!-- Advanced cargos (modo avanzado) -->
+              <div class="avanzado-fields" id="avanzadoRates">
+                <div class="field" style="margin-bottom:10px">
+                  <label>Cargos por período <span>($/kW·mes MXN — ajusta con tu recibo CFE)</span></label>
+                </div>
+                <div class="period-table">
+                  <div class="period-head" style="grid-template-columns:110px 1fr 1fr">
+                    <span>Período</span><span>Cargo $/kW·mes</span><span>Horario típico</span>
+                  </div>
+                  <div class="period-row period-row--punta" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Punta</span>
+                    <input type="number" id="cargoPunta" value="540" min="0" step="10">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">18:00–22:00 L-S</span>
+                  </div>
+                  <div class="period-row period-row--intermedio" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Intermedio</span>
+                    <input type="number" id="cargoIntermedio" value="200" min="0" step="10">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">06:00–18:00 / 22:00–24:00</span>
+                  </div>
+                  <div class="period-row period-row--base" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Base</span>
+                    <input type="number" id="cargoBase" value="90" min="0" step="10">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">00:00–06:00</span>
+                  </div>
+                </div>
+                <p class="field-hint" style="margin-top:8px">&#9432; Los horarios varían por región CFE. Consulta el dorso de tu recibo o la tabla de tarifas en cfe.mx.</p>
+              </div>
+
+              <!-- Simple energy cost (basic mode) -->
+              <div id="costoEnergiaWrap">
+                <div class="field">
+                  <label>Costo energía CFE <span>($/kWh MXN)</span></label>
+                  <input type="number" id="costoEnergia" value="2.20" min="0.5" max="8" step="0.05">
+                  <p class="field-hint">Tarifa de energía promedio (para cálculo de bonus solar)</p>
+                </div>
+              </div>
+              <!-- Advanced energy rates by period -->
+              <div class="avanzado-fields" id="avanzadoEnergia">
+                <div class="field" style="margin-bottom:10px">
+                  <label>Costo de energía por período <span>($/kWh MXN)</span></label>
+                </div>
+                <div class="period-table">
+                  <div class="period-head" style="grid-template-columns:110px 1fr 1fr">
+                    <span>Período</span><span>$/kWh</span><span>Uso BESS</span>
+                  </div>
+                  <div class="period-row period-row--punta" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Punta</span>
+                    <input type="number" id="costoPuntaEnergia" value="3.80" min="0.5" max="12" step="0.05">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">Descarga BESS &rarr; máx. ahorro</span>
+                  </div>
+                  <div class="period-row period-row--intermedio" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Intermedio</span>
+                    <input type="number" id="costoIntermedioEnergia" value="2.10" min="0.5" max="8" step="0.05">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">Solar genera aquí (valor autoconsumo)</span>
+                  </div>
+                  <div class="period-row period-row--base" style="grid-template-columns:110px 1fr 1fr">
+                    <span class="period-label">Base</span>
+                    <input type="number" id="costoBaseEnergia" value="1.40" min="0.5" max="6" step="0.05">
+                    <span style="color:var(--muted);font-size:.82rem;padding-left:8px">Recarga BESS &rarr; menor costo</span>
+                  </div>
+                </div>
+                <p class="field-hint" style="margin-top:8px">&#9889; <strong>Arbitraje:</strong> el diferencial Punta−Base (típico ~$2.40/kWh) se suma como ahorro adicional al peak-shaving.</p>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn btn--outline" onclick="prevStep(2)">&larr; Atrás</button>
+                <button class="btn btn--primary" onclick="nextStep(2)">Siguiente &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="step-panel" id="step3">
+              <h2>Integración Solar <span style="font-weight:400;color:var(--muted)">(opcional)</span></h2>
+              <p class="subtitle">Si ya tienes paneles solares, el BESS puede elevar tu autoconsumo del 60% al 85% aproximadamente.</p>
+
+              <div class="toggle-wrap">
+                <input type="checkbox" id="tieneSolar">
+                <label for="tieneSolar">Tengo generación solar fotovoltaica</label>
+              </div>
+
+              <div class="solar-fields" id="solarFields">
+                <div class="field-row">
+                  <div class="field">
+                    <label>Potencia FV instalada <span>(kWp)</span></label>
+                    <input type="number" id="potenciaFV" value="300" min="10" max="5000" step="10">
+                  </div>
+                  <div class="field">
+                    <label>Producción diaria prom. <span>(kWh/día)</span></label>
+                    <input type="number" id="produccionDiaria" value="1200" min="50" max="30000" step="50">
+                    <p class="field-hint">~4 h/día × kWp como estimado rápido</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="toggle-wrap" style="margin-top:6px;padding:12px 14px;background:#f0f7ff;border:1px solid rgba(14,90,168,.2);border-radius:12px">
+                <input type="checkbox" id="aplicaDeduccion">
+                <label for="aplicaDeduccion" style="color:#0d2d52;font-size:.93rem">
+                  Aplicar deducción fiscal inmediata · <strong>Art. 34-XI LISR</strong>
+                  <span style="display:block;font-weight:400;font-size:.8rem;color:var(--muted);margin-top:2px">ISR 30% sobre inversión total — equipo de almacenamiento de energía eficiente</span>
+                </label>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn btn--outline" onclick="prevStep(3)">&larr; Atrás</button>
+                <button class="btn btn--primary btn--calc" onclick="calcular()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="pointer-events:none"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+                  Calcular mi ahorro BESS
+                </button>
+              </div>
+            </div>
+
+          </div><!-- /form-card -->
+        </div><!-- /left col -->
+
+        <!-- ── Right: Results ── -->
+        <div id="resultsColumn">
+
+          <!-- Placeholder -->
+          <div class="results-placeholder" id="resultsPlaceholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#0E5AA8" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <p style="font-size:1rem;font-weight:700;color:#0d2d52;margin-bottom:6px">Tus resultados aparecerán aquí</p>
+            <p style="font-size:.88rem;margin:0">Completa los 3 pasos del formulario<br>y presiona <strong>Calcular</strong></p>
+          </div>
+
+          <!-- Results panel (hidden until calculate) -->
+          <div class="results-panel" id="resultsPanel">
+            <h2 style="font-size:1.25rem;color:#0d2d52;margin:0 0 4px" id="resTitulo">Resultados para tu instalación</h2>
+            <p style="font-size:.86rem;color:var(--muted);margin:0 0 18px" id="resSubtitulo"></p>
+
+            <!-- Solar bonus band -->
+            <div class="solar-bonus-band" id="solarBonusBand">
+              <span class="solar-bonus-band__icon">&#9728;</span>
+              <p><strong id="solarBonusValor"></strong> MXN/mes adicionales</p>
+              <p>al elevar el autoconsumo solar del 60% al 85% con el BESS.</p>
+            </div>
+
+            <!-- KPI grid -->
+            <div class="kpi-grid">
+              <div class="kpi">
+                <div class="kpi__label">BESS requerido</div>
+                <div class="kpi__value" id="kpiBESSPot">— kW</div>
+                <div class="kpi__sub" id="kpiBESSEn">— kWh</div>
+              </div>
+              <div class="kpi kpi--accent">
+                <div class="kpi__label">Ahorro mensual</div>
+                <div class="kpi__value" id="kpiAhorroMes">— MXN</div>
+                <div class="kpi__sub" id="kpiAhorroMesSub"></div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Inversión estimada</div>
+                <div class="kpi__value" id="kpiInversion">— MXN</div>
+                <div class="kpi__sub" id="kpiInversionSub">sin IVA · BESS + BOS instalado</div>
+              </div>
+              <div class="kpi kpi--accent">
+                <div class="kpi__label">Recuperación</div>
+                <div class="kpi__value" id="kpiPayback">— meses</div>
+                <div class="kpi__sub" id="kpiPaybackSub"></div>
+              </div>
+              <div class="kpi" style="grid-column:span 2">
+                <div class="kpi__label">Ahorro acumulado 10 años</div>
+                <div class="kpi__value" id="kpiAhorro10">— MXN</div>
+                <div class="kpi__sub" id="kpiROI"></div>
+              </div>
+            </div>
+
+            <!-- Period breakdown (advanced mode only) -->
+            <div id="breakdownWrap" style="display:none;margin-bottom:20px">
+              <p class="chart-label">Desglose de ahorro por período tarifario</p>
+              <table class="breakdown-table">
+                <thead>
+                  <tr><th>Período</th><th>Reducción (kW)</th><th>Cargo ($/kW·mes)</th><th>Ahorro mensual</th><th>% del total</th></tr>
+                </thead>
+                <tbody id="breakdownBody"></tbody>
+              </table>
+            </div>
+
+            <!-- Charts -->
+            <div class="chart-wrap">
+              <p class="chart-label" id="chartDemandaLabel">Perfil de demanda: antes vs. después</p>
+              <div class="chart-canvas-wrap"><canvas id="chartDemanda"></canvas></div>
+            </div>
+            <div class="chart-wrap">
+              <p class="chart-label">Recuperación acumulada de la inversión</p>
+              <div class="chart-canvas-wrap"><canvas id="chartROI"></canvas></div>
+            </div>
+
+            <p class="disclaimer">&#9432; Estimación indicativa basada en tarifas CFE publicadas y parámetros estándar de mercado. El valor real depende de tu perfil de carga, negociación de tarifa, y condiciones de instalación. Solicita un estudio técnico-financiero detallado a VMS Energy.</p>
+
+            <!-- WhatsApp CTA -->
+            <div class="results-cta">
+              <a id="btnWhatsapp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.845L0 24l6.336-1.503A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.369l-.359-.213-3.762.892.946-3.656-.234-.375A9.818 9.818 0 1 1 12 21.818z"/></svg>
+                Enviar resultados a un especialista VMS
+              </a>
+              <p style="text-align:center;font-size:.8rem;color:var(--muted);margin:10px 0 0">O llámanos: <a href="tel:+523338130739" style="color:var(--concept-primary);font-weight:700">+52 33 3813 0739</a></p>
+            </div>
+
+          </div><!-- /results-panel -->
+        </div><!-- /right col -->
+
+      </div><!-- /calc-grid -->
+    </div>
+  </section>
+
+  <!-- ── Info band ── -->
+  <section style="padding:48px 0;background:#fff">
+    <div class="container">
+      <h2 style="font-size:clamp(22px,2.8vw,30px);color:#0d2d52;margin:0 0 8px">¿Cómo funciona el peak-shaving con BESS?</h2>
+      <p style="color:var(--muted);margin:0 0 32px;max-width:760px">En tarifa GDMTH, CFE factura el cargo de demanda sobre el kW máximo registrado en un intervalo de 15 minutos durante el mes. El BESS se descarga justo en esos picos para reducir ese registro.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+        <div style="background:var(--soft);border:1px solid rgba(14,90,168,.12);border-radius:14px;padding:20px">
+          <div style="font-size:2rem;margin-bottom:8px">&#127381;</div>
+          <strong style="color:#0d2d52;display:block;margin-bottom:6px">Detección de pico</strong>
+          <p style="color:var(--muted);font-size:.9rem;margin:0;line-height:1.5">El BMS del BESS monitorea la demanda en tiempo real e identifica el inicio de un evento de pico.</p>
+        </div>
+        <div style="background:var(--soft);border:1px solid rgba(14,90,168,.12);border-radius:14px;padding:20px">
+          <div style="font-size:2rem;margin-bottom:8px">&#9889;</div>
+          <strong style="color:#0d2d52;display:block;margin-bottom:6px">Descarga del BESS</strong>
+          <p style="color:var(--muted);font-size:.9rem;margin:0;line-height:1.5">El inversor bidireccional inyecta potencia de las baterías para recortar el pico antes de que CFE lo registre.</p>
+        </div>
+        <div style="background:var(--soft);border:1px solid rgba(14,90,168,.12);border-radius:14px;padding:20px">
+          <div style="font-size:2rem;margin-bottom:8px">&#128200;</div>
+          <strong style="color:#0d2d52;display:block;margin-bottom:6px">Recarga en valle</strong>
+          <p style="color:var(--muted);font-size:.9rem;margin:0;line-height:1.5">Durante horas de baja demanda (madrugada o solar) las baterías se recargan para el siguiente ciclo.</p>
+        </div>
+        <div style="background:var(--soft);border:1px solid rgba(14,90,168,.12);border-radius:14px;padding:20px">
+          <div style="font-size:2rem;margin-bottom:8px">&#128176;</div>
+          <strong style="color:#0d2d52;display:block;margin-bottom:6px">Factura reducida</strong>
+          <p style="color:var(--muted);font-size:.9rem;margin:0;line-height:1.5">CFE registra una demanda máxima menor y el cargo mensual cae de forma inmediata y sostenida.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px;padding:18px 22px;background:linear-gradient(90deg,#0b2344,#0E5AA8);border-radius:14px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px">
+        <div>
+          <p style="color:#9fcbff;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:0 0 4px">¿Quieres un estudio detallado?</p>
+          <p style="color:#fff;font-size:1.05rem;font-weight:700;margin:0">VMS Energy dimensiona y cotiza tu BESS con perfil de carga real</p>
+        </div>
+        <a href="confiabilidad-electrica-industrial.html#bess" style="flex-shrink:0;display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0E5AA8;font-weight:700;border-radius:12px;padding:11px 20px;text-decoration:none;font-size:.95rem">
+          Ver soluciones BESS &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main><!-- /main -->
+
+  <!-- ── Footer ── -->
+  <footer id="footer" class="foot" aria-label="Pie de página corporativo">
+    <div class="container">
+      <div class="foot-grid">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+          </div>
+          <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ingeniería, suministro e instalación de sistemas BESS y soluciones de confiabilidad eléctrica para la industria.</p>
+          <div style="display:flex;gap:14px;margin-top:14px">
+            <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 style="color:#fff;margin:0 0 10px">Contáctanos</h4>
+          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+            <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
+            <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
+            <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff;margin:0 0 10px">Herramientas &amp; Recursos</h4>
+          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
+            <li><a href="calculadora-ahorro-bess-gdmth.html" style="color:#4aa3ff;font-weight:700;text-decoration:none">&#9889; Calculadora BESS Peak-Shaving</a></li>
+            <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad Eléctrica UPS/BESS</a></li>
+            <li><a href="lp-estudios-electricos-industriales.html" style="color:#cbd5e1;text-decoration:none">Estudios Eléctricos</a></li>
+            <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog técnico</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="foot-divider">
+      <p class="foot-copy">&copy; 2025 VMS Energy. Todos los derechos reservados. &bull; <a href="aviso-privacidad.html" style="color:#64748b;text-decoration:none">Aviso de Privacidad</a></p>
+    </div>
+  </footer>
+
+  <!-- Sticky WA -->
+  <a href="https://wa.me/523338130739?text=Hola%20VMS%20Energy%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20sistema%20BESS" target="_blank" rel="noopener noreferrer" class="sticky-actions__btn sticky-actions__btn--right" aria-label="WhatsApp VMS Energy" style="position:fixed;bottom:18px;right:14px;z-index:70">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.845L0 24l6.336-1.503A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.369l-.359-.213-3.762.892.946-3.656-.234-.375A9.818 9.818 0 1 1 12 21.818z"/></svg>
+  </a>
+
+  <!-- ── Scripts ── -->
+  <script>
+    /* ── State ── */
+    let currentStep = 1;
+    let selectedTariff = 'GDMTH';
+    let chartDemanda = null, chartROI = null;
+    let modoAvanzadoActivo = false;
+
+    /* ── Catálogo de productos BESS (Geolis + Livoltek) ── */
+    const CATALOGO_BESS = [
+      { modelo:'GOC125-241',    marca:'Geolis',   kW:125,   kWh:241,    formato:'Gabinete compacto',       duracion:'~2 h @ 100 kW' },
+      { modelo:'GOC250-522',    marca:'Geolis',   kW:250,   kWh:522,    formato:'Multi-gabinete modular',  duracion:'~2 h @ 250 kW' },
+      { modelo:'LV-500-1MWh',   marca:'Livoltek', kW:500,   kWh:1000,   formato:'Contenedor compacto',     duracion:'~2 h @ 500 kW' },
+      { modelo:'GOC1000-2000',  marca:'Geolis',   kW:1000,  kWh:2000,   formato:'Contenedor 20 ft',        duracion:'~2 h @ 1 MW'   },
+      { modelo:'LV-2MW-4MWh',   marca:'Livoltek', kW:2000,  kWh:4000,   formato:'2 contenedores 20 ft',    duracion:'~2 h @ 2 MW'   },
+      { modelo:'LV-3MW-6MWh',   marca:'Livoltek', kW:3000,  kWh:6000,   formato:'3 contenedores 20 ft',    duracion:'~2 h @ 3 MW'   },
+      { modelo:'LV-5MW-10MWh',  marca:'Livoltek', kW:5000,  kWh:10000,  formato:'5 contenedores 20 ft',    duracion:'~2 h @ 5 MW'   },
+    ];
+
+    /* Encuentra la configuración estándar mínima que cubre kWReq y kWhReq.
+       Si ninguna unidad sola alcanza, usa múltiplos de la que mejor ajusta. */
+    function encontrarConfigStandard(kWReq, kWhReq) {
+      let mejor = null;
+      let menorExceso = Infinity;
+      for (const prod of CATALOGO_BESS) {
+        const n      = Math.max(Math.ceil(kWReq / prod.kW), Math.ceil(kWhReq / prod.kWh));
+        const totKW  = n * prod.kW;
+        const totKWh = n * prod.kWh;
+        const exceso = (totKWh - kWhReq) / kWhReq; // exceso relativo de kWh
+        if (exceso < menorExceso) {          // siempre cubre por construcción
+          menorExceso = exceso;
+          mejor = { ...prod, n, totKW, totKWh, exceso };
+        }
+      }
+      return mejor;
+    }
+
+    /* ── Tariff selection ── */
+    function selectTariff(el) {
+      document.querySelectorAll('.tariff-card').forEach(c => c.classList.remove('is-selected'));
+      el.classList.add('is-selected');
+      selectedTariff = el.dataset.tariff;
+      document.getElementById('cargoDemanda').value = el.dataset.rate;
+      // Auto-enable advanced mode for GDMTH
+      if (selectedTariff === 'GDMTH' && !modoAvanzadoActivo) {
+        const cb = document.getElementById('modoAvanzado');
+        cb.checked = true;
+        toggleAvanzado(cb);
+      }
+    }
+
+    /* ── Advanced mode toggle ── */
+    function toggleAvanzado(cb) {
+      modoAvanzadoActivo = cb.checked;
+      document.querySelectorAll('.avanzado-fields').forEach(el => el.classList.toggle('is-visible', cb.checked));
+      document.getElementById('cargoSimpleWrap').style.display  = cb.checked ? 'none' : '';
+      document.getElementById('costoEnergiaWrap').style.display = cb.checked ? 'none' : '';
+      if (cb.checked) {
+        const dMax = document.getElementById('demandaMax').value;
+        const dObj = document.getElementById('demandaObj').value;
+        if (dMax) {
+          document.getElementById('dMaxPunta').value      = dMax;
+          document.getElementById('dMaxIntermedio').value = Math.round(parseFloat(dMax) * 0.9);
+          document.getElementById('dMaxBase').value       = Math.round(parseFloat(dMax) * 0.6);
+        }
+        if (dObj) {
+          document.getElementById('dObjPunta').value      = dObj;
+          document.getElementById('dObjIntermedio').value = dObj;
+          document.getElementById('dObjBase').value       = Math.round(parseFloat(dObj) * 0.95);
+        }
+      }
+    }
+
+    /* ── Step navigation ── */
+    function goStep(n) {
+      if (n > currentStep) { /* only advance if validated */
+        for (let i = currentStep; i < n; i++) {
+          if (!validateStep(i)) return;
+          markDone(i);
+        }
+      }
+      showStep(n);
+    }
+    function nextStep(n) {
+      if (!validateStep(n)) return;
+      markDone(n);
+      showStep(n + 1);
+    }
+    function prevStep(n) {
+      showStep(n - 1);
+    }
+    function showStep(n) {
+      currentStep = n;
+      document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('is-active'));
+      document.getElementById('step' + n).classList.add('is-active');
+      document.querySelectorAll('.step-pill').forEach(p => {
+        p.classList.remove('is-active');
+        if (parseInt(p.dataset.step) === n) p.classList.add('is-active');
+      });
+      document.getElementById('progressFill').style.width = (n / 3 * 100) + '%';
+    }
+    function markDone(n) {
+      const pill = document.querySelector(`.step-pill[data-step="${n}"]`);
+      if (pill) { pill.classList.remove('is-active'); pill.classList.add('is-done'); }
+    }
+
+    /* ── Validation ── */
+    /* ── Validation ── */
+    function validateStep(n) {
+      if (n === 1) {
+        const max = parseFloat(document.getElementById('demandaMax').value);
+        const obj = parseFloat(document.getElementById('demandaObj').value);
+        if (!max || max < 50) { alert('Captura una demanda máxima válida (mín. 50 kW)'); return false; }
+        if (!obj || obj >= max) { alert('La demanda objetivo debe ser menor a la demanda máxima'); return false; }
+        if (modoAvanzadoActivo) {
+          const p = parseFloat(document.getElementById('dMaxPunta').value);
+          const po = parseFloat(document.getElementById('dObjPunta').value);
+          if (!p || !po || po >= p) { alert('En modo avanzado: la demanda objetivo de Punta debe ser menor a la demanda actual de Punta'); return false; }
+        }
+      }
+      if (n === 2) {
+        if (!modoAvanzadoActivo) {
+          const h = parseFloat(document.getElementById('horasPico').value);
+          const c = parseFloat(document.getElementById('cargoDemanda').value);
+          if (!h || h < 1) { alert('Captura las horas de pico (mínimo 1 hora)'); return false; }
+          if (!c || c < 50) { alert('Captura el cargo por demanda'); return false; }
+        }
+      }
+      return true;
+    }
+
+    /* ── Solar toggle ── */
+    function toggleSolar(cb) {
+      document.getElementById('solarFields').classList.toggle('is-visible', cb.checked);
+    }
+
+    /* ── Format helpers ── */
+    function fmt(n, dec = 0) {
+      try {
+        return (n || 0).toLocaleString('es-MX', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+      } catch(e) {
+        return (n || 0).toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+    }
+    function fmtMXN(n) {
+      return '$' + fmt(n) + ' MXN';
+    }
+
+    /* ── Main calculation ── */
+    function calcular() {
+      if (!validateStep(3)) return;
+
+      const avanzado = modoAvanzadoActivo;
+      const cEnergia = parseFloat(document.getElementById('costoEnergia').value) || 2.20;
+      const solar    = document.getElementById('tieneSolar').checked;
+      const kWhDia   = solar ? (parseFloat(document.getElementById('produccionDiaria').value) || 0) : 0;
+
+      let bessPot, bessEn, redDemanda, dMax, dObj;
+      let ahorroMesDemanda = 0;
+      let savingsBreakdown = [];
+
+      if (avanzado) {
+        const periods = [
+          { name:'Punta',      color:'#dc2626', dMax:parseFloat(document.getElementById('dMaxPunta').value),      dObj:parseFloat(document.getElementById('dObjPunta').value),      cargo:parseFloat(document.getElementById('cargoPunta').value),      horas:parseFloat(document.getElementById('horasPunta').value),      dias:parseFloat(document.getElementById('diasPunta').value) },
+          { name:'Intermedio', color:'#d97706', dMax:parseFloat(document.getElementById('dMaxIntermedio').value), dObj:parseFloat(document.getElementById('dObjIntermedio').value), cargo:parseFloat(document.getElementById('cargoIntermedio').value), horas:parseFloat(document.getElementById('horasIntermedio').value), dias:parseFloat(document.getElementById('diasIntermedio').value) },
+          { name:'Base',       color:'#16a34a', dMax:parseFloat(document.getElementById('dMaxBase').value),       dObj:parseFloat(document.getElementById('dObjBase').value),       cargo:parseFloat(document.getElementById('cargoBase').value),       horas:parseFloat(document.getElementById('horasBase').value),       dias:parseFloat(document.getElementById('diasBase').value) },
+        ];
+        const punta = periods[0];
+        dMax = punta.dMax; dObj = punta.dObj;
+        redDemanda = Math.max(0, punta.dMax - punta.dObj);
+        bessPot    = redDemanda * 1.1;
+        bessEn     = bessPot * punta.horas * 1.2;
+        periods.forEach(p => {
+          const red   = Math.max(0, p.dMax - p.dObj);
+          const ahorro = red * p.cargo;
+          ahorroMesDemanda += ahorro;
+          savingsBreakdown.push({ ...p, red, ahorro });
+        });
+        /* Render breakdown table */
+        const tbody = document.getElementById('breakdownBody');
+        tbody.innerHTML = '';
+        const total = ahorroMesDemanda;
+        const clases = ['bd-punta','bd-intermedio','bd-base'];
+        savingsBreakdown.forEach((p, i) => {
+          const pct = total > 0 ? fmt(p.ahorro / total * 100, 1) : '0.0';
+          tbody.innerHTML += '<tr class="' + clases[i] + '"><td>' + p.name + '</td><td>' + fmt(p.red) + ' kW</td><td>' + fmtMXN(p.cargo) + '</td><td>' + fmtMXN(p.ahorro) + '</td><td>' + pct + '%</td></tr>';
+        });
+        tbody.innerHTML += '<tr class="bd-total"><td>Total</td><td>—</td><td>—</td><td>' + fmtMXN(total) + '</td><td>100%</td></tr>';
+        document.getElementById('breakdownWrap').style.display = 'block';
+        document.getElementById('chartDemandaLabel').textContent = 'Demanda por período: antes vs. después';
+      } else {
+        dMax = parseFloat(document.getElementById('demandaMax').value);
+        dObj = parseFloat(document.getElementById('demandaObj').value);
+        const hPico = parseFloat(document.getElementById('horasPico').value) || 4;
+        const cargo = parseFloat(document.getElementById('cargoDemanda').value) || 420;
+        redDemanda = dMax - dObj;
+        bessPot    = redDemanda * 1.1;
+        bessEn     = bessPot * hPico * 1.2;
+        ahorroMesDemanda = redDemanda * cargo;
+        document.getElementById('breakdownWrap').style.display = 'none';
+        document.getElementById('chartDemandaLabel').textContent = 'Perfil de demanda: antes vs. después';
+      }
+
+      /* Ajuste a configuración estándar de producto */
+      const configStd = encontrarConfigStandard(bessPot, bessEn);
+
+      /* Energy rates (advanced vs simple) */
+      const costoPuntaEn      = avanzado ? (parseFloat(document.getElementById('costoPuntaEnergia').value)      || 3.80) : cEnergia;
+      const costoIntermedioEn = avanzado ? (parseFloat(document.getElementById('costoIntermedioEnergia').value) || 2.10) : cEnergia;
+      const costoBaseEn       = avanzado ? (parseFloat(document.getElementById('costoBaseEnergia').value)       || 1.40) : cEnergia;
+
+      /* Solar bonus — uses intermedio rate (solar genera en horario diurno = intermedio) */
+      let bonusMesSolar = 0;
+      if (solar && kWhDia > 0) {
+        const tasaSolar = avanzado ? costoIntermedioEn : cEnergia;
+        bonusMesSolar = kWhDia * 30 * 0.25 * tasaSolar;
+      }
+
+      /* Energy arbitrage — carga en base (barato), descarga en punta (caro), η=90% */
+      let arbitrajeMes = 0;
+      if (avanzado) {
+        const diasPuntaVal   = parseFloat(document.getElementById('diasPunta').value) || 22;
+        const diferencial    = Math.max(0, costoPuntaEn - costoBaseEn);
+        arbitrajeMes = bessEn * 0.90 * diferencial * diasPuntaVal;
+      }
+
+      /* Financials — inversión basada en estimación EPC + margen de contribución 40%
+         Costo EPC referencia C&I Geolis/Livoltek México 2025: ~$4,500 MXN/kWh
+         Precio cliente = EPC / (1 − MC) = $4,500 / 0.60 = $7,500 MXN/kWh          */
+      const costoEPCporkWh   = 4500;           // MXN/kWh — equipo + BOS + instalación + ing.
+      const margenContrib    = 0.40;            // 40% margen de contribución
+      const precioClientekWh = costoEPCporkWh / (1 - margenContrib); // $7,500 MXN/kWh
+      const kWhInversion     = configStd ? configStd.totKWh : bessEn;
+      const inversionTotal   = kWhInversion * precioClientekWh;
+      const ahorroMesTotal = ahorroMesDemanda + bonusMesSolar + arbitrajeMes;
+      /* Deducción fiscal Art. 34-XI LISR — 100% deducible, ISR 30% */
+      const aplicaDeduccion = document.getElementById('aplicaDeduccion').checked;
+      const tasaISR         = 0.30;
+      const ahorroFiscal    = aplicaDeduccion ? inversionTotal * tasaISR : 0;
+      const inversionNeta   = inversionTotal - ahorroFiscal;   // costo real para el cliente
+
+      const paybackMeses   = inversionNeta / ahorroMesTotal;
+      const ahorroAnual    = ahorroMesTotal * 12;
+      const ahorro10       = ahorroAnual * 10;
+      const roi10          = ((ahorro10 - inversionNeta) / inversionNeta) * 100;
+
+      /* Add arbitrage row to breakdown table when advanced */
+      if (avanzado && arbitrajeMes > 0) {
+        const tbody = document.getElementById('breakdownBody');
+        const diferencial = costoPuntaEn - costoBaseEn;
+        tbody.innerHTML += '<tr style="background:#faf5ff"><td style="color:#7c3aed;font-weight:700">Arbitraje</td><td>' + fmt(bessEn, 0) + ' kWh×0.9</td><td>$' + fmt(diferencial, 2) + '/kWh dif.</td><td>' + fmtMXN(arbitrajeMes) + '</td><td>—</td></tr>';
+        /* Update total row */
+        const rows = tbody.querySelectorAll('tr');
+        const totalRow = rows[rows.length - 1];
+        if (totalRow && totalRow.classList.contains('bd-total')) {
+          totalRow.cells[3].textContent = fmtMXN(ahorroMesTotal - bonusMesSolar);
+        }
+      }
+
+      /* KPIs */
+      document.getElementById('resTitulo').textContent = 'Resultados — Tarifa ' + selectedTariff + (avanzado ? ' · Desglose por período' : '');
+      document.getElementById('resSubtitulo').textContent = avanzado
+        ? 'Peak-shaving · Arbitraje energético' + (solar ? ' · Solar' : '')
+        : 'Reducción: ' + fmt(redDemanda) + ' kW (' + fmt(dMax) + ' → ' + fmt(dObj) + ' kW)';
+
+      if (configStd) {
+        const unidades = configStd.n > 1 ? configStd.n + '× ' + configStd.modelo : configStd.modelo;
+        document.getElementById('kpiBESSPot').textContent = fmt(configStd.totKW, 0) + ' kW — ' + unidades;
+        document.getElementById('kpiBESSEn').textContent  = fmt(configStd.totKWh, 0) + ' kWh · ' + configStd.formato;
+        document.getElementById('kpiBESSPot').title = 'Calculado: ' + fmt(bessPot,0) + ' kW → ajustado a estándar';
+        document.getElementById('kpiBESSEn').title  = 'Calculado: ' + fmt(bessEn,0) + ' kWh → ajustado a estándar';
+      } else {
+        document.getElementById('kpiBESSPot').textContent = fmt(bessPot, 0) + ' kW';
+        document.getElementById('kpiBESSEn').textContent  = fmt(bessEn, 0) + ' kWh almacenamiento';
+      }
+      document.getElementById('kpiAhorroMes').textContent = fmtMXN(ahorroMesTotal);
+
+      let subAhorro = avanzado ? 'Demanda: ' + fmtMXN(ahorroMesDemanda) : 'Demanda: ' + fmtMXN(ahorroMesDemanda);
+      if (arbitrajeMes > 0) subAhorro += ' + Arbitraje: ' + fmtMXN(arbitrajeMes);
+      if (bonusMesSolar > 0) subAhorro += ' + Solar: ' + fmtMXN(bonusMesSolar);
+      document.getElementById('kpiAhorroMesSub').textContent = subAhorro;
+      document.getElementById('kpiInversion').textContent = fmtMXN(aplicaDeduccion ? inversionNeta : inversionTotal);
+      if (aplicaDeduccion) {
+        document.getElementById('kpiInversionSub').innerHTML =
+          'sin IVA · con deducción Art. 34-XI LISR · <span style="color:#16a34a;font-weight:700">Ahorro fiscal ISR: ' + fmtMXN(ahorroFiscal) + '</span>' +
+          '<br><span style="color:var(--muted)">Precio bruto: ' + fmtMXN(inversionTotal) + '</span>';
+      } else {
+        document.getElementById('kpiInversionSub').textContent = 'sin IVA · BESS + BOS instalado';
+      }
+      document.getElementById('kpiPayback').textContent = fmt(paybackMeses, 1) + ' meses';
+      document.getElementById('kpiPaybackSub').textContent = '≈ ' + fmt(paybackMeses / 12, 1) + ' años' + (aplicaDeduccion ? ' · incl. beneficio fiscal' : '');
+      document.getElementById('kpiAhorro10').textContent = fmtMXN(ahorro10);
+      document.getElementById('kpiROI').textContent = 'ROI 10 años: ' + fmt(roi10, 0) + '% — Ganancia neta: ' + fmtMXN(ahorro10 - inversionTotal);
+
+      if (solar && bonusMesSolar > 0) {
+        document.getElementById('solarBonusValor').textContent = fmt(bonusMesSolar, 0);
+        document.getElementById('solarBonusBand').classList.add('is-visible');
+      } else {
+        document.getElementById('solarBonusBand').classList.remove('is-visible');
+      }
+
+      /* Charts */
+      if (avanzado) {
+        renderChartDemandaPeriodos(savingsBreakdown);
+      } else {
+        renderChartDemanda(dMax, dObj, bessPot);
+      }
+      renderChartROI(inversionTotal, ahorroMesTotal);
+
+      /* WhatsApp */
+      let waBreakdown = '';
+      if (avanzado && savingsBreakdown.length) {
+        waBreakdown = savingsBreakdown.map(p => '  • ' + p.name + ': -' + fmt(p.red) + ' kW → ' + fmtMXN(p.ahorro) + '/mes').join('\n') + '\n';
+      }
+      const msg = encodeURIComponent(
+        '🔋 Calculadora BESS VMS Energy\n' +
+        '─────────────────────────────\n' +
+        '📋 Tarifa CFE: ' + selectedTariff + (avanzado ? ' (desglose por período)' : '') + '\n' +
+        '⚡ Reducción pico punta: ' + fmt(redDemanda) + ' kW (' + fmt(dMax) + '→' + fmt(dObj) + ' kW)\n' +
+        (waBreakdown ? '📊 Ahorro por período:\n' + waBreakdown : '') +
+        '🔌 BESS requerido: ' + (configStd ? (configStd.n > 1 ? configStd.n + '× ' : '') + configStd.modelo + ' (' + fmt(configStd.totKW,0) + ' kW / ' + fmt(configStd.totKWh,0) + ' kWh · ' + configStd.formato + ')' : fmt(bessPot,0) + ' kW / ' + fmt(bessEn,0) + ' kWh') + '\n' +
+        '💰 Ahorro mensual total: ' + fmtMXN(ahorroMesTotal) + '\n' +
+        '🏗️ Inversión estimada: ' + fmtMXN(inversionTotal) + '\n' +
+        '📅 Payback: ' + fmt(paybackMeses, 1) + ' meses\n' +
+        '📈 Ahorro 10 años: ' + fmtMXN(ahorro10) + '\n' +
+        (arbitrajeMes > 0 ? '⚡ Arbitraje energético: ' + fmtMXN(arbitrajeMes) + '/mes\n' : '') +
+        (solar ? '☀️ Bonus solar: ' + fmtMXN(bonusMesSolar) + '/mes\n' : '') +
+        '─────────────────────────────\n' +
+        'Quisiera que un especialista VMS me contacte para un estudio detallado.'
+      );
+      document.getElementById('btnWhatsapp').href = 'https://wa.me/523338130739?text=' + msg;
+
+      document.getElementById('resultsPlaceholder').style.display = 'none';
+      document.getElementById('resultsPanel').classList.add('is-visible');
+      if (window.innerWidth < 820) {
+        document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /* ── Chart: Demand by period (advanced) ── */
+    function renderChartDemandaPeriodos(breakdown) {
+      const ctx = document.getElementById('chartDemanda').getContext('2d');
+      if (chartDemanda) chartDemanda.destroy();
+      chartDemanda = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: breakdown.map(p => p.name),
+          datasets: [
+            { label: 'Demanda actual (kW)',   data: breakdown.map(p => p.dMax), backgroundColor: breakdown.map(p => p.color + 'bb'), borderColor: breakdown.map(p => p.color), borderWidth: 1.5, borderRadius: 5 },
+            { label: 'Demanda objetivo (kW)', data: breakdown.map(p => p.dObj), backgroundColor: 'rgba(14,90,168,.55)', borderColor: '#0E5AA8', borderWidth: 1.5, borderRadius: 5 }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { labels: { font: { size: 11 }, color: '#0d2d52' } },
+            tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + ' kW' } }
+          },
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'kW', color: '#4B647F', font: { size: 11 } }, ticks: { color: '#4B647F' }, grid: { color: 'rgba(23,44,81,.08)' } },
+            x: { ticks: { color: '#0d2d52', font: { size: 11, weight: '700' } }, grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    /* ── Chart: Demand profile (simple) ── */
+    function renderChartDemanda(dMax, dObj, bessPot) {
+      const ctx = document.getElementById('chartDemanda').getContext('2d');
+      if (chartDemanda) chartDemanda.destroy();
+      chartDemanda = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Demanda actual', 'Demanda con BESS', 'Potencia BESS'],
+          datasets: [{
+            data: [dMax, dObj, bessPot],
+            backgroundColor: ['rgba(220,38,38,.75)', 'rgba(14,90,168,.8)', 'rgba(16,163,127,.8)'],
+            borderColor: ['#dc2626', '#0E5AA8', '#10a37f'],
+            borderWidth: 1.5,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'kW', color: '#4B647F', font: { size: 11 } }, ticks: { color: '#4B647F' }, grid: { color: 'rgba(23,44,81,.08)' } },
+            x: { ticks: { color: '#0d2d52', font: { size: 11, weight: '700' } }, grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    /* ── Chart: ROI timeline ── */
+    function renderChartROI(inversion, ahorroMes) {
+      const ctx = document.getElementById('chartROI').getContext('2d');
+      if (chartROI) chartROI.destroy();
+      const months = 60;
+      const labels = Array.from({ length: months + 1 }, (_, i) => i === 0 ? 'Inicio' : 'M' + i);
+      const acumulado = Array.from({ length: months + 1 }, (_, i) => Math.round(ahorroMes * i));
+      const invLine   = Array(months + 1).fill(Math.round(inversion));
+      chartROI = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            { label: 'Ahorro acumulado', data: acumulado, borderColor: '#10a37f', backgroundColor: 'rgba(16,163,127,.12)', borderWidth: 2, fill: true, pointRadius: 0, tension: 0.3 },
+            { label: 'Inversión', data: invLine, borderColor: '#dc2626', borderDash: [6, 4], borderWidth: 1.5, pointRadius: 0, fill: false }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { labels: { font: { size: 11 }, color: '#0d2d52' } },
+            tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': $' + ctx.parsed.y.toLocaleString('es-MX') } }
+          },
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'MXN', color: '#4B647F', font: { size: 11 } }, ticks: { color: '#4B647F', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: 'rgba(23,44,81,.08)' } },
+            x: { ticks: { color: '#4B647F', font: { size: 10 }, maxTicksLimit: 13 }, grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    /* ── Init ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      /* ── Checkbox: addEventListener is more reliable than inline handlers in Safari ── */
+      const cbAvanzado = document.getElementById('modoAvanzado');
+      const cbSolar    = document.getElementById('tieneSolar');
+      if (cbAvanzado) {
+        /* 'change' via addEventListener is reliable in Safari iOS; inline onchange attribute is not */
+        cbAvanzado.addEventListener('change', function() { toggleAvanzado(this); });
+      }
+      if (cbSolar) {
+        cbSolar.addEventListener('change', function() { toggleSolar(this); });
+      }
+      /* ── Initial tariff selection ── */
+      const gdmthCard = document.querySelector('.tariff-card[data-tariff="GDMTH"]');
+      if (gdmthCard) selectTariff(gdmthCard);
+    });
+  </script>
+</body>
+</html>
