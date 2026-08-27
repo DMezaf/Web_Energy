@@ -1,7 +1,17 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mantenimiento de Transformadores en Operaci&oacute;n: Diagn&oacute;stico Predictivo | VMS Energy</title>
@@ -22,13 +32,12 @@
   <meta name="twitter:title" content="Mantenimiento Predictivo de Transformadores | VMS Energy" />
   <meta name="twitter:description" content="An&aacute;lisis de aceite diel&eacute;ctrico, termograf&iacute;a IR y Megger para extender la vida &uacute;til de transformadores industriales." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.png');
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('assets/img/Especialidades_servicios.webp');
     }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
@@ -38,18 +47,13 @@
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
     .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
     .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
-    .btn--primary{background:var(--cobalt);color:#fff}
-    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
     .foot-social__link{display:inline-flex;width:26px;height:26px}
@@ -60,12 +64,9 @@
     @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
     .foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:680px){}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
-    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
-    .hero__meta{margin-top:18px;color:#bcd0ee;font-size:.92rem;display:flex;gap:14px;flex-wrap:wrap}
-    .hero__meta span{display:inline-flex;align-items:center;gap:6px}
 
     .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
     .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
@@ -150,149 +151,264 @@
     @media (max-width:680px){.mobile-phone-sticky{display:flex}}
 
     @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}.life-bar__body{grid-template-columns:1fr}}
-    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding:74px 0 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.life-bar__stage{border-right:0;border-bottom:1px solid rgba(23,44,81,.1)}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding-block: 74px 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.life-bar__stage{border-right:0;border-bottom:1px solid rgba(23,44,81,.1)}}
+  
+    /* Desbordamiento en movil: `.blog-layout` ya baja a una columna en 980 px,
+       pero `1fr` es `minmax(auto,1fr)` y el minimo automatico del articulo es
+       su ancho de contenido minimo. Sin esto, el indice o una tabla ensanchan
+       la pista y la pagina se arrastra de lado. Medido: hasta 781 px en una
+       ventana de 390. */
+    .blog-article{min-width:0}
+    @media (max-width:980px){.blog-layout{grid-template-columns:minmax(0,1fr)}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento de transformadores en operaci&oacute;n","item":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html"}]},{"@type":"BlogPosting","headline":"Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo y extensi&oacute;n de vida &uacute;til","description":"C&oacute;mo extender la vida &uacute;til de transformadores industriales con mantenimiento predictivo: an&aacute;lisis de aceite diel&eacute;ctrico (rigidez, humedad, acidez, DGA), termograf&iacute;a infrarroja, pruebas Megger y criterios de rehabilitaci&oacute;n vs. reemplazo conforme IEC 60422 e IEEE C57.104.","image":"https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/logo.png"}},"datePublished":"2026-05-15","dateModified":"2026-05-15","mainEntityOfPage":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html","articleSection":"Mantenimiento el&eacute;ctrico","keywords":"mantenimiento transformadores, an&aacute;lisis aceite diel&eacute;ctrico, DGA transformadores, rigidez diel&eacute;ctrica, termograf&iacute;a transformadores, Megger, &iacute;ndice polarizaci&oacute;n, tangente delta, rehabilitaci&oacute;n transformadores, IEC 60422, IEEE C57.104, mantenimiento predictivo el&eacute;ctrico M&eacute;xico"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"&iquest;Con qu&eacute; frecuencia se debe analizar el aceite de un transformador?","acceptedAnswer":{"@type":"Answer","text":"La frecuencia depende de la criticidad del equipo y su edad. Como regla general conforme a IEC 60422: transformadores nuevos en los primeros dos a&ntilde;os de operaci&oacute;n, una vez al a&ntilde;o. Transformadores en servicio continuo sin historial de problemas: cada 12&ndash;24 meses. Transformadores con historial de anomal&iacute;as, carga elevada o ambiente agresivo: cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave: frecuencia mensual hasta estabilizar o identificar la falla. En proyectos EPC, VMS Energy recomienda establecer el primer an&aacute;lisis dentro de los 90 d&iacute;as de operaci&oacute;n como valor basal."}},{"@type":"Question","name":"&iquest;Qu&eacute; diferencia hay entre la prueba Megger y el &iacute;ndice de polarizaci&oacute;n?","acceptedAnswer":{"@type":"Answer","text":"La prueba Megger mide la resistencia de aislamiento (en M&Omega; o G&Omega;) aplicando una tensi&oacute;n DC al aislamiento durante 60 segundos. El &iacute;ndice de polarizaci&oacute;n (PI) es la raz&oacute;n entre la lectura a 10 minutos y la lectura a 1 minuto (R10/R1). El PI elimina el efecto de la temperatura y da una imagen del estado del aislamiento: PI &lt; 1.0 indica aislamiento degradado o h&uacute;medo; PI 1.0&ndash;2.0 es marginal; PI &gt; 2.0 es aceptable; PI &gt; 4.0 indica aislamiento en excelente estado. La prueba Megger puntual puede tener un valor alto a&uacute;n con aislamiento da&ntilde;ado si la temperatura es baja; por eso el PI es m&aacute;s confiable."}},{"@type":"Question","name":"&iquest;Cu&aacute;ndo conviene rehabilitar un transformador en lugar de reemplazarlo?","acceptedAnswer":{"@type":"Answer","text":"La rehabilitaci&oacute;n es econ&oacute;micamente justificable cuando el costo del proceso no supera el 60&ndash;70% del precio de un equipo nuevo equivalente, y cuando el diagn&oacute;stico indica que la causa de degradaci&oacute;n es el aceite (no el papel). Si el papel aislante tiene grado de polimerizaci&oacute;n (DP) menor a 200 (que corresponde a &lt;50% de vida &uacute;til restante), la rehabilitaci&oacute;n del aceite no solucionar&aacute; el problema de fondo. El costo de un fallo cat&aacute;strofico no planificado &mdash;paro de producci&oacute;n, da&ntilde;os colaterales, tiempo de reemplazo de emergencia&mdash; tambi&eacute;n debe entrar en el c&aacute;lculo. VMS Energy recomienda el an&aacute;lisis de Costo Total de Propiedad (TCO) como marco de decisi&oacute;n."}},{"@type":"Question","name":"&iquest;Qu&eacute; tan confiable es la termograf&iacute;a para detectar problemas en transformadores?","acceptedAnswer":{"@type":"Answer","text":"La termograf&iacute;a infrarroja es altamente confiable para detectar problemas en elementos externos accesibles: borneras, conexiones de AT y BT, pasatapas (bushings), cambiador de taps, radiadores y conexiones de tierra. Es especialmente &uacute;til porque detecta puntos calientes antes de que produzcan una falla visible. Sin embargo, no puede detectar fallas internas en el n&uacute;cleo o devanados que a&uacute;n no han producido calor suficiente para manifestarse en la superficie. Por eso la termograf&iacute;a es complementaria &mdash;no sustituta&mdash; del DGA y las pruebas el&eacute;ctricas. Combinadas, las tres t&eacute;cnicas cubren la mayor parte del espectro de fallas potenciales."}},{"@type":"Question","name":"&iquest;Qu&eacute; es el grado de polimerizaci&oacute;n (DP) del papel y por qu&eacute; importa?","acceptedAnswer":{"@type":"Answer","text":"El grado de polimerizaci&oacute;n (DP) es el n&uacute;mero promedio de unidades de glucosa en las cadenas de celulosa del papel aislante. El papel nuevo tiene DP entre 1,000 y 1,200. Con el envejecimiento t&eacute;rmico e h&iacute;drico, las cadenas se rompen y el DP disminuye irreversiblemente. A DP = 200 el papel ha perdido aproximadamente el 50% de su resistencia mec&aacute;nica y se considera en estado criti&shy;co; a DP &lt; 150 existe riesgo inminente de ruptura bajo esfuerzos de cortocircuito. El DP no puede recuperarse con ninguna t&eacute;cnica de rehabilitaci&oacute;n; por eso cuando el papel est&aacute; degradado, el &uacute;nico camino real es el reemplazo de la unidad."}},{"@type":"Question","name":"&iquest;Qu&eacute; nivel de rigidez diel&eacute;ctrica del aceite es inaceptable?","acceptedAnswer":{"@type":"Answer","text":"Seg&uacute;n IEC 60422, el valor m&iacute;nimo de rigidez diel&eacute;ctrica (BDV) para aceite en servicio depende del nivel de tensi&oacute;n del transformador. Para equipos de MT (hasta 36 kV): m&iacute;nimo 30 kV/mm para continuar operando, con 40 kV/mm como valor objetivo deseable. Para equipos de AT (72.5 kV y arriba): m&iacute;nimo 50 kV/mm. Si el aceite est&aacute; por debajo de estos l&iacute;mites, debe filtrarse, secarse o reemplazarse antes de que el transformador contin&uacute;e en operaci&oacute;n. Un evento de rigidez &lt; 20 kV/mm es una emergencia que requiere acci&oacute;n inmediata."}},{"@type":"Question","name":"&iquest;Qu&eacute; incluye un programa completo de mantenimiento predictivo para transformadores?","acceptedAnswer":{"@type":"Answer","text":"Un programa integral debe incluir tres niveles: (1) Monitoreo continuo: temperatura del aceite y devanados, nivel de aceite, presi&oacute;n del gas en el conservador y alarma del rel&eacute; Buchholz. (2) Inspecci&oacute;n peri&oacute;dica (semestral/anual): termograf&iacute;a infrarroja en partes externas, prueba Megger e &iacute;ndice de polarizaci&oacute;n, an&aacute;lisis f&iacute;sicoqu&iacute;mico del aceite (rigidez, humedad, acidez, color, tensi&oacute;n interfacial), y an&aacute;lisis DGA. (3) Diagn&oacute;stico profundo (cada 3&ndash;5 a&ntilde;os o ante anomal&iacute;as): tangente delta, respuesta en frecuencia (FRA) para detectar deformaci&oacute;n de devanados, y grado de polimerizaci&oacute;n del papel (DP) por muestreo."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/brand/vms_logo_blue.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Mantenimiento de transformadores en operación","item":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html"}]},{"@type":"BlogPosting","headline":"Mantenimiento de transformadores en operación: diagnóstico predictivo y extensión de vida útil","description":"Cómo extender la vida útil de transformadores industriales con mantenimiento predictivo: análisis de aceite dieléctrico (rigidez, humedad, acidez, DGA), termografía infrarroja, pruebas Megger y criterios de rehabilitación vs. reemplazo conforme IEC 60422 e IEEE C57.104.","image":"https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp","author":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"publisher":{"@type":"Organization","name":"VMS Energy","logo":{"@type":"ImageObject","url":"https://vmsenergy.com/assets/brand/vms_logo_blue.png"}},"datePublished":"2026-05-15","dateModified":"2026-05-15","mainEntityOfPage":"https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html","articleSection":"Mantenimiento eléctrico","keywords":"mantenimiento transformadores, análisis aceite dieléctrico, DGA transformadores, rigidez dieléctrica, termografía transformadores, Megger, índice polarización, tangente delta, rehabilitación transformadores, IEC 60422, IEEE C57.104, mantenimiento predictivo eléctrico México"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Con qué frecuencia se debe analizar el aceite de un transformador?","acceptedAnswer":{"@type":"Answer","text":"La frecuencia depende de la criticidad del equipo y su edad. Como regla general conforme a IEC 60422: transformadores nuevos en los primeros dos años de operación, una vez al año. Transformadores en servicio continuo sin historial de problemas: cada 12–24 meses. Transformadores con historial de anomalías, carga elevada o ambiente agresivo: cada 6 meses. Cuando el DGA muestra tendencia ascendente en cualquier gas clave: frecuencia mensual hasta estabilizar o identificar la falla. En proyectos EPC, VMS Energy recomienda establecer el primer análisis dentro de los 90 días de operación como valor basal."}},{"@type":"Question","name":"¿Qué diferencia hay entre la prueba Megger y el índice de polarización?","acceptedAnswer":{"@type":"Answer","text":"La prueba Megger mide la resistencia de aislamiento (en MΩ o GΩ) aplicando una tensión DC al aislamiento durante 60 segundos. El índice de polarización (PI) es la razón entre la lectura a 10 minutos y la lectura a 1 minuto (R10/R1). El PI elimina el efecto de la temperatura y da una imagen del estado del aislamiento: PI < 1.0 indica aislamiento degradado o húmedo; PI 1.0–2.0 es marginal; PI > 2.0 es aceptable; PI > 4.0 indica aislamiento en excelente estado. La prueba Megger puntual puede tener un valor alto aún con aislamiento dañado si la temperatura es baja; por eso el PI es más confiable."}},{"@type":"Question","name":"¿Cuándo conviene rehabilitar un transformador en lugar de reemplazarlo?","acceptedAnswer":{"@type":"Answer","text":"La rehabilitación es económicamente justificable cuando el costo del proceso no supera el 60–70% del precio de un equipo nuevo equivalente, y cuando el diagnóstico indica que la causa de degradación es el aceite (no el papel). Si el papel aislante tiene grado de polimerización (DP) menor a 200 (que corresponde a <50% de vida útil restante), la rehabilitación del aceite no solucionará el problema de fondo. El costo de un fallo catástrofico no planificado —paro de producción, daños colaterales, tiempo de reemplazo de emergencia— también debe entrar en el cálculo. VMS Energy recomienda el análisis de Costo Total de Propiedad (TCO) como marco de decisión."}},{"@type":"Question","name":"¿Qué tan confiable es la termografía para detectar problemas en transformadores?","acceptedAnswer":{"@type":"Answer","text":"La termografía infrarroja es altamente confiable para detectar problemas en elementos externos accesibles: borneras, conexiones de AT y BT, pasatapas (bushings), cambiador de taps, radiadores y conexiones de tierra. Es especialmente útil porque detecta puntos calientes antes de que produzcan una falla visible. Sin embargo, no puede detectar fallas internas en el núcleo o devanados que aún no han producido calor suficiente para manifestarse en la superficie. Por eso la termografía es complementaria —no sustituta— del DGA y las pruebas eléctricas. Combinadas, las tres técnicas cubren la mayor parte del espectro de fallas potenciales."}},{"@type":"Question","name":"¿Qué es el grado de polimerización (DP) del papel y por qué importa?","acceptedAnswer":{"@type":"Answer","text":"El grado de polimerización (DP) es el número promedio de unidades de glucosa en las cadenas de celulosa del papel aislante. El papel nuevo tiene DP entre 1,000 y 1,200. Con el envejecimiento térmico e hídrico, las cadenas se rompen y el DP disminuye irreversiblemente. A DP = 200 el papel ha perdido aproximadamente el 50% de su resistencia mecánica y se considera en estado critico; a DP < 150 existe riesgo inminente de ruptura bajo esfuerzos de cortocircuito. El DP no puede recuperarse con ninguna técnica de rehabilitación; por eso cuando el papel está degradado, el único camino real es el reemplazo de la unidad."}},{"@type":"Question","name":"¿Qué nivel de rigidez dieléctrica del aceite es inaceptable?","acceptedAnswer":{"@type":"Answer","text":"Según IEC 60422, el valor mínimo de rigidez dieléctrica (BDV) para aceite en servicio depende del nivel de tensión del transformador. Para equipos de MT (hasta 36 kV): mínimo 30 kV/mm para continuar operando, con 40 kV/mm como valor objetivo deseable. Para equipos de AT (72.5 kV y arriba): mínimo 50 kV/mm. Si el aceite está por debajo de estos límites, debe filtrarse, secarse o reemplazarse antes de que el transformador continúe en operación. Un evento de rigidez < 20 kV/mm es una emergencia que requiere acción inmediata."}},{"@type":"Question","name":"¿Qué incluye un programa completo de mantenimiento predictivo para transformadores?","acceptedAnswer":{"@type":"Answer","text":"Un programa integral debe incluir tres niveles: (1) Monitoreo continuo: temperatura del aceite y devanados, nivel de aceite, presión del gas en el conservador y alarma del relevador Buchholz. (2) Inspección periódica (semestral/anual): termografía infrarroja en partes externas, prueba Megger e índice de polarización, análisis físicoquímico del aceite (rigidez, humedad, acidez, color, tensión interfacial), y análisis DGA. (3) Diagnóstico profundo (cada 3–5 años o ante anomalías): tangente delta, respuesta en frecuencia (FRA) para detectar deformación de devanados, y grado de polimerización del papel (DP) por muestreo."}}]}]}</script>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Mantenimiento de Transformadores en Operación: Diagnóstico Predictivo | VMS Energy",
+  "description": "Guía de mantenimiento predictivo para transformadores industriales: análisis de aceite dieléctrico (rigidez, humedad, acidez, DGA), termografía IR, Megger, tangente delta, criterios de rehabilitación vs. reemplazo y programa anual.",
+  "author": {
+    "@type": "Organization",
+    "name": "VMS Energy",
+    "url": "https://vmsenergy.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VMS Energy",
+    "url": "https://vmsenergy.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
+    }
+  },
+  "datePublished": "2026-02-14",
+  "dateModified": "2026-02-14",
+  "image": [
+    "https://vmsenergy.com/assets/img/blog/mantenimiento-transformadores/og-mantenimiento-transformadores.webp"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html"
+  },
+  "url": "https://vmsenergy.com/blog-mantenimiento-transformadores-operacion.html"
+}
+</script>
+
 </head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a class="cta-header" href="contacto_cta.html">Contacto</a></li>
-        </ul>
-      </nav>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
-  </header>
+
+  </div>
+</header>
+  <main id="contenido">
+
 
   <!-- ═══════════════ HERO ═══════════════ -->
-  <section class="hero" style="--article-image:url('assets/img/Especialidades_mantenimiento.png')" aria-labelledby="hero-title">
+  <section class="hero" style="--article-image:url('assets/img/Especialidades_mantenimiento.webp')" aria-labelledby="hero-title">
     <div class="container">
       <div class="hero__content">
         <span class="eyebrow">VMS Energy &middot; Blog &middot; Mantenimiento el&eacute;ctrico</span>
         <h1 id="hero-title">Mantenimiento de transformadores en operaci&oacute;n: diagn&oacute;stico predictivo y extensi&oacute;n de vida &uacute;til</h1>
         <p>C&oacute;mo leer el estado real de un transformador mediante aceite, termograf&iacute;a y pruebas el&eacute;ctricas &mdash;antes de que falle.</p>
-        <div class="hero__actions">
+        <div class="hero__actions on-dark">
           <a class="btn btn--primary" href="#articulo">Leer art&iacute;culo</a>
           <a class="btn btn--secondary" href="contacto_cta.html?producto=diagnostico-transformadores">Solicitar diagn&oacute;stico</a>
         </div>
         <div class="hero__meta">
-          <span>&#128197; 15 mayo 2026</span>
-          <span>&#9201; 14 min de lectura</span>
-          <span>&#128218; IEC 60422 &middot; IEEE C57.104 &middot; ASTM D974</span>
+          <span>15 mayo 2026</span>
+          <span>14 min de lectura</span>
+          <span>IEC 60422 &middot; IEEE C57.104 &middot; ASTM D974</span>
         </div>
       </div>
     </div>
@@ -787,7 +903,7 @@
           <div class="article-cta">
             <h3>&iquest;Necesita un diagn&oacute;stico integral de sus transformadores?</h3>
             <p>VMS Energy ejecuta programas de mantenimiento predictivo para transformadores de distribuci&oacute;n y potencia: an&aacute;lisis de aceite, termograf&iacute;a, Megger, DGA e interpretaci&oacute;n experta con criterios IEC 60422 e IEEE C57.104. Le entregamos un informe de condici&oacute;n con recomendaci&oacute;n de acci&oacute;n y estimado de vida &uacute;til remanente.</p>
-            <div class="article-actions">
+            <div class="article-actions on-dark">
               <a class="btn btn--primary" href="contacto_cta.html?producto=diagnostico-transformadores">Solicitar diagn&oacute;stico</a>
               <a class="btn btn--secondary" href="especialidad_mantenimiento.html#inicio">Ver servicios de mantenimiento</a>
             </div>
@@ -826,13 +942,13 @@
           <div class="sidebar-card">
             <h3>Se&ntilde;ales de alerta inmediata</h3>
             <ul>
-              <li>&#9888; Acetileno detectable en DGA</li>
-              <li>&#9888; TDCG &gt; 4,630 ppm</li>
-              <li>&#9888; Rigidez BDV &lt; 20 kV/mm</li>
-              <li>&#9888; PI &lt; 1.0 en cualquier devanado</li>
-              <li>&#9888; &Delta;T &gt; 30&deg;C en termograf&iacute;a</li>
-              <li>&#9888; Aceite con olor quemado o color muy oscuro</li>
-              <li>&#9888; Rel&eacute; Buchholz activado</li>
+              <li>Acetileno detectable en DGA</li>
+              <li>TDCG &gt; 4,630 ppm</li>
+              <li>Rigidez BDV &lt; 20 kV/mm</li>
+              <li>PI &lt; 1.0 en cualquier devanado</li>
+              <li>&Delta;T &gt; 30&deg;C en termograf&iacute;a</li>
+              <li>Aceite con olor quemado o color muy oscuro</li>
+              <li>Relevador Buchholz activado</li>
             </ul>
           </div>
 
@@ -858,8 +974,8 @@
           <div class="sidebar-card">
             <h3>Contacto t&eacute;cnico</h3>
             <p>Hable con un especialista en mantenimiento de transformadores y subestaciones.</p>
-            <p><strong>&#128222;</strong> <a href="tel:+526141234567">+52 614 XXX XXXX</a></p>
-            <p><strong>&#9993;</strong> <a href="mailto:mantenimiento@vmsenergy.com">mantenimiento@vmsenergy.com</a></p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3h4l2 5-2.6 1.6a12.5 12.5 0 0 0 6.5 6.5L16 13.5l5 2v4a1.5 1.5 0 0 1-1.7 1.5A17.5 17.5 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3Z"/></svg></strong> <a href="tel:+523338130739">+52 33 3813 0739</a></p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></strong> <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
           </div>
 
         </aside><!-- /blog-sidebar -->
@@ -878,95 +994,122 @@
     Ver servicio de análisis aceite dieléctrico →
   </a>
 </div>
-  <footer class="foot" id="footer" aria-label="Pie de p&aacute;gina">
-    <div class="container">
-      <div>
-        <h4>VMS Energy</h4>
-        <ul>
-          <li><a class="foot-link" href="nosotros.html#inicio">Nosotros</a></li>
-          <li><a class="foot-link" href="certificaciones.html#inicio">Certificaciones</a></li>
-          <li><a class="foot-link" href="blog.html">Blog</a></li>
-          <li><a class="foot-link" href="contacto_cta.html">Contacto</a></li>
-        </ul>
-        <div style="display:flex;gap:10px;margin-top:12px">
-          <a class="foot-social__link" href="https://www.linkedin.com/company/vmsenergy" target="_blank" rel="noopener" aria-label="LinkedIn VMS Energy">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.985V9h3.103v1.561h.046c.434-.821 1.495-1.686 3.076-1.686 3.289 0 3.894 2.165 3.894 4.979v6.598h-.657zM5.337 7.433a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm1.558 13.019H3.779V9h3.116v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
           </a>
         </div>
       </div>
+
       <div>
-        <h4>Soluciones</h4>
+        <h3>Soluciones</h3>
         <ul>
-          <li><a class="foot-link" href="soluciones_electromecanicas.html#inicio">Electromec&aacute;nica</a></li>
-          <li><a class="foot-link" href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n</a></li>
-          <li><a class="foot-link" href="soluciones_solar_industrial.html#inicio">Solar Industrial</a></li>
-          <li><a class="foot-link" href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-          <li><a class="foot-link" href="soluciones_infraestructura_energetica.html#inicio">Infraestructura</a></li>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
+
       <div>
-        <h4>Servicios</h4>
+        <h3>Servicios</h3>
         <ul>
-          <li><a class="foot-link" href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-          <li><a class="foot-link" href="especialidad_servicios.html#inicio">Servicios</a></li>
-          <li><a class="foot-link" href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-          <li><a class="foot-link" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a></li>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
+
       <div>
-        <h4>Suministro</h4>
+        <h3>Empresa</h3>
         <ul>
-          <li><a class="foot-link" href="procura.html#inicio">Procura t&eacute;cnica</a></li>
-          <li><a class="foot-link" href="VMShop.html">VMShop</a></li>
-          <li><a class="foot-link" href="lp-cable-de-potencia-kei.html">Cable KEI</a></li>
-          <li><a class="foot-link" href="lp-triol-variadores.html">Variadores Triol</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
         </ul>
       </div>
-      <div>
-        <h4>Blog T&eacute;cnico</h4>
-        <ul>
-          <li><a class="foot-link" href="blog-seleccion-transformadores-industriales.html">Selecci&oacute;n de transformadores</a></li>
-          <li><a class="foot-link" href="blog-pruebas-aceptacion-transformadores.html">Pruebas FAT y SAT</a></li>
-          <li><a class="foot-link" href="blog-mantenimiento-transformadores-operacion.html">Mantenimiento predictivo</a></li>
-          <li><a class="foot-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">Mantenimiento subestaciones</a></li>
-          <li><a class="foot-link" href="blog.html">Ver todos los art&iacute;culos</a></li>
-        </ul>
-      </div>
+
     </div>
-    <div style="border-top:1px solid rgba(203,213,225,.14);padding:18px 0;text-align:center;font-size:.88rem;color:#7b93b3">
-      &copy; 2026 VMS Energy &mdash; Ingenier&iacute;a el&eacute;ctrica EPC &middot; M&eacute;xico
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
     </div>
-  </footer>
+
+  </div>
+</footer>
+
 
   <!-- Botón flotante móvil -->
   <div class="mobile-phone-sticky">
-    <a href="tel:+526141234567" aria-label="Llamar a VMS Energy">
+    <a href="tel:+523338130739" aria-label="Llamar a VMS Energy">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Llamar
     </a>
   </div>
 
-  <script>
-    const toggle = document.getElementById('menuToggle');
-    const menu   = document.getElementById('menuList');
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', e => {
-      if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    document.querySelectorAll('.nav-item--has-submenu > a').forEach(a => {
-      a.addEventListener('click', e => {
-        if (window.innerWidth <= 680) {
-          e.preventDefault();
-          a.parentElement.classList.toggle('is-open');
-        }
-      });
-    });
-  </script>
+  
 </body>
 </html>

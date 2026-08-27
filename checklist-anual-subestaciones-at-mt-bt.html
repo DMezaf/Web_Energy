@@ -2,28 +2,33 @@
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Checklist anual de inspecci&oacute;n &mdash; subestaciones AT, MT y BT | VMS Energy</title>
   <meta name="description" content="Checklist imprimible de inspecci&oacute;n anual para subestaciones el&eacute;ctricas industriales AT, MT y BT alineado a NOM-001-SEDE, NOM-029-STPS e IEEE." />
   <meta name="robots" content="noindex,follow" />
   <link rel="canonical" href="https://vmsenergy.com/checklist-anual-subestaciones-at-mt-bt.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#0F172A;--muted:#4a5f79;--line:#d8e0ec;--soft:#f5f9ff}
+    :root{--ink:#0F172A;}
     .toolbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
     .toolbar__brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:700}
     .toolbar__brand img{height:36px;width:auto}
     .toolbar__actions{display:flex;gap:8px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:6px;border-radius:10px;padding:9px 14px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:.95rem;font-family:inherit}
-    .btn--primary{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
-    .btn--primary:hover{background:#0d3f6c}
-    .btn--ghost{background:#fff;color:var(--cobalt);border-color:var(--line)}
-    .btn--ghost:hover{background:var(--soft)}
+    
     .sheet{max-width:880px;margin:18px auto;background:#fff;padding:36px 44px;border:1px solid var(--line);box-shadow:0 14px 28px rgba(8,28,54,.08)}
     .sheet h1{margin:0 0 6px;color:var(--navy);font-size:1.7rem;line-height:1.15}
     .sheet h2{margin:28px 0 10px;color:var(--cobalt);font-size:1.18rem;line-height:1.2;border-bottom:2px solid var(--cobalt);padding-bottom:6px}
@@ -74,20 +79,276 @@
       @page{size:letter;margin:14mm}
     }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Checklist Anual de Subestaciones AT/MT/BT — VMS Energy",
+  "url": "https://vmsenergy.com/checklist-anual-subestaciones-at-mt-bt.html",
+  "isPartOf": {
+    "@id": "https://vmsenergy.com/"
+  },
+  "description": "Checklist imprimible de inspección anual para subestaciones eléctricas industriales AT, MT y BT alineado a NOM-001-SEDE, NOM-029-STPS e IEEE."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "VMS Energy",
+      "item": "https://vmsenergy.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Recursos",
+      "item": "https://vmsenergy.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Checklist anual de inspección — subestaciones AT, MT y BT | VMS Energy",
+      "item": "https://vmsenergy.com/checklist-anual-subestaciones-at-mt-bt.html"
+    }
+  ]
+}
+</script>
+
+<style>
+/* Nav minimal para checklist */
+:root{}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand__logo img{height:44px;width:auto}
+header[aria-label]{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
+nav[aria-label="Principal"] ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;align-items:center}
+nav[aria-label="Principal"] a{font-size:.88rem;font-weight:600;color:var(--ink);padding:6px 10px;border-radius:6px;text-decoration:none;white-space:nowrap}
+nav[aria-label="Principal"] a:hover{color:var(--cobalt)}
+.btn--nav{background:var(--cobalt);color:#fff!important;padding:7px 16px!important;border-radius:999px}
+.btn--nav:hover{background:#163f85}
+.nav-item--has-submenu{position:relative}
+.submenu{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;min-width:240px;box-shadow:0 8px 32px rgba(15,47,113,.12);z-index:200}
+.nav-item--has-submenu.is-open .submenu{display:block}
+.submenu__title{font-size:.78rem;font-weight:800;color:var(--cobalt);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px}
+.submenu__list a:hover{background:#f0f6ff;color:var(--cobalt)}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+@media(max-width:768px){
+  .menu-toggle{display:block;background:none;border:1px solid var(--line);padding:6px 12px;border-radius:6px;font-size:.85rem;cursor:pointer}
+  #menuList{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;gap:4px}
+  #menuList.is-open{display:flex}
+  .submenu{position:static;box-shadow:none;border:none;padding:0 0 0 16px}
+}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
   <div class="toolbar" role="toolbar" aria-label="Acciones del checklist">
     <div class="toolbar__brand">
       <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy" loading="eager">
       <span>Checklist anual &middot; Subestaciones AT, MT y BT</span>
     </div>
     <div class="toolbar__actions">
-      <button class="btn btn--primary" type="button" onclick="window.print()">&#128424; Imprimir / PDF</button>
+      <button class="btn btn--primary" type="button" onclick="window.print()">Imprimir / PDF</button>
       <a class="btn btn--ghost" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html#descarga">&larr; Volver al art&iacute;culo</a>
     </div>
   </div>
 
-  <main class="sheet" aria-labelledby="docTitle">
+  <main id="contenido" class="sheet" aria-labelledby="docTitle">
     <h1 id="docTitle">Checklist anual de inspecci&oacute;n &mdash; subestaciones el&eacute;ctricas AT, MT y BT</h1>
     <p class="lead">Plantilla de referencia para inspecci&oacute;n y mantenimiento anual de subestaciones industriales. Alineada con NOM-001-SEDE-2012, NOM-029-STPS-2011, IEEE C57, IEEE 80 y mejores pr&aacute;cticas industriales. Esta plantilla no sustituye un protocolo formal con equipo de prueba calibrado &mdash; es una hoja de ruta para planeaci&oacute;n y auditor&iacute;a.</p>
 
@@ -129,7 +390,7 @@
       <li><input type="checkbox" id="c2-2"><label for="c2-2">Ausencia de fugas en juntas, v&aacute;lvulas, radiadores y conservador.</label><span></span></li>
       <li><input type="checkbox" id="c2-3"><label for="c2-3">Estado de bushings: sin fisuras, sin contaminaci&oacute;n superficial.</label><span></span></li>
       <li><input type="checkbox" id="c2-4"><label for="c2-4">Term&oacute;metros de aceite y devanados calibrados; alarmas activas.</label><span></span></li>
-      <li><input type="checkbox" id="c2-5"><label for="c2-5">Rel&eacute; Buchholz operativo, sin gas acumulado.</label><span></span></li>
+      <li><input type="checkbox" id="c2-5"><label for="c2-5">Relevador Buchholz operativo, sin gas acumulado.</label><span></span></li>
       <li><input type="checkbox" id="c2-6"><label for="c2-6">V&aacute;lvula de sobrepresi&oacute;n en buen estado.</label><span></span></li>
       <li><input type="checkbox" id="c2-7"><label for="c2-7">Sistema de enfriamiento (ventiladores/bombas): operativo, sin ruido an&oacute;malo.</label><span></span></li>
       <li><input type="checkbox" id="c2-8"><label for="c2-8">Cambiador de derivaciones (OLTC/DETC): contador, posici&oacute;n correcta.</label><span></span></li>
@@ -176,13 +437,13 @@
       <li><input type="checkbox" id="c5-5"><label for="c5-5">Carga (burden) secundaria dentro de spec.</label><span></span></li>
     </ul>
 
-    <h2>6. Sistemas de protecci&oacute;n y rel&eacute;s <span class="ref">NOM-001-SEDE</span></h2>
+    <h2>6. Sistemas de protecci&oacute;n y relevadores <span class="ref">NOM-001-SEDE</span></h2>
     <ul class="checklist">
       <li><input type="checkbox" id="c6-1"><label for="c6-1">Verificaci&oacute;n de ajustes contra estudio de coordinaci&oacute;n vigente.</label><span></span></li>
       <li><input type="checkbox" id="c6-2"><label for="c6-2">Pruebas funcionales primarias por inyecci&oacute;n.</label><span></span></li>
-      <li><input type="checkbox" id="c6-3"><label for="c6-3">Pruebas secundarias por inyecci&oacute;n a rel&eacute;s.</label><span></span></li>
+      <li><input type="checkbox" id="c6-3"><label for="c6-3">Pruebas secundarias por inyecci&oacute;n a relevadores.</label><span></span></li>
       <li><input type="checkbox" id="c6-4"><label for="c6-4">Verificaci&oacute;n de l&oacute;gicas de disparo y enclavamientos.</label><span></span></li>
-      <li><input type="checkbox" id="c6-5"><label for="c6-5">Sincronizaci&oacute;n de tiempo entre rel&eacute;s (IRIG-B / NTP).</label><span></span></li>
+      <li><input type="checkbox" id="c6-5"><label for="c6-5">Sincronizaci&oacute;n de tiempo entre relevadores (IRIG-B / NTP).</label><span></span></li>
       <li><input type="checkbox" id="c6-6"><label for="c6-6">Reporte de eventos y registros oscilogr&aacute;ficos descargados.</label><span></span></li>
       <li><input type="checkbox" id="c6-7"><label for="c6-7">Firmware actualizado seg&uacute;n recomendaci&oacute;n del fabricante.</label><span></span></li>
     </ul>
@@ -221,7 +482,7 @@
       <li><input type="checkbox" id="c10-1"><label for="c10-1">Comunicaci&oacute;n con centro de control verificada (sin alarmas activas).</label><span></span></li>
       <li><input type="checkbox" id="c10-2"><label for="c10-2">Switches industriales operativos, sin errores de puerto.</label><span></span></li>
       <li><input type="checkbox" id="c10-3"><label for="c10-3">Sincronizaci&oacute;n GPS / NTP en l&iacute;nea.</label><span></span></li>
-      <li><input type="checkbox" id="c10-4"><label for="c10-4">Respaldo de configuraciones de IEDs y rel&eacute;s actualizado.</label><span></span></li>
+      <li><input type="checkbox" id="c10-4"><label for="c10-4">Respaldo de configuraciones de IEDs y relevadores actualizado.</label><span></span></li>
       <li><input type="checkbox" id="c10-5"><label for="c10-5">Termograf&iacute;a integral del patio (energizado) y reporte fotogr&aacute;fico.</label><span></span></li>
       <li><input type="checkbox" id="c10-6"><label for="c10-6">Termograf&iacute;a de tableros de control y servicios auxiliares.</label><span></span></li>
     </ul>
@@ -251,12 +512,125 @@
       <span>Plantilla VMS Energy v1.0 &middot; abril 2026</span>
       <span>&iquest;Necesitas ayuda con el plan de mantenimiento? <a href="contacto_cta.html?producto=mantenimiento-subestaciones">Cont&aacute;ctanos</a></span>
     </div>
-  </main>
+  
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:40px 0;text-align:center;margin-top:32px">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:900;margin-bottom:10px">¿Necesita asesoría sobre el mantenimiento de sus subestaciones?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:.95rem;margin:0 auto 20px;max-width:560px">VMS Energy ejecuta mantenimientos preventivos y predictivos de subestaciones AT/MT/BT en toda la República Mexicana.</p>
+      <a class="btn btn--primary" href="contacto.html#ctaForm" style="background:#fff;color:var(--cobalt,#1a4fa0);font-weight:800;padding:12px 28px;border-radius:999px;text-decoration:none;display:inline-block">Solicitar cotización</a>
+    </div>
+  </section>
+</main>
 
   <script>
     document.querySelectorAll('[contenteditable=true]').forEach(function(el){
       el.addEventListener('focus', function(){ if(el.textContent.trim() === ''){ el.innerHTML=''; }});
     });
   </script>
+<footer class="site-footer site-footer--minimal">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
 </body>
 </html>

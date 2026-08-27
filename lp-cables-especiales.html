@@ -1,37 +1,41 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cables El&eacute;ctricos Especiales M&eacute;xico | VMS Energy</title>
-  <meta name="description" content="Distribuci&oacute;n autorizada de cables el&eacute;ctricos especiales KEI Wires: alta tensi&oacute;n, XLPE, instrumentaci&oacute;n y control. Entrega inmediata en toda la rep&uacute;blica." />
+  <title>Cables ESP para bomba electrosumergible | VMS Energy</title>
+  <meta name="description" content="Cables ESP KEI Arteria para bomba electrosumergible: familias 180 a 450 &deg;F, Flat o Round. La familia correcta la define la temperatura de fondo de pozo." />
   <link rel="canonical" href="https://vmsenergy.com/lp-cables-especiales.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="Cables El&eacute;ctricos Especiales M&eacute;xico | VMS Energy" />
-  <meta property="og:description" content="Distribuci&oacute;n autorizada de cables el&eacute;ctricos especiales KEI Wires: alta tensi&oacute;n, XLPE, instrumentaci&oacute;n y control. Entrega inmediata en toda la rep&uacute;blica." />
+  <meta property="og:title" content="Cables ESP para bomba electrosumergible | VMS Energy" />
+  <meta property="og:description" content="Cables ESP KEI Arteria para bomba electrosumergible: familias 180 a 450 &deg;F, Flat o Round. La familia correcta la define la temperatura de fondo de pozo." />
   <meta property="og:url" content="https://vmsenergy.com/lp-cables-especiales.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cables El&eacute;ctricos Especiales M&eacute;xico | VMS Energy" />
-  <meta name="twitter:description" content="Distribuci&oacute;n autorizada de cables el&eacute;ctricos especiales KEI Wires: alta tensi&oacute;n, XLPE, instrumentaci&oacute;n y control. Entrega inmediata en toda la rep&uacute;blica." />
+  <meta name="twitter:title" content="Cables ESP para bomba electrosumergible | VMS Energy" />
+  <meta name="twitter:description" content="Cables ESP KEI Arteria para bomba electrosumergible: familias 180 a 450 &deg;F, Flat o Round. La familia correcta la define la temperatura de fondo de pozo." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-cables-especiales.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-cables-especiales.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="equipamiento-base.css">
+<link rel="stylesheet" href="equipamiento-base.css">
   <style>
     :root{
       --navy:#172C51;
-      --cobalt:var(--concept-primary);
-      --ink:#10233D;
-      --muted:#4E6782;
-      --line:rgba(23,44,81,.14);
-      --soft:#F4F8FF;
-      --warm:#15A08A;
-      --warm-dark:#0B7C77;
-      --ok:#0B8E57;
+      
+      
+      
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -53,11 +57,6 @@
     .top__logo img{height:38px;width:auto;display:block}
     .top__actions{display:flex;gap:8px}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 15px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer}
-    .btn--primary{color:#fff;background:linear-gradient(180deg,var(--warm),var(--warm-dark));border-color:rgba(11,124,119,.7)}
-    .btn--primary:hover{background:linear-gradient(180deg,#20b39a,#0f8d83)}
-    .btn--secondary{color:var(--concept-primary);background:#fff;border-color:var(--line)}
-    .btn--ghost{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.26)}
     .btn--small{padding:9px 11px;border-radius:10px;font-size:.86rem}
 
     .hero{padding:30px 0 24px}
@@ -109,8 +108,18 @@
       font-weight:700;
       font-size:.84rem;
     }
-    h1{margin:10px 0 8px;font-size:clamp(33px,5.2vw,56px);line-height:1.02;color:#fff}
-    .hero__accent{color:#ff8b1f}
+    .hero__accent{color:var(--vms-blue-300)}
+    /* El H1 pasó de un nombre corto ("Arteria 180F") a la categoría completa.
+       A 50 px, la palabra "electrosumergible" mide más que el panel y se salía
+       por la derecha: una sola palabra larga no se parte sola. Tamaño fluido
+       más guionado, que el navegador aplica según lang="es-MX". */
+    .hero__panel h1{
+      font-size:clamp(1.7rem,2.7vw,2.5rem);
+      line-height:1.1;
+      hyphens:auto;
+      -webkit-hyphens:auto;
+      overflow-wrap:break-word;
+    }
     .hero__sub{margin:0;color:#e3edf8;font-size:clamp(1.05rem,1.9vw,1.8rem);line-height:1.18}
     .hero__lead{margin:0;color:rgba(255,255,255,.94);font-size:clamp(1.04rem,2.05vw,1.28rem);line-height:1.4}
     .hero__cta{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
@@ -198,8 +207,7 @@
     #catalogo .line-group{margin-top:0}
     #catalogo .line-group.is-open{grid-column:1/-1}
     #catalogo .line-group.is-open .line-family-card{max-width:360px}
-    #catalogo .group-title{display:none}
-    #catalogo .lineup__grid{display:none}
+    #catalogo .line-group:not(.is-open) .lineup__grid{display:none}
     #catalogo .line-group.is-open .lineup__grid{display:grid}
     .line-family-card{
       position:relative;
@@ -392,7 +400,7 @@
       background:#fff;
       padding:10px;
       display:grid;
-      grid-template-columns:minmax(220px,1.15fr) minmax(240px,1fr) 190px;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(150px,auto);
       gap:10px;
       align-items:center;
     }
@@ -482,7 +490,7 @@
       text-decoration:none;
       border-radius:999px;
       padding:12px 14px;
-      background:#172C51;
+      background:var(--vms-blue-800);
       color:#fff;
       font-weight:700;
       box-shadow:0 12px 30px rgba(8,24,44,.35);
@@ -515,8 +523,8 @@
     #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{
       display:inline-flex;
@@ -566,7 +574,7 @@
       #footer ul{
         line-height:1.6;
       }
-    }n
+    }
 
     @media (max-width:960px){
       .hero__inner{grid-template-columns:1fr}
@@ -605,7 +613,6 @@
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
   .cta-header{padding:.6rem 1rem;background:var(--concept-primary);color:#fff;border-radius:999px}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
@@ -613,7 +620,6 @@
   .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
   .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:980px){nav ul{gap:14px}.submenu{min-width:280px}}
   @media (max-width:760px){
@@ -633,15 +639,13 @@
   .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
   .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
   nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
-  nav a{color:#172C51;text-decoration:none;font-weight:700}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
+  nav a{color:var(--vms-blue-800);text-decoration:none;font-weight:700}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
   .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
   .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
   @media (max-width:760px){
     nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}
@@ -651,7 +655,12 @@
     .nav-item--has-submenu.is-open .submenu{display:block}
   }
     .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+
+    /* Ritmo vertical: el concepto declara --section-pad-y y la página
+       lo ignoraba en diez de doce secciones. `main > section` gana por
+       especificidad a las clases de componente. */
+    main > section:not(.hero){padding-block:var(--section-pad-y)}
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -718,6 +727,12 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"VMShop","item":"https://vmsenergy.com/VMShop.html"},{"@type":"ListItem","position":3,"name":"Cables ESP para bomba electrosumergible","item":"https://vmsenergy.com/lp-cables-especiales.html"}]}
+  </script>
+
+<!-- Se retira un segundo Service duplicado: repetia el titulo anterior y contradecia al @graph de arriba, que ya declara el servicio, el FAQ y el catalogo. -->
 </head>
 <body>
     <div class="announcement">
@@ -729,128 +744,197 @@
       <span>VMShop by VMS Energy</span>
     </div>
   </div>
-<header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                  <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
-  </header>
+
+  </div>
+</header>
 
 
 
@@ -860,69 +944,41 @@
 
 
 
-  <main>
-    <section class="hero">
+  <main id="contenido">
+    <section class="hero" style="--equip-hero-img:url('assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp')">
       <div class="container">
         <article class="hero__frame" id="heroRotator">
           <div class="hero__inner">
             <div class="hero__visual" aria-hidden="true"></div>
             <div class="hero__panel">
-              <span class="hero__kicker" id="heroKicker">Cables ESP</span>
-              <h1><span id="heroTitleMain">Arteria</span> <span class="hero__accent" id="heroTitleAccent">180F</span></h1>
-              <p class="hero__sub" id="heroSub">Cable industrial para ambientes t&eacute;rmicos exigentes</p>
-              <p class="hero__lead" id="heroLead">Dise&ntilde;ado para operaci&oacute;n confiable en condiciones cr&iacute;ticas de temperatura y carga.</p>
+              <span class="hero__kicker" id="heroKicker">KEI Arteria &middot; representaci&oacute;n en M&eacute;xico</span>
+              <h1><span id="heroTitleMain">Cables</span> <span class="hero__accent" id="heroTitleAccent">ESP</span> para bomba electrosumergible</h1>
+              <p class="hero__sub" id="heroSub">Cinco familias, de 180 a 450 &deg;F, en configuraci&oacute;n Flat o Round</p>
+              <p class="hero__lead" id="heroLead">La familia correcta la define la temperatura de fondo de pozo, no el cat&aacute;logo. Especificamos, suministramos e instalamos.</p>
               <ul class="hero__bullets" id="heroPoints">
-                <li><span class="hero__check">?</span><span>180 &deg;C rating</span></li>
-                <li><span class="hero__check">?</span><span>Conductor cobre</span></li>
-                  <li><span class="hero__check">?</span><span>Aislamiento t&eacute;rmico avanzado</span></li>
+                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>5 familias &middot; 180 a 450 &deg;F</span></li>
+                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>Configuraci&oacute;n Flat o Round</span></li>
+                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>Selecci&oacute;n por temperatura de fondo de pozo</span></li>
               </ul>
-              <div class="hero__cta">
+              <div class="hero__cta on-dark">
                 <a class="btn btn--secondary" href="#detalleTecnico">Ver especificaciones t&eacute;cnicas</a>
                 <a class="btn btn--ghost" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar propuesta</a>
               </div>
-              <div class="hero__dots" id="heroDots" aria-label="Variantes de l&iacute;nea destacada"></div>
+              <!-- Se retira #heroDots: el rotador del hero nunca tuvo JavaScript, asi que estos puntos jamas se dibujaron. -->
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="steps">
-      <div class="container">
-        <div class="steps__intro">
-          <h2 class="steps__title">&iquest;Necesitas apoyo para tu proyecto? Nosotros lo coordinamos.</h2>
-          <p class="steps__copy">Integramos selecci&oacute;n t&eacute;cnica, log&iacute;stica de suministro y acompa&ntilde;amiento operativo de punta a punta.</p>
-          <div class="steps__cta">
-            <a class="btn btn--primary btn--small" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Hablar con asesor para mi proyecto</a>
-          </div>
-        </div>
-      </div>
-      <div class="container steps__grid">
-        <article class="step">
-          <div class="step__head"><span class="step__badge">1</span><span class="step__icon">DIAGNÓSTICO</span></div>
-          <h3>Cu&eacute;ntanos tus necesidades</h3>
-          <p>Entendemos temperatura, esfuerzo mec&aacute;nico y ambiente para configurar la l&iacute;nea correcta.</p>
-        </article>
-        <article class="step">
-          <div class="step__head"><span class="step__badge">2</span><span class="step__icon">SELECCIÓN</span></div>
-          <h3>Te proponemos una soluci&oacute;n</h3>
-          <p>Recibes alternativa Flat o Round con dimensi&oacute;n y peso para integraci&oacute;n en proyecto.</p>
-        </article>
-        <article class="step">
-          <div class="step__head"><span class="step__badge">3</span><span class="step__icon">SUMINISTRO</span></div>
-          <h3>Acompa&ntilde;amiento t&eacute;cnico</h3>
-          <p>Planeaci&oacute;n de entrega coordinada para mantener continuidad de instalaci&oacute;n y arranque.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contexto de aplicaci&oacute;n ESP -->
-    <section style="padding:28px 0;background:var(--soft,#f4f8ff)">
+    
+<!-- Sube al segundo lugar: explica por que este cable no se elige de catalogo. -->
+<section style="background:var(--soft,#f4f8ff)">
       <div class="container">
         <div class="notes-panel">
           <div class="notes-panel__head">
             <span class="notes-panel__tag">Contexto de aplicaci&oacute;n</span>
-            <h3 class="notes-panel__title">Los cables ESP no se compran en cat&aacute;logo. Se especifican para cada pozo.</h3>
+            <h2 class="notes-panel__title">Los cables ESP no se compran en cat&aacute;logo. Se especifican para cada pozo.</h2>
           </div>
           <p class="notes-panel__sub">Cada instalaci&oacute;n de bomba sumergible el&eacute;ctrica (ESP) tiene condiciones &uacute;nicas de temperatura, presi&oacute;n, geometr&iacute;a del pozo y perfil de producci&oacute;n. La selecci&oacute;n incorrecta del cable es una de las causas m&aacute;s frecuentes de falla prematura en sistemas ESP.</p>
           <ul class="note-list">
@@ -932,66 +988,19 @@
             <li><strong>Coordinaci&oacute;n con el sistema ESP:</strong> El cable debe ser compatible con la potencia del motor, el variador (VSD) y la longitud del pozo. VMS coordina la especificaci&oacute;n con el fabricante del sistema ESP cuando el proyecto lo requiere.</li>
           </ul>
           <p style="margin:14px 0 0;padding:12px 14px;background:rgba(15,76,129,.06);border-radius:10px;font-size:.92rem;color:var(--muted,#4E6782)">
-            &iquest;T&eacute;rminos como ESP, BHT, EPR, Clase 5 o Kapton? Cons&uacute;ltalos en el <a href="glosario-cable-electrico.html" style="color:var(--cobalt,#0F4C81);font-weight:700;text-decoration:none">glosario t&eacute;cnico de cable &rarr;</a>
+            &iquest;T&eacute;rminos como <a href="glosario-cable-electrico.html#esp" style="color:var(--cobalt,#0F4C81);font-weight:600;text-decoration:underline">ESP</a>, <a href="glosario-cable-electrico.html#bht" style="color:var(--cobalt,#0F4C81);font-weight:600;text-decoration:underline">BHT</a>, <a href="glosario-cable-electrico.html#epr" style="color:var(--cobalt,#0F4C81);font-weight:600;text-decoration:underline">EPR</a>, <a href="glosario-cable-electrico.html#clase-5" style="color:var(--cobalt,#0F4C81);font-weight:600;text-decoration:underline">Clase 5</a> o <a href="glosario-cable-electrico.html#kapton" style="color:var(--cobalt,#0F4C81);font-weight:600;text-decoration:underline">Kapton</a>? Cons&uacute;ltalos en el <a href="glosario-cable-electrico.html" style="color:var(--cobalt,#0F4C81);font-weight:700;text-decoration:none">glosario t&eacute;cnico de cable &rarr;</a>
           </p>
         </div>
       </div>
     </section>
 
     <!-- BLOQUE A: Multi-proveedor estrat&eacute;gico -->
-    <section style="background:var(--soft,#f4f8ff);padding:36px 0">
-      <div class="container">
-        <div class="notes-panel">
-          <div class="notes-panel__head">
-            <span class="notes-panel__tag">Portafolio de fabricantes</span>
-            <h3 class="notes-panel__title">No llegamos con un solo cat&aacute;logo. Llegamos con la especificaci&oacute;n correcta para tu proyecto.</h3>
-          </div>
-          <p class="notes-panel__sub">VMS Energy selecciona el fabricante &oacute;ptimo seg&uacute;n el nivel de tensi&oacute;n, sector, norma aplicable, disponibilidad y cronograma de tu proyecto. KEI Wires &amp; Cables es nuestro partner estrat&eacute;gico principal, pero trabajamos con los mejores fabricantes del mundo cuando el proyecto lo requiere.</p>
-          <div class="notes-grid" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
-            <div class="notes-card">
-              <h4 class="notes-card__title">KEI Wires &amp; Cables</h4>
-              <p class="notes-card__text">Representante exclusivo para M&eacute;xico. Potencia MT/AT/EHV, cables ESP para Oil &amp; Gas, fotovoltaicos, instrumentaci&oacute;n y control. Primera opci&oacute;n para la mayor&iacute;a de proyectos industriales en M&eacute;xico.</p>
-            </div>
-            <div class="notes-card">
-              <h4 class="notes-card__title">S&uuml;dkabel</h4>
-              <p class="notes-card__text">Especialidad en cables EHV de alta ingenier&iacute;a (fabricaci&oacute;n alemana). Ideal cuando el proyecto requiere est&aacute;ndares europeos, certificaciones VDE o construcciones especiales para transmisi&oacute;n de extra alta tensi&oacute;n.</p>
-            </div>
-            <div class="notes-card">
-              <h4 class="notes-card__title">Helukabel</h4>
-              <p class="notes-card__text">Soluciones para control, instrumentaci&oacute;n y aplicaciones especiales: LSZH para espacios confinados, EMC blindados, alta temperatura (silicona), cables para industria alimentaria y rob&oacute;tica.</p>
-            </div>
-            <div class="notes-card">
-              <h4 class="notes-card__title">Condumex / Viakon</h4>
-              <p class="notes-card__text">Fabricaci&oacute;n nacional bajo NMX-J. Baja tensi&oacute;n y control con tiempos de entrega cortos. Ideal para proyectos con componente nacional requerida o urgencias en campo. Cumplimiento NOM-001-SEDE.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+<!-- El FAQ sube del puesto 9 al 3. Es el mejor contenido de la pagina —criterio por temperatura de fondo de pozo, Flat contra Round, H2S— y estaba a 7 574 px, despues de un centenar de encabezados. -->
 
-    <!-- BLOQUE B: Conexi&oacute;n EPC Turnkey -->
-    <section style="padding:36px 0 28px">
-      <div class="container">
-        <div class="notes-panel" style="border-left:4px solid var(--cobalt,#0F4C81)">
-          <div class="notes-panel__head">
-            <span class="notes-panel__tag">EPC Integrado</span>
-            <h3 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h3>
-          </div>
-          <p class="notes-panel__sub">A trav&eacute;s de VMShop puedes solicitar cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC. Si el suministro forma parte de un proyecto EPC que VMS ingenia y construye, el cable queda integrado al MTO con log&iacute;stica por hitos y responsabilidad &uacute;nica. Si solo necesitas el material, tambi&eacute;n te apoyamos con la misma rigurosidad t&eacute;cnica.</p>
-          <ul class="note-list">
-            <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
-            <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
-            <li><strong>Log&iacute;stica por hitos:</strong> Entregamos cable cuando la obra lo necesita, en la cantidad correcta y con trazabilidad completa por bobina.</li>
-            <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
-          </ul>
-          <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
-            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
-          </p>
-        </div>
-      </div>
-    </section>
 
-        <section id="catalogo" class="lineup">
+    <!-- Casos de uso -->
+    <section id="catalogo" class="lineup">
       <div class="container">
         <h2 class="section-title">Elige la presentaci&oacute;n adecuada para tu operaci&oacute;n</h2>
         <p class="section-copy">Diecis&eacute;is l&iacute;neas comerciales para escenarios diferentes. Selecciona una y cotiza por variante.</p>
@@ -1217,7 +1226,176 @@
       </div>
     </section>
 
-        <section class="sku-zone" id="skuCotiza" aria-label="SKUs Cables ESP">
+        <section class="tech" id="detalleTecnico" aria-label="Detalles t&eacute;cnicos">
+      <div class="container">
+        <h2 class="section-title">Detalle t&eacute;cnico</h2>
+        <p class="section-copy">Respaldo t&eacute;cnico para validar especificaci&oacute;n.</p>
+
+        <div class="line-group">
+          <h3 class="group-title" data-line="180">Detalle t&eacute;cnico ESP Arteria 180F</h3>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 180F - PG</summary>
+            <div class="tabla-scroll"><table style="min-width:340px"><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.505 x 1.196</td><td>12.83 x 30.37</td><td>0.76</td><td>1.14</td></tr>
+              <tr><td>4-1</td><td>0.548 x 1.323</td><td>13.91 x 33.59</td><td>0.96</td><td>1.43</td></tr>
+              <tr><td>2-1</td><td>0.601 x 1.482</td><td>15.26 x 37.65</td><td>1.03</td><td>1.53</td></tr>
+              <tr><td>1-1</td><td>0.633 x 1.578</td><td>16.07 x 40.07</td><td>1.45</td><td>2.16</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 180F - PPG</summary>
+            <div class="tabla-scroll"><table style="min-width:340px"><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.90</td><td>1.40</td></tr>
+              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.10</td><td>1.70</td></tr>
+              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.50</td><td>2.20</td></tr>
+              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.70</td><td>2.60</td></tr>
+            </tbody></table></div>
+          </details>
+        </div>
+
+        <div class="line-group">
+          <h3 class="group-title" data-line="205">Detalle t&eacute;cnico ESP Arteria 205F</h3>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 205F - PEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.605 x 1.496</td><td>15.37 x 37.99</td><td>0.91</td><td>1.36</td></tr>
+              <tr><td>4-1</td><td>0.648 x 1.623</td><td>16.45 x 41.22</td><td>1.12</td><td>1.67</td></tr>
+              <tr><td>2-1</td><td>0.701 x 1.782</td><td>17.81 x 45.26</td><td>1.20</td><td>1.78</td></tr>
+              <tr><td>1-1</td><td>0.733 x 1.878</td><td>18.62 x 47.70</td><td>1.63</td><td>2.43</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 205F - PEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.85</td><td>1.05</td></tr>
+              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.06</td><td>1.14</td></tr>
+              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.36</td><td>1.26</td></tr>
+              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.57</td><td>1.34</td></tr>
+            </tbody></table></div>
+          </details>
+        </div>
+        <div class="line-group">
+          <h3 class="group-title" data-line="290">Detalle t&eacute;cnico ESP Arteria 290F</h3>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 290F - EEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.608 x 1.503</td><td>15.43 x 38.17</td><td>0.97</td><td>1.45</td></tr>
+              <tr><td>4-1</td><td>0.65 x 1.63</td><td>16.51 x 41.4</td><td>1.18</td><td>1.76</td></tr>
+              <tr><td>2-1</td><td>0.703 x 1.799</td><td>17.86 x 45.68</td><td>1.27</td><td>1.89</td></tr>
+              <tr><td>1-1</td><td>0.735 x 1.884</td><td>18.67 x 47.87</td><td>1.71</td><td>2.54</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 290F - EEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.85</td><td>1.05</td></tr>
+              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.06</td><td>1.14</td></tr>
+              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.36</td><td>1.26</td></tr>
+              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.57</td><td>1.34</td></tr>
+            </tbody></table></div>
+          </details>
+        </div>
+        <div class="line-group">
+          <h3 class="group-title" data-line="400">Detalle t&eacute;cnico ESP Arteria 400F</h3>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 400F - EFG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.505 x 1.196</td><td>12.823 x 30.38</td><td>0.97</td><td>1.45</td></tr>
+              <tr><td>4-1</td><td>0.548 x 1.323</td><td>13.92 x 33.60</td><td>1.19</td><td>1.77</td></tr>
+              <tr><td>2-1</td><td>0.601 x 1.482</td><td>15.27 x 37.64</td><td>1.50</td><td>2.23</td></tr>
+              <tr><td>1-1</td><td>0.633 x 1.578</td><td>16.08 x 40.08</td><td>1.71</td><td>2.54</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 400F - EFEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>1.26</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.49</td><td>2.21</td></tr>
+              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.82</td><td>2.71</td></tr>
+              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>2.05</td><td>3.05</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 400F - ELG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.552 x 1.337</td><td>14.02 x 33.96</td><td>1.25</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>0.599 x 1.464</td><td>15.11 x 37.19</td><td>1.42</td><td>2.12</td></tr>
+              <tr><td>2-1</td><td>0.648 x 1.624</td><td>16.46 x 41.25</td><td>1.79</td><td>2.67</td></tr>
+              <tr><td>1-1</td><td>0.68 x 1.72</td><td>17.27 x 43.69</td><td>2.02</td><td>3.01</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 400F - ELEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.163</td><td>29.54</td><td>1.26</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>1.255</td><td>31.86</td><td>1.49</td><td>2.21</td></tr>
+              <tr><td>2-1</td><td>1.370</td><td>34.79</td><td>1.82</td><td>2.71</td></tr>
+              <tr><td>1-1</td><td>1.438</td><td>36.53</td><td>2.05</td><td>3.05</td></tr>
+            </tbody></table></div>
+          </details>
+        </div>
+        <div class="line-group">
+          <h3 class="group-title" data-line="450">Detalle t&eacute;cnico ESP Arteria 450F</h3>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 450F - ELG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.552 x 1.337</td><td>14.02 x 33.96</td><td>1.25</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>0.595 x 1.464</td><td>15.11 x 37.19</td><td>1.42</td><td>2.12</td></tr>
+              <tr><td>2-1</td><td>0.648 x 1.624</td><td>16.46 x 41.25</td><td>1.79</td><td>2.67</td></tr>
+              <tr><td>1-1</td><td>0.68 x 1.72</td><td>17.27 x 43.69</td><td>2.02</td><td>3.01</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 450F - ELEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.163</td><td>29.54</td><td>1.26</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>1.255</td><td>31.86</td><td>1.49</td><td>2.21</td></tr>
+              <tr><td>2-1</td><td>1.370</td><td>34.79</td><td>1.82</td><td>2.71</td></tr>
+              <tr><td>1-1</td><td>1.438</td><td>36.53</td><td>2.05</td><td>3.05</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 450F - KEFLG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.566 x 1.378</td><td>14.38 x 35.00</td><td>1.25</td><td>1.87</td></tr>
+              <tr><td>4-1</td><td>0.608 x 1.51</td><td>15.44 x 38.35</td><td>1.42</td><td>2.12</td></tr>
+              <tr><td>2-1</td><td>0.662 x 1.665</td><td>16.82 x 42.29</td><td>1.79</td><td>2.67</td></tr>
+              <tr><td>1-1</td><td>0.693 x 1.76</td><td>17.60 x 44.70</td><td>2.02</td><td>3.01</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Round 450F - KEFLEG</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>1.215</td><td>30.86</td><td>2.00</td><td>2.90</td></tr>
+              <tr><td>4-1</td><td>1.306</td><td>33.18</td><td>2.30</td><td>3.40</td></tr>
+              <tr><td>2-1</td><td>1.422</td><td>36.11</td><td>2.80</td><td>4.00</td></tr>
+              <tr><td>1-1</td><td>1.490</td><td>37.84</td><td>3.10</td><td>4.60</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat 450F - KEFLG-CT</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.566 x 1.753</td><td>14.38 x 44.53</td><td>0.97</td><td>1.45</td></tr>
+              <tr><td>4-1</td><td>0.608 x 1.88</td><td>15.44 x 47.75</td><td>1.18</td><td>1.76</td></tr>
+              <tr><td>2-1</td><td>0.662 x 2.04</td><td>16.82 x 51.81</td><td>1.27</td><td>1.89</td></tr>
+              <tr><td>1-1</td><td>0.693 x 2.135</td><td>17.60 x 54.23</td><td>1.71</td><td>2.54</td></tr>
+            </tbody></table></div>
+          </details>
+          <details>
+            <summary>Tabla t&eacute;cnica Arteria Flat MLE 450F - KEFLM</summary>
+            <div class="tabla-scroll"><table><thead><tr><th>Conductor</th><th>Overall Inch</th><th>Overall mm</th><th>Length Ft</th><th>Length Mtr</th><th>Weight Lbs</th><th>Weight Kgs</th></tr></thead><tbody>
+              <tr><td>6-1</td><td>0.507 x 1.282</td><td>12.88 x 32.56</td><td>100</td><td>30.5</td><td>109</td><td>49.4</td></tr>
+              <tr><td>4-1</td><td>0.55 x 1.409</td><td>13.97 x 35.79</td><td>100</td><td>30.5</td><td>135</td><td>60.7</td></tr>
+              <tr><td>2-1</td><td>0.603 x 1.57</td><td>15.31 x 39.88</td><td>100</td><td>30.5</td><td>168</td><td>76.4</td></tr>
+            </tbody></table></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- Pedir SKU va DESPUES del catalogo y del detalle tecnico: hasta aqui el visitante ya sabe que pedir. -->
+<section class="sku-zone" id="skuCotiza" aria-label="SKUs Cables ESP">
       <div class="container">
         <h2 class="section-title">Pide propuesta en 1 click</h2>
         <p class="section-copy">Selecciona familia y variante para enviar tu solicitud con SKU prellenado.</p>
@@ -1326,173 +1504,89 @@
       </div>
     </section>
 
-        <section class="tech" id="detalleTecnico" aria-label="Detalles t&eacute;cnicos">
+        <section >
       <div class="container">
-        <h2 class="section-title">Detalle t&eacute;cnico</h2>
-        <p class="section-copy">Respaldo t&eacute;cnico para validar especificaci&oacute;n.</p>
-
-        <div class="line-group">
-          <h3 class="group-title" data-line="180">Detalle t&eacute;cnico ESP Arteria 180F</h3>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 180F - PG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.505 x 1.196</td><td>12.83 x 30.37</td><td>0.76</td><td>1.14</td></tr>
-              <tr><td>4-1</td><td>0.548 x 1.323</td><td>13.91 x 33.59</td><td>0.96</td><td>1.43</td></tr>
-              <tr><td>2-1</td><td>0.601 x 1.482</td><td>15.26 x 37.65</td><td>1.03</td><td>1.53</td></tr>
-              <tr><td>1-1</td><td>0.633 x 1.578</td><td>16.07 x 40.07</td><td>1.45</td><td>2.16</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 180F - PPG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.90</td><td>1.40</td></tr>
-              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.10</td><td>1.70</td></tr>
-              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.50</td><td>2.20</td></tr>
-              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.70</td><td>2.60</td></tr>
-            </tbody></table>
-          </details>
-        </div>
-
-        <div class="line-group">
-          <h3 class="group-title" data-line="205">Detalle t&eacute;cnico ESP Arteria 205F</h3>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 205F - PEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.605 x 1.496</td><td>15.37 x 37.99</td><td>0.91</td><td>1.36</td></tr>
-              <tr><td>4-1</td><td>0.648 x 1.623</td><td>16.45 x 41.22</td><td>1.12</td><td>1.67</td></tr>
-              <tr><td>2-1</td><td>0.701 x 1.782</td><td>17.81 x 45.26</td><td>1.20</td><td>1.78</td></tr>
-              <tr><td>1-1</td><td>0.733 x 1.878</td><td>18.62 x 47.70</td><td>1.63</td><td>2.43</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 205F - PEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.85</td><td>1.05</td></tr>
-              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.06</td><td>1.14</td></tr>
-              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.36</td><td>1.26</td></tr>
-              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.57</td><td>1.34</td></tr>
-            </tbody></table>
-          </details>
-        </div>
-        <div class="line-group">
-          <h3 class="group-title" data-line="290">Detalle t&eacute;cnico ESP Arteria 290F</h3>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 290F - EEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.608 x 1.503</td><td>15.43 x 38.17</td><td>0.97</td><td>1.45</td></tr>
-              <tr><td>4-1</td><td>0.65 x 1.63</td><td>16.51 x 41.4</td><td>1.18</td><td>1.76</td></tr>
-              <tr><td>2-1</td><td>0.703 x 1.799</td><td>17.86 x 45.68</td><td>1.27</td><td>1.89</td></tr>
-              <tr><td>1-1</td><td>0.735 x 1.884</td><td>18.67 x 47.87</td><td>1.71</td><td>2.54</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 290F - EEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>0.85</td><td>1.05</td></tr>
-              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.06</td><td>1.14</td></tr>
-              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.36</td><td>1.26</td></tr>
-              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>1.57</td><td>1.34</td></tr>
-            </tbody></table>
-          </details>
-        </div>
-        <div class="line-group">
-          <h3 class="group-title" data-line="400">Detalle t&eacute;cnico ESP Arteria 400F</h3>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 400F - EFG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.505 x 1.196</td><td>12.823 x 30.38</td><td>0.97</td><td>1.45</td></tr>
-              <tr><td>4-1</td><td>0.548 x 1.323</td><td>13.92 x 33.60</td><td>1.19</td><td>1.77</td></tr>
-              <tr><td>2-1</td><td>0.601 x 1.482</td><td>15.27 x 37.64</td><td>1.50</td><td>2.23</td></tr>
-              <tr><td>1-1</td><td>0.633 x 1.578</td><td>16.08 x 40.08</td><td>1.71</td><td>2.54</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 400F - EFEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.061</td><td>26.96</td><td>1.26</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>1.153</td><td>29.28</td><td>1.49</td><td>2.21</td></tr>
-              <tr><td>2-1</td><td>1.268</td><td>32.20</td><td>1.82</td><td>2.71</td></tr>
-              <tr><td>1-1</td><td>1.336</td><td>33.94</td><td>2.05</td><td>3.05</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 400F - ELG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.552 x 1.337</td><td>14.02 x 33.96</td><td>1.25</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>0.599 x 1.464</td><td>15.11 x 37.19</td><td>1.42</td><td>2.12</td></tr>
-              <tr><td>2-1</td><td>0.648 x 1.624</td><td>16.46 x 41.25</td><td>1.79</td><td>2.67</td></tr>
-              <tr><td>1-1</td><td>0.68 x 1.72</td><td>17.27 x 43.69</td><td>2.02</td><td>3.01</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 400F - ELEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.163</td><td>29.54</td><td>1.26</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>1.255</td><td>31.86</td><td>1.49</td><td>2.21</td></tr>
-              <tr><td>2-1</td><td>1.370</td><td>34.79</td><td>1.82</td><td>2.71</td></tr>
-              <tr><td>1-1</td><td>1.438</td><td>36.53</td><td>2.05</td><td>3.05</td></tr>
-            </tbody></table>
-          </details>
-        </div>
-        <div class="line-group">
-          <h3 class="group-title" data-line="450">Detalle t&eacute;cnico ESP Arteria 450F</h3>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 450F - ELG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.552 x 1.337</td><td>14.02 x 33.96</td><td>1.25</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>0.595 x 1.464</td><td>15.11 x 37.19</td><td>1.42</td><td>2.12</td></tr>
-              <tr><td>2-1</td><td>0.648 x 1.624</td><td>16.46 x 41.25</td><td>1.79</td><td>2.67</td></tr>
-              <tr><td>1-1</td><td>0.68 x 1.72</td><td>17.27 x 43.69</td><td>2.02</td><td>3.01</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 450F - ELEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.163</td><td>29.54</td><td>1.26</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>1.255</td><td>31.86</td><td>1.49</td><td>2.21</td></tr>
-              <tr><td>2-1</td><td>1.370</td><td>34.79</td><td>1.82</td><td>2.71</td></tr>
-              <tr><td>1-1</td><td>1.438</td><td>36.53</td><td>2.05</td><td>3.05</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 450F - KEFLG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.566 x 1.378</td><td>14.38 x 35.00</td><td>1.25</td><td>1.87</td></tr>
-              <tr><td>4-1</td><td>0.608 x 1.51</td><td>15.44 x 38.35</td><td>1.42</td><td>2.12</td></tr>
-              <tr><td>2-1</td><td>0.662 x 1.665</td><td>16.82 x 42.29</td><td>1.79</td><td>2.67</td></tr>
-              <tr><td>1-1</td><td>0.693 x 1.76</td><td>17.60 x 44.70</td><td>2.02</td><td>3.01</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Round 450F - KEFLEG</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>1.215</td><td>30.86</td><td>2.00</td><td>2.90</td></tr>
-              <tr><td>4-1</td><td>1.306</td><td>33.18</td><td>2.30</td><td>3.40</td></tr>
-              <tr><td>2-1</td><td>1.422</td><td>36.11</td><td>2.80</td><td>4.00</td></tr>
-              <tr><td>1-1</td><td>1.490</td><td>37.84</td><td>3.10</td><td>4.60</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat 450F - KEFLG-CT</summary>
-            <table><thead><tr><th>Conductor</th><th>Inch</th><th>mm</th><th>Lb/Ft</th><th>Kg/M</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.566 x 1.753</td><td>14.38 x 44.53</td><td>0.97</td><td>1.45</td></tr>
-              <tr><td>4-1</td><td>0.608 x 1.88</td><td>15.44 x 47.75</td><td>1.18</td><td>1.76</td></tr>
-              <tr><td>2-1</td><td>0.662 x 2.04</td><td>16.82 x 51.81</td><td>1.27</td><td>1.89</td></tr>
-              <tr><td>1-1</td><td>0.693 x 2.135</td><td>17.60 x 54.23</td><td>1.71</td><td>2.54</td></tr>
-            </tbody></table>
-          </details>
-          <details>
-            <summary>Tabla t&eacute;cnica Arteria Flat MLE 450F - KEFLM</summary>
-            <table><thead><tr><th>Conductor</th><th>Overall Inch</th><th>Overall mm</th><th>Length Ft</th><th>Length Mtr</th><th>Weight Lbs</th><th>Weight Kgs</th></tr></thead><tbody>
-              <tr><td>6-1</td><td>0.507 x 1.282</td><td>12.88 x 32.56</td><td>100</td><td>30.5</td><td>109</td><td>49.4</td></tr>
-              <tr><td>4-1</td><td>0.55 x 1.409</td><td>13.97 x 35.79</td><td>100</td><td>30.5</td><td>135</td><td>60.7</td></tr>
-              <tr><td>2-1</td><td>0.603 x 1.57</td><td>15.31 x 39.88</td><td>100</td><td>30.5</td><td>168</td><td>76.4</td></tr>
-            </tbody></table>
-          </details>
+        <div class="notes-panel" style="border-left:4px solid var(--cobalt,#0F4C81)">
+          <div class="notes-panel__head">
+            <span class="notes-panel__tag">EPC Integrado</span>
+            <h2 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h2>
+          </div>
+          <p class="notes-panel__sub">A trav&eacute;s de VMShop puedes solicitar cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC. Si el suministro forma parte de un proyecto EPC que VMS ingenia y construye, el cable queda integrado al MTO con log&iacute;stica por hitos y responsabilidad &uacute;nica. Si solo necesitas el material, tambi&eacute;n te apoyamos con la misma rigurosidad t&eacute;cnica.</p>
+          <ul class="note-list">
+            <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
+            <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
+            <li><strong>Log&iacute;stica por hitos:</strong> Entregamos cable cuando la obra lo necesita, en la cantidad correcta y con trazabilidad completa por bobina.</li>
+            <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
+          </ul>
+          <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
+            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
+          </p>
         </div>
       </div>
     </section>
 
+        
+
+    <!-- BLOQUE B: Conexi&oacute;n EPC Turnkey -->
+    
+<!-- Las dos secciones de proyectos quedan juntas; antes estaban separadas por el cierre. -->
+<section style="background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%)">
+      <div class="container">
+        <h2 style="margin:0 0 6px;color:var(--cobalt,#0F4C81)">Proyectos donde este cable fue clave</h2>
+        <p style="margin:0 0 20px;color:var(--muted,#4E6782)">Casos reales de suministro integrado al alcance EPC. Datos t&eacute;cnicos y log&iacute;sticos &mdash; sin revelar informaci&oacute;n confidencial del cliente.</p>
+        <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Reemplazo de cables ESP en bater&iacute;a de pozos &mdash; Tabasco</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">8 pozos con Arteria 290 &deg;F Round, stock disponible para entrega en 72 h. Coordinaci&oacute;n con cuadrilla de cambio de equipo de bombeo para minimizar tiempo muerto de producci&oacute;n.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Reparaci&oacute;n de emergencia pozo offshore &mdash; Campeche</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 400 &deg;F Flat con coordinaci&oacute;n urgente desde Ciudad del Carmen. Documentaci&oacute;n t&eacute;cnica completa entregada con la bobina para validaci&oacute;n del operador.</p>
+          </article>
+          <article class="card">
+            <h3 style="font-size:1rem;margin:0 0 6px">Nuevo proyecto ESP con variador (VSD)</h3>
+            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 450 &deg;F KEFLG, especificaci&oacute;n coordinada con fabricante del sistema ESP. Verificaci&oacute;n de compatibilidad con motor sumergible y curva de operaci&oacute;n del VSD.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  
+  
+
+  
+  <!-- CTA -->
+  
+<!-- El bloque de proceso baja al cierre: es una oferta de servicio, no informacion de producto, y arriba interrumpia antes de explicar nada. -->
+<section class="steps">
+      <div class="container">
+        <div class="steps__intro">
+          <h2 class="steps__title">&iquest;Necesitas apoyo para tu proyecto? Nosotros lo coordinamos.</h2>
+          <p class="steps__copy">Integramos selecci&oacute;n t&eacute;cnica, log&iacute;stica de suministro y acompa&ntilde;amiento operativo de punta a punta.</p>
+          <div class="steps__cta">
+            <a class="btn btn--primary btn--small" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Hablar con asesor para mi proyecto</a>
+          </div>
+        </div>
+      </div>
+      <div class="container steps__grid">
+        <article class="step">
+          <div class="step__head"><span class="step__badge">1</span><span class="step__icon">DIAGNÓSTICO</span></div>
+          <h3>Cu&eacute;ntanos tus necesidades</h3>
+          <p>Entendemos temperatura, esfuerzo mec&aacute;nico y ambiente para configurar la l&iacute;nea correcta.</p>
+        </article>
+        <article class="step">
+          <div class="step__head"><span class="step__badge">2</span><span class="step__icon">SELECCIÓN</span></div>
+          <h3>Te proponemos una soluci&oacute;n</h3>
+          <p>Recibes alternativa Flat o Round con dimensi&oacute;n y peso para integraci&oacute;n en proyecto.</p>
+        </article>
+        <article class="step">
+          <div class="step__head"><span class="step__badge">3</span><span class="step__icon">SUMINISTRO</span></div>
+          <h3>Acompa&ntilde;amiento t&eacute;cnico</h3>
+          <p>Planeaci&oacute;n de entrega coordinada para mantener continuidad de instalaci&oacute;n y arranque.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contexto de aplicaci&oacute;n ESP -->
     <section class="faq">
       <div class="container">
         <h2 class="section-title">Preguntas frecuentes &mdash; Cables ESP</h2>
@@ -1517,862 +1611,208 @@
       </div>
     </section>
 
-    <!-- Casos de uso -->
-    <section style="padding:36px 0;background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%)">
+    <section style="background:var(--cobalt,#1a4fa0);text-align:center">
       <div class="container">
-        <h2 style="margin:0 0 6px;color:var(--cobalt,#0F4C81)">Proyectos donde este cable fue clave</h2>
-        <p style="margin:0 0 20px;color:var(--muted,#4E6782)">Casos reales de suministro integrado al alcance EPC. Datos t&eacute;cnicos y log&iacute;sticos &mdash; sin revelar informaci&oacute;n confidencial del cliente.</p>
-        <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
-          <article class="card">
-            <h3 style="font-size:1rem;margin:0 0 6px">Reemplazo de cables ESP en bater&iacute;a de pozos &mdash; Tabasco</h3>
-            <p style="font-size:.9rem;color:var(--muted,#4E6782)">8 pozos con Arteria 290 &deg;F Round, stock disponible para entrega en 72 h. Coordinaci&oacute;n con cuadrilla de cambio de equipo de bombeo para minimizar tiempo muerto de producci&oacute;n.</p>
-          </article>
-          <article class="card">
-            <h3 style="font-size:1rem;margin:0 0 6px">Reparaci&oacute;n de emergencia pozo offshore &mdash; Campeche</h3>
-            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 400 &deg;F Flat con coordinaci&oacute;n urgente desde Ciudad del Carmen. Documentaci&oacute;n t&eacute;cnica completa entregada con la bobina para validaci&oacute;n del operador.</p>
-          </article>
-          <article class="card">
-            <h3 style="font-size:1rem;margin:0 0 6px">Nuevo proyecto ESP con variador (VSD)</h3>
-            <p style="font-size:.9rem;color:var(--muted,#4E6782)">Arteria 450 &deg;F KEFLG, especificaci&oacute;n coordinada con fabricante del sistema ESP. Verificaci&oacute;n de compatibilidad con motor sumergible y curva de operaci&oacute;n del VSD.</p>
-          </article>
+        <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Cable ESP especificado para su pozo, no elegido del cat&aacute;logo</h2>
+        <p style="color:rgba(255,255,255,.85);max-width:640px;margin:0 auto 28px">Cinco familias Arteria de 180 a 450&nbsp;&deg;F, en configuraci&oacute;n Flat o Round. Algunas variantes de 180 y 205&nbsp;&deg;F est&aacute;n en stock en M&eacute;xico; las de mayor temperatura se programan bajo pedido.</p>
+        <div class="cta-band__actions on-dark">
+          <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar cotizaci&oacute;n</a>
+          <a class="btn btn--ghost" href="VMShop.html">Ver cat&aacute;logo VMShop</a>
         </div>
       </div>
     </section>
-  </main>
 
-    <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
-  <div class="container">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
-      </div>
-      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
-      <div style="display:flex;gap:14px;margin-top:14px">
-        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
-        </ul>
-      </div>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
-        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
-        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
-        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-
-        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
-        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
-        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
-        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
-        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
-        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
-        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
-      </ul>
-    </div>
-  </div>
-    <div class="foot-note">Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy</div>
-
-
-  <div class="sticky-cta">
-    <a data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar propuesta de Cables ESP</a>
-  </div>
-
-  <script>
-  (function(){
-    var toggle = document.getElementById('menuToggle');
-    var list = document.getElementById('menuList');
-    if(toggle && list){
-      toggle.addEventListener('click', function(e){
-        e.preventDefault();
-        var open = list.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    var nav = document.querySelector('header nav');
-    if(nav){
-      var media = window.matchMedia('(max-width: 680px)');
-      var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-      function syncSubmenus(){
-        var mobile = media.matches;
-        parents.forEach(function(parent){
-          var trigger = parent.querySelector(':scope > a');
-          var submenu = parent.querySelector(':scope > .submenu');
-          if(!trigger || !submenu) return;
-          if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-          else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-          trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-        });
-      }
-      parents.forEach(function(parent){
-        var trigger = parent.querySelector(':scope > a');
-        var submenu = parent.querySelector(':scope > .submenu');
-        if(!trigger || !submenu) return;
-        trigger.addEventListener('click', function(e){
-          if(!media.matches) return;
-          e.preventDefault();
-          var open = parent.classList.toggle('is-open');
-          submenu.style.display = open ? 'block' : 'none';
-          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-      });
-      syncSubmenus();
-      if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-      else if(media.addListener) media.addListener(syncSubmenus);
-    }
-
-    var carousel = document.getElementById('heroCarousel');
-    if(carousel){
-      var slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-slide]'));
-      var dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-carousel-dot]'));
-      var prevBtn = carousel.querySelector('[data-carousel-prev]');
-      var nextBtn = carousel.querySelector('[data-carousel-next]');
-      var index = 0;
-      var timer = null;
-
-      function render(nextIndex){
-        index = (nextIndex + slides.length) % slides.length;
-        slides.forEach(function(slide, i){ slide.classList.toggle('is-active', i === index); });
-        dots.forEach(function(dot, i){
-          var active = i === index;
-          dot.classList.toggle('is-active', active);
-          dot.setAttribute('aria-current', active ? 'true' : 'false');
-        });
-      }
-      function startAutoplay(){
-        stopAutoplay();
-        timer = window.setInterval(function(){ render(index + 1); }, 5200);
-      }
-      function stopAutoplay(){
-        if(timer){ window.clearInterval(timer); timer = null; }
-      }
-
-      if(prevBtn){ prevBtn.addEventListener('click', function(){ render(index - 1); startAutoplay(); }); }
-      if(nextBtn){ nextBtn.addEventListener('click', function(){ render(index + 1); startAutoplay(); }); }
-      dots.forEach(function(dot){
-        dot.addEventListener('click', function(){
-          var dotIndex = Number(dot.getAttribute('data-carousel-dot'));
-          if(Number.isNaN(dotIndex)) return;
-          render(dotIndex);
-          startAutoplay();
-        });
-      });
-      carousel.addEventListener('mouseenter', stopAutoplay);
-      carousel.addEventListener('mouseleave', startAutoplay);
-      carousel.addEventListener('focusin', stopAutoplay);
-      carousel.addEventListener('focusout', startAutoplay);
-      render(0);
-      startAutoplay();
-    }
-  })();
-  
-    var featuredTrack = document.getElementById('featuredTrack');
-    if(featuredTrack){
-      var featuredPrev = document.querySelector('[data-featured-prev]');
-      var featuredNext = document.querySelector('[data-featured-next]');
-      var getFeaturedStep = function(){
-        var card = featuredTrack.querySelector('.product-card');
-        return card ? card.getBoundingClientRect().width + 14 : 320;
-      };
-      var scrollFeatured = function(dir){
-        featuredTrack.scrollBy({ left: dir * getFeaturedStep(), behavior: 'smooth' });
-      };
-      if(featuredPrev) featuredPrev.addEventListener('click', function(){ scrollFeatured(-1); });
-      if(featuredNext) featuredNext.addEventListener('click', function(){ scrollFeatured(1); });
-    }
-</script>
+</main>
 
 <script>
-  (function(){
-    function normalizeVariantKey(text){
-      return (text || '')
-        .toLowerCase()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-        .replace(/tabla t&eacute;cnica/g, '')
-        .replace(/arteria/g, '')
-        .replace(/\b\d-\d\b/g, '')
-        .replace(/[^a-z0-9]+/g, ' ')
-        .trim()
-        .replace(/\s+/g, '-');
-    }
+/* ─────────────────────────────────────────────────────────────────────────
+   Selector de familia Arteria.
 
-    var techSheetByVariant = {
-      'flat-180f-pg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-180f-ppg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-205f-peg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-205f-peg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-290f-eeg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-290f-eeg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-400f-efg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-400f-efeg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-400f-elg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-400f-eleg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-450f-elg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-450f-eleg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-450f-keflg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'round-450f-kefleg':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-450f-keflg-ct':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf',
-      'flat-mle-450f-keflm':'assets/descargas/Ficha_tecnica_VMS_KEI_ESP_Cable_arteria_series.pdf'
-    };
+   Tres zonas de la página hablan de lo mismo —el catálogo (#catalogo), los
+   SKU (#skuCotiza) y las tablas técnicas (#detalleTecnico)— y las tres marcan
+   sus bloques con data-line="180|205|290|400|450". Este script las mantiene
+   sincronizadas: se elige una familia y las tres muestran esa.
 
-    var familyCardThumbs = {
-      '180':'assets/img/landings/esp/cards/arteria-180f-cable-esp-card.webp',
-      '205':'assets/img/landings/esp/cards/arteria-205f-cable-esp-card.webp',
-      '290':'assets/img/landings/esp/cards/arteria-290f-cable-esp-card.webp',
-      '400':'assets/img/landings/esp/cards/arteria-400f-cable-esp-card.webp',
-      '450':'assets/img/landings/esp/cards/arteria-450f-cable-esp-card.webp'
-    };
+   Antes no existía: las cinco familias se mostraban siempre, de modo que
+   "Pide propuesta en 1 click" eran 63 tarjetas seguidas y el rótulo
+   "Mostrando: Línea 180F" y el botón "Ver todas las familias" no hacían nada.
+   ───────────────────────────────────────────────────────────────────────── */
+(function () {
+  var ZONAS  = ['skuCotiza', 'detalleTecnico'];
+  var rotulo = document.getElementById('skuContextLabel');
+  var btnTodo = document.getElementById('showAllSkuFamilies');
+  var activa = '180';
+  var verTodo = false;
 
-    function getSkuBaseTitle(text){
-      return (text || '').replace(/\s-\s\d-\d\s*$/, '');
-    }
-    function variantTokens(key){
-      return (key || '').split('-').filter(Boolean);
-    }
-    function extractShape(tokens){
-      if(tokens.indexOf('flat') !== -1) return 'flat';
-      if(tokens.indexOf('round') !== -1) return 'round';
-      return '';
-    }
-    function extractFamily(tokens){
-      for(var i=0;i<tokens.length;i+=1){
-        if(/\d+f/.test(tokens[i])) return tokens[i];
-      }
-      return '';
-    }
-    function keysMatch(skuKey, detailKey){
-      if(!skuKey || !detailKey) return false;
-      if(skuKey === detailKey) return true;
-      var skuTokens = variantTokens(skuKey);
-      var detailTokens = variantTokens(detailKey);
-      if(extractShape(skuTokens) !== extractShape(detailTokens)) return false;
-      if(extractFamily(skuTokens) !== extractFamily(detailTokens)) return false;
-      var skuInDetail = skuTokens.every(function(t){ return detailTokens.indexOf(t) !== -1; });
-      var detailInSku = detailTokens.every(function(t){ return skuTokens.indexOf(t) !== -1; });
-      return skuInDetail || detailInSku;
-    }
-
-    var techDetails = document.querySelectorAll('#detalleTecnico details');
-    techDetails.forEach(function(detail){
-      if(detail.querySelector('.tech__actions')) return;
-      var legacyTable = detail.querySelector('table');
-      if(legacyTable){ legacyTable.remove(); }
-      var summary = detail.querySelector('summary');
-      if(!summary) return;
-      var key = normalizeVariantKey(summary.textContent);
-      var file = techSheetByVariant[key];
-      if(!file) return;
-      var actions = document.createElement('div');
-      actions.className = 'tech__actions';
-
-      var downloadLink = document.createElement('a');
-      downloadLink.className = 'tech__download';
-      downloadLink.href = file;
-      downloadLink.setAttribute('download', file.split('/').pop());
-      downloadLink.textContent = 'Descargar ficha t&eacute;cnica';
-      actions.appendChild(downloadLink);
-
-      var viewLink = document.createElement('a');
-      viewLink.className = 'tech__download';
-      viewLink.href = file;
-      viewLink.setAttribute('target', '_blank');
-      viewLink.setAttribute('rel', 'noopener noreferrer');
-      viewLink.textContent = 'Ver ficha t&eacute;cnica';
-      actions.appendChild(viewLink);
-
-      summary.insertAdjacentElement('afterend', actions);
-
-      var detailKey = normalizeVariantKey(summary.textContent);
-      var allSkuCards = document.querySelectorAll('#skuCotiza .sku');
-      var relatedSkus = [];
-      allSkuCards.forEach(function(card){
-        var nameEl = card.querySelector('.sku__name');
-        var codeEl = card.querySelector('.sku__code');
-        var specEl = card.querySelector('.sku__spec');
-        var quoteEl = card.querySelector('a[href*="contacto_cta.html?producto="]');
-        if(!nameEl || !codeEl || !quoteEl) return;
-        var skuName = nameEl.textContent.trim();
-        var skuKey = normalizeVariantKey(getSkuBaseTitle(skuName));
-        if(!keysMatch(skuKey, detailKey)) return;
-        var conductorMatch = skuName.match(/(\d-\d)\s*$/);
-        var conductor = conductorMatch ? conductorMatch[1] : '-';
-        var mm = '-';
-        var kgm = '-';
-        if(specEl){
-          var spans = specEl.querySelectorAll('span');
-          spans.forEach(function(span){
-            var text = span.textContent.trim();
-            if(/^mm\s*:/i.test(text)){
-              mm = text.replace(/^mm\s*:/i, '').trim();
-            }
-            if(/^kg\/m\s*:/i.test(text) || /^kgs\s*:/i.test(text)){
-              kgm = text.replace(/^kg\/m\s*:/i, '').replace(/^kgs\s*:/i, '').trim();
-            }
-          });
-        }
-        relatedSkus.push({
-          name: skuName,
-          code: codeEl.textContent.trim(),
-          conductor: conductor,
-          mm: mm,
-          kgm: kgm,
-          href: quoteEl.getAttribute('href') || ''
-        });
-      });
-
-      if(relatedSkus.length){
-        var skuBlock = document.createElement('div');
-        skuBlock.className = 'tech__sku-block';
-        var skuTitle = document.createElement('h4');
-        skuTitle.className = 'tech__sku-title';
-        skuTitle.textContent = 'SKUs disponibles para esta variante';
-        skuBlock.appendChild(skuTitle);
-
-        var skuListWrap = document.createElement('div');
-        skuListWrap.className = 'tech__sku-wrap';
-        var skuTable = document.createElement('table');
-        skuTable.className = 'tech__sku-table';
-        var thead = document.createElement('thead');
-        thead.innerHTML = '<tr><th>Nombre</th><th>SKU</th><th>Conductor</th><th>Medida (mm)</th><th>Peso (Kg/m)</th><th>Solicitar</th></tr>';
-        skuTable.appendChild(thead);
-        var tbody = document.createElement('tbody');
-        relatedSkus.forEach(function(sku){
-          var row = document.createElement('tr');
-          row.innerHTML =
-            '<td>' + sku.name + '</td>' +
-            '<td>' + sku.code + '</td>' +
-            '<td>' + sku.conductor + '</td>' +
-            '<td>' + sku.mm + '</td>' +
-            '<td>' + sku.kgm + '</td>';
-          var ctaCell = document.createElement('td');
-          var btn = document.createElement('a');
-          btn.className = 'btn btn--primary btn--small';
-          btn.setAttribute('data-preserve-query', '');
-          btn.href = sku.href;
-          btn.textContent = 'Solicitar este SKU';
-          ctaCell.appendChild(btn);
-          row.appendChild(ctaCell);
-          tbody.appendChild(row);
-        });
-        skuTable.appendChild(tbody);
-        skuListWrap.appendChild(skuTable);
-        skuBlock.appendChild(skuListWrap);
-        detail.appendChild(skuBlock);
-      }
-    });
-
-    var catalogGroups = document.querySelectorAll('#catalogo .line-group');
-    catalogGroups.forEach(function(group){
-      var title = group.querySelector('.group-title');
-      var grid = group.querySelector('.lineup__grid');
-      if(!title || !grid) return;
-      if(group.querySelector('.line-family-card')) return;
-      var lineText = title.textContent.trim();
-      var lineKey = (title.getAttribute('data-line') || '').trim();
-      var firstImage = grid.querySelector('.line-card img');
-      var familyThumb = familyCardThumbs[lineKey] || '';
-      var trigger = document.createElement('button');
-      trigger.type = 'button';
-      trigger.className = 'line-family-card';
-      if(lineKey) trigger.setAttribute('data-line', lineKey);
-      trigger.setAttribute('aria-expanded', 'false');
-      trigger.setAttribute('aria-label', 'Ver opciones de ' + lineText);
-      if(familyThumb){
-        trigger.style.setProperty('--line-thumb', 'url(\"' + familyThumb + '\")');
-      } else if(firstImage){
-        trigger.style.setProperty('--line-thumb', 'url(\"' + firstImage.getAttribute('src') + '\")');
-      }
-      trigger.innerHTML =
-        '<span class=\"line-family-card__text\"><span><span class=\"line-family-card__name\">' + lineText + '</span>' +
-        '<span class=\"line-family-card__meta\">Desplegar opciones</span></span>' +
-        '<span class=\"line-family-card__chev\">+</span></span>';
-      trigger.addEventListener('click', function(){
-        var catalogContainer = group.closest('.container');
-        var wasOpen = group.classList.contains('is-open');
-        if(catalogContainer){
-          var siblings = catalogContainer.querySelectorAll('.line-group');
-          siblings.forEach(function(sibling){
-            if(sibling === group) return;
-            sibling.classList.remove('is-open');
-            var siblingTrigger = sibling.querySelector('.line-family-card');
-            if(siblingTrigger){ siblingTrigger.setAttribute('aria-expanded', 'false'); }
-          });
-        }
-        var isOpen = !wasOpen;
-        group.classList.toggle('is-open', isOpen);
-        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if(isOpen && lineKey){
-          var skuAnchor = group.querySelector('.line-card__cta[data-family-target]');
-          if(skuAnchor){ skuAnchor.setAttribute('data-family-target', lineKey); }
-          if(catalogContainer){
-            var sectionCopy = catalogContainer.querySelector('.section-copy');
-            var firstGroup = catalogContainer.querySelector('.line-group');
-            var insertAfter = sectionCopy || firstGroup;
-            if(insertAfter && insertAfter !== group){
-              catalogContainer.insertBefore(group, insertAfter.nextSibling);
-            }
-          }
-          group.scrollIntoView({ behavior:'smooth', block:'start' });
-        }
-      });
-      title.insertAdjacentElement('afterend', trigger);
-    });
-
-    var hero = document.getElementById('heroRotator');
-    var heroKicker = document.getElementById('heroKicker');
-    var heroTitleMain = document.getElementById('heroTitleMain');
-    var heroTitleAccent = document.getElementById('heroTitleAccent');
-    var heroSub = document.getElementById('heroSub');
-    var heroLead = document.getElementById('heroLead');
-    var heroPoints = document.getElementById('heroPoints');
-    var heroDots = document.getElementById('heroDots');
-    if(hero && heroKicker && heroTitleMain && heroTitleAccent && heroSub && heroLead && heroPoints && heroDots){
-      var slides = [
-        {
-          kicker:'L&iacute;nea destacada 180F',
-          titleMain:'Arteria',
-          titleAccent:'180F',
-          sub:'Cable industrial para ambientes t&eacute;rmicos exigentes',
-          lead:'Dise&ntilde;ado para operaci&oacute;n confiable en condiciones cr&iacute;ticas de temperatura y carga.',
-          points:['180 &deg;C rating', 'Conductor cobre', 'Aislamiento t&eacute;rmico avanzado'],
-          image:'assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp'
-        },
-        {
-          kicker:'L&iacute;nea destacada 205F',
-          titleMain:'Arteria',
-          titleAccent:'205F',
-          sub:'Rendimiento superior para continuidad operacional',
-          lead:'Mayor rango de operaci&oacute;n para escenarios de alta demanda t&eacute;rmica.',
-          points:['205 &deg;C rating', 'Geometr&iacute;a flat o round', 'Dise&ntilde;o para pozo exigente'],
-          image:'assets/img/landings/esp/heroes/arteria-205f-cable-esp-hero.webp'
-        },
-        {
-          kicker:'L&iacute;nea destacada 290F',
-          titleMain:'Arteria',
-          titleAccent:'290F',
-          sub:'Soluci&oacute;n para cargas t&eacute;rmicas m&aacute;s altas',
-          lead:'Mayor capacidad t&eacute;rmica para condiciones de pozo m&aacute;s demandantes.',
-          points:['290 &deg;C rating', 'Confiabilidad en carga continua', 'SKU especializado por conductor'],
-          image:'assets/img/landings/esp/heroes/arteria-290f-cable-esp-hero.webp'
-        },
-        {
-          kicker:'L&iacute;nea destacada 450F',
-          titleMain:'Arteria',
-          titleAccent:'450F',
-          sub:'L&iacute;nea premium para operaci&oacute;n extrema',
-          lead:'Configuraciones avanzadas para continuidad operativa en condiciones cr&iacute;ticas.',
-          points:['450 &deg;C class', 'Opciones ELG, KEFLG y MLE', 'Disponibilidad para configuraci&oacute;n avanzada'],
-          image:'assets/img/landings/esp/heroes/arteria-450f-cable-esp-hero.webp'
-        },
-        {
-          kicker:'L&iacute;nea destacada 400F',
-          titleMain:'Arteria',
-          titleAccent:'400F',
-          sub:'Desempe&ntilde;o premium para ambientes cr&iacute;ticos',
-          lead:'Versi&oacute;n premium para escenarios cr&iacute;ticos con alta exigencia operativa.',
-          points:['400 &deg;C class', 'Versiones EFG y ELG', 'Opciones round EFEG y ELEG'],
-          image:'assets/img/landings/esp/heroes/arteria-400f-cable-esp-hero.webp'
-        }
-      ];
-      var currentIndex = 0;
-      var timer = null;
-
-      function render(index){
-        currentIndex = (index + slides.length) % slides.length;
-        var item = slides[currentIndex];
-        hero.style.background =
-          'linear-gradient(112deg,rgba(7,16,30,.9) 0%,rgba(13,40,70,.86) 42%,rgba(19,69,114,.72) 100%),url(\"' +
-          item.image + '\") center/cover no-repeat';
-        heroKicker.textContent = item.kicker;
-        heroTitleMain.textContent = item.titleMain;
-        heroTitleAccent.textContent = item.titleAccent;
-        heroSub.textContent = item.sub;
-        heroLead.textContent = item.lead;
-        heroPoints.innerHTML = '';
-        item.points.forEach(function(point){
-          var li = document.createElement('li');
-          li.innerHTML = '<span class=\"hero__check\">?</span><span>' + point + '</span>';
-          heroPoints.appendChild(li);
-        });
-        var dots = heroDots.querySelectorAll('.hero__dot');
-        dots.forEach(function(dot, i){
-          var active = i === currentIndex;
-          dot.classList.toggle('is-active', active);
-          dot.setAttribute('aria-current', active ? 'true' : 'false');
-        });
-      }
-      function startAutoplay(){
-        if(timer) window.clearInterval(timer);
-        timer = window.setInterval(function(){ render(currentIndex + 1); }, 4800);
-      }
-      function stopAutoplay(){
-        if(timer){ window.clearInterval(timer); timer = null; }
-      }
-
-      slides.forEach(function(_, index){
-        var dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'hero__dot';
-        dot.setAttribute('aria-label', 'Ver hero ' + (index + 1));
-        dot.addEventListener('click', function(){ render(index); startAutoplay(); });
-        heroDots.appendChild(dot);
-      });
-
-      hero.addEventListener('mouseenter', stopAutoplay);
-      hero.addEventListener('mouseleave', startAutoplay);
-      hero.addEventListener('focusin', stopAutoplay);
-      hero.addEventListener('focusout', startAutoplay);
-      render(0);
-      startAutoplay();
-    }
-
-    function setActiveTechFamily(family){
-      var techGroups = document.querySelectorAll('#detalleTecnico .line-group');
-      techGroups.forEach(function(group){
-        var title = group.querySelector('.group-title[data-line]');
-        if(!title){ return; }
-        var isMatch = title.getAttribute('data-line') === family;
-        group.classList.toggle('is-hidden', !isMatch);
-      });
-    }
-
-    function setActiveTechVariant(variantKey){
-      var visibleGroup = document.querySelector('#detalleTecnico .line-group:not(.is-hidden)');
-      if(!visibleGroup) return;
-      var matchedDetail = null;
-      var matchedCount = 0;
-      var details = visibleGroup.querySelectorAll('details');
-      if(!variantKey){
-        details.forEach(function(item){ item.classList.remove('is-hidden'); item.open = false; });
-        return;
-      }
-      details.forEach(function(item){
-        var summary = item.querySelector('summary');
-        var key = summary ? normalizeVariantKey(summary.textContent) : '';
-        var match = key === variantKey;
-        item.classList.toggle('is-hidden', !match);
-        item.open = match;
-        item.classList.remove('is-focus');
-        if(match){
-          matchedDetail = item;
-          matchedCount += 1;
-        }
-      });
-      if(matchedCount === 0){
-        details.forEach(function(item){ item.classList.remove('is-hidden'); item.open = false; });
-        return;
-      }
-      if(matchedDetail){
-        matchedDetail.classList.add('is-focus');
-        window.setTimeout(function(){ matchedDetail.classList.remove('is-focus'); }, 2200);
-      }
-    }
-
-    function setActiveSkuVariant(variantKey, shapeKey){
-      var visibleGroup = document.querySelector('#skuCotiza .line-group:not(.is-hidden)');
-      if(!visibleGroup) return;
-      var cards = visibleGroup.querySelectorAll('.sku');
-      if(!variantKey && !shapeKey){
-        cards.forEach(function(card){ card.classList.remove('is-hidden'); });
-        return;
-      }
-      var matchedCount = 0;
-      cards.forEach(function(card){
-        var key = card.getAttribute('data-variant-key') || '';
-        var match = key === variantKey;
-        if(match) matchedCount += 1;
-        card.classList.toggle('is-hidden', !match);
-      });
-      if(matchedCount === 0 && shapeKey){
-        cards.forEach(function(card){
-          var shape = card.getAttribute('data-shape-key') || '';
-          var shapeMatch = shape === shapeKey;
-          if(shapeMatch) matchedCount += 1;
-          card.classList.toggle('is-hidden', !shapeMatch);
-        });
-      }
-      if(matchedCount === 0){
-        cards.forEach(function(card){ card.classList.remove('is-hidden'); });
-      }
-    }
-
-    function updateSkuContext(family, variantLabel){
-      var label = document.getElementById('skuContextLabel');
-      var box = document.getElementById('skuContext');
-      if(!label) return;
-      if(!family){
-        label.textContent = 'Mostrando: Todas las familias';
-      }else{
-        var text = 'Mostrando: L&iacute;nea ' + family + 'F';
-        if(variantLabel){
-          text += ' - ' + variantLabel;
-        }
-        label.textContent = text;
-      }
-      if(box){
-        box.classList.remove('is-updating');
-        void box.offsetWidth;
-        box.classList.add('is-updating');
-      }
-    }
-
-    function setActiveSkuFamily(family, resetFilters){
-      var skuGroups = document.querySelectorAll('#skuCotiza .line-group');
-      skuGroups.forEach(function(group){
-        var title = group.querySelector('.group-title[data-line]');
-        if(!title){ return; }
-        var isMatch = title.getAttribute('data-line') === family;
-        group.classList.toggle('is-hidden', !isMatch);
-      });
-      setActiveTechFamily(family);
-      if(resetFilters !== false){
-        setActiveTechVariant('');
-        setActiveSkuVariant('');
-        updateSkuContext(family, '');
-      }
-    }
-
-    function getSkuUsageCopy(name){
-      var text = (name || '').toLowerCase();
-      if(text.indexOf('mle') !== -1){
-        return 'Uso recomendado en configuraciones MLE de alta precisi&oacute;n operativa.';
-      }
-      if(text.indexOf('round') !== -1){
-        return 'Uso recomendado en pozos con mayor exigencia mecanica y flexion continua.';
-      }
-      return 'Uso recomendado en instalaci&oacute;n ESP con control de trayecto y espacio reducido.';
-    }
-
-    var lineBodies = document.querySelectorAll('.line-card__body');
-    lineBodies.forEach(function(body){
-      if(body.querySelector('.line-card__cta')) return;
-      var familyEl = body.querySelector('h3[data-family]');
-      var family = familyEl ? familyEl.getAttribute('data-family') : '';
-      var variantTitle = familyEl ? familyEl.textContent.trim() : '';
-      var variantKey = normalizeVariantKey(variantTitle);
-      var variantShapeMatch = variantTitle.toLowerCase().match(/\b(flat|round)\b/);
-      var variantShape = variantShapeMatch ? variantShapeMatch[1] : '';
-      var cta = document.createElement('a');
-      cta.className = 'line-card__cta';
-      cta.href = '#skuCotiza';
-      if(family) cta.setAttribute('data-family-target', family);
-      if(variantKey) cta.setAttribute('data-variant-target', variantKey);
-      if(variantShape) cta.setAttribute('data-shape-target', variantShape);
-      if(variantTitle) cta.setAttribute('data-variant-label', variantTitle);
-      cta.textContent = 'Ver SKUs de esta opcion';
-      body.appendChild(cta);
-    });
-
-    var skuLineGroups = document.querySelectorAll('#skuCotiza .line-group');
-    skuLineGroups.forEach(function(group){
-      if(group.querySelector('.sku-showcase')) return;
-      var groupTitle = group.querySelector('.group-title[data-line]');
-      var family = groupTitle ? groupTitle.getAttribute('data-line') : '';
-      var grid = group.querySelector('.sku-grid');
-      if(!grid) return;
-      var showcase = document.createElement('div');
-      showcase.className = 'sku-showcase';
-      var media = document.createElement('div');
-      media.className = 'sku-showcase__media';
-      var list = document.createElement('div');
-      list.className = 'sku-showcase__list';
-      var src = familyCardThumbs[family] || '';
-      if(src){
-        var img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Categoria Arteria ' + family + 'F';
-        media.appendChild(img);
-      }
-      list.appendChild(grid);
-      showcase.appendChild(media);
-      showcase.appendChild(list);
-      group.appendChild(showcase);
-    });
-
-    var skuCards = document.querySelectorAll('#skuCotiza .sku');
-    skuCards.forEach(function(card){
-      var title = card.querySelector('.sku__name');
-      var baseTitle = title ? title.textContent.replace(/\s-\s\d-\d\s*$/, '') : '';
-      var variantKey = normalizeVariantKey(baseTitle);
-      var shapeMatch = baseTitle.toLowerCase().match(/\b(flat|round)\b/);
-      var shapeKey = shapeMatch ? shapeMatch[1] : '';
-      card.setAttribute('data-variant-key', variantKey);
-      card.setAttribute('data-shape-key', shapeKey);
-      if(!card.querySelector('.sku__usage')){
-        var usage = document.createElement('p');
-        usage.className = 'sku__usage';
-        usage.textContent = getSkuUsageCopy(title ? title.textContent : '');
-        var quoteBtn = card.querySelector('a.btn--primary[href*="contacto_cta.html?producto="]');
-        if(quoteBtn){
-          card.insertBefore(usage, quoteBtn);
-        }else{
-          card.appendChild(usage);
-        }
-      }
-    });
-
-    var familyCtas = document.querySelectorAll('.line-card__cta[data-family-target]');
-    familyCtas.forEach(function(cta){
-      cta.addEventListener('click', function(){
-        var family = cta.getAttribute('data-family-target');
-        if(family) setActiveSkuFamily(family, false);
-        var variant = cta.getAttribute('data-variant-target') || '';
-        var shape = cta.getAttribute('data-shape-target') || '';
-        var variantLabel = cta.getAttribute('data-variant-label') || '';
-        if(variant || shape) setActiveSkuVariant(variant, shape);
-        if(variant) setActiveTechVariant(variant);
-        updateSkuContext(family || '', variantLabel);
-      });
-    });
-
-    var skuTechLinks = document.querySelectorAll('#skuCotiza .sku__techlink');
-    skuTechLinks.forEach(function(link){
-      link.addEventListener('click', function(){
-        var card = link.closest('.sku');
-        if(!card) return;
-        var familyGroup = card.closest('.line-group');
-        var familyTitle = familyGroup ? familyGroup.querySelector('.group-title[data-line]') : null;
-        var family = familyTitle ? familyTitle.getAttribute('data-line') : '';
-        if(family) setActiveTechFamily(family);
-        var variantKey = card.getAttribute('data-variant-key') || '';
-        setActiveTechVariant(variantKey);
-      });
-    });
-
-    var showAllBtn = document.getElementById('showAllSkuFamilies');
-    if(showAllBtn){
-      showAllBtn.addEventListener('click', function(){
-        var groups = document.querySelectorAll('#skuCotiza .line-group, #detalleTecnico .line-group');
-        groups.forEach(function(group){ group.classList.remove('is-hidden'); });
-        var skuCards = document.querySelectorAll('#skuCotiza .sku');
-        skuCards.forEach(function(card){ card.classList.remove('is-hidden'); });
-        var details = document.querySelectorAll('#detalleTecnico details');
-        details.forEach(function(item){ item.classList.remove('is-hidden'); item.open = false; });
-        updateSkuContext('', '');
-      });
-    }
-    setActiveSkuFamily('180');
-
-    var params = window.location.search;
-    if(params){
-      var links = document.querySelectorAll('[data-preserve-query]');
-      links.forEach(function(link){
-        var raw = link.getAttribute('href');
-        if(!raw) return;
-        var url = new URL(raw, window.location.origin);
-        var current = new URLSearchParams(window.location.search);
-        current.forEach(function(value, key){
-          if(!url.searchParams.has(key)) url.searchParams.set(key, value);
-        });
-        link.setAttribute('href', url.pathname + '?' + url.searchParams.toString() + (url.hash || ''));
-      });
-    }
-  })();
-  </script>
-<script id="nav-submenu-script-vms">
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var list = document.getElementById('menuList');
-  if(toggle && list){
-    toggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = list.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+  function gruposDe(idZona) {
+    var z = document.getElementById(idZona);
+    return z ? Array.prototype.slice.call(z.querySelectorAll('.line-group')) : [];
   }
-  var nav = document.querySelector('header nav');
-  if(!nav) return;
-  var media = window.matchMedia('(max-width: 760px)');
-  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-  function syncSubmenus(){
-    var mobile = media.matches;
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-    });
+  function lineaDe(g) {
+    var t = g.querySelector('[data-line]');
+    return t ? t.getAttribute('data-line') : null;
   }
-  parents.forEach(function(parent){
-    var trigger = parent.querySelector(':scope > a');
-    var submenu = parent.querySelector(':scope > .submenu');
-    if(!trigger || !submenu) return;
-    trigger.addEventListener('click', function(e){
-      if(!media.matches) return;
-      e.preventDefault();
-      var open = parent.classList.toggle('is-open');
-      submenu.style.display = open ? 'block' : 'none';
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+  function pintar() {
+    ZONAS.forEach(function (id) {
+      gruposDe(id).forEach(function (g) {
+        var suya = verTodo || lineaDe(g) === activa;
+        g.classList.toggle('is-hidden', !suya);
+      });
+    });
+    document.querySelectorAll('#catalogo .line-group').forEach(function (g) {
+      var abierta = !verTodo && lineaDe(g) === activa;
+      g.classList.toggle('is-open', abierta);
+      var t = g.querySelector('.group-title');
+      if (t) t.setAttribute('aria-expanded', abierta ? 'true' : 'false');
+    });
+    if (rotulo) {
+      rotulo.textContent = verTodo
+        ? 'Mostrando: las cinco familias'
+        : 'Mostrando: L\u00ednea ' + activa + 'F';
+    }
+    if (btnTodo) {
+      btnTodo.textContent = verTodo ? 'Ver s\u00f3lo la familia elegida' : 'Ver todas las familias';
+      btnTodo.setAttribute('aria-pressed', verTodo ? 'true' : 'false');
+    }
+  }
+
+  /* El título de cada familia del catálogo es el control. Se le da semántica
+     de botón para que funcione con teclado y lo anuncie un lector de pantalla. */
+  document.querySelectorAll('#catalogo .line-group').forEach(function (g) {
+    var t = g.querySelector('.group-title');
+    if (!t) return;
+    var linea = lineaDe(g);
+    t.setAttribute('role', 'button');
+    t.setAttribute('tabindex', '0');
+    t.style.cursor = 'pointer';
+    function elegir() {
+      if (!verTodo && activa === linea) { activa = null; }   // volver a cerrar
+      else { activa = linea; verTodo = false; }
+      pintar();
+    }
+    t.addEventListener('click', elegir);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elegir(); }
     });
   });
-  syncSubmenus();
-  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-  else if(media.addListener) media.addListener(syncSubmenus);
+
+  if (btnTodo) btnTodo.addEventListener('click', function () { verTodo = !verTodo; pintar(); });
+
+  pintar();
 })();
-</script></body>
+</script>
+
+
+    <footer class="site-footer site-footer--compact">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    
+    <div class="site-footer__cta">
+      <a class="btn btn--primary btn--pill" href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar cotizaci&oacute;n</a>
+    </div>
+
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+</body>
 </html>
 
 

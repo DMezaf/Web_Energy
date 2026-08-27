@@ -1,7 +1,17 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certificaciones ISO | VMS Energy EPC M&eacute;xico</title>
@@ -14,20 +24,19 @@
   <meta property="og:title" content="Certificaciones ISO | VMS Energy EPC M&eacute;xico" />
   <meta property="og:description" content="5 certificaciones ISO activas: 9001, 14001, 37001, 45001 y 50001. Empresa EPC el&eacute;ctrica M&eacute;xico con badges descargables y registros p&uacute;blicos." />
   <meta property="og:url" content="https://vmsenergy.com/certificaciones.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.png" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Certificaciones ISO | VMS Energy EPC M&eacute;xico" />
   <meta name="twitter:description" content="5 certificaciones ISO activas: 9001, 14001, 37001, 45001 y 50001. Empresa EPC el&eacute;ctrica M&eacute;xico con badges descargables y registros p&uacute;blicos." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.png" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/certificaciones.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/certificaciones.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.png');
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.webp');
     }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
@@ -37,19 +46,14 @@
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
     .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
     .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
     .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
-    .btn--primary{background:var(--cobalt);color:#fff}
-    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff}
     .privacy-wrap{padding:40px 0 56px;background:linear-gradient(180deg,#f7f9fc,#fff)}
     .privacy-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(8,28,54,.08);padding:18px 20px;margin-bottom:18px}
     .privacy-card h2{margin:0 0 12px;color:#12365f;font-size:clamp(22px,2.6vw,30px);line-height:1.2}
@@ -58,16 +62,22 @@
     .privacy-card li{margin:0 0 8px}
     .privacy-note{margin:0 0 14px;color:#4a5f79;font-size:.95rem}
     /* ===== Certificaciones grid ===== */
-    .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:8px 0 6px}
+    .certs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin:8px 0 6px}
+    @media(max-width:1024px){.certs-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:640px){.certs-grid{grid-template-columns:repeat(2,1fr)}
+    /* El ultimo escalon: a 320 px dos columnas de 154.7 px suman 309 en una
+       caja de 288 y la rejilla desbordaba 42 px. */
+    @media (max-width:380px){.certs-grid{grid-template-columns:1fr}}}
     .cert-card{background:#fff;border:1px solid rgba(15,76,129,.18);border-radius:16px;padding:18px 16px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 8px 18px rgba(8,28,54,.06);transition:transform .25s ease,box-shadow .25s ease}
     .cert-card:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(8,28,54,.12)}
-    .cert-card__badge{width:128px;height:128px;display:grid;place-items:center;margin:4px 0 12px}
-    .cert-card__badge img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-    .cert-card__num{margin:0;font-size:1.15rem;color:var(--concept-primary);font-weight:800;letter-spacing:.02em}
-    .cert-card__name{margin:2px 0 8px;color:#12365f;font-weight:700;font-size:.95rem;line-height:1.25}
-    .cert-card__desc{margin:0 0 12px;color:#4a5f79;font-size:.88rem;line-height:1.45}
-    .cert-card__code{margin:0 0 12px;color:#475569;font-size:.8rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f2f4f7;border-radius:8px;padding:4px 8px}
-    .cert-card__dl{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding:8px 12px;border:1px solid rgba(15,76,129,.3);border-radius:10px;color:var(--concept-primary);font-weight:700;font-size:.85rem;text-decoration:none;background:#fff}
+    .cert-card__num{margin:0;font-size:1.1rem;color:var(--concept-primary);font-weight:800;letter-spacing:.02em}
+    .cert-card__name{margin:2px 0 8px;color:#12365f;font-weight:700;font-size:.93rem;line-height:1.25}
+    .cert-card__desc{margin:0 0 12px;color:#4a5f79;font-size:.87rem;line-height:1.45}
+    .cert-card__code{margin:0 0 14px;color:#475569;font-size:.78rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f2f4f7;border-radius:8px;padding:4px 8px}
+    .cert-card__img-link{display:block;width:100%;margin-bottom:16px;border-radius:10px;overflow:hidden;border:1px solid rgba(15,76,129,.14);transition:box-shadow .22s,transform .22s}
+    .cert-card__img-link:hover{box-shadow:0 8px 24px rgba(15,76,129,.18);transform:scale(1.015)}
+    .cert-card__img-link img{width:100%;height:auto;display:block;object-fit:contain}
+    .cert-card__dl{display:inline-flex;align-items:center;gap:6px;margin-top:auto;padding:8px 14px;border:1px solid rgba(15,76,129,.3);border-radius:10px;color:var(--concept-primary);font-weight:700;font-size:.84rem;text-decoration:none;background:#fff}
     .cert-card__dl:hover,.cert-card__dl:focus-visible{background:var(--concept-primary);color:#fff;border-color:var(--concept-primary)}
     .certs-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:18px;align-items:center;margin-top:8px}
     .certs-summary__media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;background:#f1f5f9;padding:18px;display:grid;place-items:center}
@@ -78,8 +88,8 @@
     .certs-cta .btn--outline{background:#fff;border-color:rgba(15,76,129,.32);color:var(--concept-primary)}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{display:inline-flex;width:26px;height:26px;}
     .foot-social__link svg{fill:#fff;transition:fill .3s ease;}
@@ -95,16 +105,25 @@
     }
     .foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    /* ===== FAQ accordion ===== */
+    .faq-list{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+    .faq-item{border:1px solid rgba(15,76,129,.15);border-radius:12px;overflow:hidden;background:#fff}
+    .faq-item[open]{border-color:rgba(15,76,129,.3);box-shadow:0 4px 14px rgba(8,28,54,.07)}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;font-weight:700;font-size:.97rem;color:#12365f;cursor:pointer;list-style:none;line-height:1.35}
+    .faq-q::-webkit-details-marker{display:none}
+    .faq-q::after{content:"＋";font-size:1.2rem;font-weight:400;color:var(--concept-primary);flex-shrink:0;transition:transform .2s}
+    .faq-item[open] .faq-q::after{content:"－"}
+    .faq-a{padding:0 18px 16px;color:#4a5f79;font-size:.92rem;line-height:1.6}
+    .faq-a p{margin:0}
+    @media (max-width:680px){}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://vmsenergy.com/certificaciones.html#webpage","url":"https://vmsenergy.com/certificaciones.html","name":"Certificaciones ISO | VMS Energy EPC M&eacute;xico","description":"5 certificaciones ISO activas: 9001, 14001, 37001, 45001 y 50001. Empresa EPC el&eacute;ctrica M&eacute;xico con badges descargables y registros p&uacute;blicos.","inLanguage":"es-MX","isPartOf":{"@type":"WebSite","name":"VMS Energy","url":"https://vmsenergy.com/"},"about":{"@id":"https://vmsenergy.com/#organization"}},{"@type":"Organization","@id":"https://vmsenergy.com/#organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/brand/vms_logo_blue.png","description":"Empresa EPC el&eacute;ctrica en M&eacute;xico con sistema integrado de gesti&oacute;n certificado bajo cinco normas ISO.","award":["ISO 9001 GSC9KMX505","ISO 14001 GSC14KMX277","ISO 45001 GSC45KMX182","ISO 37001 GSC37KMX131","ISO 50001 GSC50KMX101"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"ISO 9001:2015 - Sistema de Gesti&oacute;n de la Calidad","credentialCategory":"certification","identifier":"GSC9KMX505","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_9001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-9001"},{"@type":"EducationalOccupationalCredential","name":"ISO 14001:2015 - Sistema de Gesti&oacute;n Ambiental","credentialCategory":"certification","identifier":"GSC14KMX277","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_14001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-14001"},{"@type":"EducationalOccupationalCredential","name":"ISO 37001:2016 - Sistema de Gesti&oacute;n Antisoborno","credentialCategory":"certification","identifier":"GSC37KMX131","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_37001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-37001"},{"@type":"EducationalOccupationalCredential","name":"ISO 45001:2018 - Sistema de Gesti&oacute;n de Seguridad y Salud en el Trabajo","credentialCategory":"certification","identifier":"GSC45KMX182","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_45001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-45001"},{"@type":"EducationalOccupationalCredential","name":"ISO 50001:2018 - Sistema de Gesti&oacute;n de la Energ&iacute;a","credentialCategory":"certification","identifier":"GSC50KMX101","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_50001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-50001"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Nosotros","item":"https://vmsenergy.com/nosotros.html"},{"@type":"ListItem","position":3,"name":"Certificaciones ISO","item":"https://vmsenergy.com/certificaciones.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://vmsenergy.com/certificaciones.html#webpage","url":"https://vmsenergy.com/certificaciones.html","name":"Certificaciones ISO | VMS Energy EPC México","description":"5 certificaciones ISO activas: 9001, 14001, 37001, 45001 y 50001. Empresa EPC eléctrica México con badges descargables y registros públicos.","inLanguage":"es-MX","isPartOf":{"@type":"WebSite","name":"VMS Energy","url":"https://vmsenergy.com/"},"about":{"@id":"https://vmsenergy.com/#organization"}},{"@type":"Organization","@id":"https://vmsenergy.com/#organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/brand/vms_logo_blue.png","description":"Empresa EPC eléctrica en México con sistema integrado de gestión certificado bajo cinco normas ISO.","award":["ISO 9001 GSC9KMX505","ISO 14001 GSC14KMX277","ISO 45001 GSC45KMX182","ISO 37001 GSC37KMX131","ISO 50001 GSC50KMX101"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"ISO 9001:2015 - Sistema de Gestión de la Calidad","credentialCategory":"certification","identifier":"GSC9KMX505","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_9001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-9001"},{"@type":"EducationalOccupationalCredential","name":"ISO 14001:2015 - Sistema de Gestión Ambiental","credentialCategory":"certification","identifier":"GSC14KMX277","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_14001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-14001"},{"@type":"EducationalOccupationalCredential","name":"ISO 37001:2016 - Sistema de Gestión Antisoborno","credentialCategory":"certification","identifier":"GSC37KMX131","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_37001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-37001"},{"@type":"EducationalOccupationalCredential","name":"ISO 45001:2018 - Sistema de Gestión de Seguridad y Salud en el Trabajo","credentialCategory":"certification","identifier":"GSC45KMX182","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_45001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-45001"},{"@type":"EducationalOccupationalCredential","name":"ISO 50001:2018 - Sistema de Gestión de la Energía","credentialCategory":"certification","identifier":"GSC50KMX101","recognizedBy":{"@type":"Organization","name":"GSC"},"image":"https://vmsenergy.com/assets/img/SIG_ISO_50001.webp","url":"https://vmsenergy.com/certificaciones.html#iso-50001"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Nosotros","item":"https://vmsenergy.com/nosotros.html"},{"@type":"ListItem","position":3,"name":"Certificaciones ISO","item":"https://vmsenergy.com/certificaciones.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el Sistema de Gestión Integral QHSE+ de VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"Es el marco de gestión que integra en un solo sistema operativo las cinco normas ISO vigentes de VMS Energy: calidad (9001), ambiente (14001), antisoborno (37001), seguridad y salud en el trabajo (45001) y energía (50001). Todos los proyectos EPC que ejecuta VMS Energy operan bajo este sistema, independientemente del sector o tamaño del contrato."}},{"@type":"Question","name":"¿Cuántas certificaciones ISO tiene VMS Energy y cuáles son?","acceptedAnswer":{"@type":"Answer","text":"VMS Energy cuenta con cinco certificaciones ISO activas emitidas por GSC: ISO 9001:2015 (GSC9KMX505), ISO 14001:2015 (GSC14KMX277), ISO 37001:2016 (GSC37KMX131), ISO 45001:2018 (GSC45KMX182) e ISO 50001:2018 (GSC50KMX101)."}},{"@type":"Question","name":"¿Las certificaciones aplican a todos los proyectos EPC de VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"Sí. El Sistema de Gestión Integral QHSE+ es transversal a toda la operación: ingeniería, suministro técnico, construcción y mantenimiento. Todos los proyectos comparten los mismos procedimientos certificados de calidad, seguridad y ética."}},{"@type":"Question","name":"¿Por qué es importante el ISO 37001 (antisoborno) para licitaciones con CFE o Pemex?","acceptedAnswer":{"@type":"Answer","text":"La ISO 37001 certifica que VMS Energy tiene políticas documentadas de prevención de soborno en toda su cadena: compras, subcontratación, relación con funcionarios públicos y gestión comercial. Es evidencia de cumplimiento anticorrupción exigida en licitaciones públicas con compradores como CFE Generación, Pemex y corporativos con estándares globales de debida diligencia."}},{"@type":"Question","name":"¿Qué ventaja concreta ofrece la ISO 50001 en un proyecto de ingeniería eléctrica?","acceptedAnswer":{"@type":"Answer","text":"ISO 50001 obliga a establecer una línea base de consumo energético, definir indicadores de desempeño (EnPIs) y demostrar mejora continua. Cualquier reducción de consumo lograda queda documentada y es auditable por terceros, lo que se traduce en evidencia medible para empresas con compromisos ESG o reportes GRI/CDP."}},{"@type":"Question","name":"¿Cómo verifico la vigencia de las certificaciones ISO de VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"Cada certificado incluye el número de registro oficial emitido por GSC. Puedes descargar los PDFs directamente desde esta página y verificar los registros con la entidad certificadora. Para solicitar copias adicionales o una carta de vigencia, contáctanos en contacto@vmsenergy.com."}}]}]}</script>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
   .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
@@ -112,220 +131,243 @@
   .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
   .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}}
-</style></head>
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Certificaciones y Acreditaciones — VMS Energy",
+  "url": "https://vmsenergy.com/certificaciones.html",
+  "isPartOf": {
+    "@id": "https://vmsenergy.com/"
+  },
+  "description": "5 certificaciones ISO activas: 9001, 14001, 37001, 45001 y 50001. Empresa EPC eléctrica México con badges descargables y registros públicos."
+}
+</script>
+
+</head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </div>
+        </li>
 
-  <main>
-    <section class="privacy-hero" aria-labelledby="certificacionesTitle">
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+  <main id="contenido">
+    <section class="privacy-hero" id="inicio" aria-labelledby="certificacionesTitle">
       <div class="container">
-        <span class="privacy-hero__eyebrow">VMS Energy &middot; Sistema Integrado de Gesti&oacute;n</span>
+        <span class="privacy-hero__eyebrow">VMS Energy &middot; Sistema de Gestión Integral QHSE+</span>
         <h1 id="certificacionesTitle">Certificaciones ISO de VMS Energy</h1>
         <p>Operamos bajo cinco normas ISO vigentes que respaldan nuestros proyectos EPC en M&eacute;xico: calidad, ambiente, antisoborno, seguridad y salud, y energ&iacute;a. Cada certificaci&oacute;n cuenta con n&uacute;mero de registro p&uacute;blico y badge oficial descargable.</p>
-        <div class="privacy-hero__actions">
+        <div class="privacy-hero__actions on-dark">
           <a class="btn btn--primary" href="#certs">Ver certificaciones</a>
           <a class="btn btn--secondary" href="contacto_cta.html#ctaForm">Solicitar consultor&iacute;a</a>
         </div>
       </div>
     </section>
 
-    <section id="certs" class="privacy-wrap" aria-labelledby="certsListTitle">
+    <section id="certs" class="privacy-wrap" aria-labelledby="certsSummaryTitle">
       <div class="container">
-        <article class="privacy-card" aria-labelledby="certsListTitle">
-          <h2 id="certsListTitle">5 certificaciones ISO activas</h2>
-          <p class="privacy-note">Sistema Integrado de Gesti&oacute;n (SIG) auditado y vigente. Descarga cada badge oficial para compartir en procesos de licitaci&oacute;n y debida diligencia.</p>
 
-          <div class="certs-grid" role="list">
-            <article id="iso-9001" class="cert-card" role="listitem">
-              <div class="cert-card__badge">
-                <img src="assets/img/SIG_ISO_9001.webp" alt="Badge ISO 9001 VMS Energy" loading="lazy" decoding="async" width="128" height="128">
-              </div>
-              <p class="cert-card__num">ISO 9001:2015</p>
-              <p class="cert-card__name">Sistema de Gesti&oacute;n de la Calidad</p>
-              <p class="cert-card__desc">Procesos certificados de calidad para ingenier&iacute;a, suministro y construcci&oacute;n EPC.</p>
-              <span class="cert-card__code">GSC9KMX505</span>
-              <a class="cert-card__dl" href="assets/img/SIG_ISO_9001.webp" download="VMS-Energy-ISO-9001.png" aria-label="Descargar badge ISO 9001 VMS Energy">Descargar badge</a>
-            </article>
-
-            <article id="iso-14001" class="cert-card" role="listitem">
-              <div class="cert-card__badge">
-                <img src="assets/img/SIG_ISO_14001.webp" alt="Badge ISO 14001 VMS Energy" loading="lazy" decoding="async" width="128" height="128">
-              </div>
-              <p class="cert-card__num">ISO 14001:2015</p>
-              <p class="cert-card__name">Sistema de Gesti&oacute;n Ambiental</p>
-              <p class="cert-card__desc">Control de impactos ambientales en obra y operaci&oacute;n industrial.</p>
-              <span class="cert-card__code">GSC14KMX277</span>
-              <a class="cert-card__dl" href="assets/img/SIG_ISO_14001.webp" download="VMS-Energy-ISO-14001.png" aria-label="Descargar badge ISO 14001 VMS Energy">Descargar badge</a>
-            </article>
-
-            <article id="iso-37001" class="cert-card" role="listitem">
-              <div class="cert-card__badge">
-                <img src="assets/img/SIG_ISO_37001.webp" alt="Badge ISO 37001 VMS Energy" loading="lazy" decoding="async" width="128" height="128">
-              </div>
-              <p class="cert-card__num">ISO 37001:2016</p>
-              <p class="cert-card__name">Sistema de Gesti&oacute;n Antisoborno</p>
-              <p class="cert-card__desc">Cumplimiento, &eacute;tica y prevenci&oacute;n de soborno en toda la cadena de procura.</p>
-              <span class="cert-card__code">GSC37KMX131</span>
-              <a class="cert-card__dl" href="assets/img/SIG_ISO_37001.webp" download="VMS-Energy-ISO-37001.png" aria-label="Descargar badge ISO 37001 VMS Energy">Descargar badge</a>
-            </article>
-
-            <article id="iso-45001" class="cert-card" role="listitem">
-              <div class="cert-card__badge">
-                <img src="assets/img/SIG_ISO_45001.webp" alt="Badge ISO 45001 VMS Energy" loading="lazy" decoding="async" width="128" height="128">
-              </div>
-              <p class="cert-card__num">ISO 45001:2018</p>
-              <p class="cert-card__name">Seguridad y Salud en el Trabajo</p>
-              <p class="cert-card__desc">Cultura de seguridad documentada para obra civil, montaje el&eacute;ctrico y mantenimiento.</p>
-              <span class="cert-card__code">GSC45KMX182</span>
-              <a class="cert-card__dl" href="assets/img/SIG_ISO_45001.webp" download="VMS-Energy-ISO-45001.png" aria-label="Descargar badge ISO 45001 VMS Energy">Descargar badge</a>
-            </article>
-
-            <article id="iso-50001" class="cert-card" role="listitem">
-              <div class="cert-card__badge">
-                <img src="assets/img/SIG_ISO_50001.webp" alt="Badge ISO 50001 VMS Energy" loading="lazy" decoding="async" width="128" height="128">
-              </div>
-              <p class="cert-card__num">ISO 50001:2018</p>
-              <p class="cert-card__name">Sistema de Gesti&oacute;n de la Energ&iacute;a</p>
-              <p class="cert-card__desc">Eficiencia energ&eacute;tica medible: l&iacute;nea base, indicadores y planes de mejora.</p>
-              <span class="cert-card__code">GSC50KMX101</span>
-              <a class="cert-card__dl" href="assets/img/SIG_ISO_50001.webp" download="VMS-Energy-ISO-50001.png" aria-label="Descargar badge ISO 50001 VMS Energy">Descargar badge</a>
-            </article>
-          </div>
-        </article>
-
+        <!-- ① Sistema de Gestión Integral QHSE+ -->
         <article class="privacy-card" aria-labelledby="certsSummaryTitle">
-          <h2 id="certsSummaryTitle">Sistema Integrado de Gesti&oacute;n (SIG)</h2>
-          <p>VMS Energy opera bajo un Sistema Integrado de Gesti&oacute;n que articula las cinco normas ISO en un &uacute;nico marco operativo. Esto significa que cada proyecto EPC &mdash;desde una subestaci&oacute;n industrial en miner&iacute;a hasta un sistema solar en planta de alimentos&mdash; se ejecuta con los mismos est&aacute;ndares de calidad, seguridad, &eacute;tica, ambiente y eficiencia energ&eacute;tica.</p>
+          <h2 id="certsSummaryTitle">Sistema de Gesti&oacute;n Integral QHSE+</h2>
+          <p>VMS Energy opera bajo un Sistema de Gesti&oacute;n Integral QHSE+ que articula cinco normas ISO en un &uacute;nico marco operativo. Cada proyecto EPC &mdash;subestaciones, automatizaci&oacute;n, energ&iacute;a solar, HVAC industrial u Oil &amp; Gas&mdash; se ejecuta con los mismos est&aacute;ndares certificados de calidad, seguridad, &eacute;tica, ambiente y eficiencia energ&eacute;tica.</p>
           <div class="certs-summary">
             <div>
-              <p>Diferenciador clave en M&eacute;xico: pocas integradoras EPC del sector el&eacute;ctrico industrial cuentan con las cinco certificaciones simult&aacute;neamente. Para nuestros clientes en miner&iacute;a, alimentos &amp; bebidas, oil &amp; gas y energ&iacute;a solar, esto se traduce en:</p>
+              <p>Diferenciador clave en M&eacute;xico: pocas integradoras EPC del sector el&eacute;ctrico industrial cuentan con las cinco certificaciones simult&aacute;neamente. Esto se traduce en:</p>
               <ul>
                 <li>Cumplimiento documentado para auditor&iacute;as corporativas y due diligence.</li>
                 <li>Reducci&oacute;n de riesgos operativos, ambientales y de cumplimiento.</li>
-                <li>Eficiencia energ&eacute;tica medible bajo ISO 50001.</li>
-                <li>Pol&iacute;ticas antisoborno alineadas con corporativos globales.</li>
+                <li>Consumo energ&eacute;tico medido, documentado y auditable en cada proyecto EPC.</li>
+                <li>Pol&iacute;ticas antisoborno alineadas con corporativos globales y requisitos de licitaci&oacute;n p&uacute;blica.</li>
               </ul>
               <div class="certs-cta">
                 <a class="btn--primary" href="contacto_cta.html#ctaForm">Solicitar consultor&iacute;a gratuita</a>
@@ -333,162 +375,259 @@
               </div>
             </div>
             <figure class="certs-summary__media">
-              <img src="assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.png" alt="Composici&oacute;n de las 5 certificaciones ISO de VMS Energy: 9001, 14001, 37001, 45001 y 50001" loading="lazy" decoding="async">
+              <img src="assets/img/VMS_Energy_SGI_ISO_9001_14001_37001_45001_50001.webp" alt="Composici&oacute;n de las 5 certificaciones ISO del Sistema de Gesti&oacute;n Integral QHSE+ de VMS Energy" loading="lazy" decoding="async">
             </figure>
           </div>
         </article>
 
-        <article class="privacy-card" aria-labelledby="certsAplicaTitle">
-          <h2 id="certsAplicaTitle">C&oacute;mo aplican en cada sector</h2>
-          <ul>
-            <li><strong><a href="soluciones_mineria.html#inicio">Miner&iacute;a:</a></strong> ISO 45001 y 14001 son cr&iacute;ticas para operaciones en sitios remotos con alta exigencia de seguridad y manejo ambiental; ISO 9001 garantiza repetibilidad en montajes el&eacute;ctricos.</li>
-            <li><strong><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas:</a></strong> ISO 50001 habilita programas de eficiencia energ&eacute;tica que reducen kWh por unidad producida; ISO 9001 da trazabilidad en proyectos llave en mano.</li>
-            <li><strong><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial:</a></strong> ISO 14001 y 50001 alinean los proyectos solares con metas corporativas de descarbonizaci&oacute;n y eficiencia.</li>
-            <li><strong><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas:</a></strong> ISO 45001 y 37001 son requisitos t&iacute;picos en licitaciones del sector hidrocarburos.</li>
-          </ul>
+        <!-- ② 5 certificaciones ISO -->
+        <article class="privacy-card" aria-labelledby="certsListTitle">
+          <h2 id="certsListTitle">5 certificaciones ISO activas</h2>
+          <p class="privacy-note">Haz clic en cada certificado para verlo en detalle o desc&aacute;rgalo en PDF para procesos de licitaci&oacute;n y debida diligencia.</p>
+
+          <div class="certs-grid" role="list">
+            <article id="iso-9001" class="cert-card" role="listitem">
+              <a class="cert-card__img-link" href="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_9001_negro.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado ISO 9001:2015 VMS Energy en tamaño completo">
+                <img src="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_9001_negro.png" alt="Certificado oficial ISO 9001:2015 VMS Energy" loading="lazy" decoding="async">
+              </a>
+              <p class="cert-card__num">ISO 9001:2015</p>
+              <p class="cert-card__name">Sistema de Gesti&oacute;n de la Calidad</p>
+              <p class="cert-card__desc">Procesos certificados de calidad para ingenier&iacute;a, suministro y construcci&oacute;n EPC.</p>
+              <span class="cert-card__code">GSC9KMX505</span>
+              <a class="cert-card__dl" href="assets/descargas/CERTIFICADO_VMS_ENERGY_DE_MEXICO_S_DE_RL_DE_CV_9K.pdf" download="VMS-Energy-Certificado-ISO-9001.pdf" aria-label="Descargar certificado ISO 9001 VMS Energy en PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </article>
+
+            <article id="iso-14001" class="cert-card" role="listitem">
+              <a class="cert-card__img-link" href="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_14001_negro.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado ISO 14001:2015 VMS Energy en tamaño completo">
+                <img src="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_14001_negro.png" alt="Certificado oficial ISO 14001:2015 VMS Energy" loading="lazy" decoding="async">
+              </a>
+              <p class="cert-card__num">ISO 14001:2015</p>
+              <p class="cert-card__name">Sistema de Gesti&oacute;n Ambiental</p>
+              <p class="cert-card__desc">Control de impactos ambientales en obra y operaci&oacute;n industrial.</p>
+              <span class="cert-card__code">GSC14KMX277</span>
+              <a class="cert-card__dl" href="assets/descargas/CERTIFICADO_VMS_ENERGY_DE_MEXICO_S_DE_RL_DE_CV_14K.pdf" download="VMS-Energy-Certificado-ISO-14001.pdf" aria-label="Descargar certificado ISO 14001 VMS Energy en PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </article>
+
+            <article id="iso-37001" class="cert-card" role="listitem">
+              <a class="cert-card__img-link" href="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_37001_negro.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado ISO 37001:2016 VMS Energy en tamaño completo">
+                <img src="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_37001_negro.png" alt="Certificado oficial ISO 37001:2016 VMS Energy" loading="lazy" decoding="async">
+              </a>
+              <p class="cert-card__num">ISO 37001:2016</p>
+              <p class="cert-card__name">Sistema de Gesti&oacute;n Antisoborno</p>
+              <p class="cert-card__desc">Cumplimiento, &eacute;tica y prevenci&oacute;n de soborno en toda la cadena de procura.</p>
+              <span class="cert-card__code">GSC37KMX131</span>
+              <a class="cert-card__dl" href="assets/descargas/CERTIFICADO_VMS_ENERGY_DE_MEXICO_S_DE_RL_DE_CV_37K.pdf" download="VMS-Energy-Certificado-ISO-37001.pdf" aria-label="Descargar certificado ISO 37001 VMS Energy en PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </article>
+
+            <article id="iso-45001" class="cert-card" role="listitem">
+              <a class="cert-card__img-link" href="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_45001_negro.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado ISO 45001:2018 VMS Energy en tamaño completo">
+                <img src="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_45001_negro.png" alt="Certificado oficial ISO 45001:2018 VMS Energy" loading="lazy" decoding="async">
+              </a>
+              <p class="cert-card__num">ISO 45001:2018</p>
+              <p class="cert-card__name">Seguridad y Salud en el Trabajo</p>
+              <p class="cert-card__desc">Cultura de seguridad documentada para obra civil, montaje el&eacute;ctrico y mantenimiento.</p>
+              <span class="cert-card__code">GSC45KMX182</span>
+              <a class="cert-card__dl" href="assets/descargas/CERTIFICADO_VMS_ENERGY_DE_MEXICO_S_DE_RL_DE_CV_45K.pdf" download="VMS-Energy-Certificado-ISO-45001.pdf" aria-label="Descargar certificado ISO 45001 VMS Energy en PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </article>
+
+            <article id="iso-50001" class="cert-card" role="listitem">
+              <a class="cert-card__img-link" href="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_50001_negro.png" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado ISO 50001:2018 VMS Energy en tamaño completo">
+                <img src="assets/img/VMS_ENERGY_ISO_Global_STD_OFICIAL_ISO_50001_negro.png" alt="Certificado oficial ISO 50001:2018 VMS Energy" loading="lazy" decoding="async">
+              </a>
+              <p class="cert-card__num">ISO 50001:2018</p>
+              <p class="cert-card__name">Sistema de Gesti&oacute;n de la Energ&iacute;a</p>
+              <p class="cert-card__desc">Consumo energ&eacute;tico medido, documentado y auditable en cada proyecto EPC.</p>
+              <span class="cert-card__code">GSC50KMX101</span>
+              <a class="cert-card__dl" href="assets/descargas/CERTIFICADO_VMS_ENERGY_DE_MEXICO_S_DE_RL_DE_CV_50K.pdf" download="VMS-Energy-Certificado-ISO-50001.pdf" aria-label="Descargar certificado ISO 50001 VMS Energy en PDF">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF
+              </a>
+            </article>
+          </div>
         </article>
+
+        <!-- ③ FAQ -->
+        <article class="privacy-card" aria-labelledby="certsFaqTitle">
+          <h2 id="certsFaqTitle">Preguntas frecuentes sobre las certificaciones ISO de VMS Energy</h2>
+          <div class="faq-list">
+
+            <details class="faq-item" open>
+              <summary class="faq-q">&iquest;Qu&eacute; es el Sistema de Gesti&oacute;n Integral QHSE+ de VMS Energy?</summary>
+              <div class="faq-a">
+                <p>Es el marco de gesti&oacute;n que integra en un solo sistema operativo las cinco normas ISO vigentes de VMS Energy: calidad (9001), ambiente (14001), antisoborno (37001), seguridad y salud en el trabajo (45001) y energ&iacute;a (50001). El acrónimo QHSE+ significa Quality, Health, Safety &amp; Environment, m&aacute;s la dimensi&oacute;n antisoborno. Todos los proyectos EPC que ejecuta VMS Energy operan bajo este sistema, independientemente del sector o tama&ntilde;o del contrato.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">&iquest;Cu&aacute;ntas certificaciones ISO tiene VMS Energy y cu&aacute;les son?</summary>
+              <div class="faq-a">
+                <p>VMS Energy cuenta con cinco certificaciones ISO activas emitidas por GSC (Global Standards Certification): ISO 9001:2015 (calidad, registro GSC9KMX505), ISO 14001:2015 (ambiente, GSC14KMX277), ISO 37001:2016 (antisoborno, GSC37KMX131), ISO 45001:2018 (seguridad y salud, GSC45KMX182) e ISO 50001:2018 (energ&iacute;a, GSC50KMX101). Puedes descargar cada certificado en PDF desde esta p&aacute;gina.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">&iquest;Las certificaciones aplican a todos los proyectos EPC de VMS Energy?</summary>
+              <div class="faq-a">
+                <p>S&iacute;. El Sistema de Gesti&oacute;n Integral QHSE+ es transversal a toda la operaci&oacute;n: ingenier&iacute;a, suministro t&eacute;cnico, construcci&oacute;n y mantenimiento. Esto significa que un proyecto de automatizaci&oacute;n en planta de alimentos y un proyecto de infraestructura el&eacute;ctrica en plataforma offshore comparten los mismos procedimientos certificados de calidad, seguridad y &eacute;tica.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">&iquest;Por qu&eacute; es importante el ISO 37001 (antisoborno) para licitaciones con CFE o Pemex?</summary>
+              <div class="faq-a">
+                <p>La ISO 37001 certifica que VMS Energy tiene pol&iacute;ticas documentadas de prevenci&oacute;n de soborno en toda su cadena: compras, subcontrataci&oacute;n, relaci&oacute;n con funcionarios p&uacute;blicos y gesti&oacute;n comercial. Para procesos de licitaci&oacute;n p&uacute;blica bajo la Ley de Adquisiciones o Ley de Obras, esta certificaci&oacute;n es evidencia de cumplimiento anticorrupci&oacute;n exigida cada vez con mayor frecuencia por compradores como CFE Generaci&oacute;n, Pemex y corporativos con est&aacute;ndares globales de debida diligencia.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">&iquest;Qu&eacute; ventaja concreta ofrece la ISO 50001 en un proyecto de ingenier&iacute;a el&eacute;ctrica?</summary>
+              <div class="faq-a">
+                <p>ISO 50001 obliga a establecer una l&iacute;nea base de consumo energ&eacute;tico, definir indicadores de desempe&ntilde;o (EnPIs) y demostrar mejora continua. En t&eacute;rminos pr&aacute;cticos: cualquier reducci&oacute;n de consumo lograda en el proyecto queda documentada y es auditable por terceros. Para empresas con compromisos ESG o reportes GRI/CDP, esto se traduce en evidencia medible de eficiencia energ&eacute;tica que pueden presentar a sus propios accionistas o clientes.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-q">&iquest;C&oacute;mo verifico la vigencia de las certificaciones ISO de VMS Energy?</summary>
+              <div class="faq-a">
+                <p>Cada certificado incluye el n&uacute;mero de registro oficial emitido por GSC. Puedes descargar los PDFs directamente desde esta p&aacute;gina y verificar los registros con la entidad certificadora. Para solicitar copias adicionales o una carta de vigencia para tu proceso de due diligence, cont&aacute;ctanos en <a href="mailto:contacto@vmsenergy.com" style="color:var(--concept-primary)">contacto@vmsenergy.com</a>.</p>
+              </div>
+            </details>
+
+          </div>
+        </article>
+
       </div>
     </section>
-  </main>
+  
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Trabaje con una empresa certificada y con trayectoria comprobada</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">VMS Energy cuenta con certificaciones ISO y amplia experiencia en proyectos eléctricos industriales en México.</p>
+      <div class="cta-band__actions on-dark">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Solicitar propuesta</a>
+        <a class="btn btn--ghost" href="proyectos-vms.html">Conocer nuestros proyectos</a>
+      </div>
+    </div>
+  </section>
 
-<footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+</main>
+
+<footer class="site-footer">
   <div class="container">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
-      </div>
-      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
-      <div style="display:flex;gap:14px;margin-top:14px">
-        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
-        </a>
-      </div>
-    </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
-    </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="certificaciones.html" style="color:#cbd5e1;text-decoration:none">Certificaciones ISO</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de &Eacute;tica y Conducta</a></li>
-        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
-        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
-        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-
-        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
         </ul>
       </div>
+
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
-        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
-      </ul>
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
-        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
-        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
-        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
-        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
-        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
-      </ul>
-    </div>
   </div>
 </footer>
-<div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
-  Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
-</div>
-<script id="nav-submenu-script-vms">
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var list = document.getElementById('menuList');
-  if(toggle && list){
-    toggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = list.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  var nav = document.querySelector('header nav');
-  if(!nav) return;
-  var media = window.matchMedia('(max-width: 760px)');
-  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-  function syncSubmenus(){
-    var mobile = media.matches;
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-    });
-  }
-  parents.forEach(function(parent){
-    var trigger = parent.querySelector(':scope > a');
-    var submenu = parent.querySelector(':scope > .submenu');
-    if(!trigger || !submenu) return;
-    trigger.addEventListener('click', function(e){
-      if(!media.matches) return;
-      e.preventDefault();
-      var open = parent.classList.toggle('is-open');
-      submenu.style.display = open ? 'block' : 'none';
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  syncSubmenus();
-  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-  else if(media.addListener) media.addListener(syncSubmenus);
-})();
-</script></body>
+</body>
 </html>

@@ -1,7 +1,17 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Buz&oacute;n de Sugerencias | VMS Energy</title>
@@ -14,18 +24,17 @@
   <meta property="og:title" content="Buz&oacute;n de Sugerencias | VMS Energy" />
   <meta property="og:description" content="Env&iacute;anos tu sugerencia o comentario para mejorar en VMS Energy." />
   <meta property="og:url" content="https://vmsenergy.com/buzon-sugerencias.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.png" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Buz&oacute;n de Sugerencias | VMS Energy" />
   <meta name="twitter:description" content="Formulario simple para enviar sugerencias a VMS Energy." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.png" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--blue-2:#274B7C;--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/hero_nosotros_VMS_Energy.png');
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--priv-hero-img: url('assets/img/hero_nosotros_VMS_Energy.webp');
     }
     header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
@@ -35,14 +44,12 @@
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
     .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
     .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
     .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
     .privacy-wrap{padding:40px 0 56px;background:linear-gradient(180deg,#f7f9fc,#fff)}
     .privacy-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(8,28,54,.08);padding:18px 20px;margin-bottom:18px}
@@ -65,8 +72,8 @@
     .privacy-tabpanel.is-active{display:block}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{
       display:inline-flex;
@@ -104,8 +111,8 @@
       }
     }\n.foot a{color:#cbd5e1}
     .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
-    .foot-social__link svg{width:18px;height:18px;fill:currentColor}}
-    @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}.privacy-tabs__cards{grid-template-columns:1fr}.privacy-tabs__card-media{min-height:190px}}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:680px){.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}.privacy-tabs__cards{grid-template-columns:1fr}.privacy-tabs__card-media{min-height:190px}}
       .directory-wrap{padding:40px 0 56px;background:linear-gradient(180deg,#f7f9fc,#fff)}
     .directory-intro{margin:0 0 20px;color:#304869}
     .directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -131,132 +138,219 @@
     .suggestion-form button{justify-self:start;padding:11px 22px;border:0;border-radius:999px;background:var(--concept-primary);color:#fff;font:700 1rem/1 "Roboto Condensed",system-ui,sans-serif;cursor:pointer}
     .suggestion-form button:hover{background:#123f69}
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/", "logo": "https://vmsenergy.com/assets/logo.png", "description": "VMS Energy — EPC de Infraestructura El&eacute;ctrica, Automatizaci&oacute;n y Control, oil & Gas, Energ&iacute;a Solar Industrial, Generaci&oacute;n Verde No Solar y servicios en Centrales Hidroel&eacute;ctricas de CFE, Iluminaci&oacute;n Industrial y Soluciones Electromec&aacute;nicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC el&eacute;ctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Ingenier&iacute;a, suministro t&eacute;cnico y construcci&oacute;n en generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n"}, {"@type": "Service", "name": "EPC de Iluminaci&oacute;n Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Dise&ntilde;o luminot&eacute;cnico, selecci&oacute;n multimarcas, instalaci&oacute;n y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "&iquest;Ofrecen integraci&oacute;n multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "&iquest;Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;: 9001, 14001, 45001, 37001 y 50001, con n&uacute;meros de registro p&uacute;blicos."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png", "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Generación Verde No Solar y servicios en Centrales Hidroeléctricas de CFE, Iluminación Industrial y Soluciones Electromecánicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Ingeniería, suministro técnico y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Ofrecen integración multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "¿Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: 9001, 14001, 45001, 37001 y 50001, con números de registro públicos."}}]}]}</script>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/buzon-sugerencias.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/buzon-sugerencias.html" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Empresa","item":"https://vmsenergy.com/nosotros.html"},{"@type":"ListItem","position":3,"name":"Buzón de Sugerencias","item":"https://vmsenergy.com/buzon-sugerencias.html"}]}
+  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Buzón de Sugerencias — VMS Energy",
+  "url": "https://vmsenergy.com/buzon-sugerencias.html",
+  "isPartOf": {
+    "@id": "https://vmsenergy.com/"
+  },
+  "description": "Comparte tus comentarios en el buzón de sugerencias de VMS Energy."
+}
+</script>
 </head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
-  </header>
+
+  </div>
+</header>
 
 
 
@@ -267,7 +361,7 @@
 
 
 
-      <main>
+      <main id="contenido">
     <section class="privacy-hero" aria-labelledby="suggestionsTitle">
       <div class="container">
         <span class="privacy-hero__eyebrow">VMS Energy &middot; Participaci&oacute;n</span>
@@ -291,147 +385,127 @@
             <label for="sug-message">Mensaje</label>
             <textarea id="sug-message" name="Mensaje" required></textarea>
 
-            <button type="submit">Enviar sugerencia</button>
+                      <div class="form-consent">
+            <input type="checkbox" id="privacidad-1" name="privacidad" required>
+            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
+          </div>
+          <button type="submit">Enviar sugerencia</button>
           </form>
         </article>
       </div>
     </section>
   </main>
-<footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+<footer class="site-footer">
   <div class="container">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
-      </div>
-      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
-      <div style="display:flex;gap:14px;margin-top:14px">
-        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
-        </a>
-      </div>
-    </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
-    </div>
 
-
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de Ética y Conducta</a></li>
-        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
-        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
-        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-
-        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
         </ul>
       </div>
+
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
-        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
-      </ul>
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
-        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
-        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
-        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
-        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
-        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
-      </ul>
-    </div>
   </div>
 </footer>
+
 <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
   Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
 </div>
 <script>
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var list = document.getElementById('menuList');
-  if(toggle && list){
-    toggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = list.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  var nav = document.querySelector('header nav');
-  if(!nav) return;
-  var media = window.matchMedia('(max-width: 680px)');
-  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-  function syncSubmenus(){
-    var mobile = media.matches;
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-    });
-  }
-  parents.forEach(function(parent){
-    var trigger = parent.querySelector(':scope > a');
-    var submenu = parent.querySelector(':scope > .submenu');
-    if(!trigger || !submenu) return;
-    trigger.addEventListener('click', function(e){
-      if(!media.matches) return;
-      e.preventDefault();
-      var open = parent.classList.toggle('is-open');
-      submenu.style.display = open ? 'block' : 'none';
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  var tabsRoot = document.getElementById('privacyTabs');
+  (function(){
+var tabsRoot = document.getElementById('privacyTabs');
   if(tabsRoot){
     var tabs = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tab"]'));
     var panels = Array.prototype.slice.call(tabsRoot.querySelectorAll('[role="tabpanel"]'));
@@ -466,11 +540,8 @@
       });
     });
   }
-  syncSubmenus();
-  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-  else if(media.addListener) media.addListener(syncSubmenus);
 })();
-</script></body>
+  </script></body>
 </html>
 
 

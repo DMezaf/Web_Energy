@@ -1,7 +1,17 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glosario de cable el&eacute;ctrico industrial | VMS Energy</title>
@@ -21,13 +31,12 @@
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/common/hero-suministro-vms-energy.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/glosario-cable-electrico.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/glosario-cable-electrico.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--soft:#F4F8FF;--ok:#0B8E57}
+    :root{--ok:#0B8E57}
     .announcement{background:linear-gradient(90deg,var(--concept-primary),#0c3e69);color:#fff;font-size:.92rem}
     .announcement .container{padding:8px 20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 
@@ -36,9 +45,7 @@
     .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
     .brand__logo img{width:94%;height:auto;max-height:88%;object-fit:contain;display:block}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 16px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:inherit;font-size:1rem}
-    .btn--primary{background:linear-gradient(180deg,#ff8b1f,#ff6a00);border-color:rgba(187,84,9,.7);color:#fff}
-    .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
+    
 
     .gloss-hero{padding:48px 0 32px;background:linear-gradient(135deg,#f0f6ff 0%,#e8f0fb 100%);border-bottom:1px solid var(--line)}
     .gloss-hero__kicker{display:inline-flex;padding:.24rem .64rem;border-radius:999px;border:1px solid rgba(15,76,129,.2);background:#fff;color:var(--cobalt);font-size:.82rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
@@ -83,7 +90,6 @@
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
   .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
@@ -91,10 +97,9 @@
   .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
   .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 </style>
-<style id="footer-styles-vms">#footer ul{line-height:1.6}}
+<style id="footer-styles-vms">#footer ul{line-height:1.6}
 </style>
 <script type="application/ld+json">
 {
@@ -118,6 +123,24 @@
       "name": "Ampacidad",
       "termCode": "ampacidad",
       "description": "Corriente máxima admisible del cable en condiciones de instalación específicas (temperatura ambiente, método de instalación, agrupamiento). El valor de catálogo es teórico; el real depende de los factores de corrección del proyecto.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#apantallamiento",
+      "name": "Apantallamiento",
+      "alternateName": "Pantalla metlica",
+      "termCode": "apantallamiento",
+      "description": "Capa conductora que rodea el aislamiento para confinar el campo eléctrico y dar camino a la corriente de falla. En media y alta tensión se ejecuta con cinta de cobre o trenza; en cables EHV la pantalla va acompañada de una vaina metálica.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#armadura",
+      "name": "Armadura",
+      "alternateName": "Alambres de acero galvanizado",
+      "termCode": "armadura",
+      "description": "Capa de alambres de acero galvanizado que protege mecánicamente el cable contra impactos y aplastamiento. Obligatoria en instalación directamente enterrada y recomendada en ductos con riesgo de daño mecánico.",
       "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
     },
     {
@@ -147,11 +170,38 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#cubierta",
+      "name": "Cubierta",
+      "alternateName": "Chaqueta exterior",
+      "termCode": "cubierta",
+      "description": "Capa exterior no conductora que protege el cable del entorno: humedad, agentes químicos, radiación UV y abrasión. HDPE para suelo agresivo y enterrado directo, PVC para uso general, LSZH donde el humo y los halógenos son el riesgo.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://vmsenergy.com/glosario-cable-electrico.html#ehv",
       "name": "EHV",
       "alternateName": "Extra High Voltage",
       "termCode": "ehv",
-      "description": "Cables de tensión superior a 66 kV (típicamente 66 a 500 kV). Requieren ingeniería de detalle, pruebas tipo IEC 60840 / IEC 62067, empalmes premoldeados y tiempos de fabricación de 16 a 28 semanas.",
+      "description": "Cables de tensión superior a 150 kV (típicamente 150 a 500 kV), gobernados por la IEC 62067. Requieren ingeniería de detalle, pruebas de tipo, empalmes premoldeados y tiempos de fabricación de 16 a 28 semanas. El catálogo de VMS Energy cubre la banda de 66 a 400 kV, que abarca las dos normas: IEC 60840 hasta 150 kV e IEC 62067 por encima.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#emc",
+      "name": "EMC",
+      "alternateName": "Compatibilidad electromagntica",
+      "termCode": "emc",
+      "description": "Cables de control e instrumentación con blindaje diseñado para que el ruido eléctrico del entorno no se acople a la señal y para que la señal no contamine a los equipos vecinos.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#empalme",
+      "name": "Empalme",
+      "alternateName": "Unin de dos tramos",
+      "termCode": "empalme",
+      "description": "Unión de dos tramos de cable que reconstruye conductor, aislamiento, pantalla y cubierta. En media y alta tensión se ejecuta con kits premoldeados de clase de tensión definida y se prueba antes de energizar.",
       "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
     },
     {
@@ -174,11 +224,29 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#factor-correccion",
+      "name": "Factor de corrección",
+      "alternateName": "kT  kA  k",
+      "termCode": "factor-correccion",
+      "description": "Multiplicador que baja la ampacidad de catálogo a las condiciones reales del proyecto: temperatura ambiente, agrupamiento de circuitos y resistividad térmica del terreno. Seis cables trifásicos juntos en bandeja pueden bajarla un 33 %.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://vmsenergy.com/glosario-cable-electrico.html#hv",
       "name": "HV",
       "alternateName": "High Voltage",
       "termCode": "hv",
-      "description": "Cables de alta tensión, típicamente entre 36 y 66 kV. Aplicables en interconexión de subestaciones, líneas industriales críticas y proyectos de transmisión. Norma de referencia: IEC 60840.",
+      "description": "Cables de alta tensión, por encima de 36 kV y hasta 150 kV. Aplicables en interconexión de subestaciones, líneas industriales críticas y proyectos de transmisión. Norma de referencia: IEC 60840, que cubre cables extruidos de 36 a 150 kV; por encima de 150 kV manda la IEC 62067.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#kapton",
+      "name": "Kapton",
+      "alternateName": "Poliimida",
+      "termCode": "kapton",
+      "description": "Película de poliimida empleada como aislamiento y cubierta en cables ESP de las familias Arteria 400 y 450. Resistencia superior al H2S y a fluidos corrosivos.",
       "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
     },
     {
@@ -228,6 +296,42 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#nom-001-sede",
+      "name": "NOM-001-SEDE",
+      "alternateName": "Instalaciones elctricas (utilizacin)",
+      "termCode": "nom-001-sede",
+      "description": "Norma Oficial Mexicana de instalaciones eléctricas, de cumplimiento obligatorio en México. Rige selección de conductores, canalizaciones, protecciones, soportería y puesta a tierra.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#pv1-f",
+      "name": "PV1-F",
+      "alternateName": "Cable solar de corriente directa",
+      "termCode": "pv1-f",
+      "description": "Cable solar DC de cobre estañado flexible (conductor Clase 5), con aislamiento y cubierta de poliolefina reticulada libre de halógenos. Normas: BS EN 50618, 2Pfg 1169/08.2007 e IEC 60228 Clase 5. No es apto para instalación directamente enterrada.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#radio-curvatura",
+      "name": "Radio de curvatura",
+      "alternateName": "Radio mnimo de doblado",
+      "termCode": "radio-curvatura",
+      "description": "Curvatura mínima que admite un cable sin dañar aislamiento ni pantalla, expresada como múltiplo de su diámetro exterior. De 12 a 15 veces el diámetro en cable de potencia MT (IEC 60502-2); 4 veces en cable fotovoltaico PV1-F.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#terminacion",
+      "name": "Terminación",
+      "alternateName": "Punta de cable",
+      "termCode": "terminacion",
+      "description": "Extremo preparado del cable para conectarse a un equipo o a una barra. Reconstruye el control del campo eléctrico y se ejecuta con kits de clase de tensión definida (15, 25 o 35 kV), con protocolo de prueba por circuito.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://vmsenergy.com/glosario-cable-electrico.html#trailing-cable",
       "name": "Trailing cable",
       "alternateName": "Cable de arrastre",
@@ -242,6 +346,15 @@
       "alternateName": "Tensión nominal del cable",
       "termCode": "u0-u",
       "description": "Designación de la tensión nominal del cable expresada en kV. U0 es la tensión eficaz fase-tierra y U la tensión eficaz fase-fase. Ejemplos: 6/10 kV, 12/20 kV, 18/30 kV, 64/110 kV.",
+      "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://vmsenergy.com/glosario-cable-electrico.html#vaina-metalica",
+      "name": "Vaina metálica",
+      "alternateName": "Capa 7 del cable EHV",
+      "termCode": "vaina-metalica",
+      "description": "Capa metálica exterior de los cables de extra alta tensión: aporta estanqueidad al agua y cierra el confinamiento del campo. Aluminio liso o corrugado, cobre corrugado, plomo o acero inoxidable corrugado.",
       "inDefinedTermSet": "https://vmsenergy.com/glosario-cable-electrico.html"
     },
     {
@@ -276,6 +389,19 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Glosario de Cable Eléctrico Industrial — VMS Energy",
+  "url": "https://vmsenergy.com/glosario-cable-electrico.html",
+  "isPartOf": {
+    "@id": "https://vmsenergy.com/"
+  },
+  "description": "Términos clave para la especificación de cables eléctricos industriales: XLPE, EPR, LSZH, ESP, EHV, BHT, LAPEM y más. Guía técnica del equipo VMS Energy."
+}
+</script>
 </head>
 <body>
   <div class="announcement">
@@ -288,129 +414,199 @@
     </div>
   </div>
 
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </div>
+        </li>
 
-  <main>
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+  <main id="contenido">
     <section class="gloss-hero">
       <div class="container">
         <span class="gloss-hero__kicker">Glosario t&eacute;cnico</span>
@@ -430,20 +626,32 @@
         <h2 class="gloss-index__title">&Iacute;ndice por t&eacute;rmino</h2>
         <ul class="gloss-index__list">
           <li><a href="#ampacidad">Ampacidad</a></li>
+          <li><a href="#apantallamiento">Apantallamiento</a></li>
+          <li><a href="#armadura">Armadura</a></li>
           <li><a href="#bht">BHT</a></li>
           <li><a href="#clase-2">Clase 2</a></li>
           <li><a href="#clase-5">Clase 5</a></li>
+          <li><a href="#cubierta">Cubierta</a></li>
           <li><a href="#ehv">EHV</a></li>
+          <li><a href="#emc">EMC</a></li>
+          <li><a href="#empalme">Empalme</a></li>
           <li><a href="#epr">EPR</a></li>
           <li><a href="#esp">ESP</a></li>
+          <li><a href="#factor-correccion">Factor de correcci&oacute;n</a></li>
           <li><a href="#hv">HV</a></li>
+          <li><a href="#kapton">Kapton</a></li>
           <li><a href="#lapem">LAPEM</a></li>
           <li><a href="#lszh">LSZH</a></li>
           <li><a href="#mto">MTO</a></li>
           <li><a href="#mv">MV</a></li>
           <li><a href="#nmx-j">NMX-J</a></li>
+          <li><a href="#nom-001-sede">NOM-001-SEDE</a></li>
+          <li><a href="#pv1-f">PV1-F</a></li>
+          <li><a href="#radio-curvatura">Radio de curvatura</a></li>
+          <li><a href="#terminacion">Terminaci&oacute;n</a></li>
           <li><a href="#trailing-cable">Trailing cable</a></li>
           <li><a href="#u0-u">U0/U</a></li>
+          <li><a href="#vaina-metalica">Vaina met&aacute;lica</a></li>
           <li><a href="#xlpe">XLPE</a></li>
         </ul>
       </section>
@@ -458,6 +666,22 @@
               <span class="gloss-term__alias">Corriente admisible</span>
             </div>
             <p class="gloss-term__def">Corriente m&aacute;xima admisible del cable en condiciones de instalaci&oacute;n espec&iacute;ficas (temperatura ambiente, m&eacute;todo de instalaci&oacute;n, agrupamiento). El valor de cat&aacute;logo es te&oacute;rico &mdash; el valor real depende de los factores de correcci&oacute;n del proyecto.</p>
+          </li>
+          <li class="gloss-term" id="apantallamiento">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Apantallamiento</h3>
+              <span class="gloss-term__alias">Pantalla met&aacute;lica</span>
+            </div>
+            <p class="gloss-term__def">Capa conductora que rodea el aislamiento para confinar el campo el&eacute;ctrico y dar camino a la corriente de falla. En media y alta tensi&oacute;n se ejecuta con cinta de cobre o trenza; en cables EHV la pantalla va acompa&ntilde;ada de una vaina met&aacute;lica que a&ntilde;ade estanqueidad al agua. Un cable «apantallado» sin pantalla continua a tierra no cumple su funci&oacute;n.</p>
+            <p class="gloss-term__see">Ver tambi&eacute;n: <a href="#vaina-metalica">vaina met&aacute;lica</a>.</p>
+          </li>
+          <li class="gloss-term" id="armadura">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Armadura</h3>
+              <span class="gloss-term__alias">Alambres de acero galvanizado</span>
+            </div>
+            <p class="gloss-term__def">Capa de alambres de acero galvanizado que protege mec&aacute;nicamente el cable contra impactos y aplastamiento. Es obligatoria en instalaci&oacute;n directamente enterrada y recomendada en ductos con riesgo de da&ntilde;o mec&aacute;nico. En suelos qu&iacute;micamente agresivos se combina con cubierta de HDPE.</p>
+            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-extra-alta-tension.html">cables de extra alta tensi&oacute;n</a>.</p>
           </li>
         </ul>
       </section>
@@ -496,6 +720,14 @@
             <p class="gloss-term__def">Conductor de alta flexibilidad formado por hilos finos. Se usa en cables m&oacute;viles, trailing cables, cables para equipos en movimiento y cables fotovoltaicos (PV1-F). Permite radios de curvatura menores y soporta ciclos de flexi&oacute;n.</p>
             <p class="gloss-term__see">Aplicaci&oacute;n: <a href="lp-cables-fotovoltaicos.html">cables fotovoltaicos PV1-F</a>.</p>
           </li>
+          <li class="gloss-term" id="cubierta">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Cubierta</h3>
+              <span class="gloss-term__alias">Chaqueta exterior</span>
+            </div>
+            <p class="gloss-term__def">Capa exterior no conductora que protege el cable del entorno: humedad, agentes qu&iacute;micos, radiaci&oacute;n UV y abrasi&oacute;n. El material lo decide el ambiente, no el precio: HDPE para suelo agresivo y enterrado directo, PVC para uso general, LSZH donde el humo y los hal&oacute;genos son el riesgo.</p>
+            <p class="gloss-term__see">Ver tambi&eacute;n: <a href="#lszh">LSZH</a>.</p>
+          </li>
         </ul>
       </section>
 
@@ -508,8 +740,24 @@
               <h3 class="gloss-term__name">EHV</h3>
               <span class="gloss-term__alias">Extra High Voltage</span>
             </div>
-            <p class="gloss-term__def">Cables de tensi&oacute;n superior a 66 kV (t&iacute;picamente 66&ndash;500 kV). Requieren ingenier&iacute;a de detalle, pruebas tipo IEC 60840 / IEC 62067, empalmes premoldeados y tiempos de fabricaci&oacute;n de 16 a 28 semanas.</p>
+            <p class="gloss-term__def">Cables de tensi&oacute;n superior a 150 kV (t&iacute;picamente 150&ndash;500 kV), gobernados por la IEC 62067. Requieren ingenier&iacute;a de detalle, pruebas de tipo, empalmes premoldeados y tiempos de fabricaci&oacute;n de 16 a 28 semanas. El cat&aacute;logo de VMS Energy cubre la banda de 66 a 400 kV, que abarca las dos normas: IEC 60840 hasta 150 kV e IEC 62067 por encima.</p>
             <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-extra-alta-tension.html">cables extra alta tensi&oacute;n 66&ndash;400 kV</a>.</p>
+          </li>
+          <li class="gloss-term" id="emc">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">EMC</h3>
+              <span class="gloss-term__alias">Compatibilidad electromagn&eacute;tica</span>
+            </div>
+            <p class="gloss-term__def">Cables de control e instrumentaci&oacute;n con blindaje dise&ntilde;ado para que el ruido el&eacute;ctrico del entorno &mdash;variadores, arrancadores, radiofrecuencia&mdash; no se acople a la se&ntilde;al, y para que la se&ntilde;al no contamine a los equipos vecinos. Habituales en salas de control y en canalizaciones que corren junto a variadores de frecuencia.</p>
+            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cable-de-potencia-kei.html">cables de control y aplicaciones especiales</a>.</p>
+          </li>
+          <li class="gloss-term" id="empalme">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Empalme</h3>
+              <span class="gloss-term__alias">Uni&oacute;n de dos tramos</span>
+            </div>
+            <p class="gloss-term__def">Uni&oacute;n de dos tramos de cable que reconstruye conductor, aislamiento, pantalla y cubierta. En media y alta tensi&oacute;n se ejecuta con kits premoldeados de clase de tensi&oacute;n definida y se prueba antes de energizar. Cada empalme es un punto de falla potencial: la ingenier&iacute;a de tendido busca reducir su n&uacute;mero, no solo ejecutarlos bien.</p>
+            <p class="gloss-term__see">Servicio: <a href="lp-tendido-cableado-electrico-industrial.html">tendido y cableado industrial</a>.</p>
           </li>
           <li class="gloss-term" id="epr">
             <div class="gloss-term__head">
@@ -530,6 +778,21 @@
         </ul>
       </section>
 
+      <!-- F -->
+      <section class="gloss-section" aria-labelledby="letra-f">
+        <span class="gloss-letter" id="letra-f" aria-hidden="true">F</span>
+        <ul class="gloss-list">
+          <li class="gloss-term" id="factor-correccion">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Factor de correcci&oacute;n</h3>
+              <span class="gloss-term__alias">k<sub>T</sub> &middot; k<sub>A</sub> &middot; k<sub>&rho;</sub></span>
+            </div>
+            <p class="gloss-term__def">Multiplicador que baja la ampacidad de cat&aacute;logo a las condiciones reales del proyecto: temperatura ambiente (k<sub>T</sub>), agrupamiento de circuitos (k<sub>A</sub>) y resistividad t&eacute;rmica del terreno (k<sub>&rho;</sub>). La corriente admisible en campo es I<sub>tablas</sub> &times; k<sub>T</sub> &times; k<sub>A</sub> &times; k<sub>&rho;</sub>. Seis cables trif&aacute;sicos juntos en bandeja pueden bajarla un 33&nbsp;%.</p>
+            <p class="gloss-term__see">C&aacute;lculo: <a href="blog-seleccion-cable-electrico-industrial.html">selecci&oacute;n de cable el&eacute;ctrico industrial</a>.</p>
+          </li>
+        </ul>
+      </section>
+
       <!-- H -->
       <section class="gloss-section" aria-labelledby="letra-h">
         <span class="gloss-letter" id="letra-h" aria-hidden="true">H</span>
@@ -539,8 +802,23 @@
               <h3 class="gloss-term__name">HV</h3>
               <span class="gloss-term__alias">High Voltage</span>
             </div>
-            <p class="gloss-term__def">Cables de alta tensi&oacute;n, t&iacute;picamente entre 36 y 66 kV. Aplicables en interconexi&oacute;n de subestaciones, l&iacute;neas industriales cr&iacute;ticas y proyectos de transmisi&oacute;n. Norma de referencia: IEC 60840.</p>
-            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-alta-tension.html">cables de alta tensi&oacute;n</a>.</p>
+            <p class="gloss-term__def">Cables de alta tensi&oacute;n, por encima de 36 kV y hasta 150 kV. Aplicables en interconexi&oacute;n de subestaciones, l&iacute;neas industriales cr&iacute;ticas y proyectos de transmisi&oacute;n. Norma de referencia: IEC 60840, que cubre cables extruidos de 36 a 150 kV; por encima de 150 kV manda la IEC 62067.</p>
+            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-extra-alta-tension.html">cables de extra alta tensi&oacute;n</a>.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- K -->
+      <section class="gloss-section" aria-labelledby="letra-k">
+        <span class="gloss-letter" id="letra-k" aria-hidden="true">K</span>
+        <ul class="gloss-list">
+          <li class="gloss-term" id="kapton">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Kapton</h3>
+              <span class="gloss-term__alias">Poliimida</span>
+            </div>
+            <p class="gloss-term__def">Pel&iacute;cula de poliimida empleada como aislamiento y cubierta en cables ESP de las familias Arteria 400 y 450. Ofrece resistencia superior al H<sub>2</sub>S y a fluidos corrosivos, donde el polipropileno de las familias 180 y 205 no es adecuado.</p>
+            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-especiales.html">cables ESP para pozo</a>.</p>
           </li>
         </ul>
       </section>
@@ -599,6 +877,44 @@
             </div>
             <p class="gloss-term__def">Norma mexicana aplicable a cables y conductores el&eacute;ctricos. Fabricantes nacionales como Condumex y Viakon producen bajo NMX-J. Es la referencia para cumplimiento de NOM-001-SEDE en instalaciones de baja y media tensi&oacute;n con componente nacional.</p>
           </li>
+          <li class="gloss-term" id="nom-001-sede">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">NOM-001-SEDE</h3>
+              <span class="gloss-term__alias">Instalaciones el&eacute;ctricas (utilizaci&oacute;n)</span>
+            </div>
+            <p class="gloss-term__def">Norma Oficial Mexicana de instalaciones el&eacute;ctricas, de cumplimiento obligatorio en M&eacute;xico. Rige selecci&oacute;n de conductores, canalizaciones, protecciones, soporter&iacute;a y puesta a tierra. Todo suministro y tendido se especifica bajo NOM-001-SEDE, junto con la norma IEC o NMX-J que corresponda al cable.</p>
+            <p class="gloss-term__see">Ver tambi&eacute;n: <a href="#nmx-j">NMX-J</a>.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- P -->
+      <section class="gloss-section" aria-labelledby="letra-p">
+        <span class="gloss-letter" id="letra-p" aria-hidden="true">P</span>
+        <ul class="gloss-list">
+          <li class="gloss-term" id="pv1-f">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">PV1-F</h3>
+              <span class="gloss-term__alias">Cable solar de corriente directa</span>
+            </div>
+            <p class="gloss-term__def">Cable solar DC de cobre esta&ntilde;ado flexible &mdash;conductor Clase&nbsp;5&mdash;, con aislamiento y cubierta de poliolefina reticulada libre de hal&oacute;genos. Normas: BS EN 50618, 2Pfg 1169/08.2007 e IEC 60228 Clase&nbsp;5. El PV1-F est&aacute;ndar no es apto para instalaci&oacute;n directamente enterrada: los tramos subterr&aacute;neos piden cubierta adicional o tuber&iacute;a de protecci&oacute;n.</p>
+            <p class="gloss-term__see">Cat&aacute;logo: <a href="lp-cables-fotovoltaicos.html">cable fotovoltaico PV1-F</a>.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- R -->
+      <section class="gloss-section" aria-labelledby="letra-r">
+        <span class="gloss-letter" id="letra-r" aria-hidden="true">R</span>
+        <ul class="gloss-list">
+          <li class="gloss-term" id="radio-curvatura">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Radio de curvatura</h3>
+              <span class="gloss-term__alias">Radio m&iacute;nimo de doblado</span>
+            </div>
+            <p class="gloss-term__def">Curvatura m&iacute;nima que admite un cable sin da&ntilde;ar aislamiento ni pantalla, expresada como m&uacute;ltiplo de su di&aacute;metro exterior. En cable de potencia MT se maneja de 12 a 15 veces el di&aacute;metro durante el tendido (IEC 60502-2); en cable fotovoltaico PV1-F, 4 veces. Es una de las tres condiciones de obra, junto con la temperatura m&iacute;nima de instalaci&oacute;n y la tensi&oacute;n m&aacute;xima de jalado.</p>
+            <p class="gloss-term__see">Servicio: <a href="lp-tendido-cableado-electrico-industrial.html">tendido y cableado industrial</a>.</p>
+          </li>
         </ul>
       </section>
 
@@ -606,6 +922,14 @@
       <section class="gloss-section" aria-labelledby="letra-t">
         <span class="gloss-letter" id="letra-t" aria-hidden="true">T</span>
         <ul class="gloss-list">
+          <li class="gloss-term" id="terminacion">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Terminaci&oacute;n</h3>
+              <span class="gloss-term__alias">Punta de cable</span>
+            </div>
+            <p class="gloss-term__def">Extremo preparado del cable para conectarse a un equipo o a una barra. Reconstruye el control del campo el&eacute;ctrico que la pantalla ven&iacute;a dando a lo largo del cable, y por eso se ejecuta con kits de clase de tensi&oacute;n definida &mdash;15, 25 o 35&nbsp;kV&mdash;. Se documenta con protocolo de prueba por circuito antes de la puesta en servicio.</p>
+            <p class="gloss-term__see">Ver tambi&eacute;n: <a href="#empalme">empalme</a>.</p>
+          </li>
           <li class="gloss-term" id="trailing-cable">
             <div class="gloss-term__head">
               <h3 class="gloss-term__name">Trailing cable</h3>
@@ -626,6 +950,21 @@
               <span class="gloss-term__alias">Tensi&oacute;n nominal del cable</span>
             </div>
             <p class="gloss-term__def">Designaci&oacute;n de la tensi&oacute;n nominal del cable expresada en kV. <strong>U0</strong> es la tensi&oacute;n eficaz fase-tierra y <strong>U</strong> la tensi&oacute;n eficaz fase-fase. Ejemplos: 6/10 kV, 12/20 kV, 18/30 kV, 64/110 kV. La selecci&oacute;n debe contemplar tambi&eacute;n la tensi&oacute;n m&aacute;xima del sistema (Um).</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- V -->
+      <section class="gloss-section" aria-labelledby="letra-v">
+        <span class="gloss-letter" id="letra-v" aria-hidden="true">V</span>
+        <ul class="gloss-list">
+          <li class="gloss-term" id="vaina-metalica">
+            <div class="gloss-term__head">
+              <h3 class="gloss-term__name">Vaina met&aacute;lica</h3>
+              <span class="gloss-term__alias">Capa 7 del cable EHV</span>
+            </div>
+            <p class="gloss-term__def">Capa met&aacute;lica exterior de los cables de extra alta tensi&oacute;n: aporta estanqueidad al agua y cierra el confinamiento del campo. La construcci&oacute;n elegida &mdash;aluminio liso o corrugado, cobre corrugado, plomo o acero inoxidable corrugado&mdash; determina el peso, el radio de curvatura y el costo del cable.</p>
+            <p class="gloss-term__see">Despiece: <a href="lp-cables-extra-alta-tension.html">cables de extra alta tensi&oacute;n</a>.</p>
           </li>
         </ul>
       </section>
@@ -659,144 +998,115 @@
     </div>
   </main>
 
-  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
-    <div class="container">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
         </div>
-        <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
-        <div style="display:flex;gap:14px;margin-top:14px">
-          <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
           </a>
-          <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
           </a>
-          <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
           </a>
         </div>
       </div>
 
       <div>
-        <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-          <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-          <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-        </ul>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
-          </ul>
-        </div>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-          <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de &Eacute;tica y Conducta</a></li>
-          <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
-          <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
-          <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-          <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-
-          <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
-        </ul>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-            <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-          <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-          <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-          <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
-          <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-          <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-          <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
-          <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
-          <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-          <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
-          <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-          <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
-          <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-          <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
-          <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
+
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+
     </div>
-  </footer>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
   <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
     Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
   </div>
 
-  <script id="nav-submenu-script-vms">
-  (function(){
-    var toggle = document.getElementById('menuToggle');
-    var list = document.getElementById('menuList');
-    if(toggle && list){
-      toggle.addEventListener('click', function(e){
-        e.preventDefault();
-        var open = list.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    var nav = document.querySelector('header nav');
-    if(!nav) return;
-    var media = window.matchMedia('(max-width: 760px)');
-    var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-    function syncSubmenus(){
-      var mobile = media.matches;
-      parents.forEach(function(parent){
-        var trigger = parent.querySelector(':scope > a');
-        var submenu = parent.querySelector(':scope > .submenu');
-        if(!trigger || !submenu) return;
-        if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-        else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-      });
-    }
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      trigger.addEventListener('click', function(e){
-        if(!media.matches) return;
-        e.preventDefault();
-        var open = parent.classList.toggle('is-open');
-        submenu.style.display = open ? 'block' : 'none';
-        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    });
-    syncSubmenus();
-    if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-    else if(media.addListener) media.addListener(syncSubmenus);
-  })();
-  </script>
+  
 </body>
 </html>

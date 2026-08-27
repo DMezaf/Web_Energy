@@ -106,8 +106,8 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
   transition: opacity .2s;
   font-family: var(--font-body);
 }
-.btn--primary { background: var(--concept-btn-primary); color: var(--concept-btn-text) }
-.btn--primary:hover { opacity: .88 }
+
+
 .btn--ghost { border: 2px solid rgba(255,255,255,.35); color: #fff }
 .btn--ghost:hover { background: rgba(255,255,255,.08) }
 
@@ -166,23 +166,6 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 .section--alt { background: var(--concept-section-alt) }
 .section--dark { background: var(--concept-section-dark, #172C51); color: #fff }
 
-.sec-label {
-  display: inline-block;
-  background: var(--concept-accent-light);
-  color: var(--concept-accent-text);
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: .2rem .7rem;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-.sec-label--light { background: rgba(255,255,255,.15); color: #fff }
-.sec-h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: var(--navy); margin-bottom: 10px }
-.sec-h2--white { color: #fff }
-.sec-lead { color: #475569; max-width: 680px; margin-bottom: 36px }
-.sec-lead--light { color: #94a3b8 }
 
 
 /* ── Service Grid ── */
@@ -231,17 +214,11 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 
 
 /* ── Ref Grid (proyectos de referencia) ── */
-.ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px }
-.ref-card {
-  border-left: 3px solid var(--concept-primary);
-  background: #fff;
-  border-radius: 0 10px 10px 0;
-  padding: 16px 18px;
-  box-shadow: 0 2px 8px rgba(9,32,58,.06);
-}
-.ref-card__cliente { font-weight: 800; color: var(--navy); font-size: .92rem; margin-bottom: 4px }
-.ref-card__lugar { font-size: .78rem; color: #64748b; margin-bottom: 8px }
-.ref-card__desc { font-size: .84rem; color: #475569; line-height: 1.5 }
+
+
+
+
+
 
 
 /* ── Chip Grid (etiquetas de servicio) ── */
@@ -371,12 +348,12 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
   .svc-grid { grid-template-columns: 1fr 1fr }
   .timeline { grid-template-columns: 1fr 1fr; gap: 20px }
   .timeline::before { display: none }
-  .ref-grid { grid-template-columns: 1fr 1fr }
+  
   #footer .container { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; padding: 34px 0 }
 }
 @media (max-width: 760px) {
   .svc-grid { grid-template-columns: 1fr }
-  .ref-grid { grid-template-columns: 1fr }
+  
   .timeline { grid-template-columns: 1fr }
   #footer .container { grid-template-columns: 1fr; gap: 16px; padding: 24px 0 }
 }
@@ -399,3 +376,14 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
   .submenu { position: static; display: none; min-width: 0; border: 0; box-shadow: none; padding: 8px 0 0 12px }
   .nav-item--has-submenu.is-open .submenu { display: block }
 }
+
+
+/* ── Módulo «Cable especializado»: la rejilla de la tabla ──────────────────
+   Era `grid-template-columns:1.4fr 1fr` en línea, sin consulta de medios, y
+   la tabla interior declara `min-width:480px`. Un elemento de rejilla tiene
+   `min-width:auto`, así que no encogía y desbordaba la página entera a
+   546 px en una ventana de 390. Las cinco páginas sectoriales que llevan el
+   módulo tenían el mismo desbordamiento. */
+.cable-tabla-grid{grid-template-columns:1.4fr 1fr}
+.cable-tabla-grid > *{min-width:0}
+@media (max-width:760px){.cable-tabla-grid{grid-template-columns:1fr}}

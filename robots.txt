@@ -1,4 +1,3 @@
-﻿User-agent: *
-Allow: /
-
-Sitemap: https://vmsenergy.com/sitemap.xml
+# Espejo de trabajo en GitHub Pages. El sitio publico es vmsenergy.com.
+User-agent: *
+Disallow: /

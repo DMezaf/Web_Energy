@@ -108,7 +108,7 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
   transition: opacity .18s, transform .18s;
 }
 .btn:hover { opacity: .88; transform: translateY(-1px) }
-.btn--primary { background: var(--concept-primary); color: #fff }
+
 .btn--ghost { background: transparent; border-color: rgba(255,255,255,.38); color: #fff }
 .btn--outline { background: transparent; border-color: var(--concept-primary); color: var(--concept-primary) }
 
@@ -129,7 +129,7 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
   inset: 0;
   background: var(--equip-hero-overlay,
     linear-gradient(100deg, rgba(8,20,40,.94) 0%, rgba(30,41,59,.88) 50%, rgba(51,65,85,.72) 100%)),
-    var(--equip-hero-img, url('assets/img/hero_que_hacemos_VMS_Energy.png')) center/cover no-repeat;
+    var(--equip-hero-img, url('assets/img/hero_que_hacemos_VMS_Energy.webp')) center/cover no-repeat;
   z-index: -1;
 }
 .hero .container { padding: 80px 20px 72px }
@@ -167,17 +167,6 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 .section--alt { background: var(--concept-section-alt) }
 .section--dark { background: var(--concept-section-dark); color: #fff }
 .section--spec { background: var(--bg-soft) } /* para tablas de especificaciones */
-.sec-label {
-  display: inline-block;
-  color: var(--concept-primary);
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  margin: 0 0 10px;
-}
-.sec-h2 { margin: 0 0 8px; font-size: clamp(22px,3vw,36px); line-height: 1.1; color: #0f172a }
-.sec-lead { margin: 0 0 32px; font-size: clamp(14px,1.5vw,17px); color: #374151; max-width: 680px }
 
 
 /* ── Tabla de parámetros / especificaciones (compartida) ── */
@@ -338,3 +327,43 @@ details.faq[open] summary::after { content: "−" }
   .submenu { position: static; display: none; min-width: 0; border: 0; box-shadow: none; padding: 8px 0 0 12px }
   .nav-item--has-submenu.is-open .submenu { display: block }
 }
+
+/* ── Ref Grid — Proyectos de referencia ─────────────────────────────────── */
+
+
+
+
+
+
+
+
+/* ── Ref Grid — Proyectos de referencia ─────────────────────────────────── */
+
+
+
+/* ---- Panel de contexto (26-ago-2026) ----------------------------------------
+   .notes-panel y sus clases hijas existian en el marcado de 4 paginas de cable
+   (11 paneles) sin NINGUNA regla en ninguna hoja: se veian con los estilos por
+   defecto del navegador. Estos valores replican los de .sec-label / .sec-h2 /
+   .sec-lead para que el panel hable el mismo idioma que el resto del sitio. */
+.notes-panel { background: #fff; border: 1px solid var(--border-line);
+  border-radius: var(--radius-card); padding: clamp(20px, 3vw, 30px);
+  box-shadow: 0 6px 18px rgba(9, 32, 58, .05) }
+.notes-panel + .notes-panel { margin-top: 16px }
+.notes-panel__head { margin: 0 0 14px }
+.notes-panel__tag { display: inline-block; margin: 0 0 10px; padding: .2rem .7rem;
+  border-radius: 999px; background: var(--concept-accent-light);
+  color: var(--concept-accent-text); font-size: .72rem; font-weight: 800;
+  letter-spacing: .1em; text-transform: uppercase }
+.notes-panel__title { margin: 0; font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 900; line-height: 1.2; color: var(--concept-dark) }
+.notes-panel__sub { margin: 0 0 18px; max-width: var(--max-width-read);
+  color: var(--text-muted); line-height: 1.65 }
+.note-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px;
+  max-width: var(--max-width-read) }
+.note-list li { position: relative; padding-left: 20px;
+  color: var(--text-muted); line-height: 1.65 }
+.note-list li::before { content: ""; position: absolute; left: 0; top: .62em;
+  width: 8px; height: 8px; border-radius: 2px;
+  background: var(--concept-primary, #0F4C81) }
+.note-list strong { color: var(--concept-dark) }

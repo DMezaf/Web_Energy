@@ -1,28 +1,37 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proyectos EPC Industriales Realizados | VMS Energy</title>
   <meta name="description" content="Portafolio de proyectos EPC el&eacute;ctricos en Oil &amp; Gas, Solar, Miner&iacute;a y Alimentos &amp; Bebidas. Casos de &eacute;xito con clientes Tier 1 en M&eacute;xico y Am&eacute;rica." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://vmsenergy.com/" />
+  <link rel="canonical" href="https://vmsenergy.com/proyectos-vms.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
   <meta property="og:title" content="Proyectos EPC Industriales Realizados | VMS Energy" />
   <meta property="og:description" content="Portafolio de proyectos EPC el&eacute;ctricos en Oil &amp; Gas, Solar, Miner&iacute;a y Alimentos &amp; Bebidas. Casos de &eacute;xito con clientes Tier 1 en M&eacute;xico y Am&eacute;rica." />
-  <meta property="og:url" content="https://vmsenergy.com/" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.png" />
+  <meta property="og:url" content="https://vmsenergy.com/proyectos-vms.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Proyectos EPC Industriales Realizados | VMS Energy" />
   <meta name="twitter:description" content="Portafolio de proyectos EPC el&eacute;ctricos en Oil &amp; Gas, Solar, Miner&iacute;a y Alimentos &amp; Bebidas. Casos de &eacute;xito con clientes Tier 1 en M&eacute;xico y Am&eacute;rica." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.png" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/proyectos-vms.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/proyectos-vms.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="corporativo-base.css">
+<link rel="stylesheet" href="corporativo-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -30,12 +39,12 @@
     :root{
        /* Azul Marino */
        /* Azul Cobalto (acentos) */
-      --blue-2:#274B7C;
+      
       --blue-3:#3A6FA5;
       --gray:#F2F4F7;
       --text:#0F172A;
-      --verde-tech:#22C55E; /* acento sutil para estados */
-      --danger:#EF4444;
+       /* acento sutil para estados */
+      
     }
     html{scroll-behavior:smooth}
     body{margin:0;font-family:"Roboto Condensed",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#ffffff;}
@@ -49,7 +58,6 @@
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
     nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
     .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;}
     .submenu{
@@ -83,13 +91,6 @@
       text-transform:uppercase;
       margin:0 0 6px;
     }
-    .submenu__list{
-      list-style:none;
-      margin:0;
-      padding:0;
-      display:grid;
-      gap:6px;
-    }
     .submenu__list a{
       display:block;
       color:#12365f;
@@ -99,30 +100,19 @@
       padding:3px 0;
     }
 
+
     /* ===== Hero ===== */
     .hero:before{content:none}
-    .hero-carousel{position:relative}
-    .hero-carousel__viewport{position:relative}
     .hero-slide{display:none;animation:heroFade .45s ease;position:relative}
     .hero-slide.is-active{display:block}
     .hero-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,22,43,.9) 0%,rgba(10,22,43,.76) 45%,rgba(10,22,43,.45) 100%),var(--hero-image) center/cover no-repeat;z-index:0}
-    .hero__wrap{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:88px 0;min-height:520px;position:relative;z-index:1}
+    .hero__wrap{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding-block: 88px;min-height:520px;position:relative;z-index:1}
     .hero__content{max-width:760px}
     .eyebrow{display:inline-block;padding:.25rem .6rem;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:.8rem;letter-spacing:.4px;margin-bottom:14px}
     .hero h1,.hero h2{font-size:clamp(28px,4.2vw,48px);line-height:1.05;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2.1vw,20px);opacity:.9;margin:0 0 20px}
     .hero__ctas{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent}
-    .btn--primary{background:var(--cobalt);color:#fff}
-    .btn--secondary{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
     .hero__image{display:none}
-    .hero-carousel__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;border:1px solid rgba(255,255,255,.28);background:rgba(10,22,43,.48);color:#fff;border-radius:999px;width:42px;height:42px;display:grid;place-items:center;cursor:pointer}
-    .hero-carousel__nav:hover{background:rgba(10,22,43,.72)}
-    .hero-carousel__nav--prev{left:16px}
-    .hero-carousel__nav--next{right:16px}
-    .hero-carousel__dots{display:flex;justify-content:center;gap:8px;padding:0 0 18px}
-    .hero-carousel__dot{width:10px;height:10px;border-radius:999px;border:1px solid rgba(255,255,255,.5);background:transparent;cursor:pointer}
-    .hero-carousel__dot.is-active{background:#fff}
     @keyframes heroFade{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
     /* ===== Trust / ISO ===== */
@@ -190,7 +180,7 @@
       width:clamp(150px,18vw,186px);
       max-width:186px;
       min-height:188px;
-      background:linear-gradient(180deg,#172C51,#0f2342);
+      background:linear-gradient(180deg,var(--vms-blue-800),#0f2342);
       color:#ffffff;
       padding:12px 10px 10px;
       display:flex;
@@ -365,7 +355,6 @@
       display:block;
       margin:0 0 12px;
     }
-    .card{border:1px solid rgba(23,44,81,.12);border-radius:16px;padding:18px;background:#fff}
     .card h3{margin:8px 0 6px;font-size:18px;color:var(--navy)}
     .card p{margin:0;color:#475569;font-size:15px}
 
@@ -373,7 +362,6 @@
     .sol{background:#fff}
     .sol__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .sol__item{position:relative;border:1px solid rgba(23,44,81,.12);border-radius:16px;overflow:hidden;background:#0a162b;color:#fff}
-    .sol__img{height:140px;background:linear-gradient(180deg,rgba(15,76,129,.25),rgba(15,76,129,.6)),url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1400&auto=format&fit=crop') center/cover}
     .sol__body{padding:14px}
     .sol__body h3{margin:0 0 6px;font-size:18px}
     .sol__body p{margin:0 0 10px;font-size:14px;opacity:.9}
@@ -599,7 +587,6 @@
     /* ===== Suministro (marcas/procura) ===== */
     .procura{background:linear-gradient(180deg,#f7f9fc,#fff)}
     .procura__form{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .input, select, textarea{width:100%;padding:12px;border:1px solid rgba(23,44,81,.18);border-radius:12px;font-size:15px}
     .hint{font-size:12px;color:#64748B;margin-top:6px}
 
     /* ===== Testimonios (prueba social) ===== */
@@ -607,192 +594,49 @@
     .quote{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:16px;padding:18px}
     .quote p{margin:0 0 10px}
     .quote .who{font-size:14px;color:#475569}
-    /* ===== Proyectos Destacados (Look & Feel v15) ===== */
-    .cvproj{
-      padding:34px 0 44px;
-      background:transparent;
-    }
-    .cvproj + #servicios-legacy{
-      display:none !important;
-      padding:0 !important;
-      margin:0 !important;
-      min-height:0 !important;
-    }
     #cv-proyectos{padding-bottom:16px}
     #contacto{padding-top:28px}
-    .cvproj__head{margin-bottom:14px}
-    .cvproj__kicker{
-      margin:0;
-      color:rgba(23,44,81,.70);
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      font-size:.78rem;
-    }
-    .cvproj__title{
-      margin:.25rem 0 0;
-      color:#0b2545;
-      font-size:clamp(1.45rem,2.2vw,2.05rem);
-      line-height:1.08;
-    }
-    .cvproj .svc__grid{
-      display:grid;
-      grid-template-columns:1fr;
-      justify-items:stretch;
-    }
-    .cvproj .svc__grid > .cvproj__tabs{width:100%}
-    .cvproj__tabs{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:clamp(24px,3vw,40px);
-      align-items:stretch;
-      justify-items:center;
-      margin:18px 0 18px;
-      padding:4px 6px;
-    }
-    .cvproj .cvtab.svc__card{
-      width:100%;
-      max-width:360px;
-      height:260px;
-      border-radius:18px;
-      background:#0b1a2b;
-      border:0;
-      box-shadow:0 18px 46px rgba(0,0,0,.10);
-      overflow:hidden;
-      position:relative;
-      flex:0 0 auto;
-      justify-self:center;
-      transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
-    }
-    .cvproj .cvtab.svc__card:hover{
-      transform:translateY(-3px);
-      border-color:rgba(15,76,129,.22);
-      box-shadow:0 24px 60px rgba(0,0,0,.14);
-    }
-    .cvproj .cvtab .svc__media{
-      height:100%;
-      border-bottom:0;
-      background:transparent;
-      padding:0;
-      box-sizing:border-box;
-      overflow:hidden;
-      border-radius:inherit;
-    }
-    .cvproj .cvtab .svc__media img{
-      width:calc(100% + 12px);
-      max-width:none;
-      height:100%;
-      border-radius:inherit;
-      margin-right:-12px;
-      object-fit:cover;
-      object-position:center;
-      filter:contrast(1.06) saturate(1.05);
-    }
-    .cvproj .cvtab .svc__glow{display:none !important}
-    .cvproj__tab{
-      position:absolute;
-      left:50%;
-      bottom:14px;
-      transform:translateX(-50%);
-      width:220px;
-      min-height:48px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(15,76,129,.18);
-      background:#e9eef6;
-      color:rgba(23,44,81,.92);
-      font-weight:700;
-      font-size:1rem;
-      line-height:1.05;
-      cursor:pointer;
-      box-shadow:0 10px 24px rgba(0,0,0,.10);
-      transition:transform .14s ease,background .14s ease,border-color .14s ease,box-shadow .14s ease;
-    }
-    .cvproj__tab:hover{transform:translateX(-50%) translateY(-1px)}
-    .cvproj__tab:focus-visible{
-      outline:none;
-      box-shadow:0 0 0 4px rgba(58,111,165,.18),0 12px 26px rgba(0,0,0,.12);
-    }
-    .cvproj .cvtab:has(.cvproj__tab.is-active),
-    .cvproj .cvtab.is-active{
-      border-color:rgba(15,76,129,.28);
-      box-shadow:0 26px 70px rgba(0,0,0,.16);
-    }
-    .cvproj__tab.is-active{
-      background:#cfeeff;
-      border-color:rgba(15,76,129,.28);
-      box-shadow:0 0 0 4px rgba(58,111,165,.16),0 14px 30px rgba(0,0,0,.14);
-    }
     #cvproj-panel{margin-top:10px}
-    .cvproj__track{
-      display:grid;
-      gap:18px;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-    }
-    .cvproj__card{
-      border-radius:18px;
-      overflow:hidden;
-      position:relative;
-      border:1px solid rgba(15,76,129,.10);
-      box-shadow:0 22px 60px rgba(0,0,0,.14);
-      background:#0b1a2b;
-    }
-    .cvproj__img{
-      width:100%;
-      height:clamp(200px,18vw,260px);
-      object-fit:cover;
-      display:block;
-      filter:contrast(1.03) saturate(1.02);
-    }
-    .cvproj__shade{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to bottom,rgba(0,0,0,.08) 0%,rgba(0,0,0,.70) 88%,rgba(0,0,0,.78) 100%);
-      pointer-events:none;
-    }
-    .cvproj__footer{
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      padding:12px 14px 14px;
-      color:#fff;
-      backdrop-filter:blur(6px);
-      background:linear-gradient(to bottom,rgba(255,255,255,.06),rgba(255,255,255,.03));
-    }
-    .cvproj__name{
-      margin:0 0 8px;
-      font-size:1.02rem;
-      line-height:1.2;
-      letter-spacing:.01em;
-      text-transform:uppercase;
-      font-weight:700;
-    }
-    .cvproj__bullets{
-      margin:0;
-      padding-left:16px;
-      opacity:.92;
-      display:grid;
-      gap:6px;
-    }
-    .cvproj__bullets li{line-height:1.25;font-size:.92rem}
-    @media (max-width:1100px){
-      .cvproj__track{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-    @media (max-width:980px){
-      .cvproj__tabs{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-      .cvproj .cvtab.svc__card{max-width:340px;height:240px}
-    }
-    @media (max-width:680px){
-      .cvproj__track{grid-template-columns:1fr}
-    }
-    @media (max-width:640px){
-      .cvproj__tabs{grid-template-columns:1fr;gap:16px;padding:0}
-      .cvproj .cvtab.svc__card{max-width:100%;height:230px}
-    }
+
+    /* ═══ Casos de referencia — estilos portados de catálogo ═══ */
+    .pv-refs{padding:60px 0 56px;background:#F7FBFF}
+    .pv-refs__label{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--concept-primary);margin-bottom:12px}
+    .pv-refs__title{font-size:clamp(22px,3vw,32px);font-weight:900;color:#0F2747;margin:0 0 8px}
+    .pv-refs__lead{font-size:15px;color:var(--text-muted);margin:0 0 32px;max-width:520px}
+    .pv-refs__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:36px}
+    @media(max-width:1024px){.pv-refs__grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.pv-refs__grid{grid-template-columns:1fr}}
+    .pv-feat-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #DBE6F4;box-shadow:0 2px 8px rgba(15,47,113,.07);display:flex;flex-direction:column;transition:box-shadow .22s,transform .22s;border-top:4px solid var(--accent-color,#636A71)}
+    .pv-feat-card:hover{box-shadow:0 20px 48px rgba(15,47,113,.17);transform:translateY(-4px)}
+    .pv-feat-card__icon{height:120px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--icon-bg-a,#DBEAFE),var(--icon-bg-b,#EFF6FF));font-size:48px}
+    .pv-feat-card__body{padding:18px 20px 14px;flex:1;display:flex;flex-direction:column}
+    .pv-feat-card__type{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:.2rem .7rem;margin-bottom:10px}
+    .pv-feat-card__title{font-size:.97rem;font-weight:800;color:#0F2747;margin:0 0 10px;line-height:1.35}
+    .pv-feat-story{margin:0 0 14px}
+    .pv-feat-story__block{margin-bottom:8px}
+    .pv-feat-story__tag{display:inline-block;font-size:.68rem;font-weight:700;border-radius:4px;padding:.1rem .45rem;margin-bottom:3px}
+    .pv-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
+    .pv-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
+    .pv-feat-story__tag--res{background:#DCFCE7;color:#166534}
+    .pv-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
+    .pv-feat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+    .pv-tech-tag{font-size:.68rem;font-weight:700;color:#374151;background:#F3F4F6;border-radius:4px;padding:.15rem .45rem}
+    .pv-feat-card__footer{padding:12px 20px;border-top:1px solid #DBE6F4;display:flex;align-items:center;justify-content:space-between}
+    .pv-feat-card__meta{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:5px}
+    .pv-feat-card__meta svg{width:14px;height:14px;flex-shrink:0}
+    .pv-feat-card__link{font-size:.78rem;font-weight:700;color:var(--concept-primary);text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .18s}
+    .pv-feat-card__link:hover{gap:8px}
+    .pv-badge-epc{background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
+    .pv-badge-svc{background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
+    .pv-badge-proj{background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
+    .pv-refs__cta-wrap{text-align:center;margin-top:8px}
+    .pv-refs__cta{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:var(--vms-blue-600);color:#fff;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;transition:background .2s,transform .2s}
+    .pv-refs__cta:hover{background:var(--concept-primary);transform:translateY(-2px)}
+    .pv-refs__cta svg{flex-shrink:0}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{
       display:inline-flex;
@@ -860,11 +704,8 @@
         margin-top:8px;
         padding-top:8px;
       }
-      .hero__wrap{padding:72px 0 86px;min-height:460px}
+      .hero__wrap{padding-block: 72px 86px;min-height:460px}
       .hero__content{max-width:100%}
-      .hero-carousel__nav{width:36px;height:36px}
-      .hero-carousel__nav--prev{left:8px}
-      .hero-carousel__nav--next{right:8px}
       .trust__grid{grid-template-columns:1fr 1fr}
       .diff__grid,.sol__grid,.testi__grid,.procura__form{grid-template-columns:1fr}
     }
@@ -881,7 +722,7 @@
     .filters label{display:inline-flex;gap:8px;align-items:center;margin-right:12px;font-size:14px;color:#475569}
     .filters input[type="checkbox"]{inline-size:16px;block-size:16px}
     .hidden{display:none !important}
-      /* ===== Suministro t&eacute;cnico â€“ Cat&aacute;logo ===== */
+      /* ===== Suministro t&eacute;cnico – Cat&aacute;logo ===== */
     .prod-filters{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
     .prod-filters select,.prod-filters input[type="search"]{padding:10px;border:1px solid rgba(23,44,81,.18);border-radius:10px;font-size:14px}
     .prod-accordion details{border:1px solid rgba(23,44,81,.12);border-radius:14px;background:#fff;margin:10px 0;padding:12px}
@@ -1073,7 +914,7 @@
     .nos-carousel{padding:22px 0 36px;background:linear-gradient(180deg,#f7f9fc,#fff)}
     .nos-carousel__head{margin:0 0 14px;position:static !important;top:auto !important}
     .nos-carousel__kicker{margin:0 0 4px;color:var(--concept-primary);letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
-    .nos-carousel__title{margin:0;color:#172C51;font-size:clamp(1.2rem,2.2vw,1.9rem);line-height:1.15}
+    .nos-carousel__title{margin:0;color:var(--vms-blue-800);font-size:clamp(1.2rem,2.2vw,1.9rem);line-height:1.15}
     .nos-carousel__box{position:relative;overflow:hidden;border-radius:18px;border:1px solid rgba(23,44,81,.12);box-shadow:0 14px 36px rgba(0,0,0,.14)}
     .nos-carousel__slide{display:none}
     .nos-carousel__slide.is-active{display:block}
@@ -1102,7 +943,7 @@
     }
     .hero-slice--nosotros .nos-carousel__tab.is-active{
       background:var(--concept-primary);
-      border-color:#8ed7ff;
+      border-color:var(--acento-oscuro);
       color:#fff;
     }
     .hero-slice--nosotros .nos-carousel__box{
@@ -1332,7 +1173,7 @@
   transform: translateZ(0);
 }
 
-/* Si se carga un logo a color en modo blueprint, lo â€œnormalizamosâ€ */
+/* Si se carga un logo a color en modo blueprint, lo “normalizamos” */
 body.is-blueprint .logo-ph.has-logo img.client__logoImg.is-normalized{
   filter: grayscale(1) brightness(1.25) contrast(1.25);
   opacity: 0.85;
@@ -1365,8 +1206,8 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   align-items:center;
   padding:6px 10px;
   border-radius:999px;
-  border:1px solid #172C51;
-  background:#172C51;
+  border:1px solid var(--vms-blue-800);
+  background:var(--vms-blue-800);
   color:#fff;
   text-decoration:none;
   font-weight:700;
@@ -1389,7 +1230,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 .clients__badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(15,76,129,.10);border:1px solid rgba(15,76,129,.25);color:var(--concept-primary);font-weight:700;font-size:.92rem}
 .clients__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:14px}
 .client-sector{grid-column:span 6;background:#fff;border:1px solid rgba(23,44,81,.10);border-radius:16px;padding:14px 14px 12px;box-shadow:0 10px 26px rgba(23,44,81,.06)}
-.client-sector h4{margin:0;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;color:#172C51}
+.client-sector h4{margin:0;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;color:var(--vms-blue-800)}
 .client-sector__top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}
 .client-carousel__nav{display:inline-flex;align-items:center;gap:6px}
 .client-carousel__btn{width:28px;height:28px;border-radius:999px;border:1px solid rgba(23,44,81,.22);background:#fff;color:var(--concept-primary);font-weight:800;line-height:1;cursor:pointer}
@@ -1684,7 +1525,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   content:"";
   position:absolute;
   inset:0;
-  background:url('assets/img/hero_que_hacemos_VMS_Energy.png') center/cover no-repeat;
+  background:url('assets/img/hero_que_hacemos_VMS_Energy.webp') center/cover no-repeat;
 }
 #clientesPorSectorAliados .allies-hero::after{
   content:"";
@@ -2007,25 +1848,97 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 .section-head--on-dark .section-kicker{ color: rgba(255,255,255,.78); }
 .section-head--on-dark .section-title{ color: rgba(255,255,255,.95); }
 
-/* (Opcional) si tu texto se ve â€œapagadoâ€ por opacidades globales */
+/* (Opcional) si tu texto se ve “apagado” por opacidades globales */
 .section-head--on-dark{ position: relative; z-index: 2; }
+  
+    /* Timeline Horizontal Interactivo */
+    .tl-section{padding:60px 0 48px}
+    .tl-header{text-align:center;margin-bottom:32px}
+    .tl-kicker{display:inline-flex;background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.22rem .8rem;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+    .tl-title{margin:0 0 8px;font-size:clamp(22px,2.4vw,30px);color:#0f2747}
+    .tl-lead{margin:0 auto;max-width:60ch;color:#47627f;font-size:15.5px;line-height:1.55}
+    .htl-outer{position:relative;overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:auto;scrollbar-color:var(--concept-primary) #dbeafe;background:#dbeafe;border-radius:16px;border:1px solid #dbe6f4;cursor:grab;-webkit-user-select:none;user-select:none}
+    .htl-outer:active{cursor:grabbing}
+    .htl-outer::-webkit-scrollbar{height:10px;border-radius:999px}
+    .htl-outer::-webkit-scrollbar-thumb{background:var(--concept-primary);border-radius:999px;border:2px solid #dbeafe}
+    .htl-outer::-webkit-scrollbar-track{background:#dbeafe;border-radius:999px}
+    .htl-hint{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11.5px;font-weight:700;color:#6b7f96;letter-spacing:.04em;text-transform:uppercase;padding:10px 0 6px;opacity:.8}
+    .htl-track{display:flex;align-items:center;min-width:max-content;padding:200px 80px;position:relative;min-height:500px}
+    .htl-map-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:16px}
+    .htl-map-bg img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;object-fit:cover;opacity:.28;border-radius:16px}
+    .htl-axis{position:absolute;top:50%;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--concept-primary) 4%,var(--concept-primary) 96%,transparent 100%);transform:translateY(-50%);z-index:0}
+    .htl-item{display:flex;flex-direction:column;align-items:center;position:relative;flex-shrink:0;width:195px;margin:0 8px;z-index:1}
+    .htl-item--top{flex-direction:column-reverse}
+    .htl-item--bot{flex-direction:column}
+    .htl-dot{width:14px;height:14px;border-radius:50%;background:var(--concept-primary);border:3px solid #f0f6ff;box-shadow:0 0 0 2px var(--concept-primary);flex-shrink:0;transition:transform .2s,box-shadow .2s;z-index:2}
+    .htl-item:hover .htl-dot{transform:scale(1.45);box-shadow:0 0 0 3px var(--concept-primary),0 0 14px rgba(29,95,164,.4)}
+    .htl-dot--intl{background:#d97706;box-shadow:0 0 0 2px #d97706}
+    .htl-item:hover .htl-dot--intl{box-shadow:0 0 0 3px #d97706,0 0 12px rgba(217,119,6,.4)}
+    .htl-dot--usa{background:#c62828;box-shadow:0 0 0 2px #c62828}
+    .htl-item:hover .htl-dot--usa{box-shadow:0 0 0 3px #c62828,0 0 12px rgba(198,40,40,.4)}
+    .htl-conn{width:2px;flex-shrink:0;height:48px}
+    .htl-item--top .htl-conn{background:linear-gradient(to bottom,transparent,#c2d4e8)}
+    .htl-item--bot .htl-conn{background:linear-gradient(to bottom,#c2d4e8,transparent)}
+    .htl-card{width:185px;background:#fff;border:1.5px solid #dbe6f4;border-radius:12px;padding:13px 14px 30px;cursor:pointer;transition:box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 2px 10px rgba(15,47,113,.07);position:relative}
+    .htl-card:hover{box-shadow:0 6px 24px rgba(15,47,113,.14);border-color:var(--concept-primary)}
+    .htl-item--top .htl-card:hover,.htl-item--top .htl-card.is-open{transform:translateY(-3px)}
+    .htl-item--bot .htl-card:hover,.htl-item--bot .htl-card.is-open{transform:translateY(3px)}
+    .htl-card.is-open{border-color:var(--concept-primary);box-shadow:0 8px 30px rgba(15,47,113,.18)}
+    .htl-yr{display:block;font-size:26px;font-weight:900;color:var(--concept-primary);line-height:1;margin-bottom:6px;font-feature-settings:"tnum"}
+    .htl-badge{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:9px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:7px;white-space:nowrap}
+    .htl-badge--epc{background:#e8f4ff;color:var(--concept-primary);border:1px solid #c9daf3}
+    .htl-badge--proj{background:#0f2747;color:#fff}
+    .htl-badge--intl{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+    .htl-badge--multi{background:#f0fbef;color:#0f6b50;border:1px solid #bfe4c5}
+    .htl-badge--full{background:var(--vms-blue-800);color:#fff}
+    
+    .htl-badge--origen{background:#eef1f5;color:#44546a;border:1px solid #cfd8e3}
+    .htl-ttl{font-size:11.5px;font-weight:700;color:#0f2747;line-height:1.4;margin-bottom:5px}
+    .htl-plc{font-size:10px;color:#6e8aaa;line-height:1.3}
+    .htl-toggle{position:absolute;bottom:8px;right:10px;width:18px;height:18px;border-radius:50%;background:#eef4ff;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--concept-primary);transition:transform .2s,background .15s;line-height:1}
+    .htl-card.is-open .htl-toggle{transform:rotate(180deg);background:var(--concept-primary);color:#fff}
+    .htl-detail{display:none;margin-top:9px;padding-top:9px;border-top:1px solid #dbe6f4;font-size:10.5px;color:#374151;line-height:1.55}
+    .htl-card.is-open .htl-detail{display:block}
+    @media(max-width:680px){.htl-track{padding:170px 40px}}
+
+        /* Classification card count badge */
+    .class-card__count{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:22px;padding:0 7px;border-radius:999px;background:var(--concept-primary);color:#fff;font-size:.75rem;font-weight:700;margin-left:6px;vertical-align:middle}
+
+    /* Hero ghost button */
+
+    /* Projects search bar */
+    .projects-search{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .projects-search__input{flex:1;padding:9px 14px;border:1px solid #dbe6f4;border-radius:10px;font-size:14px;color:#10233d;background:#f7fbff;outline:none;transition:border-color .18s}
+    .projects-search__input:focus{border-color:var(--concept-primary)}
+    .projects-search__count{font-size:13px;color:#6b7f97;white-space:nowrap}
+
+    /* Post-timeline CTA band */
+    .tl-cta{background:linear-gradient(135deg,var(--vms-blue-600) 0%,var(--vms-blue-800) 100%);border-radius:20px;padding:40px 32px;margin:40px 0 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+    .tl-cta__body{flex:1;min-width:260px}
+    .tl-cta__kicker{display:block;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--acento-oscuro);margin-bottom:8px}
+    .tl-cta__title{margin:0 0 6px;color:#fff;font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.2}
+    .tl-cta__sub{margin:0;color:rgba(255,255,255,.72);font-size:.95rem}
+    .tl-cta__actions{display:flex;flex-wrap:wrap;gap:12px}
+    .tl-cta__btn{display:inline-flex;align-items:center;gap:6px;padding:.75rem 1.5rem;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;transition:filter .18s}
+    .tl-cta__btn--primary{background:#fff;color:var(--vms-blue-600)}
+    .tl-cta__btn--primary:hover{filter:brightness(.93)}
+    .tl-cta__btn--ghost{border:2px solid rgba(255,255,255,.4);color:#fff}
+    .tl-cta__btn--ghost:hover{background:rgba(255,255,255,.1)}
+    @media(max-width:640px){.tl-cta{padding:28px 20px}.tl-cta__actions{width:100%}}
   </style>
   <style>
     :root{
-      --soft:#f4f8ff;
       
-      --ink:#10233d;
+      
+      
       
     }
     .hero{padding:26px 0}
     .hero__box{background:linear-gradient(115deg,rgba(8,18,34,.86),rgba(15,76,129,.62)),url("assets/img/landings/common/hero-suministro-vms-energy.webp") center/cover no-repeat;border-radius:18px;padding:34px;color:#fff}
     .kicker{display:inline-flex;background:rgba(255,255,255,.14);padding:.22rem .6rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-weight:700}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:11px 15px;text-decoration:none;font-weight:700;border:1px solid transparent}
-    .btn--primary{background:linear-gradient(180deg,#ff8b1f,#ff6a00);border-color:rgba(187,84,9,.7);color:#fff}
-    .btn--secondary{background:#fff;color:var(--cobalt);border-color:var(--line)}
+    
     .section{padding:0 0 44px}
-    .card{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--soft)}
     .note{font-size:13px;color:#35516f}
     .class-grid{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
     .class-card{border:1px solid #dbe6f4;border-radius:16px;padding:14px;background:#fff;box-shadow:0 6px 14px rgba(16,35,61,.08)}
@@ -2037,39 +1950,109 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
     .class-card__title{margin:8px 0 6px;color:#10233d;font-size:18px}
     .class-card__text{margin:0;color:#3f5973;font-size:14px;line-height:1.45}
     .class-card__meta{margin-top:10px;font-size:12px;color:#5b6f86}
-    .coverage{margin-top:20px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+    .coverage{margin-top:20px;border:1px solid var(--line);border-radius:16px;background:#040d1a;overflow:hidden}
     .coverage__head{padding:14px 14px 0}
-    .coverage__title{margin:0 0 6px;color:#10233d;font-size:20px}
-    .coverage__text{margin:0 0 10px;color:#425a72;font-size:14px}
-    .coverage__map{height:420px;background:linear-gradient(180deg,#f7fbff,#eef4ff);position:relative;overflow:hidden}
+    .coverage__title{margin:0 0 6px;color:#e2eaf5;font-size:20px}
+    .coverage__text{margin:0 0 10px;color:#8aa6c4;font-size:14px}
+    .coverage__map{aspect-ratio:560/315;max-height:460px;background:#040d1a;position:relative;overflow:hidden;margin:0 auto;width:100%}
     .coverage__svg{width:100%;height:100%;display:block}
     .coverage__image{pointer-events:none}
     .coverage__grid line{stroke:#dfe8f6;stroke-width:1}
-    .coverage__marker{fill:#4aa3ff;stroke:var(--concept-primary);stroke-width:2;cursor:pointer;filter:url(#glowBlue)}
-    .coverage__marker--selected{fill:#4aa3ff;stroke:var(--concept-primary)}
+    .coverage__marker{fill:var(--acento-oscuro);stroke:var(--concept-primary);stroke-width:2;cursor:pointer;filter:url(#glowBlue)}.coverage__marker--platform{filter:url(#glowBlue);transition:transform .2s}.coverage__marker--platform:hover{transform:scale(1.15)}
+    .coverage__marker--selected{fill:var(--acento-oscuro);stroke:var(--concept-primary)}
     .coverage__marker--highlight{fill:#ffd166;stroke:#b98300;filter:url(#glowYellow)}
-    .coverage__legend{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 12px;font-size:12px;color:#5b6f86}
+    .coverage__legend{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 12px;font-size:12px;color:#7a9bb8}
     .legend-dot{display:inline-flex;align-items:center;gap:6px}
     .legend-dot::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--concept-primary);display:inline-block}
-    .coverage__panel{position:absolute;right:16px;top:16px;min-width:220px;max-width:280px;background:rgba(255,255,255,.96);border:1px solid #c9daf3;border-radius:14px;box-shadow:0 12px 26px rgba(16,35,61,.18);padding:12px 14px;font-size:12px;color:#3b526b}
-    .coverage__panel-title{font-size:13px;font-weight:700;margin:0 0 6px;color:#10233d}
+    /* ── Coverage 9-improvements CSS ── */
+    @keyframes pv-pulse{from{transform:scale(1);opacity:.55}to{transform:scale(2.8);opacity:0}}
+    .coverage__halo{fill:none;stroke:var(--acento-oscuro);stroke-width:2.2;transform-box:fill-box;transform-origin:center;animation:pv-pulse 2.4s ease-out infinite;pointer-events:none}
+    .coverage__halo--sea{stroke:#fbbf24;animation-duration:2.9s}
+    /* Dark glass panel */
+    .coverage__panel{position:absolute;right:14px;top:14px;min-width:210px;max-width:270px;background:rgba(10,18,36,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(74,163,255,.25);border-radius:14px;box-shadow:0 14px 32px rgba(0,0,0,.45);padding:13px 15px;font-size:12px;color:#cde0f5}
+    .coverage__panel-title{font-size:13px;font-weight:700;margin:0 0 7px;color:#e8f2ff;letter-spacing:.01em}
     .coverage__panel-row{display:flex;justify-content:space-between;gap:10px;margin:4px 0}
-    .coverage__panel-label{color:#5b6f86}
-    .coverage__panel-value{font-weight:700;color:var(--concept-primary)}
-    .coverage__panel-hint{margin:6px 0 0;color:#6b7f97;font-size:11px}
+    .coverage__panel-label{color:#7aabd4}
+    .coverage__panel-value{font-weight:700;color:var(--acento-oscuro)}
+    .coverage__panel-hint{margin:7px 0 0;color:#5a7ea8;font-size:11px}
+    /* Badges */
+    .cov-badges{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 6px}
+    .cov-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+    .cov-badge--epc{background:rgba(251,191,36,.18);color:#fbbf24;border:1px solid rgba(251,191,36,.35)}
+    .cov-badge--svc{background:rgba(74,163,255,.18);color:var(--acento-oscuro);border:1px solid rgba(74,163,255,.35)}
+    .cov-badge--auto{background:rgba(52,211,153,.18);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+    .cov-badge--cap{background:rgba(167,139,250,.18);color:#a78bfa;border:1px solid rgba(167,139,250,.35)}
+    .cov-badge--off{background:rgba(249,115,22,.18);color:#f97316;border:1px solid rgba(249,115,22,.35)}
+    /* Panel "ver proyectos" link */
+    .cov-panel-link{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;color:var(--acento-oscuro);text-decoration:none;letter-spacing:.02em;opacity:.9;transition:opacity .15s}
+    .cov-panel-link:hover{opacity:1;text-decoration:underline}
+    /* Filter bar */
+    .coverage__filters{display:flex;flex-wrap:wrap;gap:7px;padding:0 14px 12px}
+    .cov-filter{background:rgba(74,163,255,.1);border:1px solid rgba(74,163,255,.3);border-radius:999px;color:#7aabd4;font-size:11px;font-weight:700;padding:4px 13px;cursor:pointer;transition:background .15s,color .15s,border-color .15s;line-height:1.5}
+    .cov-filter:hover{background:rgba(74,163,255,.22);color:#cde0f5}
+    .cov-filter.active{background:var(--acento-oscuro);border-color:var(--acento-oscuro);color:#fff}
+    /* Dimmed markers */
+    .coverage__marker--dimmed{opacity:.1!important;filter:none!important;transition:opacity .25s}
+    /* Tooltip */
+    #mapTooltip{position:absolute;pointer-events:none;background:rgba(8,15,30,.88);backdrop-filter:blur(10px);border:1px solid rgba(74,163,255,.3);border-radius:8px;padding:5px 10px;font-size:11px;color:#cde0f5;font-weight:600;white-space:nowrap;opacity:0;transition:opacity .18s;z-index:20;transform:translate(-50%,-130%)}
+    #mapTooltip.visible{opacity:1}
+    /* Counter strip */
+    .cov-counter-strip{display:flex;align-items:baseline;gap:10px;padding:10px 14px 4px}
+    .cov-counter-num{font-size:2.6rem;font-weight:900;color:var(--acento-oscuro);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+    .cov-counter-label{font-size:13px;color:#7aabd4;font-weight:500}
+    /* Regional KPI strip */
+    .coverage__regions{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(74,163,255,.12);border-top:1px solid rgba(74,163,255,.15);border-bottom-left-radius:16px;border-bottom-right-radius:16px;overflow:hidden}
+    .cov-region{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 10px;background:rgba(4,13,26,.6);cursor:pointer;transition:background .18s}
+    .cov-region:hover,.cov-region.active{background:rgba(74,163,255,.14)}
+    .cov-region__icon{font-size:1.3rem;margin-bottom:4px}
+    .cov-region__count{font-size:1.5rem;font-weight:900;color:var(--acento-oscuro);line-height:1;font-variant-numeric:tabular-nums}
+    .cov-region__label{font-size:10px;color:#7aabd4;text-align:center;margin-top:3px;line-height:1.3}
+    /* Marker entrance animation */
+    @keyframes mEnter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    .coverage__marker,.coverage__marker--platform{animation:mEnter .5s ease-out both}
+    .coverage__halo{animation:pv-pulse 2.4s ease-out infinite}
+    /* override grid lines for dark map */
+    .coverage__grid line{stroke:rgba(255,255,255,.04);stroke-width:.5}
     .projects-list{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
     .projects-list__head{padding:14px 14px 0}
     .projects-list__title{margin:0 0 6px;color:#10233d;font-size:20px}
     .projects-list__text{margin:0 0 10px;color:#425a72;font-size:14px}
+    /* ── Projects list section ── */
+    .projects-list{background:#fff;border:1px solid #dbe6f4;border-radius:16px;padding:24px 24px 16px;box-shadow:0 4px 16px rgba(15,47,113,.06)}
+    .projects-list__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+    .projects-list__title{font-size:1.15rem;font-weight:800;color:#10233d;margin:0}
+    /* Search bar */
+    .projects-search{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+    .projects-search__wrap{position:relative;flex:1}
+    .projects-search__icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#6b7f97;pointer-events:none}
+    .projects-search__input{width:100%;padding:10px 14px 10px 38px;border:1.5px solid #dbe6f4;border-radius:10px;font-size:14px;color:#10233d;background:#f7fbff;outline:none;transition:border-color .18s,box-shadow .18s;box-sizing:border-box}
+    .projects-search__input:focus{border-color:var(--concept-primary);box-shadow:0 0 0 3px rgba(29,95,164,.1)}
+    .projects-search__count{font-size:12px;font-weight:700;color:var(--concept-primary);background:#eef4ff;border:1px solid #c9daf3;border-radius:999px;padding:.2rem .75rem;white-space:nowrap}
+    /* Table */
     .projects-table{width:100%;border-collapse:collapse;font-size:13px}
-    .projects-table thead th{position:sticky;top:0;background:#f7fbff;color:var(--concept-primary);text-align:left;padding:10px;border-bottom:1px solid #dbe6f4;z-index:1}
-    .projects-table td{padding:10px;border-bottom:1px solid #edf2f8;vertical-align:top;color:#344b63}
-    .projects-table td strong{color:#10233d}
-    .projects-table__wrap{max-height:520px;overflow:auto}
+    .projects-table thead th{position:sticky;top:0;background:#f0f6ff;color:#0f2747;text-align:left;padding:10px 12px;border-bottom:2px solid #c9daf3;z-index:1;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;font-weight:800}
+    .projects-table tbody tr{transition:background .12s}
+    .projects-table tbody tr:nth-child(even){background:#f9fbff}
+    .projects-table tbody tr:hover{background:#eef4ff}
+    .projects-table td{padding:10px 12px;border-bottom:1px solid #edf2f8;vertical-align:middle;color:#344b63;line-height:1.4}
+    .projects-table td:first-child{color:#10233d;font-size:12.5px}
+    .projects-table__wrap{max-height:520px;overflow:auto;border-radius:10px;border:1px solid #dbe6f4}
+    /* Classification badges */
+    .clasi-badge{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:.18rem .65rem;white-space:nowrap;letter-spacing:.01em}
+    .clasi-epc   {background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
+    .clasi-auto  {background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
+    .clasi-svc   {background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
+    .clasi-proj  {background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
+    .clasi-sum   {background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
+    .clasi-cap   {background:#DDF8F9;color:#005C5F;border:1px solid #ABE4E6}
+    .clasi-cont  {background:#EBF3FB;color:#4A5157;border:1px solid #D1D8E1}
+    /* Location pin */
+    .loc-pin{display:inline-flex;align-items:center;gap:3px;color:#6b7f97}
+    .loc-pin svg{width:11px;height:11px;flex-shrink:0}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{display:inline-flex;width:26px;height:26px}
     .foot-social__link svg{fill:#fff;transition:fill .3s ease}
@@ -2087,7 +2070,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
 <style>
 .matrix-blueprint {
-  background: #172C51;
+  background: var(--vms-blue-800);
   border: 1px solid var(--concept-primary);
   color: #E5E9F0;
   border-radius: 12px;
@@ -2160,13 +2143,12 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
 </style>
 
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1581092921461-cd3fd944f519?q=80&w=1600&auto=format&fit=crop" fetchpriority="high">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/", "logo": "https://vmsenergy.com/assets/logo.png", "description": "VMS Energy â€” EPC de Infraestructura El&eacute;ctrica, Automatizaci&oacute;n y Control, oil & Gas, Energ&iacute;a Solar Industrial, Generaci&oacute;n Verde No Solar y servicios en Centrales Hidroel&eacute;ctricas de CFE, Iluminaci&oacute;n Industrial y Soluciones Electromec&aacute;nicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC el&eacute;ctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Ingenier&iacute;a, suministro t&eacute;cnico y construcci&oacute;n en generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n"}, {"@type": "Service", "name": "EPC de Iluminaci&oacute;n Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Dise&ntilde;o luminot&eacute;cnico, selecci&oacute;n multimarcas, instalaci&oacute;n y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "&iquest;Ofrecen integraci&oacute;n multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "&iquest;Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "S&iacute;: 9001, 14001, 45001, 37001 y 50001, con n&uacute;meros de registro p&uacute;blicos."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png", "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Generación Verde No Solar y servicios en Centrales Hidroeléctricas de CFE, Iluminación Industrial y Soluciones Electromecánicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Ingeniería, suministro técnico y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Ofrecen integración multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "¿Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: 9001, 14001, 45001, 37001 y 50001, con números de registro públicos."}}]}]}</script>
 
 <!-- v9.23f STYLE PATCH: consolidated visual fixes, accessibility, and responsive polish -->
 <style id="v923f-style-patch">
   :root{
-    --blue-2:#274B7C;
+    
     --blue-3:#3A6FA5;
     --gray:#F2F4F7;
     --text:#0F172A;
@@ -2177,15 +2159,12 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   section{padding:56px 0 48px}
 
   /* Cards depth & consistency */
-  .card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:16px;padding:18px;
-        box-shadow:0 2px 10px rgba(23,44,81,.06)}
 
   /* Buttons cleanup */
   .btn{border-radius:14px;padding:12px 18px;font-weight:700;letter-spacing:.2px}
-  .btn--primary{background:var(--cobalt);color:#fff;border:1px solid var(--cobalt)}
-  .btn--primary:hover{filter:brightness(0.95)}
-  .btn--secondary{background:#fff;color:var(--cobalt)!important;border:1px solid rgba(15,76,129,.35)}
-  .btn--secondary:hover{background:rgba(15,76,129,.06)}
+  
+  
+  
 
   /* Header nav and menu toggle */
   header nav a{padding:.3rem .2rem;border-radius:8px}
@@ -2200,11 +2179,11 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
   /* Toast + Cable table (dedupe to one canonical variant) */
   .toast-stack{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;flex-direction:column;gap:8px}
-  .toast{display:flex;align-items:center;gap:.6rem;background:#172C51;color:#E5E9F0;border:1px solid var(--concept-primary);
+  .toast{display:flex;align-items:center;gap:.6rem;background:var(--vms-blue-800);color:#E5E9F0;border:1px solid var(--concept-primary);
          border-radius:10px;padding:.6rem .9rem;box-shadow:0 6px 24px rgba(15,76,129,.35);
          opacity:0;transform:translateY(8px);transition:all .25s ease;font-weight:600;position:relative;overflow:hidden}
   .toast.show{opacity:1;transform:translateY(0)}
-  .toast__bar{position:absolute;left:0;bottom:0;height:3px;background:var(--concept-primary);width:100%;animation:toastbar l&iacute;near forwards}
+  .toast__bar{position:absolute;left:0;bottom:0;height:3px;background:var(--concept-primary);width:100%;animation:toastbar linear forwards}
   @keyframes toastbar{from{width:100%}to{width:0}}
   .cable-table{width:100%;border-collapse:collapse;margin:.5rem 0;min-width:640px}
   .cable-table th,.cable-table td{border:1px solid rgba(15,76,129,.25);padding:.5rem .7rem;text-align:left}
@@ -2338,7 +2317,6 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
 <style id="v10-compact-ui">
 /* Compact form controls */
-.input, select, textarea{padding:10px;border-radius:10px;font-size:14px}
 label{font-size:14px}
 .procura__form{gap:8px}
 /* Compact filters */
@@ -2352,13 +2330,12 @@ label{font-size:14px}
 .btn.btn--primary{padding:10px 14px;border-radius:12px}
 /* Grid tightening */
 .diff__grid,.sol__grid,.testi__grid{gap:12px}
-.card{padding:14px;border-radius:14px}
 /* Sticky quick-CTA */
 .quickbar{position:sticky;bottom:0;z-index:50;background:var(--concept-primary);color:#fff;
   display:flex;align-items:center;justify-content:space-between;gap:10px;
   padding:10px 12px;border-top:1px solid rgba(255,255,255,.2)}
 .quickbar__sum{display:flex;gap:6px;flex-wrap:wrap;font-size:12px}
-.quickbar .chip{background:#172C51;border:1px solid rgba(255,255,255,.25);color:#fff}
+.quickbar .chip{background:var(--vms-blue-800);border:1px solid rgba(255,255,255,.25);color:#fff}
 .quickbar .btn{background:#fff;color:var(--concept-primary);border-color:#fff}
 /* Checkbox as pill */
 .filters input[type="checkbox"]{appearance:none;inline-size:18px;block-size:18px;border:1px solid rgba(23,44,81,.25);border-radius:4px;display:inline-grid;place-items:center}
@@ -2380,14 +2357,14 @@ label{font-size:14px}
 
 <style id="vms-nfe-refresh">
   :root{
-    --vms-bg:#071428;
-    --vms-bg-2:#0c2346;
+    
+    
     --vms-primary:var(--concept-primary);
-    --vms-primary-2:#0b3c67;
-    --vms-accent:#8ed7ff;
-    --vms-surface:#ffffff;
-    --vms-border:rgba(23,44,81,.14);
-    --vms-text:#10233d;
+    
+    
+    
+    
+    
   }
   body{
     color:var(--vms-text);
@@ -2410,29 +2387,8 @@ label{font-size:14px}
     border:1px solid rgba(8,53,92,.55);
     box-shadow:0 10px 24px rgba(8,29,56,.18);
   }
-  .btn{
-    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-  }
-  .btn--primary{
-    background:linear-gradient(180deg,var(--vms-primary),var(--vms-primary-2));
-    border-color:rgba(7,52,91,.7);
-    box-shadow:0 10px 26px rgba(8,29,56,.24);
-  }
-  .btn--primary:hover{
-    transform:translateY(-1px);
-    box-shadow:0 14px 30px rgba(8,29,56,.3);
-    filter:none;
-  }
-  .btn--secondary{
-    border-color:rgba(16,76,129,.35);
-    background:#fff;
-    color:var(--vms-primary)!important;
-  }
-  .btn--secondary:hover{
-    transform:translateY(-1px);
-    background:rgba(142,215,255,.14);
-    border-color:rgba(16,76,129,.52);
-  }
+  
+  
   .section-title{
     color:#113960;
     letter-spacing:.01em;
@@ -2447,15 +2403,6 @@ label{font-size:14px}
     background:linear-gradient(90deg,var(--vms-primary),rgba(142,215,255,.35));
   }
   .section-lead{color:#47627f}
-  .card{
-    border:1px solid var(--vms-border);
-    box-shadow:0 10px 28px rgba(9,32,58,.08);
-  }
-  .hero{
-    background:
-      radial-gradient(72% 66% at 76% 12%, rgba(73,151,221,.24), transparent 62%),
-      linear-gradient(180deg,#071428 0%, #0c2346 100%);
-  }
   .hero-slide::after{
     background:
       linear-gradient(100deg,rgba(6,20,40,.92) 0%,rgba(7,25,49,.78) 45%,rgba(8,35,70,.46) 100%),
@@ -2472,13 +2419,7 @@ label{font-size:14px}
     border-bottom:0 !important;
     height:18px;
   }
-  .hero-to-nos::after{content:none}
-  .hero-slice,
-  .svc,
-  #clientesPorSector,
-  #clientesPorSectorAliados,
-  .cvproj,
-  .contact-block{
+  .hero-to-nos::after{content:none}.hero-slice, .svc, #clientesPorSector, #clientesPorSectorAliados, .contact-block{
     background:#fff !important;
     color:var(--vms-text) !important;
     border-top:0 !important;
@@ -2495,7 +2436,7 @@ label{font-size:14px}
   .hero-slice h3{color:#113960}
   .hero-slice p{color:#475569}
   .hero-slice--nosotros .container{
-    background:linear-gradient(180deg,#172C51,#0f2342) !important;
+    background:linear-gradient(180deg,var(--vms-blue-800),#0f2342) !important;
     border:1px solid rgba(142,215,255,.28) !important;
     box-shadow:0 18px 42px rgba(4,18,36,.30) !important;
   }
@@ -2545,17 +2486,10 @@ label{font-size:14px}
   #clientesPorSector .logo-ph__hint,
   #clientesPorSectorAliados .logo-ph__hint,
   #clientesPorSector .logo-ph__sector,
-  #clientesPorSectorAliados .logo-ph__sector{color:#64748b}
-  .svc__card,
-  .cvproj .cvtab.svc__card{
+  #clientesPorSectorAliados .logo-ph__sector{color:#64748b}.svc__card{
     border-color:rgba(153,220,255,.25);
     box-shadow:0 16px 36px rgba(4,18,36,.24);
-  }
-  #cv-proyectos .cvproj .cvtab.svc__card{
-    border:0 !important;
-  }
-  .svc__card:hover,
-  .cvproj .cvtab.svc__card:hover{
+  }.svc__card:hover{
     transform:translateY(-4px);
     box-shadow:0 20px 46px rgba(4,18,36,.3);
   }
@@ -2579,7 +2513,7 @@ label{font-size:14px}
   #clientesPorSectorAliados .allies-hero::before{
     background:
       linear-gradient(120deg,rgba(10,22,43,.44),rgba(10,22,43,.34)),
-      url('assets/img/hero_que_hacemos_VMS_Energy.png') center/cover no-repeat !important;
+      url('assets/img/hero_que_hacemos_VMS_Energy.webp') center/cover no-repeat !important;
   }
   #clientesPorSectorAliados .clients-carousel{
     background:rgba(8,22,43,.72) !important;
@@ -2625,6 +2559,38 @@ label{font-size:14px}
   #clientesPorSectorAliados .logo-ph__hint,
   #clientesPorSectorAliados .logo-ph__sector{color:#e7f2ff !important}
 #clientesPorSectorAliados .logo-ph__sector{display:none !important}
+/* ── Proyectos Destacados (estilo narrativo v2) ── */
+.cp-featured{padding:64px 0 56px;background:#F8FAFC}
+.cp-section-label{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--concept-primary);margin-bottom:12px}
+.cp-section-title{font-size:clamp(22px,3vw,32px);font-weight:900;color:#0F2747;margin:0 0 8px}
+.cp-section-lead{font-size:15px;color:var(--text-muted);margin:0 0 32px;max-width:560px}
+.cp-featured__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cp-feat-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #E2EAF4;box-shadow:0 1px 4px rgba(15,39,71,.06);display:flex;flex-direction:column;transition:box-shadow .22s,transform .22s;border-top:4px solid var(--accent-color,#636A71)}
+.cp-feat-card:hover{box-shadow:0 12px 40px rgba(15,39,71,.12);transform:translateY(-4px)}
+.cp-feat-card__icon{height:140px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--icon-bg-a,#DBEAFE),var(--icon-bg-b,#EFF6FF));font-size:52px}
+.cp-feat-card__body{padding:20px 22px 16px;flex:1;display:flex;flex-direction:column}
+.cp-feat-card__type{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:.2rem .7rem;margin-bottom:12px}
+.cp-feat-card__title{font-size:1rem;font-weight:800;color:#0F2747;margin:0 0 10px;line-height:1.35}
+.cp-feat-story{margin:0 0 16px}
+.cp-feat-story__block{margin-bottom:10px}
+.cp-feat-story__tag{display:inline-block;font-size:.68rem;font-weight:700;border-radius:4px;padding:.1rem .45rem;margin-bottom:4px}
+.cp-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
+.cp-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
+.cp-feat-story__tag--res{background:#DCFCE7;color:#166534}
+.cp-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
+.cp-feat-card__footer{padding:14px 22px;border-top:1px solid #E2EAF4;display:flex;align-items:center;justify-content:space-between}
+.cp-feat-card__meta{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:5px}
+.cp-feat-card__link{font-size:.78rem;font-weight:700;color:var(--concept-primary);text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .18s}
+.cp-feat-card__link:hover{gap:8px}
+.cp-feat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.cp-tech-tag{font-size:.68rem;font-weight:700;color:#374151;background:#F3F4F6;border-radius:4px;padding:.15rem .45rem}
+.badge-epc{background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
+.badge-svc{background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
+.badge-proj{background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
+.badge-sum{background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
+.badge-auto{background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
+@media(max-width:1024px){.cp-featured__grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.cp-featured__grid{grid-template-columns:1fr}}
 </style>
 
 
@@ -2692,7 +2658,7 @@ label{font-size:14px}
   .quicklead-form input:focus,
   .quicklead-form select:focus,
   .quicklead-form textarea:focus{
-    border-color:#5ea9ff;
+    border-color:var(--acento-oscuro);
     box-shadow:0 0 0 2px rgba(94,169,255,.24);
   }
   .quicklead-form textarea{min-height:92px;resize:vertical}
@@ -2726,7 +2692,6 @@ label{font-size:14px}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
   nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
   .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
-  .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
   .nav-item--has-submenu{position:relative}
   .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
   .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
@@ -2734,208 +2699,655 @@ label{font-size:14px}
   .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
   .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
   .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
-  .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}}
-</style></head>
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+</style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Proyectos","item":"https://vmsenergy.com/proyectos-vms.html"},{"@type":"ListItem","position":3,"name":"Proyectos EPC Industriales Realizados","item":"https://vmsenergy.com/proyectos-vms.html"}]}
+  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Proyectos Realizados — VMS Energy",
+  "url": "https://vmsenergy.com/proyectos-vms.html",
+  "isPartOf": {
+    "@id": "https://vmsenergy.com/"
+  },
+  "description": "Portafolio de proyectos EPC eléctricos en Oil & Gas, Solar, Minería y Alimentos & Bebidas. Casos de éxito con clientes Tier 1 en México y América."
+}
+</script>
+</head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
 
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </div>
+        </li>
 
-  <main>
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+  <main id="contenido">
     <section class="hero">
       <div class="container">
         <article class="hero__box">
-          <span class="kicker">Experiencia comprobada</span>
-          <h1>Proyectos VMS Energy</h1>
-          <p>Listado de proyectos del currículum VMS Energy.</p>
-          <div class="cta">
-            <a class="btn btn--primary" href="assets\descargas\CV VMS ENERGY 26_comprimido.pdf" download>Descargar Curriculum Empresarial</a>
+          <span class="kicker">18 a&ntilde;os de trayectoria comprobada</span>
+          <h1>+220 proyectos EPC en sectores cr&iacute;ticos</h1>
+          <p>Oil &amp; Gas, generaci&oacute;n hidroel&eacute;ctrica, agroindustria, miner&iacute;a y m&aacute;s &mdash; con clientes como <strong>PEMEX, CFE, Baker Hughes y SLB</strong> en M&eacute;xico, Guatemala, El Salvador y el Caribe.</p>
+          <div class="cta on-dark">
+            <a class="btn btn--primary" href="#timeline">Ver trayectoria</a>
+            <a class="btn btn--ghost" href="assets/descargas/CV_VMS_ENERGY_26_comprimido.pdf" download>Descargar CV empresarial</a>
           </div>
         </article>
       </div>
     </section>
 
-<style>.kpi-strip{background:#172C51;color:#fff;padding:40px 0}.kpi-strip__grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}.kpi-strip__item{padding:24px 16px;border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:last-child{border-right:none}.kpi-strip__number{display:block;font-size:clamp(30px,3.8vw,46px);font-weight:700;line-height:1;color:#8ed7ff;margin:0 0 8px}.kpi-strip__label{display:block;font-size:clamp(13px,1.1vw,15px);opacity:.82;line-height:1.35}@media(max-width:680px){.kpi-strip{padding:32px 0}.kpi-strip__grid{grid-template-columns:repeat(2,1fr)}.kpi-strip__item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-last-child(-n+2){border-bottom:none}}</style>
+<style>.kpi-strip{background:var(--vms-blue-800);color:#fff;padding:40px 0}.kpi-strip__grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}.kpi-strip__item{padding:24px 16px;border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:last-child{border-right:none}.kpi-strip__number{display:block;font-size:clamp(30px,3.8vw,46px);font-weight:700;line-height:1;color:var(--acento-oscuro);margin:0 0 8px}.kpi-strip__label{display:block;font-size:clamp(13px,1.1vw,15px);opacity:.82;line-height:1.35}@media(max-width:680px){.kpi-strip{padding:32px 0}.kpi-strip__grid{grid-template-columns:repeat(2,1fr)}.kpi-strip__item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)}.kpi-strip__item:nth-last-child(-n+2){border-bottom:none}}</style>
 <section class="kpi-strip" aria-label="Capacidad operativa VMS Energy">
   <div class="container">
     <div class="kpi-strip__grid">
       <div class="kpi-strip__item">
-        <span class="kpi-strip__number">+178</span>
+        <span class="kpi-strip__number">+220</span>
         <span class="kpi-strip__label">Proyectos ejecutados</span>
       </div>
       <div class="kpi-strip__item">
-        <span class="kpi-strip__number">76+</span>
-        <span class="kpi-strip__label">Ingenieros y t&eacute;cnicos fijos</span>
+        <span class="kpi-strip__number">+160</span>
+        <span class="kpi-strip__label">Especialistas en la red VMS</span>
       </div>
       <div class="kpi-strip__item">
         <span class="kpi-strip__number">5 ISOs</span>
         <span class="kpi-strip__label">Sistema de gesti&oacute;n certificado</span>
       </div>
       <div class="kpi-strip__item">
-        <span class="kpi-strip__number">4 pa&iacute;ses</span>
-        <span class="kpi-strip__label">M&eacute;xico, EE.UU., Centroam&eacute;rica y Caribe</span>
+        <span class="kpi-strip__number">4 mercados</span>
+        <span class="kpi-strip__label">Alcance comercial: M&eacute;xico, EE.UU., Centroam&eacute;rica y Caribe</span>
       </div>
     </div>
   </div>
 </section>
 
+  <section class="cp-featured" id="cv-proyectos">
+    <div class="container">
+      <span class="cp-section-label">Proyectos que definen nuestra capacidad</span>
+      <h2 class="cp-section-title">Casos emblemáticos de nuestra trayectoria</h2>
+      <p class="cp-section-lead">Una selección de proyectos representativos en Oil &amp; Gas, generación eléctrica y agroindustria con clientes Tier 1.</p>
+      <div class="cp-featured__grid">
+
+        <!-- Card 1: PEMEX BALAM-A — Servicio de Transformadores Offshore -->
+        <article class="cp-feat-card" style="--accent-color:#1C7D34;--icon-bg-a:#D3EFD5;--icon-bg-b:#EBF9EC">
+          <div class="cp-feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1C7D34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <div class="cp-feat-card__body">
+            <span class="cp-feat-card__type badge-svc">Servicio de Campo</span>
+            <h3 class="cp-feat-card__title">PEMEX BALAM-A — 14 Transformadores de Potencia Offshore</h3>
+            <div class="cp-feat-story">
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--reto">El reto</span>
+                <p class="cp-feat-story__text">Reconfiguración y prueba de 14 transformadores en plataforma offshore activa, sin ventana de paro prolongada y en ambiente marino corrosivo.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--sol">La solución</span>
+                <p class="cp-feat-story__text">Protocolo de pruebas dieléctricas y de aislamiento en campo, reconfiguración de taps y documentación técnica conforme a norma PEMEX.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--res">El resultado</span>
+                <p class="cp-feat-story__text">14 transformadores reconfigurados y certificados, continuidad de producción sin paros no programados y cero incidentes en campo.</p>
+              </div>
+            </div>
+            <div class="cp-feat-tags">
+              <span class="cp-tech-tag">Pruebas Dieléctricas</span>
+              <span class="cp-tech-tag">Offshore</span>
+              <span class="cp-tech-tag">PEMEX</span>
+              <span class="cp-tech-tag">Taps / Aislamiento</span>
+            </div>
+          </div>
+          <div class="cp-feat-card__footer">
+            <span class="cp-feat-card__meta">Golfo de México&nbsp;·&nbsp;PEMEX E&amp;P</span>
+            <a href="contacto_cta.html#ctaForm" class="cp-feat-card__link">Proyecto similar →</a>
+          </div>
+        </article>
+
+        <!-- Card 2: Grupo Dragón — Geotérmica Nayarit -->
+        <article class="cp-feat-card" style="--accent-color:#126BB5;--icon-bg-a:#D4E9FF;--icon-bg-b:#EDF6FF">
+          <div class="cp-feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <div class="cp-feat-card__body">
+            <span class="cp-feat-card__type badge-epc">EPC Eléctrico</span>
+            <h3 class="cp-feat-card__title">Grupo Dragón — Geotérmica Nayarit · Sistemas de Control</h3>
+            <div class="cp-feat-story">
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--reto">El reto</span>
+                <p class="cp-feat-story__text">Integración de sistemas de control y protección en central geotérmica de nueva construcción con equipos de múltiples fabricantes.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--sol">La solución</span>
+                <p class="cp-feat-story__text">Suministro e integración de Woodward 505, PLC Siemens S7-1500 y sistema de monitoreo Bently Nevada para turbogenerador completo.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--res">El resultado</span>
+                <p class="cp-feat-story__text">Arranque en tiempo, interoperabilidad total entre sistemas y disponibilidad superior al 98 % en primer año de operación.</p>
+              </div>
+            </div>
+            <div class="cp-feat-tags">
+              <span class="cp-tech-tag">Woodward 505</span>
+              <span class="cp-tech-tag">Siemens S7-1500</span>
+              <span class="cp-tech-tag">Bently Nevada</span>
+              <span class="cp-tech-tag">Geotérmica</span>
+            </div>
+          </div>
+          <div class="cp-feat-card__footer">
+            <span class="cp-feat-card__meta">Nayarit, México&nbsp;·&nbsp;Grupo Dragón</span>
+            <a href="contacto_cta.html#ctaForm" class="cp-feat-card__link">Proyecto similar →</a>
+          </div>
+        </article>
+
+        <!-- Card 3: Ingenio Adolfo López Mateos — Sincronía y Cogeneración -->
+        <article class="cp-feat-card" style="--accent-color:#7C6800;--icon-bg-a:#EFE7C5;--icon-bg-b:#F9F5E4">
+          <div class="cp-feat-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7C6800" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              <circle cx="12" cy="12" r="3"/><path d="M12 9v-2"/><path d="M12 17v-2"/><path d="M9.17 9.17l-1.42-1.42"/><path d="M16.24 16.24l-1.41-1.41"/><path d="M9 12H7"/><path d="M17 12h-2"/><path d="M9.17 14.83l-1.42 1.42"/><path d="M16.24 7.76l-1.41 1.41"/>
+            </svg>
+          </div>
+          <div class="cp-feat-card__body">
+            <span class="cp-feat-card__type badge-auto">Automatización</span>
+            <h3 class="cp-feat-card__title">Ingenio A. López Mateos — Sincronía y Cogeneración</h3>
+            <div class="cp-feat-story">
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--reto">El reto</span>
+                <p class="cp-feat-story__text">Sincronización de generadores de cogeneración con la red CFE durante zafra, donde cualquier falla implicaba pérdida de producción de azúcar.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--sol">La solución</span>
+                <p class="cp-feat-story__text">Sistema de sincronía automática con relevadores de protección, secuencia de arranque programada y enlace SCADA para supervisión en tiempo real.</p>
+              </div>
+              <div class="cp-feat-story__block">
+                <span class="cp-feat-story__tag cp-feat-story__tag--res">El resultado</span>
+                <p class="cp-feat-story__text">Cero desconexiones no programadas durante zafra, exportación de excedentes a la red CFE y reducción de costos energéticos.</p>
+              </div>
+            </div>
+            <div class="cp-feat-tags">
+              <span class="cp-tech-tag">Sincronía Automática</span>
+              <span class="cp-tech-tag">Cogeneración</span>
+              <span class="cp-tech-tag">SCADA</span>
+              <span class="cp-tech-tag">CFE Interconexión</span>
+            </div>
+          </div>
+          <div class="cp-feat-card__footer">
+            <span class="cp-feat-card__meta">Oaxaca, México&nbsp;·&nbsp;Agroindustria</span>
+            <a href="contacto_cta.html#ctaForm" class="cp-feat-card__link">Proyecto similar →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
     <section class="section">
       <div class="container">
-        <div class="card">
-          <p class="note">Currículum corporativo.</p>
-        </div>
         <div class="class-grid" aria-label="Clasificación de proyectos">
           <article class="class-card">
-            <span class="class-card__kicker class-card__kicker--epc">Servicio EPC eléctrico</span>
-            <h3 class="class-card__title">Servicio EPC</h3>
-            <p class="class-card__text">Intervenciones completas de ingeniería, suministro, instalación y puesta en marcha para infraestructura crítica.</p>
-            <p class="class-card__meta">Subestaciones, tableros y sincronización.</p>
+            <span class="class-card__kicker class-card__kicker--epc">Servicio EPC el&eacute;ctrico</span>
+            <h3 class="class-card__title">Servicio EPC <span class="class-card__count">23</span></h3>
+            <p class="class-card__text">Intervenciones completas de ingenier&iacute;a, suministro, instalaci&oacute;n y puesta en marcha para infraestructura cr&iacute;tica.</p>
+            <p class="class-card__meta">Subestaciones, tableros y sincronizaci&oacute;n.</p>
           </article>
           <article class="class-card">
             <span class="class-card__kicker class-card__kicker--service">Mantenimiento y pruebas</span>
-            <h3 class="class-card__title">Servicio</h3>
-            <p class="class-card__text">Mantenimiento, pruebas eléctricas, comisionamiento y soporte operativo especializado.</p>
+            <h3 class="class-card__title">Servicio <span class="class-card__count">136</span></h3>
+            <p class="class-card__text">Mantenimiento, pruebas el&eacute;ctricas, comisionamiento y soporte operativo especializado.</p>
             <p class="class-card__meta">Pruebas FAT/SAT, calibraciones y puesta en marcha.</p>
           </article>
           <article class="class-card">
-            <span class="class-card__kicker class-card__kicker--auto">Automatización industrial</span>
-            <h3 class="class-card__title">Automatización</h3>
-            <p class="class-card__text">Sistemas de control, integración PLC/SCADA, monitoreo y optimización de procesos.</p>
-            <p class="class-card__meta">Control de turbinas, monitoreo de gas húmedo.</p>
+            <span class="class-card__kicker class-card__kicker--auto">Automatizaci&oacute;n industrial</span>
+            <h3 class="class-card__title">Automatizaci&oacute;n <span class="class-card__count">8</span></h3>
+            <p class="class-card__text">Sistemas de control, integraci&oacute;n PLC/SCADA, monitoreo y optimizaci&oacute;n de procesos.</p>
+            <p class="class-card__meta">Control de turbinas, monitoreo de gas h&uacute;medo.</p>
           </article>
           <article class="class-card">
-            <span class="class-card__kicker class-card__kicker--training">Capacitación técnica</span>
-            <h3 class="class-card__title">Capacitación</h3>
-            <p class="class-card__text">Formación técnica y transferencia de conocimiento para operación y mantenimiento.</p>
+            <span class="class-card__kicker class-card__kicker--training">Capacitaci&oacute;n t&eacute;cnica</span>
+            <h3 class="class-card__title">Capacitaci&oacute;n <span class="class-card__count">5</span></h3>
+            <p class="class-card__text">Formaci&oacute;n t&eacute;cnica y transferencia de conocimiento para operaci&oacute;n y mantenimiento.</p>
             <p class="class-card__meta">Gobernadores, UPS y cargadores.</p>
           </article>
         </div>
+
+        <!-- ===== TIMELINE DE PROYECTOS ===== -->
+        <section class="tl-section" id="timeline" aria-labelledby="tlTitle">
+          <div class="tl-header">
+            <span class="tl-kicker">Trayectoria 2008 &mdash; 2025</span>
+            <h2 class="tl-title" id="tlTitle">18 a&ntilde;os de proyectos que definen nuestra trayectoria</h2>
+            <p class="tl-lead">Trayectoria documentada en +220 proyectos EPC en México, Guatemala, El Salvador y el Caribe. Selecciona cada hito para explorar alcance, sector y resultado.</p>
+          </div>
+          <div class="htl-hint" aria-hidden="true"><span>&#8592;&nbsp;&nbsp;Desplaza para explorar la trayectoria&nbsp;&nbsp;&#8594;</span></div>
+          <div class="htl-outer" id="htlOuter" role="region" aria-label="Cronolog&iacute;a horizontal de proyectos VMS Energy">
+            <div class="htl-track">
+              <div class="htl-map-bg" aria-hidden="true">
+                <img src="assets/img/alcance_geografico_real_VMS_Energy.webp" alt="Alcance geográfico VMS Energy — México, Centroamérica y el Caribe" loading="lazy">
+              </div>
+              <div class="htl-axis" aria-hidden="true"></div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2008</span>
+                  <span class="htl-badge htl-badge--origen">Origen</span>
+                  <div class="htl-ttl">Nace VMS Energy</div>
+                  <div class="htl-plc">Guadalajara, Jal.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">La sociedad adopta el nombre VMS Energy y define su enfoque en ingenier&iacute;a, procura y construcci&oacute;n de sistemas el&eacute;ctricos para la industria. Punto de partida de los 18 a&ntilde;os de trayectoria.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2010</span>
+                  <span class="htl-badge htl-badge--epc">Servicio EPC</span>
+                  <div class="htl-ttl">Fundaci&oacute;n agroindustrial</div>
+                  <div class="htl-plc">SLP &middot; Morelos</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Primer proyecto EPC documentado. Comisionamiento de gobernadores Woodward 2301D-ST con actuador Valtek en turbogeneradores de vapor. Ingenios Plan de Ayala &amp; Emiliano Zapata — base de la especializaci&oacute;n en control de velocidad.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2011</span>
+                  <span class="htl-badge htl-badge--proj">Proyecto mayor</span>
+                  <div class="htl-ttl">Primer offshore PEMEX</div>
+                  <div class="htl-plc">Campeche</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Primer gran EPC mar&iacute;timo: fabricaci&oacute;n y comisionamiento de CCM 480 V con comunicaci&oacute;n Profibus + tablero de transferencia autom&aacute;tica de 11 interruptores 3&thinsp;200 A. Plataforma Nohoch-A2, PEMEX.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2012</span>
+                  <span class="htl-badge htl-badge--epc">Servicio EPC</span>
+                  <div class="htl-ttl">3 estados simult&aacute;neos</div>
+                  <div class="htl-plc">Mich. &middot; Tab. &middot; Oax.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Expansi&oacute;n agroindustrial: Woodward 505 Enhanced + actuadores VALTEK 50/25/UG40. Ingenios Santa Clara, Santa Rosal&iacute;a y Adolfo L&oacute;pez Mateos en tres estados simult&aacute;neos — primera demostraci&oacute;n de movilizaci&oacute;n multi-estado.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2013</span>
+                  <span class="htl-badge htl-badge--proj">CFE + PEMEX</span>
+                  <div class="htl-ttl">Dos clientes estrat&eacute;gicos simult&aacute;neos</div>
+                  <div class="htl-plc">Yucat&aacute;n &middot; Campeche</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Primera central el&eacute;ctrica CFE (M&eacute;rida II): actualizaci&oacute;n de sistema de condensado. Simult&aacute;neo: subestaci&oacute;n 34.5 kV offshore PEMEX con 2 transformadores 3&thinsp;500 KVA, seccionadores SEL 751 y resistencias de puesta a tierra.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2014</span>
+                  <span class="htl-badge htl-badge--full">EPC Completo</span>
+                  <div class="htl-ttl">Planta geot&eacute;rmica Grupo Drag&oacute;n</div>
+                  <div class="htl-plc">Nayarit</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">EPC m&aacute;s complejo hasta la fecha: Woodward 505 + DSLC + MSCL, PLC Siemens S7, HMI, Bently Nevada 3500 vibraciones, DECS250 Basler Electric, sincronizaci&oacute;n CFE, tableros el&eacute;ctricos y transformador de potencia.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot htl-dot--intl"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2016</span>
+                  <span class="htl-badge htl-badge--intl">Internacional</span>
+                  <div class="htl-ttl">Primer proyecto fuera de M&eacute;xico</div>
+                  <div class="htl-plc">Guatemala</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">LUFUSSA: servicio mec&aacute;nico a turbina, balanceo din&aacute;mico y pruebas de &aacute;labes y flecha, con equipo DEC250 de Basler Electric. Al a&ntilde;o siguiente, Ingenio Santa Ana en Escuintla &mdash; sincronizaci&oacute;n de cuatro turbogeneradores con Woodward DSCL-II y MSCL-II &mdash; y la modernizaci&oacute;n del sistema de excitaci&oacute;n DECS250 del motor W&auml;rtsil&auml; 38 en Pavana.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2018</span>
+                  <span class="htl-badge htl-badge--intl">El Salvador</span>
+                  <div class="htl-ttl">Segundo pa&iacute;s centroamericano</div>
+                  <div class="htl-plc">El Salvador</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Ingenio Central Izalco: sintonizaci&oacute;n de control de v&aacute;lvula de admisi&oacute;n de turbina con CPC. Segundo pa&iacute;s en 2 a&ntilde;os — consolida el posicionamiento regional en la industria azucarera centroamericana.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot htl-dot--intl"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2019</span>
+                  <span class="htl-badge htl-badge--multi">M&uacute;ltiples sectores</span>
+                  <div class="htl-ttl">A&ntilde;o de mayor crecimiento</div>
+                  <div class="htl-plc">Jal. &middot; SLP &middot; Oax. &middot; Ver.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">CFE Transmisi&oacute;n (tableros metal-clad), Era Minerals (primer CCM para miner&iacute;a), PIASA (6 plantas azucareras en 3 estados) y 18 proyectos PEMEX en paralelo. R&eacute;cord operativo multi-sector en un solo a&ntilde;o.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2020</span>
+                  <span class="htl-badge htl-badge--full">CFE &mdash; 3 centrales</span>
+                  <div class="htl-ttl">Tres centrales de CFE en un mismo a&ntilde;o</div>
+                  <div class="htl-plc">Oax. &middot; Chis. &middot; Q. Roo</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Modernizaci&oacute;n Woodward + sistema hidr&aacute;ulico en las centrales Tamazulapan (Oaxaca) y Cecilio del Valle (Chiapas); CCMs (CA|CD) para la central Chankanaab-Cozumel (Q. Roo). Tres centrales de CFE en tres estados el mismo a&ntilde;o.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot htl-dot--usa"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2021</span>
+                  <span class="htl-badge htl-badge--full">Offshore</span>
+                  <div class="htl-ttl">Diez intervenciones con Cotemar</div>
+                  <div class="htl-plc">Campeche &middot; plataformas AKAL y BALAM</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Diez proyectos en un solo a&ntilde;o con Cotemar: actualizaci&oacute;n de estudios el&eacute;ctricos de flujos de carga y coordinaci&oacute;n de protecciones en AKAL-B1, rehabilitaci&oacute;n de transformador defasador de 500&nbsp;kVA en BALAM-TB, interconexi&oacute;n y puesta en operaci&oacute;n de variadores e IHM, y asistencia t&eacute;cnica en AKAL-C2, AKAL-B, AKAL-G y EK-A.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2022</span>
+                  <span class="htl-badge htl-badge--intl">Caribe</span>
+                  <div class="htl-ttl">SLB &middot; IENOVA &middot; Baker Hughes</div>
+                  <div class="htl-plc">Caribe &middot; CDMX &middot; Colima</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Entrada al Caribe con SLB: VFD 75 HP autosoportado para extracci&oacute;n petrolera. Control campo e&oacute;lico IENOVA, variador TRIOL 200 HP en una embotelladora de refrescos en Colima, 14 VFDs E-Cabinet para Baker Hughes offshore.</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot htl-dot--intl"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot htl-dot--intl"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2023</span>
+                  <span class="htl-badge htl-badge--full">Escala industrial</span>
+                  <div class="htl-ttl">Baker Hughes &middot; CH Angostura &middot; PEMEX</div>
+                  <div class="htl-plc">Guat. &middot; Chis. &middot; Camp.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Baker Hughes Guatemala: 1&thinsp;250 KVA de bombeo Oil &amp; Gas. Mantenimiento mayor a 4 gr&uacute;as puente 250 ton en CH Angostura. 28 VFDs E-Cabinet offshore PEMEX: plataformas AMOCA, MIZTON y Baker Hughes.</div>
+                </div>
+              </div>
+
+              <div class="htl-item htl-item--top">
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2024</span>
+                  <span class="htl-badge htl-badge--full">Alta complejidad</span>
+                  <div class="htl-ttl">Transformadores PEMEX &middot; Miner&iacute;a Durango</div>
+                  <div class="htl-plc">Camp. &middot; Dur. &middot; Chis.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Rehabilitaci&oacute;n integral de transformadores hasta 20 MVA en plataformas MALOOB, ZAAP y PG-ZAAP-C. Primer proyecto minero en altura: VFD Altivar 980 de 700 HP para desplazar agua 900 m en mina cielo cerrado (Durango).</div>
+                </div>
+                <div class="htl-conn"></div>
+                <div class="htl-dot"></div>
+              </div>
+
+              <div class="htl-item htl-item--bot">
+                <div class="htl-dot"></div>
+                <div class="htl-conn"></div>
+                <div class="htl-card" tabindex="0" role="button" aria-expanded="false">
+                  <span class="htl-yr">2025</span>
+                  <span class="htl-badge htl-badge--full">Mayor envergadura</span>
+                  <div class="htl-ttl">Turbogenerador 41.2 MW &middot; CFE &middot; SCADA</div>
+                  <div class="htl-plc">Camp. &middot; Chis. &middot; Jal. &middot; Edo. M&eacute;x.</div>
+                  <div class="htl-toggle">&#9660;</div>
+                  <div class="htl-detail">Turbogenerador Brush 41.2 MW en PG-ZAAP-C. Transformador DEEMSA 15&thinsp;000 KVA aceite biodegradable. Cable 400 kV para 4 turbinas hidroel&eacute;ctricas CFE. 12.6 km cable MT/BT Colima. Integraci&oacute;n SCADA Profinet 12 gabinetes VFD Siemens en t&uacute;nel de infraestructura.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- ===== FIN TIMELINE ===== -->
+
+                <!-- CTA POST-TIMELINE -->
+        <div class="tl-cta" role="complementary" aria-label="Contacto de proyectos">
+          <div class="tl-cta__body">
+            <span class="tl-cta__kicker">¿Tienes un proyecto de esta envergadura?</span>
+            <h2 class="tl-cta__title">Hablemos de tu pr&oacute;ximo proyecto</h2>
+            <p class="tl-cta__sub">Ingenieros especializados disponibles para Oil &amp; Gas, hidroel&eacute;ctrica, miner&iacute;a y agroindustria.</p>
+          </div>
+          <div class="tl-cta__actions">
+            <a class="tl-cta__btn tl-cta__btn--primary" href="contacto.html#inicio">Solicitar reuni&oacute;n</a>
+            <a class="tl-cta__btn tl-cta__btn--ghost" href="assets/descargas/CV_VMS_ENERGY_26_comprimido.pdf" download>Descargar CV</a>
+          </div>
+        </div>
+        <!-- ===== FIN TIMELINE ===== -->
+
         <section class="coverage" aria-label="Cobertura geográfica de proyectos">
           <div class="coverage__head">
             <h2 class="coverage__title">Cobertura geográfica de proyectos</h2>
-            <p class="coverage__text">Identifica la zona de cobertura Operacional.</p>
+            <div class="cov-counter-strip">
+              <span class="cov-counter-num" id="covCounter">220</span>
+              <span class="cov-counter-label">proyectos ejecutados en México, Centroamérica y el Caribe</span>
+            </div>
+          </div>
+          <div class="coverage__filters" role="group" aria-label="Filtrar por tipo de servicio">
+            <button class="cov-filter active" data-filter="all">Todos</button>
+            <button class="cov-filter" data-filter="Automatización">Automatización</button>
+            <button class="cov-filter" data-filter="Servicio EPC">Servicio EPC</button>
+            <button class="cov-filter" data-filter="Capacitación">Capacitación</button>
+            <button class="cov-filter" data-filter="offshore">Offshore</button>
           </div>
           <div class="coverage__map" role="region" aria-label="Mapa de cobertura de proyectos">
-            <svg id="projectsMapSvg" class="coverage__svg" viewBox="0 0 514 350" role="img" aria-label="Mapa de México con ubicaciones de proyectos">
+            <svg id="projectsMapSvg" class="coverage__svg" viewBox="51 -30 615 346" role="img" aria-label="Mapa de México con ubicaciones de proyectos">
               <defs>
                 <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -2954,26 +3366,28 @@ label{font-size:14px}
                 </filter>
               </defs>
               <g class="coverage__grid" aria-hidden="true">
-                <line x1="0" y1="50" x2="514" y2="50"></line>
-                <line x1="0" y1="100" x2="514" y2="100"></line>
-                <line x1="0" y1="150" x2="514" y2="150"></line>
-                <line x1="0" y1="200" x2="514" y2="200"></line>
-                <line x1="0" y1="250" x2="514" y2="250"></line>
-                <line x1="0" y1="300" x2="514" y2="300"></line>
-                <line x1="50" y1="0" x2="50" y2="350"></line>
-                <line x1="100" y1="0" x2="100" y2="350"></line>
-                <line x1="150" y1="0" x2="150" y2="350"></line>
-                <line x1="200" y1="0" x2="200" y2="350"></line>
-                <line x1="250" y1="0" x2="250" y2="350"></line>
-                <line x1="300" y1="0" x2="300" y2="350"></line>
-                <line x1="350" y1="0" x2="350" y2="350"></line>
-                <line x1="400" y1="0" x2="400" y2="350"></line>
-                <line x1="450" y1="0" x2="450" y2="350"></line>
-                <line x1="500" y1="0" x2="500" y2="350"></line>
+                <line x1="0" y1="50" x2="560" y2="50"></line>
+                <line x1="0" y1="100" x2="560" y2="100"></line>
+                <line x1="0" y1="150" x2="560" y2="150"></line>
+                <line x1="0" y1="200" x2="560" y2="200"></line>
+                <line x1="0" y1="250" x2="560" y2="250"></line>
+                <line x1="0" y1="300" x2="560" y2="300"></line>
+                <line x1="50" y1="0" x2="50" y2="315"></line>
+                <line x1="100" y1="0" x2="100" y2="315"></line>
+                <line x1="150" y1="0" x2="150" y2="315"></line>
+                <line x1="200" y1="0" x2="200" y2="315"></line>
+                <line x1="250" y1="0" x2="250" y2="315"></line>
+                <line x1="300" y1="0" x2="300" y2="315"></line>
+                <line x1="350" y1="0" x2="350" y2="315"></line>
+                <line x1="400" y1="0" x2="400" y2="315"></line>
+                <line x1="450" y1="0" x2="450" y2="315"></line>
+                <line x1="500" y1="0" x2="500" y2="315"></line>
+                <line x1="550" y1="0" x2="550" y2="315"></line>
               </g>
-              <image href="assets/img/landings/proyectos/mapa_proyectos_vms.webp" x="0" y="0" width="514" height="350" preserveAspectRatio="xMidYMid meet" class="coverage__image" aria-hidden="true"></image>
+              <image href="assets/img/mapa-proyectos.webp" x="0" y="0" width="560" height="315" preserveAspectRatio="xMidYMid meet" class="coverage__image" aria-hidden="true"></image>
               <g id="mapMarkers"></g>
             </svg>
+            <div id="mapTooltip"></div>
             <div class="coverage__panel" id="coveragePanel" aria-live="polite">
               <p class="coverage__panel-title">Detalle del punto</p>
               <div class="coverage__panel-row">
@@ -2984,283 +3398,567 @@ label{font-size:14px}
                 <span class="coverage__panel-label">Proyectos</span>
                 <span class="coverage__panel-value" data-field="count">—</span>
               </div>
-              <p class="coverage__panel-hint">Haz clic en un punto para ver más detalle.</p>
+              <div class="cov-badges" id="panelBadges"></div>
+              <p class="coverage__panel-hint" id="panelHint">Haz clic en un punto para ver más detalle.</p>
+              <a href="catalogo-proyectos.html" class="cov-panel-link" id="panelLink" style="display:none" aria-label="Ver proyectos de este estado">
+                Ver proyectos
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
             </div>
           </div>
-          <div class="coverage__legend">
+          <div class="coverage__legend"></div>
+          <div class="coverage__regions" role="list">
+            <div class="cov-region" role="listitem" data-filter="occ" title="Nayarit, Jalisco, Colima, Durango y más">
+              <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 19.5h19L14 5.8l-3.6 6.4L8.2 9 2.5 19.5Z"/></svg></span>
+              <span class="cov-region__count" data-count="32">32</span>
+              <span class="cov-region__label">Norte &amp; Occidente</span>
+            </div>
+            <div class="cov-region" role="listitem" data-filter="centro" title="Estado de México, Morelos, Michoacán">
+              <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21V9.4l5-3v14.6"/><path d="M8 21V3.6l7 3V21"/><path d="M15 21v-9.2l6 3V21"/><path d="M2 21h20"/></svg></span>
+              <span class="cov-region__count" data-count="7">7</span>
+              <span class="cov-region__label">Centro</span>
+            </div>
+            <div class="cov-region" role="listitem" data-filter="sur" title="Veracruz, Tabasco, Oaxaca, Chiapas, Quintana Roo">
+              <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 3.2C9.5 3.8 4 9.4 4 16.4c0 2.1.8 4 .8 4"/><path d="M20.5 3.2c1.2 9.4-4.2 15.4-10.8 15.4-1.6 0-3-.3-4.2-.9"/><path d="M9.5 15.5c2.2-4.4 5.6-7 9.5-8.6"/></svg></span>
+              <span class="cov-region__count" data-count="38">38</span>
+              <span class="cov-region__label">Sur &amp; Golfo</span>
+            </div>
+            <div class="cov-region" role="listitem" data-filter="offshore" title="Campeche offshore, Caribe, Guatemala, El Salvador">
+              <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="6.6" ry="2.4"/><path d="M5.4 5v14c0 1.3 3 2.4 6.6 2.4s6.6-1.1 6.6-2.4V5"/><path d="M5.4 12c0 1.3 3 2.4 6.6 2.4s6.6-1.1 6.6-2.4"/></svg></span>
+              <span class="cov-region__count" data-count="143">143</span>
+              <span class="cov-region__label">Offshore &amp; Int'l</span>
+            </div>
           </div>
         </section>
-        <section class="projects-list" aria-label="Listado de trabajos por lugar y cliente">
-          <div class="projects-list__head">
-            <h2 class="projects-list__title">Listado de proyectos</h2>
-          </div>
-          <div class="projects-table__wrap" role="region" aria-label="Tabla de proyectos">
-            <table class="projects-table">
-              <thead>
-                <tr>
-                  <th>Trabajos realizados</th>
-                  <th>Clasificación</th>
-                  <th>Lugar</th>
-                  <th>Cliente</th>
-                </tr>
-              </thead>
-              <tbody id="projectsListBody">
-                <tr><td colspan="4">Cargando información…</td></tr>
-              </tbody>
-            </table>
+        <section class="pv-refs" aria-labelledby="pvRefsTitle">
+          <div class="container">
+            <div class="pv-refs__label">Casos de referencia</div>
+            <h2 class="pv-refs__title" id="pvRefsTitle">Proyectos que definen nuestra capacidad</h2>
+            <p class="pv-refs__lead">Tres ejemplos de la profundidad técnica y el alcance operativo de VMS Energy en campo.</p>
+            <div class="pv-refs__grid">
+
+              <!-- Card 1: Geotérmica Nayarit -->
+              <article class="pv-feat-card" style="--accent-color:#126BB5;--icon-bg-a:#D4E9FF;--icon-bg-b:#EDF6FF">
+                <div class="pv-feat-card__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <div class="pv-feat-card__body">
+                  <span class="pv-feat-card__type pv-badge-epc">Servicio EPC</span>
+                  <h3 class="pv-feat-card__title">Control de generación en planta geotérmica — Nayarit</h3>
+                  <div class="pv-feat-story">
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--reto">El reto</span>
+                      <p class="pv-feat-story__text">Controles obsoletos de los años 90 con riesgo de paro no programado en operación continua para CFE.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--sol">La solución</span>
+                      <p class="pv-feat-story__text">Woodward 505, DSCL-II, PLC Siemens S7, HMI y monitoreo de vibraciones Bently Nevada 3500.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--res">El resultado</span>
+                      <p class="pv-feat-story__text">Sincronización estable con red CFE. Cero paros no programados en el primer año.</p>
+                    </div>
+                  </div>
+                  <div class="pv-feat-tags">
+                    <span class="pv-tech-tag">Woodward 505</span>
+                    <span class="pv-tech-tag">PLC Siemens S7</span>
+                    <span class="pv-tech-tag">Bently Nevada</span>
+                    <span class="pv-tech-tag">DECS-250 Basler</span>
+                  </div>
+                </div>
+                <div class="pv-feat-card__footer">
+                  <div class="pv-feat-card__meta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Nayarit &mdash; Grupo Drag&oacute;n
+                  </div>
+                  <a href="contacto.html#inicio" class="pv-feat-card__link">
+                    Proyecto similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 2: BALAM-A Pemex -->
+              <article class="pv-feat-card" style="--accent-color:#1C7D34;--icon-bg-a:#D3EFD5;--icon-bg-b:#EBF9EC">
+                <div class="pv-feat-card__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1C7D34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                </div>
+                <div class="pv-feat-card__body">
+                  <span class="pv-feat-card__type pv-badge-svc">Servicio</span>
+                  <h3 class="pv-feat-card__title">Rehabilitación integral de 14 transformadores — Plataforma BALAM-A</h3>
+                  <div class="pv-feat-story">
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--reto">El reto</span>
+                      <p class="pv-feat-story__text">14 transformadores degradados en plataforma offshore Pemex sin posibilidad de paro de producción.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--sol">La solución</span>
+                      <p class="pv-feat-story__text">Rehabilitación in-situ: pruebas eléctricas primarias (Megger, TTR, Factor de Potencia) y puesta en operación.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--res">El resultado</span>
+                      <p class="pv-feat-story__text">Continuidad operativa garantizada. Todos los transformadores dentro de norma Lloyd's.</p>
+                    </div>
+                  </div>
+                  <div class="pv-feat-tags">
+                    <span class="pv-tech-tag">Pruebas VLF</span>
+                    <span class="pv-tech-tag">Alta tensión 34.5 kV</span>
+                    <span class="pv-tech-tag">Norma Lloyd's</span>
+                    <span class="pv-tech-tag">Offshore</span>
+                  </div>
+                </div>
+                <div class="pv-feat-card__footer">
+                  <div class="pv-feat-card__meta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Campeche &mdash; Pemex / Cotemar
+                  </div>
+                  <a href="contacto.html#inicio" class="pv-feat-card__link">
+                    Proyecto similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 3: CFE Hidroeléctrica Chiapas -->
+              <article class="pv-feat-card" style="--accent-color:#7852AB;--icon-bg-a:#EBE0FF;--icon-bg-b:#F6F2FF">
+                <div class="pv-feat-card__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7852AB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+                    <circle cx="8.5" cy="10" r="1.5" fill="#7852AB" stroke="none"/><circle cx="12.5" cy="7" r="1.5" fill="#7852AB" stroke="none"/><circle cx="15.5" cy="10" r="1.5" fill="#7852AB" stroke="none"/>
+                  </svg>
+                </div>
+                <div class="pv-feat-card__body">
+                  <span class="pv-feat-card__type pv-badge-proj">Proyecto</span>
+                  <h3 class="pv-feat-card__title">Modernización hidroeléctrica Central Cecilio del Valle — CFE Chiapas</h3>
+                  <div class="pv-feat-story">
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--reto">El reto</span>
+                      <p class="pv-feat-story__text">Control de velocidad e hidráulica obsoletos impactando la regulación de frecuencia en red CFE.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--sol">La solución</span>
+                      <p class="pv-feat-story__text">Modernización completa del gobernador Woodward + rehabilitación del sistema hidráulico de válvula de admisión.</p>
+                    </div>
+                    <div class="pv-feat-story__block">
+                      <span class="pv-feat-story__tag pv-feat-story__tag--res">El resultado</span>
+                      <p class="pv-feat-story__text">Control digital de velocidad estable. Proyecto replicado en la central Tamazulapan, Oaxaca.</p>
+                    </div>
+                  </div>
+                  <div class="pv-feat-tags">
+                    <span class="pv-tech-tag">Woodward</span>
+                    <span class="pv-tech-tag">Sistema hidráulico</span>
+                    <span class="pv-tech-tag">CFE</span>
+                    <span class="pv-tech-tag">Hidroeléctrica</span>
+                  </div>
+                </div>
+                <div class="pv-feat-card__footer">
+                  <div class="pv-feat-card__meta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Chiapas &mdash; CFE
+                  </div>
+                  <a href="contacto.html#inicio" class="pv-feat-card__link">
+                    Proyecto similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                </div>
+              </article>
+
+            </div><!-- /.pv-refs__grid -->
+
+            <div class="pv-refs__cta-wrap">
+              <a href="catalogo-proyectos.html" class="pv-refs__cta">
+                Ver los 220 proyectos
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
           </div>
         </section>
       </div>
     </section>
   </main>
 
-  <footer id="footer" class="foot" aria-label="Pie de página corporativo">
-    <div class="container">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
         </div>
-        <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generación y distribución de energía eléctrica, con las soluciones más versátiles y sustentables para nuestros clientes.</p>
-        <div style="display:flex;gap:14px;margin-top:14px">
-          <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
           </a>
-          <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
           </a>
-          <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
           </a>
         </div>
       </div>
 
       <div>
-        <h4 style="color:#fff;margin:0 0 10px">Contáctanos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-          <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-          <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-        </ul>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
-          </ul>
-        </div>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-          <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Código de Ética y Conducta</a></li>
-          <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Política Interna Antilavado</a></li>
-          <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Política Antisoborno</a></li>
-          <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-          <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buzón de sugerencias</a></li>
-        </ul>
-        <div style="margin-top:14px">
-          <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-          <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-            <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-            <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h4 style="color:#fff;margin:0 0 10px">Navegación</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-          <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-          <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-          <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro técnico</a></li>
-          <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-          <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-          <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromecánicas</a></li>
-          <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatización y Control</a></li>
-          <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energía Solar Industrial</a></li>
-          <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generación Verde No Solar</a></li>
-          <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-          <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energética</a></li>
-          <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-          <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminación Industrial</a></li>
-          <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
+
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="foot-note">Desarrollado por el equipo digital de VMS Energy · v10.1<br>Derechos reservados 2026 VMS Energy</div>
-  </footer>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
   <script>
   (function(){
-    var svg = document.getElementById('projectsMapSvg');
-    var markers = document.getElementById('mapMarkers');
-    var panel = document.getElementById('coveragePanel');
-    var panelName = panel ? panel.querySelector('[data-field=\"name\"]') : null;
-    var panelCount = panel ? panel.querySelector('[data-field=\"count\"]') : null;
-    if(!svg || !markers) return;
+    // Datos incrustados: sin fetch, compatible con file://
+    var PLACES_DATA   = [{"name":"Campeche","type":"estado","count":92,"classes":["Automatización","Servicio","Servicio EPC"],"x":287.7,"y":167.5,"offshore":true},{"name":"Chiapas","type":"estado","count":2,"classes":[],"x":278,"y":228.3},{"name":"Colima","type":"estado","count":4,"classes":[],"x":144.1,"y":191.9},{"name":"Durango","type":"estado","count":1,"classes":[],"x":141.5,"y":127.2},{"name":"Estado de México","type":"estado","count":2,"classes":[],"x":192.2,"y":179.6},{"name":"Jalisco","type":"estado","count":18,"classes":["Capacitación","Servicio"],"x":152,"y":172.6},{"name":"Michoacán","type":"estado","count":0,"classes":[],"x":165.9,"y":194.5},{"name":"Morelos","type":"estado","count":5,"classes":["Automatización","Capacitación","Servicio","Servicio EPC"],"x":206.7,"y":191.2},{"name":"Nayarit","type":"estado","count":2,"classes":[],"x":134.6,"y":157.1},{"name":"Oaxaca","type":"estado","count":4,"classes":["Capacitación","Servicio"],"x":234.4,"y":217.4},{"name":"Quintana Roo","type":"estado","count":1,"classes":[],"x":329.6,"y":157.1},{"name":"Tabasco","type":"estado","count":11,"classes":[],"x":264.5,"y":195.4},{"name":"Veracruz","type":"estado","count":14,"classes":["Automatización","Capacitación","Servicio","Servicio EPC"],"x":234,"y":173.5},{"name":"Guatemala","type":"pais","count":3,"classes":["Servicio EPC","Servicio"],"x":307.2,"y":229.9},{"name":"El Salvador","type":"pais","count":1,"classes":["Servicio"],"x":328.2,"y":249.2},{"name":"Caribe","type":"region","count":1,"classes":["Servicio"],"x":428.6,"y":174.3,"offshore":true}];
 
-    var width = 514;
-    var height = 350;
+    // Mapa de cobertura ─ v2 con 9 mejoras
+    var svg        = document.getElementById("projectsMapSvg");
+    var markers    = document.getElementById("mapMarkers");
+    var panel      = document.getElementById("coveragePanel");
+    var panelName  = panel ? panel.querySelector("[data-field='name']")  : null;
+    var panelCount = panel ? panel.querySelector("[data-field='count']") : null;
+    var panelBadges= document.getElementById("panelBadges");
+    var panelHint  = document.getElementById("panelHint");
+    var panelLink  = document.getElementById("panelLink");
+    var tooltip    = document.getElementById("mapTooltip");
+    var mapWrap    = svg ? svg.closest(".coverage__map") : null;
 
-    fetch('assets/data/vms_projects_places.json', { cache: 'no-store' })
-      .then(function(r){ return r.ok ? r.json() : []; })
-      .then(function(points){
-        if(!Array.isArray(points) || !points.length) return;
-        var selected = null;
-        function updatePanel(data){
-          if(!panelName || !panelCount) return;
-          if(!data){
-            panelName.textContent = 'Selecciona un punto';
-            panelCount.textContent = '—';
-            return;
-          }
-          panelName.textContent = data.name || 'Ubicación';
-          panelCount.textContent = typeof data.count === 'number' ? String(data.count) : '0';
-        }
+    var BADGE_CFG = {
+      "Automatización":{"cls":"cov-badge--auto","lbl":"Automatización"},
+      "Servicio EPC":  {"cls":"cov-badge--epc", "lbl":"Servicio EPC"},
+      "Servicio":      {"cls":"cov-badge--svc", "lbl":"Servicio"},
+      "Capacitación":  {"cls":"cov-badge--cap", "lbl":"Capacitación"}
+    };
 
-        function setSelected(targetCircle, data){
-          if(selected){
-            selected.circle.classList.remove('coverage__marker--selected');
-            selected.circle.classList.remove('coverage__marker--highlight');
-          }
-          if(targetCircle){
-            targetCircle.classList.add('coverage__marker--selected');
-            selected = { circle: targetCircle };
-            updatePanel(data);
-          } else {
-            selected = null;
-            updatePanel(null);
-          }
-        }
+    if(svg && markers && Array.isArray(PLACES_DATA) && PLACES_DATA.length){
+      var selected   = null;
+      var markerNodes= [];
 
-        points.forEach(function(p){
-          var count = typeof p.count === 'number' ? p.count : 0;
-          var radius = 6 + Math.min(count, 12);
-          if(typeof p.x !== 'number' || typeof p.y !== 'number') return;
-          var pos = { x: p.x, y: p.y };
-          var circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-          circle.setAttribute('class', 'coverage__marker');
-          circle.setAttribute('cx', pos.x.toFixed(2));
-          circle.setAttribute('cy', pos.y.toFixed(2));
-          circle.setAttribute('r', radius);
-          var title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-          title.textContent = (p.name || 'Ubicación') + ' · Proyectos: ' + count;
-          circle.appendChild(title);
-          markers.appendChild(circle);
-
-          circle.addEventListener('click', function(){
-            setSelected(circle, p);
-          });
-        });
-
-        // Highlight by state query parameter (?estado=Jalisco)
-        var params = new URLSearchParams(window.location.search);
-        var estado = params.get('estado');
-        if(estado){
-          var normalized = estado.toLowerCase();
-          var nodes = markers.querySelectorAll('circle');
-          for(var i=0; i < points.length; i++){
-            if(!points[i].name) continue;
-            if(points[i].name.toLowerCase() === normalized){
-              if(nodes[i]){
-                nodes[i].classList.add('coverage__marker--highlight');
-                updatePanel(points[i]);
-              }
-              break;
-            }
-          }
-        }
-      })
-      .catch(function(){ /* ignore */ });
-  })();
-
-  (function(){
-    var tbody = document.getElementById('projectsListBody');
-    if(!tbody) return;
-    fetch('assets/data/vms_projects_list.json', { cache: 'no-store' })
-      .then(function(r){ return r.ok ? r.json() : []; })
-      .then(function(items){
-        if(!Array.isArray(items) || !items.length){
-          tbody.innerHTML = '<tr><td colspan="4">Sin información disponible.</td></tr>';
+      /* ── Panel update ── */
+      function updatePanel(data){
+        if(!panelName||!panelCount) return;
+        if(!data){
+          panelName.textContent="Selecciona un punto"; panelCount.textContent="—";
+          if(panelBadges) panelBadges.innerHTML="";
+          if(panelHint)   panelHint.style.display="";
+          if(panelLink)   panelLink.style.display="none";
           return;
         }
-        var rows = items.map(function(item){
-          var trabajo = (item.trabajos_realizados || '').trim();
-          var clas = (item.clasificacion || '').trim();
-          var lugar = (item.lugar || '').trim();
-          var cliente = (item.cliente || '').trim();
-          return '<tr>' +
-            '<td>' + (trabajo || '—') + '</td>' +
-            '<td><strong>' + (clas || '—') + '</strong></td>' +
-            '<td>' + (lugar || '—') + '</td>' +
-            '<td>' + (cliente || '—') + '</td>' +
-          '</tr>';
-        }).join('');
-        tbody.innerHTML = rows;
-      })
-      .catch(function(){ tbody.innerHTML = '<tr><td colspan="4">No se pudo cargar la información.</td></tr>'; });
+        panelName.textContent  = data.name  ||"Ubicación";
+        panelCount.textContent = typeof data.count==="number"?String(data.count):"0";
+        if(panelBadges){
+          panelBadges.innerHTML="";
+          var cls = (data.classes||[]).slice();
+          if(data.offshore) cls.unshift("⚓ Offshore");
+          cls.forEach(function(c){
+            var sp=document.createElement("span");
+            var cfg=BADGE_CFG[c]||{cls:"cov-badge--off",lbl:c};
+            sp.className="cov-badge "+cfg.cls;
+            sp.textContent=cfg.lbl;
+            panelBadges.appendChild(sp);
+          });
+        }
+        if(panelHint) panelHint.style.display="none";
+        if(panelLink){
+          panelLink.href="catalogo-proyectos.html?estado="+encodeURIComponent(data.name||"");
+          panelLink.style.display="flex";
+        }
+      }
+
+      /* ── Select ── */
+      function setSelected(el,data){
+        if(selected){
+          selected.classList.remove("coverage__marker--selected");
+          selected.classList.remove("coverage__marker--highlight");
+        }
+        if(el){ el.classList.add("coverage__marker--selected"); selected=el; updatePanel(data); }
+        else  { selected=null; updatePanel(null); }
+      }
+
+      /* ── Build markers ── */
+      PLACES_DATA.forEach(function(p,idx){
+        var count  = typeof p.count==="number"?p.count:0;
+        var radius = 6+Math.min(count,12);
+        if(typeof p.x!=="number"||typeof p.y!=="number") return;
+
+        var title=document.createElementNS("http://www.w3.org/2000/svg","title");
+        title.textContent=(p.name||"Ubicacion")+" — Proyectos: "+count;
+
+        /* Halo (pulse ring) */
+        var halo=document.createElementNS("http://www.w3.org/2000/svg","circle");
+        halo.setAttribute("cx",p.x.toFixed(1));
+        halo.setAttribute("cy",p.y.toFixed(1));
+        halo.setAttribute("r", p.offshore?"14":String(radius));
+        halo.setAttribute("class","coverage__halo"+(p.offshore?" coverage__halo--sea":""));
+        halo.style.animationDelay=(idx*0.14)+"s";
+        markers.appendChild(halo);
+
+        if(p.offshore){
+          var sc=(6+Math.min(count,16))/16.0;
+          var g=document.createElementNS("http://www.w3.org/2000/svg","g");
+          g.setAttribute("transform","translate("+p.x.toFixed(1)+","+p.y.toFixed(1)+") scale("+sc+")");
+          g.setAttribute("class","coverage__marker coverage__marker--platform");
+          g.setAttribute("role","button"); g.setAttribute("tabindex","0");
+          g.setAttribute("data-idx",String(idx)); g.style.cursor="pointer";
+          [["rect",{x:"-13",y:"10",width:"26",height:"3",rx:"1.5",fill:"#38bdf8",opacity:"0.6"}],
+           ["line",{x1:"-9",y1:"8",x2:"-12",y2:"13",stroke:"#7dd3fc",strokeWidth:"2"}],
+           ["line",{x1:"9",y1:"8",x2:"12",y2:"13",stroke:"#7dd3fc",strokeWidth:"2"}],
+           ["line",{x1:"0",y1:"8",x2:"0",y2:"13",stroke:"#7dd3fc",strokeWidth:"2"}],
+           ["rect",{x:"-11",y:"1",width:"22",height:"7",rx:"1",fill:"#4aa3ff"}],
+           ["polygon",{points:"0,-10 -5,1 5,1",fill:"#7dd3fc"}],
+           ["circle",{cx:"0",cy:"-12",r:"2.5",fill:"#fbbf24",opacity:"0.9"}]
+          ].forEach(function(def){
+            var el=document.createElementNS("http://www.w3.org/2000/svg",def[0]);
+            Object.keys(def[1]).forEach(function(k){el.setAttribute(k.replace(/([A-Z])/g,"-$1").toLowerCase(),def[1][k]);});
+            g.appendChild(el);
+          });
+          g.appendChild(title);
+          g.addEventListener("click",    function(el,q){return function(){setSelected(el,q);};}(g,p));
+          g.addEventListener("keydown",  function(el,q){return function(e){if(e.key==="Enter"||e.key===" ")setSelected(el,q);};}(g,p));
+          g.addEventListener("mouseenter",function(pt){return function(e){showTip(e,pt);};}(p));
+          g.addEventListener("mousemove", moveTip);
+          g.addEventListener("mouseleave",hideTip);
+          markers.appendChild(g);
+          markerNodes.push({el:g,halo:halo,p:p});
+        } else {
+          var circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
+          circle.setAttribute("class","coverage__marker");
+          circle.setAttribute("cx",p.x.toFixed(2)); circle.setAttribute("cy",p.y.toFixed(2));
+          circle.setAttribute("r",String(radius));  circle.setAttribute("data-idx",String(idx));
+          circle.appendChild(title);
+          circle.addEventListener("click",    function(c,q){return function(){setSelected(c,q);};}(circle,p));
+          circle.addEventListener("mouseenter",function(pt){return function(e){showTip(e,pt);};}(p));
+          circle.addEventListener("mousemove", moveTip);
+          circle.addEventListener("mouseleave",hideTip);
+          markers.appendChild(circle);
+          markerNodes.push({el:circle,halo:halo,p:p});
+        }
+      });
+
+      /* ── Tooltip ── */
+      function showTip(e,p){
+        if(!tooltip||!mapWrap) return;
+        tooltip.innerHTML="<b>"+p.name+"</b> &mdash; "+(p.count||0)+" proy.";
+        tooltip.style.display="block";
+        moveTip(e);
+      }
+      function moveTip(e){
+        if(!tooltip||!mapWrap||tooltip.style.display==="none") return;
+        var r=mapWrap.getBoundingClientRect();
+        tooltip.style.left=(e.clientX-r.left)+"px";
+        tooltip.style.top =(e.clientY-r.top-8)+"px";
+      }
+      function hideTip(){ if(tooltip) tooltip.style.display="none"; }
+
+      /* ── Filters ── */
+      var REGION_MAP={
+        occ:    ["Nayarit","Jalisco","Colima","Durango"],
+        centro: ["Estado de México","Morelos","Michoacán"],
+        sur:    ["Veracruz","Tabasco","Oaxaca","Chiapas","Quintana Roo"]
+      };
+      function applyFilter(f){
+        markerNodes.forEach(function(node){
+          var p=node.p, show=false;
+          if(f==="all") show=true;
+          else if(f==="offshore") show=!!p.offshore;
+          else if(REGION_MAP[f]) show=REGION_MAP[f].indexOf(p.name)>=0;
+          else show=p.classes&&p.classes.indexOf(f)>=0;
+          var dimCls="coverage__marker--dimmed";
+          if(show){ node.el.classList.remove(dimCls); node.halo.style.display=""; }
+          else     { node.el.classList.add(dimCls);    node.halo.style.display="none"; }
+        });
+      }
+
+      var filterBtns=document.querySelectorAll(".cov-filter");
+      filterBtns.forEach(function(btn){
+        btn.addEventListener("click",function(){
+          filterBtns.forEach(function(b){b.classList.remove("active");});
+          btn.classList.add("active");
+          document.querySelectorAll(".cov-region").forEach(function(r){r.classList.remove("active");});
+          applyFilter(btn.getAttribute("data-filter"));
+        });
+      });
+
+      document.querySelectorAll(".cov-region").forEach(function(btn){
+        btn.addEventListener("click",function(){
+          document.querySelectorAll(".cov-region").forEach(function(r){r.classList.remove("active");});
+          btn.classList.add("active");
+          filterBtns.forEach(function(b){b.classList.remove("active");});
+          applyFilter(btn.getAttribute("data-filter"));
+        });
+      });
+
+      /* ── Animación de entrada + contador ── */
+      function animCount(target,el,dur){
+        var t0=null;
+        (function step(ts){
+          if(!t0) t0=ts;
+          var prog=Math.min((ts-t0)/dur,1);
+          var ease=1-Math.pow(1-prog,3);
+          el.textContent=Math.round(ease*target);
+          if(prog<1) requestAnimationFrame(step);
+        })(performance.now());
+      }
+
+      // Inicialmente ocultos para la animación de entrada
+      markerNodes.forEach(function(node,i){
+        node.el.style.opacity="0";
+        node.el.style.transition="opacity 0.45s "+(i*0.07)+"s";
+        node.halo.style.opacity="0";
+        node.halo.style.transition="opacity 0.45s "+(i*0.07)+"s";
+      });
+
+      var covSection=document.querySelector("section.coverage");
+      var counterEl =document.getElementById("covCounter");
+      var regionEls =document.querySelectorAll(".cov-region__count");
+      var triggered =false;
+
+      function triggerEntrance(){
+        if(triggered) return; triggered=true;
+        markerNodes.forEach(function(node){
+          node.el.style.opacity="";
+          node.halo.style.opacity="";
+        });
+        if(counterEl) animCount(220,counterEl,1800);
+        regionEls.forEach(function(el){
+          animCount(parseInt(el.getAttribute("data-count")||"0"),el,1400);
+        });
+      }
+
+      if("IntersectionObserver" in window && covSection){
+        var io=new IntersectionObserver(function(entries){
+          if(entries[0].isIntersecting) triggerEntrance();
+        },{threshold:0.15});
+        io.observe(covSection);
+      } else { triggerEntrance(); }
+
+      /* ── URL param highlight ── */
+      try{
+        var params=new URLSearchParams(window.location.search);
+        var estado=params.get("estado");
+        if(estado){
+          var norm=estado.toLowerCase();
+          markerNodes.forEach(function(node){
+            if(node.p.name&&node.p.name.toLowerCase()===norm){
+              node.el.classList.add("coverage__marker--highlight");
+              setSelected(node.el,node.p);
+            }
+          });
+        }
+      }catch(e){}
+    }
+
+        // Tabla de proyectos con búsqueda
   })();
   </script>
-<script id="nav-submenu-script-vms">
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var list = document.getElementById('menuList');
-  if(toggle && list){
-    toggle.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = list.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+<script>
+  /* Timeline Horizontal: expand + drag-to-scroll */
+  (function(){
+    var cards = document.querySelectorAll('.htl-card');
+    if(!cards.length) return;
+    cards.forEach(function(card){
+      function toggle(){
+        var wasOpen = card.classList.contains('is-open');
+        cards.forEach(function(c){ c.classList.remove('is-open'); c.setAttribute('aria-expanded','false'); });
+        if(!wasOpen){ card.classList.add('is-open'); card.setAttribute('aria-expanded','true'); }
+      }
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
     });
-  }
-  var nav = document.querySelector('header nav');
-  if(!nav) return;
-  var media = window.matchMedia('(max-width: 760px)');
-  var parents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-  function syncSubmenus(){
-    var mobile = media.matches;
-    parents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      if(mobile){ submenu.style.display = parent.classList.contains('is-open') ? 'block' : 'none'; }
-      else{ submenu.style.display = ''; parent.classList.remove('is-open'); }
-      trigger.setAttribute('aria-expanded', parent.classList.contains('is-open') ? 'true' : 'false');
-    });
-  }
-  parents.forEach(function(parent){
-    var trigger = parent.querySelector(':scope > a');
-    var submenu = parent.querySelector(':scope > .submenu');
-    if(!trigger || !submenu) return;
-    trigger.addEventListener('click', function(e){
-      if(!media.matches) return;
-      e.preventDefault();
-      var open = parent.classList.toggle('is-open');
-      submenu.style.display = open ? 'block' : 'none';
-      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  });
-  syncSubmenus();
-  if(media.addEventListener) media.addEventListener('change', syncSubmenus);
-  else if(media.addListener) media.addListener(syncSubmenus);
-})();
+    var outer = document.getElementById('htlOuter');
+    if(outer){
+      var isDown=false, startX=0, sl=0, moved=false;
+      outer.addEventListener('mousedown',function(e){ isDown=true; startX=e.pageX-outer.offsetLeft; sl=outer.scrollLeft; moved=false; });
+      outer.addEventListener('mouseleave',function(){ isDown=false; });
+      outer.addEventListener('mouseup',function(){ isDown=false; });
+      outer.addEventListener('mousemove',function(e){
+        if(!isDown) return;
+        e.preventDefault();
+        var x=e.pageX-outer.offsetLeft;
+        var walk=(x-startX)*1.6;
+        if(Math.abs(walk)>5) moved=true;
+        outer.scrollLeft=sl-walk;
+      });
+      outer.addEventListener('click',function(e){ if(moved){ e.stopPropagation(); moved=false; } },true);
+    }
+  })();
 </script>
 </body>
 </html>
-
-
-

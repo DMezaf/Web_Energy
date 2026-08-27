@@ -26,12 +26,8 @@
 [data-concept="eshop"] img    { max-width: 100%; display: block }
 
 /* ── 2 · CTA naranja — universal en todas las páginas ──────── */
-.btn--primary {
-  background: linear-gradient(180deg, #ff8b1f, #ff6a00);
-  border-color: rgba(187,84,9,.7);
-  color: #fff;
-}
-.btn--primary:hover { opacity: .88 }
+
+
 
 /* ── 3 · Header / Nav corporativa ──────────────────────────── */
 header, header * {

@@ -127,9 +127,9 @@ nav a:hover { color: var(--cobalt) }
   content: ""; position: absolute; inset: 0; z-index: -1;
   background:
     linear-gradient(100deg, rgba(6,20,40,.88), rgba(7,25,49,.58) 52%, rgba(8,35,70,.34)),
-    var(--corp-hero-img, url('assets/img/hero_que_hacemos_VMS_Energy.png')) center/cover no-repeat;
+    var(--corp-hero-img, url('assets/img/hero_que_hacemos_VMS_Energy.webp')) center/cover no-repeat;
 }
-.hero__content { max-width: 760px; padding: 80px 0 64px }
+.hero__content { max-width: 760px; padding-block: 80px 64px}
 .eyebrow {
   display: inline-block; padding: .24rem .62rem;
   border: 1px solid rgba(255,255,255,.34); border-radius: 999px;
@@ -167,10 +167,7 @@ nav a:hover { color: var(--cobalt) }
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(15,76,129,.18) }
-.btn--primary {
-  background: linear-gradient(180deg, var(--cobalt), #0b3c67);
-  border-color: rgba(8,53,92,.6); color: #fff;
-}
+
 .btn--secondary { background: #fff; border-color: var(--line); color: var(--cobalt) }
 .btn--ghost     { background: transparent; border-color: var(--line); color: var(--cobalt) }
 

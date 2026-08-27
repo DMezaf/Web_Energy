@@ -2,10 +2,20 @@
 <html lang="es-MX" data-concept="equipamiento">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Confiabilidad El&eacute;ctrica Industrial &mdash; UPS y BESS &middot; VMS Energy</title>
-  <meta name="description" content="VMS Energy dise&ntilde;a e instala sistemas UPS industriales Borri y BESS Geolis para instalaciones cr&iacute;ticas en M&eacute;xico. Ingenier&iacute;a, suministro, comisionamiento y mantenimiento. 20 a&ntilde;os de experiencia EPC." />
+  <meta name="description" content="VMS Energy dise&ntilde;a e instala sistemas UPS industriales Borri y BESS Livoltek/Geolis para instalaciones cr&iacute;ticas en M&eacute;xico. Peak shaving GDMTH, almacenamiento de energ&iacute;a industrial, regulaci&oacute;n BESS M&eacute;xico (SENER/CRE/CFE/CENACE), proyectos EPC llave en mano." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/confiabilidad-electrica-industrial.html" />
   <meta property="og:type" content="website" />
@@ -21,8 +31,7 @@
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/infraestructura_electrica.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/confiabilidad-electrica-industrial.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/confiabilidad-electrica-industrial.html" />
-  <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="equipamiento-base.css">
+<link rel="stylesheet" href="equipamiento-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
@@ -41,7 +50,6 @@
     nav a{color:var(--navy);text-decoration:none;font-weight:700}
     nav a.is-active{color:var(--concept-primary)}
     .cta-header{padding:.62rem 1rem;border-radius:999px;background:linear-gradient(180deg,var(--concept-primary),var(--concept-darker));color:#fff;border:1px solid rgba(8,53,92,.55)}
-    .menu-toggle{display:none;border:1px solid rgba(23,44,81,.2);border-radius:10px;padding:.5rem .7rem;background:#fff}
 
     .nav-item--has-submenu{position:relative}
     .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px;}
@@ -49,21 +57,18 @@
     .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
     .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
-    .submenu__list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
-    .btn--primary{background:linear-gradient(180deg,var(--concept-primary),var(--concept-darker));border-color:rgba(8,53,92,.6);color:#fff}
-    .btn--secondary{background:#fff;border-color:var(--line);color:var(--concept-primary)}
+    
     .btn--tiny{padding:8px 12px;border-radius:10px;font-size:.92rem;min-height:0}
 
     .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 52%,rgba(8,35,70,.34)),url('assets/img/services/infraestructura_electrica.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:780px;padding:84px 0 68px}
+    .hero__content{max-width:780px;padding-block: 84px 68px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.04;margin:0 0 14px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
-    .hero__actions{display:flex;gap:12px;flex-wrap:wrap}
 
     section{padding:54px 0}
     .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
@@ -95,6 +100,39 @@
     .tab-panel > p{margin:0 0 14px;color:#23486f;line-height:1.6}
     .tab-panel ul{margin:0 0 16px;padding-left:18px;color:#23486f;line-height:1.7}
     .tab-panel ul li + li{margin-top:6px}
+    .eco-crit{display:block;margin:0 0 8px;color:#103961;font-weight:700}
+    /* --- Seccion 4B: seguridad. Rampa de niveles = opacidades de
+       --concept-primary sobre claro y del cian #8FD7FF sobre el panel oscuro.
+       No hay ningun color nuevo. --- */
+    .seg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin:0 0 22px}
+    .seg-card{position:relative;background:#fff;border:1px solid rgba(23,44,81,.12);border-top:3px solid var(--seg-lv);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(9,32,58,.05)}
+    .seg-card--dark{background:linear-gradient(180deg,#0b2344,#0a1c35);border:1px solid rgba(127,183,255,.22);border-top:3px solid var(--seg-lv);box-shadow:0 6px 18px rgba(0,0,0,.14)}
+    .seg-card h3{margin:0 0 6px;color:#103961;font-size:1.02rem;padding-right:32px}
+    .seg-card p{margin:0;color:#4B647F;font-size:.91rem;line-height:1.55}
+    .seg-card--dark h3{color:#fff}
+    .seg-card--dark p{color:#cfe1ff}
+    .seg-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin:0 0 10px;font-size:1.4rem}
+    .seg-num{position:absolute;top:15px;right:15px;width:25px;height:25px;border-radius:999px;display:grid;place-items:center;font-size:.76rem;font-weight:800;color:#103961;background:#f0f6ff;border:1px solid rgba(15,76,129,.18)}
+    .seg-card--dark .seg-num{color:#8fd7ff;background:rgba(143,215,255,.15);border-color:rgba(143,215,255,.3)}
+    .seg-lvl{display:inline-block;margin-top:10px;font-size:.78rem;font-weight:700;color:#103961;background:#f0f6ff;border:1px solid rgba(15,76,129,.18);padding:.15rem .5rem;border-radius:999px}
+    .seg-card--dark .seg-lvl{color:#8fd7ff;background:rgba(143,215,255,.15);border-color:rgba(143,215,255,.3)}
+    .seg-map{background:linear-gradient(180deg,#0b2344,#0a1c35);border:1px solid rgba(127,183,255,.22);border-radius:18px;padding:22px;margin:0 0 20px;box-shadow:0 10px 30px rgba(9,32,58,.12)}
+    .seg-map > p{margin:0 0 16px;color:#cfe1ff;font-size:.93rem;line-height:1.6;max-width:760px}
+    .seg-map svg{width:100%;height:auto;display:block}
+    .seg-map__movil{display:none}
+    @media (max-width:680px){.seg-map__ancho{display:none}.seg-map__movil{display:block}}
+    .seg-leg{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+    .seg-leg li{display:grid;grid-template-columns:minmax(96px,auto) 1fr;gap:12px;align-items:baseline;padding-top:10px;border-top:1px solid rgba(143,215,255,.16)}
+    .seg-leg strong{color:#8fd7ff;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+    .seg-leg span{color:#cfe1ff;font-size:.9rem;line-height:1.5}
+    .seg-arq{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin:0 0 18px}
+    .seg-arq figure{margin:0;border-radius:14px;padding:18px}
+    .seg-arq figure svg{width:100%;height:auto;display:block;margin:0 0 12px}
+    .seg-arq h4{margin:0 0 8px;color:#103961;font-size:1rem}
+    .seg-arq p{margin:0;color:#23486f;font-size:.93rem;line-height:1.6}
+    .seg-crit{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:0 22px}
+    .seg-crit li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:baseline;padding:10px 0;border-top:1px solid rgba(23,44,81,.10);color:#23486f;font-size:.94rem;line-height:1.55}
+    .seg-crit b{color:rgba(15,76,129,.5);font-size:.85rem;font-weight:800}
     .tab-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}
     .tab-table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:560px}
     .tab-table th,.tab-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
@@ -156,8 +194,8 @@
     #footer a{word-break:break-word}
     #footer .foot-link{color:#cbd5e1;text-decoration:none}
     #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
-    #footer .foot-link--accent{color:#4aa3ff;font-weight:700}
-    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:#7cc1ff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
     #footer .foot-link--strong{color:#fff;font-weight:700}
     .foot-social__link{
       width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
@@ -165,7 +203,7 @@
     }
     .foot-social__link svg{width:18px;height:18px;fill:#fff}
     .foot-social__link:hover{background:#fff;border-color:#fff}
-    .foot-social__link:hover svg{fill:#0F4C81}
+    .foot-social__link:hover svg{fill:var(--vms-blue-600)}
 
     @media (max-width:1300px){
       #footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}
@@ -174,7 +212,7 @@
       #footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
       .problem__grid{grid-template-columns:1fr}
       .frame-grid,.case-grid,.diff-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .hero__content{padding:72px 0 58px}
+      .hero__content{padding-block: 72px 58px}
     }
     @media (max-width:700px){
       #footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}
@@ -187,7 +225,7 @@
       .submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}
       .nav-item--has-submenu.is-open .submenu{display:block}
       .hero{min-height:420px}
-      .hero__content{padding:62px 0 52px}
+      .hero__content{padding-block: 62px 52px}
       .hero__actions .btn{width:100%;justify-content:center}
       .frame-grid,.case-grid,.diff-grid{grid-template-columns:1fr}
       .step{grid-template-columns:1fr}
@@ -258,6 +296,21 @@
             "@type":"Question",
             "name":"¿Cómo iniciamos un proyecto de UPS o BESS industrial con VMS Energy?",
             "acceptedAnswer":{"@type":"Answer","text":"El proceso comienza con un levantamiento eléctrico de la instalación: medición de la carga real (kW y cosφ), registro de la curva de demanda en 15 minutos durante al menos una semana, inventario de cargas críticas vs no críticas, revisión del historial de interrupciones y eventos de calidad de energía. Con esa información VMS Energy elabora la ingeniería de dimensionamiento, selecciona el equipo óptimo (marca, modelo, capacidad, autonomía) y presenta la propuesta técnico-económica con análisis de retorno. El tiempo típico para una propuesta en firme es de 5 a 10 días hábiles. Contáctenos para agendar la evaluación energética sin costo."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Cuánto puede ahorrar un BESS en tarifa GDMTH de CFE?",
+            "acceptedAnswer":{"@type":"Answer","text":"Las instalaciones en tarifa GDMTH (media tensión, 100 kW o más, con medición horaria) tienen cargos por demanda máxima que oscilan entre $300 y $500 pesos por kW registrado al mes. Un BESS bien dimensionado realiza peak shaving: se carga durante horas de bajo consumo y descarga durante los picos de demanda, reduciendo la demanda máxima facturada. En una planta con picos de 200 kW sobre su demanda base, el ahorro típico es de $63,000 a $100,000 pesos mensuales. Con ese flujo de ahorro, el retorno de inversión de un proyecto BESS industrial está entre 18 y 30 meses dependiendo del perfil de carga y el tamaño del sistema. VMS Energy calcula el ROI específico de cada instalación durante la evaluación energética gratuita."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Qué componentes incluye el Balance of System (BOS) en un proyecto BESS?",
+            "acceptedAnswer":{"@type":"Answer","text":"El Balance of System (BOS) comprende todos los componentes externos al sistema de baterías y PCS, y representa entre el 30 % y 40 % del costo total de un proyecto BESS. Los componentes principales son: (1) Distribución eléctrica — tableros, barras y seccionadores; (2) Protecciones y coordinación — interruptores termomagnéticos, fusibles de alta ruptura y dispositivos de protección contra sobretensiones (SPDs); (3) Conductores y canalizaciones — cables de media tensión certificados bajo NOM-001-SEDE; (4) Obra civil — cimentación, bases de concreto, drenaje pluvial y adecuaciones de recinto; (5) Instalación y maniobras — descarga con grúa, integración mecánica y eléctrica; (6) Sistema de puesta a tierra conforme a IEEE 80 / IEC 60364. VMS Energy ejecuta el BOS completo como parte del contrato EPC, garantizando un único responsable para todo el proyecto."}
+          },
+          {
+            "@type":"Question",
+            "name":"¿Se necesitan permisos de CFE o CENACE para instalar un BESS en México?",
+            "acceptedAnswer":{"@type":"Answer","text":"Para sistemas BESS detrás del medidor (behind-the-meter) que no exportan energía a la red, no se requiere permiso de la CRE ni trámite ante CENACE. El marco regulatorio aplicable es: NOM-001-SEDE-2012 para instalaciones eléctricas, NOM-029-STPS para mantenimiento en líneas energizadas, y la normativa de prevención de incendios del municipio y STPS. Si el sistema contempla exportación o participación en servicios ancilares de CENACE, se requiere un contrato de interconexión con CFE Distribución y registro ante la CRE. En proyectos de gran escala (>1 MWh) con interconexión, VMS Energy acompaña el proceso regulatorio completo."}
           }
         ]
       }
@@ -267,8 +320,8 @@
 <style id="sticky-actions-global">
   .sticky-actions{position:fixed;left:0;right:0;bottom:14px;z-index:9999;display:block !important;visibility:visible !important;opacity:1 !important;pointer-events:none}
   .sticky-actions__btn{position:absolute;bottom:0;pointer-events:auto;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.2)}
-  .sticky-actions__btn--left{left:14px;background:#25D366}
-  .sticky-actions__btn--right{right:14px;background:#172C51}
+  .sticky-actions__btn--left{left:14px;background:#075E54}
+  .sticky-actions__btn--right{right:14px;background:var(--vms-blue-800)}
   .sticky-actions__icon{width:18px;height:18px;display:block;flex:0 0 18px}
   @media (max-width:640px){
     .sticky-actions__btn{padding:9px 12px;font-size:13px;gap:6px}
@@ -284,7 +337,7 @@
   .quicklead-modal__close{position:absolute;top:10px;right:10px;width:30px;height:30px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-size:18px;cursor:pointer}
   .quicklead-form{display:grid;gap:10px}
   .quicklead-form input,.quicklead-form select,.quicklead-form textarea{width:100%;border:1px solid rgba(151,199,255,.38);border-radius:10px;background:#f4f8ff;color:#103961;font:inherit;padding:11px 12px;outline:none}
-  .quicklead-form input:focus,.quicklead-form select:focus,.quicklead-form textarea:focus{border-color:#5ea9ff;box-shadow:0 0 0 2px rgba(94,169,255,.24)}
+  .quicklead-form input:focus,.quicklead-form select:focus,.quicklead-form textarea:focus{border-color:var(--acento-oscuro);box-shadow:0 0 0 2px rgba(94,169,255,.24)}
   .quicklead-form textarea{min-height:92px;resize:vertical}
   .quicklead-form label{font-weight:700;font-size:.9rem;color:#eaf3ff}
   .quicklead-form__hint{margin:2px 0 0;font-size:.82rem;color:#c6dcf4}
@@ -296,137 +349,213 @@
     .quicklead-modal__dialog{padding:14px}
   }
 </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Confiabilidad Eléctrica Industrial — UPS y BESS · VMS Energy","item":"https://vmsenergy.com/confiabilidad-electrica-industrial.html"}]}
+  </script>
+
 </head>
 <body>
-  <header aria-label="Barra de navegaci&oacute;n">
-    <div class="container topbar">
-      <div class="brand">
-        <div class="brand__logo">
-          <img src="assets/brand/vms_logo_blue.png" alt="Logotipo VMS Energy" loading="eager" decoding="async" width="72" height="72">
-        </div>
-      </div>
-      <nav aria-label="Principal">
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Men&uacute;</button>
-        <ul id="menuList">
-          <li><a href="index.html#inicio">Inicio</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Nosotros">
-              <div class="submenu__group">
-                <a class="submenu__title" href="nosotros.html#inicio">Sobre VMS Energy</a>
-                <ul class="submenu__list">
-                  <li><a href="certificaciones.html#inicio">Certificaciones</a></li>
-                  <li><a href="sostenibilidad.html#inicio">Sostenibilidad</a></li>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-                  <li><a href="proyectos-vms.html">Proyectos</a></li>
-                  <li><a href="proyectos-vms.html#inicio">Proyectos</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-                    <li class="nav-item--has-submenu">
-            <a href="soluciones.html#soluciones" aria-haspopup="true">Soluciones</a>
-            <div class="submenu submenu--mega" role="menu" aria-label="Submen&uacute; de soluciones">
-              <div class="submenu__group">
-                <a class="submenu__title" href="soluciones.html#soluciones">Proyectos EPC</a>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_electromecanicas.html#inicio">Soluciones Electromec&aacute;nicas</a></li>
-                  <li><a href="soluciones_automatizacion_control.html#inicio">Automatizaci&oacute;n y Control</a></li>
-                  <li><a href="soluciones_solar_industrial.html#inicio">Energ&iacute;a Solar Industrial</a></li>
-                  <li><a href="soluciones_verde_no_solar.html#inicio">Generaci&oacute;n Verde No Solar</a></li>
-                  <li><a href="soluciones_oil_gas.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="soluciones_infraestructura_energetica.html#inicio">Infraestructura Energ&eacute;tica</a></li>
-                  <li><a href="soluciones_iluminacion_industrial.html#inicio">Iluminaci&oacute;n Industrial</a></li>
-                  <li><a href="soluciones_hvac_industrial.html#inicio">HVAC Industrial</a></li>
-                  <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Por Sector</span>
-                <ul class="submenu__list">
-                  <li><a href="soluciones_mineria.html#inicio">Miner&iacute;a</a></li>
-                  <li><a href="soluciones_alimentos_bebidas.html#inicio">Alimentos &amp; Bebidas</a></li>
-                  <li><a href="soluciones_agroindustria.html#inicio">Agroindustria</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#equipamiento" aria-haspopup="true">Equipamiento</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de Equipamiento">
-              <div class="submenu__group">
-                <span class="submenu__title">Equipamiento Cr&iacute;tico</span>
-                <ul class="submenu__list">
-                  <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#334155;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block" aria-current="page">&#10003; Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-                  <li><a href="soluciones-ccm-industrial.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">CCM Industrial</a></li>
-                  <li><a href="soluciones-transformadores-industriales.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Transformadores</a></li>
-                  <li><a href="soluciones-variadores-frecuencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Variadores de Frecuencia</a></li>
-                  <li><a href="soluciones-correccion-factor-potencia.html#inicio" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Correcci&oacute;n Factor de Potencia</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item--has-submenu">
-            <a href="soluciones.html#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; de servicios">
-              <div class="submenu__group">
-              <span class="submenu__title">Servicios Especializados</span>
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
               <ul class="submenu__list">
-                <li><a href="lp-mantenimiento-oil-gas.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Oil &amp; Gas</a></li>
-                <li><a href="lp-deteccion-control-supresion-fuego.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
-                <li><a href="lp-estudios-electricos-industriales.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Estudios El&eacute;ctricos</a></li>
-                <li><a href="lp-turbogeneradores-woodward.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Turbogeneradores Woodward</a></li>
-                <li><a href="lp-mantenimiento-predictivo.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Mantenimiento Predictivo</a></li>
-                <li><a href="lp-calidad-de-energia-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Calidad de Energ&iacute;a</a></li>
-                <li><a href="lp-tendido-cableado-electrico-industrial.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Tendido y Cableado</a></li>
-                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
               </ul>
             </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidades.html#inicio">Entrega de Proyectos</a>
-                <ul class="submenu__list">
-                  <li><a href="especialidad_ingenieria.html#inicio">Ingenier&iacute;a</a></li>
-                  <li><a href="especialidad_servicios.html#inicio">Servicios</a></li>
-                  <li><a href="especialidad_mantenimiento.html#inicio">Mantenimiento</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <a class="submenu__title" href="especialidad_capacitacion.html#inicio">Capacitaci&oacute;n</a>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="procura.html#inicio">Suministro t&eacute;cnico</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="Submen&uacute; VMShop">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia KEI</a></li>
-                  <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
-                  <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
-                  <li><a href="lp-cables-alta-tension.html">Cables alta tensi&oacute;n</a></li>
-                  <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
-                  <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
-                </ul>
-              </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
             </div>
-          </li>
-          <li><a href="carreras.html">Carreras</a></li>
-          <li><a class="cta-header" href="contacto.html#inicio">Contactar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          </div>
+        </li>
 
-  <main>
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogeneradores Woodward</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="en/" hreflang="en" lang="en"
+         aria-label="Switch to English">EN</a>
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+  <main id="contenido">
     <!-- SECCION 1 - HERO -->
     <section id="inicio" class="hero" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">Confiabilidad El&eacute;ctrica Industrial</span>
         <h1 id="heroTitle">Cuando la red falla, su operaci&oacute;n no puede fallar.</h1>
         <p>VMS Energy dise&ntilde;a, suministra e instala sistemas de respaldo y almacenamiento de energ&iacute;a para instalaciones industriales cr&iacute;ticas &mdash; desde la ingenier&iacute;a hasta el comisionamiento y el mantenimiento.</p>
-        <div class="hero__actions">
+        <div class="hero__actions on-dark">
           <a class="btn btn--primary" href="contacto_cta.html#ctaForm" data-cta="hero-evaluacion">Solicitar evaluaci&oacute;n energ&eacute;tica gratuita</a>
           <a class="btn btn--secondary" href="#proceso" data-cta="hero-proceso">Conocer nuestro proceso EPC</a>
         </div>
@@ -439,13 +568,12 @@
         <h2 id="problemTitle" class="section-title">La inestabilidad de la red el&eacute;ctrica tiene un costo que no aparece en su factura.</h2>
         <div class="problem__grid">
           <div class="problem__body">
-            <p>Entre el 70% y el 90% de las instalaciones industriales en M&eacute;xico han experimentado eventos de inestabilidad el&eacute;ctrica en los &uacute;ltimos tres a&ntilde;os: microcortes, huecos de tensi&oacute;n, variaciones de frecuencia o interrupciones prolongadas. El impacto real no se mide en kilowatts-hora &mdash; se mide en tiempo de paro no planeado, equipos da&ntilde;ados, lotes de producci&oacute;n perdidos y contratos incumplidos.</p>
+            <p>Microcortes, huecos de tensi&oacute;n, variaciones de frecuencia e interrupciones prolongadas son parte de la operaci&oacute;n el&eacute;ctrica industrial en M&eacute;xico. El impacto real no se mide en kilowatts-hora &mdash; se mide en tiempo de paro no planeado, equipos da&ntilde;ados, lotes de producci&oacute;n perdidos y contratos incumplidos.</p>
             <p>En sectores como Oil &amp; Gas, miner&iacute;a, manufactura de alimentos y bebidas, o generaci&oacute;n de energ&iacute;a, un corte de segundos puede representar p&eacute;rdidas de cientos de miles de pesos y riesgos de seguridad inaceptables.</p>
           </div>
           <aside class="stat-card" aria-label="Indicador clave">
-            <p class="stat-card__big">70&ndash;90%</p>
-            <p class="stat-card__label">de las empresas industriales en M&eacute;xico afectadas</p>
-            <blockquote>&ldquo;Entre el 70% y 90% de las empresas industriales en M&eacute;xico han registrado eventos por inestabilidad de red desde 2023.&rdquo;</blockquote>
+            <p class="stat-card__big">9</p>
+            <p class="stat-card__label">proyectos con UPS o banco de bater&iacute;as</p>
           </aside>
         </div>
       </div>
@@ -476,77 +604,301 @@
       </div>
     </section>
 
+    <!-- SECCION 3B - CALIFICADOR TARIFARIO CFE -->
+    <section style="padding:44px 0;background:#fff" aria-labelledby="tarifaTitle">
+      <div class="container">
+        <h2 id="tarifaTitle" class="section-title">&iquest;Qu&eacute; tarifa CFE tiene su instalaci&oacute;n? Eso define su soluci&oacute;n.</h2>
+        <p class="section-lead">Las tarifas el&eacute;ctricas industriales de CFE no son solo un dato de facturaci&oacute;n &mdash; son el mapa que indica qu&eacute; tecnolog&iacute;a genera el mayor retorno de inversi&oacute;n para su instalaci&oacute;n.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;max-width:900px">
+
+          <div style="background:#f0f7ff;border:1px solid rgba(15,76,129,.18);border-radius:16px;padding:20px">
+            <span style="display:inline-block;padding:.22rem .6rem;border-radius:999px;background:#dbeaff;color:#0f4c81;font-size:.8rem;font-weight:700;margin-bottom:10px">Baja Tensi&oacute;n</span>
+            <h3 style="margin:0 0 6px;color:#103961;font-size:1.08rem">PDBT &mdash; Peque&ntilde;a demanda</h3>
+            <p style="margin:0 0 10px;color:#4B647F;font-size:.93rem">Demanda hasta <strong>25 kW/mes</strong>. Instalaciones comerciales y servicios peque&ntilde;os.</p>
+            <div style="border-top:1px solid rgba(15,76,129,.12);padding-top:10px;margin-top:4px">
+              <p style="margin:0;font-weight:700;color:#0f4c81;font-size:.94rem">&#10132; Soluci&oacute;n ESS recomendada</p>
+              <p style="margin:4px 0 0;color:#4B647F;font-size:.88rem">Inversor h&iacute;brido + bater&iacute;as &middot; 5.2 – 100 kWh</p>
+            </div>
+          </div>
+
+          <div style="background:#f0f7ff;border:1px solid rgba(15,76,129,.18);border-radius:16px;padding:20px">
+            <span style="display:inline-block;padding:.22rem .6rem;border-radius:999px;background:#dbeaff;color:#0f4c81;font-size:.8rem;font-weight:700;margin-bottom:10px">Baja Tensi&oacute;n</span>
+            <h3 style="margin:0 0 6px;color:#103961;font-size:1.08rem">GDBT &mdash; Gran demanda BT</h3>
+            <p style="margin:0 0 10px;color:#4B647F;font-size:.93rem">Demanda <strong>mayor a 25 kW/mes</strong>. Industria ligera y comercio mediano.</p>
+            <div style="border-top:1px solid rgba(15,76,129,.12);padding-top:10px;margin-top:4px">
+              <p style="margin:0;font-weight:700;color:#0f4c81;font-size:.94rem">&#10132; Soluci&oacute;n ESS recomendada</p>
+              <p style="margin:4px 0 0;color:#4B647F;font-size:.88rem">Inversor h&iacute;brido + bater&iacute;as &middot; hasta 100 kWh</p>
+            </div>
+          </div>
+
+          <div style="background:#0b2344;border:1px solid rgba(127,183,255,.22);border-radius:16px;padding:20px">
+            <span style="display:inline-block;padding:.22rem .6rem;border-radius:999px;background:rgba(127,183,255,.18);color:#8fd7ff;font-size:.8rem;font-weight:700;margin-bottom:10px">Media Tensi&oacute;n</span>
+            <h3 style="margin:0 0 6px;color:#fff;font-size:1.08rem">GDMTO &mdash; Gran demanda MT ordinaria</h3>
+            <p style="margin:0 0 10px;color:#cfe1ff;font-size:.93rem">Hasta <strong>99.99 kW</strong> en media tensi&oacute;n. Manufactura e industria mediana.</p>
+            <div style="border-top:1px solid rgba(127,183,255,.18);padding-top:10px;margin-top:4px">
+              <p style="margin:0;font-weight:700;color:#8fd7ff;font-size:.94rem">&#10132; Soluci&oacute;n BESS recomendada</p>
+              <p style="margin:4px 0 0;color:#cfe1ff;font-size:.88rem">Sistema de almacenamiento industrial &middot; desde 261 kWh</p>
+            </div>
+          </div>
+
+          <div style="background:#0b2344;border:2px solid rgba(143,215,255,.45);border-radius:16px;padding:20px;position:relative">
+            <span style="display:inline-block;padding:.22rem .6rem;border-radius:999px;background:rgba(143,215,255,.22);color:#8fd7ff;font-size:.8rem;font-weight:700;margin-bottom:10px">Media Tensi&oacute;n</span>
+            <span style="position:absolute;top:12px;right:12px;background:#1f70b7;color:#fff;font-size:.76rem;font-weight:700;padding:.18rem .56rem;border-radius:999px">Mayor ROI</span>
+            <h3 style="margin:0 0 6px;color:#fff;font-size:1.08rem">GDMTH &mdash; Gran demanda MT horaria</h3>
+            <p style="margin:0 0 10px;color:#cfe1ff;font-size:.93rem"><strong>100 kW o m&aacute;s</strong> en media tensi&oacute;n con cargos por demanda horaria. Industria pesada.</p>
+            <div style="border-top:1px solid rgba(127,183,255,.22);padding-top:10px;margin-top:4px">
+              <p style="margin:0;font-weight:700;color:#8fd7ff;font-size:.94rem">&#10132; Soluci&oacute;n BESS industrial &mdash; M&aacute;ximo ahorro</p>
+              <p style="margin:4px 0 0;color:#cfe1ff;font-size:.88rem">Peak shaving + respaldo + solar &middot; ROI típico: 18–36 meses</p>
+            </div>
+          </div>
+
+        </div>
+        <p style="margin:16px 0 0;color:#4B647F;font-size:.94rem;max-width:860px">&#9432; Si no sabe con certeza en qu&eacute; tarifa est&aacute; registrada su instalaci&oacute;n, su recibo de CFE lo indica en la secci&oacute;n &ldquo;Tarifa&rdquo;. El equipo de VMS Energy puede ayudarle a interpretar su perfil de demanda y estimar el ahorro potencial &mdash; <a href="contacto_cta.html#ctaForm" style="color:var(--concept-primary);font-weight:700">sin costo, en 5 d&iacute;as h&aacute;biles</a>.</p>
+      </div>
+    </section>
+
+    <!-- SECCION 3C - COMPARATIVA TECNOLÓGICA: BESS vs UPS vs GENERADOR -->
+    <section style="padding:46px 0;background:#fff" aria-labelledby="compTitle">
+      <div class="container">
+        <h2 id="compTitle" class="section-title">&iquest;BESS, UPS o generador? La elecci&oacute;n correcta no es obvia.</h2>
+        <p class="section-lead">Las tres tecnolog&iacute;as resuelven el problema de continuidad el&eacute;ctrica, pero lo hacen de formas radicalmente distintas. La elecci&oacute;n incorrecta puede costar m&aacute;s de lo que ahorra.</p>
+        <div class="tab-table-wrap">
+          <table class="tab-table" aria-label="Comparativa BESS vs UPS industrial vs Generador diésel" style="min-width:700px">
+            <thead>
+              <tr>
+                <th style="min-width:170px">Criterio</th>
+                <th style="background:#eef5ff;color:#0f4c81">UPS Industrial<br><span style="font-weight:400;font-size:.85rem"></span></th>
+                <th style="background:#0b2344;color:#8fd7ff">BESS Industrial<br><span style="font-weight:400;font-size:.85rem;color:#cfe1ff"></span></th>
+                <th style="background:#f8f8f8;color:#374151">Generador Di&eacute;sel<br><span style="font-weight:400;font-size:.85rem;color:#6b7280"></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tiempo de respuesta</strong></td>
+                <td style="background:#eef5ff"><strong style="color:#15803d">0 ms</strong> &mdash; sin interrupci&oacute;n perceptible</td>
+                <td style="background:#0d2448;color:#eaf2ff"><strong style="color:#86efac">Milisegundos</strong> &mdash; conmutaci&oacute;n casi instant&aacute;nea</td>
+                <td><strong style="color:#dc2626">8&ndash;30 segundos</strong> &mdash; arranque + estabilizaci&oacute;n</td>
+              </tr>
+              <tr>
+                <td><strong>Autonom&iacute;a t&iacute;pica</strong></td>
+                <td style="background:#eef5ff">10 min &ndash; 4 h (seg&uacute;n banco de bater&iacute;as)</td>
+                <td style="background:#0d2448;color:#eaf2ff">2 h &ndash; &gt;10 h (escalable por m&oacute;dulos)</td>
+                <td>Ilimitada (mientras haya combustible)</td>
+              </tr>
+              <tr>
+                <td><strong>Reducci&oacute;n de factura CFE</strong></td>
+                <td style="background:#eef5ff"><strong style="color:#dc2626">No</strong> &mdash; solo protege, no ahorra</td>
+                <td style="background:#0d2448;color:#eaf2ff"><strong style="color:#86efac">S&iacute;</strong> &mdash; peak shaving reduce demanda m&aacute;xima</td>
+                <td><strong style="color:#dc2626">No</strong> &mdash; agrega costo operativo (diesel)</td>
+              </tr>
+              <tr>
+                <td><strong>Integraci&oacute;n solar / FV</strong></td>
+                <td style="background:#eef5ff">Limitada &mdash; requiere inversor separado</td>
+                <td style="background:#0d2448;color:#eaf2ff"><strong style="color:#86efac">Nativa</strong> &mdash; IEMS gestiona solar, BESS y red</td>
+                <td>No compatible directamente</td>
+              </tr>
+              <tr>
+                <td><strong>Emisiones operativas</strong></td>
+                <td style="background:#eef5ff">Cero emisiones</td>
+                <td style="background:#0d2448;color:#eaf2ff"><strong style="color:#86efac">Cero emisiones</strong></td>
+                <td><strong style="color:#dc2626">Alto</strong> &mdash; CO&#8322;, NOx, ruido &gt;85 dB</td>
+              </tr>
+              <tr>
+                <td><strong>Mantenimiento anual</strong></td>
+                <td style="background:#eef5ff">Bajo &mdash; bater&iacute;as cada 5&ndash;8 a&ntilde;os</td>
+                <td style="background:#0d2448;color:#eaf2ff">Muy bajo &mdash; &ge;8,000 ciclos, sin mantenimiento de agua</td>
+                <td><strong style="color:#dc2626">Alto</strong> &mdash; aceite, filtros, pruebas mensuales</td>
+              </tr>
+              <tr>
+                <td><strong>Aplicaci&oacute;n ideal</strong></td>
+                <td style="background:#eef5ff">Cargas cr&iacute;ticas que no toleran ni 1 ms de interrupci&oacute;n: PLC, salas de control, instrumentaci&oacute;n</td>
+                <td style="background:#0d2448;color:#eaf2ff">Cargas que requieren autonom&iacute;a extendida + ahorro en demanda + integraci&oacute;n solar. Tarifa GDMTH.</td>
+                <td>Respaldo de larga duraci&oacute;n donde hay espacio y el tiempo de arranque es aceptable</td>
+              </tr>
+              <tr>
+                <td><strong>Se pueden combinar</strong></td>
+                <td colspan="3" style="background:#eef5ff;text-align:center;color:#0f4c81"><strong>&#10003; S&iacute; &mdash; VMS Energy dise&ntilde;a arquitecturas h&iacute;bridas: UPS + BESS + Generador seg&uacute;n el perfil de criticidad de cada carga.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin:14px 0 0;color:#4B647F;font-size:.93rem">Si su instalaci&oacute;n tiene cargas con distinto nivel de criticidad &mdash; salas de control, l&iacute;neas de producci&oacute;n y servicios auxiliares &mdash; la arquitectura correcta combina las tres tecnolog&iacute;as en capas. <a href="contacto_cta.html#ctaForm" style="color:var(--concept-primary);font-weight:700">Solicite una evaluaci&oacute;n de arquitectura de confiabilidad.</a></p>
+      </div>
+    </section>
+
     <!-- SECCION 4 - ECOSISTEMA DE SOLUCIONES -->
     <section class="ecosystem" aria-labelledby="ecosystemTitle">
       <div class="container">
-        <h2 id="ecosystemTitle" class="section-title">Un ecosistema de tecnolog&iacute;a industrial, integrado por ingenieros EPC.</h2>
-        <p class="section-lead">VMS Energy no es un distribuidor. Somos el integrador que selecciona, suministra, instala y pone en marcha la combinaci&oacute;n correcta de tecnolog&iacute;as para cada proyecto.</p>
+        <h2 id="ecosystemTitle" class="section-title">Cuatro necesidades distintas. Un solo responsable de que funcionen.</h2>
+        <p class="section-lead">VMS Energy no es un distribuidor. Es el integrador que diagnostica la necesidad, especifica la soluci&oacute;n, la instala y la pone en marcha bajo un solo contrato. Lo que sigue no es un cat&aacute;logo: es el criterio con el que decidimos qu&eacute; conviene a cada instalaci&oacute;n.</p>
 
-        <div class="tabs" id="ecoTabs" role="tablist" aria-label="Partners tecnol&oacute;gicos">
-          <button class="tab is-active" role="tab" data-tab="borri" aria-selected="true">Borri &middot; UPS Industrial</button>
-          <button class="tab" role="tab" data-tab="geolis" aria-selected="false">Geolis &middot; BESS</button>
-          <button class="tab" role="tab" data-tab="livoltek" aria-selected="false">Livoltek &middot; Solar+Almacenamiento</button>
-          <button class="tab" role="tab" data-tab="weg" aria-selected="false">WEG &middot; Soporte el&eacute;ctrico</button>
+        <div class="tabs" id="ecoTabs" role="tablist" aria-label="Necesidades de continuidad y costo">
+          <button class="tab is-active" role="tab" data-tab="respaldo" aria-selected="true">Respaldo cr&iacute;tico inmediato</button>
+          <button class="tab" role="tab" data-tab="demanda" aria-selected="false">Gesti&oacute;n de demanda</button>
+          <button class="tab" role="tab" data-tab="solar" aria-selected="false">Integraci&oacute;n solar</button>
+          <button class="tab" role="tab" data-tab="soporte" aria-selected="false">Soporte de la instalaci&oacute;n</button>
         </div>
 
-        <div class="tab-panel is-active" data-panel="borri" role="tabpanel">
-          <h3>Respaldo cr&iacute;tico inmediato &mdash; UPS Industrial Borri</h3>
-          <p>Con m&aacute;s de 90 a&ntilde;os de experiencia y parte del Grupo Legrand, Borri fabrica UPS industriales de doble conversi&oacute;n online dise&ntilde;ados para operar en los entornos m&aacute;s exigentes del planeta: plataformas offshore, plantas mineras, instalaciones de generaci&oacute;n de energ&iacute;a y procesos qu&iacute;micos.</p>
-          <strong style="color:#103961;display:block;margin:0 0 8px">Lo que los distingue:</strong>
+        <div class="tab-panel is-active" data-panel="respaldo" role="tabpanel">
+          <h3>Respaldo cr&iacute;tico inmediato</h3>
+          <p>Hay cargas que no admiten ni un ciclo de interrupci&oacute;n: salas de control, instrumentaci&oacute;n, sistemas de seguridad y paro de emergencia. Para ellas la transferencia tiene que ser imperceptible, y la calidad de la energ&iacute;a entregada estable aunque la red no lo est&eacute;.</p>
+          <strong class="eco-crit">C&oacute;mo lo decidimos:</strong>
           <ul>
-            <li>Aislamiento galv&aacute;nico total entre entrada, bater&iacute;a y salida &mdash; protecci&oacute;n real contra ruido el&eacute;ctrico y transitorios de red</li>
-            <li>Construcci&oacute;n para -10&deg;C a +55&deg;C, hasta 4,000 msnm y protecci&oacute;n hasta IP54 &mdash; operables en cualquier condici&oacute;n clim&aacute;tica de M&eacute;xico</li>
-            <li>Compatible con bater&iacute;as Lead Acid selladas, Ni-Cd y Li-Ion</li>
-            <li>Comunicaci&oacute;n industrial nativa: Modbus TCP/IP, SNMP, IEC 61850, Profibus DP</li>
+            <li>Qu&eacute; cargas no toleran interrupci&oacute;n y cu&aacute;nto tiempo deben sostenerse sin red</li>
+            <li>Qu&eacute; perturbaciones llegan hoy por la acometida &mdash; huecos, transitorios, distorsi&oacute;n arm&oacute;nica</li>
+            <li>Condiciones del sitio: temperatura, altitud, humedad, corrosi&oacute;n y grado de protecci&oacute;n exigido</li>
+            <li>C&oacute;mo debe reportar el sistema al SCADA o al centro de control ya instalado</li>
           </ul>
-          <div class="tab-table-wrap">
-            <table class="tab-table" aria-label="Modelos UPS Borri">
-              <thead>
-                <tr><th>Modelo</th><th>Tipo</th><th>Rango</th><th>Aplicaci&oacute;n t&iacute;pica</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>E3001</td><td>UPS trif&aacute;sico industrial</td><td>5 &ndash; 600 kVA</td><td>Oil &amp; Gas, miner&iacute;a, manufactura, generaci&oacute;n</td></tr>
-                <tr><td>E2001</td><td>UPS monof&aacute;sico industrial</td><td>5 &ndash; 200 kVA</td><td>Instrumentaci&oacute;n cr&iacute;tica, salas de control, desalaci&oacute;n</td></tr>
-                <tr><td>Ingenio SFC</td><td>Convertidor est&aacute;tico de frecuencia</td><td>100 &ndash; 2,000 kVA</td><td>Equipos importados 60 Hz, puertos, aplicaciones militares</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="callout"><strong>Nota t&eacute;cnica:</strong> El Ingenio SFC convierte 50 Hz a 60 Hz mediante tecnolog&iacute;a IGBT sin partes m&oacute;viles, con eficiencia &gt;95% y hasta 2,000 kVA &mdash; una soluci&oacute;n que pocos contratistas en M&eacute;xico conocen, y a&uacute;n menos saben integrar.</p>
+          <p class="callout"><strong>Lo que entregamos:</strong> memoria de c&aacute;lculo, ingenier&iacute;a de detalle, montaje, pruebas con carga y protocolo de puesta en marcha firmado.</p>
         </div>
 
-        <div class="tab-panel" data-panel="geolis" role="tabpanel">
-          <h3>Almacenamiento estrat&eacute;gico &mdash; BESS Geolis</h3>
-          <p>Los sistemas BESS de Geolis Energ&iacute;a son la &uacute;nica soluci&oacute;n de almacenamiento industrial dise&ntilde;ada y tropicalizada espec&iacute;ficamente para las condiciones de M&eacute;xico: voltajes 110/220/480 V a 60 Hz, protecci&oacute;n IP66, acabados anticorrosivos C5, y operaci&oacute;n validada en entornos de alta humedad y temperatura como el Sureste del pa&iacute;s.</p>
-          <strong style="color:#103961;display:block;margin:0 0 8px">Aplicaciones:</strong>
+        <div class="tab-panel" data-panel="demanda" role="tabpanel">
+          <h3>Gesti&oacute;n de demanda y costo de energ&iacute;a</h3>
+          <p>Cuando el problema no es la continuidad sino la factura, el objetivo cambia: recortar los picos que fijan el cargo por demanda y desplazar consumo fuera del horario punta, sin alterar el proceso productivo.</p>
+          <strong class="eco-crit">C&oacute;mo lo decidimos:</strong>
           <ul>
-            <li><strong>Respaldo energ&eacute;tico:</strong> asume cargas cr&iacute;ticas en milisegundos ante interrupci&oacute;n de red, sin combustible ni emisiones</li>
-            <li><strong>Peak shaving:</strong> reduce hasta 50% los cargos por demanda, con retornos de 18 a 36 meses</li>
-            <li><strong>Load shifting:</strong> almacena en horario base para consumir en horario pico &mdash; reducci&oacute;n de 10% a 30% en factura total</li>
-            <li><strong>Integraci&oacute;n solar:</strong> convierte la generaci&oacute;n fotovoltaica intermitente en suministro gestionable</li>
+            <li>Perfil de carga real medido en sitio &mdash; no estimado &mdash; contrastado con la tarifa contratada</li>
+            <li>Cu&aacute;nto del recibo corresponde a demanda y cu&aacute;nto a energ&iacute;a en cada periodo horario</li>
+            <li>Qu&eacute; margen deja el proceso: qu&eacute; cargas pueden desplazarse y cu&aacute;les no</li>
+            <li>Retorno calculado sobre la tarifa vigente y sobre su regla de actualizaci&oacute;n</li>
           </ul>
-          <div class="tab-table-wrap">
-            <table class="tab-table" aria-label="Sistemas BESS Geolis">
-              <thead>
-                <tr><th>Modelo</th><th>Potencia</th><th>Capacidad</th><th>Formato</th><th>Autonom&iacute;a ref.</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>GOC125-241</td><td>125 kW</td><td>241 kWh</td><td>Gabinete compacto</td><td>~2 h @ 100 kW</td></tr>
-                <tr><td>GOC250-522</td><td>250 kW</td><td>522 kWh</td><td>Multi-gabinete modular</td><td>~2 h @ 250 kW</td></tr>
-                <tr><td>GOC1000-2000</td><td>1 MW</td><td>2 MWh</td><td>Contenedor 20 ft</td><td>~4.5 h @ 215 kW</td></tr>
-              </tbody>
-            </table>
+          <p class="callout"><strong>Lo que entregamos:</strong> estudio de viabilidad con cifras del propio recibo, ingenier&iacute;a, instalaci&oacute;n y medici&oacute;n posterior que confirme el ahorro.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="solar" role="tabpanel">
+          <h3>Integraci&oacute;n de generaci&oacute;n propia</h3>
+          <p>La generaci&oacute;n fotovoltaica es intermitente; el proceso industrial no. Integrarla consiste en convertir una fuente variable en suministro gestionable y en dejar la interconexi&oacute;n en regla.</p>
+          <strong class="eco-crit">C&oacute;mo lo decidimos:</strong>
+          <ul>
+            <li>Recurso solar del sitio y superficie &uacute;til disponible, con sus restricciones estructurales</li>
+            <li>Coincidencia entre la curva de generaci&oacute;n y la curva de consumo real</li>
+            <li>Requisitos de interconexi&oacute;n y protecciones aplicables al punto de conexi&oacute;n</li>
+            <li>Si conviene acompa&ntilde;ar la generaci&oacute;n con almacenamiento, y en qu&eacute; proporci&oacute;n</li>
+          </ul>
+          <p class="callout"><strong>Lo que entregamos:</strong> estudio de recurso y factibilidad, ingenier&iacute;a de detalle, obra civil y el&eacute;ctrica, tr&aacute;mite de interconexi&oacute;n y comisionamiento.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="soporte" role="tabpanel">
+          <h3>Soporte el&eacute;ctrico de la instalaci&oacute;n</h3>
+          <p>Respaldo, gesti&oacute;n de demanda y generaci&oacute;n propia se instalan sobre una red interna que debe estar preparada para recibirlas: adecuaci&oacute;n de tensi&oacute;n, protecciones coordinadas, tableros y canalizaciones que soporten el nuevo r&eacute;gimen de operaci&oacute;n.</p>
+          <strong class="eco-crit">C&oacute;mo lo decidimos:</strong>
+          <ul>
+            <li>Estado de la instalaci&oacute;n existente: capacidad, coordinaci&oacute;n de protecciones y puesta a tierra</li>
+            <li>Qu&eacute; debe adecuarse antes de conectar y qu&eacute; puede conservarse</li>
+            <li>C&oacute;mo se comporta el conjunto durante la transferencia y durante el retorno a la red</li>
+            <li>Qu&eacute; queda documentado para que mantenimiento pueda operarlo sin nosotros</li>
+          </ul>
+          <p class="callout"><strong>Lo que entregamos:</strong> levantamiento en sitio, estudios el&eacute;ctricos, adecuaci&oacute;n, pruebas y expediente de cierre con planos as-built.</p>
+        </div>
+
+        <p style="margin:18px 0 0;color:#4B647F;font-size:.93rem">La elecci&oacute;n de fabricante y modelo se decide despu&eacute;s del diagn&oacute;stico, nunca antes. C&oacute;mo especificamos y suministramos se explica en <a href="procura.html#inicio" style="color:var(--concept-primary);font-weight:700">procura y suministro</a>.</p>
+      </div>
+    </section>
+
+    <!-- SECCION 4B - SEGURIDAD Y CUMPLIMIENTO BESS -->
+    <section style="padding:46px 0;background:linear-gradient(180deg,#f7fbff,#fff)" aria-labelledby="safetyTitle">
+      <div class="container">
+        <h2 id="safetyTitle" class="section-title">Seguridad desde adentro: el nivel de protecci&oacute;n se define en el proyecto, no en el cat&aacute;logo.</h2>
+        <p class="section-lead">Antes de hablar de kWh, hablamos de seguridad. Las funciones que siguen existen en el mercado industrial, pero <strong>no todas vienen en todos los sistemas ni act&uacute;an al mismo nivel</strong>: el alcance real depende del equipo seleccionado y de las condiciones del proyecto. VMS Energy fija ese alcance en la ingenier&iacute;a de detalle y lo verifica en el comisionamiento.</p>
+
+        <div class="seg-map">
+          <p>Un sistema de almacenamiento es un juego de capas: las celdas viven dentro de un pack, los packs dentro del gabinete, y el gabinete dentro de su instalaci&oacute;n. <strong style="color:#8fd7ff">La pregunta que decide una compra no es cu&aacute;ntas funciones de seguridad trae, sino en qu&eacute; capa act&uacute;a cada una</strong> &mdash; es decir, a qu&eacute; distancia del origen llega a intervenir.</p>
+          <div class="seg-map__ancho"><svg viewBox="0 0 720 250" role="img" aria-labelledby="segMapT segMapD" font-family="inherit"><title id="segMapT">Niveles en los que act&uacute;a la protecci&oacute;n</title><desc id="segMapD">Cuatro capas anidadas: las celdas dentro de cada pack, los packs dentro del gabinete y el gabinete dentro de la instalaci&oacute;n. Cada funci&oacute;n de seguridad act&uacute;a en una de esas capas, y de ah&iacute; depende a qu&eacute; distancia del origen llega a intervenir.</desc><rect x="6" y="6" width="708" height="238" rx="18" fill="none" stroke="rgba(143,215,255,.3)" stroke-width="1.5" stroke-dasharray="7 6"/><text x="24" y="29" fill="#8fd7ff" font-size="12" font-weight="700" letter-spacing=".1em">INSTALACI&Oacute;N</text><rect x="38" y="42" width="644" height="180" rx="14" fill="rgba(143,215,255,.05)" stroke="rgba(143,215,255,.42)" stroke-width="1.5"/><text x="56" y="64" fill="#8fd7ff" font-size="12" font-weight="700" letter-spacing=".1em">GABINETE</text><rect x="65" y="78" width="180" height="128" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="79" y="97" fill="#8fd7ff" font-size="11.5" font-weight="700" letter-spacing=".08em">PACK</text><rect x="270" y="78" width="180" height="128" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="284" y="97" fill="#8fd7ff" font-size="11.5" font-weight="700" letter-spacing=".08em">PACK</text><rect x="475" y="78" width="180" height="128" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="489" y="97" fill="#8fd7ff" font-size="11.5" font-weight="700" letter-spacing=".08em">PACK</text><rect x="75" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="118" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="160" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="203" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="280" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="323" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="365" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="408" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="485" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="528" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="570" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><rect x="613" y="104" width="32" height="70" rx="5" fill="rgba(143,215,255,.82)"/><text x="79" y="194" fill="rgba(143,215,255,.72)" font-size="11" font-weight="700" letter-spacing=".08em">CELDAS</text></svg></div>
+          <div class="seg-map__movil"><svg viewBox="0 0 340 452" role="img" aria-hidden="true" focusable="false" font-family="inherit"><rect x="6" y="6" width="328" height="436" rx="16" fill="none" stroke="rgba(143,215,255,.3)" stroke-width="1.5" stroke-dasharray="7 6"/><text x="20" y="28" fill="#8fd7ff" font-size="12.5" font-weight="700" letter-spacing=".1em">INSTALACI&Oacute;N</text><rect x="26" y="44" width="288" height="380" rx="14" fill="rgba(143,215,255,.05)" stroke="rgba(143,215,255,.42)" stroke-width="1.5"/><text x="40" y="66" fill="#8fd7ff" font-size="12.5" font-weight="700" letter-spacing=".1em">GABINETE</text><rect x="48" y="80" width="244" height="104" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="62" y="99" fill="#8fd7ff" font-size="12" font-weight="700" letter-spacing=".08em">PACK</text><rect x="48" y="196" width="244" height="104" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="62" y="215" fill="#8fd7ff" font-size="12" font-weight="700" letter-spacing=".08em">PACK</text><rect x="48" y="312" width="244" height="104" rx="11" fill="rgba(143,215,255,.07)" stroke="rgba(143,215,255,.5)" stroke-width="1.5"/><text x="62" y="331" fill="#8fd7ff" font-size="12" font-weight="700" letter-spacing=".08em">PACK</text><rect x="62" y="106" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="119" y="106" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="177" y="106" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="234" y="106" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="62" y="222" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="119" y="222" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="177" y="222" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="234" y="222" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="62" y="338" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="119" y="338" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="177" y="338" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><rect x="234" y="338" width="44" height="56" rx="5" fill="rgba(143,215,255,.82)"/><text x="62" y="176" fill="rgba(143,215,255,.72)" font-size="12" font-weight="700" letter-spacing=".08em">CELDAS</text></svg></div>
+          <ul class="seg-leg">
+            <li><strong>Celda</strong><span>El sensado t&eacute;rmico m&aacute;s fino vive aqu&iacute;. Cuantos m&aacute;s sensores por celda, m&aacute;s tiempo hay para reaccionar. <b style='white-space:nowrap'>4</b></span></li>
+            <li><strong>Pack</strong><span>Supresi&oacute;n, detector de humo, sensado y v&aacute;lvula de alivio propios: el m&oacute;dulo se comporta como una unidad de seguridad cerrada. <b style='white-space:nowrap'>1 &middot; 3 &middot; 4 &middot; 5</b></span></li>
+            <li><strong>Gabinete</strong><span>Un solo conjunto para todo el envolvente: supresi&oacute;n, detecci&oacute;n de humo y de gas, y el control de humedad y temperatura. <b style='white-space:nowrap'>1 &middot; 2 &middot; 3 &middot; 5</b></span></li>
+            <li><strong>Instalaci&oacute;n</strong><span>Emplazamiento, separaciones, ventilaci&oacute;n y las pruebas firmadas que verifican que todo lo anterior qued&oacute; como se especific&oacute;. <b style='white-space:nowrap'>6</b></span></li>
+          </ul>
+        </div>
+
+        <div class="seg-grid">
+
+          <div class="seg-card" style="--seg-lv:rgba(15,76,129,.62)">
+            <span class="seg-num" aria-hidden="true">1</span>
+            <div class="seg-ico" style="background:#fff3f0;border:1px solid #fecaca"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c1.2 3.2-1.8 4.4-1.8 7.2a1.8 1.8 0 0 0 3.6 0c0-.9.1-1.6.5-2.2 1.7 1.8 2.7 3.8 2.7 6a5 5 0 0 1-10 0c0-4.2 3-6.2 5-11Z"/></svg></div>
+            <h3>Supresi&oacute;n autom&aacute;tica de incendio</h3>
+            <p>Agente que act&uacute;a sin agua y sin da&ntilde;ar la electr&oacute;nica, con disparo por umbral t&eacute;rmico y sin intervenci&oacute;n humana. Seg&uacute;n el sistema, el agente se aloja dentro de cada pack o en un solo dep&oacute;sito para todo el envolvente.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de pack o de gabinete</span>
           </div>
-          <p class="callout"><strong>Certificaciones:</strong> UL9540 &middot; UL9540A &middot; NFPA 855 &middot; &ge;8,000 ciclos de vida &uacute;til.</p>
+
+          <div class="seg-card" style="--seg-lv:rgba(15,76,129,.34)">
+            <span class="seg-num" aria-hidden="true">2</span>
+            <div class="seg-ico" style="background:#f0f9ff;border:1px solid #bae6fd"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8c3 4.2 6 7.1 6 10.6a6 6 0 0 1-12 0c0-3.5 3-6.4 6-10.6Z"/></svg></div>
+            <h3>Control de humedad y r&eacute;gimen t&eacute;rmico</h3>
+            <p>Mantiene la humedad relativa interior fuera del punto de condensaci&oacute;n sobre celdas, BMS y electr&oacute;nica de potencia. La condensaci&oacute;n es una causa habitual de falla prematura en clima h&uacute;medo y en operaci&oacute;n intermitente.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de gabinete</span>
+          </div>
+
+          <div class="seg-card" style="--seg-lv:rgba(15,76,129,.62)">
+            <span class="seg-num" aria-hidden="true">3</span>
+            <div class="seg-ico" style="background:#fff8e1;border:1px solid #fde68a"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="7.2"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2.5v1.6M12 19.9v1.6M2.5 12h1.6M19.9 12h1.6"/></svg></div>
+            <h3>Detecci&oacute;n temprana de humo</h3>
+            <p>Detecta part&iacute;culas de combusti&oacute;n antes de que el humo sea visible y lanza la alarma de primer nivel que dispara el paro ordenado. Cuanto m&aacute;s cerca del origen est&eacute; el detector, antes llega el aviso: por eso importa si hay uno por pack o uno por gabinete.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de pack o de gabinete</span>
+          </div>
+
+          <div class="seg-card" style="--seg-lv:var(--concept-primary)">
+            <span class="seg-num" aria-hidden="true">4</span>
+            <div class="seg-ico" style="background:#f0fdf4;border:1px solid #bbf7d0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 14.6V4.4a2 2 0 1 0-4 0v10.2a4 4 0 1 0 4 0Z"/><path d="M12 8.6v6.6"/></svg></div>
+            <h3>Sensado t&eacute;rmico y l&iacute;mites de operaci&oacute;n</h3>
+            <p>Vigilancia continua de temperatura con umbrales de alarma y paro autom&aacute;tico. La densidad de sensores var&iacute;a mucho entre sistemas &mdash; de unos pocos puntos por gabinete a varios sensores por cada docena de celdas &mdash; y de ella depende cu&aacute;nto tiempo hay para reaccionar.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de celda o de pack</span>
+          </div>
+
+          <div class="seg-card" style="--seg-lv:rgba(15,76,129,.62)">
+            <span class="seg-num" aria-hidden="true">5</span>
+            <div class="seg-ico" style="background:#fdf4ff;border:1px solid #e9d5ff"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.3 3.9 2.7 17a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 16.8h.01"/></svg></div>
+            <h3>Gesti&oacute;n de gases de fuga</h3>
+            <p>Los gases que libera una celda en falla deben detectarse y evacuarse antes de acumularse. Se resuelve con detecci&oacute;n de gas combustible en el envolvente, con v&aacute;lvulas de alivio unidireccionales en cada pack, o con ambas.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de pack o de gabinete</span>
+          </div>
+
+          <div class="seg-card seg-card--dark" style="--seg-lv:#8fd7ff">
+            <span class="seg-num" aria-hidden="true">6</span>
+            <div class="seg-ico" style="background:rgba(143,215,255,.15);border:1px solid rgba(143,215,255,.3)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.2 2.8 2.8L16 9.6"/></svg></div>
+            <h3>Protocolos FAT/SAT de comisionamiento</h3>
+            <p>VMS Energy revisa documentalmente las pruebas de aceptaci&oacute;n en f&aacute;brica y ejecuta las pruebas de aceptaci&oacute;n en sitio: simulaci&oacute;n de falla, activaci&oacute;n de alarmas, prueba de todos los sensores y firma de protocolos con el cliente antes de la entrega. Es la verificaci&oacute;n de que lo especificado es lo que qued&oacute; instalado.</p>
+            <span class="seg-lvl">Act&uacute;a a nivel de instalaci&oacute;n</span>
+          </div>
+
         </div>
 
-        <div class="tab-panel" data-panel="livoltek" role="tabpanel">
-          <h3>Solar + almacenamiento &mdash; Livoltek</h3>
-          <p>Para instalaciones con generaci&oacute;n fotovoltaica &mdash; existente o proyectada &mdash; Livoltek provee los inversores h&iacute;bridos que permiten gestionar simult&aacute;neamente red, paneles solares y banco de bater&iacute;as desde un solo sistema de control. En proyectos EPC solar de VMS Energy, la integraci&oacute;n Livoltek + Geolis convierte una planta solar industrial en una microrred energ&eacute;ticamente aut&oacute;noma y resiliente.</p>
+        <h3 style="margin:28px 0 6px;color:#103961;font-size:clamp(19px,2vw,23px)">D&oacute;nde act&uacute;a la protecci&oacute;n: dos arquitecturas</h3>
+        <p style="margin:0 0 14px;color:#23486f;line-height:1.6;max-width:880px">Las dos cumplen. La diferencia est&aacute; en qu&eacute; se confina cuando algo falla: un m&oacute;dulo, o el gabinete entero.</p>
+        <div class="seg-arq">
+          <figure style="background:#f0f6ff;border:1px solid rgba(15,76,129,.18)">
+            <svg viewBox="0 0 340 168" role="img" aria-label="Supresi&oacute;n dentro de cada pack" font-family="inherit"><rect x="4" y="4" width="332" height="128" rx="12" fill="none" stroke="rgba(15,76,129,.30)" stroke-width="1.5"/><text x="18" y="26" fill="#0F4C81" font-size="10.5" font-weight="700" letter-spacing=".1em">GABINETE</text><rect x="22" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="30" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="49" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="68" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="87" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><circle cx="64" cy="82" r="9" fill="#0F4C81"/><path d="M64 78.5c.6 1.6-.9 2.2-.9 3.6a.9.9 0 0 0 1.8 0c0-.5 0-.8.3-1.1.8.9 1.3 1.9 1.3 3a2.5 2.5 0 0 1-5 0c0-2.1 1.5-3.1 2.5-5.5Z" fill="#fff"/><rect x="128" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="136" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="155" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="174" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="193" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><circle cx="170" cy="82" r="9" fill="#0F4C81"/><path d="M170 78.5c.6 1.6-.9 2.2-.9 3.6a.9.9 0 0 0 1.8 0c0-.5 0-.8.3-1.1.8.9 1.3 1.9 1.3 3a2.5 2.5 0 0 1-5 0c0-2.1 1.5-3.1 2.5-5.5Z" fill="#fff"/><rect x="234" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="242" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="261" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="280" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="299" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><circle cx="276" cy="82" r="9" fill="#0F4C81"/><path d="M276 78.5c.6 1.6-.9 2.2-.9 3.6a.9.9 0 0 0 1.8 0c0-.5 0-.8.3-1.1.8.9 1.3 1.9 1.3 3a2.5 2.5 0 0 1-5 0c0-2.1 1.5-3.1 2.5-5.5Z" fill="#fff"/><text x="170" y="158" fill="#0F4C81" font-size="10" font-weight="700" text-anchor="middle">un punto de supresi&oacute;n por pack</text></svg>
+            <h4>Protecci&oacute;n distribuida &mdash; por pack</h4>
+            <p>Cada m&oacute;dulo es una unidad de seguridad independiente: su propia supresi&oacute;n, su propio detector de humo, sensado t&eacute;rmico denso y v&aacute;lvula de alivio unidireccional. La detecci&oacute;n ocurre junto a la celda y el evento tiende a confinarse en el m&oacute;dulo. Cuesta m&aacute;s y multiplica los puntos de mantenimiento.</p>
+          </figure>
+          <figure style="background:#fff;border:1px solid rgba(23,44,81,.12)">
+            <svg viewBox="0 0 340 168" role="img" aria-label="Una sola supresi&oacute;n para todo el gabinete" font-family="inherit"><rect x="4" y="4" width="332" height="128" rx="12" fill="none" stroke="rgba(15,76,129,.30)" stroke-width="1.5"/><text x="18" y="26" fill="#0F4C81" font-size="10.5" font-weight="700" letter-spacing=".1em">GABINETE</text><rect x="22" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="30" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="49" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="68" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="87" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="128" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="136" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="155" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="174" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="193" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="234" y="42" width="84" height="80" rx="8" fill="rgba(15,76,129,.06)" stroke="rgba(15,76,129,.34)" stroke-width="1.4"/><rect x="242" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="261" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="280" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><rect x="299" y="54" width="13" height="56" rx="3" fill="rgba(15,76,129,.22)"/><line x1="170" y1="26" x2="64" y2="42" stroke="rgba(15,76,129,.34)" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="170" y1="26" x2="170" y2="42" stroke="rgba(15,76,129,.34)" stroke-width="1.2" stroke-dasharray="4 4"/><line x1="170" y1="26" x2="276" y2="42" stroke="rgba(15,76,129,.34)" stroke-width="1.2" stroke-dasharray="4 4"/><circle cx="170" cy="22" r="10" fill="#0F4C81"/><path d="M170 17.5c.7 1.8-1 2.5-1 4a1 1 0 0 0 2 0c0-.5.1-.9.3-1.2.9 1 1.5 2.1 1.5 3.3a2.8 2.8 0 0 1-5.6 0c0-2.3 1.7-3.5 2.8-6.1Z" fill="#fff"/><text x="170" y="158" fill="#0F4C81" font-size="10" font-weight="700" text-anchor="middle">un solo punto para todo el envolvente</text></svg>
+            <h4>Protecci&oacute;n centralizada &mdash; por gabinete</h4>
+            <p>Un solo conjunto de detecci&oacute;n y supresi&oacute;n para todo el envolvente. Menos puntos de mantenimiento y menor costo inicial. En contrapartida la detecci&oacute;n ocurre m&aacute;s lejos del origen, y lo que se confina es el gabinete completo, no el m&oacute;dulo que fall&oacute;.</p>
+          </figure>
         </div>
+        <p style="margin:0 0 4px;color:#103961;font-weight:700">Qu&eacute; inclina la balanza en cada proyecto:</p>
+        <ul class="seg-crit">
+          <li><b>01</b><span>D&oacute;nde se instala: interior ocupado, intemperie o envolvente dedicado</span></li>
+          <li><b>02</b><span>Distancia a personas, a rutas de evacuaci&oacute;n y a otros activos cr&iacute;ticos</span></li>
+          <li><b>03</b><span>Energ&iacute;a instalada y separaciones exigidas por NFPA 855 para ese emplazamiento</span></li>
+          <li><b>04</b><span>Lo que pidan la autoridad local, el cuerpo de bomberos y la aseguradora</span></li>
+          <li><b>05</b><span>Qu&eacute; demuestra el informe de ensayo del sistema: si la propagaci&oacute;n se detiene en el m&oacute;dulo o no</span></li>
+          <li><b>06</b><span>Qui&eacute;n va a mantenerlo, con qu&eacute; frecuencia y con qu&eacute; refacciones disponibles en M&eacute;xico</span></li>
+        </ul>
 
-        <div class="tab-panel" data-panel="weg" role="tabpanel">
-          <h3>Columna vertebral el&eacute;ctrica &mdash; WEG</h3>
-          <p>WEG est&aacute; presente en todos los proyectos de VMS Energy como fabricante de referencia en motores industriales, variadores de frecuencia (serie CFW), transformadores de distribuci&oacute;n e inversores solares (serie SIW). En el contexto de sistemas UPS y BESS, WEG provee la infraestructura el&eacute;ctrica de soporte: adecuaci&oacute;n de voltaje, protecci&oacute;n de motores cr&iacute;ticos durante eventos de respaldo e inversores para la capa de generaci&oacute;n del sistema h&iacute;brido.</p>
+        <div style="max-width:880px;padding:16px 18px;background:#f7fbff;border-left:3px solid var(--concept-primary);border-radius:0 8px 8px 0">
+          <p style="margin:0 0 4px;color:#103961;font-weight:700;font-size:.95rem">Nota para responsables de HSE &mdash; cada norma en su nivel</p>
+          <p style="margin:0 0 6px;color:#4B647F;font-size:.9rem;line-height:1.55">Ninguna de estas normas certifica una pieza suelta. Cada una aplica a un nivel distinto:</p>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">UL 9540</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">El sistema de almacenamiento completo, como producto.</span></div>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">UL 9540A</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">M&eacute;todo de ensayo de propagaci&oacute;n t&eacute;rmica &mdash; <strong>no es un certificado</strong>. Se ensaya a nivel de celda, m&oacute;dulo, unidad e instalaci&oacute;n; el informe dice hasta d&oacute;nde se detiene el fuego.</span></div>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">IEC 62619</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">Las celdas y bater&iacute;as de litio de uso industrial.</span></div>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">NFPA 855</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">La instalaci&oacute;n: emplazamiento, separaciones, ventilaci&oacute;n y supresi&oacute;n.</span></div>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">NOM-001-SEDE</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">La instalaci&oacute;n el&eacute;ctrica en M&eacute;xico.</span></div>
+            <div style="display:grid;grid-template-columns:minmax(112px,auto) 1fr;gap:10px;padding:8px 0;border-top:1px solid rgba(23,44,81,.10)"><strong style="color:#103961;font-size:.9rem">NOM-002-STPS</strong><span style="color:#4B647F;font-size:.9rem;line-height:1.5">La prevenci&oacute;n y protecci&oacute;n contra incendios del centro de trabajo.</span></div>
+          <p style="margin:12px 0 0;color:#4B647F;font-size:.9rem;line-height:1.55">VMS Energy entrega la memoria descriptiva de seguridad como parte de la ingenier&iacute;a de detalle, y verifica funci&oacute;n por funci&oacute;n en los protocolos FAT/SAT antes de la entrega.</p>
         </div>
       </div>
     </section>
@@ -585,42 +937,94 @@
       </div>
     </section>
 
+    <!-- SECCION 5B - BOS: QUÉ INCLUYE UN PROYECTO BESS LLAVE EN MANO -->
+    <section id="bos-bess" style="background:#f8fafc;padding:72px 0 80px">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;max-width:760px;margin:0 auto 12px">¿Qué incluye un proyecto BESS <em>llave en mano</em>?</h2>
+        <p class="section-lead" style="text-align:center;max-width:680px;margin:0 auto 48px">El precio de un sistema de almacenamiento es solo el comienzo. El <strong>Balance of System (BOS)</strong> representa entre el 30 % y 40 % del costo total del proyecto — y es donde la diferencia entre un integrador EPC y un simple proveedor de equipo se vuelve crítica.</p>
+
+        <!-- BOS GRID 3x2 -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:48px">
+
+          <!-- BOS 1: Distribución eléctrica -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5 4.5 13.5H10l-1 8 8.5-11H12l1-8Z"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Distribución eléctrica</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Tableros de baja y media tensión, barras de distribución, interruptores de maniobra y seccionadores. Diseño coordinado con la instalación existente.</p>
+            </div>
+          </article>
+
+          <!-- BOS 2: Protecciones -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.4 7.5-8.7V5.4L12 2.5 4.5 5.4v7.4c0 5.3 7.5 8.7 7.5 8.7Z"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Protecciones y coordinación</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Interruptores termomagnéticos, fusibles de alta ruptura y dispositivos de protección contra sobretensiones (SPDs). Estudio de cortocircuito y coordinación de protecciones incluido.</p>
+            </div>
+          </article>
+
+          <!-- BOS 3: Conductores MT -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 2.5v5.5M15 2.5v5.5"/><path d="M6 8h12v2.8a6 6 0 0 1-12 0V8Z"/><path d="M12 16.8v4.7"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Conductores y canalizaciones</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Cables de media tensión certificados, bandejas portacables, conduit rígido y flexible. Dimensionados según NOM-001-SEDE y cálculo de caída de voltaje para proyectos BESS de gran escala.</p>
+            </div>
+          </article>
+
+          <!-- BOS 4: Obra civil -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21V3h1.6l13.4 4.4"/><path d="M3 9.2h10.5"/><path d="M11.8 7.6v5.4"/><path d="M9.4 13h4.8l-2.4 4.2Z"/><path d="M2 21h20"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Obra civil</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Cimentación y bases de concreto para contenedores BESS, sistemas de drenaje pluvial, accesos para mantenimiento y adecuaciones de cuarto eléctrico si el sistema es de interior.</p>
+            </div>
+          </article>
+
+          <!-- BOS 5: Instalación y maniobras -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 4.6a5.4 5.4 0 0 1-7.2 7.2L4.6 20.4 2.9 18.7l8.6-8.6a5.4 5.4 0 0 1 7.2-7.2l-3 3 .5 2.5 2.5.5 2.7-3.3Z"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Instalación y maniobras</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Descarga con grúa, posicionamiento del contenedor, integración mecánica y eléctrica, gestión de logística de importación. Cuadrillas especializadas en sistemas de alta capacidad.</p>
+            </div>
+          </article>
+
+          <!-- BOS 6: Puesta a tierra -->
+          <article style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start">
+            <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0c2240,#172c51);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.8v8.6"/><path d="M4.6 11.4h14.8M7.4 15.6h9.2M10 19.6h4"/></svg></div>
+            <div>
+              <h3 style="margin:0 0 8px;font-size:1.05rem;color:var(--navy)">Sistema de puesta a tierra</h3>
+              <p style="margin:0;font-size:.93rem;color:var(--muted);line-height:1.55">Diseño y ejecución de la red de tierras conforme a <strong>IEEE 80 / IEC 60364</strong>: malla equipotencial, medición de resistividad del suelo, prueba de continuidad y resistencia antes del energizado.</p>
+            </div>
+          </article>
+
+        </div><!-- /BOS GRID -->
+
+        <!-- BOS DIFERENCIADOR CALLOUT -->
+        <div style="background:linear-gradient(135deg,var(--concept-primary) 0%,var(--concept-darker) 100%);border-radius:20px;padding:36px 40px;display:flex;gap:32px;align-items:center;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <h3 style="color:#fff;margin:0 0 10px;font-size:1.2rem">VMS Energy gestiona el 100 % del proyecto</h3>
+            <p style="color:rgba(255,255,255,.85);margin:0;font-size:.95rem;line-height:1.6">Suministro de equipo, ingeniería BOS, obra civil, permisos ante CFE y CENACE, y comisionamiento final. Un solo responsable, un contrato, sin sorpresas de costo en la ejecución.</p>
+          </div>
+          <a href="contacto.html?servicio=ingenieria-bos-bess" style="display:inline-flex;align-items:center;gap:8px;padding:.85rem 1.6rem;background:#fff;color:var(--concept-darker);border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;white-space:normal;text-align:center;max-width:100%">
+            Solicitar ingeniería básica
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- SECCION 6 - CASOS DE REFERENCIA -->
     <section class="cases" aria-labelledby="casesTitle">
       <div class="container">
-        <h2 id="casesTitle" class="section-title">Proyectos que respaldan nuestra experiencia.</h2>
-        <p class="section-lead">Casos reales de VMS Energy en sectores cr&iacute;ticos de M&eacute;xico.</p>
-        <div class="case-grid">
+        <h2 id="casesTitle" class="section-title">Lo que tenemos hoy en ejecuci&oacute;n.</h2>
+        <p class="section-lead">Publicamos la ficha completa de cada proyecto al cierre. Los proyectos ya entregados est&aacute;n en la secci&oacute;n de <a href="#proyectos">proyectos y clientes de referencia</a>.</p>
+        <div class="case-grid" style="grid-template-columns:minmax(0,520px);justify-content:center">
           <article class="case">
-            <div class="case__media"><img src="assets/img/Projects/infraestructura_electrica/CFE_Tamazulapan_Modernizacion_de_Control_Hidraulico.webp" alt="Oficinas cr&iacute;ticas Oil &amp; Gas en Paraiso, Tabasco" loading="lazy" decoding="async" onerror="this.src='assets/img/services/oil_gas.webp'"></div>
-            <div class="case__body">
-              <span class="case__tag">Oil &amp; Gas &middot; BESS</span>
-              <h3>Oficinas cr&iacute;ticas Oil &amp; Gas &middot; Para&iacute;so, Tabasco</h3>
-              <p>Una instalaci&oacute;n administrativa de soporte a infraestructura energ&eacute;tica en Para&iacute;so, Tabasco, con interrupciones recurrentes, requer&iacute;a continuidad total en sus sistemas de planeaci&oacute;n, coordinaci&oacute;n y monitoreo.</p>
-              <dl>
-                <dt>Soluci&oacute;n</dt>
-                <dd>Sistema BESS &mdash; 500 kW &middot; 1 MWh &middot; hasta 4.5 h de autonom&iacute;a a 215 kW de demanda</dd>
-                <dt>Resultados</dt>
-                <dd>Eliminaci&oacute;n de interrupciones &middot; estabilizaci&oacute;n de frecuencia y voltaje &middot; integraci&oacute;n fotovoltaica para mayor autonom&iacute;a</dd>
-              </dl>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case__media"><img src="assets/img/services/oil_gas.webp" alt="Base operativa en Villahermosa, Tabasco" loading="lazy" decoding="async"></div>
-            <div class="case__body">
-              <span class="case__tag">Operaciones &middot; BESS</span>
-              <h3>Base operativa &middot; Villahermosa, Tabasco</h3>
-              <p>Base de operaciones con al menos 2 cortes diarios &mdash; desde 5 minutos hasta varias horas &mdash; en una instalaci&oacute;n de soporte a operaciones de campo.</p>
-              <dl>
-                <dt>Soluci&oacute;n</dt>
-                <dd>Sistema BESS &mdash; 100 kW &middot; 215 kWh &middot; hasta 4 h de autonom&iacute;a a 50 kW de demanda</dd>
-                <dt>Resultados</dt>
-                <dd>Mitigaci&oacute;n del 100% de cortes &middot; eliminaci&oacute;n de generadores en pruebas in-situ &middot; estabilizaci&oacute;n completa del suministro</dd>
-              </dl>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case__media"><img src="assets/img/Projects/infraestructura_electrica/CFE_Chankanaab_Sistema_Eléctrico_Integral_CACD.png" alt="Proyecto CFE en Colima con UPS industriales Borri" loading="lazy" decoding="async" onerror="this.src='assets/img/services/infraestructura_electrica.webp'"></div>
+            <div class="case__media"><img src="assets/img/Projects/infraestructura_electrica/CFE_Chankanaab_Sistema_Electrico_Integral_CACD.webp" alt="Proyecto CFE en Colima con UPS industriales Borri" loading="lazy" decoding="async" onerror="this.src='assets/img/services/infraestructura_electrica.webp'"></div>
             <div class="case__body">
               <span class="case__tag">Energ&iacute;a &middot; UPS Industrial &middot; En ejecuci&oacute;n</span>
               <h3>Proyecto en desarrollo &middot; CFE &middot; Colima</h3>
@@ -641,8 +1045,8 @@
         <h2 id="diffTitle" class="section-title">No vendemos equipos. Garantizamos que funcionen.</h2>
         <div class="diff-grid">
           <article class="diff-item">
-            <div class="diff-item__icon">20</div>
-            <h3>20 a&ntilde;os de experiencia EPC</h3>
+            <div class="diff-item__icon">18</div>
+            <h3>18 a&ntilde;os de experiencia EPC</h3>
             <p>En sectores industriales de alta exigencia: Oil &amp; Gas, miner&iacute;a, manufactura y energ&iacute;a.</p>
           </article>
           <article class="diff-item">
@@ -671,6 +1075,137 @@
             <p>Operaciones en Guadalajara y Ciudad del Carmen, con cobertura nacional para proyectos.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- SECCION 7B - MARCO REGULATORIO BESS MÉXICO -->
+    <section id="regulacion-bess-mexico" aria-labelledby="regTitle" style="padding:76px 0 84px;background:#fff">
+      <div class="container">
+        <h2 id="regTitle" class="section-title" style="text-align:center;max-width:800px;margin:0 auto 12px">¿Cómo se regula el almacenamiento de energía en México?</h2>
+        <p class="section-lead" style="text-align:center;max-width:700px;margin:0 auto 52px">El marco legal para los sistemas BESS en México involucra cuatro autoridades con competencias distintas. VMS Energy acompaña el proceso regulatorio completo — desde el diseño hasta los trámites ante cada instancia.</p>
+
+        <!-- PIRÁMIDE REGULATORIA: línea vertical -->
+        <div style="display:grid;grid-template-columns:1fr;gap:0;max-width:860px;margin:0 auto 56px;position:relative">
+
+          <!-- Línea de conexión vertical -->
+          <div style="position:absolute;left:50%;top:28px;bottom:28px;width:2px;background:linear-gradient(180deg,var(--concept-primary),rgba(23,44,81,.12));transform:translateX(-50%);z-index:0;display:none" aria-hidden="true"></div>
+
+          <!-- NIVEL 1: SENER -->
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:0;align-items:start;margin-bottom:2px">
+            <div style="display:flex;flex-direction:column;align-items:center;padding-right:24px;min-width:56px">
+              <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--concept-primary),var(--concept-darker));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0;position:relative;z-index:1">S</div>
+              <div style="width:2px;height:100%;background:rgba(23,44,81,.12);flex:1;margin-top:4px"></div>
+            </div>
+            <div style="background:#f0f6ff;border:1px solid rgba(23,44,81,.1);border-radius:16px;padding:24px 26px;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+                <span style="font-size:1.05rem;font-weight:700;color:var(--navy)">SENER — Secretaría de Energía</span>
+                <span style="font-size:.78rem;font-weight:700;color:var(--concept-primary);background:rgba(14,90,168,.1);padding:2px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em">Política nacional</span>
+              </div>
+              <p style="margin:0 0 10px;color:var(--muted);font-size:.93rem;line-height:1.6">Emite la política energética nacional y los programas de largo plazo (PRODESEN). La <strong>Ley de Transición Energética (LTE)</strong> y la <strong>Ley de la Industria Eléctrica (LIE)</strong> son los instrumentos que habilitaron el almacenamiento como actividad legal en México. SENER define las metas de participación de fuentes limpias en las cuales el BESS puede contribuir.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(23,44,81,.15);border-radius:8px;padding:3px 10px;color:#314a67">Ley de Transición Energética</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(23,44,81,.15);border-radius:8px;padding:3px 10px;color:#314a67">Ley de la Industria Eléctrica</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(23,44,81,.15);border-radius:8px;padding:3px 10px;color:#314a67">PRODESEN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NIVEL 2: CRE -->
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:0;align-items:start;margin-bottom:2px">
+            <div style="display:flex;flex-direction:column;align-items:center;padding-right:24px;min-width:56px">
+              <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#0e5aa8,#0a3f7a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0;position:relative;z-index:1">C</div>
+              <div style="width:2px;height:100%;background:rgba(23,44,81,.12);flex:1;margin-top:4px"></div>
+            </div>
+            <div style="background:#f0f6ff;border:1px solid rgba(23,44,81,.1);border-radius:16px;padding:24px 26px;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+                <span style="font-size:1.05rem;font-weight:700;color:var(--navy)">CRE — Comisión Reguladora de Energía</span>
+                <span style="font-size:.78rem;font-weight:700;color:#0e5aa8;background:rgba(14,90,168,.1);padding:2px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em">Permisos y regulación técnica</span>
+              </div>
+              <p style="margin:0 0 10px;color:var(--muted);font-size:.93rem;line-height:1.6">Otorga permisos de generación cuando el BESS exporta energía a la red o participa en el mercado eléctrico mayorista. Los sistemas <strong>detrás del medidor (behind-the-meter)</strong> que no exportan no requieren permiso CRE — es la configuración más común en proyectos industriales de peak shaving. Para sistemas con interconexión activa, CRE emite el permiso de generación conforme a la LIE y las Bases del Mercado.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:.8rem;background:#e8f3ff;border:1px solid rgba(14,90,168,.2);border-radius:8px;padding:3px 10px;color:#0a3f7a;font-weight:700">BTM: sin permiso CRE</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(23,44,81,.15);border-radius:8px;padding:3px 10px;color:#314a67">Permiso generación si exporta</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(23,44,81,.15);border-radius:8px;padding:3px 10px;color:#314a67">Bases del Mercado Eléctrico</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NIVEL 3: CFE Distribución -->
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:0;align-items:start;margin-bottom:2px">
+            <div style="display:flex;flex-direction:column;align-items:center;padding-right:24px;min-width:56px">
+              <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#1b4332);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;flex-shrink:0;position:relative;z-index:1">CFE</div>
+              <div style="width:2px;height:100%;background:rgba(23,44,81,.12);flex:1;margin-top:4px"></div>
+            </div>
+            <div style="background:#f0fff4;border:1px solid rgba(45,106,79,.15);border-radius:16px;padding:24px 26px;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+                <span style="font-size:1.05rem;font-weight:700;color:var(--navy)">CFE Distribución — Contrato de interconexión</span>
+                <span style="font-size:.78rem;font-weight:700;color:#2d6a4f;background:rgba(45,106,79,.12);padding:2px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em">Interconexión y tarifas</span>
+              </div>
+              <p style="margin:0 0 10px;color:var(--muted);font-size:.93rem;line-height:1.6">Gestiona la <strong>tarifa de respaldo</strong> que aplica cuando el BESS está integrado con generación propia (solar FV) y el usuario requiere energía de la red en momentos de insuficiencia. Si el sistema BESS se interconecta para exportar excedentes, se formaliza con un <strong>Contrato de Interconexión en Mediana o Alta Tensión</strong>. La tarifa que paga el usuario (GDMTH, GDMTO, etc.) sigue siendo la misma — el BESS solo reduce los cargos facturables.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(45,106,79,.2);border-radius:8px;padding:3px 10px;color:#1b4332">Tarifa de respaldo</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(45,106,79,.2);border-radius:8px;padding:3px 10px;color:#1b4332">Contrato interconexión MT/AT</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(45,106,79,.2);border-radius:8px;padding:3px 10px;color:#1b4332">GDMTH / GDMTO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- NIVEL 4: CENACE -->
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:0;align-items:start">
+            <div style="display:flex;flex-direction:column;align-items:center;padding-right:24px;min-width:56px">
+              <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#5b21b6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.72rem;flex-shrink:0;position:relative;z-index:1;text-align:center;line-height:1.1">CEN<br>ACE</div>
+            </div>
+            <div style="background:#faf5ff;border:1px solid rgba(124,58,237,.15);border-radius:16px;padding:24px 26px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+                <span style="font-size:1.05rem;font-weight:700;color:var(--navy)">CENACE — Centro Nacional de Control de Energía</span>
+                <span style="font-size:.78rem;font-weight:700;color:#7c3aed;background:rgba(124,58,237,.1);padding:2px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em">Despacho y mercado</span>
+              </div>
+              <p style="margin:0 0 10px;color:var(--muted);font-size:.93rem;line-height:1.6">Opera el sistema eléctrico nacional y el mercado eléctrico mayorista. Para sistemas BESS que participan activamente en el mercado (arbitraje, servicios ancilares de regulación de frecuencia), CENACE define los requisitos técnicos de habilitación y el protocolo de despacho. En proyectos <strong>detrás del medidor</strong> (industrial BTM), la participación de CENACE es indirecta — el sistema BESS no interactúa con el despacho nacional.</p>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(124,58,237,.2);border-radius:8px;padding:3px 10px;color:#5b21b6">Servicios ancilares</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(124,58,237,.2);border-radius:8px;padding:3px 10px;color:#5b21b6">Regulación de frecuencia</span>
+                <span style="font-size:.8rem;background:#fff;border:1px solid rgba(124,58,237,.2);border-radius:8px;padding:3px 10px;color:#5b21b6">Arbitraje energético</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /pirámide regulatoria -->
+
+        <!-- NORMAS TÉCNICAS -->
+        <div style="background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:28px 32px;max-width:860px;margin:0 auto 40px">
+          <h3 style="margin:0 0 18px;color:var(--navy);font-size:1.05rem">Normas técnicas aplicables en sitio</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:4px">NOM-001-SEDE-2012</div>
+              <div style="font-size:.87rem;color:var(--muted);line-height:1.5">Instalaciones eléctricas. Rige el diseño, construcción y prueba de todas las instalaciones eléctricas del proyecto BESS.</div>
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:4px">NOM-029-STPS-2011</div>
+              <div style="font-size:.87rem;color:var(--muted);line-height:1.5">Mantenimiento de instalaciones eléctricas en los centros de trabajo. Aplica para el programa de mantenimiento preventivo del BESS.</div>
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:4px">NFPA 855 (referencia)</div>
+              <div style="font-size:.87rem;color:var(--muted);line-height:1.5">Estándar internacional para la instalación de sistemas de almacenamiento estacionario. Referencia para diseño de seguridad contra incendios en instalaciones BESS.</div>
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:4px">Reglamentos municipales</div>
+              <div style="font-size:.87rem;color:var(--muted);line-height:1.5">Licencias de construcción para obra civil, uso de suelo y dictamen de protección civil. VMS Energy gestiona estos trámites como parte del alcance EPC.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CALLOUT VMS COMO GUÍA REGULATORIA -->
+        <div style="display:flex;gap:28px;align-items:center;background:linear-gradient(135deg,#0c2240 0%,#172c51 100%);border-radius:20px;padding:32px 36px;max-width:860px;margin:0 auto;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <h3 style="color:#fff;margin:0 0 8px;font-size:1.15rem">VMS Energy gestiona el proceso regulatorio</h3>
+            <p style="color:rgba(255,255,255,.82);margin:0;font-size:.93rem;line-height:1.6">Identificamos qué trámites aplican a su proyecto — en la mayoría de los casos industriales BTM, ninguno ante CRE o CENACE. Y cuando se requieren, coordinamos la gestión ante cada instancia sin que su equipo opere como gestor.</p>
+          </div>
+          <a href="contacto.html?tema=regulacion-bess" style="display:inline-flex;align-items:center;gap:8px;padding:.82rem 1.5rem;background:#fff;color:#0c2240;border-radius:999px;font-weight:700;text-decoration:none;font-size:.92rem;white-space:normal;text-align:center;max-width:100%">
+            Consultar marco regulatorio
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -723,6 +1258,30 @@
             <p style="margin:12px 0 0;color:#314a67">El proceso inicia con un levantamiento eléctrico: medición de carga real (kW y cosφ), registro de curva de demanda en ventanas de 15 minutos durante al menos una semana, inventario de cargas críticas vs no críticas y revisión del historial de interrupciones. Con esa información elaboramos la ingeniería de dimensionamiento y presentamos la propuesta técnico-económica con análisis de retorno. Tiempo típico para propuesta en firme: <strong>5 a 10 días hábiles</strong>. Contáctenos para agendar la evaluación energética sin costo.</p>
           </details>
 
+          <details style="border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff;margin-bottom:10px">
+            <summary style="cursor:pointer;font-weight:700;color:#12365f">¿Cuánto puede ahorrar una planta con tarifa GDMTH usando peak shaving con BESS?</summary>
+            <p style="margin:12px 0 0;color:#314a67">La tarifa <strong>GDMTH</strong> (Gran Demanda en Media Tensión Horaria, aplicable a instalaciones con 100 kW o más) incluye cargos por demanda máxima registrada en ventanas de 15 minutos. Con un BESS correctamente dimensionado para peak shaving, la planta descarga el sistema durante los horarios de mayor consumo, reduciendo el pico de demanda facturado por CFE.</p>
+            <p style="margin:8px 0 0;color:#314a67"><strong>Ejemplo práctico:</strong> Una planta con demanda máxima de 500 kW y base de 320 kW puede instalar un BESS de 180 kW para cortar ese pico. Con cargos de demanda de $350–$500/kW/mes en GDMTH, el ahorro mensual estimado oscila entre <strong>$63,000 y $90,000 MXN/mes</strong>. El retorno de inversión típico para este perfil es de <strong>18 a 30 meses</strong>, según la frecuencia y duración de los picos y el costo del BESS instalado.</p>
+          </details>
+
+          <details style="border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff;margin-bottom:10px">
+            <summary style="cursor:pointer;font-weight:700;color:#12365f">¿Qué incluye el BOS (Balance of System) de un proyecto BESS y quién lo ejecuta?</summary>
+            <p style="margin:12px 0 0;color:#314a67">El <strong>BOS (Balance of System)</strong> comprende todos los componentes externos al equipo BESS propiamente dicho que son necesarios para que el sistema opere de forma segura, eficiente y conectada. No incluye las baterías, el PCS ni el BMS — incluye todo lo que permite que esos equipos funcionen correctamente en sitio.</p>
+            <p style="margin:8px 0 0;color:#314a67">El BOS de un proyecto BESS industrial incluye: <strong>distribución eléctrica</strong> (celdas MT/BT, interruptores de potencia), <strong>sistemas de protección</strong> (coordinación de protecciones, pararrayos SPD), <strong>conductores eléctricos</strong> (cableado de fuerza, bandejas, ductos), <strong>obra civil</strong> (cimentación, cuarto eléctrico o plataforma), <strong>maniobras e instalación</strong> (izajes, conexionado, pruebas), y <strong>sistema de puesta a tierra</strong> (mallado de tierra IEEE 80/IEC 60364). VMS Energy ejecuta el BOS completo como parte del alcance EPC — el cliente recibe el sistema listo para operar, no piezas sueltas.</p>
+          </details>
+
+          <details style="border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff;margin-bottom:10px">
+            <summary style="cursor:pointer;font-weight:700;color:#12365f">¿Qué permisos o regulaciones aplican para instalar un BESS en México?</summary>
+            <p style="margin:12px 0 0;color:#314a67">El sistema eléctrico mexicano opera a través de <strong>cuatro capas regulatorias</strong> que interactúan entre sí y que afectan la instalación de un BESS industrial:</p>
+            <ul style="margin:8px 0 0;padding-left:18px;color:#314a67;line-height:1.7">
+              <li><strong>Planeación y política pública (SENER):</strong> define las prioridades del sistema eléctrico nacional y los lineamientos de almacenamiento.</li>
+              <li><strong>Regulación técnica y administrativa (CRE + CFE):</strong> establece los requisitos para conectar, operar y mantener instalaciones eléctricas con generación o almacenamiento.</li>
+              <li><strong>Operación del sistema (CENACE):</strong> asegura el balance entre generación y demanda en tiempo real — relevante para sistemas BESS conectados a la red en esquemas de participación en mercado.</li>
+              <li><strong>Cumplimiento técnico en sitio (NOM-001-SEDE, NOM-029-STPS):</strong> instalaciones eléctricas, seguridad y protección contra incendios en el sitio.</li>
+            </ul>
+            <p style="margin:8px 0 0;color:#314a67">Para un BESS industrial estándar en modo <em>behind-the-meter</em> (detrás del medidor), el proceso regulatorio más relevante es la <strong>notificación de autoabastecimiento a CFE</strong> y el cumplimiento de las NOM aplicables. VMS Energy gestiona la documentación técnica y regulatoria como parte del alcance EPC.</p>
+          </details>
+
         </div>
       </div>
     </section>
@@ -732,7 +1291,7 @@
         <div class="box">
           <h2 id="ctaFinalTitle">&iquest;Cu&aacute;nto le cuesta una hora de paro en su planta?</h2>
           <p>Si no tiene la respuesta exacta, ese es precisamente el punto de partida. Nuestro equipo de ingenier&iacute;a realiza evaluaciones energ&eacute;ticas gratuitas para instalaciones industriales: medimos, analizamos y determinamos con precisi&oacute;n qu&eacute; tecnolog&iacute;a resuelve su problema &mdash; y cu&aacute;l es el retorno esperado.</p>
-          <div class="hero__actions">
+          <div class="hero__actions on-dark">
             <a class="btn btn--primary" href="contacto_cta.html#ctaForm" data-cta="final-evaluacion">Solicitar evaluaci&oacute;n energ&eacute;tica gratuita &rarr;</a>
             <a class="btn btn--secondary" href="contacto.html#inicio" data-cta="final-ingeniero">Hablar con un ingeniero de VMS Energy &rarr;</a>
           </div>
@@ -743,200 +1302,250 @@
     <!-- INTERLINKING -->
     <section class="interlink" aria-labelledby="interlinkTitle">
       <div class="container">
-        <h2 id="interlinkTitle" class="section-title">Tambi&eacute;n podr&iacute;a interesarle</h2>
+        <h2 id="interlinkTitle" class="section-title">Servicios complementarios para una operaci&oacute;n el&eacute;ctrica &iacute;ntegra</h2>
+        <p class="section-lead" style="margin-bottom:18px">La confiabilidad el&eacute;ctrica no termina en el BESS o el UPS. Estos servicios VMS Energy trabajan en sinergia con su sistema de respaldo:</p>
         <ul class="interlink__list">
-          <li><a href="soluciones_solar_industrial.html#inicio">&rarr; Energ&iacute;a Solar Industrial<span>Integraci&oacute;n solar + BESS</span></a></li>
-          <li><a href="soluciones_infraestructura_energetica.html#inicio">&rarr; Subestaciones El&eacute;ctricas<span>Infraestructura de soporte AT/MT/BT</span></a></li>
-          <li><a href="soluciones_automatizacion_control.html#inicio">&rarr; Automatizaci&oacute;n Industrial<span>Integraci&oacute;n SCADA y monitoreo</span></a></li>
-          <li><a href="procura.html#solicitud">&rarr; Procura especializada<span>Equipos Borri, Geolis, Livoltek y WEG</span></a></li>
-          <li><a href="especialidades.html#inicio">&rarr; Cat&aacute;logo de especialidades<span>Servicios de ingenier&iacute;a y mantenimiento</span></a></li>
+          <li>
+            <a href="soluciones_solar_industrial.html#inicio">
+              <div>
+                <strong>&rarr; Energ&iacute;a Solar Industrial</strong>
+                <span>BESS + solar = microrred aut&oacute;noma. Autoconsumo &gt;85% con inversor Livoltek integrado.</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="soluciones-correccion-factor-potencia.html#inicio">
+              <div>
+                <strong>&rarr; Protecci&oacute;n y Calidad de Energ&iacute;a</strong>
+                <span>Correcci&oacute;n de factor de potencia, protecci&oacute;n contra transitorios y arm&oacute;nicos que afectan el BESS.</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="soluciones_automatizacion_control.html#inicio">
+              <div>
+                <strong>&rarr; Monitoreo y SCADA Industrial</strong>
+                <span>Integraci&oacute;n del IEMS Livoltek y sistemas UPS/BESS a la arquitectura SCADA de su planta.</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="soluciones_verde_no_solar.html#inicio">
+              <div>
+                <strong>&rarr; Generaci&oacute;n de Respaldo</strong>
+                <span>Cogeneraci&oacute;n, turbogeneradores y esquemas h&iacute;bridos BESS + generador para m&aacute;xima continuidad.</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="soluciones_infraestructura_energetica.html#inicio">
+              <div>
+                <strong>&rarr; Subestaciones MT/AT</strong>
+                <span>BOS completo: obra civil, conductores, protecci&oacute;n, transformadores y puesta a tierra para su proyecto BESS.</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="procura.html#solicitud">
+              <div>
+                <strong>&rarr; Procura especializada</strong>
+                <span>Suministro de equipos Borri, Geolis, Livoltek y WEG con gesti&oacute;n de importaci&oacute;n y log&iacute;stica.</span>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
+  
+  <section class="section section--alt" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Proyectos y clientes de referencia</span>
+      <h2 class="sec-h2" id="refTitle">Proyectos y clientes en respaldo el&eacute;ctrico</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">P.SS. Chemul &mdash; Servicios Mar&iacute;timos de Campeche / Pemex</p>
+          <p class="ref-card__lugar">Zonda de Campeche</p>
+          <p class="ref-card__desc">Elaboraci&oacute;n del estudio el&eacute;ctrico para ampliar de tres a seis los bancos de bater&iacute;as con sus respectivos cargadores, bajo las reglas de la casa clasificadora Lloyd&rsquo;s para instalaciones el&eacute;ctricas a bordo.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Plataformas Abkat&uacute;n-A y Maloob &mdash; Servicios Mar&iacute;timos de Campeche / Pemex</p>
+          <p class="ref-card__lugar">Campeche (costa afuera)</p>
+          <p class="ref-card__desc">Suministro, pruebas el&eacute;ctricas preoperatorias, puesta en marcha y pruebas de desempe&ntilde;o de un UPS de 10&nbsp;kVA y un transformador acondicionador de l&iacute;nea, con banco de bater&iacute;as de 295&nbsp;Ah.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">AKAL &middot; Zonda &mdash; Servicios Mar&iacute;timos de Campeche / Pemex</p>
+          <p class="ref-card__lugar">Campeche (costa afuera)</p>
+          <p class="ref-card__desc">Fabricaci&oacute;n, suministro y pruebas el&eacute;ctricas preoperatorias de un sistema fotovoltaico integrado por arreglo fotovoltaico, unidad de control de carga, inversor de corriente, banco de bater&iacute;as y tablero de distribuci&oacute;n.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Plataformas Maloob-D, ZAAP-B y ZAAP-E &mdash; Pemex</p>
+          <p class="ref-card__lugar">Campeche (costa afuera)</p>
+          <p class="ref-card__desc">Pruebas el&eacute;ctricas y puesta en marcha de subestaciones integradas por tableros de distribuci&oacute;n Metal&nbsp;Clad, transformadores de 1&nbsp;500 y 1&nbsp;000&nbsp;kVA, UPS de 10&nbsp;kVA y cargador de bater&iacute;as de 100&nbsp;A.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Plataforma BALAM-TD &mdash; Pemex</p>
+          <p class="ref-card__lugar">Campeche (costa afuera)</p>
+          <p class="ref-card__desc">Suministro, instalaci&oacute;n, pruebas y puesta en operaci&oacute;n de una unidad ininterrumpible de energ&iacute;a (UPS) de 10&nbsp;kVA.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Cotemar</p>
+          <p class="ref-card__lugar">Ciudad del Carmen, Campeche</p>
+          <p class="ref-card__desc">Ingenier&iacute;a, suministro, instalaci&oacute;n y puesta en marcha de un UPS de 5&nbsp;kVA trif&aacute;sico para proyecto de plataforma marina.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Planta de Nitr&oacute;geno Cantarell (LINDE)</p>
+          <p class="ref-card__lugar">Villahermosa y El Salto, Jalisco</p>
+          <p class="ref-card__desc">Servicio de mantenimiento especializado a motores tipo jaula de ardilla marca Hyundai de 2&nbsp;560&nbsp;HP y de 600&nbsp;HP.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Weatherford</p>
+          <p class="ref-card__lugar">M&eacute;xico</p>
+          <p class="ref-card__desc">Cliente de VMS Energy en servicios petroleros.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">GAM</p>
+          <p class="ref-card__lugar">M&eacute;xico</p>
+          <p class="ref-card__desc">Cliente de VMS Energy en alimentos y bebidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </main>
 
-  <footer id="footer" class="foot" aria-label="Pie de p&aacute;gina corporativo">
+  <footer class="site-footer">
   <div class="container">
-    <div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <img src="assets/brand/vms_logo_white.png" alt="Logotipo VMS Energy" loading="lazy" decoding="async" width="132" height="44" style="display:block;border-radius:8px;object-fit:contain">
-      </div>
-      <p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.6">Ofrecemos venta y servicios de calidad en sistemas de generaci&oacute;n y distribuci&oacute;n de energ&iacute;a el&eacute;ctrica, con las soluciones m&aacute;s vers&aacute;tiles y sustentables para nuestros clientes.</p>
-      <div style="display:flex;gap:14px;margin-top:14px">
-        <a href="https://www.facebook.com/profile.php?id=61576615590335" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12"/></svg>
-        </a>
-        <a href="https://www.instagram.com/vmsenergy" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/vmsenergy/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="foot-social__link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.7v2.2h.1c.6-1.1 2.1-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.8c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
-        </a>
-      </div>
-    </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Cont&aacute;ctanos</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="tel:+523338130739" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 33 3813 0739</a> Guadalajara</li>
-        <li><a href="tel:+529383814824" style="color:#4aa3ff;font-weight:700;text-decoration:none">+52 938 381 4824</a> Ciudad del Carmen</li>
-        <li><a href="mailto:contacto@vmsenergy.com" style="color:#fff;text-decoration:none;font-weight:700">contacto@vmsenergy.com</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Servicios destacados</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="confiabilidad-electrica-industrial.html#inicio" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-          <li><a href="lp-mantenimiento-oil-gas.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Mantenimiento Oil &amp; Gas</a></li>
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">&Uacute;nete al equipo</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="carreras.html" style="background:#fff;color:#0f4c81;text-decoration:none;border-radius:999px;padding:.2rem .6rem;display:inline-block;font-weight:700">Bolsa de trabajo</a></li>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
         </ul>
       </div>
-    </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Nosotros</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="aviso-privacidad.html" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Aviso de Privacidad</a></li>
-        <li><a href="codigo-conducta.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">C&oacute;digo de &Eacute;tica y Conducta</a></li>
-        <li><a href="politica-interna_antilavado.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Interna Antilavado</a></li>
-        <li><a href="politica-antisoborno.html" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Pol&iacute;tica Antisoborno</a></li>
-        <li><a href="directorio.html" style="color:#cbd5e1;text-decoration:none">Directorio</a></li>
-        <li><a href="sostenibilidad.html" style="color:#cbd5e1;text-decoration:none">Sostenibilidad</a></li>
-
-        <li><a href="buzon-sugerencias.html" style="color:#cbd5e1;text-decoration:none">Buz&oacute;n de sugerencias</a></li>
-      </ul>
-      <div style="margin-top:14px">
-        <h4 style="color:#fff;margin:0 0 10px">Recursos</h4>
-        <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-          <li><a href="blog.html" style="color:#cbd5e1;text-decoration:none">Blog</a></li>
-          <li><a href="certificaciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Certificaciones</a></li>
-            <li><a href="glosario-cable-electrico.html" style="color:#cbd5e1;text-decoration:none">Glosario t&eacute;cnico de cable</a></li>
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
         </ul>
       </div>
+
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Navegaci&oacute;n</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Inicio</a></li>
-        <li><a href="nosotros.html#inicio" style="color:#cbd5e1;text-decoration:none">Nosotros</a></li>
-        <li><a href="soluciones.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones</a></li>
-        <li><a href="procura.html#inicio" style="color:#cbd5e1;text-decoration:none">Suministro t&eacute;cnico</a></li>
-        <li><a href="VMShop.html" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="carreras.html" style="color:#cbd5e1;text-decoration:none">Carreras</a></li>
-        <li><a href="contacto.html#inicio" style="color:#cbd5e1;text-decoration:none">Contactar</a></li>
-      </ul>
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
     </div>
 
-    <div>
-      <h4 style="color:#fff;margin:0 0 10px">Servicios EPC</h4>
-      <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="soluciones_electromecanicas.html#inicio" style="color:#cbd5e1;text-decoration:none">Soluciones Electromec&aacute;nicas</a></li>
-        <li><a href="soluciones_automatizacion_control.html#inicio" style="color:#cbd5e1;text-decoration:none">Automatizaci&oacute;n y Control</a></li>
-        <li><a href="soluciones_solar_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Energ&iacute;a Solar Industrial</a></li>
-        <li><a href="soluciones_verde_no_solar.html#inicio" style="color:#cbd5e1;text-decoration:none">Generaci&oacute;n Verde No Solar</a></li>
-        <li><a href="soluciones_oil_gas.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="soluciones_infraestructura_energetica.html#inicio" style="color:#cbd5e1;text-decoration:none">Infraestructura Energ&eacute;tica</a></li>
-        <li><a href="confiabilidad-electrica-industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
-        <li><a href="soluciones_iluminacion_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">Iluminaci&oacute;n Industrial</a></li>
-        <li><a href="soluciones_hvac_industrial.html#inicio" style="color:#cbd5e1;text-decoration:none">HVAC Industrial</a></li>
-      </ul>
-    </div>
   </div>
 </footer>
-<div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
-  Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
-</div>
+
+  <div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
+    Desarrollado por el equipo digital de VMS Energy &middot; v10.1<br>Derechos reservados 2026 VMS Energy
+  </div>
+
+  
 
   <script>
     (function(){
-      var toggle = document.getElementById('menuToggle');
-      var list = document.getElementById('menuList');
-      if(toggle && list){
-        toggle.addEventListener('click', function(){
-          var open = list.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-      }
-      document.addEventListener('click', function(e){
-        if(!toggle || !list) return;
-        if(window.innerWidth > 680) return;
-        if(!list.contains(e.target) && !toggle.contains(e.target)){
-          list.classList.remove('is-open');
-          toggle.setAttribute('aria-expanded','false');
-        }
-      });
-      window.addEventListener('resize', function(){
-        if(window.innerWidth > 680){
-          list.classList.remove('is-open');
-          if(toggle) toggle.setAttribute('aria-expanded','false');
-        }
-      });
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var tabs = Array.prototype.slice.call(document.querySelectorAll('#ecoTabs .tab'));
-      var panels = Array.prototype.slice.call(document.querySelectorAll('.tab-panel'));
-      if(!tabs.length || !panels.length) return;
+      var tabs=Array.prototype.slice.call(document.querySelectorAll('#ecoTabs .tab'));
+      var panels=Array.prototype.slice.call(document.querySelectorAll('.ecosystem .tab-panel'));
+      if(!tabs.length||!panels.length)return;
       tabs.forEach(function(tab){
-        tab.addEventListener('click', function(){
-          var key = tab.getAttribute('data-tab');
+        tab.addEventListener('click',function(){
+          var key=tab.getAttribute('data-tab');
           tabs.forEach(function(t){
-            var active = t === tab;
-            t.classList.toggle('is-active', active);
-            t.setAttribute('aria-selected', active ? 'true' : 'false');
+            var active=t===tab;
+            t.classList.toggle('is-active',active);
+            t.setAttribute('aria-selected',active?'true':'false');
           });
           panels.forEach(function(p){
-            p.classList.toggle('is-active', p.getAttribute('data-panel') === key);
+            p.classList.toggle('is-active',p.getAttribute('data-panel')===key);
           });
         });
       });
     })();
   </script>
 
-  <script id="ux-nav-enhancer">
-  (function(){
-    var nav = document.querySelector('header nav');
-    if(!nav) return;
-    var currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    var links = Array.prototype.slice.call(nav.querySelectorAll('a[href]'));
-    links.forEach(function(link){
-      var href = (link.getAttribute('href') || '').trim();
-      if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
-      var path = href.split('#')[0].toLowerCase();
-      if(!path) return;
-      if(path === currentPath){
-        link.classList.add('is-active');
-        link.setAttribute('aria-current','page');
-        var inSubmenu = link.closest('.submenu');
-        if(inSubmenu){
-          var trigger = inSubmenu.parentElement && inSubmenu.parentElement.querySelector(':scope > a');
-          if(trigger){ trigger.classList.add('is-active'); }
-        }
-      }
-    });
-    var media = window.matchMedia('(max-width: 680px)');
-    var submenuParents = Array.prototype.slice.call(nav.querySelectorAll('.nav-item--has-submenu'));
-    submenuParents.forEach(function(parent){
-      var trigger = parent.querySelector(':scope > a');
-      var submenu = parent.querySelector(':scope > .submenu');
-      if(!trigger || !submenu) return;
-      trigger.addEventListener('click', function(e){
-        if(!media.matches) return;
-        e.preventDefault();
-        var open = parent.classList.toggle('is-open');
-        submenu.style.display = open ? 'block' : 'none';
-        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    });
-  })();
-  </script>
+  
 
   <div class="quicklead-modal" id="quickLeadModal" aria-hidden="true">
     <div class="quicklead-modal__backdrop" data-close-modal="quickLeadModal"></div>
@@ -945,11 +1554,15 @@
       <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
       <form class="quicklead-form" id="quickLeadForm" novalidate>
         <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
-        <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
+        <input type="email" id="qlEmail" name="email" placeholder="Correo electrónico" autocomplete="email" required>
         <input type="text" id="qlEmpresa" name="empresa" placeholder="Empresa" autocomplete="organization" required>
-        <textarea id="qlMessage" name="mensaje" placeholder="Descripci&oacute;n breve"></textarea>
+        <textarea id="qlMessage" name="mensaje" placeholder="Número de motores, potencia total, protocolo de comunicación actual..."></textarea>
         <p class="quicklead-form__feedback" id="quickLeadFeedback" aria-live="polite"></p>
-        <button class="quicklead-form__send" type="submit">Enviar</button>
+                  <div class="form-consent">
+            <input type="checkbox" id="privacidad-1" name="privacidad" required>
+            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
+          </div>
+          <button class="quicklead-form__send" type="submit">Enviar consulta</button>
       </form>
     </section>
   </div>
@@ -960,41 +1573,93 @@
     var closeNodes=modal?modal.querySelectorAll('[data-close-modal="quickLeadModal"]'):[];
     var form=document.getElementById('quickLeadForm');
     var feedback=document.getElementById('quickLeadFeedback');
-    if(!modal||!trigger||!form) return;
-    function openModal(e){ if(e) e.preventDefault(); modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-    function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+    if(!modal||!trigger||!form)return;
+    function openModal(e){if(e)e.preventDefault();modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+    function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
     trigger.addEventListener('click',openModal);
-    Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
+    Array.prototype.forEach.call(closeNodes,function(node){node.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('is-open'))closeModal();});
     form.addEventListener('submit',function(e){
-      e.preventDefault(); feedback.textContent='';
+      e.preventDefault();feedback.textContent='';
       var name=(document.getElementById('qlName').value||'').trim();
       var email=(document.getElementById('qlEmail').value||'').trim();
       var empresa=(document.getElementById('qlEmpresa').value||'').trim();
       var message=(document.getElementById('qlMessage').value||'').trim();
-      if(!name||!email||!empresa){ feedback.textContent='Completa nombre, correo y empresa.'; return; }
+      if(!name||!email||!empresa){feedback.textContent='Completa nombre, correo y empresa.';return;}
       var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-      var subject='Lead web - Confiabilidad Electrica (UPS/BESS)';
+      var subject='Lead web - Confiabilidad electrica industrial';
       var body=encodeURIComponent(bodyLines.join('\n'));
       window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-      closeModal(); form.reset();
+      closeModal();form.reset();
     });
   })();
   </script>
-  <div class="sticky-actions" aria-label="Acciones r&aacute;pidas">
+  <div class="sticky-actions" aria-label="Acciones rápidas">
     <a class="sticky-actions__btn sticky-actions__btn--left" href="https://wa.me/523332582234" target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">
       <svg class="sticky-actions__icon" viewBox="0 0 32 32" aria-hidden="true">
         <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
         <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
       </svg>
-      Contactanos
+      Contáctanos
     </a>
     <a class="sticky-actions__btn sticky-actions__btn--right" href="#quickLeadModal" data-cta="sticky-more-info">
       <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
         <path fill="#fff" d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.75-.75a.75.75 0 0 0-.75.75v.2l8 4.8 8-4.8v-.2a.75.75 0 0 0-.75-.75H4.75zm15.25 3.28-7.48 4.49a1 1 0 0 1-1.04 0L4 9.28v7.97c0 .41.34.75.75.75h14.5c.41 0 .75-.34.75-.75V9.28z"/>
       </svg>
-      Formulario b&aacute;sico
+      Formulario básico
     </a>
   </div>
+
+  <div class="sticky-actions" aria-label="Acciones rápidas">
+    <a class="sticky-actions__btn sticky-actions__btn--left" href="https://wa.me/523338130739?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20confiabilidad%20el%C3%A9ctrica%20industrial%20UPS%20y%20BESS" target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">
+      <svg class="sticky-actions__icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+        <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
+      </svg>
+      Contáctanos
+    </a>
+    <a class="sticky-actions__btn sticky-actions__btn--right" href="#quickLeadModal" data-cta="sticky-more-info">
+      <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#fff" d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.75-.75a.75.75 0 0 0-.75.75v.2l8 4.8 8-4.8v-.2a.75.75 0 0 0-.75-.75H4.75zm15.25 3.28-7.48 4.49a1 1 0 0 1-1.04 0L4 9.28v7.97c0 .41.34.75.75.75h14.5c.41 0 .75-.34.75-.75V9.28z"/>
+      </svg>
+      Formulario básico
+    </a>
+  </div>
+
+  
+<!-- 25-ago-2026: se retiro un modal de 2133 bytes que nadie podia abrir.
+     El boton flotante apunta al otro modal, sus campos no tenian atributo name y
+     ningun JS lo manejaba. Su contenido si era el correcto para esta pagina:
+     titulo 'Solicitar evaluacion de confiabilidad' y una lista de servicios
+     (UPS industrial / BESS peak shaving / BESS respaldo / BESS+Solar / hibrida UPS+BESS).
+     Reproducir esa lista como campo cuando TI rehaga el formulario. -->
+
+
+
+
+  
+
+  
+<!-- 25-ago-2026: se retiro una copia duplicada del modal de CCM y su script
+     (3194 bytes). Estaba pegada dos veces, lo que producia 8 ids
+     repetidos; el navegador solo atendia la primera copia, asi que quien abriera
+     la segunda no lograba enviar nada. -->
+
+  <div class="sticky-actions" aria-label="Acciones rápidas">
+    <a class="sticky-actions__btn sticky-actions__btn--left" href="https://wa.me/523332582234" target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">
+      <svg class="sticky-actions__icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
+        <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
+      </svg>
+      Contáctanos
+    </a>
+    <a class="sticky-actions__btn sticky-actions__btn--right" href="#quickLeadModal" data-cta="sticky-more-info">
+      <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#fff" d="M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75zm2.75-.75a.75.75 0 0 0-.75.75v.2l8 4.8 8-4.8v-.2a.75.75 0 0 0-.75-.75H4.75zm15.25 3.28-7.48 4.49a1 1 0 0 1-1.04 0L4 9.28v7.97c0 .41.34.75.75.75h14.5c.41 0 .75-.34.75-.75V9.28z"/>
+      </svg>
+      Formulario básico
+    </a>
+  </div>
+
 </body>
 </html>

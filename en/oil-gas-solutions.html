@@ -59,7 +59,7 @@
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
-    .btn--primary{background:linear-gradient(180deg,var(--cobalt),#0b3c67);border-color:rgba(8,53,92,.6);color:#fff}
+    
     .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
 
     .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
@@ -543,7 +543,7 @@
                   <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable</a></li>
                   <li><a href="../lp-cables-fotovoltaicos.html" hreflang="es">Photovoltaic Cables</a></li>
                   <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables</a></li>
-                  <li><a href="../lp-cables-alta-tension.html" hreflang="es">High Voltage Cables</a></li>
+                  
                   <li><a href="../lp-cables-extra-alta-tension.html" hreflang="es">Extra High Voltage Cables</a></li>
                   <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives</a></li>
                 </ul>
@@ -617,8 +617,8 @@
         </div>
         <div class="kpis" aria-label="Metrics">
           <div class="kpi">
-            <img class="kpi__badge" src="../assets/img/20_anos_VMS_Energy_badge_EPC.webp" alt="VMS Energy nearly 20 years badge" loading="lazy" decoding="async">
-            <div class="kpi__body"><strong>Nearly 20 years</strong> delivering EPC projects</div>
+            <img class="kpi__badge" src="../assets/img/badge-experiencia-vms-epc.webp" alt="Insignia VMS Energy &mdash; EPC desde 2008" loading="lazy" decoding="async">
+            <div class="kpi__body"><strong>18 years</strong> delivering EPC projects</div>
           </div>
           <div class="kpi">
             <img class="kpi__badge" src="../assets/img/Sistema_gestion_integral.webp" alt="Integrated management system badge" loading="lazy" decoding="async">
@@ -656,7 +656,7 @@
                 <p>Technical reports, control philosophies, equipment selection, and specifications for safe operation.</p>
               </div>
             </article>
-            <article class="process-slide" data-process-slide style="--slide-image:url('../assets/img/Suministro _ejecucion_coordinada_oil_gas.webp')">
+            <article class="process-slide" data-process-slide style="--slide-image:url('../assets/img/Suministro_ejecucion_coordinada_oil_gas.webp')">
               <div class="process-slide__body">
                 <span class="process-slide__stage">Technical supply and execution</span>
                 <h3>Coordinated supply and execution</h3>
@@ -1026,7 +1026,7 @@
 
   function inferSectorFromPath(path){
     const p = normalizePath(path).toLowerCase();
-    if(p.indexOf("/oil&gas/") > -1) return "oilgas";
+    if(p.indexOf("/oil-gas/") > -1 || p.indexOf("/oil&gas/") > -1) return "oilgas";
     if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
     if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
     return "";
