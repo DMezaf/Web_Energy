@@ -14,18 +14,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Variadores de Frecuencia Triol M&eacute;xico | VMS Energy</title>
-  <meta name="description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Distribuidor autorizado con inventario en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
+  <meta name="description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Inventario propio en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
   <link rel="canonical" href="https://vmsenergy.com/lp-triol-variadores.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
   <meta property="og:title" content="Variadores de Frecuencia Triol M&eacute;xico | VMS Energy" />
-  <meta property="og:description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Distribuidor autorizado con inventario en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
+  <meta property="og:description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Inventario propio en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
   <meta property="og:url" content="https://vmsenergy.com/lp-triol-variadores.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/landings/triol/hero-triol-variadores-vms-energy.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Variadores de Frecuencia Triol M&eacute;xico | VMS Energy" />
-  <meta name="twitter:description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Distribuidor autorizado con inventario en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
+  <meta name="twitter:description" content="Variadores de frecuencia Triol para miner&iacute;a, Oil &amp; Gas e industria pesada. Inventario propio en M&eacute;xico para entrega inmediata. Soporte t&eacute;cnico, refacciones y capacitaci&oacute;n." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/triol/hero-triol-variadores-vms-energy.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-triol-variadores.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-triol-variadores.html" />
@@ -78,10 +78,18 @@
       }
     }
     .hero{padding:26px 0}
-    .hero__box{background:linear-gradient(115deg,rgba(8,18,34,.82),rgba(15,76,129,.54)),url("assets/img/landings/triol/hero-triol-variadores-vms-energy.webp") center/cover no-repeat;border-radius:18px;padding:34px;color:#fff}
+    /* HERO 30-ago-2026 · Retirada la fotografia generada
+   (hero-triol-variadores-vms-energy.webp): gabinetes inventados, HMI
+   falsa y tecnico sin guantes, en una pagina que vende 38 unidades
+   reales en almacen. Queda el degradado hasta que llegue la fotografia
+   del lote. PARA RECONECTAR: poner la url en --triol-hero-img, p.ej.
+   <section class="hero" style="--triol-hero-img:url('assets/img/landings/triol/hero-triol-variadores-vms-energy.webp')"> */
+    .hero__box{background:linear-gradient(115deg,rgba(8,18,34,.82),rgba(15,76,129,.54)),
+               var(--triol-hero-img,none) center/cover no-repeat;
+               border-radius:18px;padding:34px;color:#fff}
     h1{margin:8px 0 10px;font-size:clamp(30px,5vw,48px);line-height:1.05}
     p{margin:0}
-    .kicker{display:inline-flex;background:rgba(255,255,255,.14);padding:.22rem .6rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-weight:700}
+    .kicker{display:inline-flex;background:rgba(255,255,255,.14);padding:.22rem .6rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-weight:700;color:#fff}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     
     .grid{padding:0 0 24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -106,26 +114,51 @@
     .shop-toolbar__chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #d8e2ef;border-radius:999px;padding:.3rem .7rem;font-size:12px;color:#113960;font-weight:700}
      .cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:10px 0 16px}
     .cat-card{background:#fff;border:1px solid #dfe8f3;border-radius:14px;padding:14px;box-shadow:0 1px 4px rgba(16,35,61,.05);display:flex;flex-direction:column;gap:8px}
-    .cat-card__media{margin:-14px -14px 4px;border-radius:14px 14px 12px 12px;overflow:hidden;aspect-ratio:16/9;min-height:172px;max-height:172px;background:#edf4fb}
-    .cat-card__media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+    /* ── Banda de familia ──────────────────────────────────────────────
+       30-ago-2026. Sustituye a `.cat-card__media`, que mostraba cuatro
+       imagenes generadas: gabinetes inventados, tecnicos sin guantes y
+       fuego, en una pagina que vende 38 unidades reales de almacen.
+       Ademas llegaban verticales (1024x1536) a un hueco de 249x172 y
+       perdian la placa que identificaba la familia.
+       Se probo el arte real de Triol —entero y en recorte de detalle— y a
+       249x172 resulta ilegible: son elevaciones muy altas y estrechas
+       (el SD mide 256x1317, relacion 0.19).
+       La banda dice ademas el stock, que es el argumento de la pagina.
+       El numero lo calcula el mismo cuenta() que alimenta los botones, asi
+       que no puede desviarse del inventario.
+       Para volver a imagenes: sustituir el <div class="cat-card__band">
+       por <div class="cat-card__media"><img ...></div> y estas reglas. */
+    .cat-card__band{margin:-14px -14px 10px;border-radius:14px 14px 12px 12px;
+      height:112px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;
+      background:linear-gradient(135deg,#0f2747,var(--concept-primary));color:#fff;position:relative;overflow:hidden}
+    .cat-card__band::before{content:"";position:absolute;inset:0;opacity:.16;
+      background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+      background-size:22px 22px}
+    .cat-card__band--uc{background:linear-gradient(135deg,#0f2747,#1D5FA4)}
+    .cat-card__band--uh{background:linear-gradient(135deg,#0d2340,#0F4C81)}
+    .cat-card__band--sd{background:linear-gradient(135deg,#0a1c33,#123B63)}
+    .cat-card__fam{position:relative;font-size:40px;font-weight:900;letter-spacing:.04em;line-height:1}
+    .cat-card__fam--all{font-size:26px;letter-spacing:.02em}
+    .cat-card__stock{position:relative;font-size:11px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;opacity:.86}
     .cat-card__tag{display:inline-flex;align-self:flex-start;background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.16rem .5rem;font-size:11px;font-weight:700}
     .cat-card h3{margin:0;color:#10233d;font-size:18px}
     .cat-card p{margin:0;color:#3f5973;font-size:14px;line-height:1.45}
     .cat-card ul{margin:0;padding-left:18px;color:#10233d;display:grid;gap:5px}
     .cat-card li{font-size:13px;line-height:1.4}
-    .cat-card__cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;background:#10233d;color:#fff;text-decoration:none;font-weight:700;border:1px solid #10233d;border-radius:10px;padding:10px 12px;cursor:pointer}
+    .cat-card__cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:5px;background:#10233d;color:#fff;text-decoration:none;font-weight:700;border:1px solid #10233d;border-radius:10px;padding:10px 12px;cursor:pointer}
     .cat-card__cta:hover{background:#fff;color:#10233d}
     .cat-hero{margin:0 0 14px;border:1px solid #dbe6f2;border-radius:14px;background:linear-gradient(120deg,#0f2747,var(--concept-primary));color:#fff;padding:16px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,.9fr);gap:18px;align-items:center;overflow:hidden}
     .cat-hero[data-theme="ALL"]{background:linear-gradient(120deg,#0f2747,var(--concept-primary))}
     .cat-hero[data-theme="UC"]{background:linear-gradient(120deg,#123b63,#1f7aa8)}
     .cat-hero[data-theme="UH"]{background:linear-gradient(120deg,#2b2f4a,#5a3b76)}
-    .cat-hero[data-theme="SD"]{background:linear-gradient(120deg,#2f3b1f,#6b8a2f)}
+    .cat-hero[data-theme="SD"]{background:linear-gradient(120deg,#2f3b1f,var(--vms-green-600))}
     .cat-hero__content{position:relative;z-index:1}
     .cat-hero__kicker{display:inline-flex;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.18rem .5rem;font-size:11px;font-weight:700}
     .cat-hero__title{margin:8px 0 6px;font-size:clamp(20px,3vw,28px);line-height:1.1}
     .cat-hero__text{margin:0;color:#d9e6f8;max-width:75ch}
-    .cat-hero__media{min-height:180px;height:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.06));box-shadow:0 12px 26px rgba(6,18,33,.2);display:flex;align-items:center;justify-content:center}
-    .cat-hero__media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+        /* El banner perdio su hueco de imagen junto con las tarjetas: queda a
+       una sola columna hasta que existan fotografias reales del lote. */
+    .cat-hero{grid-template-columns:1fr}
     .shop-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:0 0 14px}
     .shop-input,.shop-select{width:100%;border:1px solid #cfdceb;border-radius:10px;padding:10px 11px;font:inherit;color:#10233d;background:#fff}
     .shop-input:focus,.shop-select:focus{outline:2px solid rgba(15,76,129,.25);border-color:var(--concept-primary)}
@@ -160,7 +193,7 @@
      .insight-card p{margin:0;color:#425a72;line-height:1.45;font-size:14px;min-height:64px}
      .insight-card__cta{margin-top:auto;display:inline-flex;align-items:center;color:var(--concept-primary);font-weight:700;text-decoration:none}
      .insight-card__cta:hover{text-decoration:underline}
-     @media (max-width:760px){.grid{grid-template-columns:1fr}.foot__grid{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr 1fr}.shop-filters{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr}.cat-hero{grid-template-columns:1fr}.cat-hero__media{order:-1;min-height:160px}.insights__grid{grid-template-columns:1fr 1fr}}
+     @media (max-width:760px){.grid{grid-template-columns:1fr}.foot__grid{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr 1fr}.shop-filters{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr}.cat-hero{grid-template-columns:1fr}.insights__grid{grid-template-columns:1fr 1fr}}
      @media (max-width:520px){.shop-grid{grid-template-columns:1fr}.insights__grid{grid-template-columns:1fr}}
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
 .submenu--mega{min-width:500px;gap:0}.nav-item--has-submenu:hover .submenu--mega,.nav-item--has-submenu:has(:focus-visible) .submenu--mega{display:flex}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
@@ -233,7 +266,7 @@
         "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
         "areaServed":"M\u00e9xico",
         "serviceType":"Suministro, ingenier\u00eda e integraci\u00f3n de variadores de frecuencia industriales",
-        "description":"Distribuidor autorizado de variadores de frecuencia Triol para operaci\u00f3n cr\u00edtica en Oil \u0026 Gas, miner\u00eda, agua y manufactura. Incluye ingeni er\u00eda de aplicaci\u00f3n, comisionamiento y soporte t\u00e9cnico especializado en M\u00e9xico.",
+        "description":"Variadores de frecuencia Triol con inventario propio en M\u00e9xico para operaci\u00f3n cr\u00edtica en Oil \u0026 Gas, miner\u00eda, agua y manufactura. Incluye ingeni er\u00eda de aplicaci\u00f3n, comisionamiento y soporte t\u00e9cnico especializado en M\u00e9xico.",
         "hasOfferCatalog":{
           "@type":"OfferCatalog",
           "name":"Cat\u00e1logo Variadores Triol — VMS Energy",
@@ -333,6 +366,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -456,8 +490,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -473,7 +505,7 @@
 
 
   <main id="contenido">
-    <section class="hero">
+    <section class="hero" style="--triol-hero-img:url('assets/img/landings/triol/hero-triol-variadores-vms-energy.webp')">
       <div class="container">
         <article class="hero__box">
           <span class="kicker">L&iacute;nea especializada</span>
@@ -524,8 +556,9 @@
         </div>
         <section class="cat-grid" aria-label="Categor&iacute;as de variadores">
           <article class="cat-card">
-            <div class="cat-card__media">
-              <img src="assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp" alt="Cat&aacute;logo completo de variadores Triol" loading="lazy" decoding="async" />
+            <div class="cat-card__band" aria-hidden="true">
+              <span class="cat-card__fam cat-card__fam--all">AT24</span>
+              <span class="cat-card__stock" id="bandCountAll"></span>
             </div>
             <span class="cat-card__tag">Cat&aacute;logo completo</span>
             <h3>Todos los variadores</h3>
@@ -538,8 +571,9 @@
             <button class="cat-card__cta" type="button" data-family-quick="">Ver todos <span id="catCountAll"></span></button>
           </article>
           <article class="cat-card">
-            <div class="cat-card__media">
-              <img src="assets/img/landings/triol/card-triol-variadores-uc.webp" alt="Categor&iacute;a UC de variadores Triol" loading="lazy" decoding="async" />
+            <div class="cat-card__band cat-card__band--uc" aria-hidden="true">
+              <span class="cat-card__fam">UC</span>
+              <span class="cat-card__stock" id="bandCountUC"></span>
             </div>
             <span class="cat-card__tag">Categor&iacute;a UC</span>
             <h3>Variadores UC</h3>
@@ -552,8 +586,9 @@
             <button class="cat-card__cta" type="button" data-family-quick="UC">Ver UC disponibles <span id="catCountUC"></span></button>
           </article>
           <article class="cat-card">
-            <div class="cat-card__media">
-              <img src="assets/img/landings/triol/card-triol-variadores-uh.webp" alt="Categor&iacute;a UH de variadores Triol" loading="lazy" decoding="async" />
+            <div class="cat-card__band cat-card__band--uh" aria-hidden="true">
+              <span class="cat-card__fam">UH</span>
+              <span class="cat-card__stock" id="bandCountUH"></span>
             </div>
             <span class="cat-card__tag">Categor&iacute;a UH</span>
             <h3>Variadores UH</h3>
@@ -566,8 +601,9 @@
             <button class="cat-card__cta" type="button" data-family-quick="UH">Ver UH disponibles <span id="catCountUH"></span></button>
           </article>
           <article class="cat-card">
-            <div class="cat-card__media">
-              <img src="assets/img/landings/triol/card-triol-variadores-sd.webp" alt="Categor&iacute;a SD de variadores Triol" loading="lazy" decoding="async" />
+            <div class="cat-card__band cat-card__band--sd" aria-hidden="true">
+              <span class="cat-card__fam">SD</span>
+              <span class="cat-card__stock" id="bandCountSD"></span>
             </div>
             <span class="cat-card__tag">Categor&iacute;a SD</span>
             <h3>Variadores SD</h3>
@@ -585,9 +621,6 @@
             <span id="catHeroKicker" class="cat-hero__kicker">Cat&aacute;logo completo</span>
             <h3 id="catHeroTitle" class="cat-hero__title">Variadores Triol AT24 para operaci&oacute;n industrial</h3>
             <p id="catHeroText" class="cat-hero__text">Todo el portafolio AT24 en un solo lugar. Compara por capacidad y familia; el precio se cotiza por proyecto.</p>
-          </div>
-          <div class="cat-hero__media">
-            <img id="catHeroImage" src="assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp" alt="Cat&aacute;logo completo de variadores Triol" loading="lazy" decoding="async" />
           </div>
         </section>
         <div class="shop-filters" aria-label="Filtros de cat&aacute;logo">
@@ -869,19 +902,15 @@
   var elBuscar = $('shopSearch'), elFamilia = $('shopFamily'), elOrden = $('shopSort'),
       elCuenta = $('shopCount'), hero = $('catHero'),
       hKicker = $('catHeroKicker'), hTitulo = $('catHeroTitle'),
-      hTexto = $('catHeroText'), hImagen = $('catHeroImage');
+      hTexto = $('catHeroText');
 
   var FAMILIAS = {
-    UC: { nombre: 'UC', desc: 'Solución balanceada para integraciones industriales',
-          img: 'assets/img/landings/triol/card-triol-variadores-uc.webp' },
-    UH: { nombre: 'UH', desc: 'Línea para aplicaciones exigentes, con mayor robustez',
-          img: 'assets/img/landings/triol/card-triol-variadores-uh.webp' },
-    SD: { nombre: 'SD', desc: 'Configuración para necesidades específicas de proceso',
-          img: 'assets/img/landings/triol/card-triol-variadores-sd.webp' }
+    UC: { nombre: 'UC', desc: 'Solución balanceada para integraciones industriales' },
+    UH: { nombre: 'UH', desc: 'Línea para aplicaciones exigentes, con mayor robustez' },
+    SD: { nombre: 'SD', desc: 'Configuración para necesidades específicas de proceso' }
   };
   var TODOS = { nombre: 'Catálogo completo',
-                desc: 'Todo el portafolio AT24 en un solo lugar',
-                img: 'assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp' };
+                desc: 'Todo el portafolio AT24 en un solo lugar' };
 
   /* Orden de las series que no declaran kW en el código. */
   var SERIE_M = { M11: 1, M13: 2, M16: 3, M20: 4 };
@@ -917,7 +946,14 @@
     return {
       i: i, partida: c[0], codigo: c[1], marca: c[2], modelo: modelo,
       familia: fam, potencia: pot.texto, orden: pot.orden,
-      img: 'assets/img/landings/triol/products/variador-triol-' + modelo.toLowerCase() + '.webp'
+      /* Un arte por familia, no por modelo. Los 38 archivos que habia en
+         products/ eran 3 imagenes distintas duplicadas 38 veces (md5:
+         16 UC identicos, 18 UH identicos, 4 SD identicos): Triol entrego
+         una elevacion por familia y se copio con nombre de cada SKU.
+         Nombrarlas por modelo prometia una imagen por capacidad que no
+         existe, y pesaba 1.1 MB de duplicados. */
+      img: 'assets/img/landings/triol/products/variador-triol-at24-'
+           + (fam ? fam.toLowerCase() : 'uc') + '.webp'
     };
   }).filter(function (p) { return p.modelo; });
 
@@ -929,6 +965,16 @@
     .forEach(function (par) {
       var e = $(par[0]);
       if (e) e.textContent = '(' + cuenta(par[1]) + ')';
+    });
+
+  /* La banda de cada tarjeta dice el stock real. Sale del mismo cuenta()
+     que los botones, que a su vez lee la tabla de partidas: no puede
+     desviarse del inventario. */
+  [['bandCountAll', ''], ['bandCountUC', 'UC'], ['bandCountUH', 'UH'], ['bandCountSD', 'SD']]
+    .forEach(function (par) {
+      var e = $(par[0]); if (!e) return;
+      var n = cuenta(par[1]);
+      e.textContent = n + (n === 1 ? ' unidad en stock' : ' unidades en stock');
     });
 
   /* ── pintado ────────────────────────────────────────────────────────── */
@@ -991,7 +1037,6 @@
       ? 'Variadores Triol AT24 ' + d.nombre
       : 'Variadores Triol AT24 para operación industrial';
     if (hTexto) hTexto.textContent = d.desc + '. Compara por capacidad y familia; el precio se cotiza por proyecto.';
-    if (hImagen) { hImagen.src = d.img; hImagen.alt = 'Variadores Triol ' + d.nombre; }
   }
 
   /* ── controles ──────────────────────────────────────────────────────── */

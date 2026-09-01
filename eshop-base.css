@@ -14,7 +14,7 @@
   --muted:        #55708a;
   --line:         rgba(23,44,81,.14);
   --soft:         #F4F8FF;
-  --ok:           #0c8a52;
+  --ok:           var(--vms-green-600);
 }
 
 /* ── 1 · Reset mínimo ──────────────────────────────────────── */
@@ -183,7 +183,7 @@ nav { position: relative }
   background: #eef4ff; border: 1px solid #cfe0f4;
   color: var(--concept-primary); font-size: 12px; font-weight: 800;
 }
-.badge-new   { background: var(--badge-new,   #16A34A); color: #fff }
+.badge-new   { background: var(--badge-new,   var(--vms-green-500)); color: #fff }
 .badge-stock { background: var(--badge-stock,  var(--concept-primary)); color: #fff }
 .badge-quote { background: var(--badge-quote,  #F97316); color: #fff }
 .family-badge {

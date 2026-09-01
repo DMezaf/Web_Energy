@@ -52,7 +52,8 @@
 
     /* ── HERO ── */
     .cp-hero{
-      background:linear-gradient(135deg,#06152b 0%,#0f2747 55%,#0d3a6e 100%);
+      background:linear-gradient(135deg,rgba(6,21,43,.88) 0%,rgba(15,39,71,.80) 55%,rgba(13,58,110,.72) 100%),
+                 url('assets/img/hero_catalogo_proyectos.webp') center/cover no-repeat;
       position:relative;overflow:hidden;padding:56px 0 52px;
     }
     .cp-hero__grid{
@@ -164,7 +165,7 @@
     }
     .cp-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
     .cp-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
-    .cp-feat-story__tag--res{background:#DCFCE7;color:#166534}
+    .cp-feat-story__tag--res{background:var(--success-bg);color:var(--vms-green-700)}
     .cp-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
     .cp-feat-card__footer{
       padding:14px 22px;border-top:1px solid var(--cp-line);
@@ -380,7 +381,7 @@
     /* ── BADGE COLORS ── */
     .badge-epc    {background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
     .badge-auto   {background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
-    .badge-svc    {background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
+    .badge-svc    {background:var(--vms-green-100);color:var(--vms-green-700);border:1px solid var(--vms-green-200)}
     .badge-proj   {background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
     .badge-sum    {background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
     .badge-cap    {background:#DDF8F9;color:#005C5F;border:1px solid #ABE4E6}
@@ -495,6 +496,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -618,8 +620,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -664,7 +664,7 @@
         <div class="cp-hero__stat-lbl">Proyectos ejecutados</div>
       </div>
       <div>
-        <span class="cp-hero__stat-num" data-count="17">0</span>
+        <span class="cp-hero__stat-num" data-count="18">0</span>
         <div class="cp-hero__stat-lbl">Años de operación</div>
       </div>
       <div>
@@ -748,8 +748,8 @@
       </article>
 
       <!-- Card 2: BALAM-A Pemex -->
-      <article class="cp-feat-card" style="--accent-color:#1C7D34;--icon-bg-a:#D3EFD5;--icon-bg-b:#EBF9EC">
-        <div class="cp-feat-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1C7D34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <article class="cp-feat-card" style="--accent-color:var(--vms-green-700);--icon-bg-a:var(--success-bg);--icon-bg-b:var(--vms-green-100)">
+        <div class="cp-feat-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0F5E2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
         <div class="cp-feat-card__body">
           <span class="cp-feat-card__type badge-svc">Servicio</span>
           <h3 class="cp-feat-card__title">Rehabilitación integral de 14 transformadores — Plataforma BALAM-A</h3>
@@ -1135,7 +1135,7 @@
       if (c.indexOf('capacit') > -1) return '#00787C';
       if (c.indexOf('suministro') > -1) return '#A84813';
       if (c.indexOf('proyecto') > -1) return '#7852AB';
-      if (c.indexOf('servicio') > -1) return '#1C7D34';
+      if (c.indexOf('servicio') > -1) return '#0F5E2D';
       return '#636A71';
     }
   function isSector(r, sector) {

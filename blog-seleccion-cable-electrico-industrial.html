@@ -81,20 +81,20 @@
     .insul-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
     .insul-card{padding:18px 20px;border-radius:16px;border:1px solid rgba(23,44,81,.14)}
     .insul-card--xlpe{background:#f0f6ff;border-color:rgba(15,76,129,.22)}
-    .insul-card--epr{background:#f0fdf4;border-color:rgba(22,101,52,.22)}
+    .insul-card--epr{background:#f0fdf4;border-color:rgba(15,94,45,.22)}
     .insul-card--xlpe h3{color:var(--concept-primary);margin:0 0 10px;font-size:1.12rem}
-    .insul-card--epr h3{color:#166534;margin:0 0 10px;font-size:1.12rem}
+    .insul-card--epr h3{color:var(--vms-green-700);margin:0 0 10px;font-size:1.12rem}
     .insul-card p{margin:0 0 8px;font-size:.93rem;color:#314a67}
     .insul-badge{display:inline-block;padding:.16rem .5rem;border-radius:6px;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-right:4px;margin-bottom:4px}
     .insul-badge--xlpe{background:rgba(15,76,129,.1);color:var(--concept-primary)}
-    .insul-badge--epr{background:rgba(22,101,52,.1);color:#166534}
+    .insul-badge--epr{background:rgba(15,94,45,.1);color:var(--vms-green-700)}
 
     /* Factors table */
     .factor-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.93rem}
     .factor-table th{background:var(--vms-blue-800);color:#fff;padding:9px 12px;text-align:left;font-weight:700}
     .factor-table td{padding:8px 12px;border-bottom:1px solid rgba(23,44,81,.1);color:#203754}
     .factor-table tr:nth-child(even) td{background:#f5f9ff}
-    .factor-table .badge-ok{display:inline-block;padding:.1rem .4rem;border-radius:5px;background:rgba(22,101,52,.12);color:#166534;font-weight:700;font-size:.8rem}
+    .factor-table .badge-ok{display:inline-block;padding:.1rem .4rem;border-radius:5px;background:rgba(15,94,45,.12);color:var(--vms-green-700);font-weight:700;font-size:.8rem}
     .factor-table .badge-warn{display:inline-block;padding:.1rem .4rem;border-radius:5px;background:rgba(180,83,9,.12);color:#92400e;font-weight:700;font-size:.8rem}
 
     /* Case study */
@@ -102,8 +102,8 @@
     .case-kpi{background:linear-gradient(135deg,#eef4ff,#e4efff);border:1px solid rgba(15,76,129,.16);border-radius:14px;padding:16px;text-align:center}
     .case-kpi__val{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--concept-primary);line-height:1;display:block}
     .case-kpi__lbl{font-size:.82rem;color:#4a5f79;margin-top:4px;display:block}
-    .case-result{background:#f0fdf4;border:1px solid rgba(22,101,52,.2);border-radius:14px;padding:16px 18px;margin:14px 0}
-    .case-result h4{margin:0 0 8px;color:#166534;font-size:1rem}
+    .case-result{background:#f0fdf4;border:1px solid rgba(15,94,45,.2);border-radius:14px;padding:16px 18px;margin:14px 0}
+    .case-result h4{margin:0 0 8px;color:var(--vms-green-700);font-size:1rem}
     .case-result p{margin:0;font-size:.92rem;color:#203754}
 
     /* Error cards */
@@ -111,7 +111,7 @@
     .error-card{padding:16px 18px;border-radius:16px;border:1px solid rgba(153,27,27,.18);background:linear-gradient(135deg,rgba(153,27,27,.05),rgba(239,68,68,.04))}
     .error-card h4{margin:0 0 6px;color:#991b1b;font-size:1rem}
     .error-card p{margin:0;color:#4b3030;font-size:.92rem}
-    .error-card .fix{margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(22,101,52,.08);border:1px solid rgba(22,101,52,.14);color:#166534;font-size:.88rem}
+    .error-card .fix{margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(15,94,45,.08);border:1px solid rgba(15,94,45,.14);color:var(--vms-green-700);font-size:.88rem}
 
     /* Norms table */
     .norm-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.91rem}
@@ -321,6 +321,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -444,8 +445,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -499,10 +498,10 @@
           <thead><tr><th>Factor</th><th>Condición</th><th>Valor típico</th><th>Impacto</th></tr></thead>
           <tbody>
             <tr><td><strong>Temperatura ambiente</strong></td><td>Hermosillo, Tabasco (40–43°C)</td><td>k_T = 0.87–0.82</td><td class="badge-warn" style="color:#92400e">−13 a −18%</td></tr>
-            <tr><td><strong>Temperatura ambiente</strong></td><td>Guadalajara, CDMX (25–27°C)</td><td>k_T = 1.02–1.04</td><td class="badge-ok" style="color:#166534">+2 a +4%</td></tr>
+            <tr><td><strong>Temperatura ambiente</strong></td><td>Guadalajara, CDMX (25–27°C)</td><td>k_T = 1.02–1.04</td><td class="badge-ok" style="color:var(--vms-green-700)">+2 a +4%</td></tr>
             <tr><td><strong>Agrupamiento bandeja</strong></td><td>3 cables trifásicos juntos</td><td>k_A = 0.82</td><td class="badge-warn" style="color:#92400e">−18%</td></tr>
             <tr><td><strong>Agrupamiento bandeja</strong></td><td>6 cables trifásicos juntos</td><td>k_A = 0.67</td><td class="badge-warn" style="color:#92400e">−33%</td></tr>
-            <tr><td><strong>Resistividad del suelo</strong></td><td>Suelo húmedo (ρ_T = 0.9 K·m/W)</td><td>k_ρ = 1.05</td><td class="badge-ok" style="color:#166534">+5%</td></tr>
+            <tr><td><strong>Resistividad del suelo</strong></td><td>Suelo húmedo (ρ_T = 0.9 K·m/W)</td><td>k_ρ = 1.05</td><td class="badge-ok" style="color:var(--vms-green-700)">+5%</td></tr>
             <tr><td><strong>Resistividad del suelo</strong></td><td>Suelo seco/arenoso (ρ_T = 2.5 K·m/W)</td><td>k_ρ = 0.78</td><td class="badge-warn" style="color:#92400e">−22%</td></tr>
           </tbody>
         </table></div>

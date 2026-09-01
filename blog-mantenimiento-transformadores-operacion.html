@@ -95,7 +95,7 @@
     .article-table th{background:#12365f;color:#fff;font-size:.93rem;letter-spacing:.02em}
     .article-table td{color:#314a67}
     .article-table tr:last-child td{border-bottom:0}
-    .article-table td.ok{color:#166534;font-weight:700}
+    .article-table td.ok{color:var(--vms-green-700);font-weight:700}
     .article-table td.warn{color:#92400e;font-weight:700}
     .article-table td.bad{color:#991b1b;font-weight:700}
     .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
@@ -129,7 +129,7 @@
     .life-bar__stage{padding:14px 16px;border-right:1px solid rgba(23,44,81,.1)}
     .life-bar__stage:last-child{border-right:0}
     .life-bar__label{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
-    .life-bar__label--green{color:#166534}
+    .life-bar__label--green{color:var(--vms-green-700)}
     .life-bar__label--yellow{color:#92400e}
     .life-bar__label--red{color:#991b1b}
 
@@ -261,6 +261,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -384,8 +385,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -461,7 +460,7 @@
               <p>Cambio de aceite, limpieza y ajuste seg&uacute;n intervalos fijos. M&aacute;s ordenado que el correctivo, pero puede generar intervenciones innecesarias o pasar por alto problemas entre ciclos.</p>
             </div>
             <div class="article-mini-card">
-              <span class="tag" style="color:#166534">Predictivo</span>
+              <span class="tag" style="color:var(--vms-green-700)">Predictivo</span>
               <h3>Actuar seg&uacute;n condici&oacute;n real</h3>
               <p>Monitoreo continuo del estado del equipo mediante DGA, termograf&iacute;a, Megger y aceite. Intervenir solo cuando los datos lo indican. Mayor vida &uacute;til, menor costo total.</p>
             </div>

@@ -94,7 +94,7 @@
     .article-table th{background:#12365f;color:#fff;font-size:.94rem;letter-spacing:.02em}
     .article-table td{color:#314a67}
     .article-table tr:last-child td{border-bottom:0}
-    .article-table td.pass{color:#166534;font-weight:700}
+    .article-table td.pass{color:var(--vms-green-700);font-weight:700}
     .article-table td.fail{color:#991b1b;font-weight:700}
     .article-table td.caution{color:#92400e;font-weight:700}
     .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
@@ -124,7 +124,7 @@
     .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
     .test-badge{display:inline-block;padding:.18rem .52rem;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
     .test-badge--fat{background:rgba(15,76,129,.12);color:var(--concept-primary)}
-    .test-badge--sat{background:rgba(22,101,52,.12);color:#166534}
+    .test-badge--sat{background:rgba(15,94,45,.12);color:var(--vms-green-700)}
     .test-badge--both{background:rgba(109,40,217,.12);color:#6d28d9}
 
     .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
@@ -255,6 +255,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -378,8 +379,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -874,13 +873,13 @@
               <p><strong>Resultados del SAT:</strong></p>
               <ul>
                 <li><strong>Inspecci&oacute;n f&iacute;sica:</strong> Sin da&ntilde;os mec&aacute;nicos visibles. Presi&oacute;n de nitr&oacute;geno (conservador sellado): 2.1 psi positivos &mdash; correcto, indica sello intacto.</li>
-                <li><strong>TTR (relaci&oacute;n de transformaci&oacute;n):</strong> Fases A: 71.87 (nominal: 71.88), B: 71.89, C: 71.87. Desviaci&oacute;n m&aacute;x. 0.013% &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>Resistencia de devanados (AT a 23&deg;C):</strong> A: 14.82 &Omega;, B: 14.85 &Omega;, C: 14.83 &Omega;. Desequilibrio: 0.20% &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>Tangente delta (CH):</strong> 0.38% &mdash; FAT registrado: 0.31%. Variaci&oacute;n: +22.6%, dentro de la tolerancia de 3&times;. <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>Rigidez diel&eacute;ctrica del aceite (antes de energizar):</strong> 52 kV/mm &mdash; l&iacute;mite m&iacute;nimo 30 kV/mm (IEC 60156) &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>Humedad en aceite:</strong> 8.2 ppm &mdash; l&iacute;mite 35 ppm para 34.5 kV (IEC 60422) &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>DGA antes de energizar:</strong> Todos los gases &lt; 5 ppm. Acetileno: no detectado &mdash; <span style="color:#166534;font-weight:700">CONFORME</span></li>
-                <li><strong>DGA a 24 horas de operaci&oacute;n:</strong> H&#8322;: 12 ppm, CH&#8324;: 8 ppm, todos los dem&aacute;s gases &lt; 5 ppm, acetileno: no detectado &mdash; <span style="color:#166534;font-weight:700">NORMAL</span></li>
+                <li><strong>TTR (relaci&oacute;n de transformaci&oacute;n):</strong> Fases A: 71.87 (nominal: 71.88), B: 71.89, C: 71.87. Desviaci&oacute;n m&aacute;x. 0.013% &mdash; <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>Resistencia de devanados (AT a 23&deg;C):</strong> A: 14.82 &Omega;, B: 14.85 &Omega;, C: 14.83 &Omega;. Desequilibrio: 0.20% &mdash; <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>Tangente delta (CH):</strong> 0.38% &mdash; FAT registrado: 0.31%. Variaci&oacute;n: +22.6%, dentro de la tolerancia de 3&times;. <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>Rigidez diel&eacute;ctrica del aceite (antes de energizar):</strong> 52 kV/mm &mdash; l&iacute;mite m&iacute;nimo 30 kV/mm (IEC 60156) &mdash; <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>Humedad en aceite:</strong> 8.2 ppm &mdash; l&iacute;mite 35 ppm para 34.5 kV (IEC 60422) &mdash; <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>DGA antes de energizar:</strong> Todos los gases &lt; 5 ppm. Acetileno: no detectado &mdash; <span style="color:var(--vms-green-700);font-weight:700">CONFORME</span></li>
+                <li><strong>DGA a 24 horas de operaci&oacute;n:</strong> H&#8322;: 12 ppm, CH&#8324;: 8 ppm, todos los dem&aacute;s gases &lt; 5 ppm, acetileno: no detectado &mdash; <span style="color:var(--vms-green-700);font-weight:700">NORMAL</span></li>
               </ul>
               <p><strong>Conclusi&oacute;n:</strong> Transformador aprobado para operaci&oacute;n comercial. Se documenta el DGA basal como referencia para el programa de mantenimiento predictivo a 6 meses.</p>
             </div>

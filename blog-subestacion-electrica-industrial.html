@@ -38,7 +38,7 @@
   --accent:#172C51;   /* VMS navy */
     /* VMS cobalt */
     /* VMS technical blue */
-  --ok:#1a7f37;
+  --ok:var(--vms-green-600);
   --warn:#b54708;
   --shadow: 0 10px 30px rgba(16,24,40,.08);
   --radius: 18px;
@@ -1009,7 +1009,7 @@ CAPAS &middot; UI tipo Detonadores (blueprint + hover + chips)
 
 .layerchip--risk .layerdot{ background: rgba(181,71,8,.70); }
 
-.layerchip--turnkey .layerdot{ background: rgba(26,127,55,.70); }
+.layerchip--turnkey .layerdot{ background: rgba(21,128,61,.70); }
 
 /* =========================================================
 CAPAS &middot; Explicaci&oacute;n editorial (consistente con Detonantes)
@@ -2458,9 +2458,9 @@ Columna derecha (diagram + CTA)
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  background:rgba(26,127,55,.10);
-  border:1px solid rgba(26,127,55,.22);
-  color:rgba(26,127,55,.95);
+  background:rgba(21,128,61,.10);
+  border:1px solid rgba(21,128,61,.22);
+  color:rgba(21,128,61,.95);
   font-weight:900;
   font-size:12px;
   line-height:1;
@@ -3857,6 +3857,7 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -3980,8 +3981,6 @@ header[aria-label="Barra de navegación"] .submenu__list a{display:block;color:#
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 

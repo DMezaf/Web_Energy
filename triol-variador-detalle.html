@@ -242,6 +242,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -365,8 +366,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -399,7 +398,7 @@
             </div>
           </div>
           <div class="hero__media">
-            <img id="heroImage" src="assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp" alt="Variador Triol" loading="lazy" decoding="async" />
+            <img id="heroImage" src="assets/img/landings/triol/products/variador-triol-at24-uc.webp" alt="Variador Triol" loading="lazy" decoding="async" />
           </div>
         </article>
       </div>
@@ -663,10 +662,13 @@
     var powerTokenMatch = model.match(/^AT24-([A-Z0-9]+)-/i);
     var powerToken = powerTokenMatch ? powerTokenMatch[1] : 'Serie AT24';
     var fallbackImages = {
-      ALL: 'assets/img/landings/triol/card-triol-variadores-catalogo-completo.webp',
-      UC: 'assets/img/landings/triol/card-triol-variadores-uc.webp',
-      UH: 'assets/img/landings/triol/card-triol-variadores-uh.webp',
-      SD: 'assets/img/landings/triol/card-triol-variadores-sd.webp'
+      /* 30-ago-2026: se pasa del arte generado (gabinetes inventados) al arte
+         real que entrego Triol, una elevacion por familia. Encaja aqui porque
+         el hueco usa object-fit:contain y es alto. */
+      ALL: 'assets/img/landings/triol/products/variador-triol-at24-uc.webp',
+      UC: 'assets/img/landings/triol/products/variador-triol-at24-uc.webp',
+      UH: 'assets/img/landings/triol/products/variador-triol-at24-uh.webp',
+      SD: 'assets/img/landings/triol/products/variador-triol-at24-sd.webp'
     };
     var theme = familyTheme(family);
 

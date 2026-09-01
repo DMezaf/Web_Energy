@@ -68,12 +68,12 @@
 /* ---- Rampa verde ESG (26-ago-2026) ------------------------------------------
    El sitio usaba 78 valores verdes distintos en 38 paginas y los tokens solo
    definian --success. Esta rampa esta anclada en el: --vms-green-600 ES
-   --success (#15803D). Se conserva su tono (H 142.4) y se mueven claridad y
+   --success (var(--vms-green-600)). Se conserva su tono (H 142.4) y se mueven claridad y
    saturacion en pasos parejos. --------------------------------------------- */
-  --vms-green-900: #062512;   /* velo de hero, fondo mas oscuro    */
+  --vms-green-900: var(--vms-green-900);   /* velo de hero, fondo mas oscuro    */
   --vms-green-800: #0A3B1C;   /* velo de hero, segunda parada      */
   --vms-green-700: #0F5E2D;   /*  7.90 sobre blanco - texto y KPI  */
-  --vms-green-600: #15803D;   /*  5.02 sobre blanco - = --success  */
+  --vms-green-600: var(--vms-green-600);   /*  5.02 sobre blanco - = --success  */
   --vms-green-500: #1BA64F;   /*  relleno solido, no para texto    */
   --vms-green-400: #2EDB6F;   /*  acento sobre fondo oscuro        */
   --vms-green-300: #73DE9B;
@@ -112,8 +112,8 @@
    Reservado para lo que debe distinguirse por función:
    estado, norma, urgencia, disponibilidad y precio.
    ============================================================ */
-  --success:        #15803D;  /* 5.02 · antes #16A34A (3.30 con blanco) */
-  --success-bg:     #DCFCE7;
+  --success:        var(--vms-green-600);  /* 5.02 · antes var(--vms-green-500) (3.30 con blanco) */
+  --success-bg:     var(--success-bg);
   --warning:        #B45309;  /* 5.02 · para TEXTO de advertencia       */
   --warning-fill:   #D97706;  /* 3.19 · solo relleno, nunca texto blanco*/
   --warning-bg:     #FEF3C7;

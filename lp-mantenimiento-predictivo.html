@@ -53,7 +53,7 @@
   .sem-table th{background:var(--concept-darker);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
   .sem-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.14);color:#334155}
   .sem-table tr:nth-child(even) td{background:var(--concept-accent-light)}
-  .badge-g{background:#dcfce7;color:#15803d;border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
+  .badge-g{background:var(--success-bg);color:var(--vms-green-600);border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
   .badge-y{background:#fef9c3;color:#b45309;border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
   .badge-r{background:#fee2e2;color:#b91c1c;border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
 </style>
@@ -125,6 +125,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -248,8 +249,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -257,7 +256,7 @@
 </header>
 
 <main id="inicio">
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('assets/img/hero_mantenimiento_predictivo.webp');--hero-overlay:.82" aria-labelledby="heroTitle">
     <div class="container">
       <div class="hero-eyebrow">VMS Energy &middot; Servicios Especializados &middot; Proyectos desde $500,000 MXN</div>
       <h1 id="heroTitle">Mantenimiento Predictivo Industrial</h1>

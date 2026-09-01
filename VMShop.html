@@ -102,6 +102,11 @@
     .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
     .product-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(9,32,58,.07)}
     .product-card img{width:100%;height:180px;object-fit:cover;display:block;background:#f2f7ff}
+    /* 30-ago-2026 · Las dos tarjetas de Triol llevaban un gabinete generado
+       con la marca TRIOL sintetizada y el modelo «AT24-LE», inexistente en las
+       38 partidas. Ahora llevan el arte real del fabricante, una elevacion
+       alta: contain y fondo claro en vez del cover del resto de tarjetas. */
+    .product-card img.product-card__art{object-fit:contain;background:#0f2747;padding:12px}
     .product-card__body{padding:12px}
     .product-card h3{margin:0 0 6px;color:#103961;font-size:1.05rem;line-height:1.2}
     .product-card p{margin:0;color:var(--muted);min-height:38px}
@@ -366,6 +371,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -489,8 +495,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -509,7 +513,7 @@
     <section class="hero-shop" aria-label="Hero VMShop">
       <div class="container">
         <article class="hero-shop__frame" id="heroCarousel" aria-label="Carrusel de productos destacados">
-          <div class="hero-shop__slide is-active" data-slide style='background-image:linear-gradient(90deg,rgba(8,13,24,.82) 0%,rgba(8,13,24,.56) 40%,rgba(8,13,24,.08) 70%),url("assets/img/landings/triol/hero-triol-mineria-vms-energy.webp")'>
+          <div class="hero-shop__slide is-active" data-slide style='background-image:linear-gradient(90deg,rgba(8,13,24,.82) 0%,rgba(8,13,24,.56) 40%,rgba(8,13,24,.08) 70%),url("assets/img/landings/triol/hero-triol-variadores-vms-energy.webp")'>
             <div class="hero-shop__content">
               <span class="kicker">L&iacute;nea destacada</span>
               <h1>Variadores Triol</h1>
@@ -622,7 +626,7 @@
         <p>Selecciona la l&iacute;nea que necesitas y solicita cotizaci&oacute;n</p>
                 <div class="catalog-grid catalog-grid--campaigns">
           <article class="product-card product-card--campaign">
-            <img src="assets/img/landings/vmshop/triol-distribucion-autorizada.webp" alt="Variadores Triol">
+            <img class="product-card__art" src="assets/img/landings/triol/products/variador-triol-at24-uc.webp" alt="Variadores Triol AT24">
             <div class="product-card__body">
               <span class="badge-stock badge-stock--campaign">Campa&ntilde;a</span>
               <h3>Variadores Triol</h3>
@@ -780,7 +784,7 @@
             <ul class="brand-card__models">
               <li>AT24 UH &middot; UC &middot; SD series</li>
               <li>7.5 kW &ndash; 20+ MW</li>
-              <li>Distribuidor autorizado M&eacute;xico</li>
+              <li>Inventario propio en M&eacute;xico</li>
             </ul>
             <a class="brand-card__link" href="lp-triol-variadores.html">Ver portafolio &rarr;</a>
           </article>
@@ -951,7 +955,7 @@
           <div class="catalog-track" id="featuredTrack">
 
           <article class="product-card">
-            <img src="assets/img/landings/vmshop/triol-distribucion-autorizada.webp" alt="Variadores Triol">
+            <img class="product-card__art" src="assets/img/landings/triol/products/variador-triol-at24-uc.webp" alt="Variadores Triol AT24">
             <div class="product-card__body">
               <span class="badge-stock">Disponible</span>
               <h3>VFD Triol Serie Industrial</h3>

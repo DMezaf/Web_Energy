@@ -617,7 +617,7 @@
     .pv-feat-story__tag{display:inline-block;font-size:.68rem;font-weight:700;border-radius:4px;padding:.1rem .45rem;margin-bottom:3px}
     .pv-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
     .pv-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
-    .pv-feat-story__tag--res{background:#DCFCE7;color:#166534}
+    .pv-feat-story__tag--res{background:var(--success-bg);color:var(--vms-green-700)}
     .pv-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
     .pv-feat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
     .pv-tech-tag{font-size:.68rem;font-weight:700;color:#374151;background:#F3F4F6;border-radius:4px;padding:.15rem .45rem}
@@ -626,9 +626,9 @@
     .pv-feat-card__meta svg{width:14px;height:14px;flex-shrink:0}
     .pv-feat-card__link{font-size:.78rem;font-weight:700;color:var(--concept-primary);text-decoration:none;display:flex;align-items:center;gap:4px;transition:gap .18s}
     .pv-feat-card__link:hover{gap:8px}
-    .pv-badge-epc{background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
-    .pv-badge-svc{background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
-    .pv-badge-proj{background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
+    .pv-badge-epc{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+    .pv-badge-svc{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+    .pv-badge-proj{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
     .pv-refs__cta-wrap{text-align:center;margin-top:8px}
     .pv-refs__cta{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:var(--vms-blue-600);color:#fff;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;transition:background .2s,transform .2s}
     .pv-refs__cta:hover{background:var(--concept-primary);transform:translateY(-2px)}
@@ -729,7 +729,7 @@
     .prod-accordion summary{cursor:pointer;font-weight:700;color:var(--navy)}
     .prod-meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
     .avail{font-size:12px;border-radius:999px;padding:.1rem .5rem;border:1px solid rgba(23,44,81,.15)}
-    .avail--yes{color:#065f46;background:#d1fae5;border-color:#bbf7d0}
+    .avail--yes{color:var(--vms-green-700);background:var(--success-bg);border-color:var(--vms-green-200)}
     .avail--no{color:#7f1d1d;background:#fee2e2;border-color:#fecaca}
     /* ===== Nosotros (cards + acorde&oacute;n) ===== */
     .about{background:linear-gradient(180deg,#fff,#f7f9fc)}
@@ -1222,11 +1222,11 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
   outline:2px solid rgba(255,255,255,.9);
   outline-offset:2px;
 }
-.clients.is-manual-filter .clients__badge{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.45);color:#166534}
-.clients.is-manual-filter .clients__filters .clients__filterBtn.is-active{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.45);color:#166534}
-.clients.is-manual-filter{outline:2px solid rgba(34,197,94,.25);outline-offset:6px;border-radius:16px}
+.clients.is-manual-filter .clients__badge{background:rgba(46,219,111,.12);border-color:rgba(46,219,111,.45);color:var(--vms-green-700)}
+.clients.is-manual-filter .clients__filters .clients__filterBtn.is-active{background:rgba(46,219,111,.12);border-color:rgba(46,219,111,.45);color:var(--vms-green-700)}
+.clients.is-manual-filter{outline:2px solid rgba(46,219,111,.25);outline-offset:6px;border-radius:16px}
 .clients__badge::before{content:attr(data-mode);display:inline-block;margin-right:6px;padding:2px 6px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.02em;background:rgba(15,76,129,.10);border:1px solid rgba(15,76,129,.22);color:var(--concept-primary)}
-.clients.is-manual-filter .clients__badge::before{background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.45);color:#166534}
+.clients.is-manual-filter .clients__badge::before{background:rgba(46,219,111,.18);border-color:rgba(46,219,111,.45);color:var(--vms-green-700)}
 .clients__badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(15,76,129,.10);border:1px solid rgba(15,76,129,.25);color:var(--concept-primary);font-weight:700;font-size:.92rem}
 .clients__grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:14px}
 .client-sector{grid-column:span 6;background:#fff;border:1px solid rgba(23,44,81,.10);border-radius:16px;padding:14px 14px 12px;box-shadow:0 10px 26px rgba(23,44,81,.06)}
@@ -1889,7 +1889,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
     .htl-badge--epc{background:#e8f4ff;color:var(--concept-primary);border:1px solid #c9daf3}
     .htl-badge--proj{background:#0f2747;color:#fff}
     .htl-badge--intl{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
-    .htl-badge--multi{background:#f0fbef;color:#0f6b50;border:1px solid #bfe4c5}
+    .htl-badge--multi{background:#f0fbef;color:var(--vms-green-700);border:1px solid var(--vms-green-200)}
     .htl-badge--full{background:var(--vms-blue-800);color:#fff}
     
     .htl-badge--origen{background:#eef1f5;color:#44546a;border:1px solid #cfd8e3}
@@ -1944,7 +1944,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
     .class-card{border:1px solid #dbe6f4;border-radius:16px;padding:14px;background:#fff;box-shadow:0 6px 14px rgba(16,35,61,.08)}
     .class-card__kicker{display:inline-flex;background:#eef4ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.18rem .55rem;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
     .class-card__kicker--epc{background:#e8f4ff;color:var(--concept-primary);border-color:#c9daf3}
-    .class-card__kicker--service{background:#f2fbef;color:#0f6b50;border-color:#bfe4c5}
+    .class-card__kicker--service{background:#f2fbef;color:var(--vms-green-700);border-color:var(--vms-green-200)}
     .class-card__kicker--auto{background:#fff4e6;color:#8a4b00;border-color:#ffd7a8}
     .class-card__kicker--training{background:#f5efff;color:#5b3a92;border-color:#e0d2fb}
     .class-card__title{margin:8px 0 6px;color:#10233d;font-size:18px}
@@ -1980,7 +1980,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
     .cov-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
     .cov-badge--epc{background:rgba(251,191,36,.18);color:#fbbf24;border:1px solid rgba(251,191,36,.35)}
     .cov-badge--svc{background:rgba(74,163,255,.18);color:var(--acento-oscuro);border:1px solid rgba(74,163,255,.35)}
-    .cov-badge--auto{background:rgba(52,211,153,.18);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+    .cov-badge--auto{background:rgba(115,222,155,.18);color:var(--vms-green-500);border:1px solid rgba(115,222,155,.35)}
     .cov-badge--cap{background:rgba(167,139,250,.18);color:#a78bfa;border:1px solid rgba(167,139,250,.35)}
     .cov-badge--off{background:rgba(249,115,22,.18);color:#f97316;border:1px solid rgba(249,115,22,.35)}
     /* Panel "ver proyectos" link */
@@ -2041,7 +2041,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
     .clasi-badge{display:inline-block;font-size:11px;font-weight:700;border-radius:999px;padding:.18rem .65rem;white-space:nowrap;letter-spacing:.01em}
     .clasi-epc   {background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
     .clasi-auto  {background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
-    .clasi-svc   {background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
+    .clasi-svc   {background:var(--vms-green-100);color:var(--vms-green-700);border:1px solid var(--vms-green-200)}
     .clasi-proj  {background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
     .clasi-sum   {background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
     .clasi-cap   {background:#DDF8F9;color:#005C5F;border:1px solid #ABE4E6}
@@ -2576,7 +2576,7 @@ label{font-size:14px}
 .cp-feat-story__tag{display:inline-block;font-size:.68rem;font-weight:700;border-radius:4px;padding:.1rem .45rem;margin-bottom:4px}
 .cp-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
 .cp-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
-.cp-feat-story__tag--res{background:#DCFCE7;color:#166534}
+.cp-feat-story__tag--res{background:var(--success-bg);color:var(--vms-green-700)}
 .cp-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
 .cp-feat-card__footer{padding:14px 22px;border-top:1px solid #E2EAF4;display:flex;align-items:center;justify-content:space-between}
 .cp-feat-card__meta{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:5px}
@@ -2584,11 +2584,11 @@ label{font-size:14px}
 .cp-feat-card__link:hover{gap:8px}
 .cp-feat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
 .cp-tech-tag{font-size:.68rem;font-weight:700;color:#374151;background:#F3F4F6;border-radius:4px;padding:.15rem .45rem}
-.badge-epc{background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
-.badge-svc{background:#E6F7E7;color:#006120;border:1px solid #BFE3C2}
-.badge-proj{background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
-.badge-sum{background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
-.badge-auto{background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
+.badge-epc{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+.badge-svc{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+.badge-proj{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+.badge-sum{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
+.badge-auto{background:var(--vms-blue-100);color:var(--vms-blue-700);border:1px solid var(--vms-blue-200)}
 @media(max-width:1024px){.cp-featured__grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.cp-featured__grid{grid-template-columns:1fr}}
 </style>
@@ -2780,6 +2780,7 @@ label{font-size:14px}
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -2903,8 +2904,6 @@ label{font-size:14px}
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -2912,7 +2911,7 @@ label{font-size:14px}
 </header>
 
   <main id="contenido">
-    <section class="hero">
+    <section class="hero" style="--corp-hero-img:url('assets/img/hero_proyectos_vms.webp')">
       <div class="container">
         <article class="hero__box">
           <span class="kicker">18 a&ntilde;os de trayectoria comprobada</span>
@@ -2958,9 +2957,9 @@ label{font-size:14px}
       <div class="cp-featured__grid">
 
         <!-- Card 1: PEMEX BALAM-A — Servicio de Transformadores Offshore -->
-        <article class="cp-feat-card" style="--accent-color:#1C7D34;--icon-bg-a:#D3EFD5;--icon-bg-b:#EBF9EC">
+        <article class="cp-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
           <div class="cp-feat-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1C7D34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
           </div>
@@ -2995,7 +2994,7 @@ label{font-size:14px}
         </article>
 
         <!-- Card 2: Grupo Dragón — Geotérmica Nayarit -->
-        <article class="cp-feat-card" style="--accent-color:#126BB5;--icon-bg-a:#D4E9FF;--icon-bg-b:#EDF6FF">
+        <article class="cp-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
           <div class="cp-feat-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -3032,9 +3031,9 @@ label{font-size:14px}
         </article>
 
         <!-- Card 3: Ingenio Adolfo López Mateos — Sincronía y Cogeneración -->
-        <article class="cp-feat-card" style="--accent-color:#7C6800;--icon-bg-a:#EFE7C5;--icon-bg-b:#F9F5E4">
+        <article class="cp-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
           <div class="cp-feat-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7C6800" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
               <circle cx="12" cy="12" r="3"/><path d="M12 9v-2"/><path d="M12 17v-2"/><path d="M9.17 9.17l-1.42-1.42"/><path d="M16.24 16.24l-1.41-1.41"/><path d="M9 12H7"/><path d="M17 12h-2"/><path d="M9.17 14.83l-1.42 1.42"/><path d="M16.24 7.76l-1.41 1.41"/>
             </svg>
@@ -3438,7 +3437,7 @@ label{font-size:14px}
             <div class="pv-refs__grid">
 
               <!-- Card 1: Geotérmica Nayarit -->
-              <article class="pv-feat-card" style="--accent-color:#126BB5;--icon-bg-a:#D4E9FF;--icon-bg-b:#EDF6FF">
+              <article class="pv-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
                 <div class="pv-feat-card__icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -3480,9 +3479,9 @@ label{font-size:14px}
               </article>
 
               <!-- Card 2: BALAM-A Pemex -->
-              <article class="pv-feat-card" style="--accent-color:#1C7D34;--icon-bg-a:#D3EFD5;--icon-bg-b:#EBF9EC">
+              <article class="pv-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
                 <div class="pv-feat-card__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1C7D34" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                   </svg>
                 </div>
@@ -3522,11 +3521,11 @@ label{font-size:14px}
               </article>
 
               <!-- Card 3: CFE Hidroeléctrica Chiapas -->
-              <article class="pv-feat-card" style="--accent-color:#7852AB;--icon-bg-a:#EBE0FF;--icon-bg-b:#F6F2FF">
+              <article class="pv-feat-card" style="--accent-color:var(--vms-blue-600);--icon-bg-a:var(--vms-blue-100);--icon-bg-b:var(--vms-blue-50)">
                 <div class="pv-feat-card__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7852AB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
-                    <circle cx="8.5" cy="10" r="1.5" fill="#7852AB" stroke="none"/><circle cx="12.5" cy="7" r="1.5" fill="#7852AB" stroke="none"/><circle cx="15.5" cy="10" r="1.5" fill="#7852AB" stroke="none"/>
+                    <circle cx="8.5" cy="10" r="1.5" fill="var(--concept-primary)" stroke="none"/><circle cx="12.5" cy="7" r="1.5" fill="var(--concept-primary)" stroke="none"/><circle cx="15.5" cy="10" r="1.5" fill="var(--concept-primary)" stroke="none"/>
                   </svg>
                 </div>
                 <div class="pv-feat-card__body">

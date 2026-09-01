@@ -50,7 +50,7 @@
     .gas-tag{display:inline-block;font-size:.72rem;font-weight:800;padding:.15rem .5rem;border-radius:999px}
     .gas-tag--rojo{background:#fee2e2;color:#dc2626}
     .gas-tag--amarillo{background:#fef9c3;color:#92400e}
-    .gas-tag--verde{background:#dcfce7;color:#15803d}
+    .gas-tag--verde{background:var(--success-bg);color:var(--vms-green-600)}
 
     /* Proceso */
     .proceso-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
@@ -72,11 +72,11 @@
     /* RAG badge */
     .rag-strip{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
     .rag-badge{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;flex:1;min-width:180px}
-    .rag-badge--verde{background:#dcfce7;border:1px solid #86efac}
+    .rag-badge--verde{background:var(--success-bg);border:1px solid var(--vms-green-300)}
     .rag-badge--amarillo{background:#fef9c3;border:1px solid #fde047}
     .rag-badge--rojo{background:#fee2e2;border:1px solid #fca5a5}
     .rag-badge__dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
-    .rag-badge--verde .rag-badge__dot{background:#22c55e}
+    .rag-badge--verde .rag-badge__dot{background:var(--vms-green-400)}
     .rag-badge--amarillo .rag-badge__dot{background:#eab308}
     .rag-badge--rojo .rag-badge__dot{background:#ef4444}
     .rag-badge__text{font-size:.85rem;color:#1e293b;line-height:1.35}
@@ -187,6 +187,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -310,8 +311,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -321,7 +320,7 @@
 <main id="contenido">
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
-  <section class="hero hero--photo" style="--hero-image:url('assets/img/Especialidad_Mantenimiento_Mantenimiento_Preventivo.webp')" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('assets/img/hero_aceite_dielectrico.webp');--hero-overlay:.82" aria-labelledby="heroTitle">
     <div class="container hero__inner">
       <div class="hero__content">
         <span class="hero-eyebrow">

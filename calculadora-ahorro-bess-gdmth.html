@@ -56,7 +56,7 @@
 
     /* ── Hero ── */
     .hero{position:relative;isolation:isolate;padding:64px 0 52px;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,20,40,.92),rgba(10,53,104,.72) 55%,rgba(14,90,168,.48)),url('assets/img/services/infraestructura_electrica.webp') center/cover no-repeat;z-index:-1}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,20,40,.92),rgba(10,53,104,.72) 80%,rgba(14,90,168,.48)),url('assets/img/hero_confiabilidad_bess.webp') center/cover no-repeat;z-index:-1}
     .eyebrow{display:inline-block;padding:.24rem .7rem;border:1px solid rgba(255,255,255,.36);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:14px}
     .hero h1{font-size:clamp(26px,4.2vw,46px);line-height:1.06;margin:0 0 14px}
     .hero p{font-size:clamp(15px,1.8vw,19px);margin:0;color:#dbeaff;max-width:680px}
@@ -132,7 +132,7 @@
     .kpi--accent .kpi__value{color:#8fd7ff}
     .kpi__sub{font-size:.8rem;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
     .kpi--accent .kpi__sub{color:#c0d8f0}
-    .solar-bonus-band{background:linear-gradient(90deg,#064e1a,#0a7a2e);border-radius:12px;padding:14px 18px;color:#fff;display:none;margin-bottom:16px;align-items:center;gap:12px}
+    .solar-bonus-band{background:linear-gradient(90deg,var(--vms-green-700),var(--vms-green-600));border-radius:12px;padding:14px 18px;color:#fff;display:none;margin-bottom:16px;align-items:center;gap:12px}
     .solar-bonus-band.is-visible{display:flex}
     .solar-bonus-band__icon{font-size:1.6rem;flex-shrink:0}
     .solar-bonus-band p{margin:0;font-size:.92rem;line-height:1.4}
@@ -177,7 +177,7 @@
     .period-row .period-label::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;flex-shrink:0}
     .period-row--punta .period-label::before{background:#dc2626}
     .period-row--intermedio .period-label::before{background:#d97706}
-    .period-row--base .period-label::before{background:#16a34a}
+    .period-row--base .period-label::before{background:var(--vms-green-500)}
     .period-row input{padding:7px 10px;border:1px solid rgba(23,44,81,.18);border-radius:8px;font-family:inherit;font-size:.92rem;width:calc(100% - 10px);margin-right:10px;color:var(--ink)}
     .period-row input:focus{outline:none;border-color:var(--concept-primary);box-shadow:0 0 0 2px rgba(14,90,168,.1)}
     .period-head-4{grid-template-columns:110px 1fr 1fr 80px 80px!important}
@@ -190,7 +190,7 @@
     .breakdown-table tr:last-child td{border-bottom:none}
     .bd-punta td:first-child{color:#dc2626;font-weight:700}
     .bd-intermedio td:first-child{color:#d97706;font-weight:700}
-    .bd-base td:first-child{color:#16a34a;font-weight:700}
+    .bd-base td:first-child{color:var(--vms-green-500);font-weight:700}
     .bd-total td{font-weight:700;color:#0d2d52;border-top:2px solid rgba(14,90,168,.2)!important}
     .avanzado-badge{display:inline-flex;align-items:center;gap:5px;padding:.2rem .6rem;background:linear-gradient(90deg,#0E5AA8,#083568);color:#fff;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.04em;margin-left:8px;vertical-align:middle}
 
@@ -309,6 +309,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -432,8 +433,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -919,7 +918,7 @@
 
 
   <!-- Sticky WA -->
-  <a href="https://wa.me/523338130739?text=Hola%20VMS%20Energy%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20sistema%20BESS" target="_blank" rel="noopener noreferrer" class="sticky-actions__btn sticky-actions__btn--right" aria-label="WhatsApp VMS Energy" style="position:fixed;bottom:18px;right:14px;z-index:70">
+  <a href="https://wa.me/5213332582234?text=Hola%20VMS%20Energy%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20sistema%20BESS" target="_blank" rel="noopener noreferrer" class="sticky-actions__btn sticky-actions__btn--right" aria-label="WhatsApp VMS Energy" style="position:fixed;bottom:18px;right:14px;z-index:70">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.845L0 24l6.336-1.503A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.369l-.359-.213-3.762.892.946-3.656-.234-.375A9.818 9.818 0 1 1 12 21.818z"/></svg>
   </a>
 
@@ -1089,7 +1088,7 @@
         const periods = [
           { name:'Punta',      color:'#dc2626', dMax:parseFloat(document.getElementById('dMaxPunta').value),      dObj:parseFloat(document.getElementById('dObjPunta').value),      cargo:parseFloat(document.getElementById('cargoPunta').value),      horas:parseFloat(document.getElementById('horasPunta').value),      dias:parseFloat(document.getElementById('diasPunta').value) },
           { name:'Intermedio', color:'#d97706', dMax:parseFloat(document.getElementById('dMaxIntermedio').value), dObj:parseFloat(document.getElementById('dObjIntermedio').value), cargo:parseFloat(document.getElementById('cargoIntermedio').value), horas:parseFloat(document.getElementById('horasIntermedio').value), dias:parseFloat(document.getElementById('diasIntermedio').value) },
-          { name:'Base',       color:'#16a34a', dMax:parseFloat(document.getElementById('dMaxBase').value),       dObj:parseFloat(document.getElementById('dObjBase').value),       cargo:parseFloat(document.getElementById('cargoBase').value),       horas:parseFloat(document.getElementById('horasBase').value),       dias:parseFloat(document.getElementById('diasBase').value) },
+          { name:'Base',       color:'#1BA64F', dMax:parseFloat(document.getElementById('dMaxBase').value),       dObj:parseFloat(document.getElementById('dObjBase').value),       cargo:parseFloat(document.getElementById('cargoBase').value),       horas:parseFloat(document.getElementById('horasBase').value),       dias:parseFloat(document.getElementById('diasBase').value) },
         ];
         const punta = periods[0];
         dMax = punta.dMax; dObj = punta.dObj;
@@ -1224,7 +1223,7 @@
         '─────────────────────────────\n' +
         'Quisiera que un especialista VMS me contacte para un estudio detallado.'
       );
-      document.getElementById('btnWhatsapp').href = 'https://wa.me/523338130739?text=' + msg;
+      document.getElementById('btnWhatsapp').href = 'https://wa.me/5213332582234?text=' + msg;
 
       document.getElementById('resultsPlaceholder').style.display = 'none';
       document.getElementById('resultsPanel').classList.add('is-visible');
@@ -1270,8 +1269,8 @@
           labels: ['Demanda actual', 'Demanda con BESS', 'Potencia BESS'],
           datasets: [{
             data: [dMax, dObj, bessPot],
-            backgroundColor: ['rgba(220,38,38,.75)', 'rgba(14,90,168,.8)', 'rgba(16,163,127,.8)'],
-            borderColor: ['#dc2626', '#0E5AA8', '#10a37f'],
+            backgroundColor: ['rgba(220,38,38,.75)', 'rgba(14,90,168,.8)', 'rgba(21,128,61,.8)'],
+            borderColor: ['#dc2626', '#0E5AA8', '#15803D'],
             borderWidth: 1.5,
             borderRadius: 6
           }]

@@ -150,7 +150,7 @@
 .catalog-tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
 .catalog-tag{display:inline-flex;align-items:center;gap:4px;padding:.22rem .55rem;border-radius:999px;font-size:11px;font-weight:700;background:#f3f7ff;color:var(--concept-primary);border:1px solid #d2e1f6}
 .catalog-tag--soft{background:#f8f2ff;color:#5b3a92;border-color:#e5d6fb}
-.catalog-tag--mt{background:#eafaf4;color:#0f6b50;border-color:#b8ead6}
+.catalog-tag--mt{background:#eafaf4;color:var(--vms-green-700);border-color:var(--vms-green-200)}
 .catalog-tag--hv{background:#fff4e6;color:#8a4b00;border-color:#ffd7a8}
 .catalog-tag--ehv{background:#eaf1ff;color:#284b9b;border-color:#c9d7ff}
 @media (max-width:760px){.catalog-tags{gap:8px}.catalog-tag{padding:.28rem .65rem}}
@@ -165,7 +165,7 @@
     .hero__panel h2{margin:0 0 8px;font-size:1.06rem;color:#fff}
     .proof-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
     .proof-list li{display:flex;align-items:flex-start;gap:8px;color:rgba(255,255,255,.92)}
-    .dot{width:8px;height:8px;border-radius:999px;background:#9EF0C7;margin-top:7px;flex-shrink:0}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--vms-green-200);margin-top:7px;flex-shrink:0}
     .steps{padding:8px 0 24px}
     /* El titular de esta seccion lleva ya la clase .sec-h2 del nucleo, que
        pone tamano, peso y color. Aqui solo queda lo que es propio del
@@ -385,6 +385,7 @@
               <p class="submenu__title">Potencia y distribuci&oacute;n</p>
               <ul class="submenu__list">
                 <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
                 <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
                 <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
                 <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
@@ -508,8 +509,6 @@
     </nav>
 
     <div class="site-header__actions">
-      <a class="lang-switch" href="en/" hreflang="en" lang="en"
-         aria-label="Switch to English">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -525,9 +524,9 @@
 
 
   <main id="contenido">
-        <section class="hero">
+        <section class="hero" style="--equip-hero-img:url('assets/img/hero_cables_potencia.webp')">
       <div class="container">
-        <div class="hero__frame" style="--hero-image:url('assets/img/landings/kei/hero-cable-kei-mineria-vms-energy.webp')">
+        <div class="hero__frame" style="--hero-image:url('assets/img/hero_cables_potencia.webp')">
           <div class="hero__inner">
             <div>
               <span class="hero__kicker">Equipamiento cr&iacute;tico</span>

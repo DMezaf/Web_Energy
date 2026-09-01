@@ -382,6 +382,31 @@ p:last-child { margin-bottom: 0; }
     var(--hero-image, none) center / cover no-repeat;
 }
 
+/* ------------------------------------------------------------
+   `.hero--veil-flat` — velo plano para fotografias claras
+   ------------------------------------------------------------
+   El velo de `.hero--photo` es diagonal: abre de var(--hero-overlay) a
+   .45 del mismo alfa en el borde derecho. Funciona cuando la fotografia
+   tiene su zona clara a la derecha y el texto vive a la izquierda.
+
+   Los heros de la serie de tres registros (dibujo / transicion / foto)
+   ponen la fotografia justo ahi, y a 768 y 390 px el texto ocupa el
+   ancho completo: cae sobre la parte abierta del velo y baja de 4.5:1.
+   Medido: fondos de RGB(100..160) bajo texto #DBEAFE dan 2.7 a 3.8.
+
+   Esta variante mantiene el alfa casi constante (94 % y 88 % en vez de
+   72 % y 45 %), conservando la direccion del degradado pero sin abrirlo.
+   Se aplica por pagina, con `class="hero hero--photo hero--veil-flat"`.
+   ------------------------------------------------------------ */
+.hero--photo.hero--veil-flat::before {
+  background:
+    linear-gradient(105deg,
+      rgba(8, 20, 40, var(--hero-overlay)),
+      rgba(11, 26, 48, calc(var(--hero-overlay) * .94)) 55%,
+      rgba(15, 40, 72, calc(var(--hero-overlay) * .88))),
+    var(--hero-image, none) center / cover no-repeat;
+}
+
 
 /* ============================================================
    6 · KPI Y DATOS
@@ -745,7 +770,7 @@ p:last-child { margin-bottom: 0; }
    puede enriquecer pagina por pagina sin migrar las 259 de golpe.
 
    EL PIN
-   El marcado traia el emoji &#128205; escrito en el HTML. Aqui es un SVG del
+   El marcado traia el emoji &var(--vms-green-500); escrito en el HTML. Aqui es un SVG del
    sistema aplicado por CSS, para que herede color y tamano del componente.
    Si vuelves a ver dos pines juntos, es que alguna tarjeta conserva el emoji.
    ══════════════════════════════════════════════════════════════════════════ */
@@ -922,7 +947,7 @@ p:last-child { margin-bottom: 0; }
 .cfg__chip dd{margin:3px 0 0;font-size:1.02rem;font-weight:700;overflow-wrap:anywhere}
 .cfg__holgura{margin:12px 0 0;font-size:.86rem;color:#cfe3f7}
 .cfg__barra{margin-top:6px;height:7px;border-radius:99px;background:rgba(255,255,255,.16);overflow:hidden}
-.cfg__barra i{display:block;height:100%;background:#6fd3a4;border-radius:99px}
+.cfg__barra i{display:block;height:100%;background:var(--vms-green-300);border-radius:99px}
 .cfg__barra--justa i{background:#f6c65b}
 .cfg__aviso{margin:12px 0 0;padding:10px 12px;border-radius:11px;background:rgba(246,198,91,.14);border:1px solid rgba(246,198,91,.4);font-size:.86rem;line-height:1.5;color:#ffe9b8}
 .cfg__copiar{margin-top:14px;width:100%;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:11px;padding:10px 12px;font:inherit;font-weight:700;cursor:pointer;transition:background .15s ease}
